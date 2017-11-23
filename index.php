@@ -35,6 +35,7 @@
         </div>
     </nav>
 <body>
+<h2>Welkom bij bouwbedrijf wegro. Maak hier uw keuze om door te gaan.</h2>
 <div class="img">
 <div class="container">
     <div class="row">
