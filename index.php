@@ -23,15 +23,11 @@
     </head>
     <body>
     <header>
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-            <a class="nav-link" <img src="wegrobanner.png" alt="Wegro"> </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item pull-right">
-                        <a class="nav-link" href="Login.php">Login</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                Bootstrap
+            </a>
         </nav>
     </header>
 <h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
