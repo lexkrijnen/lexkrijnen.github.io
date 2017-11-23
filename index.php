@@ -27,7 +27,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4 tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
+        <div class="col-sm-4 btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
         <div class="col-sm-4 tegel"><img class="tegelimage" src="img/BBtegel.png" alt="BouwBedrijf"></div>
         <div class="col-sm-4 tegel"><img class="tegelimage" src="img/TBtegel.png" alt="Bouwkundig Tekenbureau"></div>
     </div>
