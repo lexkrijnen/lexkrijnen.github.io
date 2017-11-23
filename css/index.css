@@ -2,7 +2,7 @@
     padding-top: 8%;
 }
 .tegel {
-    background-color: dimgrey;
+    background-color: orange;
 }
 
 .tegelimage {
@@ -15,6 +15,10 @@
     padding-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
+}
+
+.border {
+    border-bottom: ;
 }
 
 nav {
