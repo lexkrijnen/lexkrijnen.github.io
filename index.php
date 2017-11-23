@@ -38,11 +38,12 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pull-right">
+                        <div class="center-block"
                         <div class="nav navbar-nav">
                             <button type="submit" class="btn navbar-btn" >Login</button>
                         </div>
                     </div>
-
+                </div>
                 </div>
             </div>
         </div>
