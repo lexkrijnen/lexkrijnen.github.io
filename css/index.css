@@ -6,10 +6,6 @@
     width: 100%;
 }
 
-.img {
-    vertical-align: middle;
-}
-
 body {
-    height: 100%;
+    padding-top: 20%;
 }
