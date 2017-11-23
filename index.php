@@ -12,14 +12,11 @@
 
         <title>Welkom bij wegro</title>
 
-        <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom styles for this page -->
         <link href="css/index.css" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
+
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
@@ -32,7 +29,6 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Welkom</a></li>
                 <li class="rechts"><a href="login.php">Login</a></li>
-
             </ul>
         </div>
     </nav>
@@ -43,20 +39,14 @@
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/BBtegel.png" alt="BouwBedrijf"></div>
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/TBtegel.png" alt="Bouwkundig Tekenbureau"></div>
-<<<<<<< HEAD
-    		<p> test 5</p>
-=======
-    		<p> test 6</p>
->>>>>>> origin/master
+
     </div>
   </div>
-</div><!-- /container -->
+</div>
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
 <script src="js/jquery.min.js"></script>
-
-<!-- Bootstrap Framework -->
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
