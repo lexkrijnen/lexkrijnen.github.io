@@ -24,7 +24,7 @@
     <nav class="navbar navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href=""><img class="logo" src="img/BBbanner.png" alt="BouwBedrijf"></a>
+                <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
             </div>
         </div>
 
