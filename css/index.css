@@ -20,6 +20,7 @@ body {
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
+    vertical-align: middle;
 }
 
 nav {
@@ -27,5 +28,5 @@ nav {
 }
 
 .img {
-    padding-top: 12%;
+    padding-top: 8%;
 }

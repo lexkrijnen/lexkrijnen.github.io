@@ -30,7 +30,7 @@
 
         <div class="pull-right">
             <ul class="nav navbar-nav">
-                <li><button type="submit" class="btn navbar-btn" >Sign In</button></li>
+                <li><button type="submit" class="btn navbar-btn" >Login</button></li>
             </ul>
         </div>
     </nav>
