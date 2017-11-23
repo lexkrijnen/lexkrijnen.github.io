@@ -10,20 +10,16 @@
 }
 
 .logo {
-    max-height: 100%;
-    overflow: visible;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 7px 15px;
 }
 
 .border {
     border-bottom: dashed;
-    border-radius: 1;
 }
 
 nav {
     background-color: lightgrey;
-    vertical-align: middle;
+    vertical-align: center;
 }
 
 
