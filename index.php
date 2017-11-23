@@ -27,7 +27,7 @@
                 <div class="col-xs-1">
                     <div class="pull-left">
                         <div class="nav navbar-nav">
-                            <a class="navbar-brand" href="#"><img  src="img/wegrobanner.png" width="100" height="30" class="d-inline-block align-top  alt="BouwBedrijf"></a>
+                            <a class="navbar-brand" href="#"><img  src="img/wegrobanner.png" width="100" height="50" class="d-inline-block align-top  alt="BouwBedrijf"></a>
                         </div>
                     </div>
 
