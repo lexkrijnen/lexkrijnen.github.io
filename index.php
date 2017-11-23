@@ -37,17 +37,27 @@
 <body>
 <h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
     <h2> Maak hier uw keuze om door te gaan.</h2>
-<div class="img">
-<div class="container">
+    <div class="img">
+        <div class="container">
     <div class="row">
-        <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
-        <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/BBtegel.png" alt="BouwBedrijf"></div>
-        <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/TBtegel.png" alt="Bouwkundig Tekenbureau"></div>
-
+        <div class="col-xs-4">
+            <div class="col-xs-12">
+                <div class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-12">
+                <div class="btn btn-default tegel"><img class="tegelimage" src="img/BBtegel.png" alt="BouwBedrijf"></div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="col-xs-12">
+                <div class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel.png" alt="Bouwkundig Tekenbureau"></div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
+        </div>
+    </div>
 
 
 <script src="js/jquery.min.js"></script>
