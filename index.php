@@ -21,6 +21,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    <body>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="container">
             <div class="row">
@@ -48,7 +49,7 @@
             </div>
         </div>
     </nav>
-<body>
+
 <h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
     <h2> Maak hier uw keuze om door te gaan.</h2>
     <div class="img">
