@@ -7,7 +7,7 @@
 }
 
 body {
-    padding-top: 12%;
+
 }
 
 .rechts {
@@ -24,4 +24,8 @@ body {
 
 nav {
     background-color: lightgrey;
+}
+
+.img {
+    padding-top: 12%;
 }

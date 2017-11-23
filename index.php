@@ -26,7 +26,6 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href=""><img class="logo" src="img/BBbanner.png" alt="BouwBedrijf"></a>
             </div>
-            <button type="button" class="btn btn-default navbar-btn">Sign in</button>
         </div>
 
         <div class="pull-right">
