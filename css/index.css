@@ -9,3 +9,7 @@
 .img {
     vertical-align: middle;
 }
+
+body {
+    height: 100%;
+}
