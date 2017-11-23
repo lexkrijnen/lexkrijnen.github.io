@@ -1,13 +1,12 @@
+.img {
+    padding-top: 8%;
+}
 .tegel {
-    background-color: orange;
+    background-color: dimgrey;
 }
 
 .tegelimage {
     width: 100%;
-}
-
-.rechts {
-    align-items: right;
 }
 
 .logo {
@@ -22,9 +21,7 @@ nav {
     background-color: lightgrey;
 }
 
-.img {
-    padding-top: 8%;
-}
+
 h2 {
     text-align: middle
 ;
