@@ -22,7 +22,8 @@
         <![endif]-->
     </head>
     <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="container">
             <div class="row">
                 <div class="col-xs-1">
@@ -49,7 +50,7 @@
             </div>
         </div>
     </nav>
-
+    </header>
 <h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
     <h2> Maak hier uw keuze om door te gaan.</h2>
     <div class="img">
