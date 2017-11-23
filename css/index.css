@@ -10,11 +10,10 @@
 }
 
 .logo {
-    max-height: 40px;
+    max-height: 100%;
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
-    vertical-align: middle;
 }
 
 .border {
@@ -24,6 +23,7 @@
 
 nav {
     background-color: lightgrey;
+    vertical-align: middle;
 }
 
 
