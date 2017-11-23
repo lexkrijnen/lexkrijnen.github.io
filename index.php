@@ -21,13 +21,13 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <nav class="navbar navbar">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="container">
             <div class="row">
                 <div class="col-xs-1">
                     <div class="pull-left">
                         <div class="nav navbar-nav">
-                            <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
+                            <a class="navbar-brand" href="#"><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
                         </div>
                     </div>
 
