@@ -13,11 +13,9 @@ body {
 .rechts {
     align-items: right;
 }
-.logo {
-    width: 818px;
-    height: 261px;
+
 }
-nav {
+.logo {
     max-height: 40px;
     overflow: visible;
     padding-top: 0;
