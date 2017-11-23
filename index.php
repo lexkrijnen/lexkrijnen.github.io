@@ -27,11 +27,17 @@
                 <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><button type="submit" class="btn navbar-btn" >Login</button></li>
+                        </ul>
+                    </div>
 
-        <div class="pull-right">
-            <ul class="nav navbar-nav">
-                <li><button type="submit" class="btn navbar-btn" >Login</button></li>
-            </ul>
+                </div>
+            </div>
         </div>
     </nav>
 <body>
