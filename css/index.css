@@ -9,3 +9,11 @@
 body {
     padding-top: 12%;
 }
+
+.rechts {
+    align-items: right;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+}

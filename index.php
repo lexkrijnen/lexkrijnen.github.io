@@ -24,6 +24,18 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=""><img class="logo" src="img/BBtegel.png" alt="BouwBedrijf"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Welkom</a></li>
+                <li class="rechts"><a href="login.php">Login</a></li>
+
+            </ul>
+        </div>
+    </nav>
 <body>
 <div class="img">
 <div class="container">
