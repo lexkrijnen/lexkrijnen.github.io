@@ -22,15 +22,10 @@
         <![endif]-->
     </head>
     <nav class="navbar navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-
-            </div>
-        </div>
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="pull-right">
+                <div class="col-xs-1">
+                    <div class="pull-left">
                         <div class="nav navbar-nav">
                             <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
                         </div>
@@ -43,9 +38,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><button type="submit" class="btn navbar-btn" >Login</button></li>
-                        </ul>
+                        <div class="nav navbar-nav">
+                            <button type="submit" class="btn navbar-btn" >Login</button>
+                        </div>
                     </div>
 
                 </div>
