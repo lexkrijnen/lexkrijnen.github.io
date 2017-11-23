@@ -6,6 +6,6 @@
     width: 100%;
 }
 
-.center {
-    align-content:center center ;
+.img {
+    vertical-align: middle;
 }

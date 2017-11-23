@@ -25,7 +25,7 @@
         <![endif]-->
     </head>
 <body>
-<div class="center">
+<div class="img">
 <div class="container">
     <div class="row">
         <div class="col-sm-4 btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
