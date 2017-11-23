@@ -18,7 +18,8 @@
 }
 
 .border {
-    border-bottom: ;
+    border-bottom: dashed;
+    border-radius: 1;
 }
 
 nav {
