@@ -9,25 +9,19 @@
     width: 100%;
 }
 
-.border {
-    border-bottom: dashed;
-}
-
-nav {
-    background-color: lightgrey;
-    vertical-align: center;
-}
 
 
 h2 {
     text-align: center;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
+
+nav {
+    padding: 0px;
+    background-color: lightgrey;
 }
 .logo {
     height: 100%;
+    padding: 15px;
     width: auto;
 }
