@@ -24,32 +24,23 @@
     <body>
     <header>
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-1">
-                    <div class="pull-left">
-                        <div class="nav navbar-nav">
-                            <a class="navbar-brand" href="#"><img  src="img/wegrobanner.png" width="100" height="50" class="d-inline-block align-top  alt="BouwBedrijf"></a>
-                        </div>
-                    </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
 
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" <img src="wegrobanner.png" alt="Wegro"> </a>
+                    </li>
+                    <li class="nav-item pull-right">
+                        <a class="nav-link" href="Login.php">Login</a>
+                    </li>
+
+                </ul>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="pull-right">
-                        <div class="center-block"
-                        <div class="nav navbar-nav">
-                            <button type="submit" class="btn navbar-btn" >Login</button>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+        </nav>
     </header>
 <h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
     <h2> Maak hier uw keuze om door te gaan.</h2>
