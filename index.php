@@ -24,7 +24,19 @@
     <nav class="navbar navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <div class="nav navbar-nav">
+                            <a class="navbar-brand" href=""><img class="logo" src="img/wegrobanner.png" alt="BouwBedrijf"></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
         <div class="container">
