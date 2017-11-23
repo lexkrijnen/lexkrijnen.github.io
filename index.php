@@ -43,7 +43,11 @@
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/MBtegel.png" alt="MetselBedrijf"></div>
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/BBtegel.png" alt="BouwBedrijf"></div>
         <div class="col-xs-4 btn btn-default tegel"><img class="tegelimage" src="img/TBtegel.png" alt="Bouwkundig Tekenbureau"></div>
+<<<<<<< HEAD
     		<p> test 5</p>
+=======
+    		<p> test 6</p>
+>>>>>>> origin/master
     </div>
   </div>
 </div><!-- /container -->
