@@ -23,13 +23,14 @@
     </head>
     <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
                     <img alt="Wegro" src="wegrobanner.png">
                 </a>
+                <div class="pull-right">
                 <button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button>
-            </div>
+            </div></div>
         </div>
     </nav>
 
