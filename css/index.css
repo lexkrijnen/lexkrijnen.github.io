@@ -25,22 +25,3 @@ nav {
     margin-left:5px;
     width:100%;
 }
-.form-login {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.wrapper {
-    text-align: center;
-}
-h4 {
-    border:0 solid #fff;
-    border-bottom-width:1px;
-    padding-bottom:10px;
-    text-align: center;
-}
-.container {
-    padding: 25px;
-    position: fixed;
-}
