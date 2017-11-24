@@ -23,7 +23,7 @@
 
 <div class="center-block col-xs-4">
     <div class="login-panel panel panel-default">
-        <div class="panel-heading tegel">
+        <div class="panel-heading">
             <h3 class="panel-title">Inloggen bij uw Wegro account</h3>
         </div>
         <div class="panel-body">
