@@ -25,7 +25,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <img alt="Wegro" src="img/wegrobanner.png">
+                    <img alt="Wegro" src="img/wegrobanner.png" width="150" height="50">
                 </a>
                 <div class="navbar-right">
                 <button type="button" class="btn btn-default navbar-btn ">Login</button>
