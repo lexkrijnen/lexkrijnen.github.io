@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Pagina beschrijving">
+    <meta name="author" content="Auteur">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Welkom bij wegro</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet">
+
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <body>
 <div class="col-md-4">
     <div class="login-panel panel panel-default">
         <div class="panel-heading">
@@ -10,11 +32,11 @@
                         <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                        <input class="form-control" placeholder="Wachtwoord" name="wachtwoord" type="password" value="">
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                            <input name="remember" type="checkbox" value="Onthoud mij">Remember Me
                         </label>
                     </div>
                     <!-- Change this to a button or input when using this as a form -->
@@ -24,3 +46,8 @@
         </div>
     </div>
 </div>
+</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
