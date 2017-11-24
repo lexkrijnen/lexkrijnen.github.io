@@ -24,9 +24,12 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand col-xs-3" href="#">
                     <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
                 </a>
+                <div class="col-xs-8">
+
+                </div>
                 <div class="col-xs-1 pull-right">
                 <button type="button" class="btn btn-default navbar-btn pull-right">Login</button>
             </div>
