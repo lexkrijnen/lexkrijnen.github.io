@@ -21,7 +21,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <body class="midden">
 
-<div class="col-md-4">
+<div class="center-block col-xs-4">
     <div class="login-panel panel panel-default">
         <div class="panel-heading tegel">
             <h3 class="panel-title">Inloggen bij uw Wegro account</h3>
