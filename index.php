@@ -28,7 +28,7 @@
                     <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
                 </a>
                 <div class="navbar-right">
-                <button type="button" class="btn btn-default navbar-btn ">Login</button>
+                <button type="button" class="btn btn-default navbar-btn col-xs-12">Login</button>
             </div>
             </div>
         </div>
