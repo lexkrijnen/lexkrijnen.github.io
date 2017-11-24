@@ -19,7 +19,6 @@
 
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body>
     <nav class="navbar navbar-default">
@@ -28,9 +27,10 @@
                 <a class="navbar-brand" href="#">
                     <img alt="Wegro" src="wegrobanner.png">
                 </a>
-                <div class="pull-right">
-                <button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button>
-            </div></div>
+                <div class="navbar-right">
+                <button type="button" class="btn btn-default navbar-btn ">Login</button>
+            </div>
+            </div>
         </div>
     </nav>
 
