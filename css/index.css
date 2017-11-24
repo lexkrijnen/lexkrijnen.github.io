@@ -27,9 +27,8 @@ nav {
 }
 
 .midden {
-    left: 50%;
-    top: 50%;
-    margin-left: -25%;
+
     position: absolute;
-    margin-top: -25%;
+    align-items: center
+;
 }
