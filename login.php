@@ -22,8 +22,8 @@
     <body class="center-block">
 <div class="col-md-4">
     <div class="login-panel panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Sign In</h3>
+        <div class="panel-heading tegel">
+            <h3 class="panel-title">Inloggen bij uw Wegro account</h3>
         </div>
         <div class="panel-body">
             <form role="form">
