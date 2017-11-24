@@ -29,7 +29,7 @@
                      <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
                     </a>
                 <div class="col-xs-1 pull-right">
-                <button type="button" href="login.php" class="btn btn-default navbar-btn">Login</button>
+                <button href="login.php "type="button"  class="btn btn-default navbar-btn">Login</button>
             </div>
         </div>
     </nav>
