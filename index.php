@@ -25,7 +25,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <img alt="Wegro" src="img/wegrobanner.png" width="150" height="50">
+                    <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
                 </a>
                 <div class="navbar-right">
                 <button type="button" class="btn btn-default navbar-btn ">Login</button>
@@ -34,7 +34,7 @@
         </div>
     </nav>
 
-<h2>Welkom bij bouwbedrijf wegro.<h2></h2> <br>
+<h2>Welkom bij bouwbedrijf wegro.</h2> <br>
     <h2> Maak hier uw keuze om door te gaan.</h2>
     <div class="img">
         <div class="container">
