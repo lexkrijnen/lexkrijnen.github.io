@@ -26,10 +26,8 @@ nav {
     width:100%;
 }
 
-.login {
+.midden {
     left: 50%;
     top: 50%;
-    margin-left: -25%;
     position: absolute;
-    margin-top: -25%;
 }

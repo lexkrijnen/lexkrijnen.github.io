@@ -19,10 +19,9 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <body class="login">
+    <body class="midden">
 
 <div class="col-md-4">
-    <div class="login">
     <div class="login-panel panel panel-default">
         <div class="panel-heading tegel">
             <h3 class="panel-title">Inloggen bij uw Wegro account</h3>
@@ -45,7 +44,6 @@
                 </fieldset>
             </form>
         </div>
-    </div>
 </div>
 </div>
 </body>
