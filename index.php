@@ -41,7 +41,7 @@
     <div class="row">
         <div class="col-xs-4">
             <div class="col-xs-12">
-                <div <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel2.png" alt="MetselBedrijf"> </button> </a> </div>
+                <div <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel2.png" alt="MetselBedrijf"> </button> </a>
             </div>
         </div>
         <div class="col-xs-4">
