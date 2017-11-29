@@ -51,7 +51,7 @@
         </div>
         <div class="col-xs-4">
             <div class="col-xs-12">
-                <<div <a href="tekenhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel2.png" alt="Bouwkundig Tekenbureau"> </button> </a> </div>
+                <div <a href="tekenhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel2.png" alt="Bouwkundig Tekenbureau"> </button> </a> </div>
             </div>
         </div>
     </div>
