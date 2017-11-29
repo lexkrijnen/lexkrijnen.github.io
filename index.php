@@ -41,17 +41,17 @@
     <div class="row">
         <div class="col-xs-4">
             <div class="col-xs-12">
-                <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel2.png" alt="MetselBedrijf"></div></a>
+                <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel2.png" alt="MetselBedrijf"></a>
             </div>
         </div>
         <div class="col-xs-4">
             <div class="col-xs-12">
-                <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/BBtegel2.png" alt="BouwBedrijf"></div>
+                <a href="bouwhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/BBtegel2.png" alt="BouwBedrijf"></button></a>
             </div>
         </div>
         <div class="col-xs-4">
             <div class="col-xs-12">
-                <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel2.png" alt="Bouwkundig Tekenbureau"></div>
+                <a href="tekenhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel2.png" alt="Bouwkundig Tekenbureau"></a>
             </div>
         </div>
     </div>
