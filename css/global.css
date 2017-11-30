@@ -3,12 +3,6 @@ body {
 	margin: 75px 0 0 0;
 	padding: 0;
 }
-.BBhomeBackground{
-    padding-top: 500px;
-    background-image: url("../images/IMG_9297.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .navbar {
 	z-index: 1;

@@ -52,7 +52,7 @@
 			</div><!-- /.container-fluid -->
 		</nav>
       <div class="BBhomeBackground">
-          .
+
 
       </div>
 
