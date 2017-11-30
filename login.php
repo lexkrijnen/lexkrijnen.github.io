@@ -56,7 +56,7 @@
             </div>
             <div class="panel-body a" >
 
-                <div style="" class="alert alert-danger col-sm-12 b"></div>
+
 
                 <form id="loginform" class="form-horizontal" role="form">
 
