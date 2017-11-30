@@ -65,7 +65,6 @@
             </div>
             <div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
                 <img class="select-logo" src="img/TBtegel2.png" alt="logo">
-                <
             </div>
 
         </div>
