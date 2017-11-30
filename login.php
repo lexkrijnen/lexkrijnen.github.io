@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,7 +51,7 @@
 <div class="container">
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-info" >
-            <div class="panel-heading">
+            <div class="panel-heading color">
                 <div class="panel-title">Log hier in met uw Wegro account</div>
             </div>
 
