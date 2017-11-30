@@ -3,6 +3,12 @@ body {
 	margin: 75px 0 0 0;
 	padding: 0;
 }
+.BBhomeBackground{
+    background-image: url("../images/BBbanner.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
 
 .navbar {
 	position: fixed;
