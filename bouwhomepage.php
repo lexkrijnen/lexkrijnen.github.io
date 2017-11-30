@@ -9,7 +9,7 @@
         <meta name="author" content="Auteur">
         <link rel="icon" href="images/favicon.ico">
 
-        <title>Welkom bij wegro</title>
+        <title>Bouwbedrijf Wegro</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,7 +27,10 @@
                     <a class="navbar-brand" href="#">
                      <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
                     </a>
-                <div class="col-xs-1 pull-right">
+                        <div class="col-xs-1 pull-right">
+                        <a href="metselhomepage.php">  <button  type="button"  class="btn btn-default navbar-btn">Metselbedrijf</button> </a>
+                    </div>
+                <div class="col-xs-1">
                <a href="login.php">  <button  type="button"  class="btn btn-default navbar-btn">Login</button> </a>
             </div>
         </div>
