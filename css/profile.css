@@ -1,0 +1,15 @@
+.page-box {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid #FE9C16;
+}
+
+.page-box:hover {
+	margin-top: 4px;
+	margin-bottom: 16px;
+	padding-top: 4px;
+	background-color: #fff;
+	border-bottom: 4px solid #fff;
+}
