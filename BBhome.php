@@ -44,6 +44,8 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="#">Over ons</a></li>
+                        <li class="nav-item"><a href="#">Contact</a></li>
 						<li class="nav-item"><a href="#">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
