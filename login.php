@@ -9,7 +9,7 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/logo-default.png">
 
-    <title>Bouwbedrijf Wegro</title>
+    <title>Welkom bij Wegro</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
