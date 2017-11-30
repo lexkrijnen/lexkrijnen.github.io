@@ -1,59 +1,35 @@
-.img {
-    padding-top: 8%;
-}
-.tegel {
-    background-color: orange;
-}
-
-.tegelimage {
-    width: 100%;
-}
-
-
-
-h2 {
-    text-align: center;
-}
-
-
-
-.navbar-header{
-    margin-left:5px;
-    width:100%;
-}
-
 .page-question {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    color: #3C3C3A;
-    font-size: 32px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	color: #3C3C3A;
+	font-size: 32px;
 }
 
 .select-btn {
-    margin-bottom: 20px;
-    background-color: #FE9C16;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 4px solid #A5650E;
+	margin-bottom: 20px;
+	background-color: #FE9C16;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid #A5650E;
 }
 
 .select-btn:hover {
-    margin-top: 4px;
-    margin-bottom: 16px;
-    padding-top: 4px;
-    background-color: #FE9C16;
-    border-bottom: 4px solid #FE9C16;
+	margin-top: 4px;
+	margin-bottom: 16px;
+	padding-top: 4px;
+	background-color: #FE9C16;
+	border-bottom: 4px solid #FE9C16;
 }
 
 .select-logo {
-    margin-top: 15px;
-    width: 250px;
+	margin-top: 15px;
+	width: 250px;
 }
 
 .select-title {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: #fff;
-    font-size: 32px;
-    font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: #fff;
+	font-size: 32px;
+	font-weight: bold;
 }
