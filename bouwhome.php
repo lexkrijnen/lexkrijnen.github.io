@@ -43,41 +43,17 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="#">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="container">
-    
-    	<div class="row">
-    		<div class="col-xs-10">
-    			<p class="page-question">Waarmee kan ik u van dienst zijn?</p>
-    		</div>
-    	</div>
-    	
-    	<div class="row">
-    		<div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
-    			<img class="select-logo" src="images/MBtegel2.png" alt="logo">
-    		</div>
-    		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-                <a href="bouwhome.php"></a>
-    			<img class="select-logo" src="images/BBtegel2.png" alt="logo">
-    		</div>
-    		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-    			<img class="select-logo" src="images/TBtegel2.png" alt="logo">
-    		</div>
-    	</div>
-    
-    </div><!-- /.container -->
-      
-		<div class="row">
-			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			</div>
-		</div>
-       
-        
+      <div></div>
+
+
+
+
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 
