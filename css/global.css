@@ -11,6 +11,7 @@ body {
 }
 
 .navbar {
+	margin-top: -75px;
 	position: fixed;
 	width: 100%;
 	height: 75px;
