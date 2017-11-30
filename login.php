@@ -54,9 +54,9 @@
             <div class="panel-heading">
                 <div class="panel-title">Log hier in met uw Wegro account</div>
             </div>
-            <div style="" class="panel-body a" >
+            <div class="panel-body a" >
 
-                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
 
                 <form id="loginform" class="form-horizontal" role="form">
 
