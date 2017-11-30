@@ -60,10 +60,11 @@
     		<div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
     			<img class="select-logo" src="images/MBtegel2.png" alt="logo">
     		</div>
-    		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-                <a href="bouwhome.php"></a>
-    			<img class="select-logo" src="images/BBtegel2.png" alt="logo">
-    		</div>
+            <a href="BBhome.php">
+                <div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
+                    <img class="select-logo" src="images/BBtegel2.png" alt="logo">
+                </div>
+            </a>
     		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
     			<img class="select-logo" src="images/TBtegel2.png" alt="logo">
     		</div>
