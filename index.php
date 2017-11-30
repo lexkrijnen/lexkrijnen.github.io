@@ -55,11 +55,11 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
+            <div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
                 <img class="select-logo" src="img/MBtegel2.png" alt="logo">
 
             </div>
-            <div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
+            <div class="col-xs-4 col-xs-offset-1 col-md-3  btn btn-default select-btn">
                 <img class="select-logo" src="img/BBtegel2.png" alt="logo">
 
             </div>
