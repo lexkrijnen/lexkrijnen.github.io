@@ -58,16 +58,13 @@
     	
     	<div class="row">
     		<div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
-    			<img class="select-logo" src="images/logo-white.png" alt="logo">
-    			<p class="select-title text-center">BOUWEN</p>
+    			<img class="select-logo" src="images/MBtegel2.png" alt="logo">
     		</div>
     		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-    			<img class="select-logo" src="images/logo-white.png" alt="logo">
-    			<p class="select-title text-center">TEKENEN</p>
+    			<img class="select-logo" src="images/BBtegel2.png" alt="logo">
     		</div>
     		<div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-    			<img class="select-logo" src="images/logo-white.png" alt="logo">
-    			<p class="select-title text-center">METSELEN</p>
+    			<img class="select-logo" src="images/TBtegel2.png" alt="logo">
     		</div>
     	</div>
     
