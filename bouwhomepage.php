@@ -30,6 +30,9 @@
                         <div class="col-xs-1 pull-left">
                         <a href="metselhomepage.php">  <button  type="button"  class="btn btn-default navbar-btn">Metselbedrijf</button> </a>
                     </div>
+                        <div class="col-xs-1 pull-left">
+                            <a href="tekenhomepage.php">  <button  type="button"  class="btn btn-default navbar-btn">Tekenbedrijf</button> </a>
+                        </div>
                 <div class="col-xs-1 pull-right">
                <a href="login.php">  <button  type="button"  class="btn btn-default navbar-btn">Login</button> </a>
             </div>
