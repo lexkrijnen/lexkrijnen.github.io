@@ -51,12 +51,12 @@
     <div class="container">
 
     	<div class="row">
-    		<div class="col-xs-10 col-md-3 btn btn-default page-box">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
     			Hier komt een menu
     		</div>
 
-    		<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset btn btn-default page-box">
-    			 <embed src="http://www.pdf995.com/samples/pdf.pdf" />
+    		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			 <embed class="pdf-viewer" src="http://www.pdf995.com/samples/pdf.pdf" />
     		</div>
     	</div>
 

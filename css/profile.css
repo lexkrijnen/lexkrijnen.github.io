@@ -5,3 +5,7 @@
 	border: none;
 	border-bottom: 4px solid #FE9C16;
 }
+
+.pdf-viewer {
+	width: 100%;
+}
