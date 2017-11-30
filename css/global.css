@@ -1,0 +1,38 @@
+body {
+	background-color: #ECEAE8;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	height: 75px;
+	background: #fff;
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0;	
+	box-shadow: 0 0 2px #7b7b7b;
+}
+
+.navbar-brand > img {
+	width: 220px;
+	margin-top: -9px;
+}
+
+.nav-item {
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+.navbar-toggle {
+	margin-top: 18px;
+}
+
+.footer-rights {
+	position: fixed;
+	bottom: 0;
+	color: #a0a0a0;
+}
+
+.footer-rights > p > a {
+	color: #a0a0a0;
+}

@@ -16,48 +16,66 @@
 
         <link href="css/index.css" rel="stylesheet">
 
+        <link href="css/global.css" rel="stylesheet">
+
 
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     </head>
     <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <div>
-                    <a class="navbar-brand" href="#">
-                     <img alt="Wegro" src="img/wegrobanner.png" width="75" height="25">
-                    </a>
-                <div class="col-xs-1 pull-right">
-               <a href="login.php">  <button  type="button"  class="btn btn-default navbar-btn">Login</button> </a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="img/wegrobanner.png" alt="logo"></a>
             </div>
-        </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
 
-<h2>Welkom bij bouwbedrijf Wegro</h2> <br>
-    <h2> Maak hier uw keuze om door te gaan</h2>
-    <div class="img">
-        <div class="container">
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="col-xs-12">
-                <div class="col-xs-12"> <a href="metselhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/MBtegel2.png" alt="MetselBedrijf"> </button> </a> </div>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="col-xs-12">
-                <div class="col-xs-12"> <a href="bouwhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/BBtegel2.png" alt="BouwBedrijf"> </button> </a> </div>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="col-xs-12">
-                <div class="col-xs-12"> <a href="tekenhomepage.php"> <button type="button" class="btn btn-default tegel"><img class="tegelimage" src="img/TBtegel2.png" alt="Bouwkundig Tekenbureau"> </button> </a> </div>
-            </div>
-        </div>
-    </div>
-        </div>
-    </div>
 
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-10">
+                <p class="page-question">Welkom bij Wegro</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
+                <img class="select-logo" src="img/MBtegel2.png" alt="logo">
+
+            </div>
+            <div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-0 btn btn-default select-btn">
+                <img class="select-logo" src="img/BBtegel2.png" alt="logo">
+
+            </div>
+            <div class="col-xs-4 col-xs-offset-1 col-md-3 btn btn-default select-btn">
+                <img class="select-logo" src="img/TBtegel2.png" alt="logo">
+                <
+            </div>
+
+        </div>
+
+    </div
+    <div class="row">
+        <div class="col-xs-12 text-center footer-rights">
+            <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+        </div>
+    </div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
