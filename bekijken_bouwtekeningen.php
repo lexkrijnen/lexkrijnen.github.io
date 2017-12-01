@@ -113,7 +113,11 @@ $pdo = NULL;
                 print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
                 print("<tr><td>Naam klant: $klantnaam</td></tr>");
                 print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-                print("<tr><td> <embed src=\"test.pdf\" width=\"100px\" height=\"300px\" /> </td></tr>");
+                print("<tr><td>
+                        <div class=\"embed-responsive pdf-viewer\">
+    				        <object data=$document type=\"application/pdf\"></object>
+					   </div>
+                    </td></tr>");
                 print("</table>");
 
             }
