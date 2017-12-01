@@ -5,8 +5,9 @@
 }
 
 .logo{
-    margin-left: auto;
-    margin-top: 5%;
+    /*margin-left: auto;
+    margin-top: 5%;*/
     width: 20%;
-    height: 20%;
+    display: block;
+    margin: auto;
 }
