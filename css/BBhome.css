@@ -5,8 +5,7 @@
 }
 
 .logo{
-    position: absolute;
-    display: block;
+    float: right;
     margin: 0 auto;
     width: 50%;
 }
