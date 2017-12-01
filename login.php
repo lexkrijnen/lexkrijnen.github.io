@@ -1,10 +1,6 @@
 <?php
 include_once (dbconnect.php);
 
-$stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
-$stmt->execute();
-$meerwerk = $stmt->fetchAll();
-print($meerwerk);
 
 $message="";
 if(!empty($_POST["login"])) {
