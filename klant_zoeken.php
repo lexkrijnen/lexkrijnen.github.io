@@ -62,7 +62,7 @@
 
 
 
-
+      <div class=container>
        <table>
             <tr>
                 <form action="klant_zoeken.php" method="get">
@@ -80,8 +80,8 @@
                        <tr><td><input class="btn btn-primary" type="submit" name="vinden" value="vinden"></td></tr>
                 </form>
             </tr>
-    </table>
-
+        </table>
+      </div>
 
 
 
@@ -102,7 +102,7 @@
 
 
 
-      <?php
+<?php
 session_start();
 
 
@@ -152,34 +152,34 @@ $pdo = NULL;
 if (isset($_GET["vinden"])) {
     //Geen voornaam en achternaam ingevuld
     if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
-            print("<div class=\"alert alert-warning\" role=\"alert\">
-                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                    <span class=\"sr-only\">Error:</span>
-                    Vul een voornaam en een achternaam in.
-                  </div>");
+        print("<div class=\"alert alert-warning\" role=\"alert\">
+                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                <span class=\"sr-only\">Error:</span>
+                Vul een voornaam en een achternaam in.
+              </div>");
     } elseif ($stmt->rowCount()>0) {
-            print("<table>");
-            print("<tr><td>Naam: $naam</td></tr>");
-            print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-            print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
-            print("<tr><td>Emailadres: $emailadres</td></tr>");
-            print("<tr><td>Adres: $adres</td></tr>");
-            print("<tr><td>Postcode: $postcode</td></tr>");
-            print("<tr><td>Woonplaats: $woonplaats</td></tr>");
-            print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
-            print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
-            print("</form>");
-            print("</table>");
-        } else {
-            //geen klant gevonden met die naam
-            print("<div class=\"alert alert-warning\" role=\"alert\">
-                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                    <span class=\"sr-only\">Error:</span>
-                    Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
-                  </div>");
-        }
+        print("<table>");
+        print("<tr><td>Naam: $naam</td></tr>");
+        print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+        print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
+        print("<tr><td>Emailadres: $emailadres</td></tr>");
+        print("<tr><td>Adres: $adres</td></tr>");
+        print("<tr><td>Postcode: $postcode</td></tr>");
+        print("<tr><td>Woonplaats: $woonplaats</td></tr>");
+        print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
+        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+        print("</form>");
+        print("</table>");
+    } else {
+        //geen klant gevonden met die naam
+        print("<div class=\"alert alert-warning\" role=\"alert\">
+                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                <span class=\"sr-only\">Error:</span>
+                Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
+              </div>");
     }
-    ?>
+}
+?>
 
 	</body>
 </html>
