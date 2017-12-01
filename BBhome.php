@@ -58,7 +58,6 @@
                     <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 </div>
               </div>
-      </div>
 
 
 
