@@ -52,7 +52,7 @@ if(!empty($_POST["login"])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Lyogo"></a>
+            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -89,7 +89,7 @@ if(!empty($_POST["login"])) {
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn-success" type="submit" name="submit" value="Login">
+                            <input class="btn btn-primary" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
