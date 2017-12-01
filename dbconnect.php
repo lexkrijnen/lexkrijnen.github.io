@@ -5,3 +5,4 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 ?>
+

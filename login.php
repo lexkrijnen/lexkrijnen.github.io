@@ -1,4 +1,22 @@
+<?php
+include_once (dbconnect.php);
 
+$stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
+$stmt->execute();
+$meerwerk = $stmt->fetchAll();
+print($meerwerk);
+?>
+$message="";
+if(!empty($_POST["login"])) {
+    $result = mysqli_query($conn,"SELECT * FROM wegro WHERE e-mailadres='" . $_POST["e-mailadres"] . "' and wachtwoord = '". $_POST["wachtwoord"]."'");
+    $row  = mysqli_fetch_array($result);
+    if(is_array($row)) {
+        $_SESSION["user_id"] = $row['user_id'];
+    } else {
+        $message = "Uw email of wachtwoord is onjuist!";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,19 +81,19 @@
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="e-mailadres" value="e-mailadres" placeholder="Vul hier u Email in">
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier u Email in">
                     </div>
 
                     <div class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="wachtwoord" value="wachtwoord" placeholder="Vul hier uw Wachtwoord in">
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw Wachtwoord in">
                     </div>
 
                     <div  class="form-group d">
                         <!-- Button -->
 
-                        <div class="col-sm-12 controls btn-succes">
-                            <input type="submit" name="submit" value="Login">
+                        <div class="col-sm-12 controls">
+                            <input class="btn-success" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
