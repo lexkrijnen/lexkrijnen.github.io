@@ -65,7 +65,7 @@ if(!empty($_POST["login"])) {
 </nav>
 <div class="container">
     <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
-        <div class="panel panel-info" >
+        <div class="panel " >
             <div class="panel-heading oranje">
                 <div class="panel-title">Log hier in met uw Wegro account</div>
             </div>
@@ -89,7 +89,7 @@ if(!empty($_POST["login"])) {
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn btn-primary" type="submit" name="submit" value="Login">
+                            <input class="btn oranje" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
