@@ -77,12 +77,12 @@ if(!empty($_POST["login"])) {
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="e-mailadres" value="e-mailadres" placeholder="Vul hier u Email in">
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier u Email in">
                     </div>
 
                     <div class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="wachtwoord" value="wachtwoord" placeholder="Vul hier uw Wachtwoord in">
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw Wachtwoord in">
                     </div>
 
                     <div  class="form-group d">
