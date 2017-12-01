@@ -1,3 +1,18 @@
+<?php
+if ($_SERVER['REQUEST_METHOD']=='POST'){
+    $username = $_POST['e-mailadres'];
+    $password = $_POST['wachtwoord'];
+    require_once('dbConnect.php');
+    $sql= "SELECT * FROM user WHERE e-mailadress = '$username' AND wachtwoord = '$password' ";
+    $result = mysqli_query($con,$sql);
+    $check = mysqli_fetch_array($result);
+    if(isset($check)){
+        echo 'success';
+    }else{
+        echo 'failure';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Logo"></a>
+            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Lyogo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,23 +73,23 @@
 
 
 
-                <form id="loginform" class="form-horizontal" role="form">
+                <form action="account.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Vul hier u Email in">
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" value="e-mailadres" placeholder="Vul hier u Email in">
                     </div>
 
                     <div class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Vul hier uw Wachtwoord in">
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord" value="wachtwoord" placeholder="Vul hier uw Wachtwoord in">
                     </div>
 
                     <div  class="form-group d">
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                            <input type="submit" name="submit" value="Login!">
                         </div>
                     </div>
 
