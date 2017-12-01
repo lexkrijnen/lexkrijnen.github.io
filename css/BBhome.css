@@ -1,12 +1,10 @@
 .BBhomeBackground{
-    padding-top: 500px;
     background-image: url("../images/IMG_9297.JPG");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .logo{
-    float: right;
-    width: 50%;
-    z-index: 1;
+    margin-left: 45%;
+    margin-top: 5%;
 }
