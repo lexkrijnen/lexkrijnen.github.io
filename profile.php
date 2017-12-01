@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,12 +51,12 @@
     <div class="container">
 
     	<div class="row">
-    		<div class="col-xs-10 col-xs-offset-1 col-md-3 btn btn-default select-btn">
-    			<img class="select-logo" src="images/MBtegel2.png" alt="logo">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+    			Hier komt een menu
     		</div>
 
-    		<div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset 1 btn btn-default select-btn">
-    			<img class="select-logo" src="images/TBtegel2.png" alt="logo">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			 <embed class="pdf-viewer" src="http://www.pdf995.com/samples/pdf.pdf" />
     		</div>
     	</div>
 
