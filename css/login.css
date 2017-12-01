@@ -24,3 +24,7 @@
 .white {
 	color: white;
 }
+
+.lowborder {
+	border-bottom: 4px solid #A5650E;
+}
