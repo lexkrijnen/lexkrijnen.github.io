@@ -55,12 +55,12 @@
 
 
 
-
+      <div class=container>
         <form action="bekijken_bouwtekeningen.php" method="get">
             <input type="text" name="projectnaam" placeholder="projectnaam">
             <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
         </form>
-
+      </div>
 
 
 
