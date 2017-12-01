@@ -56,10 +56,7 @@
     		</div>
 
     		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<canvas class="embed-responsive" id="pdf-viewer">
-    				<iframe src="https://www.w3schools.com"></iframe>
-						<!--<object data="http://www.pdf995.com/samples/pdf.pdf" type="application/pdf"></object>-->
-					</canvas>
+					<iframe id="pdf-viewer" src="https://www.w3schools.com"></iframe>
     		</div>
     	</div>
 
