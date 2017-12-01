@@ -56,9 +56,9 @@
     		</div>
 
     		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<div class="embed-responsive" id="pdf-viewer">
+    			<canvas class="embed-responsive" id="pdf-viewer">
 						<!--<object data="http://www.pdf995.com/samples/pdf.pdf" type="application/pdf"></object>-->
-					</div>
+					</canvas>
     		</div>
     	</div>
 
@@ -78,11 +78,19 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<!-- PDF.js for the mobile supported PDF viewer -->
-		<script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+		<script src="//mozilla.github.io/pdf.js/build/pdf.js" type="text/javascript"></script>
 		<script>
 			// If absolute URL from the remote server is provided, configure the CORS
 			// header on that server.
-			var url = 'http://www.pdf995.com/samples/pdf.pdf';
+			var url = 'test-files/test.pdf';
+
+			// Disable workers to avoid yet another cross-origin issue (workers need
+			// the URL of the script to be loaded, and dynamically loading a cross-origin
+			// script does not work).
+			// PDFJS.disableWorker = true;
+
+			// The workerSrc property shall be specified.
+			PDFJS.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
 			// Asynchronous download of PDF
 			var loadingTask = PDFJS.getDocument(url);
