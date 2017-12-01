@@ -52,8 +52,13 @@
 			</div><!-- /.container-fluid -->
 		</nav>
       <div class="BBhomeBackground">
-                <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+            </div>
+                <div>
+                    <button type="button" class="btn btn-primary btn-lg">Contact opnemen</button>
                 </div>
+
+
 
 
 
