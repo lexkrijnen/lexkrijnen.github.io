@@ -1,4 +1,18 @@
+<?php
+session_start();
+$conn = mysqli_connect("localhost","wegro","SQLWegro@101","wegro");
 
+$message="";
+if(!empty($_POST["login"])) {
+    $result = mysqli_query($conn,"SELECT * FROM wegro WHERE e-mailadres='" . $_POST["e-mailadres"] . "' and wachtwoord = '". $_POST["wachtwoord"]."'");
+    $row  = mysqli_fetch_array($result);
+    if(is_array($row)) {
+        $_SESSION["user_id"] = $row['user_id'];
+    } else {
+        $message = "Uw email of wachtwoord is onjuist!";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,8 +88,8 @@
                     <div  class="form-group d">
                         <!-- Button -->
 
-                        <div class="col-sm-12 controls btn-succes">
-                            <input type="submit" name="submit" value="Login">
+                        <div class="col-sm-12 controls">
+                            <input class="btn-success" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
