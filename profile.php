@@ -82,7 +82,7 @@
 		<script>
 			// If absolute URL from the remote server is provided, configure the CORS
 			// header on that server.
-			var url = 'http://www.pdf995.com/samples/pdf.pdf';
+			var url = 'test-files/test.pdf';
 
 // Disable workers to avoid yet another cross-origin issue (workers need
 // the URL of the script to be loaded, and dynamically loading a cross-origin
