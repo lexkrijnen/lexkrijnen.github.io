@@ -38,5 +38,6 @@ body {
 }
 
 .footer-rights > p > a {
+	margin-top: 35px;
 	color: #a0a0a0;
 }
