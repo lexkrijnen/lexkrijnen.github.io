@@ -77,7 +77,7 @@
                           <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" placeholder=<?php if (isset($_GET["vinden"])) { print($_GET["achternaam"]); } else { print("achternaam"); }?> ></td></tr>
                       </div>
                     </div>
-                       <tr><td><input class="btn btn-primary" type="submit" name="vinden" value="vinden"></td></tr>
+                    <tr><td></td><td><input class="btn btn-primary" type="submit" name="vinden" value="vinden"></td></tr>
                 </form>
             </tr>
         </table>
