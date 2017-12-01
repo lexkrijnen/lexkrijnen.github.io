@@ -1,35 +1,4 @@
-<?php
-include(dbconnect.php);
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form
-
-    $myusername = mysqli_real_escape_string($db,$_POST['e-mailadres']);
-    $mypassword = mysqli_real_escape_string($db,$_POST['wachtwoord']);
-
-    $sql = "SELECT id FROM admin WHERE e-mailadres = '$myusername' and wachtwoord = '$mypassword'";
-    $result = mysqli_query($db,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
-
-    $count = mysqli_num_rows($result);
-
-    // If result matched $myusername and $mypassword, table row must be 1 row
-
-    if($count == 1) {
-        session_register("e-mailadres");
-        $_SESSION['login_user'] = $myusername;
-
-        header("location: account.php");
-    }else {
-        $error = "Your Login Name or Password is invalid";
-    }
-}
-
-$stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
-$stmt->execute();
-$meerwerk = $stmt->fetchAll();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
