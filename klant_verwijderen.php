@@ -1,3 +1,37 @@
+<?php
+session_start();
+
+$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
+
+
+
+//klant verwijderen
+
+if (isset($_GET["echtverwijderen"])) {
+    $sql = "DELETE FROM klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
+}
+
+
+$sql = "SELECT * FROM klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
+$klant = $stmt->fetch();
+
+$klant_nummer = $klant["klant_nummer"];
+$voornaam = $klant["voornaam"];
+$tussenvoegsel = $klant["tussenvoegsel"];
+$achternaam = $klant["achternaam"];
+$telefoonnummer = $klant["telefoon_nummer"];
+
+$pdo = NULL;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -61,7 +95,7 @@
         ?>
         <form action="klant_verwijderen.php" method="get">
             <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
-            <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='zoeken.php'"/>
+            <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
         </form>
 
 

@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,12 +51,14 @@
     <div class="container">
 
     	<div class="row">
-    		<div class="col-xs-10 col-md-3 btn btn-default select-btn">
-    			<img class="select-logo" src="images/MBtegel2.png" alt="logo">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+    			Hier komt een menu
     		</div>
 
-    		<div class="col-xs-10 col-xs-offset-1 col-md-7 col-md-offset 1 btn btn-default select-btn">
-    			<img class="select-logo" src="images/TBtegel2.png" alt="logo">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			<canvas class="embed-responsive" id="pdf-viewer">
+						<!--<object data="http://www.pdf995.com/samples/pdf.pdf" type="application/pdf"></object>-->
+					</canvas>
     		</div>
     	</div>
 
@@ -74,5 +76,55 @@
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
+		<!-- PDF.js for the mobile supported PDF viewer -->
+		<script src="//mozilla.github.io/pdf.js/build/pdf.js" type="text/javascript"></script>
+		<script>
+			// If absolute URL from the remote server is provided, configure the CORS
+			// header on that server.
+			var url = 'test-files/test.pdf';
+
+			// Disable workers to avoid yet another cross-origin issue (workers need
+			// the URL of the script to be loaded, and dynamically loading a cross-origin
+			// script does not work).
+			// PDFJS.disableWorker = true;
+
+			// The workerSrc property shall be specified.
+			PDFJS.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+			// Asynchronous download of PDF
+			var loadingTask = PDFJS.getDocument(url);
+			loadingTask.promise.then(function(pdf) {
+				console.log('PDF loaded');
+
+				// Fetch the first page
+				var pageNumber = 1;
+				pdf.getPage(pageNumber).then(function(page) {
+					console.log('Page loaded');
+
+					var scale = 1.5;
+					var viewport = page.getViewport(scale);
+
+					// Prepare canvas using PDF page dimensions
+					var canvas = document.getElementById('pdf-viewer');
+					var context = canvas.getContext('2d');
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+
+					// Render PDF page into canvas context
+					var renderContext = {
+						canvasContext: context,
+						viewport: viewport
+					};
+					var renderTask = page.render(renderContext);
+					renderTask.then(function () {
+						console.log('Page rendered');
+					});
+				});
+			}, function (reason) {
+				// PDF loading error
+				console.error(reason);
+			});
+		</script>
 	</body>
 </html>
