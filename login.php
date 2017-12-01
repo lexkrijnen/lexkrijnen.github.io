@@ -89,7 +89,7 @@ if(!empty($_POST["login"])) {
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn-success" type="submit" name="submit" value="Login">
+                            <input class="btn btn-default" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
