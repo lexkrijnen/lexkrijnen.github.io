@@ -1,7 +1,11 @@
 <?php
-session_start();
-$conn = mysqli_connect("localhost","wegro","SQLWegro@101","wegro");
+include_once (dbconnect.php);
 
+$stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
+$stmt->execute();
+$meerwerk = $stmt->fetchAll();
+print($meerwerk);
+?>
 $message="";
 if(!empty($_POST["login"])) {
     $result = mysqli_query($conn,"SELECT * FROM wegro WHERE e-mailadres='" . $_POST["e-mailadres"] . "' and wachtwoord = '". $_POST["wachtwoord"]."'");
