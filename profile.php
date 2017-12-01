@@ -78,7 +78,7 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<!-- PDF.js for the mobile supported PDF viewer -->
-		<script src="https://cdnjs.com/libraries/pdf.js" type="text/javascript"></script>
+		<script src="//mozilla.github.io/pdf.js/build/pdf.js" type="text/javascript"></script>
 		<script>
 			// If absolute URL from the remote server is provided, configure the CORS
 			// header on that server.
