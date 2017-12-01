@@ -52,7 +52,7 @@ if(!empty($_POST["login"])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Lyogo"></a>
+            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,7 +66,7 @@ if(!empty($_POST["login"])) {
 <div class="container">
     <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
         <div class="panel panel-info" >
-            <div class="panel-heading">
+            <div class="panel-heading oranje">
                 <div class="panel-title">Log hier in met uw Wegro account</div>
             </div>
             <div class="panel-body a" >
@@ -89,7 +89,7 @@ if(!empty($_POST["login"])) {
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn-success" type="submit" name="submit" value="Login">
+                            <input class="btn btn-primary" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
