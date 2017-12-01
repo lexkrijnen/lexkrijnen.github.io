@@ -1,9 +1,12 @@
 <?php
-include_once (dbconnect.php);
+$db = "mysql:localhost; dbname=wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
 
 
 $message="";
-if(!empty($_POST["login"])) {
+if(!empty($_POST["submit"])) {
     $result = mysqli_query($conn,"SELECT * FROM wegro WHERE e-mailadres='" . $_POST["e-mailadres"] . "' and wachtwoord = '". $_POST["wachtwoord"]."'");
     $row  = mysqli_fetch_array($result);
     if(is_array($row)) {
