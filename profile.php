@@ -56,7 +56,11 @@
     		</div>
 
     		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			 <embed class="pdf-viewer" src="http://www.pdf995.com/samples/pdf.pdf" />
+    			<div class="embed-responsive pdf-viewer">
+    				<a href="http://www.pdf995.com/samples/pdf.pdf">
+    					<object data="http://www.pdf995.com/samples/pdf.pdf" type="application/pdf"></object>
+    				</a>
+					</div>
     		</div>
     	</div>
 
@@ -74,5 +78,8 @@
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
+		<!-- PDF.js for the mobile supported PDF viewer -->
+		<script src="https://cdnjs.com/libraries/pdf.js"></script>
 	</body>
 </html>
