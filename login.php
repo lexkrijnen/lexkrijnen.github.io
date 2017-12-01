@@ -1,18 +1,4 @@
-<?php
-if ($_SERVER['REQUEST_METHOD']=='POST'){
-    $username = $_POST['e-mailadres'];
-    $password = $_POST['wachtwoord'];
-    require_once('dbConnect.php');
-    $sql= "SELECT * FROM user WHERE e-mailadress = '$username' AND wachtwoord = '$password' ";
-    $result = mysqli_query($con,$sql);
-    $check = mysqli_fetch_array($result);
-    if(isset($check)){
-        echo 'success';
-    }else{
-        echo 'failure';
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 
 
 
-                <form action="account.php"  id="loginform" class="form-horizontal" role="form">
+                <form action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -88,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
                     <div  class="form-group d">
                         <!-- Button -->
 
-                        <div class="col-sm-12 controls">
-                            <input type="submit" name="submit" value="Login!">
+                        <div class="col-sm-12 controls btn-succes">
+                            <input type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
