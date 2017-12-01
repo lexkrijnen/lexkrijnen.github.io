@@ -1,7 +1,7 @@
 
 
 .a {
-	padding-top:30px
+	padding-top:30px;
 }
 
 
@@ -10,9 +10,13 @@
 }
 
 .c {
-	margin-bottom: 25px
+	margin-bottom: 25px;
 }
 
 .d {
-	margin-top:10px
+	margin-top:10px;
+}
+
+.oranje {
+	background-color: FE9C16;
 }
