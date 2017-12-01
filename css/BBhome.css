@@ -8,4 +8,5 @@
 .logo{
     float: right;
     width: 50%;
+    z-index: 1;
 }
