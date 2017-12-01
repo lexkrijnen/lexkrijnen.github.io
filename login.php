@@ -66,7 +66,7 @@ if(!empty($_POST["login"])) {
 <div class="container">
     <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
         <div class="panel panel-info" >
-            <div class="panel-heading">
+            <div class="panel-heading oranje">
                 <div class="panel-title">Log hier in met uw Wegro account</div>
             </div>
             <div class="panel-body a" >

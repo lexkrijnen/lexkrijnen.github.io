@@ -9,7 +9,7 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Welkom bij Wegro</title>
+    <title>Mijn profiel</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+				        <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
+                        <li class="nav-item"><a href="contact.php">Contact</a></li>
+						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
