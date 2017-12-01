@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD']=='POST'){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['e-mailadres'];
+    $password = $_POST['wachtwoord'];
     require_once('dbConnect.php');
-    $sql= "SELECT * FROM user WHERE username = '$username' AND password = '$password' ";
+    $sql= "SELECT * FROM user WHERE e-mailadress = '$username' AND wachtwoord = '$password' ";
     $result = mysqli_query($con,$sql);
     $check = mysqli_fetch_array($result);
     if(isset($check)){
