@@ -61,7 +61,7 @@
         ?>
         <form action="klant_verwijderen.php" method="get">
             <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
-            <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='zoeken.php'"/>
+            <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
         </form>
 
 

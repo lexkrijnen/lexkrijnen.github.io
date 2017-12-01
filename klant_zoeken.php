@@ -40,8 +40,9 @@ if (isset($_GET["vinden"])) {
 
 
 $pdo = NULL;
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,26 +74,26 @@ $pdo = NULL;
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
-				</div>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+            </div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 
 
 
@@ -118,39 +119,39 @@ $pdo = NULL;
                 </form>
             </tr>
     </table>
-        <?php
-        //informatie van de gezochte klant tonen
-        if (isset($_GET["vinden"])) {
-            //Geen voornaam en achternaam ingevuld
-            if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
-                    print("<div class=\"alert alert-warning\" role=\"alert\">
-                            <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                            <span class=\"sr-only\">Error:</span>
-                            Vul een voornaam en een achternaam in.
-                          </div>");
-            } elseif ($stmt->rowCount()>0) {
-                    print("<table>");
-                    print("<tr><td>Naam: $naam</td></tr>");
-                    print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-                    print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
-                    print("<tr><td>Emailadres: $emailadres</td></tr>");
-                    print("<tr><td>Adres: $adres</td></tr>");
-                    print("<tr><td>Postcode: $postcode</td></tr>");
-                    print("<tr><td>Woonplaats: $woonplaats</td></tr>");
-                    print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
-                    print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
-                    print("</form>");
-                    print("</table>");
-                } else {
-                    //geen klant gevonden met die naam
-                    print("<div class=\"alert alert-warning\" role=\"alert\">
-                            <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                            <span class=\"sr-only\">Error:</span>
-                            Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
-                          </div>");
-                }
+    <?php
+    //informatie van de gezochte klant tonen
+    if (isset($_GET["vinden"])) {
+        //Geen voornaam en achternaam ingevuld
+        if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">
+                        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                        <span class=\"sr-only\">Error:</span>
+                        Vul een voornaam en een achternaam in.
+                      </div>");
+        } elseif ($stmt->rowCount()>0) {
+                print("<table>");
+                print("<tr><td>Naam: $naam</td></tr>");
+                print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+                print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
+                print("<tr><td>Emailadres: $emailadres</td></tr>");
+                print("<tr><td>Adres: $adres</td></tr>");
+                print("<tr><td>Postcode: $postcode</td></tr>");
+                print("<tr><td>Woonplaats: $woonplaats</td></tr>");
+                print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
+                print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+                print("</form>");
+                print("</table>");
+            } else {
+                //geen klant gevonden met die naam
+                print("<div class=\"alert alert-warning\" role=\"alert\">
+                        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                        <span class=\"sr-only\">Error:</span>
+                        Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
+                      </div>");
             }
-            ?>
+        }
+        ?>
 
 
 
