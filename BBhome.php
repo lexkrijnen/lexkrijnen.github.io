@@ -52,8 +52,12 @@
 			</div><!-- /.container-fluid -->
 		</nav>
       <div class="BBhomeBackground">
-
-
+        </div>
+          <div class="container">
+                <div>
+                    <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+                </div>
+              </div>
       </div>
 
 

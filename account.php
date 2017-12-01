@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,30 +48,15 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="container">
-
-    	<div class="row">
-    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-    			Hier komt een menu
-    		</div>
-
-    		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<canvas class="embed-responsive" id="pdf-viewer">
-    				<iframe src="https://www.w3schools.com"></iframe>
-						<!--<object data="http://www.pdf995.com/samples/pdf.pdf" type="application/pdf"></object>-->
-					</canvas>
-    		</div>
-    	</div>
-
-    </div><!-- /.container -->
-
+    <h1>Gefeliciteerd, Je bent ingelogd.</h1>
+      
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 			</div>
 		</div>
-
-
+       
+        
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 
