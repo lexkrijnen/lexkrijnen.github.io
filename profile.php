@@ -56,7 +56,7 @@
     		</div>
 
     		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-					<iframe id="pdf-viewer" src="https://www.w3schools.com"></iframe>
+					<iframe id="pdf-viewer" src="test-files/test.pdf"></iframe>
     		</div>
     	</div>
 
