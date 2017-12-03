@@ -27,6 +27,10 @@ body {
 	font-size: 22px;
 }
 
+.navbar-default .navbar-toggle {
+	border: none;
+}
+
 .navbar-toggle {
 	margin-top: 18px;
 }
@@ -43,7 +47,7 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-	body {
-		margin-bottom: 75px;
+	.footer-rights {
+		margin-top: 75px;
 	}
 }
