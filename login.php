@@ -5,29 +5,8 @@ $db = "mysql:host=localhost; dbname=wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
-
-if(isset($_POST) & !empty($_POST)){
-    $username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
-    $password = md5($_POST['wachtwoord']);
-    $sql = "SELECT * FROM `klant` WHERE ";
-    if(filter_var($username, FILTER_VALIDATE_EMAIL)){
-        $sql .= "e-mailadres='$username'";
-    }else{
-        $sql .= "e-mailadres='$username'";
-    }
-    $sql .= " AND wachtwoord='$password' AND active=1";
-    $sql;
-    $res = mysqli_query($connection, $sql);
-    $count = mysqli_num_rows($res);
-
-    if($count == 1){
-        $_SESSION['e-mailadres'] = $username;
-        header('location: account.php');
-    }else{
-        $fmsg = "User does not exist";
-    }
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,5 +112,28 @@ if(isset($_POST) & !empty($_POST)){
 
 <!-- Bootstrap Framework -->
 <script src="js/bootstrap.min.js"></script>
+<?php
+if(isset($_POST) & !empty($_POST)){
+$username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
+$password = md5($_POST['wachtwoord']);
+$sql = "SELECT * FROM `klant` WHERE ";
+if(filter_var($username, FILTER_VALIDATE_EMAIL)){
+$sql .= "e-mailadres='$username'";
+}else{
+$sql .= "e-mailadres='$username'";
+}
+$sql .= " AND wachtwoord='$password' AND active=1";
+$sql;
+$res = mysqli_query($connection, $sql);
+$count = mysqli_num_rows($res);
+
+if($count == 1){
+$_SESSION['e-mailadres'] = $username;
+header('location: account.php');
+}else{
+$fmsg = "User does not exist";
+}
+}
+?>
 </body>
 </html>
