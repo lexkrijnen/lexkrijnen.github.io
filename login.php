@@ -1,88 +1,40 @@
+
+
 <?php
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
+session_start();
+ require('dbconnect.php');
+//3. If the form is submitted or not.
+//3.1 If the form is submitted
+if (isset($_POST['e-mailadres']) and isset($_POST['wachtwoord'])){
+//3.1.1 Assigning posted values to variables.
+    $username = $_POST['e-mailadres'];
+    $password = $_POST['wachtwoord'];
+//3.1.2 Checking the values are existing in the database or not
+    $query = "SELECT * FROM `klant` WHERE e-mailadres='$username' and wachtwoord='$password'";
 
-$stmt = $pdo->prepare("SELECT e-mailadress, wachtwoord FROM klant");
-$stmt->execute();
-$klanten = $stmt->fetchAll();
-
-// Include config file
-require_once 'config.php';
-
-// Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
-
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    // Check if username is empty
-    if(empty(trim($_POST["e-mailadres"]))){
-        $username_err = 'Voer een geldige e-mailadres in.';
-    } else{
-        $username = trim($_POST["e-mailadres"]);
+    $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+    $count = mysqli_num_rows($result);
+//3.1.2 If the posted values are equal to the database values, then session will be created for the user.
+    if ($count == 1){
+        $_SESSION['e-mailadres'] = $username;
+    }else{
+//3.1.3 If the login credentials doesn't match, he will be shown with an error message.
+        $fmsg = "Invalid Login Credentials.";
     }
-
-    // Check if password is empty
-    if(empty(trim($_POST['wachtwoord']))){
-        $password_err = 'Voer een geldig wachtwoord in.';
-    } else{
-        $password = trim($_POST['wachtwoord']);
-    }
-
-    // Validate credentials
-    if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
-        $sql = "SELECT e-mailadres, wachtwoord FROM klant WHERE e-mailadres = ?";
-
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
-
-            // Set parameters
-            $param_username = $username;
-
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Store result
-                mysqli_stmt_store_result($stmt);
-
-                // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                    // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $username, $hashed_password);
-                    if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
-                            /* Password is correct, so start a new session and
-                            save the username to the session */
-                            session_start();
-                            $_SESSION['e-mailadres'] = $username;
-                            header("location: account.php");
-                        } else{
-                            // Display an error message if password is not valid
-                            $password_err = 'Het wachtwoord is incorrect.';
-                        }
-                    }
-                } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = 'Er bestaan geen accounts met dit e-mailadres.';
-                }
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-        }
-
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-
-    // Close connection
-    mysqli_close($link);
 }
-}
+//3.1.4 if the user is logged in Greets the user with message
+if (isset($_SESSION['e-mailadres'])){
+    $username = $_SESSION['e-mailadres'];
+    echo "Hai " . $username . "
+";
+    echo "This is the Members Area
+";
+    echo "<a href='logout.php'>Logout</a>";
+
+}else{
+//3.2 When the user visits the page first time, simple login form will be displayed.
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-                <form action="login.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
