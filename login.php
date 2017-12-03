@@ -1,38 +1,32 @@
 
 
 <?php
-session_start();
- require('dbconnect.php');
-//3. If the form is submitted or not.
-//3.1 If the form is submitted
-if (isset($_POST['e-mailadres']) and isset($_POST['wachtwoord'])){
-//3.1.1 Assigning posted values to variables.
-    $username = $_POST['e-mailadres'];
-    $password = $_POST['wachtwoord'];
-//3.1.2 Checking the values are existing in the database or not
-    $query = "SELECT * FROM `klant` WHERE e-mailadres='$username' and wachtwoord='$password'";
+$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
 
-    $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-    $count = mysqli_num_rows($result);
-//3.1.2 If the posted values are equal to the database values, then session will be created for the user.
-    if ($count == 1){
-        $_SESSION['e-mailadres'] = $username;
+if(isset($_POST) & !empty($_POST)){
+    $username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
+    $password = md5($_POST['wachtwoord']);
+    $sql = "SELECT * FROM `klant` WHERE ";
+    if(filter_var($username, FILTER_VALIDATE_EMAIL)){
+        $sql .= "e-mailadres='$username'";
     }else{
-//3.1.3 If the login credentials doesn't match, he will be shown with an error message.
-        $fmsg = "Invalid Login Credentials.";
+        $sql .= "e-mailadres='$username'";
+    }
+    $sql .= " AND wachtwoord='$password' AND active=1";
+    $sql;
+    $res = mysqli_query($connection, $sql);
+    $count = mysqli_num_rows($res);
+
+    if($count == 1){
+        $_SESSION['e-mailadres'] = $username;
+        header('location: account.php');
+    }else{
+        $fmsg = "User does not exist";
     }
 }
-//3.1.4 if the user is logged in Greets the user with message
-if (isset($_SESSION['e-mailadres'])){
-    $username = $_SESSION['e-mailadres'];
-    echo "Hai " . $username . "
-";
-    echo "This is the Members Area
-";
-    echo "<a href='logout.php'>Logout</a>";
-
-}else{
-//3.2 When the user visits the page first time, simple login form will be displayed.
 ?>
 
 <!DOCTYPE html>
