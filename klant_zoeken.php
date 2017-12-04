@@ -9,6 +9,16 @@ $pdo = new PDO($db, $user, $pass);
 
 
 
+$sql = "SELECT * FROM Klant";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetch();
+
+print_r($result);
+
+
+
+
 
 
 if (isset($_GET["vinden"])) {
