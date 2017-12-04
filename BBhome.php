@@ -62,7 +62,7 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="index.php">
+         <a href="contact.php">
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
