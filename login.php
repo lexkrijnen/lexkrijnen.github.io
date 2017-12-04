@@ -1,7 +1,7 @@
 
 
 <?php
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
@@ -116,7 +116,7 @@ $pdo = new PDO($db, $user, $pass);
 if(isset($_POST) & !empty($_POST)){
 $username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
 $password = md5($_POST['wachtwoord']);
-$sql = "SELECT * FROM `klant` WHERE ";
+$sql = "SELECT * FROM `Klant` WHERE ";
 if(filter_var($username, FILTER_VALIDATE_EMAIL)){
 $sql .= "e-mailadres='$username'";
 }else{
