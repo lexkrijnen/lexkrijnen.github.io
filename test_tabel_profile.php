@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+<?php
+        $db = "mysql:host=localhost; dbname=wegro; port=3306";
+        $user = "root";
+        $pass = "";
+        $pdo = new PDO($db, $user, $pass);
+
+        if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
+            if ($_GET["beschrijving"] != "") {
+                $sql = "INSERT INTO mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+              } else {
+                print("Vul A.U.B. een beschrijving in.");
+                }
+            }
+
+
+        $stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
+        $stmt->execute();
+        $meerwerk = $stmt->fetchAll();
+        ?>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
