@@ -18,20 +18,20 @@
     <!-- Custom styles for this page -->
     <link href="css/index.css" rel="stylesheet">
     <?php
-    $db = "mysql:host=localhost; dbname=wegro; port=3306";
-    $user = "root";
-    $pass = "";
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
     if (isset($_GET["opslaan"])) {
-        $sql = "UPDATE mutatie SET beschrijving=?, prijs=? WHERE mutatie_id=?";
+        $sql = "UPDATE Mutatie SET beschrijving=?, prijs=? WHERE mutatie_id=?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
         print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
         ## print('<meta http-equiv="refresh" content="2;url=http://localhost/WEGRO.Sandbox/index.php" />');
     }
 
-    $sql = "SELECT * FROM mutatie WHERE mutatie_id=?";
+    $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["nummer"]));
     $werk = $stmt->fetch();
