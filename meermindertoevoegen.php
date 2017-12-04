@@ -99,7 +99,6 @@
                     print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
                     print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
-
                 }
                 ?>
                 <tr>
@@ -114,7 +113,7 @@
     </div>
 
 
-    <div class="col-xs-2"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
 
     <!--MINDER WERK-->
