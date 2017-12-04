@@ -120,7 +120,7 @@ session_start();//session starts here
 
 
 
-if(isset($_POST['login']))
+if(isset($_POST['submit']))
 {
     $user_email=$_POST['E-mailadres'];
     $user_pass=$_POST['Wachtwoord'];
