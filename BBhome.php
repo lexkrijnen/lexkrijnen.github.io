@@ -62,7 +62,7 @@
             </a>
           </div>
           <div>
-          Bouwbedrijf
+          <h1>Ons bedrijf</h1>
 
           </div>
       </div>
