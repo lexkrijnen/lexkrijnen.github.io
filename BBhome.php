@@ -114,40 +114,45 @@
           <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
       </div>
 
-
+<div class="container">
 <div class="row">
     <div class="page-box">
+        <div class="col-xs-12">
+
                   <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                        data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
                        data-hide-cover="true" data-show-facepile="false">
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div
+        </div>
     </div>
+  </div>
 </div>
-
   <footer id="footer-Section">
       <div class="footer-top-layout">
           <div class="container">
               <div class="row">
                   <div class="OurBlog">
-                      <h4>Our Blog</h4>
-                      <p>BCM wins mandate for Avendus Wealth Management portal revamp</p>
-                      <div class="post-blog-date">20th Oct 2016</div>
+                      <h4>Bouwbedrijf Wegro</h4>
+                      <p>Klik hieronder op het e-mailadres om contact op te nemen</p>
+
                   </div>
                   <div class=" col-lg-8 col-lg-offset-2">
                       <div class="col-sm-4">
                           <div class="footer-col-item">
-                              <h4>Go Travel Cloud</h4>
+                              <h4>Locatie</h4>
                               <address>
-                                  501,507 your company address<br>
-                                  400015 Maharashtra, UK
+
+                                  Gelreweg 38
+                                  <br>
+                                  3843AN Harderwijk, NL
                               </address>
                           </div>
                       </div>
                       <div class="col-sm-4">
                           <div class="footer-col-item">
-                              <h4>Reach Us</h4>
-                              <div class="item-contact"> <a href="tel:630-885-9200"><span class="link-id">P</span>:<span>630-885-9200</span></a> <a href="tel:630-839.2006"><span class="link-id">F</span>:<span>630-839.2006</span></a> <a href="mailto:info@brandcatmedia.com"><span class="link-id">E</span>:<span>info@brandcatmedia.com</span></a> </div>
+                              <h4>Contact</h4>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">F</span>:<span>0341-412054</span></a> <a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">E</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
                           </div>
                       </div>
                       <div class="col-sm-4">
