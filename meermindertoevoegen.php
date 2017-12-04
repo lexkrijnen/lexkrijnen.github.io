@@ -23,15 +23,6 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM Mutatie";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $meerwerk = $stmt->fetch();
-
-    print_r($meerwerk);
-    print("test5");
-
-
     if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
@@ -42,10 +33,11 @@
         }
     }
 
-
-    $stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
     $stmt->execute();
     $meerwerk = $stmt->fetchAll();
+    print_r($meerwerk);
+    print("test6");
     ?>
 </head>
 <body>
