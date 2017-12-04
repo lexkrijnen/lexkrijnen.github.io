@@ -36,7 +36,13 @@
     margin-right: 10px;
 }
 
-.sidemargin{
+.imgleft{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.rowsidemargin{
     margin-left: 1px;
     margin-right: 1px;
 }
