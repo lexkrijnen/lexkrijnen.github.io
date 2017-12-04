@@ -28,8 +28,8 @@
     $stmt->execute();
     $meerwerk = $stmt->fetch();
 
-    print_r($werk);
-    print("test2");
+    print_r($meerwerk);
+    print("test5");
 
 
     if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
