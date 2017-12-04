@@ -61,8 +61,8 @@
 }
 
 .bottomline {
-    padding-bottom: 300px;
-    border-bottom: 5px solid black; /* whichever color you prefer */
+    padding-bottom: 100px;
+    border-bottom: 5px solid black;
 }
 
 .topline{
@@ -70,6 +70,15 @@
     border-top: 5px solid black;
 }
 
+.paragraph{
+    color: black;
+}
+
+.paragraph diftext {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 
 
