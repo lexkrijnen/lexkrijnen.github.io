@@ -33,7 +33,7 @@
 .textright{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 10px;
+    text-align: right;
 }
 
 .textleft{
@@ -45,7 +45,8 @@
 .imgright{
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: right;
+    margin-right: 5px;
+    margin-left: 45px;
 }
 
 .imgleft{
@@ -55,7 +56,7 @@
 }
 
 .rowsidemargin{
-    margin-left: 1px;
+    margin-left: 10px;
     margin-right: 1px;
 }
 
@@ -67,4 +68,61 @@
 .topline{
     padding-top: 10px;
     border-top: 5px solid black;
+}
+
+
+
+
+footer{
+    background-color:#222222;
+    padding: 60px 0px;
+}
+
+footer ul{
+    list-style:none;
+    margin:0 auto;
+    display:inline-block;
+    padding-top:50px;
+}
+
+footer ul li{
+    float:left;
+}
+
+footer ul li a{
+    color:#b1aca1;
+    padding:20px;
+}
+
+footer ul li a:hover{
+    color:#7dabdb;
+    text-decoration:none;
+}
+
+.footer-top{
+    padding-bottom:50px;
+}
+
+.footer-top .fa{
+    font-size:18px;
+    color: #FFF;
+    padding-right:10px;
+}
+
+.footer-top a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+.footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
+    color:#7dabdb;
+}
+
+.copyright{
+    background-color:#f0f0f0;
+}
+
+.copyright p{
+    font-size:12px;
+    padding:15px 0 10px 0;
 }

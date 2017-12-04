@@ -20,7 +20,6 @@ if (isset($_POST['submit'])) {
 
             $query = $conn->prepare("SELECT COUNT(klant_nummer) FROM Klant WHERE E-mailadres =? AND Wachtwoord =?");
             $query->execute(array($username, $password));
-            print($query);
             $count = $query->fetchColumn();
 
             if ($count == "1"){
