@@ -110,12 +110,12 @@ $wachtwoord= random();
                     <tr><td>Achternaam klant</td><td><input type="text" class="form-control" name="achternaam" placeholder="Achternaam" ></td></tr>
                     <tr><td>E-mailadres</td><td><input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" ></td></tr>
                     <tr><td>Wachtwoord</td><td><input type="text" class="form-control" name="wachtwoord" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>></td>
-                        <td><input type="submit" class="btn btn-primary" name="genereer_wachtwoord" value="Genereer Wachtwoord"></td></tr>
+                        <td><input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer Wachtwoord"></td></tr>
                     <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer"></td></tr>
                     <tr><td>Adres</td><td><input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" ></td></tr>
                     <tr><td></td><td><input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" ></td></tr>
                     <tr><td></td><td><input type="text" class="form-control" name="postcode" placeholder="Postcode" ></td></tr>
-                    <tr><td><input type="submit" class="btn btn-primary" name="aanmaken" value="Account Aanmaken"></td></tr>
+                    <tr><td><input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken"></td></tr>
                 </form>
             </table>
         </div>
