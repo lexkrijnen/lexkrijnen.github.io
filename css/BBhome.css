@@ -86,8 +86,8 @@
 
 
 footer{
-    background-color:#222222;
-    padding: 60px 0px;
+    background-color:#3D3D3D;
+
 }
 
 footer ul{
@@ -135,5 +135,5 @@ footer ul li a:hover{
 .copyright p{
     font-size:12px;
     padding:15px 0 10px 0;
-    color: white
+    color: #b1aca1
 }
