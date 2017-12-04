@@ -132,7 +132,7 @@
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
                       </div>
-                      >
+
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
                       </div>
