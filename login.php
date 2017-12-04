@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
             $username = filter_var($username, FILTER_SANITIZE_STRING);
             $password = filter_var($password, FILTER_SANITIZE_STRING);
 
-            $query = $conn->prepare("SELECT COUNT(`id`) FROM Klant WHERE E-mailadres = :username AND Wachtwoord = :password");
+            $query = $conn->prepare("SELECT COUNT(`klant_nummer`) FROM Klant WHERE E-mailadres = :username AND Wachtwoord = :password");
             $query->execute(array('E-mailadres' => $username, 'Wachtwoord' => $password));
 
             $count = $query->fetchColumn();
