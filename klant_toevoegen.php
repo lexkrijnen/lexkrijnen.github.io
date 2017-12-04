@@ -27,20 +27,22 @@ if (isset($_GET["aanmaken"])) {
     $achternaam = $klant["achternaam"];
     $telefoonnummer = $klant["telefoon_nummer"];
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-
-    $voornaam = $_GET["voornaam"];
-    $tussenvoegsel = $_GET["tussenvoegsel"];
-    $achternaam = $_GET["achternaam"];
-    $emailadres = $_GET["emailadres"];
-    $telefoonnummer = $_GET["telefoonnummer"];
-    $woonplaats = $_GET["woonplaats"];
-    $straat = $_GET["straat"];
-    $postcode = $_GET["postcode"];
-
 }
 
 
+$voornaam = $_GET["voornaam"];
+$tussenvoegsel = $_GET["tussenvoegsel"];
+$achternaam = $_GET["achternaam"];
+$emailadres = $_GET["emailadres"];
+$telefoonnummer = $_GET["telefoonnummer"];
+$woonplaats = $_GET["woonplaats"];
+$straat = $_GET["straat"];
+$postcode = $_GET["postcode"];
+
+
+
 $pdo = NULL;
+
 
 
 //random string voor wachtwoord
