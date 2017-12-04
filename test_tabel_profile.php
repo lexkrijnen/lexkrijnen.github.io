@@ -90,6 +90,22 @@
     		</div>
     	</div>
 
+            	<div class="row">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+    			Hier komt een menu
+    		</div>
+
+    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+
+    			<!-- If embedded pdf does not work, display fallback option instead. -->
+    			<div class="pdf-fail">
+						<p>Problemen met het bekijken?</p>
+						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+    			</div>
+    		</div>
+    	</div>
+
     </div><!-- /.container -->
 
 		<div class="row">
