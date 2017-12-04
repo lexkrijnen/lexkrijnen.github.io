@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
     $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
     $klant = $stmt->fetch();
 
-print_r($klant);
 
     $voornaam = $klant["voornaam"];
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -37,8 +36,6 @@ print_r($klant);
     $ingevuldeachternaam = $_GET["achternaam"];
 
 }
-
-print($naam);
 
 $pdo = NULL;
 ?>
@@ -127,13 +124,13 @@ $pdo = NULL;
     //informatie van de gezochte klant tonen
     if (isset($_GET["vinden"])) {
         //Geen voornaam en achternaam ingevuld
-        if ($_GET["Voornaam"] == "" && $_GET["Achternaam"] == "") {
+        if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
             print("<div class=\"alert alert-warning\" role=\"alert\">
                     <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                     <span class=\"sr-only\">Error:</span>
                     Vul een voornaam en een achternaam in.
                   </div>");
-        } elseif ($stmt->rowCount()>0) {
+        } elseif ($voornaam != "") {
             print("<table>");
             print("<tr><td>Naam: $naam</td></tr>");
             print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
