@@ -129,9 +129,11 @@
           </div>
 
           <footer>
-
               <div class="footer-top">
                   <div class="container">
+                      <div class="col-lg-2 col-xs-12 text-center">
+
+                      </div>
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
                       </div>
@@ -144,6 +146,9 @@
 
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+
                       </div>
                   </div>
               </div>
