@@ -25,7 +25,7 @@
 
     if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
