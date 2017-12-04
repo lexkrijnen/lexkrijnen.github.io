@@ -1,4 +1,28 @@
+<?php
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
 
+
+if (isset($_GET["vinden"])) {
+    $sql = "SELECT * FROM project p join contract  c on c.contract_nummer=p.contract_nummer join status s on s.status_nummer=p.status_nummer join klant k on k.klant_nummer=p.klant_nummer WHERE naam = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_GET["projectnaam"]));
+
+    $project = $stmt->fetch();
+
+    $naam = $project["naam"];
+    $project_nummer = $project["project_nummer"];
+    $status = $project["status_titel"];
+    $klant_nummer = $project["klant_nummer"];
+    $contract_nummer = $project["contract_nummer"];
+    $document = $project["document"];
+    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+}
+
+$pdo = NULL;
+?>
 
 
 <!DOCTYPE html>
@@ -55,64 +79,20 @@
 
 
 
+
+
+
       <div class=container>
-        <form action="bekijken_bouwtekeningen.php" method="get">
-            <input type="text" name="projectnaam" placeholder="projectnaam">
-            <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
-        </form>
+          <div class=row>
+            <form action="bekijken_bouwtekeningen.php" method="get">
+                <input type="text" name="projectnaam" placeholder="projectnaam">
+                <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
+            </form>
+          </div>
       </div>
 
 
-
-
-
-
-
-      <div class="row">
-			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			</div>
-		</div>
-
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
-
-		<!-- Bootstrap Framework -->
-		<script src="js/bootstrap.min.js"></script>
-
-
-
-
-<?php
-
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM project p join contract  c on c.contract_nummer=p.contract_nummer join status s on s.status_nummer=p.status_nummer join klant k on k.klant_nummer=p.klant_nummer WHERE naam = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["projectnaam"]));
-
-    $project = $stmt->fetch();
-
-    $naam = $project["naam"];
-    $project_nummer = $project["project_nummer"];
-    $status = $project["status_titel"];
-    $klant_nummer = $project["klant_nummer"];
-    $contract_nummer = $project["contract_nummer"];
-    $document = $project["document"];
-    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
-}
-
-$pdo = NULL;
-?>
-
-<?php
-
+      <?php
 //projectnaam niet ingevuld
 if(isset($_GET["vinden"])) {
      if ($_GET["projectnaam"] == "") {
@@ -146,7 +126,25 @@ if(isset($_GET["vinden"])) {
 
     }
 }
-
 ?>
+
+
+
+
+
+
+
+      <div class="row">
+			<div class="col-xs-12 text-center footer-rights">
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+			</div>
+		</div>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Framework -->
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

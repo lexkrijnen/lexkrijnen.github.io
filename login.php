@@ -1,7 +1,7 @@
 
 
 <?php
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
@@ -72,12 +72,12 @@ $pdo = new PDO($db, $user, $pass);
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier u Email in">
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
                     </div>
 
                     <div class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw Wachtwoord in">
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw wachtwoord in">
                     </div>
 
                     <div  class="form-group d">
@@ -116,7 +116,7 @@ $pdo = new PDO($db, $user, $pass);
 if(isset($_POST) & !empty($_POST)){
 $username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
 $password = md5($_POST['wachtwoord']);
-$sql = "SELECT * FROM `klant` WHERE ";
+$sql = "SELECT * FROM `Klant` WHERE ";
 if(filter_var($username, FILTER_VALIDATE_EMAIL)){
 $sql .= "e-mailadres='$username'";
 }else{
@@ -129,7 +129,7 @@ $count = mysqli_num_rows($res);
 
 if($count == 1){
 $_SESSION['e-mailadres'] = $username;
-header('location: account.php');
+print("HOI");
 }else{
 $fmsg = "User does not exist";
 }
