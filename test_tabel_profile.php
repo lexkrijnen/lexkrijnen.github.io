@@ -24,8 +24,6 @@
         $stmt = $pdo->prepare("SELECT document FROM Tekening");
         $stmt->execute();
         $documenten2 = $stmt->fetchAll();
-
-        $PDO = NULL;
         ?>
 
 <html>
