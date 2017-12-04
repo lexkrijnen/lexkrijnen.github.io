@@ -69,7 +69,7 @@
         <form method="get" action="meerminderbewerk.php">
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
+                    <th>ID</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
                     <th></th>

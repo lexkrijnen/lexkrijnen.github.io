@@ -1,25 +1,4 @@
 <!DOCTYPE html>
-<?php
-        $db = "mysql:host=localhost; dbname=wegro; port=3306";
-        $user = "root";
-        $pass = "";
-        $pdo = new PDO($db, $user, $pass);
-
-        if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
-            if ($_GET["beschrijving"] != "") {
-                $sql = "INSERT INTO mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-              } else {
-                print("Vul A.U.B. een beschrijving in.");
-                }
-            }
-
-
-        $stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
-        $stmt->execute();
-        $meerwerk = $stmt->fetchAll();
-        ?>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -30,10 +9,10 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Welkom bij Wegro</title>
+    <title>Mijn profiel</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Global styles for this website -->
     <link href="css/global.css" rel="stylesheet">
@@ -77,22 +56,47 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-        <form method="get" action="meerminderbewerk.php">
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
-                    <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
-                    <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
-                    <td><input class="btn btn-default" type="submit" name="opslaan" value="Opslaan"></td>
-                </tr>
-                <input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
-             </table>
+    			 <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Contract</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract_2017.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract-v2_2017.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Tekeningen</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Beganegrond_v1A.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Uitbouw_v3C.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    		</div>
+
+    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+
+    			<!-- If embedded pdf does not work, display fallback option instead. -->
+    			<div class="pdf-fail">
+						<p>Problemen met het bekijken?</p>
+						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+    			</div>
     		</div>
     	</div>
 
