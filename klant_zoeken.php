@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
     $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
     $klant = $stmt->fetch();
 
-print_r($klant);
 
     $voornaam = $klant["voornaam"];
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -37,8 +36,6 @@ print_r($klant);
     $ingevuldeachternaam = $_GET["achternaam"];
 
 }
-
-print($naam);
 
 $pdo = NULL;
 ?>
