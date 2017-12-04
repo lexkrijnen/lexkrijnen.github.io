@@ -53,7 +53,7 @@
 		</nav>
       <div class="BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-        <div class="center-block">
+        <div class="center-block contbutton">
           <a href="index.php">
                 <div class="btn oranje white">
                     Contact
