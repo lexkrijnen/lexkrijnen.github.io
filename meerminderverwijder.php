@@ -33,7 +33,7 @@
                     $stmt->execute(array($nummer));
                     if ($stmt->rowCount() == 1) {
                         print("De mutatie is verwijderd.<br>");
-                        ## print('<meta http-equiv="refresh" content="2;url=http://localhost/WEGRO.Sandbox/index.php" />');
+                        print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
                     } else {
                         print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
                     }
