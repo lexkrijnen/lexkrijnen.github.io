@@ -1,14 +1,17 @@
+
+
 <?php
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
+$dsn = "mysql:host=localhost;dbname=Wegro";
+$username = "wegro";
+$password = "SQLWegro@101";
+$options = array(
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+);
 
-$sql = "SELECT * FROM Klant";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$werk = $stmt->fetch();
+try{
+    $conn = new PDO($dsn,$username,$password,$options);
+} catch (PDOException $e){
+    echo "Error!".$e->getMessage();
+}
 
-print_r($werk);
-print("test2");
 ?>
