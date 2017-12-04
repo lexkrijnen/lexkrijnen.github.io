@@ -9,9 +9,10 @@
 }
 
 #pdf-viewer {
-	height: 70vh;
+	height: 80vh;
 }
 
 .pdf-fail {
+	margin-top: 35vh;
 	text-align: center;
 }
