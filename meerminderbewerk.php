@@ -63,7 +63,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
+<div class="container page-box">
     <div class="col-xs-4">
         <h2>Meer Werk Bewerken</h2>
         <form method="get" action="meerminderbewerk.php">
