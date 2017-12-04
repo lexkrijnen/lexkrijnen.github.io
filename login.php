@@ -24,7 +24,9 @@ if (isset($_POST['submit'])) {
             $count = $query->fetchColumn();
 
             if ($count == "1"){
-                echo "Logged in."; // doe je logged in script
+                echo "Logged in.";
+                header('Location: account.php');
+
             } else {
                 echo "Wrong username / password combination";
             }
