@@ -26,7 +26,7 @@
     $sql = "SELECT * FROM Mutatie";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    $werk = $stmt->fetch();
+    $meerwerk = $stmt->fetch();
 
     print_r($werk);
     print("test2");
