@@ -98,7 +98,7 @@
     <div class="col-xs-4">
         <h1>Minder Werk</h1>
         <h5>Projectnaam: De Tuinbaksteen</h5>
-        <form method="get" action="index.php">
+        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
