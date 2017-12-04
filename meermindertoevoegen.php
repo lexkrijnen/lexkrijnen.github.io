@@ -23,12 +23,14 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM mutatie";
+    $sql = "SELECT * FROM Klant";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $werk = $stmt->fetch();
+
     print_r($werk);
-    print("trekken");
+    print("test2");
+
 
     if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
