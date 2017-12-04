@@ -54,7 +54,7 @@
       <div class="BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
         <div class="row">
-            <div class="col-xs-10 col-xs-offset-3 col-md-3"></div>
+            <div class="col-xs-10 col-xs-offset-3 col-md-3 contbutton"></div>
           <a href="index.php">
                 <div class="btn oranje white">
                     Contact
