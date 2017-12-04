@@ -28,6 +28,7 @@
     $stmt->execute();
     $werk = $stmt->fetch();
     print_r($werk);
+    print("trekken");
 
     if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
