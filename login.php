@@ -1,21 +1,48 @@
 <?php
-$db = "mysql:localhost; dbname=wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-$message="";
-if(!empty($_POST["submit"])) {
-    $result = mysqli_query($conn,"SELECT * FROM wegro WHERE e-mailadres='" . $_POST["e-mailadres"] . "' and wachtwoord = '". $_POST["wachtwoord"]."'");
-    $row  = mysqli_fetch_array($result);
-    if(is_array($row)) {
-        $_SESSION["user_id"] = $row['user_id'];
-    } else {
-        $message = "Uw email of wachtwoord is onjuist!";
-    }
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=Wegro', "wegro", "SQLWegro@101");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
 }
+
+if (isset($_POST['submit'])) {
+
+    if(isset($_POST['e-mailadres'])) {
+
+        if(isset($_POST['wachtwoord'])) {
+
+            $username = $_POST['e-mailadres'];
+            $password = $_POST['wachtwoord'];
+
+            $username = filter_var($username, FILTER_SANITIZE_STRING);
+            $password = filter_var($password, FILTER_SANITIZE_STRING);
+
+            $query = $conn->prepare("SELECT COUNT(klant_nummer) FROM Klant WHERE E-mailadres =? AND Wachtwoord =?");
+            $query->execute(array($username, $password));
+
+            $count = $query->fetchColumn();
+
+            if ($count == "1"){
+                echo "Logged in.";
+                header('Location: account.php');
+
+            } else {
+                echo "Wrong username / password combination";
+            }
+
+        } else {
+            echo "Password is vereist.";
+        }
+
+    } else {
+        echo "Username is vereist.";
+    }
+
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,16 +103,16 @@ if(!empty($_POST["submit"])) {
 
 
 
-                <form action="login.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier u Email in">
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
                     </div>
 
                     <div class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw Wachtwoord in">
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw wachtwoord in">
                     </div>
 
                     <div  class="form-group d">
@@ -120,5 +147,6 @@ if(!empty($_POST["submit"])) {
 
 <!-- Bootstrap Framework -->
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

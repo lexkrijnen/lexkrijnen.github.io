@@ -22,3 +22,39 @@
     font-size: 16px;
 }
 */
+
+.contbutton{
+    background-color: #FE9C16 !important;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.textright{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.textleft{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.imgright{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.imgleft{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.rowsidemargin{
+    margin-left: 1px;
+    margin-right: 1px;
+}

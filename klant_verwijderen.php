@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
@@ -11,22 +11,22 @@ $pdo = new PDO($db, $user, $pass);
 //klant verwijderen
 
 if (isset($_GET["echtverwijderen"])) {
-    $sql = "DELETE FROM klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+    $sql = "DELETE FROM Klant WHERE Voornaam = ? AND Tussenvoegsel = ? AND Achternaam = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
+    $stmt->execute(array($_SESSION["Voornaam"], $_SESSION["Tussenvoegsel"], $_SESSION["Achternaam"]));
 }
 
 
 $sql = "SELECT * FROM klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 $stmt = $pdo->prepare($sql);
-$stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
+$stmt->execute(array($_SESSION["Voornaam"], $_SESSION["Tussenvoegsel"], $_SESSION["Achternaam"]));
 $klant = $stmt->fetch();
 
-$klant_nummer = $klant["klant_nummer"];
-$voornaam = $klant["voornaam"];
-$tussenvoegsel = $klant["tussenvoegsel"];
-$achternaam = $klant["achternaam"];
-$telefoonnummer = $klant["telefoon_nummer"];
+$klant_nummer = $klant["Klant_nummer"];
+$voornaam = $klant["Voornaam"];
+$tussenvoegsel = $klant["Tussenvoegsel"];
+$achternaam = $klant["Achternaam"];
+$telefoonnummer = $klant["Telefoon_nummer"];
 
 $pdo = NULL;
 ?>
@@ -52,7 +52,7 @@ $pdo = NULL;
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/klant_pagina.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -91,7 +91,7 @@ $pdo = NULL;
 
 
       <?php
-        print("weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?");
+        print("weet u zeker dat u " . $_SESSION["Naam"] . " wilt verwijderen?");
         ?>
         <form action="klant_verwijderen.php" method="get">
             <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
@@ -103,7 +103,7 @@ $pdo = NULL;
         <?php
         if (isset($_GET["echtverwijderen"])) {
             print("<div class=\"alert alert-success\" role=\"alert\">");
-            print("<br>" . $_SESSION["naam"] . " is successvol verwijderd.");
+            print("<br>" . $_SESSION["Naam"] . " is successvol verwijderd.");
             print("</div>");
         }
         ?>

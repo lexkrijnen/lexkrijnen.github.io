@@ -1,4 +1,28 @@
+<?php
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
 
+
+if (isset($_GET["vinden"])) {
+    $sql = "SELECT * FROM project p join contract  c on c.contract_nummer=p.contract_nummer join status s on s.status_nummer=p.status_nummer join klant k on k.klant_nummer=p.klant_nummer WHERE naam = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_GET["projectnaam"]));
+
+    $project = $stmt->fetch();
+
+    $naam = $project["naam"];
+    $project_nummer = $project["project_nummer"];
+    $status = $project["status_titel"];
+    $klant_nummer = $project["klant_nummer"];
+    $contract_nummer = $project["contract_nummer"];
+    $document = $project["document"];
+    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+}
+
+$pdo = NULL;
+?>
 
 
 <!DOCTYPE html>
@@ -21,7 +45,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/klant_pagina.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,12 +79,58 @@
 
 
 
-      <div class=container>
-        <form action="bekijken_bouwtekeningen.php" method="get">
-            <input type="text" name="projectnaam" placeholder="projectnaam">
-            <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
-        </form>
-      </div>
+
+
+      <table>
+          <tr>
+            <div class=container>
+              <div class=row>
+                <form action="bekijken_bouwtekeningen.php" method="get">
+                    <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
+                    <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+                </form>
+              </div>
+          </div>
+          </tr>
+      </table>
+
+
+
+      <?php
+    //projectnaam niet ingevuld
+    if(isset($_GET["vinden"])) {
+         if ($_GET["projectnaam"] == "") {
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Vul een projectnaam in.
+                  </div>");
+        //geen project gevonden met dat projectnaam
+        } elseif ($project_nummer == "") {
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Geen project gevonden met de naam " . $_GET['projectnaam'] .
+                  "</div>");
+        //project gevonden
+        } elseif ($project_nummer != "") {
+            print("<table>");
+            print("<tr><td>Projectnaam: $naam</td></tr>");
+            print("<tr><td>Projectnummer: $project_nummer</td></tr>");
+            print("<tr><td>Status: $status</td></tr>");
+            print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+            print("<tr><td>Naam klant: $klantnaam</td></tr>");
+            print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
+            print("<tr><td>
+                    <div class=\"embed-responsive pdf-viewer\">
+                        <object data=$document type=\"application/pdf\"></object>
+                   </div>
+                </td></tr>");
+            print("</table>");
+
+        }
+    }
+    ?>
 
 
 
@@ -80,73 +150,5 @@
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
-
-
-
-
-<?php
-
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM project p join contract  c on c.contract_nummer=p.contract_nummer join status s on s.status_nummer=p.status_nummer join klant k on k.klant_nummer=p.klant_nummer WHERE naam = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["projectnaam"]));
-
-    $project = $stmt->fetch();
-
-    $naam = $project["naam"];
-    $project_nummer = $project["project_nummer"];
-    $status = $project["status_titel"];
-    $klant_nummer = $project["klant_nummer"];
-    $contract_nummer = $project["contract_nummer"];
-    $document = $project["document"];
-    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
-}
-
-$pdo = NULL;
-?>
-
-<?php
-
-//projectnaam niet ingevuld
-if(isset($_GET["vinden"])) {
-     if ($_GET["projectnaam"] == "") {
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Vul een projectnaam in.
-              </div>");
-    //geen project gevonden met dat projectnaam
-    } elseif ($project_nummer == "") {
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Geen project gevonden met de naam " . $_GET['projectnaam'] .
-              "</div>");
-    //project gevonden
-    } elseif ($project_nummer != "") {
-        print("<table>");
-        print("<tr><td>Projectnaam: $naam</td></tr>");
-        print("<tr><td>Projectnummer: $project_nummer</td></tr>");
-        print("<tr><td>Status: $status</td></tr>");
-        print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-        print("<tr><td>Naam klant: $klantnaam</td></tr>");
-        print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-        print("<tr><td>
-                <div class=\"embed-responsive pdf-viewer\">
-                    <object data=$document type=\"application/pdf\"></object>
-               </div>
-            </td></tr>");
-        print("</table>");
-
-    }
-}
-
-?>
 	</body>
 </html>

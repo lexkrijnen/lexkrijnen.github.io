@@ -51,12 +51,25 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div class="BBhomeBackground">
+      <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-            </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-lg">Contact opnemen</button>
+         <a href="index.php">
+                <div class="col-xs-2 col-xs-offset-5 btn contbutton">
+                    Contact
                 </div>
+            </a>
+          </div>
+          <div class="row rowsidemargin">
+          <h1 class="text-left">Ons bedrijf</h1>
+              <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
+          </div>
+      <div>
+          <h1 class="text-right">Vergunningen</h1>
+          <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgleft">
+      </div>
+
+
+
 
 
 
