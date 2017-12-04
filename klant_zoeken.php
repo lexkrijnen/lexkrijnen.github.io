@@ -11,30 +11,30 @@ $pdo = new PDO($db, $user, $pass);
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant k JOIN Adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["Voornaam"], $_GET["Tussenvoegsel"], $_GET["Achternaam"]));
+    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
     $klant = $stmt->fetch();
 
 print_r($klant);
 
-    $voornaam = $klant["Voornaam"];
-    $tussenvoegsel = $klant["Tussenvoegsel"];
-    $achternaam = $klant["Achternaam"];
-    $klant_nummer = $klant["Klant_nummer"];
-    $telefoonnummer = $klant["Telefoon_nummer"];
-    $emailadres =  $klant["E-mailadres"];
-    $adres = $klant["Adres"];
-    $postcode = $klant["Postcode"];
-    $woonplaats = $klant["Woonplaats"];
+    $voornaam = $klant["voornaam"];
+    $tussenvoegsel = $klant["tussenvoegsel"];
+    $achternaam = $klant["achternaam"];
+    $klant_nummer = $klant["klant_nummer"];
+    $telefoonnummer = $klant["telefoon_nummer"];
+    $emailadres =  $klant["e-mailadres"];
+    $adres = $klant["adres"];
+    $postcode = $klant["postcode"];
+    $woonplaats = $klant["woonplaats"];
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
-    $_SESSION["Voornaam"] = $voornaam;
-    $_SESSION["Tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["Achternaam"] =  $achternaam;
-    $_SESSION["Naam"] = $naam;
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
 
-    $ingevuldevoornaam = $_GET["Voornaam"];
-    $ingevuldetussenvoegsel = $_GET["Tussenvoegsel"];
-    $ingevuldeachternaam = $_GET["Achternaam"];
+    $ingevuldevoornaam = $_GET["voornaam"];
+    $ingevuldetussenvoegsel = $_GET["tussenvoegsel"];
+    $ingevuldeachternaam = $_GET["achternaam"];
 
 }
 
