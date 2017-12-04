@@ -101,6 +101,7 @@ if(isset($_POST['btn-login'])){
                     <div class="panel " >
                             <div class="panel-heading oranje">
                                 <div class="panel-title white">Log hier in met uw Wegro account</div>
+                                <?php print($errormsg); ?>
                             </div>
                         <div class="panel-body a lowborder" >
                             <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
