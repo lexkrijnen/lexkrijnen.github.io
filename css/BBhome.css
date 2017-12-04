@@ -58,3 +58,13 @@
     margin-left: 1px;
     margin-right: 1px;
 }
+
+.bottomline {
+    padding-bottom: 300px;
+    border-bottom: 5px solid black; /* whichever color you prefer */
+}
+
+.topline{
+    padding-top: 10px;
+    border-top: 5px solid black;
+}
