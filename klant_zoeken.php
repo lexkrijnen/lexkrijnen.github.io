@@ -112,13 +112,13 @@ $pdo = NULL;
             <form action="klant_zoeken.php" method="get">
                 <div class="row">
                   <div class="" >
-                      <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) {print("value = '$ingevuldevornaam'"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+                      <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) {print("value = $ingevuldevornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
                   </div>
                   <div class="">
-                      <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = '$ingevuldetussenvoegsel'"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+                      <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
                   </div>
                   <div class="">
-                      <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = '$ingevuldeachternaam'"); } else { print("placeholder='achternaam'"); }?> ></td>
+                      <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                   </div>
                       <td><input class="btn btn-primary" type="submit" name="vinden" value="vinden"></td>
                 </div>
