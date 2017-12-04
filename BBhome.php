@@ -59,15 +59,21 @@
                 </div>
             </a>
           </div>
-          <div class="row rowsidemargin">
+      <div class="row rowsidemargin">
+      <div class="bottomline topline">
           <h1 class="text-left">Ons bedrijf</h1>
               <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
           </div>
-      <div>
+
+      <div class="bottomline">
           <h1 class="text-right">Vergunningen</h1>
           <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgleft">
       </div>
 
+      <div class="bottomline">
+            <h1 class="text-left">Projecten</h1>
+            <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
+        </div>
 
 
 
