@@ -58,8 +58,9 @@
     			Hier komt een menu
     		</div>
 
-    		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-					<iframe id="pdf-viewer" src="http://51.254.218.200/test-files/test.pdf"></iframe>
+    		<div id="pdf-viewer" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			<p>Problemen met het bekijken?</p>
+					<a class="btn btn-primary" href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="_parent">Openen in nieuw tabblad.</a>
     		</div>
     	</div>
 
