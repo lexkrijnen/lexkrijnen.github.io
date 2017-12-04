@@ -88,12 +88,84 @@
 
 
 
+          <footer>
+
+              <div class="footer-top">
+                  <div class="container">
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
+                      </div>
+                      <div class="col-lg-2 col-xs-12 text-center">
+                          <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="container" style="border-top:1px solid grey;">
+                  <div class="row text-center">
+                      <div class="col-lg-6 col-lg-offset-3">
+                          <ul class="menu">
+
+                              <li>
+                                  <a href="#">Home</a>
+                              </li>
+
+                              <li>
+                                  <a href="#">About</a>
+                              </li>
+
+                              <li>
+                                  <a href="#">Blog</a>
+                              </li>
+
+                              <li>
+                                  <a href="#">Gallery</a>
+                              </li>
+
+                              <li>
+                                  <a href="#">Contact</a>
+                              </li>
+
+                          </ul>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="copyright">
+                  <div class="container">
+
+                      <div class="row text-center">
+                          <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+                      </div>
+
+                  </div>
+              </div>
+          </footer>
 
 
 
 
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+
+
+
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 
 		<!-- Bootstrap Framework -->

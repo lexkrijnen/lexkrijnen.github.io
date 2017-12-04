@@ -20,12 +20,11 @@ if (isset($_POST['submit'])) {
 
             $query = $conn->prepare("SELECT COUNT(klant_nummer) FROM Klant WHERE E-mailadres =? AND Wachtwoord =?");
             $query->execute(array($username, $password));
-
             $count = $query->fetchColumn();
 
             if ($count == "1"){
                 echo "Logged in.";
-                header('Location: account.php');
+                ##header('Location: account.php');
 
             } else {
                 echo "Wrong username / password combination";
