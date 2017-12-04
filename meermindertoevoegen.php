@@ -36,8 +36,6 @@
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
     $stmt->execute();
     $meerwerk = $stmt->fetchAll();
-    print_r($meerwerk);
-    print("test6");
     ?>
 </head>
 <body>
