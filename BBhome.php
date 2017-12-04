@@ -128,22 +128,23 @@
                               </li>
 
                           </ul>
+
                       </div>
                   </div>
               </div>
+              <div class="copyright">
+                  <div class="container">
 
+                      <div class="row text-center">
+                          <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+                      </div>
+
+                  </div>
+              </div>
           </footer>
 
 
-          <div class="copyright">
-              <div class="container">
 
-                  <div class="row text-center">
-                      <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-                  </div>
-
-              </div>
-          </div>
 
 
 
