@@ -105,14 +105,22 @@
 
               De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
             </p>
-        </div>
-<div class="col-xs-6">
+        </div
+          <div class="row">
+<div class="col-xs-10 col-md-6 col-md-offset-1">
     <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
          data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
          data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                                                        class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+ </div>
 </div>
-
+          <div class="col-xs-10 col-md-6 col-md-offset-1">
+              <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                   data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                   data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                                                                 class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+          </div>
+      </div>
 
 
           <footer>
