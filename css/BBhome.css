@@ -33,7 +33,7 @@
 .textright{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 10px;
+    text-align: right;
 }
 
 .textleft{
@@ -45,7 +45,8 @@
 .imgright{
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: right;
+    margin-right: 5px;
+    margin-left: 45px;
 }
 
 .imgleft{
@@ -55,7 +56,7 @@
 }
 
 .rowsidemargin{
-    margin-left: 1px;
+    margin-left: 10px;
     margin-right: 1px;
 }
 

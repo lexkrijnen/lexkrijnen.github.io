@@ -60,10 +60,21 @@
             </a>
           </div>
       <div class="row rowsidemargin">
-      <div class="bottomline topline">
-          <h1 class="text-left">Ons bedrijf</h1>
-              <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
-          </div>
+      <div class="row bottomline topline">
+          <h1 class="row rowsidemargin text-left">Ons bedrijf</h1>
+           <p class="col-xs-8">
+                Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.<br><br>
+
+                Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.<br><br>
+
+                Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
+
+                Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.<br><br>
+
+                U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
+          </p>
+          <img src="images/IMG_7453.JPG" class="col-xs-3 imgright">
+        </div>
 
       <div class="bottomline">
           <h1 class="text-right">Vergunningen</h1>
@@ -74,8 +85,8 @@
             <h1 class="text-left">Projecten</h1>
             <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
         </div>
-          link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
 
           <footer>
 
@@ -128,22 +139,23 @@
                               </li>
 
                           </ul>
+
                       </div>
                   </div>
               </div>
+              <div class="copyright">
+                  <div class="container">
 
+                      <div class="row text-center">
+                          <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+                      </div>
+
+                  </div>
+              </div>
           </footer>
 
 
-          <div class="copyright">
-              <div class="container">
 
-                  <div class="row text-center">
-                      <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-                  </div>
-
-              </div>
-          </div>
 
 
 
