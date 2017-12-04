@@ -23,7 +23,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
+    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
@@ -33,12 +33,49 @@
         }
     }
 
+    if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
+        if ($_GET["beschrijving"] != "") {
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+        } else {
+            print("Vul A.U.B. een beschrijving in.");
+        }
+    }
+
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
     $stmt->execute();
     $meerwerk = $stmt->fetchAll();
+
+    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
+    $stmt2->execute();
+    $minderwerk = $stmt2->fetchAll();
     ?>
 </head>
 <body>
+<!--NAVBAR-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a href="login.php">Inloggen</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
 <!--MEER WERK-->
 <div class="container">
     <div class="col-xs-4">
@@ -69,7 +106,7 @@
                     <td></td>
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
-                    <td><input type="submit" name="toevoegen" value="Toevoegen"></td>
+                    <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
                     <td></td>
                 </tr>
             </table>
@@ -84,7 +121,7 @@
     <div class="col-xs-4">
         <h1>Minder Werk</h1>
         <h5>Projectnaam: De Tuinbaksteen</h5>
-        <form method="get" action="index.php">
+        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
@@ -94,13 +131,13 @@
                     <th></th>
                 </tr>
                 <?php
-                foreach ($meerwerk AS $werk) {
+                foreach ($minderwerk AS $werk2) {
                     print("<tr>");
-                    print("<td>" . $werk["mutatie_id"] . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"bewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"verwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
+                    print("<td>" . $werk2["mutatie_id"] . "</td>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
                 }
                 ?>
@@ -108,7 +145,7 @@
                     <td></td>
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
-                    <td><input type="submit" name="toevoegen" value="Toevoegen"></td>
+                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
                     <td></td>
                 </tr>
             </table>
