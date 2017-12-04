@@ -85,8 +85,8 @@
         </div>
 
       <div class="row">
-          <p class="col-xs-8 col-xs-offset-3 paragraphright page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+          <p class="col-xs-8 col-xs-offset-3 paragraphleft page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
               <diftext>Vergunningen</diftext><br><br>
               Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
