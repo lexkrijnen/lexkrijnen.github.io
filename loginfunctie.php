@@ -1,51 +1,4 @@
 
-
-<?php
-session_start();
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-
-if(isset($_POST['btn-login'])){
-    $errMsg = '';
-    //username and password sent from Form
-    $username = trim($_POST['e-mailadres']);
-    $password = trim($_POST['wachtwoord']);
-
-    if($username == '')
-        $errMsg .= 'Vul een geldig e-mailadres in<br>';
-
-    if($password == '')
-        $errMsg .= 'Vul een geldig wachtwoord in<br>';
-
-
-    if($errMsg == ''){
-        $records = $databaseConnection->prepare('SELECT e-mailadres,wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
-        $records->bindParam(':e-mailadres', $username);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
-        if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
-            $_SESSION['e-mailadres'] = $results['e-mailadres'];
-            header('location:account.php');
-            exit;
-        }else{
-            $errMsg .= 'Username and Password are not found<br>';
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,38 +49,45 @@ if(isset($_POST['btn-login'])){
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-            <div class="container">
-                <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
-                    <div class="panel " >
-                            <div class="panel-heading oranje">
-                                <div class="panel-title white">Log hier in met uw Wegro account</div>
-                                <?php print($errormsg); ?>
-                            </div>
-                        <div class="panel-body a lowborder" >
-                            <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
+<div class="container">
+    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
+        <div class="panel " >
+            <div class="panel-heading oranje">
+                <div class="panel-title white">Log hier in met uw Wegro account</div>
+            </div>
+            <div class="panel-body a lowborder" >
 
-                                <div  class="input-group c">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
-                                        </div>
 
-                                            <div class="input-group c">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                            <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw wachtwoord in">
-                                             </div>
-                                             <div  class="form-group d">
 
-                                                 <div class="col-sm-12 controls">
-                                        <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
-                                    </div>
-                                </div>
+                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
-                            </form>
+                    <div  class="input-group c">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
+                    </div>
+
+                    <div class="input-group c">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw wachtwoord in">
+                    </div>
+
+                    <div  class="form-group d">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls">
+                            <input class="btn oranje white" type="submit" name="submit" value="Login">
                         </div>
                     </div>
-                </div>
+
+                </form>
+
+
+
             </div>
+        </div>
     </div>
+</div>
+</div>
 </div>
 </div>
 
@@ -138,11 +98,11 @@ if(isset($_POST['btn-login'])){
 </div>
 
 
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 
+<!-- Bootstrap Framework -->
 <script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
