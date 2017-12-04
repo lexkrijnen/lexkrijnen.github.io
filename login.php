@@ -1,11 +1,43 @@
-
-
 <?php
-$dbcon=mysqli_connect("localhost","wegro","SQLWegro@101");
-mysqli_select_db($dbcon,"Wegro");
-?>
-<?php
-session_start();//session starts here
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=Wegro', "wegro", "SQLWegro@101");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+
+if (isset($_POST['submit'])) {
+
+    if(isset($_POST['E-mailadres'])) {
+
+        if(isset($_POST['Wachtwoord'])) {
+
+            $username = $_POST['E-mailadres'];
+            $password = $_POST['Wachtwoord'];
+
+            $username = filter_var($username, FILTER_SANITIZE_STRING);
+            $password = filter_var($password, FILTER_SANITIZE_STRING);
+
+            $query = $conn->prepare("SELECT COUNT(`id`) FROM Klant WHERE E-mailadres = :username AND Wachtwoord = :password");
+            $query->execute(array('E-mailadres' => $username, 'Wachtwoord' => $password));
+
+            $count = $query->fetchColumn();
+
+            if ($count == "1"){
+                echo "Logged in."; // doe je logged in script
+            } else {
+                echo "Wrong username / password combination";
+            }
+
+        } else {
+            echo "Password is vereist.";
+        }
+
+    } else {
+        echo "Username is vereist.";
+    }
+
+}
 
 ?>
 
@@ -116,30 +148,3 @@ session_start();//session starts here
 
 </body>
 </html>
-<?php
-
-
-
-if(isset($_POST['submit']))
-{
-    $user_email=$_POST['E-mailadres'];
-    $user_pass=$_POST['Wachtwoord'];
-
-
-    $check_user="select * from Klant WHERE E-mailadres='$user_email'AND Wachtwoord='$user_pass'";
-
-    $run=mysqli_query($dbcon,$check_user);
-
-    if(mysqli_num_rows($run))
-    {
-        echo "<script>window.open('account.php')</script>";
-
-        $_SESSION['E-mailadres']=$user_email;//here session is used and value of $user_email store in $_SESSION.
-
-    }
-    else
-    {
-        echo "<script>alert('Email or password is incorrect!')</script>";
-    }
-}
-?>
