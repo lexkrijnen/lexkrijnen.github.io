@@ -125,21 +125,18 @@ if(isset($_POST['submit']))
     $user_email=$_POST['E-mailadres'];
     $user_pass=$_POST['Wachtwoord'];
 
-    if($user_email == "test" AND $user_pass == "test") {
+
+    $check_user="select * from Klant WHERE E-mailadres='$user_email'AND Wachtwoord='$user_pass'";
+
+    $run=mysqli_query($dbcon,$check_user);
+
+    if(mysqli_num_rows($run))
+    {
         echo "<script>window.open('account.php')</script>";
+
+        $_SESSION['E-mailadres']=$user_email;//here session is used and value of $user_email store in $_SESSION.
+
     }
-
-    ##$check_user="select * from Klant WHERE E-mailadres='$user_email'AND Wachtwoord='$user_pass'";
-
-    ##$run=mysqli_query($dbcon,$check_user);
-
-    ##if(mysqli_num_rows($run))
-    ##{
-    ##    echo "<script>window.open('account.php')</script>";
-
-    ##    $_SESSION['E-mailadres']=$user_email;//here session is used and value of $user_email store in $_SESSION.
-
-    ##}
     else
     {
         echo "<script>alert('Email or password is incorrect!')</script>";
