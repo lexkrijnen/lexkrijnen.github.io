@@ -4,13 +4,11 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$sql = "SELECT * FROM Klant";
+$sql = "SELECT * FROM mutatie";
 $stmt = $pdo->prepare($sql);
+$stmt->execute();
 $werk = $stmt->fetch();
 
-if ($werk == "") {
-    print("Niks opgehaald");
-} else {
-    print("$werk");
-}
+print_r($werk);
+print("test");
 ?>
