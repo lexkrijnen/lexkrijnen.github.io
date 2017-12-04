@@ -53,9 +53,9 @@
 		</nav>
       <div class="BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-        <div>
+        <div class="center-block">
           <a href="index.php">
-                <div class="btn btn-default center-block oranje white">
+                <div class="btn oranje white">
                     Contact
                 </div>
             </a>
