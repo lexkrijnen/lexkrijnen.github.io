@@ -28,7 +28,7 @@
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
         print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
-        ## print('<meta http-equiv="refresh" content="2;url=http://localhost/WEGRO.Sandbox/index.php" />');
+        print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
     }
 
     $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
