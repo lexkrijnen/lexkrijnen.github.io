@@ -74,8 +74,8 @@
             <h1 class="text-left">Projecten</h1>
             <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
         </div>
-          link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
 
           <footer>
 
