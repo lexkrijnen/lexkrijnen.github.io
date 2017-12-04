@@ -120,7 +120,9 @@ $pdo = NULL;
                   <div class="">
                       <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                   </div>
-                      <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+                  <div class="btn oranje white">
+                      <td><input  type="submit" name="vinden" value="vinden"></td>
+                  </div>
                 </div>
             </form>
         </table>
