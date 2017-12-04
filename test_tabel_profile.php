@@ -25,8 +25,6 @@
         $stmt->execute();
         $documenten2 = $stmt->fetchAll();
         ?>
-
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
