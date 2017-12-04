@@ -38,7 +38,7 @@ print_r($klant);
 
 }
 
-
+print($naam);
 
 $pdo = NULL;
 ?>
