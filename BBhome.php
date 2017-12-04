@@ -54,7 +54,6 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
-                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
                         <li class="nav-item"><a href="over_ons.php">Verguningen</a></li>
                         <li class="nav-item"><a href="over_ons.php">projecten</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
