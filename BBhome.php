@@ -85,7 +85,7 @@
         </div>
 
       <div class="row">
-          <p class="col-xs-10 col-xs-offset-3  paragraphright page-box">
+          <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
               <diftext>Vergunningen</diftext><br><br>
               Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
