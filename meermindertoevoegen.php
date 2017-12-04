@@ -78,7 +78,7 @@
 
 <!--MEER WERK-->
 <div class="container">
-    <div class="col-xs-4">
+    <div class="col-xs-5 page-box">
         <h1>Meer Werk</h1>
         <h5>Projectnaam: De Tuinbaksteen</h5>
         <form method="get" action="meermindertoevoegen.php">
@@ -118,7 +118,7 @@
 
 
     <!--MINDER WERK-->
-    <div class="col-xs-4">
+    <div class="col-xs-5 page-box">
         <h1>Minder Werk</h1>
         <h5>Projectnaam: De Tuinbaksteen</h5>
         <form method="get" action="meermindertoevoegen.php">

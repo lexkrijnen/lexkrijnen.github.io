@@ -62,7 +62,7 @@
       <div class="row rowsidemargin">
       <div class="row bottomline topline">
           <h1 class="row rowsidemargin text-left">Ons bedrijf</h1>
-           <p class="col-xs-8">
+           <p class="col-xs-8 page-box">
                 Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.<br><br>
 
                 Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.<br><br>
@@ -76,14 +76,27 @@
           <img src="images/IMG_7453.JPG" class="col-xs-3 imgright">
         </div>
 
-      <div class="bottomline">
-          <h1 class="text-right">Vergunningen</h1>
-          <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgleft">
-      </div>
+      <div class="row bottomline">
+          <h1 class="row rowsidemargin text-right">Vergunningen</h1>
+          <img src="images/IMG_7453.JPG" class="col-xs-3 imgleft">
+          <p class="col-xs-8 page-box">
+                Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
+                Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
-      <div class="bottomline">
-            <h1 class="text-left">Projecten</h1>
-            <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
+                Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+          </p>
+        </div>
+
+      <div class="row bottomline">
+            <h1 class="row rowsidemargin text-left">Projecten</h1>
+          <p class="col-xs-8 page-box">
+              Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
+              Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.<br>
+              Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.<br><br>
+
+              De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
+          </p>
+            <img src="images/IMG_7453.JPG" class="col-xs-3 imgright">
         </div>
 
 
