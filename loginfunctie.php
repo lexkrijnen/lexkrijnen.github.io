@@ -23,7 +23,7 @@ if(isset($_POST['btn-login']))
 
     if($user->login($umail,$upass))
     {
-        $user->redirect('home.php');
+        $user->redirect('account.php');
     }
     else
     {
@@ -95,23 +95,70 @@ if(isset($_POST['btn-login']))
                 <?php
             }
             ?>
-            <div class="form-group">
-                <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or E mail ID" required />
+            <div class="container">
+                <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
+                    <div class="panel " >
+                        <div class="panel-heading oranje">
+                            <div class="panel-title white">Log hier in met uw Wegro account</div>
+                        </div>
+                        <div class="panel-body a lowborder" >
+
+                            <?php
+                            if(isset($error))
+                            {
+                                ?>
+                                <div class="alert alert-danger">
+                                    <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+                                </div>
+                                <?php
+                            }
+                            ?>
+
+                            <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
+
+                                <div  class="input-group c">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
+                                </div>
+
+                                <div class="input-group c">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="login-password" type="password" class="form-control" name="wachtwoord"  placeholder="Vul hier uw wachtwoord in">
+                                </div>
+
+                                <div  class="form-group d">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                        <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
+                                    </div>
+                                </div>
+
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="txt_password" placeholder="Your Password" required />
-            </div>
-            <div class="clearfix"></div><hr />
-            <div class="form-group">
-                <button type="submit" name="btn-login" class="btn btn-block btn-primary">
-                    <i class="glyphicon glyphicon-log-in"></i>&nbsp;SIGN IN
-                </button>
-            </div>
-            <br />
-            <label>Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
-        </form>
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 text-center footer-rights">
+        <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
     </div>
 </div>
 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap Framework -->
+<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
