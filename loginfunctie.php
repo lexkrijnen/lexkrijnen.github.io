@@ -7,15 +7,6 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-
-
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-
 if(isset($_POST['btn-login'])){
     $errMsg = '';
     //username and password sent from Form
@@ -30,10 +21,11 @@ if(isset($_POST['btn-login'])){
 
 
     if($errMsg == ''){
-        $records = $databaseConnection->prepare('SELECT e-mailadres,wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
-        $records->bindParam(':e-mailadres', $username);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
+       $sql = ('SELECT e-mailadres,wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
         if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
             $_SESSION['e-mailadres'] = $results['e-mailadres'];
             header('location:account.php');

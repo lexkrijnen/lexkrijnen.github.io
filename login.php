@@ -51,12 +51,15 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
+    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
         <div class="panel " >
             <div class="panel-heading oranje">
                 <div class="panel-title white">Log hier in met uw Wegro account</div>
             </div>
             <div class="panel-body a lowborder" >
+
+
+
                 <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
@@ -73,7 +76,7 @@
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
+                            <input class="btn oranje white" type="submit" name="submit" value="Login">
                         </div>
                     </div>
 
