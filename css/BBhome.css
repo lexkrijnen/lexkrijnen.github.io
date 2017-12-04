@@ -30,6 +30,22 @@
     margin-bottom: 15px;
 }
 
+.imgright {
+    float: right;
+    margin-left: 10px;
+    /*margin-bottom: auto;
+    margin-top: auto;
+    margin-right: auto;*/
+}
+
+.imgleft{
+    float: left;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
 .textright{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -40,20 +56,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: left;
-}
-
-.imgright{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.imgleft{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .rowsidemargin{
@@ -71,19 +73,36 @@
     border-top: 5px solid black;
 }
 
-.paragraph{
+
+.paragraphleft{
     color: black;
+    text-align: left;
 }
 
-.paragraph diftext {
+
+.paragraphleft diftext {
     color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-
 }
 
+.paragraphleft dif2{
+    color: black;
+    font-size: 10px;
+}
 
+.paragraphright{
+    color: black;
+    text-align: right;
+}
+
+.paragraphright diftext{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right
+}
 
 footer{
     background-color:#3D3D3D;
