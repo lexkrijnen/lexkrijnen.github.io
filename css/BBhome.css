@@ -30,8 +30,31 @@
     margin-bottom: 15px;
 }
 
-.imgright{
-   margin-top: 25px;
-    margin-bottom: 25px;
+.textright{
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: 10px;
+}
+
+.textleft{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.imgright{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.imgleft{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.rowsidemargin{
+    margin-left: 1px;
+    margin-right: 1px;
 }
