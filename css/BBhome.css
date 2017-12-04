@@ -22,3 +22,15 @@
     font-size: 16px;
 }
 */
+
+.oranje {
+	background-color: #FE9C16 !important;
+
+}
+.white {
+	color: white;
+}
+
+.contbutton{
+  margin: auto auto;
+}
