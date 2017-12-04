@@ -12,14 +12,14 @@ if (isset($_POST['submit'])) {
 
         if(isset($_POST['Wachtwoord'])) {
 
-            $username = $_POST['E-mailadres'];
+            $username = $_POST['e-mailadres'];
             $password = $_POST['Wachtwoord'];
 
             $username = filter_var($username, FILTER_SANITIZE_STRING);
             $password = filter_var($password, FILTER_SANITIZE_STRING);
 
-            $query = $conn->prepare("SELECT COUNT(`klant_nummer`) FROM Klant WHERE E-mailadres = :username AND Wachtwoord = :password");
-            $query->execute(array('E-mailadres' => $username, 'Wachtwoord' => $password));
+            $query = $conn->prepare("SELECT COUNT(klant_nummer) FROM Klant WHERE E-mailadres =? AND Wachtwoord =?");
+            $query->execute(array($username, $password));
 
             $count = $query->fetchColumn();
 
