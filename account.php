@@ -4,10 +4,7 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if(!$user->is_loggedin())
-{
-    $user->redirect('index.php');
-}
+
 $user_id = $_SESSION['user_session'];
 $stmt = $DB_con->prepare("SELECT * FROM Klant WHERE klant_nummer=:klant_nummer");
 $stmt->execute(array(":klant_nummer"=>$user_id));

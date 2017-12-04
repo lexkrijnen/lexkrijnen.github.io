@@ -81,20 +81,6 @@ if(isset($_POST['btn-login']))
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<div class="container">
-    <div class="form-container">
-        <form method="post">
-            <h2>Sign in.</h2><hr />
-            <?php
-            if(isset($error))
-            {
-                ?>
-                <div class="alert alert-danger">
-                    <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-                </div>
-                <?php
-            }
-            ?>
             <div class="container">
                 <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
                     <div class="panel " >
