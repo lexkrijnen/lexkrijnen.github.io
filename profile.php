@@ -60,7 +60,7 @@
 
     		<div id="pdf-viewer" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<p>Problemen met het bekijken?</p>
-					<a class="btn btn-primary" href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf">Openen in nieuw tabblad.</a>
+					<a class="btn btn-primary" href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="_parent">Openen in nieuw tabblad.</a>
     		</div>
     	</div>
 
