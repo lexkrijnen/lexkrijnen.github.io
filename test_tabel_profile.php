@@ -9,7 +9,7 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Welkom bij Wegro</title>
+    <title>Mijn profiel</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="style1.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,7 +47,7 @@
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
 						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
-                        <li class="nav-item"><a href="index.php">Uitlogen</a></li>
+                        <li class="nav-item"><a href="index.php">Uitloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -56,39 +56,8 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                <table>
-                    <thead>
-                        <tr>
-                            <th><h3><b>Contract</b></h3></th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract_2017.pdf</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract-v2_2017.pdf</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th><h3><b>Tekeningen</b></h3></th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Beganegrond_v1A.pdf</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Uitbouw_v3C.pdf</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+    			Hier komt een menu
     		</div>
-    	</div>
 
     		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
@@ -99,6 +68,7 @@
 						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
     			</div>
     		</div>
+    	</div>
 
     </div><!-- /.container -->
 
