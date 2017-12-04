@@ -54,6 +54,7 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
                         <li class="nav-item"><a href="over_ons.php">Verguningen</a></li>
                         <li class="nav-item"><a href="over_ons.php">projecten</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
@@ -64,7 +65,7 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="contact.php">
+         <a href="#">
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
