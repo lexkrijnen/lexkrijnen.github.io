@@ -46,13 +46,14 @@
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 5px;
-    margin-left: 45px;
+    margin-left: 5px;
 }
 
 .imgleft{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .rowsidemargin{
@@ -78,13 +79,16 @@
     color: black;
     font-size: 30px;
     font-weight: bold;
+    text-align: left;
+
 }
 
 
 
 footer{
-    background-color:#222222;
-    padding: 60px 0px;
+    background-color:#5F5F5F;
+    top-padding: 60px;
+
 }
 
 footer ul{
@@ -132,5 +136,5 @@ footer ul li a:hover{
 .copyright p{
     font-size:12px;
     padding:15px 0 10px 0;
-    color: white
+    color: #b1aca1
 }
