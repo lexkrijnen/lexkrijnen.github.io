@@ -108,13 +108,13 @@ $pdo = NULL;
             <form action="klant_zoeken.php" method="get">
                 <div class="row">
                   <div class="" >
-                      <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" placeholder=<?php if (isset($_GET["vinden"])) { print($_GET["voornaam"]); } else { print("voornaam"); }?> ></td></tr>
+                      <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required value=<?php if (isset($_GET["vinden"])) { print($_GET["voornaam"]); } else { print("voornaam"); }?> ></td></tr>
                   </div>
                   <div class="">
-                      <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" placeholder=<?php if (isset($_GET["vinden"])) { print($_GET["tussenvoegsel"]); } else { print("tussenvoegsel"); }?> ></td></tr>
+                      <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" value=<?php if (isset($_GET["vinden"])) { print($_GET["tussenvoegsel"]); } else { print("tussenvoegsel"); }?> ></td></tr>
                   </div>
                   <div class="">
-                      <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" placeholder=<?php if (isset($_GET["vinden"])) { print($_GET["achternaam"]); } else { print("achternaam"); }?> ></td>
+                      <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required value=<?php if (isset($_GET["vinden"])) { print($_GET["achternaam"]); } else { print("achternaam"); }?> ></td>
                   </div>
                       <td><input class="btn btn-primary" type="submit" name="vinden" value="vinden"></td>
                 </div>
