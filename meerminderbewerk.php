@@ -60,7 +60,7 @@
                 <input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
              </table>
         </form>
-        <a href="index.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
+        <a href="meermindertoevoegen.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
     </div>
 </div>
 </body>
