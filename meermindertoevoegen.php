@@ -113,8 +113,8 @@
                     print("<td>" . $werk2["mutatie_id"] . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
                     print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"bewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"verwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
                 }
                 ?>
