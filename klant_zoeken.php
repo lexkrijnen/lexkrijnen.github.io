@@ -1,4 +1,45 @@
+<?php
+session_start();
 
+
+$db = "mysql:host=localhost; dbname=wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
+
+
+
+
+
+if (isset($_GET["vinden"])) {
+    $sql = "SELECT * FROM klant k JOIN adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
+
+    $klant = $stmt->fetch();
+
+    $voornaam = $klant["voornaam"];
+    $tussenvoegsel = $klant["tussenvoegsel"];
+    $achternaam = $klant["achternaam"];
+    $klant_nummer = $klant["klant_nummer"];
+    $telefoonnummer = $klant["telefoon_nummer"];
+    $emailadres =  $klant["e-mailadres"];
+    $adres = $klant["adres"];
+    $postcode = $klant["postcode"];
+    $woonplaats = $klant["woonplaats"];
+    $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
+
+}
+
+
+
+$pdo = NULL;
+?>
 
 
 
@@ -82,6 +123,40 @@
       </div>
 
 
+    <?php
+    //informatie van de gezochte klant tonen
+    if (isset($_GET["vinden"])) {
+        //Geen voornaam en achternaam ingevuld
+        if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Vul een voornaam en een achternaam in.
+                  </div>");
+        } elseif ($stmt->rowCount()>0) {
+            print("<table>");
+            print("<tr><td>Naam: $naam</td></tr>");
+            print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+            print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
+            print("<tr><td>Emailadres: $emailadres</td></tr>");
+            print("<tr><td>Adres: $adres</td></tr>");
+            print("<tr><td>Postcode: $postcode</td></tr>");
+            print("<tr><td>Woonplaats: $woonplaats</td></tr>");
+            print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
+            print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+            print("</form>");
+            print("</table>");
+        } else {
+            //geen klant gevonden met die naam
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
+                  </div>");
+        }
+    }
+    ?>
+
 
 
 
@@ -97,87 +172,5 @@
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
-
-
-
-<?php
-session_start();
-
-
-$db = "mysql:host=localhost; dbname=wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-
-
-
-
-if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM klant k JOIN adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
-
-    $klant = $stmt->fetch();
-
-    $voornaam = $klant["voornaam"];
-    $tussenvoegsel = $klant["tussenvoegsel"];
-    $achternaam = $klant["achternaam"];
-    $klant_nummer = $klant["klant_nummer"];
-    $telefoonnummer = $klant["telefoon_nummer"];
-    $emailadres =  $klant["e-mailadres"];
-    $adres = $klant["adres"];
-    $postcode = $klant["postcode"];
-    $woonplaats = $klant["woonplaats"];
-    $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-
-    $_SESSION["voornaam"] = $voornaam;
-    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["achternaam"] =  $achternaam;
-    $_SESSION["naam"] = $naam;
-
-}
-
-
-
-$pdo = NULL;
-?>
-
-
-
-<?php
-//informatie van de gezochte klant tonen
-if (isset($_GET["vinden"])) {
-    //Geen voornaam en achternaam ingevuld
-    if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Vul een voornaam en een achternaam in.
-              </div>");
-    } elseif ($stmt->rowCount()>0) {
-        print("<table>");
-        print("<tr><td>Naam: $naam</td></tr>");
-        print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-        print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
-        print("<tr><td>Emailadres: $emailadres</td></tr>");
-        print("<tr><td>Adres: $adres</td></tr>");
-        print("<tr><td>Postcode: $postcode</td></tr>");
-        print("<tr><td>Woonplaats: $woonplaats</td></tr>");
-        print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
-        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
-        print("</form>");
-        print("</table>");
-    } else {
-        //geen klant gevonden met die naam
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
-              </div>");
-    }
-}
-?>
-
 	</body>
 </html>
