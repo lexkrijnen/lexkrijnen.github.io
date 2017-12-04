@@ -113,25 +113,31 @@ $pdo = new PDO($db, $user, $pass);
 <!-- Bootstrap Framework -->
 <script src="js/bootstrap.min.js"></script>
 <?php
-if(isset($_POST) & !empty($_POST)){
-$username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
-$password = md5($_POST['wachtwoord']);
-$sql = "SELECT * FROM `Klant` WHERE ";
-if(filter_var($username, FILTER_VALIDATE_EMAIL)){
-$sql .= "e-mailadres='$username'";
-}else{
-$sql .= "e-mailadres='$username'";
-}
-$sql .= " AND wachtwoord='$password' AND active=1";
-$sql;
-$res = mysqli_query($connection, $sql);
-$count = mysqli_num_rows($res);
+if(isset($_POST) & !empty($_POST)) {
+    $username = mysqli_real_escape_string($connection, $_POST['e-mailadres']);
+    $password = md5($_POST['wachtwoord']);
+    $sql = "SELECT * FROM `Klant` WHERE ";
+    if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
+        $sql .= "e-mailadres='$username'";
+    } else {
+        $sql .= "e-mailadres='$username'";
+    }
+    $sql .= " AND wachtwoord='$password' AND active=1";
+    $sql;
+    $res = mysqli_query($connection, $sql);
+    $count = mysqli_num_rows($res);
 
-if($count == 1){
-$_SESSION['e-mailadres'] = $username;
-print("HOI");
-}else{
-$fmsg = "User does not exist";
+    if ($count == 1) {
+        $_SESSION['e-mailadres'] = $username;
+        print("HOI");
+    } else {
+        //geen klant gevonden met die naam
+        print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Inloggen mislukt
+                  </div>");
+}
 }
 }
 ?>
