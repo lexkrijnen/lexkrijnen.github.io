@@ -1,3 +1,15 @@
+<?php
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+$user = "wegro";
+$pass = "SQLWegro@101";
+$pdo = new PDO($db, $user, $pass);
+
+
+$user_id = $_SESSION['user_session'];
+$stmt = $DB_con->prepare("SELECT * FROM Klant WHERE klant_nummer=:klant_nummer");
+$stmt->execute(array(":klant_nummer"=>$user_id));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
