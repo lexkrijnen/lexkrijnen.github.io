@@ -55,6 +55,10 @@
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
                         <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="over_ons.php">Verguningen</a></li>
+                        <li class="nav-item"><a href="over_ons.php">projecten</a></li>
+                        <li class="nav-item"><a href="contact.php">Contact</a></li>
+						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -106,82 +110,65 @@
             </p>
     </div>
  </div>
-<div class="row">
-<div class="col-xs-10 col-md-6 col-md-offset-1">
-    <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+  <div class="row">
+      <div class="col-xs-10 col-md-6 col-md-offset-1">
+          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
       </div>
+
+
+<div class="row">
+    <div class="page-box">
+                  <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                       data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                       data-hide-cover="true" data-show-facepile="false">
+                      <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+    </div>
+</div>
+
+  <footer id="footer-Section">
+      <div class="footer-top-layout">
           <div class="container">
-          <div class="row">
-              <div class="page-box col-xs-12">
-
-
-    <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-         data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
-         data-hide-cover="true" data-show-facepile="false">
-        <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                    class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
- </div>
-</div>
-</div>
-
-
+              <div class="row">
+                  <div class="OurBlog">
+                      <h4>Our Blog</h4>
+                      <p>BCM wins mandate for Avendus Wealth Management portal revamp</p>
+                      <div class="post-blog-date">20th Oct 2016</div>
+                  </div>
+                  <div class=" col-lg-8 col-lg-offset-2">
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Go Travel Cloud</h4>
+                              <address>
+                                  501,507 your company address<br>
+                                  400015 Maharashtra, UK
+                              </address>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Reach Us</h4>
+                              <div class="item-contact"> <a href="tel:630-885-9200"><span class="link-id">P</span>:<span>630-885-9200</span></a> <a href="tel:630-839.2006"><span class="link-id">F</span>:<span>630-839.2006</span></a> <a href="mailto:info@brandcatmedia.com"><span class="link-id">E</span>:<span>info@brandcatmedia.com</span></a> </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Sign up for Newsletter</h4>
+                              <form class="signUpNewsletter" action="" method="get">
+                                  <input name="" class="gt-email form-control" placeholder="You@youremail.com" type="text">
+                                  <input name="" class="btn-go" value="Go" type="button">
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-          <footer>
-
-              <div class="footer-top">
-                  <div class="container">
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
-                      </div>
-
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="container" style="border-top:1px solid grey;">
-                  <div class="row text-center">
-                      <div class="col-xs-6 col-xs-offset-3">
-                          <ul class="menu">
-
-                              <li>
-                                  <a href="#">Home</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Ons bedrijf</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Contact</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Inloggen</a>
-                              </li>
-                          </ul>
-
-                      </div>
-                  </div>
-              </div>
-              <div class="copyright">
-                  <div class="container">
-
-                      <div class="row text-center">
-                          <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-                      </div>
-
-                  </div>
-              </div>
-          </footer>
+      </div>
+      <div class="footer-bottom-layout">
+          <div class="socialMedia-footer"> <a href="#"><img src="img/socialMedia_01.png"></a> <a href="#"><img src="img/socialMedia_02.png"></a> <a href="#"><img src="img/socialMedia_03.png"></a> <a href="#"><img src="img/socialMedia_04.png"></a> <a href="#"><img src="img/socialMedia_05.png"></a> </div>
+          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
+      </div>
+  </footer>
 
 
 
