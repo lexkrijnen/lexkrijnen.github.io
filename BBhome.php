@@ -70,7 +70,7 @@
           </div>
       <div class="row rowsidemargin">
       <div class="row topline">
-          <p class="col-xs-8 col-xs-offset-1 paragraphleft page-box">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
               <diftext>Ons bedrijf</diftext><br><br>
               Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
@@ -85,8 +85,8 @@
         </div>
 
       <div class="row">
-          <p class="col-xs-8 col-xs-offset-3 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+          <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
               <diftext>Vergunningen</diftext><br><br>
               Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
@@ -95,8 +95,8 @@
           </p>
         </div>
 
-      <div class="row">
-          <p class="col-xs-8 col-xs-offset-1 paragraphleft page-box">
+      <div>
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
               <diftext>Projecten</diftext><br><br>
               Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
@@ -105,27 +105,40 @@
 
               De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
             </p>
+<<<<<<< HEAD
           </div>
           <div class="row">
 <div class="col-xs-10 col-md-6 col-md-offset-1 fbding">
     <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+=======
+      </div>
+          <div class="container">
+          <div class="row">
+              <div class="page-box col-xs-12">
+
+
+    <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+>>>>>>> origin/master
          data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
-         data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                                                       class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+         data-hide-cover="true" data-show-facepile="false">
+        <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                    class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
  </div>
+<<<<<<< HEAD
 </div>
 </div>
 
 
+=======
+          </div>
+          </div>
+>>>>>>> origin/master
           <footer>
 
               <div class="footer-top">
                   <div class="container">
                       <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                          <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
                       </div>
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
@@ -133,9 +146,7 @@
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
                       </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
-                      </div>
+
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
                       </div>
