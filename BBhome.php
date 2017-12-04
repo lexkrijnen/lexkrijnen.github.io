@@ -59,10 +59,13 @@
                 </div>
             </a>
           </div>
-          <div>
+          <div class="row sidemargin">
           <h1>Ons bedrijf</h1>
               <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
           </div>
+      <div>
+          <h1>Vergunningen</h1>
+          <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
       </div>
 
 

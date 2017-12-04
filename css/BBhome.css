@@ -31,7 +31,12 @@
 }
 
 .imgright{
-   margin-top: 25px;
+    margin-top: 25px;
     margin-bottom: 25px;
     margin-right: 10px;
+}
+
+.sidemargin{
+    margin-left: 1px;
+    margin-right: 1px;
 }
