@@ -111,7 +111,6 @@ $pdo = NULL;
        <table>
             <form action="klant_zoeken.php" method="get">
                 <div class="row">
-                  <div class="" >
                       <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
                   </div>
                   <div class="">
@@ -120,8 +119,7 @@ $pdo = NULL;
                   <div class="">
                       <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                   </div>
-                      <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
-                </div>
+                  <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
             </form>
         </table>
       </div>
