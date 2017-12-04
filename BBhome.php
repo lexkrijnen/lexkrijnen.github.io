@@ -70,7 +70,7 @@
           </div>
       <div class="row rowsidemargin">
       <div class="row topline">
-          <p class="col-xs-8 col-xs-offset-1 paragraphleft page-box">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
               <diftext>Ons bedrijf</diftext><br><br>
               Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
@@ -85,7 +85,7 @@
         </div>
 
       <div class="row">
-          <p class="col-xs-8 col-xs-offset-3  paragraphright page-box">
+          <p class="col-xs-10 col-xs-offset-3  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
               <diftext>Vergunningen</diftext><br><br>
               Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
@@ -96,7 +96,7 @@
         </div>
 
       <div>
-          <p class="col-xs-8 col-xs-offset-1 paragraphleft page-box">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
               <diftext>Projecten</diftext><br><br>
               Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
