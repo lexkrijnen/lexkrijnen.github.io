@@ -131,7 +131,7 @@ if($count == 1){
 $_SESSION['e-mailadres'] = $username;
 print("HOI");
 }else{
-$fmsg = "User does not exist";
+print ("User does not exist");
 }
 }
 ?>
