@@ -108,15 +108,15 @@
       </div>
           <div class="container">
           <div class="row">
-              <div>
-<div class="col-xs-10 col-md-5 col-md-offset-1">
-    <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-         data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
-         data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                                                      class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
- </div>
-              </div>
+              <div class="page-box col-xs-12">
 
+
+    <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+         data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+         data-hide-cover="true" data-show-facepile="false">
+        <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                    class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
+ </div>
           </div>
           </div>
           <footer>
@@ -124,10 +124,7 @@
               <div class="footer-top">
                   <div class="container">
                       <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                          <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
                       </div>
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
@@ -135,9 +132,7 @@
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
                       </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
-                      </div>
+                      >
                       <div class="col-lg-2 col-xs-12 text-center">
                           <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
                       </div>
