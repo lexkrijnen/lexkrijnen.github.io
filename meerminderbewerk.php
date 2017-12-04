@@ -63,13 +63,13 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
+<div class="container page-box">
     <div class="col-xs-4">
-        <h2>Meer Werk Bewerken</h2>
+        <h2>Meer/Minder Werk Bewerken</h2>
         <form method="get" action="meerminderbewerk.php">
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
+                    <th>ID</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
                     <th></th>

@@ -42,9 +42,9 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
+<div class="container page-box">
     <div class="col-xs-4">
-        <h2>Meer Werk Verwijderen</h2>
+        <h2>Meer/Minder Werk Verwijderen</h2>
         <?php
         if (isset($_GET["nummer"]) && $_GET["nummer"] != "") {
             $nummer = $_GET["nummer"];

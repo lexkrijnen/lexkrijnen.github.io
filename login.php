@@ -1,46 +1,4 @@
-<?php
-try {
-    $conn = new PDO('mysql:host=localhost;dbname=Wegro', "wegro", "SQLWegro@101");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
-}
 
-if (isset($_POST['submit'])) {
-
-    if(isset($_POST['e-mailadres'])) {
-
-        if(isset($_POST['wachtwoord'])) {
-
-            $username = $_POST['e-mailadres'];
-            $password = $_POST['wachtwoord'];
-
-            $username = filter_var($username, FILTER_SANITIZE_STRING);
-            $password = filter_var($password, FILTER_SANITIZE_STRING);
-
-            $query = $conn->prepare("SELECT * FROM Klant WHERE E-mailadres =? AND Wachtwoord =?");
-            $query->execute(array($username, $password));
-            $count = $query->fetchColumn();
-
-            if ($count == "1"){
-                echo "Logged in.";
-                ##header('Location: account.php');
-
-            } else {
-                echo "Wrong username / password combination";
-            }
-
-        } else {
-            echo "Password is vereist.";
-        }
-
-    } else {
-        echo "Username is vereist.";
-    }
-
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,15 +51,12 @@ if (isset($_POST['submit'])) {
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
+    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
         <div class="panel " >
             <div class="panel-heading oranje">
                 <div class="panel-title white">Log hier in met uw Wegro account</div>
             </div>
             <div class="panel-body a lowborder" >
-
-
-
                 <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
@@ -118,7 +73,7 @@ if (isset($_POST['submit'])) {
                         <!-- Button -->
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="submit" value="Login">
+                            <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
                         </div>
                     </div>
 
