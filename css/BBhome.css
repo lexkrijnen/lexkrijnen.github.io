@@ -1,6 +1,7 @@
 .BBhomeBackground{
     background-image: url("../images/IMG_9297.JPG");
     background-repeat: no-repeat;
+    /*background-size: 75%;*/
     background-size: cover;
 }
 
@@ -11,6 +12,7 @@
     width: 25%;
     display: block;
     margin: auto;
+    filter: drop-shadow(0 0 5px #fff);
 }
 
 /*
