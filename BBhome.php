@@ -60,11 +60,11 @@
             </a>
           </div>
           <div class="row rowsidemargin">
-          <h1>Ons bedrijf</h1>
+          <h1 class="textright">Ons bedrijf</h1>
               <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgright">
           </div>
       <div>
-          <h1>Vergunningen</h1>
+          <h1 class="textleft">Vergunningen</h1>
           <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-9 imgleft">
       </div>
 
