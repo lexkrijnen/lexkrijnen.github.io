@@ -4,11 +4,11 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$sql = "SELECT * FROM mutatie";
+$sql = "SELECT * FROM Klant";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $werk = $stmt->fetch();
 
 print_r($werk);
-print("test");
+print("test2");
 ?>
