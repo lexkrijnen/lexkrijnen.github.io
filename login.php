@@ -57,18 +57,6 @@
                 <div class="panel-title white">Log hier in met uw Wegro account</div>
             </div>
             <div class="panel-body a lowborder" >
-
-                <?php
-                if(isset($error))
-                {
-                    ?>
-                    <div class="alert alert-danger">
-                        <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-                    </div>
-                    <?php
-                }
-                ?>
-
                 <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
