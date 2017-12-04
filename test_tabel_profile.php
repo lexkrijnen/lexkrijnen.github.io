@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-        <?php
+<?php
         $db = "mysql:host=localhost; dbname=wegro; port=3306";
         $user = "root";
         $pass = "";
         $pdo = new PDO($db, $user, $pass);
 
-        if (isset($_GET["vieuw"])) {
-        $sql = "SELECT document FROM Contract";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["document"]));
-        }
+        if (isset($_GET["toevoegen"]) && isset($_GET["beschrijving"])) {
+            if ($_GET["beschrijving"] != "") {
+                $sql = "INSERT INTO mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+              } else {
+                print("Vul A.U.B. een beschrijving in.");
+                }
+            }
 
-        $stmt = $pdo->prepare("SELECT document FROM Contract");
+
+        $stmt = $pdo->prepare("SELECT * FROM mutatie WHERE soort_nummer = 1");
         $stmt->execute();
-        $documenten1 = $stmt->fetchAll();
-
-        if (isset($_GET["vieuw"])) {
-        $sql = "SELECT document FROM Tekening";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["document"]));
-        }
-
-        $stmt = $pdo->prepare("SELECT document FROM Tekening");
-        $stmt->execute();
-        $documenten2 = $stmt->fetchAll();
+        $meerwerk = $stmt->fetchAll();
         ?>
 <html lang="en">
 	<head>
@@ -38,13 +33,13 @@
     <title>Welkom bij Wegro</title>
 
     <!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Global styles for this website -->
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="style1.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -72,7 +67,7 @@
 				        <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
-						<li class="nav-item"><a href="Mijn_profiel.php">Mijn profiel</a></li>
+						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
                         <li class="nav-item"><a href="index.php">Uitlogen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -82,36 +77,39 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                    <from method="get" action="3.php">
-
-        <table>
-            <tr>
-                <th><h3>Contract</h3></th>
-            </tr>
-
-        <?php
-        foreach ($documenten1 as $contarct){
-            print("<tr>");
-            print("<td>" . $contarct["document"] . "</td>");
-            print("</tr>");
-            }
-        ?>
-        </table>
-        <br>
-        <table>
-            <tr>
-                <th><h3>Tekeningen</h3></th>
-            </tr>
-
-        <?php
-        foreach ($documenten2 as $tekening){
-            print("<tr>");
-            print("<td>" . $tekening["document"] . "</td>");
-            print("</tr>");
-            }
-        ?>
-        </table>
-    </from>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Contract</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract_2017.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract-v2_2017.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Tekeningen</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Beganegrond_v1A.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Uitbouw_v3C.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    		</div>
+    	</div>
 
     </div><!-- /.container -->
 

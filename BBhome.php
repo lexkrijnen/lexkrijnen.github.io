@@ -138,21 +138,16 @@
                               </li>
 
                               <li>
-                                  <a href="#">About</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Blog</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Gallery</a>
+                                  <a href="#">Ons bedrijf</a>
                               </li>
 
                               <li>
                                   <a href="#">Contact</a>
                               </li>
 
+                              <li>
+                                  <a href="#">Inloggen</a>
+                              </li>
                           </ul>
 
                       </div>
