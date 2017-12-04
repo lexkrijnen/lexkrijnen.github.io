@@ -65,7 +65,7 @@
 
 <div class="container page-box">
     <div class="col-xs-4">
-        <h2>Meer Werk Bewerken</h2>
+        <h2>Meer/Minder Werk Bewerken</h2>
         <form method="get" action="meerminderbewerk.php">
             <table class="table table-hover table-bordered">
                 <tr>
