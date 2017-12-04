@@ -9,8 +9,8 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["aanmaken"])) {
-    $sql1 = "INSERT INTO adres (adres, postcode, woonplaats) VALUES (?, ?, ?)";
-    $sql2 = "INSERT INTO klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, telefoon_nummer) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql1 = "INSERT INTO Adres (adres, postcode, woonplaats) VALUES (?, ?, ?)";
+    $sql2 = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, telefoon_nummer) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt1 = $pdo->prepare($sql2);
     $stmt1->execute(array($_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
     $stmt2 = $pdo->prepare($sql1);
