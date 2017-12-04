@@ -129,7 +129,7 @@ $count = mysqli_num_rows($res);
 
 if($count == 1){
 $_SESSION['e-mailadres'] = $username;
-header('location: account.php');
+print("HOI");
 }else{
 $fmsg = "User does not exist";
 }
