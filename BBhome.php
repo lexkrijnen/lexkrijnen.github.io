@@ -95,7 +95,7 @@
           </p>
         </div>
 
-      <div class="row">
+      <div>
           <p class="col-xs-8 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
               <diftext>Projecten</diftext><br><br>
@@ -105,7 +105,8 @@
 
               De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
             </p>
-        </div
+      </div>
+          <div class="container">
           <div class="row">
 <div class="col-xs-10 col-md-6 col-md-offset-1">
     <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
@@ -121,7 +122,7 @@
                                                                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div>
           </div>
       </div>
-
+  </div>
 
           <footer>
 
