@@ -1,30 +1,4 @@
 <!DOCTYPE html>
-        <?php
-        $db = "mysql:host=localhost; dbname=wegro; port=3306";
-        $user = "root";
-        $pass = "";
-        $pdo = new PDO($db, $user, $pass);
-
-        if (isset($_GET["vieuw"])) {
-        $sql = "SELECT document FROM Contract";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["document"]));
-        }
-
-        $stmt = $pdo->prepare("SELECT document FROM Contract");
-        $stmt->execute();
-        $documenten1 = $stmt->fetchAll();
-
-        if (isset($_GET["vieuw"])) {
-        $sql = "SELECT document FROM Tekening";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["document"]));
-        }
-
-        $stmt = $pdo->prepare("SELECT document FROM Tekening");
-        $stmt->execute();
-        $documenten2 = $stmt->fetchAll();
-        ?>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -82,36 +56,39 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                    <from method="get" action="3.php">
-
-        <table>
-            <tr>
-                <th><h3>Contract</h3></th>
-            </tr>
-
-        <?php
-        foreach ($documenten1 as $contarct){
-            print("<tr>");
-            print("<td>" . $contarct["document"] . "</td>");
-            print("</tr>");
-            }
-        ?>
-        </table>
-        <br>
-        <table>
-            <tr>
-                <th><h3>Tekeningen</h3></th>
-            </tr>
-
-        <?php
-        foreach ($documenten2 as $tekening){
-            print("<tr>");
-            print("<td>" . $tekening["document"] . "</td>");
-            print("</tr>");
-            }
-        ?>
-        </table>
-    </from>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Contract</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract_2017.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract-v2_2017.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h3><b>Tekeningen</b></h3></th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Beganegrond_v1A.pdf</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Uitbouw_v3C.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    		</div>
+    	</div>
 
     </div><!-- /.container -->
 
