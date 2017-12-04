@@ -11,34 +11,31 @@ $pdo = new PDO($db, $user, $pass);
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant k JOIN Adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["Voornaam"], $_GET["Tussenvoegsel"], $_GET["Achternaam"]));
+    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
     $klant = $stmt->fetch();
 
-print_r($klant);
 
-    $voornaam = $klant["Voornaam"];
-    $tussenvoegsel = $klant["Tussenvoegsel"];
-    $achternaam = $klant["Achternaam"];
-    $klant_nummer = $klant["Klant_nummer"];
-    $telefoonnummer = $klant["Telefoon_nummer"];
-    $emailadres =  $klant["E-mailadres"];
-    $adres = $klant["Adres"];
-    $postcode = $klant["Postcode"];
-    $woonplaats = $klant["Woonplaats"];
+    $voornaam = $klant["voornaam"];
+    $tussenvoegsel = $klant["tussenvoegsel"];
+    $achternaam = $klant["achternaam"];
+    $klant_nummer = $klant["klant_nummer"];
+    $telefoonnummer = $klant["telefoon_nummer"];
+    $emailadres =  $klant["e-mailadres"];
+    $adres = $klant["adres"];
+    $postcode = $klant["postcode"];
+    $woonplaats = $klant["woonplaats"];
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
-    $_SESSION["Voornaam"] = $voornaam;
-    $_SESSION["Tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["Achternaam"] =  $achternaam;
-    $_SESSION["Naam"] = $naam;
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
 
-    $ingevuldevoornaam = $_GET["Voornaam"];
-    $ingevuldetussenvoegsel = $_GET["Tussenvoegsel"];
-    $ingevuldeachternaam = $_GET["Achternaam"];
+    $ingevuldevoornaam = $_GET["voornaam"];
+    $ingevuldetussenvoegsel = $_GET["tussenvoegsel"];
+    $ingevuldeachternaam = $_GET["achternaam"];
 
 }
-
-
 
 $pdo = NULL;
 ?>
@@ -109,13 +106,13 @@ $pdo = NULL;
            <table>
                 <form action="klant_zoeken.php" method="get">
                     <div class="row">
-                          <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="Voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+                          <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
                       </div>
                       <div class="">
-                          <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="Tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+                          <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
                       </div>
                       <div class="">
-                          <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="Achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+                          <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                       </div>
                     <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                 </form>
@@ -127,13 +124,13 @@ $pdo = NULL;
     //informatie van de gezochte klant tonen
     if (isset($_GET["vinden"])) {
         //Geen voornaam en achternaam ingevuld
-        if ($_GET["Voornaam"] == "" && $_GET["Achternaam"] == "") {
+        if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
             print("<div class=\"alert alert-warning\" role=\"alert\">
                     <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                     <span class=\"sr-only\">Error:</span>
                     Vul een voornaam en een achternaam in.
                   </div>");
-        } elseif ($stmt->rowCount()>0) {
+        } elseif ($voornaam != "") {
             print("<table>");
             print("<tr><td>Naam: $naam</td></tr>");
             print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
