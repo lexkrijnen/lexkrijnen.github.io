@@ -47,7 +47,7 @@
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
 						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
-                        <li class="nav-item"><a href="index.php">Uitlogen</a></li>
+                        <li class="nav-item"><a href="index.php">Uitloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
