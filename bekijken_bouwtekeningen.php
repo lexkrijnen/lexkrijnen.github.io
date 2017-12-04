@@ -85,48 +85,49 @@ $pdo = NULL;
       <div class=container>
           <div class=row>
             <form action="bekijken_bouwtekeningen.php" method="get">
-                <input type="text" name="projectnaam" placeholder="projectnaam">
+                <input type="text" class="form-control" name="projectnaam" placeholder="projectnaam">
                 <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
             </form>
           </div>
       </div>
 
 
-      <?php
-//projectnaam niet ingevuld
-if(isset($_GET["vinden"])) {
-     if ($_GET["projectnaam"] == "") {
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Vul een projectnaam in.
-              </div>");
-    //geen project gevonden met dat projectnaam
-    } elseif ($project_nummer == "") {
-        print("<div class=\"alert alert-warning\" role=\"alert\">
-                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                <span class=\"sr-only\">Error:</span>
-                Geen project gevonden met de naam " . $_GET['projectnaam'] .
-              "</div>");
-    //project gevonden
-    } elseif ($project_nummer != "") {
-        print("<table>");
-        print("<tr><td>Projectnaam: $naam</td></tr>");
-        print("<tr><td>Projectnummer: $project_nummer</td></tr>");
-        print("<tr><td>Status: $status</td></tr>");
-        print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-        print("<tr><td>Naam klant: $klantnaam</td></tr>");
-        print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-        print("<tr><td>
-                <div class=\"embed-responsive pdf-viewer\">
-                    <object data=$document type=\"application/pdf\"></object>
-               </div>
-            </td></tr>");
-        print("</table>");
 
+      <?php
+    //projectnaam niet ingevuld
+    if(isset($_GET["vinden"])) {
+         if ($_GET["projectnaam"] == "") {
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Vul een projectnaam in.
+                  </div>");
+        //geen project gevonden met dat projectnaam
+        } elseif ($project_nummer == "") {
+            print("<div class=\"alert alert-warning\" role=\"alert\">
+                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                    <span class=\"sr-only\">Error:</span>
+                    Geen project gevonden met de naam " . $_GET['projectnaam'] .
+                  "</div>");
+        //project gevonden
+        } elseif ($project_nummer != "") {
+            print("<table>");
+            print("<tr><td>Projectnaam: $naam</td></tr>");
+            print("<tr><td>Projectnummer: $project_nummer</td></tr>");
+            print("<tr><td>Status: $status</td></tr>");
+            print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+            print("<tr><td>Naam klant: $klantnaam</td></tr>");
+            print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
+            print("<tr><td>
+                    <div class=\"embed-responsive pdf-viewer\">
+                        <object data=$document type=\"application/pdf\"></object>
+                   </div>
+                </td></tr>");
+            print("</table>");
+
+        }
     }
-}
-?>
+    ?>
 
 
 
