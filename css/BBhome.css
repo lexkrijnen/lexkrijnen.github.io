@@ -39,13 +39,13 @@
 .textleft{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    text-align: left;
 }
 
 .imgright{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 10px;
+    text-align: right;
 }
 
 .imgleft{
