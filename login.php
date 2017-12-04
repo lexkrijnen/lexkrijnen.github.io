@@ -8,12 +8,12 @@ try {
 
 if (isset($_POST['submit'])) {
 
-    if(isset($_POST['E-mailadres'])) {
+    if(isset($_POST['e-mailadres'])) {
 
-        if(isset($_POST['Wachtwoord'])) {
+        if(isset($_POST['wachtwoord'])) {
 
             $username = $_POST['e-mailadres'];
-            $password = $_POST['Wachtwoord'];
+            $password = $_POST['wachtwoord'];
 
             $username = filter_var($username, FILTER_SANITIZE_STRING);
             $password = filter_var($password, FILTER_SANITIZE_STRING);
