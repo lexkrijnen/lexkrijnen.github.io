@@ -30,7 +30,19 @@ if (isset($_GET["aanmaken"])) {
 }
 
 
+$voornaam = $_GET["voornaam"];
+$tussenvoegsel = $_GET["tussenvoegsel"];
+$achternaam = $_GET["achternaam"];
+$emailadres = $_GET["emailadres"];
+$telefoonnummer = $_GET["telefoonnummer"];
+$woonplaats = $_GET["woonplaats"];
+$straat = $_GET["straat"];
+$postcode = $_GET["postcode"];
+
+
+
 $pdo = NULL;
+
 
 
 //random string voor wachtwoord
@@ -105,17 +117,17 @@ $wachtwoord= random();
         <div class="container">
             <table>
                 <form action="klant_toevoegen.php" method="get">
-                    <tr><td>Voornaam klant</td><td><input type="text" class="form-control" name="voornaam" placeholder="Voornaam" ></td></tr>
-                    <tr><td>Tussenvoegsel(s)</td><td><input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)"></td></tr>
-                    <tr><td>Achternaam klant</td><td><input type="text" class="form-control" name="achternaam" placeholder="Achternaam" ></td></tr>
-                    <tr><td>E-mailadres</td><td><input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" ></td></tr>
+                    <tr><td>Voornaam klant</td><td><input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>></td></tr>
+                    <tr><td>Tussenvoegsel(s)</td><td><input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>></td></tr>
+                    <tr><td>Achternaam klant</td><td><input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>></td></tr>
+                    <tr><td>E-mailadres</td><td><input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> ></td></tr>
                     <tr><td>Wachtwoord</td><td><input type="text" class="form-control" name="wachtwoord" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>></td>
                         <td><input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer Wachtwoord"></td></tr>
-                    <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer"></td></tr>
-                    <tr><td>Adres</td><td><input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" ></td></tr>
-                    <tr><td></td><td><input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" ></td></tr>
-                    <tr><td></td><td><input type="text" class="form-control" name="postcode" placeholder="Postcode" ></td></tr>
-                    <tr><td><input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken"></td></tr>
+                    <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $telefoonnummer"); } ?>></td></tr>
+                    <tr><td>Adres</td><td><input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>></td></tr>
+                    <tr><td></td><td><input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>></td></tr>
+                    <tr><td></td><td><input type="text" class="form-control" name="postcode" placeholder="Postcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $postcode"); } ?>></td></tr>
+                    <tr><td><input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken" ></td></tr>
                 </form>
             </table>
         </div>

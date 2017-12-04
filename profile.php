@@ -59,11 +59,10 @@
     		</div>
 
     		<div id="pdf-viewer" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<p>Problemen met het bekijken?</p>
-					<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf',
-                         'newwindow',
-                         'width=300,height=250');
-              return false;">Openen in nieuw tabblad.</a>
+    			<div class="pdf-fail">
+						<p>Problemen met het bekijken?</p>
+						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+    			</div>
     		</div>
     	</div>
 

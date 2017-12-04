@@ -128,7 +128,7 @@
 
               <div class="container" style="border-top:1px solid grey;">
                   <div class="row text-center">
-                      <div class="col-lg-6 col-lg-offset-3">
+                      <div class="col-xs-6 col-xs-offset-3">
                           <ul class="menu">
 
                               <li>
