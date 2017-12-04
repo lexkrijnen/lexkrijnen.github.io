@@ -12,7 +12,7 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM klant k JOIN adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+    $sql = "SELECT * FROM Klant k JOIN Adres a ON k.klant_nummer=a.persoons_id where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["Voornaam"], $_GET["Tussenvoegsel"], $_GET["Achternaam"]));
 
