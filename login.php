@@ -1,10 +1,8 @@
 
 
 <?php
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
+$dbcon=mysqli_connect("localhost","wegro","SQLWegro@101");
+mysqli_select_db($dbcon,"Wegro");
 ?>
 <?php
 session_start();//session starts here
