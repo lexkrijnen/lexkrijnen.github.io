@@ -15,21 +15,14 @@
     filter: drop-shadow(0 0 5px #fff);
 }
 
-/*
-.contactbutton {
-    background-color: orange;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-*/
 
 .contbutton{
     background-color: #FE9C16 !important;
     color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: bold;
 }
 
 .imgright {
