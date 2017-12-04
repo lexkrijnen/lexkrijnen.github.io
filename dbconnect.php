@@ -8,6 +8,9 @@ $sql = "SELECT * FROM Klant";
 $stmt = $pdo->prepare($sql);
 $werk = $stmt->fetch();
 
-print ($werk);
-print_r ($werk);
+if ($werk == "") {
+    print("Niks opgehaald");
+} else {
+    print("$werk");
+}
 ?>
