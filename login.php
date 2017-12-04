@@ -120,22 +120,26 @@ session_start();//session starts here
 
 
 
-if(isset($_POST['login']))
+if(isset($_POST['submit']))
 {
     $user_email=$_POST['E-mailadres'];
     $user_pass=$_POST['Wachtwoord'];
 
-    $check_user="select * from Klant WHERE E-mailadres='$user_email'AND Wachtwoord='$user_pass'";
-
-    $run=mysqli_query($dbcon,$check_user);
-
-    if(mysqli_num_rows($run))
-    {
-        echo "<script>window.open('account.php','_self')</script>";
-
-        $_SESSION['E-mailadres']=$user_email;//here session is used and value of $user_email store in $_SESSION.
-
+    if($user_email == "test" AND $user_pass == "test") {
+        echo "<script>window.open('account.php')</script>";
     }
+
+    ##$check_user="select * from Klant WHERE E-mailadres='$user_email'AND Wachtwoord='$user_pass'";
+
+    ##$run=mysqli_query($dbcon,$check_user);
+
+    ##if(mysqli_num_rows($run))
+    ##{
+    ##    echo "<script>window.open('account.php')</script>";
+
+    ##    $_SESSION['E-mailadres']=$user_email;//here session is used and value of $user_email store in $_SESSION.
+
+    ##}
     else
     {
         echo "<script>alert('Email or password is incorrect!')</script>";
