@@ -84,10 +84,12 @@ $pdo = NULL;
 
       <div class=container>
           <div class=row>
-            <form action="bekijken_bouwtekeningen.php" method="get">
-                <input type="text" class="form-control" name="projectnaam" placeholder="projectnaam">
-                <input class="btn btn-primary" type="submit" name="vinden" value="vinden">
-            </form>
+              <div class='col-1'>
+                <form action="bekijken_bouwtekeningen.php" method="get">
+                    <input type="text" class="form-control" name="projectnaam" placeholder="projectnaam">
+                    <input class="btn oranje white" type="submit" name="vinden" value="vinden">
+                </form>
+              </div>
           </div>
       </div>
 
