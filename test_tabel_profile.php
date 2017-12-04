@@ -9,7 +9,7 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Welkom bij Wegro</title>
+    <title>Mijn profiel</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="style1.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,7 +56,7 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                <table>
+    			 <table>
                     <thead>
                         <tr>
                             <th><h3><b>Contract</b></h3></th>
@@ -87,6 +87,16 @@
                         </tr>
                     </tbody>
                 </table>
+    		</div>
+
+    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+
+    			<!-- If embedded pdf does not work, display fallback option instead. -->
+    			<div class="pdf-fail">
+						<p>Problemen met het bekijken?</p>
+						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+    			</div>
     		</div>
     	</div>
 
