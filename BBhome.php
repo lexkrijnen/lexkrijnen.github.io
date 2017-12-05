@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -28,13 +29,15 @@
 	</head>
   <body>
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+      (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
           fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -115,19 +118,27 @@
       </div>
 
 <div class="container">
-<div class="row">
-    <div class="page-box">
-        <div class="col-xs-12">
+<div class="row page-box col-xs-12">
 
                   <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                       data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                       data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
                        data-hide-cover="true" data-show-facepile="false">
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div
+                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+                  </div>
+           <div class="col-xs-4"> <form action="mail.php" method="POST">
+                 <input type="text" name="name" placeholder="Naam">
+                 <input type="text" name="email" placeholder="Email">
+                 <input type="text" name="phone" placeholder="Telefoon">
+
+
+                <p>Message</p><textarea name="message" placeholder="Vul hier uw vraag in"></textarea><br />
+                <input type="submit" value="Verzend">
+            </form>
+           </div>
         </div>
     </div>
   </div>
-</div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
           <div class="container">
