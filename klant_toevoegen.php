@@ -98,7 +98,7 @@ $hash = sha1($salt . $wachtwoord);
         	<tr>
           	<td>Voornaam klant</td>
             <td>
-            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+            	<input type="text" required class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
             </td>
 					</tr>
 					<tr>
@@ -110,13 +110,13 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
           	<td>Achternaam klant</td>
             <td>
-            	<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
+            	<input type="text" required class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
             </td>
           </tr>
           <tr>
           	<td>E-mailadres</td>
             <td>
-           		<input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> >
+           		<input type="email" required class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> >
             </td>
           </tr>
           <tr>
@@ -143,7 +143,7 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
           	<td>Adres</td>
             <td>
-            	<input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>>
+            	<input type="text" required class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>>
             </td>
           </tr>
           <tr>
@@ -151,7 +151,7 @@ $hash = sha1($salt . $wachtwoord);
 
           	</td>
             <td>
-            	<input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>>
+            	<input type="text" required class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>>
             </td>
           </tr>
           <tr>
@@ -159,7 +159,7 @@ $hash = sha1($salt . $wachtwoord);
 
           	</td>
             <td>
-            	<input type="text" class="form-control" name="postcode" placeholder="Postcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $postcode"); } ?>>
+            	<input type="text" required class="form-control" name="postcode" placeholder="Postcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $postcode"); } ?>>
             </td>
           </tr>
           <tr>
@@ -173,9 +173,9 @@ $hash = sha1($salt . $wachtwoord);
 
 		<?php
 		if(isset($_GET["aanmaken"])) {
-				print("<div class=\"alert alert-success\" role=\"alert\">");
-				print("<br>" . $naam . " is successvol toegevoegd als klant.");
-				print("</div>");
+            print("<div class=\"alert alert-success\" role=\"alert\">");
+            print("<br>" . $naam . " is successvol toegevoegd als klant.");
+            print("</div>");
 		}
 		?>
 
@@ -191,4 +191,4 @@ $hash = sha1($salt . $wachtwoord);
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-</html>
+☺</html>
