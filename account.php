@@ -51,7 +51,7 @@
 		</nav>
 
     <div class="container page-box">
-        <div class="col-xs-4">
+        <div class="col-xs-4 col-md-5">
             <h1>Gefeliciteerd, Je bent ingelogd.</h1>
         </div>
     </div>
