@@ -26,7 +26,7 @@ if($_POST["submit"]) {
 
 <?=$thankYou ?>
 
-<form method="post" action="contact.php">
+<form method="post" action="mail.php.php">
     <label>Name:</label>
     <input name="sender">
 
