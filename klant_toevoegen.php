@@ -38,7 +38,7 @@ function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
 
 $wachtwoord = random();
 $salt = random_bytes(32);
-$hash = hash($salt, $wachtwoord);
+$hash = sha1($salt . $wachtwoord);
 ?>
 
 <!DOCTYPE html>
