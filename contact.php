@@ -53,9 +53,24 @@
 
 
       <div class="row rowsidemargin">
-          <form class="col-xs-3 col-offset-3 contact-page-box">
-          <input type="text" name="naam" placeholder="Naam">
-          </form>
+          <div class="col-xs-3 col-offset-3 contact-page-box">
+          <div class="panel-body a lowborder" >
+                <form method="GET" action="contact.php"  id="contactform" class="form-horizontal" role="form">
+
+                    <div  class="input-group c">
+                        <input id="naam" type="text" class="form-control" name="naam" placeholder="Naam">
+                    </div>
+
+                    <div class="input-group c">
+                        <input id="emailadres" type="text" class="form-control" name="emailadres"  placeholder="Email">
+                    </div>
+                    <div  class="form-group d">
+
+                        <div class="col-sm-12 controls">
+                            <input class="btn oranje white" type="submit" name="btn-submitform" value="Verzenden">
+                        </div>
+                    </div>
+                </form>
           </div>
 
 

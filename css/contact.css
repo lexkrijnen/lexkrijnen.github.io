@@ -1,21 +1,49 @@
+.contact-page-box {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 25px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid black;
+}
+
+.a {
+	padding-top:25px;
+}
+
+
+.b {
+	margin-top:50px;
+}
+
+.c {
+	margin-bottom: 20px;
+}
+
+.d {
+	margin-top:10px;
+}
+
+.rowsidemargin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .paragraphleft{
-    color: black;
     text-align: left;
 }
 
 .paragraphleft titel {
-    color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
 }
 
-.contact-page-box {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 25px;
-	background-color: orange;
-	border-radius: 5px;
-	border: none;
-	border-bottom: 4px solid black;
+.oranje {
+	background-color: #FE9C16 !important;
+
+}
+.white {
+	color: white;
 }
