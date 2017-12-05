@@ -73,6 +73,8 @@
 			}
 
 			$conn->close();
+
+			print_r($_POST['voornaam']);
 		?>
 
 		<div class="container">
