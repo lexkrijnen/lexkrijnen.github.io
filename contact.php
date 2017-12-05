@@ -78,8 +78,8 @@
                         <input id="bericht" type="text" class="form-control formdinges" name="bericht"  placeholder="Vul hier uw bericht in">
                     </div>
 
-                    <div>
-                        <input id="naarzelfsturen" type="checkbox" class="form-control" name="naarzelfsturen">
+                    <div class="c">
+                        <label><input id="naarzelfsturen" type="checkbox" class="checkbox checkboxding" name="naarzelfsturen"></label>
                     </div>
 
                     <div  class="form-group d">
