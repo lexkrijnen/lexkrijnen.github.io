@@ -64,7 +64,7 @@
 			echo "Connected successfully";
 
 			$sql = "INSERT INTO Klant (voornaam)
-			VALUES ($_POST['voornaam'])";
+			VALUES ('Voornaam')";
 
 			if ($conn->query($sql) === TRUE) {
 					echo "New record created successfully";
@@ -73,8 +73,6 @@
 			}
 
 			$conn->close();
-
-			print_r($_POST['voornaam']);
 		?>
 
 		<div class="container">
