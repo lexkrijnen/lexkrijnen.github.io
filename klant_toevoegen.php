@@ -8,22 +8,15 @@ $pdo = new PDO($db, $user, $pass);
 if (isset($_GET["aanmaken"])) {
 
 	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,                            ?)";
-	$stmt = $pdo->prepare($sql1);
+	$stmt = $pdo->prepare($sql);
 	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"],                                       $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
 
-	$klant = $stmt->fetch();
-
-	$klant_nummer = $klant["klant_nummer"];
-	$voornaam = $klant["voornaam"];
-	$tussenvoegsel = $klant["tussenvoegsel"];
-	$achternaam = $klant["achternaam"];
-	$telefoonnummer = $klant["telefoon_nummer"];
-	$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 }
 
 $voornaam = $_GET["voornaam"];
 $tussenvoegsel = $_GET["tussenvoegsel"];
 $achternaam = $_GET["achternaam"];
+$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 $emailadres = $_GET["emailadres"];
 $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
@@ -45,7 +38,7 @@ function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
 
 $wachtwoord = random();
 $salt = random_bytes(32);
-$hash = hash($salt+$wachtwoord)
+$hash = hash($salt+$wachtwoord);
 ?>
 
 <!DOCTYPE html>
