@@ -55,22 +55,16 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                     <form method="get" action="meerminderbewerk.php">
-                         <table class="table table-hover table-bordered">
+                         <table class="table">
                              <tr>
                                  <th>Contract.</th>
                              </tr>
                              <tr>
-                                <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
                                 <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
-                                <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
-                                <td><input class="btn btn-default" type="submit" name="opslaan" value="Opslaan"></td>
                             </tr>
-                                <input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
                         </table>
-                    </form>
+                    </div>
                 </div>
-            </div>
 
     		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
