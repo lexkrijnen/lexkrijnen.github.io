@@ -1,4 +1,21 @@
+<?php
 
+if($_POST["submit"]) {
+    $recipient="markxjansen@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -126,15 +143,18 @@
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                   class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                   </div>
-           <div class="col-xs-4"> <form action="mail.php" method="POST">
-                 <input type="text" name="name" placeholder="Naam">
-                 <input type="text" name="email" placeholder="Email">
-                 <input type="text" name="phone" placeholder="Telefoon">
-
-
-                <p>Message</p><textarea name="message" placeholder="Vul hier uw vraag in"></textarea><br />
-                <input type="submit" value="Verzend">
-            </form>
+           <div class="col-xs-4"> <form method="post" action="BBhome.php">
+                   <label>Name:</label>
+                   <input name="sender">
+<br>
+                   <label>Email address:</label>
+                   <input name="senderEmail">
+<br>
+                   <label>Message:</label>
+                   <textarea rows="5" cols="20" name="message"></textarea>
+<br>
+                   <input type="submit" name="submit">
+                   <?=$thankYou ?>
            </div>
         </div>
     </div>
