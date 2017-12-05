@@ -1,26 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+
+    if (empty($klant_id)) {
+        print("Je bent niet ingelogd.");
+    } else {
+    ?>
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
-
     <title>Welkom bij Wegro</title>
-
     <!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Global styles for this website -->
     <link href="css/global.css" rel="stylesheet">
-
     <!-- Custom styles for this page -->
     <link href="css/index.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -50,6 +53,8 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
+
+
     <div class="container page-box">
         <div class="col-xs-4 col-md-5">
             <h1>Gefeliciteerd, Je bent ingelogd.</h1>
@@ -69,3 +74,4 @@
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+<?php } ?>
