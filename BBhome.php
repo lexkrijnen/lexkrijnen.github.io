@@ -143,7 +143,7 @@
               <div class="row">
                   <div class="OurBlog">
                       <h4>Bouwbedrijf Wegro</h4>
-                      <p>Klik hieronder op het e-mailadres om contact op te nemen</p>
+                      <p>Klik hieronder op het e-mailadres om contact op te nemen </p>
 
                   </div>
                   <div class=" col-lg-8 col-lg-offset-2">
