@@ -100,10 +100,6 @@
     color: #888888;
 }
 
-.post-blog-date {
-    padding-bottom: 25px;
-    position: relative;
-}
 
 body {
     color: #666666;
@@ -179,7 +175,6 @@ body {
 }
 .footer-bottom-layout {
     background: #3c3c3b none repeat scroll 0 0;
-    padding: 20px 0;
     text-align: center;
 }
 
