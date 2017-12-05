@@ -58,12 +58,9 @@
                      <form method="get" action="meerminderbewerk.php">
                          <table class="table table-hover table-bordered">
                              <tr>
-                                 <th>Nr.</th>
-                                 <th>Beschrijving</th>
-                                 <th>Prijs</th>
-                                 <th></th>
-                            </tr>
-                            <tr>
+                                 <th>Contract.</th>
+                             </tr>
+                             <tr>
                                 <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
                                 <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
                                 <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
