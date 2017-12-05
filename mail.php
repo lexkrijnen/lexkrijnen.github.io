@@ -1,13 +1,44 @@
 <?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-$formcontent=" From: $name \n Phone: $phone \n Message: $message";
-$recipient = "markxjansen@gmail.com";
-$subject = "Contact Form";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "Bedankt voor uw bericht";
 
-?>
+if($_POST["submit"]) {
+    $recipient="markxjansen@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?><!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contact form to email</title>
+</head>
+
+<body>
+
+<?=$thankYou ?>
+
+<form method="post" action="contact.php">
+    <label>Name:</label>
+    <input name="sender">
+
+    <label>Email address:</label>
+    <input name="senderEmail">
+
+    <label>Message:</label>
+    <textarea rows="5" cols="20" name="message"></textarea>
+
+    <input type="submit" name="submit">
+</form>
+
+</body>
+
+</html>

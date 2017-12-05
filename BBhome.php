@@ -1,4 +1,8 @@
-
+<?php
+if($_POST["message"]) {
+    mail("Marxjansen@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -126,15 +130,10 @@
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                   class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                   </div>
-           <div class="col-xs-4"> <form action="mail.php" method="POST">
-                 <input type="text" name="name" placeholder="Naam"> <br>
-                 <input type="text" name="email" placeholder="Email"> <br>
-                 <input type="text" name="phone" placeholder="Telefoon"> <br>
-
-
-                <p>Message</p><textarea name="message" placeholder="Vul hier uw vraag in"></textarea><br >
-                <input type="submit" value="Verzend">
-            </form>
+           <div class="col-xs-4"> <form method="post" action="mail.php">
+                   <textarea name="message"></textarea>
+                   <input type="submit">
+               </form>
            </div>
         </div>
     </div>
