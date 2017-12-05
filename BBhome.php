@@ -126,17 +126,15 @@
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                   class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                   </div>
-           <div class="col-xs-4"> <form action="mailto:markxjansen@gmail.com" method="post" enctype="text/plain">
+           <div class="col-xs-4"> <form action="mail.php" method="POST">
+                 <input type="text" name="name" placeholder="Naam"> <br>
+                 <input type="text" name="email" placeholder="Email"> <br>
+                 <input type="text" name="phone" placeholder="Telefoon"> <br>
 
-                   <input type="text" name="name" placeholder="Naam"><br>
-                   <input type="text" name="mail" placeholder="Email"><br>
-                   <input type="text" name="comment" placeholder="Bericht"><br><br>
-                   <input type="submit" value="Send">
-                   <input type="reset" value="Reset">
-               </form>
 
-  </body>
-</html>
+                <p>Message</p><textarea name="message" placeholder="Vul hier uw vraag in"></textarea><br >
+                <input type="submit" value="Verzend">
+            </form>
            </div>
         </div>
     </div>
