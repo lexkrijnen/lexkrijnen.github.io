@@ -60,7 +60,7 @@
                                  <th><h3><b>Contract</b></h3></th>
                              </tr>
                              <tr>
-                                <td><input type="file" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                <td><input type="data" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
                     </div>
