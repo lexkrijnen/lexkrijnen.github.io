@@ -63,8 +63,8 @@
 			}
 			echo "Connected successfully";
 
-			$sql = "INSERT INTO Klant (voornaam)
-			VALUES ('Voornaam')";
+			$sql = "INSERT INTO Klant
+			VALUES (6)";
 
 			if ($conn->query($sql) === TRUE) {
 					echo "New record created successfully";
