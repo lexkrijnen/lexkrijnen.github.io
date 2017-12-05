@@ -1,4 +1,5 @@
 <?php
+session_start();
 function GetLogin($username, $password) {
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
