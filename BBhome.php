@@ -194,7 +194,7 @@
                 if( target.length ) {
                     event.preventDefault();
                     $('html, body').stop().animate({
-                        scrollTop: target.offset(50).top
+                        scrollTop: target.offset(50px).top
                     }, 1000);
                 }
             });
