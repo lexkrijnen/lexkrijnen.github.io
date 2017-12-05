@@ -10,6 +10,5 @@ function GetLogin($username, $password) {
     $stmt2->execute();
     $result = $stmt2->fetchAll();
 
-    var_dump($result);
     return $result;
 }
