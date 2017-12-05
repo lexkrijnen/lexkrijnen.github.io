@@ -148,7 +148,7 @@ $pdo = NULL;
             print("<div class=\"alert alert-warning\" role=\"alert\">
                     <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                     <span class=\"sr-only\">Error:</span>
-                    Geen klant gevonden met de naam " . $_GET["Voornaam"] ." ". $_GET["Tussenvoegsel"] ." ". $_GET["Achternaam"] . ".
+                    Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
                   </div>");
         }
     }
