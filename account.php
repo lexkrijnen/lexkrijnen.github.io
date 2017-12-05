@@ -49,8 +49,10 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
+    <div class="col-xs-4 col-md-4">
     <h1>Gefeliciteerd, Je bent ingelogd.</h1>
-      
+    </div>
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
