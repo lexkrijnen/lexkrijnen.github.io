@@ -115,9 +115,7 @@
       </div>
 
 <div class="container">
-<div class="row">
-    <div class="page-box">
-        <div class="col-xs-12">
+<div class="row page-box col-xs-12">
 
                   <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                        data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
@@ -139,7 +137,6 @@
         </div>
     </div>
   </div>
-</div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
           <div class="container">

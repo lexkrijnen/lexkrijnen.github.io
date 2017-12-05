@@ -10,15 +10,19 @@ $pdo = new PDO($db, $user, $pass);
 
 if (isset($_GET["aanmaken"])) {
     $sql1 = "INSERT INTO Adres (adres, postcode, woonplaats) VALUES (?, ?, ?)";
-    $sql2 = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, telefoon_nummer) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt1 = $pdo->prepare($sql2);
     $stmt1->execute(array($_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
+
+    $sql2 = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, telefoon_nummer) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt2 = $pdo->prepare($sql1);
     $stmt2->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["wachtwoord"], $_GET["telefoonnummer"]));
 
+    $sql3 = "COUNT(*) FROM Klant";
+    $stmt3 = $pdo->prepare($sql3);
+    $stmt3->execute(array());
 
 
-    $klant = $stmt1->fetch();
+    $klant = $stmt2->fetch();
 
     $klant_nummer = $klant["klant_nummer"];
     $voornaam = $klant["voornaam"];
