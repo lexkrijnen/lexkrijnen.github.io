@@ -57,7 +57,7 @@
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
                          <table class="table">
                              <tr>
-                                 <th>Contract</th>
+                                 <th><h3><b>Contract</b></h3></th>
                              </tr>
                              <tr>
                                 <td><input type="file" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
