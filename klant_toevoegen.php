@@ -1,46 +1,15 @@
 <?php
+$voornaam = $_POST["voornaam"];
+$tussenvoegsel = $_POST["tussenvoegsel"];
+$achternaam = $_POST["achternaam"];
+$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$emailadres = $_POST["emailadres"];
+$telefoonnummer = $_POST["telefoonnummer"];
+$woonplaats = $_POST["woonplaats"];
+$straat = $_POST["straat"];
+$postcode = $_POST["postcode"];
 
-//show all possible errors. should be ALWAYS set to that level
-error_reporting(E_ALL);
-echo "landed at form handler<br>";
-
-// sometimes buttons not being sent or gets misspelled
-if($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    echo "here goes POST processing<br>";
-    $host = 'localhost';
-    $username = 'Wegro';
-    $pass = 'SQLWegro@101';
-
-    mysql_connect($host,$username,$pass);
-    mysql_select_db($username);
-
-    // all strings should be escaped
-    // and it should be done after connecting to DB
-    $voornaam    		= mysql_real_escape_string($_POST['voornaam']);
-    $tussenvoegsel 	= mysql_real_escape_string($_POST['tussenvoegsel']);
-    $achternaam  		= mysql_real_escape_string($_POST['achternaam']);
-    $emailadres     = mysql_real_escape_string($_POST['emailadres']);
-    $wachtwoord     = mysql_real_escape_string($_POST['hash']);
-    $salt       		= mysql_real_escape_string($_POST['salt']);
-    $telefoonnummer = mysql_real_escape_string($_POST['telefoonnummer']);
-    $woonplaats  		= mysql_real_escape_string($_POST['woonplaats']);
-    $straat     		= mysql_real_escape_string($_POST['straat']);
-    $postcode       = mysql_real_escape_string($_POST['postcode']);
-
-    $query = "INSERT INTO Klant
-              VALUES ($voornaam,'$tussenvoegsel','$achternaam','$emailadres','$hash','$salt','$telefoonnummer','$woonplaats','$straat','$postcode')";
-
-    echo $query;
-    // always run your queries this way to be notified in case of error
-    $result = mysql_query($query) or trigger_error(mysql_error().". Query: ".$query);
-    var_dump($result);
-}
-
-
-
-
-/* $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
@@ -53,17 +22,7 @@ if (isset($_POST["aanmaken"])) {
 
 }
 
-$voornaam = $_POST["voornaam"];
-$tussenvoegsel = $_POST["tussenvoegsel"];
-$achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-$emailadres = $_POST["emailadres"];
-$telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
-$straat = $_POST["straat"];
-$postcode = $_POST["postcode"];
-
-$pdo = NULL; */
+$pdo = NULL;
 
 //random string voor wachtwoord
 function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')

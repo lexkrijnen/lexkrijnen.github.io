@@ -59,7 +59,7 @@
                         <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="Contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -67,13 +67,13 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="#">
+         <a href="contact.php">
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
             </a>
           </div>
-  <a name="Ons_bedrijf"></a>
+  <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
@@ -90,7 +90,7 @@
               U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
         </p>
         </div>
-          <a name="Vergunningen"></a>
+          <a name="Vergunningen" id="Vergunningen"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
@@ -102,7 +102,7 @@
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
           </p>
         </div>
-          <a name="Projecten"></a>
+          <a name="Projecten" id="Projecten"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
@@ -166,6 +166,7 @@
       <div class="footer-bottom-layout">
           <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
       </div>
+      <a name="Contact" id="Contact"></a>
   </footer>
 
 
@@ -184,5 +185,17 @@
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+        </script>
 	</body>
 </html>
