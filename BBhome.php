@@ -112,13 +112,12 @@
             </p>
     </div>
  </div>
-  <div class="row">
-      <div class="col-xs-10 col-md-6 col-md-offset-1">
-          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-      </div>
 
-<div class="container">
-<div class="row page-box col-xs-12">
+  <div class="container">
+  <div class="row">
+      <div class="col-xs-12 col-md-12">
+
+          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
 
                   <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                        data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
