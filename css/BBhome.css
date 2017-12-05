@@ -164,15 +164,10 @@ address {
 .footer-bottom-layout {
     background: #3c3c3b none repeat scroll 0 0;
     text-align: center;
+    color: white;
 }
 
 
-
-
-.socialMedia-footer > a {
-    display: inline-block;
-    margin: 0 8px;
-}
 .footer-bottom-layout {
     text-align: center;
 }
