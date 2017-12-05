@@ -172,12 +172,40 @@ $hash = sha1($salt . $wachtwoord);
     </div>
 
 		<?php
-		if(isset($_POST["aanmaken"])) {
-            print("<div class=\"alert alert-success\" role=\"alert\">");
-            print("<br>" . $naam . " is successvol toegevoegd als klant.");
-            print("</div>");
-		}
-		?>
+        if(isset($_GET["aanmaken"])) {
+            ///gegevens niet ingevuld
+            if($_GET["voornaam"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een voornaam in.");
+                print("</div>");
+            } elseif ($_GET["achternaam"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een achternaam in.");
+                print("</div>");
+            } elseif ($_GET["emailadres"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een e-mailadres in.");
+                print("</div>");
+            } elseif ($_GET["woonplaats"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een woonplaats in.");
+                print("</div>");
+            } elseif ($_GET["straat"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een straat + huisnummer in.");
+                print("</div>");
+            } elseif ($_GET["postcode"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<br> Vul een postcode in.");
+                print("</div>");
+            } else {
+                ///succes
+                print("<div class=\"alert alert-success\" role=\"alert\">");
+                print("<br>" . $naam . " is successvol toegevoegd als klant.");
+                print("</div>");
+            }
+        }
+        ?>
 
 		<div class="row">
 				<div class="col-xs-12 text-center footer-rights">
