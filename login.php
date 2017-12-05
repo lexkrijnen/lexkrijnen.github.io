@@ -6,22 +6,22 @@ $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
 if(isset($_GET['btn-login'])){
-    $errMsg = '';
+    $errMsg = "";
     //username and password sent from Form
-    $username = trim($_GET['e-mailadres']);
-    $password = trim($_GET['wachtwoord']);
+    $username = ($_GET['e-mailadres']);
+    $password = ($_GET['wachtwoord']);
 
 print($username . $password);
 
-    if($username == '') {
+    if($username == "") {
         $errMsg .= 'Vul een geldig e-mailadres in<br>';
     }
 
-    if($password == '') {
+    if($password == "") {
         $errMsg .= 'Vul een geldig wachtwoord in<br>';
     }
 
-    if($errMsg == ''){
+    if($errMsg == ""){
         $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
