@@ -1,31 +1,5 @@
 <?php
 session_start();
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-if(isset($_GET['btn-login'])){
-    $errMsg = "";
-    //username and password sent from Form
-    $username = ($_GET['e-mailadres']);
-    $password = ($_GET['wachtwoord']);
-
-print($username . $password);
-
-        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-
-        $results = $stmt->fetch(PDO::FETCH_ASSOC);
-        if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
-            $_SESSION['e-mailadres'] = $results['e-mailadres'];
-            header('location:/account.php');
-            exit;
-        }else {
-            $errMsg .= 'Username and Password are not found<br>';
-        }
-}
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +60,7 @@ print($username . $password);
 
             </div>
             <div class="panel-body a lowborder" >
-                <form method="GET" action="login.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="/login/loginCheck.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
