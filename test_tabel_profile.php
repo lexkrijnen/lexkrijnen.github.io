@@ -61,12 +61,8 @@
                                  <th>Contract.</th>
                              </tr>
                              <tr>
-                                <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
                                 <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
-                                <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
-                                <td><input class="btn btn-default" type="submit" name="opslaan" value="Opslaan"></td>
                             </tr>
-                                <input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
                         </table>
                     </form>
                 </div>
