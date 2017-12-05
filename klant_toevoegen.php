@@ -175,26 +175,38 @@ $hash = sha1($salt . $wachtwoord);
             ///gegevens niet ingevuld
             if($_POST["voornaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een voornaam in.");
                 print("</div>");
             } elseif ($_POST["achternaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een achternaam in.");
                 print("</div>");
             } elseif ($_POST["emailadres"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een e-mailadres in.");
                 print("</div>");
             } elseif ($_POST["woonplaats"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een woonplaats in.");
                 print("</div>");
             } elseif ($_POST["straat"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een straat + huisnummer in.");
                 print("</div>");
             } elseif ($_POST["postcode"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
+                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                print("<span class=\"sr-only\">Error:</span>");
                 print("<br> Vul een postcode in.");
                 print("</div>");
             } else {
