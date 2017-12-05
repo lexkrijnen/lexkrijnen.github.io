@@ -56,10 +56,10 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="#ons_bedrijf">Over ons</a></li>
-                        <li class="nav-item"><a href="#verguningen">Vergunningen</a></li>
-                        <li class="nav-item"><a href="#projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="#contact">Contact</a></li>
+                        <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
+                        <li class="nav-item"><a href="#Verguningen">Vergunningen</a></li>
+                        <li class="nav-item"><a href="#Projecten">Projecten</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
