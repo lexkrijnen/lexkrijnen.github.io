@@ -13,30 +13,20 @@ if(isset($_GET['btn-login'])){
 
 print($username . $password);
 
-    if($username == "") {
-        $errMsg .= 'Vul een geldig e-mailadres in<br>';
-    }
-
-    if($password == "") {
-        $errMsg .= 'Vul een geldig wachtwoord in<br>';
-    }
-
-    if($errMsg == ""){
-        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
+        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = '$username'');
+        print("SQL: " . $sql);
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
         if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
             $_SESSION['e-mailadres'] = $results['e-mailadres'];
-            header('location:account.php');
+            header('location:/account.php');
             exit;
-        }else{
+        }else {
             $errMsg .= 'Username and Password are not found<br>';
         }
-    }
 }
-print("Error: " . $errormsg);
 ?>
 
 <!DOCTYPE html>

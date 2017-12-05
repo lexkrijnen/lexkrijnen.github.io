@@ -106,3 +106,11 @@
 
 </body>
 </html>
+
+if($username == "") {
+$errMsg .= 'Vul een geldig e-mailadres in<br>';
+}
+
+if($password == "") {
+$errMsg .= 'Vul een geldig wachtwoord in<br>';
+}
