@@ -2,7 +2,7 @@
 session_start();
 include '../login/loginFunction.php';
 
-if(isset($_POST['submit']))
+if(isset($_POST['btn-login']))
 {
     $queryresult = GetLogin($_POST['emailadres'], $_POST['wachtwoord']);
     var_dump($queryresult);
