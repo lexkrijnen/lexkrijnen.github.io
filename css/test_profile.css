@@ -10,7 +10,10 @@
 	z-index: 1;
 }
 h3{
-    color: #9202;
+    color: white;
+}
+table{
+    background-color: orange;
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
