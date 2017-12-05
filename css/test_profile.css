@@ -18,11 +18,7 @@ thead{
     background-color: #FFA500;
 }
 
-td{
-    text-align: left;
-}
-
-tbody{
+tbody . td{
     background-color: #FFE1B9;
 }
 
