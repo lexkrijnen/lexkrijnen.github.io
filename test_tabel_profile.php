@@ -25,27 +25,6 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <?php
-        $db = "mysql:host=localhost; dbname=wegro; port=3306";
-        $user = "root";
-        $pass = "";
-        $pdo = new PDO($db, $user, $pass);
-
-        if (isset($_GET["opslaan"])) {
-            $sql = "UPDATE mutatie SET beschrijving=?, prijs=? WHERE mutatie_id=?";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
-            print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
-            ## print('<meta http-equiv="refresh" content="2;url=http://localhost/WEGRO.Sandbox/index.php" />');
-        }
-
-        $sql = "SELECT * FROM mutatie WHERE mutatie_id=?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["nummer"]));
-        $werk = $stmt->fetch();
-
-        $pdo = NULL;
-        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -79,12 +58,9 @@
                      <form method="get" action="meerminderbewerk.php">
                          <table class="table table-hover table-bordered">
                              <tr>
-                                 <th>Nr.</th>
-                                 <th>Beschrijving</th>
-                                 <th>Prijs</th>
-                                 <th></th>
-                            </tr>
-                            <tr>
+                                 <th>Contract.</th>
+                             </tr>
+                             <tr>
                                 <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
                                 <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
                                 <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
