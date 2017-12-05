@@ -1,3 +1,19 @@
+.contact-page-box {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 25px;
+	background-color: orange;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid black;
+}
+
+
+.rowsidemargin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .paragraphleft{
     color: black;
     text-align: left;
@@ -10,12 +26,3 @@
     text-align: left;
 }
 
-.contact-page-box {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 25px;
-	background-color: orange;
-	border-radius: 5px;
-	border: none;
-	border-bottom: 4px solid black;
-}

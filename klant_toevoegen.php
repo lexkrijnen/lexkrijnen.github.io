@@ -23,7 +23,7 @@ $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
 $postcode = $_GET["postcode"];
 
-$pdo = NULL;
+//$pdo = NULL;
 
 //random string voor wachtwoord
 function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
