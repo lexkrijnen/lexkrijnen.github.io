@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="c">
-                        <input id="bericht" type="text" class="form-control formdinges" name="bericht" placeholder="Vul hier uw bericht in">
+                        <textarea id="bericht" name="bericht" class="form-control" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
                     </div>
 
                     <div class="c">
