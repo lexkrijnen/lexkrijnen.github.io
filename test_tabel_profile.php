@@ -69,7 +69,7 @@
                                  <th><h3><b>Tekeningen</b></h3></th>
                              </tr>
                              <tr>
-                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000")></td>
+                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
                     </div>
