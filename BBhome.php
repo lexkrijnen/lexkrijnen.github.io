@@ -97,7 +97,7 @@
           </p>
         </div>
 
-      <div>
+      <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
               <diftext>Projecten</diftext><br><br>
