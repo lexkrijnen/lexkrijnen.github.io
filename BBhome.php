@@ -59,7 +59,7 @@
                         <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="#Contact">Contact</a></li>
+                        <li class="nav-item"><a href="Contact.php">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->

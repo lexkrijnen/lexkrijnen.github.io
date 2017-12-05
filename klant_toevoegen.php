@@ -94,7 +94,7 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="POST">
+				<form action="klant_toevoegen.php" method="GET">
         	<tr>
           	<td>Voornaam klant</td>
             <td>
