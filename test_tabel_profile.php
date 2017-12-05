@@ -55,9 +55,18 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                         <table class="table text-hover">
+                         <table>
                              <tr>
                                  <th><h3><b>Contract</b></h3></th>
+                             </tr>
+                             <tr>
+                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                            </tr>
+                        </table>
+                        <br>
+                         <table>
+                             <tr>
+                                 <th><h3><b>Tekeningen</b></h3></th>
                              </tr>
                              <tr>
                                 <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
