@@ -38,9 +38,7 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   </script>
-  <div class="parallax-container">
-      <div class="parallax"><img src="images/pexels-photo-209272.jpeg"></div>
-  </div>
+
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -67,14 +65,22 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div class="row BBhomeBackground">
-           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
-                <div class="col-xs-2 col-xs-offset-5 btn contbutton">
-                    Contact
-                </div>
-            </a>
-          </div>
+  <main class="wrapper">
+      <section class="section parallax bg1">
+          <div class="row BBhomeBackground">
+                  <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+                  <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+                      <div class="col-xs-2 col-xs-offset-5 btn contbutton">
+                          Contact
+                      </div>
+                  </a>
+              </div>
+      </section>
+
+  </main>
+
+
+
 
       <div class="row rowsidemargin">
       <div class="row">
