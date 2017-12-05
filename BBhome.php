@@ -59,7 +59,7 @@
                         <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="Contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -166,6 +166,7 @@
       <div class="footer-bottom-layout">
           <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
       </div>
+      <a name="Contact" id="Contact"></a>
   </footer>
 
 

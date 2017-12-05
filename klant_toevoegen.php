@@ -1,69 +1,28 @@
 <?php
+$voornaam = $_POST["voornaam"];
+$tussenvoegsel = $_POST["tussenvoegsel"];
+$achternaam = $_POST["achternaam"];
+$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$emailadres = $_POST["emailadres"];
+$telefoonnummer = $_POST["telefoonnummer"];
+$woonplaats = $_POST["woonplaats"];
+$straat = $_POST["straat"];
+$postcode = $_POST["postcode"];
 
-//show all possible errors. should be ALWAYS set to that level
-error_reporting(E_ALL);
-echo "landed at form handler<br>";
-
-// sometimes buttons not being sent or gets misspelled
-if($_SERVER['REQUEST_METHOD'] == 'GET')
-{
-    echo "here goes GET processing<br>";
-    $host = 'localhost';
-    $username = 'Wegro';
-    $pass = 'SQLWegro@101';
-
-    mysql_connect($host,$username,$pass);
-    mysql_select_db($username);
-
-    // all strings should be escaped
-    // and it should be done after connecting to DB
-    $voornaam    		= mysql_real_escape_string($_GET['voornaam']);
-    $tussenvoegsel 	= mysql_real_escape_string($_GET['tussenvoegsel']);
-    $achternaam  		= mysql_real_escape_string($_GET['achternaam']);
-    $emailadres     = mysql_real_escape_string($_GET['emailadres']);
-    $wachtwoord     = mysql_real_escape_string($_GET['hash']);
-    $salt       		= mysql_real_escape_string($_GET['salt']);
-    $telefoonnummer = mysql_real_escape_string($_GET['telefoonnummer']);
-    $woonplaats  		= mysql_real_escape_string($_GET['woonplaats']);
-    $straat     		= mysql_real_escape_string($_GET['straat']);
-    $GETcode       = mysql_real_escape_string($_GET['GETcode']);
-
-    $query = "INSERT INTO Klant
-              VALUES ($voornaam,'$tussenvoegsel','$achternaam','$emailadres','$hash','$salt','$telefoonnummer','$woonplaats','$straat','$GETcode')";
-
-    echo $query;
-    // always run your queries this way to be notified in case of error
-    $result = mysql_query($query) or trigger_error(mysql_error().". Query: ".$query);
-    var_dump($result);
-}
-
-
-
-
-/* $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+$db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if (isset($_GET["aanmaken"])) {
+if (isset($_POST["aanmaken"])) {
 
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, salt, telefoon_nummer, adres, GETcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["GETcode"], $_GET["woonplaats"]));
+	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
 
 }
 
-$voornaam = $_GET["voornaam"];
-$tussenvoegsel = $_GET["tussenvoegsel"];
-$achternaam = $_GET["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-$emailadres = $_GET["emailadres"];
-$telefoonnummer = $_GET["telefoonnummer"];
-$woonplaats = $_GET["woonplaats"];
-$straat = $_GET["straat"];
-$GETcode = $_GET["GETcode"];
-
-$pdo = NULL; */
+$pdo = NULL;
 
 //random string voor wachtwoord
 function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
@@ -112,9 +71,9 @@ $hash = sha1($salt . $wachtwoord);
   <body>
   	<nav class="navbar navbar-default" role="navigation">
     	<div class="container">
-				<!-- Brand and toggle GET grouped for better mobile display -->
+				<!-- Brand and toggle post grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-tarGET="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-tarpost="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -134,41 +93,41 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="GET">
+				<form action="klant_toevoegen.php" method="POST">
         	<tr>
           	<td>Voornaam klant</td>
             <td>
-            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
             </td>
 					</tr>
 					<tr>
 				  	<td>Tussenvoegsel(s)</td>
 						<td>
-					  	<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+					  	<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
 						</td>
           </tr>
           <tr>
           	<td>Achternaam klant</td>
             <td>
-            	<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
+            	<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
             </td>
           </tr>
           <tr>
           	<td>E-mailadres</td>
             <td>
-           		<input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> >
+           		<input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $emailadres"); } ?> >
             </td>
           </tr>
           <tr>
           	<td>Wachtwoord</td>
             <td>
-            	<input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
+            	<input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
             </td>
             <td>
-            	<input type="hidden" name="hash" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
+            	<input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
             </td>
             <td>
-            	<input type="hidden" name="salt" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
+            	<input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
             </td>
             <td>
             	<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer Wachtwoord">
@@ -177,13 +136,13 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
           	<td>Telefoonnummer</td>
             <td>
-            	<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $telefoonnummer"); } ?>>
+            	<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $telefoonnummer"); } ?>>
             </td>
           </tr>
           <tr>
           	<td>Adres</td>
             <td>
-            	<input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>>
+            	<input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $woonplaats"); } ?>>
             </td>
           </tr>
           <tr>
@@ -191,7 +150,7 @@ $hash = sha1($salt . $wachtwoord);
 
           	</td>
             <td>
-            	<input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>>
+            	<input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $straat"); } ?>>
             </td>
           </tr>
           <tr>
@@ -199,7 +158,7 @@ $hash = sha1($salt . $wachtwoord);
 
           	</td>
             <td>
-            	<input type="text" class="form-control" name="GETcode" placeholder="GETcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $GETcode"); } ?>>
+            	<input type="text" class="form-control" name="postcode" placeholder="Postcode" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $postcode"); } ?>>
             </td>
           </tr>
           <tr>
@@ -212,31 +171,31 @@ $hash = sha1($salt . $wachtwoord);
     </div>
 
 		<?php
-        if(isset($_GET["aanmaken"])) {
+        if(isset($_POST["aanmaken"])) {
             ///gegevens niet ingevuld
-            if($_GET["voornaam"] == "") {
+            if($_POST["voornaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een voornaam in.");
                 print("</div>");
-            } elseif ($_GET["achternaam"] == "") {
+            } elseif ($_POST["achternaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een achternaam in.");
                 print("</div>");
-            } elseif ($_GET["emailadres"] == "") {
+            } elseif ($_POST["emailadres"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een e-mailadres in.");
                 print("</div>");
-            } elseif ($_GET["woonplaats"] == "") {
+            } elseif ($_POST["woonplaats"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een woonplaats in.");
                 print("</div>");
-            } elseif ($_GET["straat"] == "") {
+            } elseif ($_POST["straat"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een straat + huisnummer in.");
                 print("</div>");
-            } elseif ($_GET["GETcode"] == "") {
+            } elseif ($_POST["postcode"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<br> Vul een GETcode in.");
+                print("<br> Vul een postcode in.");
                 print("</div>");
             } else {
                 ///succes
