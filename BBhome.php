@@ -135,11 +135,15 @@
               <div class="row">
                   <div class="OurBlog">
                       <h4>Bouwbedrijf Wegro</h4>
-                      <p>Klik hieronder op het e-mailadres om contact op te nemen</p>
-
                   </div>
                   <div class=" col-lg-8 col-lg-offset-2">
-                      <div class="col-sm-4">
+                      <div class="col-sm-6">
+                          <div class="footer-col-item">
+                              <h4>Contact</h4>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
                           <div class="footer-col-item">
                               <h4>Locatie</h4>
                               <address>
@@ -150,20 +154,6 @@
                               </address>
                           </div>
                       </div>
-                      <div class="col-sm-4">
-                          <div class="footer-col-item">
-                              <h4>Contact</h4>
-                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">F</span>:<span>0341-412054</span></a> <a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">E</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
-                          </div>
-                      </div>
-                      <div class="col-sm-4">
-                          <div class="footer-col-item">
-                              <h4>Sign up for Newsletter</h4>
-                              <form class="signUpNewsletter" action="" method="get">
-                                  <input name="" class="gt-email form-control" placeholder="You@youremail.com" type="text">
-                                  <input name="" class="btn-go" value="Go" type="button">
-                              </form>
-                          </div>
                       </div>
                   </div>
               </div>
