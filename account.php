@@ -5,11 +5,6 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-
-    if (empty($klant_id)) {
-        print("Sorry, u bent niet ingelogd.");
-        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    } else {
     ?>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +49,12 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-
+        <?php
+        if (empty($klant_id)) {
+            print("Sorry, u bent niet ingelogd.");
+            print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+        } else {
+        ?>
 
     <div class="container page-box">
         <div class="col-xs-4 col-md-5">
