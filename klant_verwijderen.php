@@ -91,12 +91,16 @@ $pdo = NULL;
 
         <div class=container>
 
-            <?php print("weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
+            <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
 
             <form action="klant_verwijderen.php" method="get">
                 <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
                 <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
             </form>
+
+            <br>
+            <a href="klant_zoeken.php">terug</a>
+
         </div>
 
 
@@ -109,8 +113,7 @@ $pdo = NULL;
         }
         ?>
 
-        <br>
-        <a href="klant_zoeken.php">terug
+
 
 
 
