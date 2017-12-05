@@ -7,7 +7,8 @@
     @$klant_voornaam = $_SESSION['voornaam'];
 
     if (empty($klant_id)) {
-        print("Je bent niet ingelogd.");
+        print("Sorry, u bent niet ingelogd.");
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     } else {
     ?>
 	<meta charset="UTF-8">
