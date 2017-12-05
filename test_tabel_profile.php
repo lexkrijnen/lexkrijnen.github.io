@@ -57,10 +57,10 @@
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
                          <table class="table">
                              <tr>
-                                 <th>Contract.</th>
+                                 <th>Contract</th>
                              </tr>
                              <tr>
-                                <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                <td><input type="file" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
                     </div>
