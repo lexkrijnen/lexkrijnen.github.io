@@ -10,7 +10,7 @@ if(isset($_GET['btn-login'])){
     //username and password sent from Form
     $username = trim($_GET['e-mailadres']);
     $password = trim($_GET['wachtwoord']);
-
+print($username . $password);
     if($username == '')
         $errMsg .= 'Vul een geldig e-mailadres in<br>';
 
