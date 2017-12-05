@@ -17,10 +17,11 @@ h3{
 thead{
     background-color: #FFA500;
 }
+
 btn btn{
-    color: #000000;
-    background-color: #FFE1B9;
+    text-align: left;
 }
+
 tbody{
     background-color: #FFE1B9;
 }
