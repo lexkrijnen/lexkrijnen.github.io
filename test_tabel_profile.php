@@ -26,7 +26,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        /*$db = "mysql:host=localhost; dbname=Wegro; port=3306";
         $user = "wegro";
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
@@ -36,7 +36,7 @@
         $stmt->execute(array($_GET["nummer"]));
         $werk = $stmt->fetch();
 
-        $pdo = NULL;
+        $pdo = NULL;*/
         ?>
 	</head>
   <body>
@@ -68,7 +68,7 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                         <table>
+                        <table>
                             <thead>
                                 <tr>
                                     <th><h3><b>Contract</b></h3></th>
@@ -76,8 +76,11 @@
                              </thead>
                              <tbody>
                                 <tr>
-                                    <td><input class="btn btn" type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                    <td>fghj</td>
                                 </tr>
+                                 <tr>
+                                 <td class="bottom">sdfghj</td>
+                                     </tr>
                              </tbody>
                         </table>
                         <br>
@@ -89,7 +92,7 @@
                              </thead>
                              <tbody>
                                 <tr>
-                                    <td><input class="btn btn" type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                    <td>asd</td>
                                 </tr>
                              </tbody>
                         </table>
