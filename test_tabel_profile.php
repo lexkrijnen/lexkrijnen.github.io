@@ -31,7 +31,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
+    $sql = "SELECT document FROM Contract";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["nummer"]));
     $werk = $stmt->fetch();
