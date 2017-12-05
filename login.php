@@ -19,7 +19,7 @@ if(isset($_POST['btn-login'])){
 
 
     if($errMsg == ''){
-        $sql = ('SELECT e-mailadres,wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
+        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
@@ -95,7 +95,7 @@ if(isset($_POST['btn-login'])){
             </div>
             <div class="panel-body a lowborder" >
                 <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
-                    <div> <?php print($errormsg); ?> </div>
+
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                         <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
@@ -108,11 +108,11 @@ if(isset($_POST['btn-login'])){
                     <div  class="form-group d">
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
+                            <input class="btn oranje white" type="submit" name="btn-login" value="Login">
                         </div>
                     </div>
-
                 </form>
+                <div> <?php print($errormsg); ?> </div>
             </div>
         </div>
     </div>
