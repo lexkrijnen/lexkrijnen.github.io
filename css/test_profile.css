@@ -18,7 +18,7 @@ thead{
     background-color: #FFA500;
 }
 
-tbody > td{
+tbody > tr > td > input {
     background-color: #FFE1B9;
 }
 
