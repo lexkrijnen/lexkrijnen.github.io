@@ -18,7 +18,7 @@
 		<link href="css/global.css" rel="stylesheet">
 
 		<!-- Custom styles for this page -->
-		<link href="css/klant_pagina.css" rel="stylesheet">
+		<link href="css/klant-pagina.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -49,8 +49,30 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<div class="container">
+		<?php
+			$servername = "localhost";
+			$username = "wegro";
+			$password = "SQLWegro@101";
 
+			// Create connection
+			$conn = new mysqli($servername, $username, $password);
+
+			// Check connection
+			if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+			}
+			echo "Connected successfully";
+		?>
+
+		<div class="container">
+			<div class="row">
+    		<div class="col-xs-12 col-md-10 col-md-offset-1 page-box">
+    			<form method="get">
+    				<input type="text" name="voornaam" placeholder="Voornaam">
+    				<input type="submit" value="Opslaan">
+    			</form>
+    		</div>
+			</div>
     </div>
 
 		<div class="row">
