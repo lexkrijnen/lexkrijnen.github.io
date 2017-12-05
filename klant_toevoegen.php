@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     echo "here goes POST processing<br>";
     $host = 'localhost';
-    $username = 'Wegro'
+    $username = 'Wegro';
     $pass = 'SQLWegro@101';
 
     mysql_connect($host,$username,$pass);
@@ -134,7 +134,7 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="GET">
+				<form action="klant_toevoegen.php" method="POST">
         	<tr>
           	<td>Voornaam klant</td>
             <td>

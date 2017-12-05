@@ -76,7 +76,7 @@
                              </thead>
                              <tbody>
                                 <tr>
-                                    <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                    <td><input class="btn btn" type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                                 </tr>
                              </tbody>
                         </table>
@@ -89,7 +89,7 @@
                              </thead>
                              <tbody>
                                 <tr>
-                                    <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                    <td><input class="btn btn" type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                                 </tr>
                              </tbody>
                         </table>
