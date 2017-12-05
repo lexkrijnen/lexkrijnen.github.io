@@ -120,10 +120,22 @@
         <div class="col-xs-12">
 
                   <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                       data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                       data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
                        data-hide-cover="true" data-show-facepile="false">
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div
+                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+                  </div>
+           <div class="col-xs-4"> <form action="mail.php" method="POST">
+                <p>Name</p> <input type="text" name="name">
+                <p>Email</p> <input type="text" name="email">
+                <p>Phone</p> <input type="text" name="phone">
+
+                <p>Website</p> <input type="text" name="website">
+                <br>
+                <p>Message</p><textarea name="message"></textarea><br />
+                <input type="submit" value="Send"><input type="reset" value="Clear">
+            </form>
+           </div>
         </div>
     </div>
   </div>
