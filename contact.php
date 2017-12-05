@@ -62,22 +62,30 @@
             <div class="panel-body a lowborder" >
                 <form method="POST" action="contact.php"  id="loginform" class="form-horizontal" role="form">
 
-                    <div  class="input-group c">
+                    <div  class="c">
                         <input id="naam" type="text" class="form-control" name="naam" placeholder="Vul hier uw naam in">
                     </div>
 
-                    <div class="input-group c">
+                    <div class="c">
                         <input id="email" type="text" class="form-control" name="email"  placeholder="Vul hier uw e-mailadres in">
                     </div>
 
-                    <div class="input-group c">
+                     <div class="c">
+                        <input id="onderwerp" type="text" class="form-control" name="onderwerp"  placeholder="Onderwerp van uw bericht">
+                    </div>
+
+                    <div class="c">
                         <input id="bericht" type="text" class="form-control formdinges" name="bericht"  placeholder="Vul hier uw bericht in">
+                    </div>
+
+                    <div>
+                        <input id="naarzelfsturen" type="checkbox" class="form-control" name="naarzelfsturen">
                     </div>
 
                     <div  class="form-group d">
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="btn-login" value="Verzenden">
+                            <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden">
                         </div>
                     </div>
                 </form>
