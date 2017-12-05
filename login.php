@@ -36,7 +36,7 @@ print($username . $password);
         }
     }
 }
-
+print("Error: " . $errormsg);
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ print($username . $password);
                         </div>
                     </div>
                 </form>
-                <div> <?php print($errormsg); ?> </div>
+                <div> </div>
             </div>
         </div>
     </div>
