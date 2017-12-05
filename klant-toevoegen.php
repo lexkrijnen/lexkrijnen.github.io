@@ -74,7 +74,7 @@
 	</body>
 </html>
 
-<?php
+<?php/*
 	$servername = "localhost";
 	$username = "wegro";
 	$password = "SQLWegro@101";
@@ -97,5 +97,5 @@
 			echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-	$conn->close();
+	$conn->close();*/
 ?>
