@@ -25,6 +25,13 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">

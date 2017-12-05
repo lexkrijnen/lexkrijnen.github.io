@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,16 +44,28 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="contact.php">Contact</a></li>
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div>
+
+          <div class="row">
+      <div class="row rowsidemargin">
+      <div class="row">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
+              <titel>Ons bedrijf</titel><br><br>
+              Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
+              <br><br>
+
+        </p>
+        </div>
+              </div>
 
 
-      </div>
+
+
+
 
 
 
