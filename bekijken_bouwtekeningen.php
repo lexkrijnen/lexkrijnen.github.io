@@ -80,20 +80,18 @@ $pdo = NULL;
 
 
 
-
-      <table>
-          <tr>
-            <div class=container>
+      <div class=container>
+          <table>
+            <tr>
               <div class=row>
                 <form action="bekijken_bouwtekeningen.php" method="get">
                     <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
                     <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                 </form>
               </div>
-          </div>
           </tr>
-      </table>
-
+         </table>
+      </div>
 
 
       <?php
