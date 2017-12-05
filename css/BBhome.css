@@ -73,16 +73,11 @@
 }
 
 
-.paragraphleft diftext {
+.paragraphleft title {
     color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-}
-
-.paragraphleft dif2{
-    color: black;
-    font-size: 10px;
 }
 
 .paragraphright{
@@ -90,7 +85,7 @@
     text-align: right;
 }
 
-.paragraphright diftext{
+.paragraphright title{
     color: black;
     font-size: 30px;
     font-weight: bold;
