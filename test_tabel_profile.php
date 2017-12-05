@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-    <meta name="author" content="Nard Wemes">
-    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+        <meta name="author" content="Nard Wemes">
+        <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Mijn profiel</title>
+        <title>Mijn profiel</title>
 
-    <!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Global styles for this website -->
-    <link href="css/global.css" rel="stylesheet">
+        <!-- Global styles for this website -->
+        <link href="css/global.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-    <link href="css/test_profile.css" rel="stylesheet">
+        <!-- Custom styles for this page -->
+        <link href="css/test_profile.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -55,38 +55,25 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-    			 <table>
-                    <thead>
-                        <tr>
-                            <th><h3><b>Contract</b></h3></th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract_2017.pdf</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Contract-v2_2017.pdf</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th><h3><b>Tekeningen</b></h3></th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Beganegrond_v1A.pdf</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="http://www.pdf995.com/samples/pdf.pdf">Uitbouw_v3C.pdf</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-    		</div>
+                     <form method="get" action="meerminderbewerk.php">
+                         <table class="table table-hover table-bordered">
+                             <tr>
+                                 <th>Nr.</th>
+                                 <th>Beschrijving</th>
+                                 <th>Prijs</th>
+                                 <th></th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
+                                <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                <td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
+                                <td><input class="btn btn-default" type="submit" name="opslaan" value="Opslaan"></td>
+                            </tr>
+                                <input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
+                        </table>
+                    </form>
+                </div>
+            </div>
 
     		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
@@ -97,7 +84,6 @@
 						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
     			</div>
     		</div>
-    	</div>
 
     </div><!-- /.container -->
 
