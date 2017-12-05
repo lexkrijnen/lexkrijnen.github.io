@@ -13,9 +13,9 @@ if(isset($_GET['btn-login'])){
 
 print($username . $password);
 
-        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = ?');
+        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :username');
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($username));
+        $stmt->execute();
 
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
         if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
