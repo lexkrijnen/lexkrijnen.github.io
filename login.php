@@ -5,11 +5,11 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if(isset($_POST['btn-login'])){
+if(isset($_GET['btn-login'])){
     $errMsg = '';
     //username and password sent from Form
-    $username = trim($_POST['e-mailadres']);
-    $password = trim($_POST['wachtwoord']);
+    $username = trim($_GET['e-mailadres']);
+    $password = trim($_GET['wachtwoord']);
 
     if($username == '')
         $errMsg .= 'Vul een geldig e-mailadres in<br>';
@@ -94,7 +94,7 @@ if(isset($_POST['btn-login'])){
 
             </div>
             <div class="panel-body a lowborder" >
-                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="GET" action="login.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
