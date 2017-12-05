@@ -81,7 +81,7 @@
 .footer-top-layout {
     background: #3c3c3b none repeat scroll 0 0;
     color: #ffffff;
-    padding: 40px 0;
+
 }
 .OurBlog {
     margin-bottom: 32px;
@@ -95,21 +95,7 @@
 .OurBlog > p {
     color: #888888;
 }
-.post-blog-date::after {
-    background: #ffffff none repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    height: 4px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    width: 50px;
-}
-.post-blog-date {
-    padding-bottom: 25px;
-    position: relative;
-}
+
 
 .footer-top-layout [class*="col-sm-"]:first-child {
     padding: 0;
@@ -122,9 +108,7 @@
 .footer-top-layout {
     color: #ffffff;
 }
-.footer-col-item {
-    min-height: 140px;
-}
+
 
 address {
     color: #ffffff;
@@ -178,14 +162,12 @@ address {
 }
 .footer-bottom-layout {
     background: #3c3c3b none repeat scroll 0 0;
-    padding: 20px 0;
     text-align: center;
 }
 
 }
-.socialMedia-footer {
-    margin-bottom: 20px;
-}
+
+
 .socialMedia-footer > a {
     display: inline-block;
     margin: 0 8px;

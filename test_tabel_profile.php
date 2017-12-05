@@ -31,6 +31,12 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
+        $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array($_GET["nummer"]));
+        $werk = $stmt->fetch();
+
+        $pdo = NULL;
         ?>
 	</head>
   <body>
