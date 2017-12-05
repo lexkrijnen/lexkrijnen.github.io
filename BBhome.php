@@ -56,10 +56,10 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
+                        <li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="Contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -67,13 +67,13 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="#">
+         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
             </a>
           </div>
-  <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
@@ -87,10 +87,10 @@
               Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
               Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
               <br><br>
-              U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
+              U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br><a name="Vergunningen" id="Vergunningen"></a>
         </p>
         </div>
-          <a name="Vergunningen" id="Vergunningen"></a>
+
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
@@ -100,6 +100,7 @@
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+              <a name="Projecten" id="Projecten"></a>
           </p>
         </div>
           <a name="Projecten" id="Projecten"></a>
@@ -166,6 +167,7 @@
       <div class="footer-bottom-layout">
           <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
       </div>
+      <a name="Contact" id="Contact"></a>
   </footer>
 
 

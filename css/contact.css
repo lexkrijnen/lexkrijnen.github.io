@@ -40,10 +40,19 @@
     text-align: left;
 }
 
-.white {
-	background-color: white;
+.oranje {
+	background-color: #FE9C16 !important;
 
 }
-.oranje {
-	color: #FE9C16 !important;
+.white {
+	color: white;
 }
+
+.formdinges{
+    width:500px;
+    height:200px
+}
+
+
+
+

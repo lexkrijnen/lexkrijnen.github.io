@@ -52,10 +52,10 @@
 
 
 
-      <div class="row rowsidemargin">
+     <!-- <div class="row rowsidemargin">
           <div class="col-xs-3 col-offset-3 contact-page-box">
           <div class="panel-body a lowborder" >
-                <form method="GET" action="contact.php"  id="contactform" class="form-horizontal" role="form">
+                <form method="GET" action="contact.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <input id="naam" type="text" class="form-control" name="naam" placeholder="Naam">
@@ -71,9 +71,42 @@
                         </div>
                     </div>
                 </form>
-          </div>
+          </div> -->
 
+<div class="container">
+    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
+        <div class="panel " >
+            <div class="panel-heading oranje">
+                <div class="panel-title white">Neem contact met ons op</div>
 
+            </div>
+            <div class="panel-body a lowborder" >
+                <form method="POST" action="contact.php"  id="loginform" class="form-horizontal" role="form">
+
+                    <div  class="input-group c">
+                        <input id="naam" type="text" class="form-control" name="naam" placeholder="Vul hier uw naam in">
+                    </div>
+
+                    <div class="input-group c">
+                        <input id="email" type="text" class="form-control" name="email"  placeholder="Vul hier uw e-mailadres in">
+                    </div>
+
+                    <div class="input-group c">
+                        <input id="bericht" type="text" class="form-control formdinges" name="bericht"  placeholder="Vul hier uw bericht in">
+                    </div>
+
+                    <div  class="form-group d">
+
+                        <div class="col-sm-12 controls">
+                            <input class="btn oranje white" type="submit" name="btn-login" value="Verzenden">
+                        </div>
+                    </div>
+                </form>
+                <div> </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
