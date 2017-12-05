@@ -7,7 +7,7 @@ $pdo = new PDO($db, $user, $pass);
 
 if (isset($_POST["aanmaken"])) {
 
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, e-mailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES ($_POST['voornaam'], ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
 
