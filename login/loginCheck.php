@@ -24,11 +24,13 @@ if(isset($_POST['btn-login']))
     $queryresult = GetLogin($_POST['emailadres'], $_POST['wachtwoord']);
 
     if (empty($queryresult)) {
-        print("U bent niet ingelogt.");
+        print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Gebruikersnaam of wachtwoord is onjuist</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     } else {
         print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
-        print('<div class=\"container page-box\"><div class=\"col-xs-4 col-md-5\"><h5>Een moment geduld A.U.B.</h5></div><br>');
-        print('<meta http-equiv="refresh" content="10;url=../account.php" />');
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Een moment geduld A.U.B.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../account.php" />');
         foreach ($queryresult as $a => $b){
             $klant_id = $b['klant_nummer'];
             $klant_voornaam = $b['voornaam'];
