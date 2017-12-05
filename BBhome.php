@@ -38,7 +38,9 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   </script>
-
+  <div class="parallax-container">
+      <div class="parallax"><img src="images/pexels-photo-209272.jpeg"></div>
+  </div>
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
