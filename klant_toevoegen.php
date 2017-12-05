@@ -72,9 +72,9 @@ $hash = sha1($salt . $wachtwoord);
   <body>
   	<nav class="navbar navbar-default" role="navigation">
     	<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
+				<!-- Brand and toggle post grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-tarpost="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -172,29 +172,29 @@ $hash = sha1($salt . $wachtwoord);
     </div>
 
 		<?php
-        if(isset($_GET["aanmaken"])) {
+        if(isset($_post["aanmaken"])) {
             ///gegevens niet ingevuld
-            if($_GET["voornaam"] == "") {
+            if($_post["voornaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een voornaam in.");
                 print("</div>");
-            } elseif ($_GET["achternaam"] == "") {
+            } elseif ($_post["achternaam"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een achternaam in.");
                 print("</div>");
-            } elseif ($_GET["emailadres"] == "") {
+            } elseif ($_post["emailadres"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een e-mailadres in.");
                 print("</div>");
-            } elseif ($_GET["woonplaats"] == "") {
+            } elseif ($_post["woonplaats"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een woonplaats in.");
                 print("</div>");
-            } elseif ($_GET["straat"] == "") {
+            } elseif ($_post["straat"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een straat + huisnummer in.");
                 print("</div>");
-            } elseif ($_GET["postcode"] == "") {
+            } elseif ($_post["postcode"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<br> Vul een postcode in.");
                 print("</div>");
