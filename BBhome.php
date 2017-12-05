@@ -143,7 +143,7 @@ if($_POST["submit"]) {
                       <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                   class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                   </div>
-           <div class="col-xs-4"> <form method="post" action="mail.php">
+           <div class="col-xs-4"> <form method="post" action="BBhome.php">
                    <label>Name:</label>
                    <input name="sender">
 <br>
