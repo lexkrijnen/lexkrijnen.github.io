@@ -84,7 +84,7 @@
                          <table>
                             <thead>
                                 <tr>
-                                    <th><h3><b>Contract</b></h3></th>
+                                    <th><h3><b>Tekeningen</b></h3></th>
                                 </tr>
                              </thead>
                              <tbody>
