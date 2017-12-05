@@ -65,22 +65,14 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-  <main class="wrapper">
-      <section class="section parallax bg1">
-          <div class="row BBhomeBackground">
-                  <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-                  <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
-                      <div class="col-xs-2 col-xs-offset-5 btn contbutton">
-                          Contact
-                      </div>
-                  </a>
-              </div>
-      </section>
-
-  </main>
-
-
-
+      <div class="row BBhomeBackground">
+           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+                <div class="col-xs-2 col-xs-offset-5 btn contbutton">
+                    Contact
+                </div>
+            </a>
+          </div>
 
       <div class="row rowsidemargin">
       <div class="row">
