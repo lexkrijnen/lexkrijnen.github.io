@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/test_profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,7 +44,6 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 				        <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
 						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
                         <li class="nav-item"><a href="index.php">Uitloggen</a></li>

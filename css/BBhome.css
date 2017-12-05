@@ -39,18 +39,6 @@
     margin-top: auto;
 }
 
-.textright{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-.textleft{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
 .rowsidemargin{
     margin-left: 10px;
     margin-right: 1px;
@@ -73,16 +61,11 @@
 }
 
 
-.paragraphleft diftext {
+.paragraphleft titel {
     color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-}
-
-.paragraphleft dif2{
-    color: black;
-    font-size: 10px;
 }
 
 .paragraphright{
@@ -90,7 +73,7 @@
     text-align: right;
 }
 
-.paragraphright diftext{
+.paragraphright titel{
     color: black;
     font-size: 30px;
     font-weight: bold;
