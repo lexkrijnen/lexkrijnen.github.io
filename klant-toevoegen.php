@@ -64,7 +64,7 @@
 			echo "Connected successfully";
 
 			$sql = "INSERT INTO Klant (voornaam)
-			VALUES ('Voornaam')";
+			VALUES (".$_get['voornaam'].")";
 
 			if ($conn->query($sql) === TRUE) {
 					echo "New record created successfully";
@@ -73,6 +73,8 @@
 			}
 
 			$conn->close();
+
+			print_r($_get['voornaam']);
 		?>
 
 		<div class="container">
