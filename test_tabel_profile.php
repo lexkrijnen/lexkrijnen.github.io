@@ -55,8 +55,7 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                     <form method="get" action="meerminderbewerk.php">
-                         <table class="table table-hover table-bordered">
+                         <table class="table">
                              <tr>
                                  <th>Contract.</th>
                              </tr>
@@ -64,9 +63,8 @@
                                 <td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
-                    </form>
+                    </div>
                 </div>
-            </div>
 
     		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
