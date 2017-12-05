@@ -140,7 +140,7 @@
                       <div class="col-sm-6">
                           <div class="footer-col-item">
                               <h4>Contact</h4>
-                              <div class="item-contact">  <a href="tel:0341-412054"><br><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
                           </div>
                       </div>
                       <div class="col-sm-6">
