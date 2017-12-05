@@ -10,13 +10,16 @@ if(isset($_GET['btn-login'])){
     //username and password sent from Form
     $username = trim($_GET['e-mailadres']);
     $password = trim($_GET['wachtwoord']);
+
 print($username . $password);
-    if($username == '')
+
+    if($username == '') {
         $errMsg .= 'Vul een geldig e-mailadres in<br>';
+    }
 
-    if($password == '')
+    if($password == '') {
         $errMsg .= 'Vul een geldig wachtwoord in<br>';
-
+    }
 
     if($errMsg == ''){
         $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
