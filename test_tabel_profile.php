@@ -76,12 +76,12 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                         <table class="table table-hover table-bordered">
+                         <table class="table text-hover">
                              <tr>
                                  <th><h3><b>Contract</b></h3></th>
                              </tr>
                              <tr>
-                                <td><input type="data" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
                     </div>
