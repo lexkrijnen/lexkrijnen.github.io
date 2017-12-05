@@ -57,7 +57,7 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
-                        <li class="nav-item"><a href="#Verguningen">Vergunningen</a></li>
+                        <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
                         <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
@@ -73,7 +73,7 @@
                 </div>
             </a>
           </div>
-  <a name="ons_bedrijf"></a>
+  <a name="Ons_bedrijf"></a>
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
