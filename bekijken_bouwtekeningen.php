@@ -91,7 +91,7 @@ $pdo = NULL;
               </div>
           </tr>
          </table>
-      </div>
+
 
 
       <?php
@@ -131,7 +131,7 @@ $pdo = NULL;
         }
     }
     ?>
-
+    </div>
 
 
 
