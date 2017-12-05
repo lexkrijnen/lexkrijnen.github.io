@@ -25,6 +25,13 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -69,7 +76,7 @@
                                  <th><h3><b>Tekeningen</b></h3></th>
                              </tr>
                              <tr>
-                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000")></td>
+                                <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
                             </tr>
                         </table>
                     </div>

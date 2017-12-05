@@ -38,7 +38,7 @@ function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
 
 $wachtwoord = random();
 $salt = random_bytes(32);
-$hash = hash($salt, $wachtwoord);
+$hash = sha1($salt . $wachtwoord);
 ?>
 
 <!DOCTYPE html>
@@ -173,9 +173,9 @@ $hash = hash($salt, $wachtwoord);
 
 		<?php
 		if(isset($_GET["aanmaken"])) {
-				print("<div class=\"alert alert-success\" role=\"alert\">");
-				print("<br>" . $naam . " is successvol toegevoegd als klant.");
-				print("</div>");
+            print("<div class=\"alert alert-success\" role=\"alert\">");
+            print("<br>" . $naam . " is successvol toegevoegd als klant.");
+            print("</div>");
 		}
 		?>
 
@@ -191,4 +191,4 @@ $hash = hash($salt, $wachtwoord);
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-</html>
+☺</html>
