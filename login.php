@@ -14,6 +14,7 @@ if(isset($_GET['btn-login'])){
 print($username . $password);
 
         $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = '$username'');
+        print("SQL: " . $sql);
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
