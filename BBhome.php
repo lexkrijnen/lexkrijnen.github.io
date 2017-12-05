@@ -89,9 +89,9 @@
               <br><br>
               U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
         </p>
-          <a name="Vergunningen" id="Vergunningen"></a>
-        </div>
 
+        </div>
+          <a name="Vergunningen" id="Vergunningen"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
@@ -102,8 +102,8 @@
 
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
 
-          </p> <a name="Projecten" id="Projecten"></a>
-        </div>
+          </p>
+        </div><a name="Projecten" id="Projecten"></a>
           <a name="Projecten" id="Projecten"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
