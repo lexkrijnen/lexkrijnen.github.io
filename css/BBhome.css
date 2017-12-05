@@ -39,18 +39,6 @@
     margin-top: auto;
 }
 
-.textright{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-.textleft{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
 .rowsidemargin{
     margin-left: 10px;
     margin-right: 1px;
@@ -73,16 +61,11 @@
 }
 
 
-.paragraphleft diftext {
+.paragraphleft titel {
     color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-}
-
-.paragraphleft dif2{
-    color: black;
-    font-size: 10px;
 }
 
 .paragraphright{
@@ -90,63 +73,164 @@
     text-align: right;
 }
 
-.paragraphright diftext{
+.paragraphright titel{
     color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: right
 }
-
-footer{
-    background-color:#1F1F1F;
-
-
+.footer-top-layout {
+    background: #1c1c1c none repeat scroll 0 0;
+    color: #ffffff;
+    padding: 40px 0;
+}
+.OurBlog {
+    margin-bottom: 32px;
+    text-align: center;
+}
+.footer-top-layout h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 21px;
+}
+.OurBlog > p {
+    color: #888888;
+}
+.post-blog-date::after {
+    background: #ffffff none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 4px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 50px;
+}
+.post-blog-date {
+    padding-bottom: 25px;
+    position: relative;
 }
 
-footer ul{
-    list-style:none;
-    margin:0 auto;
-    display:inline-block;
-    padding-top:50px;
+body {
+    color: #666666;
+    font-family: "Open Sans",sans-serif;
+    line-height: 24px;
 }
 
-footer ul li{
-    float:left;
+.footer-top-layout [class*="col-sm-"]:first-child {
+    padding: 0;
+}
+.footer-top-layout [class*="col-sm-"] {
+    border-right: 2px solid #333333;
+    padding: 0 0 0 28px;
+
+}
+.footer-top-layout {
+    color: #ffffff;
+}
+.footer-col-item {
+    min-height: 140px;
 }
 
-footer ul li a{
-    color:#b1aca1;
-    padding:20px;
-}
-
-footer ul li a:hover{
-    color:#7dabdb;
-    text-decoration:none;
-}
-
-.footer-top{
-    padding-bottom:50px;
-}
-
-.footer-top .fa{
-    font-size:18px;
-    color: #FFF;
-    padding-right:10px;
-}
-
-.footer-top a{
-    color:#FFF;
-    text-decoration:none;
-}
-
-.footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
-    color:#7dabdb;
+address {
+    color: #545454;
 }
 
 
+.footer-top-layout [class*="col-sm-"]:last-child {
+    border-right: medium none;
+}
+.footer-top-layout {
+    color: #ffffff;
+}
+body {
+    color: #666666;
+    font-family: "Open Sans",sans-serif;
 
-.copyright p{
-    font-size:12px;
-    padding:15px 0 10px 0;
-    color: #b1aca1
+}
+.footer-top-layout h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 21px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 0;
+}
+body {
+    color: #666666;
+    font-family: "Open Sans",sans-serif;
+    line-height: 24px;
+}
+.footer-col-item .item-contact a {
+    color: #545454;
+    display: inline-block;
+    margin-bottom: 7px;
+    width: 1000px;
+}
+
+.footer-col-item .item-contact a .link-id {
+    color: #ffffff;
+    margin-left: 0;
+    margin-right: 6px;
+}
+.footer-col-item span {
+    margin-left: 7px;
+}
+.footer-col-item .item-contact a {
+    color: #545454;
+}
+
+.footer-top-layout h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 21px;
+}
+.signUpNewsletter {
+    position: relative;
+}
+.signUpNewsletter .gt-email {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #666666;
+    border-radius: 0;
+    color: #ffffff;
+    height: 52px;
+}
+.signUpNewsletter .btn-go {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: #666666;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    width: 52px;
+}
+.footer-bottom-layout {
+    background: #222222 none repeat scroll 0 0;
+    padding: 20px 0;
+    text-align: center;
+}
+body {
+    color: #666666;
+    font-family: "Open Sans",sans-serif;
+    line-height: 24px;
+}
+.socialMedia-footer {
+    margin-bottom: 20px;
+}
+.socialMedia-footer > a {
+    display: inline-block;
+    margin: 0 8px;
+}
+.footer-bottom-layout {
+    text-align: center;
 }
