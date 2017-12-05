@@ -80,7 +80,7 @@
     text-align: right
 }
 .footer-top-layout {
-    background: #1c1c1c none repeat scroll 0 0;
+    background: #3c3c3b none repeat scroll 0 0;
     color: #ffffff;
     padding: 40px 0;
 }
@@ -187,7 +187,7 @@ body {
     margin-bottom: 21px;
 }
 .footer-bottom-layout {
-    background: #222222 none repeat scroll 0 0;
+    background: #3c3c3b none repeat scroll 0 0;
     padding: 20px 0;
     text-align: center;
 }
