@@ -5,35 +5,27 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if(isset($_POST['btn-login'])){
-    $errMsg = '';
+if(isset($_GET['btn-login'])){
+    $errMsg = "";
     //username and password sent from Form
-    $username = trim($_POST['e-mailadres']);
-    $password = trim($_POST['wachtwoord']);
+    $username = ($_GET['e-mailadres']);
+    $password = ($_GET['wachtwoord']);
 
-    if($username == '')
-        $errMsg .= 'Vul een geldig e-mailadres in<br>';
+print($username . $password);
 
-    if($password == '')
-        $errMsg .= 'Vul een geldig wachtwoord in<br>';
-
-
-    if($errMsg == ''){
-        $sql = ('SELECT e-mailadres,wachtwoord FROM  Klant WHERE e-mailadres = :e-mailadres');
+        $sql = ('SELECT e-mailadres, wachtwoord FROM  Klant WHERE e-mailadres = :username');
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
         if(count($results) > 0 && password_verify($password, $results['wachtwoord'])){
             $_SESSION['e-mailadres'] = $results['e-mailadres'];
-            header('location:account.php');
+            header('location:/account.php');
             exit;
-        }else{
+        }else {
             $errMsg .= 'Username and Password are not found<br>';
         }
-    }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -94,8 +86,8 @@ if(isset($_POST['btn-login'])){
 
             </div>
             <div class="panel-body a lowborder" >
-                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
-                    <div> <?php print($errormsg); ?> </div>
+                <form method="GET" action="login.php"  id="loginform" class="form-horizontal" role="form">
+
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                         <input id="login-username" type="text" class="form-control" name="e-mailadres" placeholder="Vul hier uw e-mailadres in">
@@ -108,11 +100,11 @@ if(isset($_POST['btn-login'])){
                     <div  class="form-group d">
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="bnt-login" value="Login">
+                            <input class="btn oranje white" type="submit" name="btn-login" value="Login">
                         </div>
                     </div>
-
                 </form>
+                <div> </div>
             </div>
         </div>
     </div>

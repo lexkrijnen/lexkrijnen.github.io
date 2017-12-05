@@ -170,7 +170,7 @@ body {
     color: #545454;
     display: inline-block;
     margin-bottom: 7px;
-    width: 1000px;
+    width: 100%;
 }
 
 .footer-col-item .item-contact a .link-id {
@@ -219,10 +219,7 @@ body {
     padding: 20px 0;
     text-align: center;
 }
-body {
-    color: #666666;
-    font-family: "Open Sans",sans-serif;
-    line-height: 24px;
+
 }
 .socialMedia-footer {
     margin-bottom: 20px;
