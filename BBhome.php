@@ -74,7 +74,7 @@
             </a>
           </div>
       <div class="row rowsidemargin">
-      <div class="row topline">
+      <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
               <titel>Ons bedrijf</titel><br><br>
