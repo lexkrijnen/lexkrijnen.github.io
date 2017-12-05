@@ -6,7 +6,7 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM project p join contract  c on c.contract_nummer=p.contract_nummer join status s on s.status_nummer=p.status_nummer join klant k on k.klant_nummer=p.klant_nummer WHERE naam = ?";
+    $sql = "SELECT * FROM Project p join Contract  c on c.contract_nummer=p.contract_nummer join Status s on s.status_nummer=p.status_nummer join Klant k on k.klant_nummer=p.klant_nummer WHERE p.naam = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["projectnaam"]));
 
@@ -80,20 +80,18 @@ $pdo = NULL;
 
 
 
-
-      <table>
-          <tr>
-            <div class=container>
+      <div class=container>
+          <table>
+            <tr>
               <div class=row>
                 <form action="bekijken_bouwtekeningen.php" method="get">
                     <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
                     <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                 </form>
               </div>
-          </div>
           </tr>
-      </table>
-
+         </table>
+      </div>
 
 
       <?php
@@ -121,11 +119,13 @@ $pdo = NULL;
             print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
             print("<tr><td>Naam klant: $klantnaam</td></tr>");
             print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-            print("<tr><td>
-                    <div class=\"embed-responsive pdf-viewer\">
-                        <object data=$document type=\"application/pdf\"></object>
-                   </div>
-                </td></tr>");
+            print(" <div id=\"viewer-box\" class=\"col-xs-10 col-xs-offset-1 col-md-8 page-box\">
+    			         <iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>
+    			         <div class=\"pdf-fail\">
+                              <p>Problemen met het bekijken?</p>
+                              <a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>
+    			         </div>
+    		      </div>");
             print("</table>");
 
         }

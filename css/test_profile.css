@@ -9,8 +9,11 @@
 	border: none;
 	z-index: 1;
 }
-.table {
-    color:orange;
+h3{
+    color: white;
+}
+table{
+    background-color: orange;
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {

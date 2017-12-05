@@ -18,7 +18,7 @@
     <link href="css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,16 +44,27 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="contact.php">Contact</a></li>
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div>
 
 
-      </div>
+
+      <div class="row rowsidemargin">
+          <form class="col-xs-3 col-offset-3 contact-page-box">
+          <input type="text" name="naam" placeholder="Naam">
+          </form>
+          </div>
+
+
+
+
+
+
+
+
 
 
 

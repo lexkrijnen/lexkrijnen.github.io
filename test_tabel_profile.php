@@ -25,19 +25,19 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-            <?php
-    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-    $user = "wegro";
-    $pass = "SQLWegro@101";
-    $pdo = new PDO($db, $user, $pass);
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT document FROM Contract";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["nummer"]));
-    $werk = $stmt->fetch();
+        $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array($_GET["nummer"]));
+        $werk = $stmt->fetch();
 
-    $pdo = NULL;
-    ?>
+        $pdo = NULL;
+        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -68,9 +68,22 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                         <table class="table text-hover">
+                         <table>
+                            <thead>
+                                <tr>
+                                    <th><h3><b>Contract</b></h3></th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
+                                </tr>
+                             </tbody>
+                        </table>
+                        <br>
+                         <table>
                              <tr>
-                                 <th><h3><b>Contract</b></h3></th>
+                                 <th><h3><b>Tekeningen</b></h3></th>
                              </tr>
                              <tr>
                                 <td><input type="text" name="pdf bestand" value="<?php print($werk["beschrijving"]); ?>"></td>
