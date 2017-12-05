@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -28,13 +29,15 @@
 	</head>
   <body>
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+      (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
           fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -124,14 +127,13 @@
                                   class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                   </div>
            <div class="col-xs-4"> <form action="mail.php" method="POST">
-                <p>Name</p> <input type="text" name="name">
-                <p>Email</p> <input type="text" name="email">
-                <p>Phone</p> <input type="text" name="phone">
+                 <input type="text" name="name" placeholder="Naam">
+                 <input type="text" name="email" placeholder="Email">
+                 <input type="text" name="phone" placeholder="Telefoon">
 
-                <p>Website</p> <input type="text" name="website">
-                <br>
-                <p>Message</p><textarea name="message"></textarea><br />
-                <input type="submit" value="Send"><input type="reset" value="Clear">
+
+                <p>Message</p><textarea name="message" placeholder="Vul hier uw vraag in"></textarea><br />
+                <input type="submit" value="Verzend">
             </form>
            </div>
         </div>
