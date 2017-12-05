@@ -67,19 +67,19 @@
                     </div>
 
                     <div class="c">
-                        <input id="email" type="text" class="form-control" name="email"  placeholder="Vul hier uw e-mailadres in">
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
                     </div>
 
                      <div class="c">
-                        <input id="onderwerp" type="text" class="form-control" name="onderwerp"  placeholder="Onderwerp van uw bericht">
+                        <input id="onderwerp" type="text" class="form-control" name="onderwerp" placeholder="Onderwerp van uw bericht">
                     </div>
 
                     <div class="c">
-                        <input id="bericht" type="text" class="form-control formdinges" name="bericht"  placeholder="Vul hier uw bericht in">
+                        <input id="bericht" type="text" class="form-control formdinges" name="bericht" placeholder="Vul hier uw bericht in">
                     </div>
 
                     <div class="c">
-                        <label><input id="naarzelfsturen" type="checkbox" class="checkbox checkboxding" name="naarzelfsturen"></label>
+                        <input id="naarzelfsturen" type="checkbox" class="checkbox cb2" name="naarzelfsturen">
                     </div>
 
                     <div  class="form-group d">
