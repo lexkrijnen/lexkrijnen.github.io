@@ -18,11 +18,7 @@ thead{
     background-color: #FFA500;
 }
 
-btn btn{
-    text-align: left;
-}
-
-tbody{
+tbody > tr > td > input {
     background-color: #FFE1B9;
 }
 
