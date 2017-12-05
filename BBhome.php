@@ -27,6 +27,15 @@
     <![endif]-->
 	</head>
   <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -45,6 +54,8 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="over_ons.php">Over ons</a></li>
+                        <li class="nav-item"><a href="over_ons.php">Vergunningen</a></li>
+                        <li class="nav-item"><a href="over_ons.php">Projecten</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
@@ -53,35 +64,32 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="index.php">
+         <a href="#">
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
             </a>
           </div>
       <div class="row rowsidemargin">
-      <div class="row bottomline topline">
-          <p class="col-xs-7 col-xs-offset-1 paragraph page-box">
-               <diftext>Ons bedrijf</diftext>
-              <img src="images/IMG_7453.JPG" class="col-xs-3 imgright"><br><br>
-               Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
+      <div class="row topline">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+              <titel>Ons bedrijf</titel><br><br>
+              Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
               <br><br>
-
-                Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.<br><br>
-
-                Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
-
-                Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.<br><br>
-
-                U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
-
-          </p>
+              Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
+              <br>
+              Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
+              Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
+              <br><br>
+              U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
+        </p>
         </div>
 
-      <div class="row bottomline">
-          <p class="col-xs-7 col-xs-offset-4 paragraph page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-3 col-xs-offset-1 imgleft">
-              <diftext>Vergunningen</diftext><br><br>
+      <div class="row">
+          <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+              <titel>Vergunningen</titel><br><br>
               Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
@@ -89,80 +97,82 @@
           </p>
         </div>
 
-      <div class="row bottomline">
-          <p class="col-xs-7 col-xs-offset-1 paragraph page-box">
-              <diftext>Projecten</diftext><br><br>
+      <div class="row">
+          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
+              <titel>Projecten</titel><br><br>
               Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
               Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.<br>
               Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.<br><br>
 
               De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
-              <img src="images/IMG_7453.JPG" class="col-xs-3 imgright">
-          </p>
+            </p>
+    </div>
+ </div>
+  <div class="row">
+      <div class="col-xs-10 col-md-6 col-md-offset-1">
+          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+      </div>
+
+<div class="container">
+<div class="row">
+    <div class="page-box">
+        <div class="col-xs-12">
+
+                  <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                       data-tabs="timeline" data-width="600" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                       data-hide-cover="true" data-show-facepile="false">
+                      <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                  class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote></div
         </div>
+    </div>
+  </div>
+</div>
+  <footer id="footer-Section">
+      <div class="footer-top-layout">
+          <div class="container">
+              <div class="row">
+                  <div class="OurBlog">
+                      <h4>Bouwbedrijf Wegro</h4>
+                      <p>Klik hieronder op het e-mailadres om contact op te nemen</p>
 
+                  </div>
+                  <div class=" col-lg-8 col-lg-offset-2">
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Locatie</h4>
+                              <address>
 
-
-          <footer>
-
-              <div class="footer-top">
-                  <div class="container">
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+                                  Gelreweg 38
+                                  <br>
+                                  3843AN Harderwijk, NL
+                              </address>
+                          </div>
                       </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Contact</h4>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">F</span>:<span>0341-412054</span></a> <a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">E</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
+                          </div>
                       </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
-                      </div>
-                      <div class="col-lg-2 col-xs-12 text-center">
-                          <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+                      <div class="col-sm-4">
+                          <div class="footer-col-item">
+                              <h4>Sign up for Newsletter</h4>
+                              <form class="signUpNewsletter" action="" method="get">
+                                  <input name="" class="gt-email form-control" placeholder="You@youremail.com" type="text">
+                                  <input name="" class="btn-go" value="Go" type="button">
+                              </form>
+                          </div>
                       </div>
                   </div>
               </div>
-
-              <div class="container" style="border-top:1px solid grey;">
-                  <div class="row text-center">
-                      <div class="col-xs-6 col-xs-offset-3">
-                          <ul class="menu">
-
-                              <li>
-                                  <a href="#">Home</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Ons bedrijf</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Contact</a>
-                              </li>
-
-                              <li>
-                                  <a href="#">Inloggen</a>
-                              </li>
-                          </ul>
-
-                      </div>
-                  </div>
-              </div>
-              <div class="copyright">
-                  <div class="container">
-
-                      <div class="row text-center">
-                          <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-                      </div>
-
-                  </div>
-              </div>
-          </footer>
+          </div>
+      </div>
+      <div class="footer-bottom-layout">
+          <div class="socialMedia-footer"> <a href="#"><img src="img/socialMedia_01.png"></a> <a href="#"><img src="img/socialMedia_02.png"></a> <a href="#"><img src="img/socialMedia_03.png"></a> <a href="#"><img src="img/socialMedia_04.png"></a> <a href="#"><img src="img/socialMedia_05.png"></a> </div>
+          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
+      </div>
+  </footer>
 
 
 
