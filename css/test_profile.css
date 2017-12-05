@@ -9,12 +9,19 @@
 	border: none;
 	z-index: 1;
 }
+
 h3{
-    color: white;
+    color: #FFFFFF;
 }
-table{
-    background-color: orange;
+
+thead{
+    background-color: #FFA500;
 }
+
+tbody{
+    background-color: #FFE1B9;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {
