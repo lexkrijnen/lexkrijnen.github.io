@@ -6,12 +6,12 @@ session_start();
  * Date: 5-12-2017
  * Time: 13:46
  */
-include 'loginFunction.php';
+include '../login/loginFunction.php';
 
 $e_mail = $_POST{'e-mailadres'};
 $password = $_POST{'wachtwoord'};
 
-if(isset($_POST['submit']))
+if(isset($_POST['btn-login']))
 {
     $queryresult = GetLogin($e_mail, $password);
 
