@@ -85,7 +85,7 @@
 .footer-top-layout {
     background: #3c3c3b none repeat scroll 0 0;
     color: #ffffff;
-    padding: 40px 0;
+
 }
 .OurBlog {
     margin-bottom: 32px;
@@ -99,17 +99,7 @@
 .OurBlog > p {
     color: #888888;
 }
-.post-blog-date::after {
-    background: #ffffff none repeat scroll 0 0;
-    bottom: 0;
-    content: "";
-    height: 4px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    width: 50px;
-}
+
 .post-blog-date {
     padding-bottom: 25px;
     position: relative;
@@ -132,9 +122,7 @@ body {
 .footer-top-layout {
     color: #ffffff;
 }
-.footer-col-item {
-    min-height: 140px;
-}
+
 
 address {
     color: #ffffff;
