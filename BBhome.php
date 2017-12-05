@@ -56,7 +56,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="#Ons_bedrijf">Over ons</a></li>
+                        <li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
                         <li class="nav-item"><a href="#Contact">Contact</a></li>
@@ -67,13 +67,13 @@
 		</nav>
       <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="contact.php">
+         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                     Contact
                 </div>
             </a>
           </div>
-  <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
@@ -89,6 +89,7 @@
               <br><br>
               U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
         </p>
+
         </div>
           <a name="Vergunningen" id="Vergunningen"></a>
       <div class="row">
@@ -100,8 +101,9 @@
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+
           </p>
-        </div>
+        </div><a name="Projecten" id="Projecten"></a>
           <a name="Projecten" id="Projecten"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
