@@ -10,7 +10,7 @@
 	z-index: 1;
 }
 .table {
-    color:orange;
+    background: orange;
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
