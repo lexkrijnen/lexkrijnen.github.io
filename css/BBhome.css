@@ -56,20 +56,17 @@
 
 
 .paragraphleft{
-    color: black;
     text-align: left;
 }
 
 
 .paragraphleft titel {
-    color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
 }
 
 .paragraphright{
-    color: black;
     text-align: right;
 }
 
@@ -77,7 +74,6 @@
     text-align: right;
 }
 .paragraphright titel{
-    color: black;
     font-size: 30px;
     font-weight: bold;
     text-align: right
@@ -113,12 +109,6 @@
 .post-blog-date {
     padding-bottom: 25px;
     position: relative;
-}
-
-body {
-    color: #666666;
-    font-family: "Open Sans",sans-serif;
-    line-height: 24px;
 }
 
 .footer-top-layout [class*="col-sm-"]:first-child {
@@ -160,10 +150,7 @@ address {
     line-height: 1.1;
     margin-top: 0;
 }
-body {
-    color: #666666;
-    font-family: "Open Sans",sans-serif;
-    line-height: 24px;
+
 }
 .footer-col-item .item-contact a {
     color: #ffffff;
