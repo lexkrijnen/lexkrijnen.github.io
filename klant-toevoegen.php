@@ -49,6 +49,34 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
+		<?php
+			$servername = "localhost";
+			$username = "wegro";
+			$password = "SQLWegro@101";
+
+			// Create connection
+			$conn = new mysqli($servername, $username, $password);
+
+			// Check connection
+			if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+			}
+			echo "Connected successfully";
+
+			$sql = "INSERT INTO Klant (voornaam)
+			VALUES (".$_get['voornaam'].")";
+
+			if ($conn->query($sql) === TRUE) {
+					echo "New record created successfully";
+			} else {
+					echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+
+			$conn->close();
+
+			print_r($_get['voornaam']);
+		?>
+
 		<div class="container">
 			<div class="row">
     		<div class="col-xs-12 col-md-10 col-md-offset-1 page-box">
@@ -73,29 +101,3 @@
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
-
-<?php/*
-	$servername = "localhost";
-	$username = "wegro";
-	$password = "SQLWegro@101";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
-
-	// Check connection
-	if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-	}
-	echo "Connected successfully";
-
-	$sql = "INSERT INTO Klant (voornaam)
-	VALUES ($_GET['voornaam'])";
-
-	if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
-	} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
-	$conn->close();*/
-?>
