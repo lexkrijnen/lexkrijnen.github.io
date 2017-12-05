@@ -53,13 +53,10 @@
 
 
       <div class="row rowsidemargin">
-          <div class="row">
           <form class="col-xs-3 col-offset-3 contact-page-box">
           <input type="text" name="naam" placeholder="Naam">
           </form>
           </div>
-      </div>
-
 
 
 
