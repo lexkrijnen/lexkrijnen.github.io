@@ -50,17 +50,16 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-          <div class="row">
-      <div class="row rowsidemargin">
-      <div class="row">
-          <p class="col-xs-3 col-xs-offset-3 paragraphleft contact-page-box">
-              <titel>Contact</titel><br><br>
-              Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
-              <br><br>
 
-        </p>
-        </div>
-              </div>
+
+      <div class="row rowsidemargin">
+          <form class="col-xs-3 col-offset-3 contact-page-box">
+          <input type="text" name="naam" placeholder="Naam">
+          </form>
+          </div>
+
+
+
 
 
 
