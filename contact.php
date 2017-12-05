@@ -52,27 +52,6 @@
 
 
 
-     <!-- <div class="row rowsidemargin">
-          <div class="col-xs-3 col-offset-3 contact-page-box">
-          <div class="panel-body a lowborder" >
-                <form method="GET" action="contact.php"  id="loginform" class="form-horizontal" role="form">
-
-                    <div  class="input-group c">
-                        <input id="naam" type="text" class="form-control" name="naam" placeholder="Naam">
-                    </div>
-
-                    <div class="input-group c">
-                        <input id="emailadres" type="text" class="form-control" name="emailadres"  placeholder="Email">
-                    </div>
-                    <div  class="form-group d">
-
-                        <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" name="btn-submitform" value="Verzenden">
-                        </div>
-                    </div>
-                </form>
-          </div> -->
-
 <div class="container">
     <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
         <div class="panel " >
