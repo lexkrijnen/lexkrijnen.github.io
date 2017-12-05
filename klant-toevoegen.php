@@ -62,6 +62,17 @@
 					die("Connection failed: " . $conn->connect_error);
 			}
 			echo "Connected successfully";
+
+			$sql = "INSERT INTO Klant (voornaam)
+			VALUES ($_POST['voornaam'])";
+
+			if ($conn->query($sql) === TRUE) {
+					echo "New record created successfully";
+			} else {
+					echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+
+			$conn->close();
 		?>
 
 		<div class="container">
