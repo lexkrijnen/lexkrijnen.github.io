@@ -2,10 +2,6 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$call = $_POST['call'];
-$website = $_POST['website'];
-
-$type = $_POST['type'];
 $message = $_POST['message'];
 $formcontent=" From: $name \n Phone: $phone \n Message: $message";
 $recipient = "markxjansen@gmail.com";
