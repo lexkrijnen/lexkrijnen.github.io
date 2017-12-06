@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -103,20 +102,52 @@
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
 
           </p>
-        </div><a name="Projecten" id="Projecten"></a>
-          <a name="Projecten" id="Projecten"></a>
-      <div class="row">
-          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
+        </div>
 
+
+      <div class="row"><a name="Projecten" id="Projecten"></a>
+          <div class="col-xs-10 col-xs-offset-1  page-box">
               <titel>Projecten</titel><br><br>
-              Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
-              Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.<br>
-              Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.<br><br>
 
-              De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
-            </p>
-    </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+                      <div class="overlay">
+                          <h2>Fundering</h2>
+                          <p>
+                              <a>Hier wordt de fundering van een nieuw huis gelegt.</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+                      <div class="overlay">
+                          <h2>Afwerking</h2>
+                          <p>
+                              <a>Het dak en de muren zijn nu ook bijna af. </a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+                      <div class="overlay">
+                          <h2>AFwerking</h2>
+                          <p>
+                              <a>Het huis is nu zo goed als af. Tijd om in te richten.</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+  </div>
+
+
  </div>
   <div class="row">
   <div class="col-xs-10 col-xs-offset-1  page-box">
