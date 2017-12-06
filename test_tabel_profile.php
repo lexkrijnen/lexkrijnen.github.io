@@ -26,17 +26,18 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-        /*$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
         $user = "wegro";
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["nummer"]));
-        $werk = $stmt->fetch();
+        $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+        $stmt->execute();
+        $meerwerk = $stmt->fetchAll();
 
-        $pdo = NULL;*/
+        $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
+        $stmt2->execute();
+        $minderwerk = $stmt2->fetchAll();
         ?>
 	</head>
   <body>
@@ -68,38 +69,42 @@
 
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th><h3><b>Contract</b></h3></th>
-                                </tr>
-                             </thead>
-                             <tbody>
-                                <tr>
-                                    <td>fghj</td>
-                                </tr>
-                                 <tr>
-                                 <td class="bottom">sdfghj</td>
-                                     </tr>
-                             </tbody>
-                        </table>
-                        <br>
-                         <table>
-                            <thead>
-                                <tr>
-                                    <th><h3><b>Tekeningen</b></h3></th>
-                                </tr>
-                             </thead>
-                             <tbody>
-                                <tr>
-                                    <td>asd</td>
-                                </tr>
-                             </tbody>
-                        </table>
-                    </div>
-                </div>
+            <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <thead>
+                        <th><h3><b>Contract</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($meerwerk AS $werk) {
+                    print("<tr>");
+                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+        </form>
+    </div>
+<br>
+    <form method="get" action="meermindertoevoegen.php">
+        <table class="table table-hover table-bordered">
+                <tr>
+                    <th><h3><b>Tekeningen</b></h3></th>
+                </tr>
+                <?php
+                foreach ($minderwerk AS $werk2) {
+                    print("<tr>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+        </form>
+    </div>
+            <?php $pdo = NULL; ?>
 
-    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+    <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
     			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
