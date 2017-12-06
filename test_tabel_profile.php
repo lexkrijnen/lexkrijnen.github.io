@@ -89,7 +89,9 @@
     <form method="get" action="meermindertoevoegen.php">
         <table class="table table-hover table-bordered">
                 <tr>
-                    <th><h3><b>Tekeningen</b></h3></th>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
                 </tr>
                 <?php
                 foreach ($minderwerk AS $werk2) {
