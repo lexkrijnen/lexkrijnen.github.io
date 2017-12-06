@@ -172,7 +172,7 @@
                       <div class="overlay">
                           <h1>FUNDERING</h1>
                           <p>
-                              Hier wordt de fundering van een nieuw huis gelegt.
+                              Hier wordt de fundering van een nieuw huis gelegd.
                           </p>
                       </div>
                   </div>
