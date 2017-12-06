@@ -107,10 +107,10 @@
 
       <div class="row"><a name="Projecten" id="Projecten"></a>
           <div class="col-xs-10 col-xs-offset-1  page-box">
-              <titel>Projecten</titel><br><br>
+             <p class="paragraphleft "> <titel>Projecten</titel></p> <br><br>
 
 
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
                       <div class="overlay">
@@ -121,7 +121,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
                       <div class="overlay">
@@ -132,11 +132,11 @@
                       </div>
                   </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
                       <div class="overlay">
-                          <h2>AFwerking</h2>
+                          <h2>Oplevering</h2>
                           <p>
                               <a>Het huis is nu zo goed als af. Tijd om in te richten.</a>
                           </p>

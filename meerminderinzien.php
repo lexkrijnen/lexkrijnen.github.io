@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    ?>
     <meta charset="UTF-8">
     <title>Meer & Minder Werk</title>
     <link rel="stylesheet" href="css/meerminderwerk.css">
@@ -48,6 +53,13 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+    <?php
+    if (empty($klant_id)) {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+    } else {
+    ?>
 
 <!--MEER WERK-->
 <div class="container page-box">
@@ -108,3 +120,4 @@
 <?php $pdo = NULL; ?>
 </body>
 </html>
+<?php } ?>
