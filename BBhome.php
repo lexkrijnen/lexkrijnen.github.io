@@ -107,21 +107,46 @@
 
       <div class="row"><a name="Projecten" id="Projecten"></a>
           <div class="col-xs-10 col-xs-offset-1  page-box">
+              <titel>Projecten</titel><br><br>
+
+
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+                      <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
                       <div class="overlay">
-                          <h2>Dakopbouw</h2>
-          <p>
-              <a href="">Hier was Bouwbedrijf Wergo verantwoordelijk voor een Dakopbouw</a>
-          </p>
-      </div>
-      </div>
-  </div>
-  </div>
+                          <h2>Fundering</h2>
+                          <p>
+                              <a>Hier wordt de fundering van een nieuw huis gelegt.</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+                      <div class="overlay">
+                          <h2>Afwerking</h2>
+                          <p>
+                              <a>Het dak en de muren zijn nu ook bijna af. </a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+                      <div class="overlay">
+                          <h2>AFwerking</h2>
+                          <p>
+                              <a>Het huis is nu zo goed als af. Tijd om in te richten.</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
   </div>
 
-              <titel>Projecten</titel><br><br>
 
  </div>
   <div class="row">
