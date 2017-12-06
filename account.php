@@ -59,6 +59,10 @@
     <div class="container page-box">
         <div class="col-xs-4 col-md-5">
             <h1>Gefeliciteerd, Je bent ingelogd.</h1>
+            <ul>
+                <li><a href="meerminderinzien.php">Meer/Minder Werk inzien</a></li>
+                <li><a href="#">Contracten inzien</a></li>
+            </ul>
         </div>
     </div>
 		<div class="row">
