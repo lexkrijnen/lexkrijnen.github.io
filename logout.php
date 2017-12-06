@@ -16,8 +16,8 @@
 </head>
 
 <?php
-    session_start();
-    session_destroy();
+    session_start();   //HAALT DE ACTIVE SESSIE OP
+    session_destroy(); //LOGT DE GEBRUIKER UIT!
     print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
     print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U bent nu uitgelogd.</h5></div><br>');
     print('<meta http-equiv="refresh" content="2;url=../index.php" />'); //AUTOMATISCHE FORWARD NAAR INDEX.PHP
