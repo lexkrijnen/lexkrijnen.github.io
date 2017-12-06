@@ -10,6 +10,10 @@
 	z-index: 1;
 }
 
+table{
+    border-radius: 5px;
+}
+
 h3{
     color: #FFFFFF;
     margin: 10px 10px 10px 10px; /* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
