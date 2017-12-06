@@ -79,7 +79,7 @@ $pdo = NULL;
 
 
 
-
+      <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
       <div class=container>
           <table>
             <tr>
@@ -113,7 +113,6 @@ $pdo = NULL;
         //project gevonden
         } elseif ($project_nummer != "") {
             print("<table>");
-            print("<div id=\"viewer-box\" class=\"col-xs-10 col-xs-offset-1 col-md-8 page-box\">");
     		print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
     		print("<div class=\"pdf-fail\">");
             print("<p>Problemen met het bekijken?</p>");
