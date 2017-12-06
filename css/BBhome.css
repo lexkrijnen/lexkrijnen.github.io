@@ -213,7 +213,7 @@ address {
     transform: translate3d(0,0,0);
 }
 
-.hovereffect h2 {
+.hovereffect h1 {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
@@ -224,7 +224,7 @@ address {
     background-color: transparent;
 }
 
-.hovereffect h2:after {
+.hovereffect h1:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -238,7 +238,7 @@ address {
     transform: translate3d(-100%,0,0);
 }
 
-.hovereffect:hover h2:after {
+.hovereffect:hover h1:after {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
