@@ -93,7 +93,7 @@
         </div>
           <div class="row"><a name="Kwaliteiten" id="Kwaliteiten"></a>
               <div class="col-xs-10 col-xs-offset-1  page-box">
-                  <p class="paragraphleft "> <titel>Kwaliteiten</titel></p> <br><br>
+                  <p class="paragraphleft "> <titel>Kwaliteiten</titel></p> <br>
 
 
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -161,7 +161,7 @@
 
       <div class="row"><a name="Projecten" id="Projecten"></a>
           <div class="col-xs-10 col-xs-offset-1  page-box">
-             <p class="paragraphleft "> <titel>Projecten</titel></p> <br><br>
+             <p class="paragraphleft "> <titel>Projecten</titel></p> <br>
 
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
