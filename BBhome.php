@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -77,8 +76,13 @@
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
-
+              <div class="hovereffect"><img  src="images/IMG_9289.JPG" class="col-xs-5 col-xs-offset-1 imgright img-responvise">
+     <div class="overlay">
+         <p>
+Hier was Wegro verantwoordelijk voor een Dakopbouw.
+          </p>
+      </div>
+          </div>
               <titel>Ons bedrijf</titel><br><br>
               Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
               <br><br>
