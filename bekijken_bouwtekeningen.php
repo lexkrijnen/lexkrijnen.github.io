@@ -118,7 +118,7 @@ $pdo = NULL;
                 print("<p>Problemen met het bekijken?</p>");
                 print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
                 print("</div>");
-                print("</tr></div><div class=container><tr>");
+                print("</tr><tr>");
                 print("<td>Projectnaam: $naam</td>");
                 print("<td>Projectnummer: $project_nummer</td>");
                 print("<td>Status: $status</td>");
