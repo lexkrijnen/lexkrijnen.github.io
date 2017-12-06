@@ -119,9 +119,11 @@
                           <div class="overlay">
                               <h1>VERBOUW</h1>
                               <p>
-                                  Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen.
-                                  Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
-                                  Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+                                  Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
+                                  Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
+                                  En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
+                                  wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
+                                  Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
                               </p>
                           </div>
                       </div>
@@ -136,7 +138,7 @@
                                   In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
                                   Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
                                   En met behoud van oorspronkelijkheid en karakter.
-                                  Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn
+                                  Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn.
                               </p>
                           </div>
                       </div>
@@ -204,21 +206,29 @@
 
  </div>
   <div class="row">
-  <div class="col-xs-10 col-xs-offset-1  page-box">
-      <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-           data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
-           data-hide-cover="true" data-show-facepile="false">
-          <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                      class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-      </div>
-      <div class="col-xs-10 col-md-5 col-md-offset-1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.8785819838254!2d5.6273177160211905!3d52.33634875757526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1512472128799"
-                  width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
+      <div class="col-xs-10 col-xs-offset-1  page-box">
+          <
+          <div class="col-xs-10 col-md-5 ">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.8785819838254!2d5.6273177160211905!3d52.33634875757526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1512472128799"
+                      width="1300" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
 
-  </div>
+      </div>
   </div>
 
+  </div>
+  <div class="row">
+      <div class="col-xs-10 col-xs-offset-1  page-box">
+          <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+               data-tabs="timeline" data-width="1100" data-height="500" data-small-header="true" data-adapt-container-width="true"
+               data-hide-cover="true" data-show-facepile="false">
+              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                          class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+          </div>
+
+
+      </div>
+  </div>
 
   <footer id="footer-Section">
       <div class="footer-top-layout">
