@@ -104,9 +104,8 @@
             </table>
         </form>
     </div>
-</div>
-    <?php $pdo = NULL; ?>
-
+        <?php $pdo = NULL; ?>
+    </div>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
         <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
 
