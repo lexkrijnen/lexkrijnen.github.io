@@ -21,12 +21,12 @@ h3{
 
 thead{
     background-color: #FFA500;
-    border: 1px solid black; /*border zoals gewenst in schermontwerp*/
+    border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
 }
 
 td{
-    border-left: 2px solid black; /*border zoals gewenst*/
-    border-right: 2px solid black; /*border zoals gewenst*/
+    border-left: 1px solid #FFA500; /*border zoals gewenst*/
+    border-right: 1px solid #FFA500; /*border zoals gewenst*/
     padding-left: 10px; /*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
 }
 
