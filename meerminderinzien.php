@@ -70,8 +70,6 @@
                     print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $meerwerkcount++;
                 }
@@ -103,8 +101,6 @@
                     print("<td>" . $minderwerkcount . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
                     print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $minderwerkcount++;
                 }
