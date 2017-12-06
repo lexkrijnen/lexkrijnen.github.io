@@ -17,7 +17,7 @@ h3{
 
 thead{
     background-color: #FFA500;
-    border: 2px solid black; /*border zoals gewenst in schermontwerp*/
+    border: 1px solid black; /*border zoals gewenst in schermontwerp*/
 }
 
 td{
@@ -30,7 +30,7 @@ td{
     border-bottom: 2px solid black; /*bottom class die je meegeeft in de html code aan de TD die de onderste is, op deze manier geeft je alleen die maar een bottom border*/
 }
 
-tbody > tr > td > input {
+tbody{
     background-color: #FFE1B9;
 }
 
