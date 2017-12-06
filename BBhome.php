@@ -154,9 +154,8 @@
                               <h4>Locatie</h4>
                               <address>
 
-                                  Gelreweg 38
-                                  <br>
-                                  3843AN Harderwijk, NL
+                                  <a href="www.google.com/maps/place/Gelreweg+38+3843AN+Harderwijk+Nederland">Gelreweg 38 <br>
+                                      3843AN Harderwijk, NL</a>
                               </address>
                           </div>
                       </div>
