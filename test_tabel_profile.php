@@ -70,7 +70,7 @@
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
             <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover">
                 <tr>
                     <thead>
                         <th><h3><b>Contract</b></h3></th>
@@ -88,7 +88,7 @@
     <br>
         <!--Tekening-->
         <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover">
                 <tr>
                     <thead>
                         <th><h3><b>Tekeningen</b></h3></th>
