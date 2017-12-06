@@ -43,7 +43,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -59,6 +59,10 @@
     <div class="container page-box">
         <div class="col-xs-4 col-md-5">
             <h1>Gefeliciteerd, Je bent ingelogd.</h1>
+            <ul>
+                <li><a href="meerminderinzien.php">Meer/Minder Werk inzien</a></li>
+                <li><a href="#">Contracten inzien</a></li>
+            </ul>
         </div>
     </div>
 		<div class="row">
