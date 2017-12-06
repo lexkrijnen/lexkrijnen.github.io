@@ -109,11 +109,17 @@
               <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
 
               <titel>Projecten</titel><br><br>
-              Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
-              Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.<br>
-              Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.<br><br>
-
-              De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+                      <div class="overlay">
+                          <h2>Hier was Bouwbedrijf Wergo verantwoordelijk <br> voor een Dakopbouw.</h2>
+          <p>
+              <a href="#">LINK HERE</a>
+          </p>
+      </div>
+      </div>
+  </div>
             </p>
     </div>
  </div>
