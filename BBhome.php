@@ -114,7 +114,7 @@
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
                       <div class="overlay">
-                          <h1>Fundering</h1>
+                          <h1>FUNDERING</h1>
                           <p>
                               Hier wordt de fundering van een nieuw huis gelegt.
                           </p>
@@ -125,7 +125,7 @@
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
                       <div class="overlay">
-                          <h1>Afwerking</h1>
+                          <h1>AFWERKING</h1>
                           <p>
                               Het dak en de muren zijn nu ook bijna af.
                           </p>
@@ -136,7 +136,7 @@
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
                       <div class="overlay">
-                          <h1>Oplevering</h1>
+                          <h1>OPLEVERING</h1>
                           <p>
                               Het huis is nu zo goed als af. Tijd om in te richten.
                           </p>
