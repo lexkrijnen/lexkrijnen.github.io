@@ -57,7 +57,7 @@
         ?>
 
     <div class="container page-box">
-        <div class="col-xs-4 col-md-5">
+        <div class="col-xs-12 col-md-12">
             <h1>Gefeliciteerd, Je bent ingelogd.</h1>
             <ul>
                 <li><a href="meerminderinzien.php">Meer/Minder Werk inzien</a></li>
