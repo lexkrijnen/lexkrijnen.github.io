@@ -7,7 +7,7 @@ $emailadres = $_GET["emailadres"];
 $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
-$GETcode = $_GET["GETcode"];
+$postcode = $_GET["postcode"];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
