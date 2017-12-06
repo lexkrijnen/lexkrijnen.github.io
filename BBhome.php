@@ -102,26 +102,27 @@
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
 
           </p>
-        </div><a name="Projecten" id="Projecten"></a>
-          <a name="Projecten" id="Projecten"></a>
-      <div class="row">
-          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
+        </div>
 
-              <titel>Projecten</titel><br><br>
+
+      <div class="row"><a name="Projecten" id="Projecten"></a>
+          <div class="col-xs-10 col-xs-offset-1  page-box">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="hovereffect">
                       <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
                       <div class="overlay">
-                          <h2>Hier was Bouwbedrijf Wergo verantwoordelijk <br> voor een Dakopbouw.</h2>
+                          <h2>Dakopbouw</h2>
           <p>
-              <a href="#">LINK HERE</a>
+              <a href="">Hier was Bouwbedrijf Wergo verantwoordelijk voor een Dakopbouw</a>
           </p>
       </div>
       </div>
   </div>
-            </p>
-    </div>
+  </div>
+  </div>
+
+              <titel>Projecten</titel><br><br>
+
  </div>
   <div class="row">
   <div class="col-xs-10 col-xs-offset-1  page-box">
