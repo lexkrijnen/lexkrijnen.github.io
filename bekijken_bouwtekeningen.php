@@ -113,7 +113,7 @@ $pdo = NULL;
             //project gevonden
             } elseif ($project_nummer != "") {
                 print("<table><tr>");
-                print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
+                print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\" 'width=600,height=800'></iframe>");
                 print("<div class=\"pdf-fail\">");
                 print("<p>Problemen met het bekijken?</p>");
                 print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
