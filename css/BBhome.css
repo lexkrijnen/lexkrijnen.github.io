@@ -222,6 +222,7 @@ address {
     overflow: hidden;
     padding: 0.5em 0;
     background-color: transparent;
+    color:white;
 }
 
 .hovereffect h1:after {
@@ -236,6 +237,7 @@ address {
     transition: transform 0.35s;
     -webkit-transform: translate3d(-100%,0,0);
     transform: translate3d(-100%,0,0);
+    color:white;
 }
 
 .hovereffect:hover h1:after {

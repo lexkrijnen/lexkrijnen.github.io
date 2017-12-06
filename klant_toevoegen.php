@@ -7,7 +7,7 @@ $emailadres = $_GET["emailadres"];
 $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
-$GETcode = $_GET["GETcode"];
+$postcode = $_GET["postcode"];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -203,11 +203,11 @@ $hash = sha1($salt . $wachtwoord);
                 print("<span class=\"sr-only\">Error:</span>");
                 print(" Vul een straat + huisnummer in.");
                 print("</div>");
-            } elseif ($_GET["GETcode"] == "") {
+            } elseif ($_GET["postcode"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
                 print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een GETcode in.");
+                print(" Vul een postcode in.");
                 print("</div>");
             } else {
                 ///succes
