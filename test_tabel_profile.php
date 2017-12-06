@@ -66,9 +66,9 @@
 			</div><!-- /.container-fluid -->
 		</nav>
     <div class="container">
-
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+            <!--Contract-->
             <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -85,9 +85,10 @@
                 ?>
             </table>
         </form>
-<br>
-    <form method="get" action="meermindertoevoegen.php">
-        <table class="table table-hover table-bordered">
+    <br>
+        <!--Tekening-->
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
                 <tr>
                     <thead>
                         <th><h3><b>Tekeningen</b></h3></th>
