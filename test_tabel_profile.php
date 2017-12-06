@@ -79,7 +79,9 @@
                 <?php
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
+                    print("<tbody>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("</tbody>")
                     print("</tr>");
                     }
                 ?>
@@ -89,12 +91,16 @@
     <form method="get" action="meermindertoevoegen.php">
         <table class="table table-hover table-bordered">
                 <tr>
-                    <th><h3><b>Tekeningen</b></h3></th>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
                 </tr>
                 <?php
                 foreach ($minderwerk AS $werk2) {
                     print("<tr>");
+                    print("<tbody>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("</tbody>")
                     print("</tr>");
                     }
                 ?>
