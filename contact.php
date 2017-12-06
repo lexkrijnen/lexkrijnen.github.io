@@ -78,8 +78,12 @@
                         <textarea id="bericht" name="bericht" class="form-control" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
                     </div>
 
-                    <div class="c">
+                    <div class="col-xs-1 c">
                         <input id="naarzelfsturen" type="checkbox" class="checkbox cb2" name="naarzelfsturen">
+                    </div>
+
+                    <div class="col-xs-11 c">
+                        <p>Email een kopie van dit bericht naar mij</p>
                     </div>
 
                     <div  class="form-group d">
