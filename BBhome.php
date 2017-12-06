@@ -278,7 +278,7 @@
                 if( target.length ) {
                     event.preventDefault();
                     $('html, body').stop().animate({
-                        scrollTop: target.offset(75px).top
+                        scrollTop: target.offset().top +75;
                     }, 1000);
                 }
             });
