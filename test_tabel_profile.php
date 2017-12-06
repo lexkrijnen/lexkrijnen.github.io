@@ -88,7 +88,7 @@
     <br>
         <!--Tekening-->
         <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover">
+            <table>
                 <tr>
                     <thead>
                         <th><h3><b>Tekeningen</b></h3></th>
