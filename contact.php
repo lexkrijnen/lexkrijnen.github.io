@@ -89,7 +89,7 @@
                     <div  class="form-group d">
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden">
+                            <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden" action="verzendbericht.php">
                         </div>
                     </div>
                 </form>
