@@ -85,7 +85,6 @@
                 ?>
             </table>
         </form>
-    </div>
 <br>
     <form method="get" action="meermindertoevoegen.php">
         <table class="table table-hover table-bordered">
@@ -102,6 +101,7 @@
             </table>
         </form>
     </div>
+</div>
         </div>
             <?php $pdo = NULL; ?>
 
