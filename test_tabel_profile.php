@@ -73,7 +73,7 @@
             <table class="table table-hover">
                 <tr>
                     <thead>
-                        <th><h3><b>Contract</b></h3></th>
+                        <th><b>Contract</b></th>
                     </thead>
                 </tr>
                 <?php
@@ -91,7 +91,7 @@
             <table class="table table-hover">
                 <tr>
                     <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
+                        <th><b>Tekeningen</b></th>
                     </thead>
                 </tr>
                 <?php
