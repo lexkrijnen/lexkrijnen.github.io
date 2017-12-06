@@ -22,6 +22,7 @@ h3{
 thead{
     background-color: #FFA500;
     border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
+    border-bottom: 2px solid #804000;
 }
 
 td{
