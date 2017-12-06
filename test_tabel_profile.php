@@ -117,11 +117,41 @@
     </div>
         </div><!-- /.container -->
 
-        <div class="row">
-			 <div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			 </div>
-		</div>
+  <footer id="footer-Section">
+      <div class="footer-top-layout">
+          <div class="container">
+              <div class="row">
+                  <div class="OurBlog">
+                      <h4>Bouwbedrijf Wegro</h4>
+                  </div>
+                  <div class=" col-lg-8 col-lg-offset-2">
+                      <div class="col-sm-6">
+                          <div class="footer-col-item">
+                              <h4>Contact</h4>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="footer-col-item">
+                              <h4>Locatie</h4>
+                              <address>
+
+                                  Gelreweg 38
+                                  <br>
+                                  3843AN Harderwijk, NL
+                              </address>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom-layout">
+          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
+      </div>
+      <a name="Contact" id="Contact"></a>
+  </footer>
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
