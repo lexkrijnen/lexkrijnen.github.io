@@ -107,7 +107,7 @@
 
       <div class="row"><a name="Projecten" id="Projecten"></a>
           <div class="col-xs-10 col-xs-offset-1  page-box">
-             <p> <titel>Projecten</titel></p> <br><br>
+             <p class="paragraphleft "> <titel>Projecten</titel></p> <br><br>
 
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
