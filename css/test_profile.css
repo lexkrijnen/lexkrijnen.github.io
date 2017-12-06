@@ -53,6 +53,9 @@ tbody{
 }
 
 /*footer*/
+.footer {
+    background-color: #000000;
+}
 .footer-top-layout h4 {
     color: #ffffff;
     font-size: 18px;
