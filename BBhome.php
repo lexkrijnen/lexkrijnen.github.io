@@ -106,8 +106,7 @@
                                   Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
                                   Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
                                   waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
-                                  De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever.
-                                  Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.
+                                  D
 
 
                               </p>
@@ -120,7 +119,9 @@
                           <div class="overlay">
                               <h1>VERBOUW</h1>
                               <p>
-                                  Het dak en de muren zijn nu ook bijna af.
+                                  Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen.
+                                  Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
+                                  Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
                               </p>
                           </div>
                       </div>
@@ -278,7 +279,7 @@
                 if( target.length ) {
                     event.preventDefault();
                     $('html, body').stop().animate({
-                        scrollTop: target.offset().top -75;
+                        scrollTop: target.offset().top
                     }, 1000);
                 }
             });
