@@ -225,49 +225,7 @@
               <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                           class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
           </div>
-          <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
-              <div class="panel " >
-                  <div class="panel-heading oranje">
-                      <div class="panel-title white">Neem contact met ons op</div>
 
-                  </div>
-                  <div class="panel-body a lowborder" >
-                      <form method="POST" action="verzendbericht.php"  id="loginform" class="form-horizontal" role="form">
-
-                          <div  class="c">
-                              <input id="naam" type="text" class="form-control" name="naam" placeholder="Vul hier uw naam in">
-                          </div>
-
-                          <div class="c">
-                              <input id="email" type="email" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
-                          </div>
-
-                          <div class="c">
-                              <input id="onderwerp" type="text" class="form-control" name="onderwerp" placeholder="Onderwerp van uw bericht">
-                          </div>
-
-                          <div class="c">
-                              <textarea id="bericht" name="bericht" class="form-control" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
-                          </div>
-
-                          <div class="col-xs-1 c">
-                              <input id="naarzelfsturen" type="checkbox" class="checkbox cb2" name="naarzelfsturen">
-                          </div>
-
-                          <div class="col-xs-11 c">
-                              <p>Email een kopie van dit bericht naar mij</p>
-                          </div>
-
-                          <div  class="form-group d">
-
-                              <div class="col-sm-12 controls">
-                                  <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden">
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
 
       </div>
   </div>
