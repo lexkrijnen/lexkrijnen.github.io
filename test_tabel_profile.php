@@ -87,7 +87,6 @@
         </form>
     </div>
 <br>
-    <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
     <form method="get" action="meermindertoevoegen.php">
         <table class="table table-hover table-bordered">
                 <tr>
@@ -114,14 +113,12 @@
 						<p>Problemen met het bekijken?</p>
 						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
     			</div>
-    		</div>
+        </div><!-- /.container -->
 
-    </div><!-- /.container -->
-
-		<div class="row">
-			<div class="col-xs-12 text-center footer-rights">
+        <div class="row">
+			 <div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			</div>
+			 </div>
 		</div>
 
 
