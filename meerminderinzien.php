@@ -60,8 +60,6 @@
                     <th>Nr.</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
-                    <th></th>
-                    <th></th>
                 </tr>
                 <?php
                 $meerwerkcount = 1;
@@ -91,8 +89,6 @@
                     <th>Nr.</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
-                    <th></th>
-                    <th></th>
                 </tr>
                 <?php
                 $minderwerkcount = 1;
