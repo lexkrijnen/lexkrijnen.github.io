@@ -98,7 +98,7 @@
 
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+                          <img class="img-responsive" src="images/IMG_9121.JPG" alt="">
                           <div class="overlay">
                               <h1>NIEUWBOUW</h1>
                               <p>
@@ -116,7 +116,7 @@
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+                          <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
                           <div class="overlay">
                               <h1>VERBOUW</h1>
                               <p>
@@ -127,11 +127,15 @@
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                       <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+                          <img class="img-responsive" src="images/IMG_9325.JPG" alt="">
                           <div class="overlay">
                               <h1>RENOVATIE</h1>
                               <p>
-                                  Het huis is nu zo goed als af. Tijd om in te richten.
+
+                                  In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
+                                  Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
+                                  En met behoud van oorspronkelijkheid en karakter.
+                                  Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn
                               </p>
                           </div>
                       </div>
