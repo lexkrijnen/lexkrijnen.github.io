@@ -203,11 +203,11 @@ $hash = sha1($salt . $wachtwoord);
                 print("<span class=\"sr-only\">Error:</span>");
                 print(" Vul een straat + huisnummer in.");
                 print("</div>");
-            } elseif ($_GET["GETcode"] == "") {
+            } elseif ($_GET["postcode"] == "") {
                 print("<div class=\"alert alert-warning\" role=\"alert\">");
                 print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
                 print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een GETcode in.");
+                print(" Vul een postcode in.");
                 print("</div>");
             } else {
                 ///succes
