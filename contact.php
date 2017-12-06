@@ -60,7 +60,7 @@
 
             </div>
             <div class="panel-body a lowborder" >
-                <form method="POST" action="contact.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="verzendbericht.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="c">
                         <input id="naam" type="text" class="form-control" name="naam" placeholder="Vul hier uw naam in">
@@ -89,7 +89,7 @@
                     <div  class="form-group d">
 
                         <div class="col-sm-12 controls">
-                            <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden" action="verzendbericht.php">
+                            <input class="btn oranje white" type="submit" onclick="alert('Uw bericht is verzonden')" name="btn-login" value="Verzenden">
                         </div>
                     </div>
                 </form>
