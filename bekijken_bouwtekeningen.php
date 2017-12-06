@@ -116,7 +116,7 @@ $pdo = NULL;
                 print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
                 print("<div class=\"pdf-fail\">");
                 print("<p>Problemen met het bekijken?</p>");
-                print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+                print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=1800,height=3000'); return false;\">Openen in nieuw scherm.</a>");
                 print("</div>");
                 print("</tr><tr>");
                 print("<td>Projectnaam: $naam</td>");
@@ -137,17 +137,17 @@ $pdo = NULL;
 
 
 
-      <div class="row">
-			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-xs-12 text-center footer-rights">
+            <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+        </div>
+    </div>
 
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
 
-		<!-- Bootstrap Framework -->
-		<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Framework -->
+    <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
