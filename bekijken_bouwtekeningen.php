@@ -80,55 +80,55 @@ $pdo = NULL;
 
 
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-      <div class=container>
-          <table>
-            <tr>
-              <div class=row>
-                <form action="bekijken_bouwtekeningen.php" method="get">
-                    <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
-                    <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
-                </form>
-              </div>
-          </tr>
-         </table>
+          <div class=container>
+              <table>
+                <tr>
+                  <div class=row>
+                    <form action="bekijken_bouwtekeningen.php" method="get">
+                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
+                        <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+                    </form>
+                  </div>
+              </tr>
+             </table>
 
 
 
-      <?php
-    //projectnaam niet ingevuld
-    if(isset($_GET["vinden"])) {
-         if ($_GET["projectnaam"] == "") {
-            print("<div class=\"alert alert-warning\" role=\"alert\">
-                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                    <span class=\"sr-only\">Error:</span>
-                    Vul een projectnaam in.
-                  </div>");
-        //geen project gevonden met dat projectnaam
-        } elseif ($project_nummer == "") {
-            print("<div class=\"alert alert-warning\" role=\"alert\">
-                    <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                    <span class=\"sr-only\">Error:</span>
-                    Geen project gevonden met de naam " . $_GET['projectnaam'] .
-                  "</div>");
-        //project gevonden
-        } elseif ($project_nummer != "") {
-            print("<table>");
-    		print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
-    		print("<div class=\"pdf-fail\">");
-            print("<p>Problemen met het bekijken?</p>");
-            print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
-    		print("</div>");
-            print("<tr><td>Projectnaam: $naam</td></tr>");
-            print("<tr><td>Projectnummer: $project_nummer</td></tr>");
-            print("<tr><td>Status: $status</td></tr>");
-            print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-            print("<tr><td>Naam klant: $klantnaam</td></tr>");
-            print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-            print("</div>");
-            print("</table>");
+          <?php
+        //projectnaam niet ingevuld
+        if(isset($_GET["vinden"])) {
+             if ($_GET["projectnaam"] == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">
+                        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                        <span class=\"sr-only\">Error:</span>
+                        Vul een projectnaam in.
+                      </div>");
+            //geen project gevonden met dat projectnaam
+            } elseif ($project_nummer == "") {
+                print("<div class=\"alert alert-warning\" role=\"alert\">
+                        <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                        <span class=\"sr-only\">Error:</span>
+                        Geen project gevonden met de naam " . $_GET['projectnaam'] .
+                      "</div>");
+            //project gevonden
+            } elseif ($project_nummer != "") {
+                print("<table>");
+                print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
+                print("<div class=\"pdf-fail\">");
+                print("<p>Problemen met het bekijken?</p>");
+                print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+                print("</div>");
+                print("<tr><td>Projectnaam: $naam</td></tr>");
+                print("<tr><td>Projectnummer: $project_nummer</td></tr>");
+                print("<tr><td>Status: $status</td></tr>");
+                print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+                print("<tr><td>Naam klant: $klantnaam</td></tr>");
+                print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
+                print("</table>");
+            }
         }
-    }
-    ?>
+        ?>
+        </div>
     </div>
 
 
