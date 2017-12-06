@@ -56,6 +56,7 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
+                        <li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
                         <li class="nav-item"><a href="#Contact">Contact</a></li>
@@ -90,6 +91,54 @@
         </p>
 
         </div>
+          <div class="row"><a name="Kwaliteiten" id="Kwaliteiten"></a>
+              <div class="col-xs-10 col-xs-offset-1  page-box">
+                  <p class="paragraphleft "> <titel>Kwaliteiten</titel></p> <br><br>
+
+
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+                          <div class="overlay">
+                              <h1>NIEUWBOUW</h1>
+                              <p>
+                                  Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
+                                  Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
+                                  Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
+                                  waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+                                  De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever.
+                                  Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.
+
+
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+                          <div class="overlay">
+                              <h1>VERBOUW</h1>
+                              <p>
+                                  Het dak en de muren zijn nu ook bijna af.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+                          <div class="overlay">
+                              <h1>RENOVATIE</h1>
+                              <p>
+                                  Het huis is nu zo goed als af. Tijd om in te richten.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
           <a name="Vergunningen" id="Vergunningen"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
