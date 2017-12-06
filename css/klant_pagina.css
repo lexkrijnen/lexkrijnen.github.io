@@ -5,3 +5,30 @@
 .white {
 	color: white;
 }
+
+
+
+#viewer-box {
+	height: 80vh;
+}
+
+.pdf-viewer {
+	position: absolute;
+	width: 84%;
+	height: 90%;
+	border: none;
+	z-index: 1;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.pdf-viewer {
+		width: 94%;
+		height: 92%;
+	}
+}
+
+.pdf-fail {
+	margin-top: 30vh;
+	text-align: center;
+}

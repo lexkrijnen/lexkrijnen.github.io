@@ -113,18 +113,18 @@ $pdo = NULL;
         //project gevonden
         } elseif ($project_nummer != "") {
             print("<table>");
+            print("<div id=\"viewer-box\" class=\"col-xs-10 col-xs-offset-1 col-md-8 page-box\">");
+    		print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
+    		print("<div class=\"pdf-fail\">");
+            print("<p>Problemen met het bekijken?</p>");
+            print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+    		print("</div>");
             print("<tr><td>Projectnaam: $naam</td></tr>");
             print("<tr><td>Projectnummer: $project_nummer</td></tr>");
             print("<tr><td>Status: $status</td></tr>");
             print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
             print("<tr><td>Naam klant: $klantnaam</td></tr>");
             print("<tr><td>Contractnummer: $contract_nummer</td></tr>");
-            print("<div id=\"viewer-box\" class=\"col-xs-10 col-xs-offset-1 col-md-8 page-box\">");
-    		print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
-    		print("<div class=\"pdf-fail\">");
-            print("<p>Problemen met het bekijken?</p>");
-            print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
-    		print("</div>")
             print("</div>");
             print("</table>");
         }
