@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="c">
-                        <input id="email" type="text" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
+                        <input id="email" type="email" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
                     </div>
 
                      <div class="c">
