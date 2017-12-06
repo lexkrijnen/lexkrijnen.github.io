@@ -1,4 +1,5 @@
 <?php
+session_start();
 function GetLogin($username, $password) {
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
@@ -9,6 +10,5 @@ function GetLogin($username, $password) {
     $stmt2->execute();
     $result = $stmt2->fetchAll();
 
-    var_dump($result);
     return $result;
 }
