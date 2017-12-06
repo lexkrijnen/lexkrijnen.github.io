@@ -79,9 +79,7 @@
                 <?php
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<tbody>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("</tbody>")
                     print("</tr>");
                     }
                 ?>
@@ -98,9 +96,7 @@
                 <?php
                 foreach ($minderwerk AS $werk2) {
                     print("<tr>");
-                    print("<tbody>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("</tbody>")
                     print("</tr>");
                     }
                 ?>
