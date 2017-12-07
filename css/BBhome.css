@@ -172,6 +172,7 @@ address {
 
 .footer-bottom-layout {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .hovereffect {
@@ -264,9 +265,6 @@ address {
     transform: translate3d(0,0,0);
 }
 
-.map_canvas{
-    position: relative;
 
-}
 
 
