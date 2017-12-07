@@ -2,6 +2,7 @@
     background-image: url("../images/pexels-photo-209272.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    width:100%;
 }
 
 .logo{
@@ -266,3 +267,5 @@ address {
     position: relative;
 
 }
+
+
