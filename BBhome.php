@@ -1,3 +1,269 @@
+<?php
+array (
+    0 =>
+        stdClass::__set_state(array(
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#3c3c3b',
+                        )),
+                ),
+        )),
+    1 =>
+        stdClass::__set_state(array(
+            'elementType' => 'labels.icon',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'visibility' => 'off',
+                        )),
+                ),
+        )),
+    2 =>
+        stdClass::__set_state(array(
+            'elementType' => 'labels.text',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#fe9c15',
+                        )),
+                ),
+        )),
+    3 =>
+        stdClass::__set_state(array(
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#fe9c15',
+                        )),
+                    1 =>
+                        stdClass::__set_state(array(
+                            'visibility' => 'off',
+                        )),
+                ),
+        )),
+    4 =>
+        stdClass::__set_state(array(
+            'elementType' => 'labels.text.stroke',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#fe9c15',
+                        )),
+                ),
+        )),
+    5 =>
+        stdClass::__set_state(array(
+            'featureType' => 'administrative',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#757575',
+                        )),
+                ),
+        )),
+    6 =>
+        stdClass::__set_state(array(
+            'featureType' => 'administrative.country',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#9e9e9e',
+                        )),
+                ),
+        )),
+    7 =>
+        stdClass::__set_state(array(
+            'featureType' => 'administrative.land_parcel',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'visibility' => 'off',
+                        )),
+                ),
+        )),
+    8 =>
+        stdClass::__set_state(array(
+            'featureType' => 'administrative.locality',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#bdbdbd',
+                        )),
+                ),
+        )),
+    9 =>
+        stdClass::__set_state(array(
+            'featureType' => 'poi',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#757575',
+                        )),
+                ),
+        )),
+    10 =>
+        stdClass::__set_state(array(
+            'featureType' => 'poi.park',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#181818',
+                        )),
+                ),
+        )),
+    11 =>
+        stdClass::__set_state(array(
+            'featureType' => 'poi.park',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#616161',
+                        )),
+                ),
+        )),
+    12 =>
+        stdClass::__set_state(array(
+            'featureType' => 'poi.park',
+            'elementType' => 'labels.text.stroke',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#1b1b1b',
+                        )),
+                ),
+        )),
+    13 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road',
+            'elementType' => 'geometry.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#2c2c2c',
+                        )),
+                ),
+        )),
+    14 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#8a8a8a',
+                        )),
+                ),
+        )),
+    15 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road.arterial',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#373737',
+                        )),
+                ),
+        )),
+    16 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road.highway',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#3c3c3c',
+                        )),
+                ),
+        )),
+    17 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road.highway.controlled_access',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#4e4e4e',
+                        )),
+                ),
+        )),
+    18 =>
+        stdClass::__set_state(array(
+            'featureType' => 'road.local',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#616161',
+                        )),
+                ),
+        )),
+    19 =>
+        stdClass::__set_state(array(
+            'featureType' => 'transit',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#757575',
+                        )),
+                ),
+        )),
+    20 =>
+        stdClass::__set_state(array(
+            'featureType' => 'water',
+            'elementType' => 'geometry',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#000000',
+                        )),
+                ),
+        )),
+    21 =>
+        stdClass::__set_state(array(
+            'featureType' => 'water',
+            'elementType' => 'labels.text.fill',
+            'stylers' =>
+                array (
+                    0 =>
+                        stdClass::__set_state(array(
+                            'color' => '#3d3d3d',
+                        )),
+                ),
+        )),
+);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -204,7 +470,7 @@
                   <div class="OurBlog">
                       <h4>Bouwbedrijf Wegro</h4>
                   </div>
-                  <div class=" col-lg-9 col-lg-offset-2">
+                  <div class=" col-lg-9 col-lg-offset-3">
                       <div class="col-sm-3">
                           <div class="footer-col-item">
                               <h4>Contact</h4>
