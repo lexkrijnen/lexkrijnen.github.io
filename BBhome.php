@@ -61,8 +61,7 @@
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
          <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
-
-                        <input type="button" class="btn oranje white" href="contact.php"  name="Contact">
+                    <button type="button" class="btn oranje white" href="contact.php">Contact</button>
                 </div>
             </a>
           </div>
