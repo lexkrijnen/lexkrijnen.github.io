@@ -121,6 +121,7 @@ address {
 }
 .footer-top-layout {
     color: #ffffff;
+    width: 100%;
 }
 
 .footer-top-layout h4 {
@@ -171,6 +172,7 @@ address {
 
 .footer-bottom-layout {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .hovereffect {
@@ -263,9 +265,6 @@ address {
     transform: translate3d(0,0,0);
 }
 
-.map_canvas{
-    position: relative;
 
-}
 
 
