@@ -120,14 +120,14 @@ $pdo = NULL;
                 print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                 print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
                 print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
-                print("</tr></table>");
-                print("</div><div class=container>");
+                print("</tr><tr>");
                 print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
                 print("<div class=\"pdf-fail\">");
+                print("</tr><tr>");
                 print("<p>Problemen met het bekijken?</p>");
                 print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
                 print("</div></div>");
-
+                print("</tr></table>");
             }
         }
         ?>
