@@ -1,4 +1,4 @@
-.BBhomeBackground{
+.homeBackground{
     background-image: url("../images/pexels-photo-209272.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,4 +265,9 @@ address {
 .map_canvas{
     position: relative;
 
+}
+
+.parallax-container {
+    height: 600px;
+    z-index: -1;
 }
