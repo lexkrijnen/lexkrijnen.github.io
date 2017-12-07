@@ -53,5 +53,8 @@ tbody{
 }
 
 /*footer*/
+.footer-Section {
+    background-color: #333333;
+}
 .footer-bottom-layout {
     text-align: center;
