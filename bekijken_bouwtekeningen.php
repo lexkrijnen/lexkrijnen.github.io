@@ -91,6 +91,7 @@ $pdo = NULL;
                   </div>
               </tr>
              </table>
+          </div>
 
 
 
@@ -112,14 +113,14 @@ $pdo = NULL;
                       "</div>");
             //project gevonden
             } elseif ($project_nummer != "") {
-                print("<table><tr><div class=row>");
+                print("<table><tr><div class=container>");
                 print("<td>Projectnaam: $naam</td>");
                 print("<td>Projectnummer: $project_nummer</td>");
                 print("<td>Status: $status</td>");
                 print("<td>Klantnummer: $klant_nummer</td>");
                 print("<td>Naam klant: $klantnaam</td>");
                 print("<td>Contractnummer: $contract_nummer</td></tr>");
-                print("</tr></div><div class=row><tr>");
+                print("</tr></div><div class=container><tr>");
                 print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
                 print("<div class=\"pdf-fail\">");
                 print("<p>Problemen met het bekijken?</p>");
@@ -130,7 +131,7 @@ $pdo = NULL;
         }
         ?>
         </div>
-    </div>
+
 
 
 
