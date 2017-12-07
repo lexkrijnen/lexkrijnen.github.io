@@ -13,9 +13,7 @@
     display: block;
 
 }
-.white{
-    color:white;
-}
+
 
 .contbutton{
     background-color: #FE9C16 !important;
@@ -266,7 +264,13 @@ address {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+.oranje {
+    background-color: #FE9C16 !important;
 
+}
+.white {
+    color: white;
+}
 
 
 
