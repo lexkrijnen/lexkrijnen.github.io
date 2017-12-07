@@ -62,7 +62,7 @@
          <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
 
-                        <input class="btn oranje white" href="contact.php"  name="Contact">
+                        <input type="button" class="btn oranje white" href="contact.php"  name="Contact">
                 </div>
             </a>
           </div>
