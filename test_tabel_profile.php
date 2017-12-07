@@ -79,7 +79,7 @@
                 <?php
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<td>"?><a href="www.google.nl"></a><?php . $werk["beschrijving"] . "</td>");
+                    print("<td>") . $werk["beschrijving"] . "</td>");
                     print("</tr>");
                     }
                 ?>
