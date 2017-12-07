@@ -121,7 +121,6 @@ $pdo = NULL;
                 print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
                 print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
                 print("</tr><tr>");
-                print("</div><div class=container>");
                 print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
                 print("<div class=\"pdf-fail\">");
                 print("</tr><tr>");
