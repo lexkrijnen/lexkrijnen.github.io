@@ -77,7 +77,7 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($minderwerk AS $werk) {
+                foreach ($meerwerk AS $werk) {
                     print("<tr>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("</tr>");
