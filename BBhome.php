@@ -56,10 +56,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div class="row">
-          <div class="parallax-container">
-              <div class="parallax"><img src="images/pexels-photo-585418.jpeg"></div>
-
+      <div class="row BBhomeBackground">
            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
          <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
                 <div class="col-xs-2 col-xs-offset-5 btn contbutton">
@@ -67,7 +64,7 @@
                 </div>
             </a>
           </div>
-    </div>
+
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
@@ -223,7 +220,7 @@
 
 
       </div>
-      </div>
+  </div>
   </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
