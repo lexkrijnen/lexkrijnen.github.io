@@ -13,7 +13,9 @@
     display: block;
 
 }
-
+.white{
+    color:white;
+}
 
 .contbutton{
     background-color: #FE9C16 !important;
