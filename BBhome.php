@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -56,29 +57,14 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-
-
-
-
-        <div class="container">
-            <div class="content"><div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
-                    <!-- Indicators -->
-                    <div class="row">
-                        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-                        <a href="contact.php">
-                            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
-                                Contact
-                            </div>
-                        </a>
-                    </div>
+      <div class="row BBhomeBackground">
+           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+                <div class="col-xs-2 col-xs-offset-5 btn contbutton oranje white" >
+<a href="contact.php">Contact</a>
                 </div>
-
-            <div class="slide show" style="background-image: url('images/IMG_3258copy.JPG');"></div>
-            <div class="slide" style="background-image: url('images/IMG_9323.JPG');"></div>
-            <div class="slide" style="background-image: url('images/IMG_2442.JPG');"></div>
-        </div>
-
-
+            </a>
+          </div>
 
       <div class="row rowsidemargin">
       <div class="row">
@@ -296,29 +282,5 @@
           $('.parallax').parallax();
       });
   </script>
-            <script>
-                function cycleBackgrounds() {
-                    var index = 0;
-
-                    $imageEls = $('.container .slide'); // Get the images to be cycled.
-
-                    setInterval(function () {
-                        // Get the next index.  If at end, restart to the beginning.
-                        index = index + 1 < $imageEls.length ? index + 1 : 0;
-
-                        // Show the next
-                        $imageEls.eq(index).addClass('show');
-
-                        // Hide the previous
-                        $imageEls.eq(index - 1).removeClass('show');
-                    }, 2000);
-                };
-
-                // Document Ready.
-                $(function () {
-                    cycleBackgrounds();
-                });
-
-            </script>
 	</body>
 </html>
