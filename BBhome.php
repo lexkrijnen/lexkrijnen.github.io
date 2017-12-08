@@ -57,14 +57,44 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div class="row BBhomeBackground">
-           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="contact.php">
-          <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
-             Contact
-             </div>
-          </a>
-          </div>
+    <div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
+        <!-- Indicators -->
+        <div class="row">
+            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+            <a href="contact.php">
+                <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
+                    Contact
+                </div>
+            </a>
+        </div>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/IMG_9323.JPG" alt="">
+            </div>
+
+            <div class="item">
+                <img src="images/IMG_9165.JPG" alt="">
+            </div>
+
+            <div class="item">
+                <img src="images/IMG_9270.JPG" alt="">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
 
       <div class="row rowsidemargin">
       <div class="row">
