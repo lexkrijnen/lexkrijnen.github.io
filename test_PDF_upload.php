@@ -101,6 +101,7 @@
                     print("</tr>");
                     }
                 ?>
+                <td><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Click to open Modal</a></td>
             </table>
         </form>
     </div>
