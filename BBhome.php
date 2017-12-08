@@ -57,42 +57,26 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-    <div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
-        <!-- Indicators -->
-        <div class="row">
-            <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-            <a href="contact.php">
-                <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
-                    Contact
+
+
+
+        <div class="container">
+            <div class="content"><div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="row">
+                        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+                        <a href="contact.php">
+                            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
+                                Contact
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </a>
+
+            <div class="slide show" style="background-image: url('images/IMG_3258copy.JPG_3');"></div>
+            <div class="slide" style="background-image: url('images/IMG_9323.JPG');"></div>
+            <div class="slide" style="background-image: url('images/IMG_2442.JPG');"></div>
         </div>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active zindex breed">
-                <img src="images/Hard%20Work%20Vehicles_Ultra%20HD-2.jpg" alt="">
-            </div>
-
-            <div class="item zindex breed">
-                <img src="images/IMG_9165.JPG" alt="">
-            </div>
-
-            <div class="item zindex breed">
-                <img src="images/IMG_9270.JPG" alt="">
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
 
 
 
@@ -312,5 +296,29 @@
           $('.parallax').parallax();
       });
   </script>
+            <script>
+                function cycleBackgrounds() {
+                    var index = 0;
+
+                    $imageEls = $('.container .slide'); // Get the images to be cycled.
+
+                    setInterval(function () {
+                        // Get the next index.  If at end, restart to the beginning.
+                        index = index + 1 < $imageEls.length ? index + 1 : 0;
+
+                        // Show the next
+                        $imageEls.eq(index).addClass('show');
+
+                        // Hide the previous
+                        $imageEls.eq(index - 1).removeClass('show');
+                    }, 2000);
+                };
+
+                // Document Ready.
+                $(function () {
+                    cycleBackgrounds();
+                });
+
+            </script>
 	</body>
 </html>
