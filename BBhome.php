@@ -64,7 +64,7 @@
 
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <div class=" ">
+            <div class="zindex2">
                 <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 <a href="contact.php">
                     <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">

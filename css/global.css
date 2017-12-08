@@ -63,6 +63,9 @@ body {
 }
 
 
-zindex{
+.zindex{
 	z-index: -1;
+}
+.zindex2 {
+	z-index: 1;
 }
