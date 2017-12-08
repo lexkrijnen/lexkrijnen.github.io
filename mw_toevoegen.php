@@ -172,7 +172,7 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
             <td>Functie</td>
             <td>
-                Medewerker:<input type="radio" name="medewerker">
+                Medewerker:<input type="radio" name="medewerker" value="medewerker" checked>
             </td>
           </tr>
           <tr>
@@ -180,7 +180,7 @@ $hash = sha1($salt . $wachtwoord);
 
             </td>
             <td>
-                Admin:<input type="radio" name="admin">
+                Admin:<input type="radio" name="admin" value="admin">
             </td>
           </tr>
           <tr>
