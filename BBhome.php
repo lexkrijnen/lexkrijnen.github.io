@@ -71,7 +71,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active zindex breed">
-                <img src="images/IMG_9323.JPG" alt="">
+                <img src="images/Hard%20Work%20Vehicles_Ultra%20HD-2.jpg" alt="">
             </div>
 
             <div class="item zindex breed">
