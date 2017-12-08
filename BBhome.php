@@ -57,7 +57,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
         <!-- Indicators -->
         <div class="row">
             <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
@@ -75,11 +75,11 @@
             </div>
 
             <div class="item">
-                <img src="images/IMG_9165.jpg" alt="">
+                <img src="images/IMG_9165.JPG" alt="">
             </div>
 
             <div class="item">
-                <img src="images/IMG_9323.JPG" alt="">
+                <img src="images/IMG_9270.JPG" alt="">
             </div>
         </div>
 
@@ -93,6 +93,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
 
 
       <div class="row rowsidemargin">
