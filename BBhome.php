@@ -84,14 +84,14 @@
                     <img src="images/IMG_3258copy.JPG">
                 </div>
             </div>
-            <div class="row ">
+
                 <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 <a href="contact.php">
                     <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
                         Contact
                     </div>
                 </a>
-            </div>
+
             <!-- Controls -->
             <a class="left carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
