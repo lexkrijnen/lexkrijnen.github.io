@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-            <div class="slide show" style="background-image: url('images/IMG_3258copy.JPG_3');"></div>
+            <div class="slide show" style="background-image: url('images/IMG_3258copy.JPG');"></div>
             <div class="slide" style="background-image: url('images/IMG_9323.JPG');"></div>
             <div class="slide" style="background-image: url('images/IMG_2442.JPG');"></div>
         </div>
