@@ -83,7 +83,7 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>Nr.</th>
+                    <th>C.Nr.</th>
                     <th>naam</th>
                     <th>document</th>
                     <th></th>
@@ -105,7 +105,7 @@
                 <tr>
                     <td></td>
                     <td><input type="text" name="contract_nummer" size="15"></td>
-                    <td><input document="pdf" name="PDF"size="3"></td>
+                    <td><input type="file" name="PDF"></td>
                     <td><input type="submit" name="toevoegendocument" value="Toevoegen"></td>
                     <td></td>
                 </tr>
@@ -123,7 +123,7 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>Nr.</th>
+                    <th>T.Nr.</th>
                     <th>naam</th>
                     <th>document</th>
                     <th>project_nummer</th>
