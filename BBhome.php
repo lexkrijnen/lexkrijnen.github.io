@@ -70,15 +70,15 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active zindex">
                 <img src="images/IMG_9323.JPG" alt="">
             </div>
 
-            <div class="item">
+            <div class="item zindex">
                 <img src="images/IMG_9165.JPG" alt="">
             </div>
 
-            <div class="item">
+            <div class="item zindex">
                 <img src="images/IMG_9270.JPG" alt="">
             </div>
         </div>
