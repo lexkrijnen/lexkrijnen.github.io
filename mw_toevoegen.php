@@ -93,18 +93,18 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="GET">
+            <form action="klant_toevoegen.php" method="GET">
         	<tr>
-          	<td>Voornaam</td>
-            <td>
-            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
-            </td>
-					</tr>
-					<tr>
-				  	<td>Tussenvoegsel(s)</td>
-						<td>
-					  	<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
-						</td>
+          	 <td>Voornaam</td>
+                <td>
+                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+                </td>
+            </tr>
+            <tr>
+                <td>Tussenvoegsel(s)</td>
+                <td>
+                <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+                </td>
           </tr>
           <tr>
           	<td>Achternaam</td>
@@ -164,10 +164,7 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
             <td>Functie</td>
             <td>
-                Medewerker:
-            </td>
-            <td>
-              <input type="radio" name="medewerker">
+                Medewerker:<input type="radio" name="medewerker">
             </td>
           </tr>
           <tr>
@@ -175,10 +172,7 @@ $hash = sha1($salt . $wachtwoord);
 
             </td>
             <td>
-                Admin:
-            </td>
-            <td>
-              <input type="radio" name="medewerker">
+                Admin:<input type="radio" name="medewerker">
             </td>
           </tr>
           <tr>
