@@ -1,162 +1,132 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>PDF uploaden</title>
-    <link rel="stylesheet" href="css/meerminderwerk.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-    <meta name="author" content="Nard Wemes">
-    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Global styles for this website -->
-    <link href="css/global.css" rel="stylesheet">
-    <!-- Custom styles for this page -->
-    <link href="css/index.css" rel="stylesheet">
-    <?php
-    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-    $user = "wegro";
-    $pass = "SQLWegro@101";
-    $pdo = new PDO($db, $user, $pass);
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+        <meta name="author" content="Nard Wemes">
+        <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
-        if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-        } else {
-            print("Vul A.U.B. een beschrijving in.");
-        }
-    }
+        <title>Mijn profiel</title>
 
-    if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
-        if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-        } else {
-            print("Vul A.U.B. een beschrijving in.");
-        }
-    }
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-    $stmt->execute();
-    $meerwerk = $stmt->fetchAll();
+        <!-- Global styles for this website -->
+        <link href="css/global.css" rel="stylesheet">
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
-    $minderwerk = $stmt2->fetchAll();
-    ?>
-</head>
-<body>
-<!--NAVBAR-->
-<nav class="navbar navbar-default" role="navigation">
+        <!-- Custom styles for this page -->
+        <link href="css/test_profile.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+        $stmt->execute();
+        $meerwerk = $stmt->fetchAll();
+
+        $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
+        $stmt2->execute();
+        $minderwerk = $stmt2->fetchAll();
+        ?>
+	</head>
+  <body>
+  	<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+				        <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="contact.php">Contact</a></li>
+						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
+                        <li class="nav-item"><a href="index.php">Uitloggen</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a href="login.php">Uitloggen</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-
-<!--Contract-->
-<div class="container page-box">
-    <div class="col-xs-4">
-        <h1>Contract</h1>
-        <form method="get" action="meermindertoevoegen.php">
+    	<div class="row">
+    		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+            <!--Contract-->
+            <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>C.Nr</th>
-                    <th>Naam</th>
-                    <th>Document</th>
-                    <th></th>
-                    <th></th>
+                    <thead>
+                        <th><h3><b>Contract</b></h3></th>
+                    </thead>
                 </tr>
                 <?php
-                $meerwerkcount = 1;
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
-                    $meerwerkcount++;
-                }
+                    }
                 ?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><input type="file" name="PDF"></td>
-                    <td></td>
-                    <td><input type="submit" name="toevoegendocument" value="Toevoegen"></td>
-                </tr>
             </table>
         </form>
-    </div>
-
-
-    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
-
-
-    <!--Tekening-->
-    <div class="col-xs-4">
-        <h1>Tekening</h1>
+    <br>
+        <!--Tekening-->
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>T.Nr</th>
-                    <th>Naam</th>
-                    <th>Document</th>
-                    <th>Project_nr</th>
-                    <th></th>
-                    <th></th>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
                 </tr>
                 <?php
-                $minderwerkcount = 1;
                 foreach ($minderwerk AS $werk2) {
                     print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td>" . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
-                    $minderwerkcount++;
-                }
+                    }
                 ?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><input type="file" name="PDF"></td>
-                    <td></td>
-                    <td></td>
-                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-                    <td></td>
-                </tr>
             </table>
         </form>
     </div>
-</div>
-<?php $pdo = NULL; ?>
-</body>
+        <?php $pdo = NULL; ?>
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+
+    			<!-- If embedded pdf does not work, display fallback option instead. -->
+    			<div class="pdf-fail">
+						<p>Problemen met het bekijken?</p>
+						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+    			</div>
+            </div>
+    </div>
+        </div><!-- /.container -->
+
+		<div class="row">
+			<div class="col-xs-12 text-center footer-rights">
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Framework -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
