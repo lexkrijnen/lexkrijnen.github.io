@@ -20,7 +20,7 @@ if (isset($_GET["vinden"])) {
     $achternaam = $klant["achternaam"];
     $klant_nummer = $klant["klant_nummer"];
     $telefoonnummer = $klant["telefoon_nummer"];
-    $emailadres =  $klant["e-mailadres"];
+    $emailadres =  $klant["emailadres"];
     $adres = $klant["adres"];
     $postcode = $klant["postcode"];
     $woonplaats = $klant["woonplaats"];
