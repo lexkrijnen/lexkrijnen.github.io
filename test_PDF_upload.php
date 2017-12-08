@@ -123,10 +123,11 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>T.Nr.</th>
-                    <th>naam</th>
-                    <th>document</th>
-                    <th>project_nummer</th>
+                    <th>T.Nr</th>
+                    <th>Naam</th>
+                    <th>Document</th>
+                    <th>Project_nr</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 <?php
@@ -136,6 +137,7 @@
                     print("<td>" . $minderwerkcount . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
                     print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td>" . "</td>");
                     print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
                     print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
@@ -146,6 +148,7 @@
                     <td></td>
                     <td></td>
                     <td><input type="file" name="PDF"></td>
+                    <td></td>
                     <td></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
                     <td></td>
