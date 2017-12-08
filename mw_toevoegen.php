@@ -59,7 +59,7 @@ $hash = sha1($salt . $wachtwoord);
 		<meta name="author" content="Nard Wemes">
 		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-		<title>Klant toevoegen</title>
+		<title>Medewerker toevoegen</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -101,7 +101,7 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-            <form action="klant_toevoegen.php" method="GET">
+            <form action="mw_toevoegen.php" method="GET">
         	<tr>
           	 <td>Voornaam</td>
                 <td>
@@ -234,7 +234,7 @@ $hash = sha1($salt . $wachtwoord);
             } else {
                 ///succes
                 print("<div class=\"alert alert-success\" role=\"alert\">");
-                print("<br>" . $naam . " is successvol toegevoegd als klant.");
+                print("<br>" . $naam . " is successvol toegevoegd als medewerker.");
                 print("</div>");
             }
         }
