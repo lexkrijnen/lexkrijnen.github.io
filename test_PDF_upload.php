@@ -86,6 +86,8 @@
                     <th>contract_nummer</th>
                     <th>naam</th>
                     <th>document</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <?php
                 $meerwerkcount = 1;
