@@ -45,6 +45,7 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="index.php">Terug</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
