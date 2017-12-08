@@ -84,7 +84,7 @@
                     <img src="images/IMG_3258copy.JPG">
                 </div>
             </div>
-            <div class="row ">
+            <div class=" ">
                 <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 <a href="contact.php">
                     <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
