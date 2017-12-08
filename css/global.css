@@ -64,8 +64,8 @@ body {
 
 
 .zindex{
-	z-index: -1;
+	z-index: -1 !important;
 }
 .zindex2 {
-	z-index: 1;
+	z-index: 1 !important;
 }
