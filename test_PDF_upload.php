@@ -106,8 +106,8 @@
                     <td></td>
                     <td><input type="text" name="contract_nummer" size="15"></td>
                     <td><input type="file" name="PDF"></td>
-                    <td><input type="submit" name="toevoegendocument" value="Toevoegen"></td>
                     <td></td>
+                    <td><input type="submit" name="toevoegendocument" value="Toevoegen"></td>
                 </tr>
             </table>
         </form>
