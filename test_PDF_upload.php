@@ -76,7 +76,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<!--MEER WERK-->
+<!--Contract-->
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Contract</h1>
@@ -104,7 +104,7 @@
                 ?>
                 <tr>
                     <td></td>
-                    <td><input type="text" name="contract_nummer" size="15"></td>
+                    <td></td>
                     <td><input type="file" name="PDF"></td>
                     <td></td>
                     <td><input type="submit" name="toevoegendocument" value="Toevoegen"></td>
@@ -117,7 +117,7 @@
     <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
 
-    <!--MINDER WERK-->
+    <!--Tekening-->
     <div class="col-xs-4">
         <h1>Tekening</h1>
         <form method="get" action="meermindertoevoegen.php">
@@ -127,6 +127,7 @@
                     <th>naam</th>
                     <th>document</th>
                     <th>project_nummer</th>
+                    <th></th>
                 </tr>
                 <?php
                 $minderwerkcount = 1;
@@ -143,8 +144,9 @@
                 ?>
                 <tr>
                     <td></td>
-                    <td><input type="text" name="beschrijving" size="15"></td>
-                    <td><input type="text" name="prijs"size="3"></td>
+                    <td></td>
+                    <td><input type="file" name="PDF"></td>
+                    <td></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
                     <td></td>
                 </tr>

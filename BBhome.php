@@ -56,7 +56,7 @@
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
-		</nav>
+		</nav><div class="container">
     <div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
         <!-- Indicators -->
         <div class="row">
