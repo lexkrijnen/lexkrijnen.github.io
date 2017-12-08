@@ -52,8 +52,8 @@
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
                         <li class="nav-item"><a href="#Contact">Contact</a></li>
-
-					</ul><li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
+					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
