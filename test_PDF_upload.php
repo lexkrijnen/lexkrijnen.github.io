@@ -123,10 +123,10 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>T.Nr.</th>
-                    <th>naam</th>
-                    <th>document</th>
-                    <th>project_nummer</th>
+                    <th>T.Nr</th>
+                    <th>Naam</th>
+                    <th>Document</th>
+                    <th>Project_nr</th>
                     <th></th>
                 </tr>
                 <?php
