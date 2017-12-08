@@ -8,6 +8,14 @@ $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
 $postcode = $_GET["postcode"];
+$functie = "";
+
+if(isset($_GET['medewerker'])) {
+    $functie = '1';
+} elseif (isset($_GET['admin'])) {
+    $functie = '2';
+}
+
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -16,9 +24,9 @@ $pdo = new PDO($db, $user, $pass);
 
 if (isset($_GET["aanmaken"])) {
 
-	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
+	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"])), $functie;
 
 }
 
@@ -93,18 +101,18 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="GET">
+            <form action="klant_toevoegen.php" method="GET">
         	<tr>
-          	<td>Voornaam</td>
-            <td>
-            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
-            </td>
-					</tr>
-					<tr>
-				  	<td>Tussenvoegsel(s)</td>
-						<td>
-					  	<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
-						</td>
+          	 <td>Voornaam</td>
+                <td>
+                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+                </td>
+            </tr>
+            <tr>
+                <td>Tussenvoegsel(s)</td>
+                <td>
+                <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+                </td>
           </tr>
           <tr>
           	<td>Achternaam</td>
@@ -164,10 +172,7 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
             <td>Functie</td>
             <td>
-                Medewerker:
-            </td>
-            <td>
-              <input type="radio" name="medewerker">
+                Medewerker:<input type="radio" name="medewerker">
             </td>
           </tr>
           <tr>
@@ -175,10 +180,7 @@ $hash = sha1($salt . $wachtwoord);
 
             </td>
             <td>
-                Admin:
-            </td>
-            <td>
-              <input type="radio" name="medewerker">
+                Admin:<input type="radio" name="admin">
             </td>
           </tr>
           <tr>

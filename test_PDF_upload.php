@@ -79,13 +79,13 @@
 <!--MEER WERK-->
 <div class="container page-box">
     <div class="col-xs-4">
-        <h1>Conrtact</h1>
+        <h1>Contract</h1>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>C.Nr.</th>
-                    <th>naam</th>
-                    <th>document</th>
+                    <th>C.Nr</th>
+                    <th>Naam</th>
+                    <th>Document</th>
                     <th></th>
                     <th></th>
                 </tr>
