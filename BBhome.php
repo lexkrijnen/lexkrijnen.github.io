@@ -56,7 +56,7 @@
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
-		</nav>
+		</nav><div class="container">
     <div id="myCarousel" class="carousel slide zindex" data-ride="carousel">
         <!-- Indicators -->
         <div class="row">
@@ -70,15 +70,15 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active zindex">
                 <img src="images/IMG_9323.JPG" alt="">
             </div>
 
-            <div class="item">
+            <div class="item zindex">
                 <img src="images/IMG_9165.JPG" alt="">
             </div>
 
-            <div class="item">
+            <div class="item zindex">
                 <img src="images/IMG_9270.JPG" alt="">
             </div>
         </div>
