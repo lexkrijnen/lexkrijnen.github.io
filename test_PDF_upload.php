@@ -83,7 +83,7 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>contract_nummer</th>
+                    <th>Nr.</th>
                     <th>naam</th>
                     <th>document</th>
                     <th></th>
@@ -123,7 +123,7 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover">
                 <tr>
-                    <th>tekening_nummer</th>
+                    <th>Nr.</th>
                     <th>naam</th>
                     <th>document</th>
                     <th>project_nummer</th>
