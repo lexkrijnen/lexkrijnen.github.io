@@ -128,6 +128,7 @@
                     <th>Document</th>
                     <th>Project_nr</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 <?php
                 $minderwerkcount = 1;
@@ -146,6 +147,7 @@
                     <td></td>
                     <td></td>
                     <td><input type="file" name="PDF"></td>
+                    <td></td>
                     <td></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
                     <td></td>
