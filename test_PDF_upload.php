@@ -95,7 +95,18 @@
                             <div class="modal-body">
                                 <table>
                                     <tr>
-                                        <th><h3>contract</h3></th>
+                                        <th>C.nr</th>
+                                        <th>Naam</th>
+                                        <th>Document</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="beschrijving" size="15"></td>
+                                        <td><input type="text" name="prijs"size="3"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                        <td></td>
                                     </tr>
                                 </table>
                             </div>
