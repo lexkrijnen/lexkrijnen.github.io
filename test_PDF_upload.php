@@ -93,7 +93,11 @@
                             <h4 class="modal-title" id="myModalLabel">Contract uploaden</h4>
                             </div>
                             <div class="modal-body">
-                                <h3>Modal Body</h3>
+                                <table>
+                                    <tr>
+                                        <th><h3>contract</h3></th>
+                                    </tr>
+                                </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
