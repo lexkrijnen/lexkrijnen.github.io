@@ -42,7 +42,8 @@ tbody{
 }
 
 .btn-primary{
-    background-color: #FFA500;
+    color: #FFA500;
+    border-color: #FFA500;
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
