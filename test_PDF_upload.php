@@ -118,7 +118,6 @@
                                             <th>Naam</th>
                                             <th>Document</th>
                                             <th></th>
-                                            <th></th>
                                         </thead>
                                     </tr>
                                     <tr>
@@ -126,7 +125,7 @@
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                                        <td></td>
+
                                     </tr>
                                 </table>
                                 <br>
@@ -137,7 +136,6 @@
                                             <th>Naam</th>
                                             <th>Document</th>
                                             <th></th>
-                                            <th></th>
                                         </thead>
                                     </tr>
                                     <tr>
@@ -145,7 +143,6 @@
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                                        <td></td>
                                     </tr>
                                 </table>
                             </div>
