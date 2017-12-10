@@ -53,9 +53,10 @@ if (empty($klant_id)) {
     $sql = "SELECT * FROM project WHERE klant_nummer = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($klant_id));
+    $queryresult = $stmt->fetchAll();
 
     print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam);
-    var_dump($stmt);
+    var_dump($queryresult);
 ?>
 
 <div class="container page-box">
