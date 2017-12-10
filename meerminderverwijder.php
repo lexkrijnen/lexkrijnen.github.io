@@ -56,7 +56,7 @@
                     $stmt->execute(array($nummer));
                     if ($stmt->rowCount() == 1) {
                         print("De mutatie is verwijderd.<br>");
-                        print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />'); //ID TOEVOEGEN AAN DEZE LINK!!!
+                        print('<META HTTP-EQUIV="Refresh" Content="0; URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');
                     } else {
                         print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
                     }
