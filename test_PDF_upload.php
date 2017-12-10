@@ -122,9 +122,9 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td><input type="text" name="beschrijving" size="15"></td>
-                                        <td><input type="file" name="pdf"></td>
+                                        <td><input type="text" name="contract nummer"></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
                                         <td></td>
                                     </tr>
@@ -141,9 +141,9 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td><input type="text" name="beschrijving" size="15"></td>
-                                        <td><input type="file" name="pdf"></td>
+                                        <td><input type="text" name="tekening nummer"></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
                                         <td></td>
                                     </tr>
