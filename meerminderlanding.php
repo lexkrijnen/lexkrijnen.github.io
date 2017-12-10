@@ -18,6 +18,22 @@
     <link href="css/index.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <?php
+    if (empty($klant_id)) {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+    } else {
+
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
+    $pdo = new PDO($db, $user, $pass);
+
+    $sql = "SELECT * FROM Project WHERE klant_nummer = :klant_id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(':klant_id' => $klant_id));
+    $queryresult = $stmt->fetchAll();
+    ?>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -39,38 +55,18 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<?php
-if (empty($klant_id)) {
-    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-    print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} else {
-
-    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-    $user = "wegro";
-    $pass = "SQLWegro@101";
-    $pdo = new PDO($db, $user, $pass);
-
-    $sql = "SELECT * FROM Project WHERE klant_nummer = :klant_id";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(':klant_id' => $klant_id));
-    $queryresult = $stmt->fetchAll();
-
-    print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
-    print_r($queryresult);
-
-
-    foreach ( $queryresult as $var ) {
-        print ("\n" . $var['naam']);
-    }
-?>
-
 <div class="container page-box">
     <div class="col-xs-12 col-md-12">
         <h1>Meer/Minder Werk</h1>
 
         <ul>
-            <li><a href="meerminderinzien.php">Meer/Minder Werk inzien</a></li>
-            <li><a href="#">Contracten inzien</a></li>
+            <?php
+            print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
+
+            foreach ( $queryresult as $value ) {
+                print ('<li><a href="#">' . $value['naam'] . '</a></li><br>');
+            }
+            ?>
         </ul>
     </div>
 </div>
