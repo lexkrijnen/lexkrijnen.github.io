@@ -29,6 +29,7 @@
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
         print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
         print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
+        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');
     }
 
     $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
