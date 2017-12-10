@@ -139,7 +139,7 @@
             print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
         }
         ?>
-        <form method="get" action="meermindertoevoegen.php">
+        <form method="get" action="meermindertoevoegen.php?id=2">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
