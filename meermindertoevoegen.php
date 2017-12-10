@@ -107,7 +107,7 @@
                     print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
                     print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $meerwerkcount++;
@@ -122,6 +122,7 @@
                 </tr>
             </table>
         </form>
+        <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 
 
