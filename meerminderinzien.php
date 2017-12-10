@@ -73,9 +73,7 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
-        <?php
-        print("<h5>Projectnaam: " . $naamproject['naam'] . "</h5>");;
-        ?>
+        <?php print("<h5>Projectnaam: " . $naamproject['naam'] . "</h5>"); ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -104,7 +102,7 @@
     <!--MINDER WERK-->
     <div class="col-xs-4">
         <h1>Minder Werk</h1>
-        <?php print("<h5>Projectnaam: " . $naamproject . "</h5>"); ?>
+        <?php print("<h5>Projectnaam: " . $naamproject['naam'] . "</h5>"); ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
