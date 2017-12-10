@@ -58,13 +58,13 @@
 <div class="container page-box">
     <div class="col-xs-12 col-md-12">
         <h1>Meer/Minder Werk</h1>
-        <p>Meer/Minder Werk inzien van mij projecten:</p>
+        <p>Meer/Minder Werk inzien van mijn projecten:</p>
         <ul>
             <?php
             print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
 
             foreach ( $queryresult as $value ) {
-                print ('<li><a href="#">' . $value['naam'] . '</a></li>');
+                print ('<li><p>Project: </p></a><a href="#">' . $value['naam'] . '</a></li>');
             }
             ?>
         </ul>
