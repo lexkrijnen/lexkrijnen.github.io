@@ -108,10 +108,10 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Contract uploaden</h4>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden uploaden</h4>
                             </div>
                             <div class="modal-body">
-                                <table>
+                                <table class="table table-hover">
                                     <tr>
                                         <th>C.nr</th>
                                         <th>Naam</th>
@@ -128,7 +128,7 @@
                                     </tr>
                                 </table>
                                 <br>
-                                <table>
+                                <table class="table table-hover">
                                     <tr>
                                         <th>T.nr</th>
                                         <th>Naam</th>
