@@ -110,7 +110,7 @@
                                     </tr>
                                 </table>
                                 <br>
-                                                                <table>
+                                <table>
                                     <tr>
                                         <th>T.nr</th>
                                         <th>Naam</th>
@@ -160,15 +160,45 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title" id="myModalLabel">Tekening uploaden</h4>
                             </div>
-                            <div class="modal-body">
-                                <h3>Modal Body</h3>
+                                <table>
+                                    <tr>
+                                        <th>T.nr</th>
+                                        <th>Naam</th>
+                                        <th>Document</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="beschrijving" size="15"></td>
+                                        <td><input type="file" name="pdf"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            <br>
+                                <table>
+                                    <tr>
+                                        <th>C.nr</th>
+                                        <th>Naam</th>
+                                        <th>Document</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="beschrijving" size="15"></td>
+                                        <td><input type="file" name="pdf"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
-                    </div>
                 </div>
         </form>
     </div>
