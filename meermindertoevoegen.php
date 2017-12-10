@@ -19,6 +19,7 @@
     <link href="css/index.css" rel="stylesheet">
     <?php
     $contract_nummer = $_GET['id'];
+    $error = "";
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
@@ -31,7 +32,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $contract_nummer, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
-            print("Vul A.U.B. een beschrijving in.");
+            $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
 
@@ -41,7 +42,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $contract_nummer, 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
-            print("Vul A.U.B. een beschrijving in.");
+            $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
     //TABEL MEER WERK
@@ -124,6 +125,10 @@
                 </tr>
             </table>
         </form>
+        <?php
+        if ($error != "") {
+            print('<div class="alert alert-warning container page-box" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">' . $error . '</div>');
+        } ?>
         <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 
@@ -172,8 +177,6 @@
         </form>
     </div>
 </div>
-<?php
-print($contract_nummer);
-$pdo = NULL; ?>
+<?php $pdo = NULL; ?>
 </body>
 </html>
