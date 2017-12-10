@@ -18,7 +18,9 @@ th > h3 > b{
     color: #FFFFFF;
     margin: 10px 10px 10px 10px; /* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
 }
-
+th{
+    color:#FFFFFF;
+}
 thead{
     background-color: #FFA500;
     border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
