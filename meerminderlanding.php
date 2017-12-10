@@ -50,7 +50,7 @@ if (empty($klant_id)) {
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM project WHERE klant_nummer = :klant_id";
+    $sql = "SELECT * FROM Project WHERE klant_nummer = :klant_id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
