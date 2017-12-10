@@ -76,7 +76,9 @@
         }
         ?>
         <br>
-        <a href="meermindertoevoegen.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
+        <?php
+        print("<a href=\"meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        ?>
     </div>
 </div>
 </body>
