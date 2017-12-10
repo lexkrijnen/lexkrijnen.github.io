@@ -42,14 +42,20 @@
             print("Vul A.U.B. een beschrijving in.");
         }
     }
-
+    //TABEL MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
     $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
+    //TABEL MINDER WERK
     $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
     $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
+
+    //NAAM PROJECT
+    $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+    $stmt3->execute(array(':contract_nummer' => $_GET['id']));
+    $naamproject = $stmt3->fetchAll();
     ?>
 </head>
 <body>
@@ -80,7 +86,11 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -121,7 +131,11 @@
     <!--MINDER WERK-->
     <div class="col-xs-4">
         <h1>Minder Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
