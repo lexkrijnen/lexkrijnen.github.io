@@ -109,6 +109,23 @@
                                         <td></td>
                                     </tr>
                                 </table>
+                                <br>
+                                                                <table>
+                                    <tr>
+                                        <th>T.nr</th>
+                                        <th>Naam</th>
+                                        <th>Document</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="beschrijving" size="15"></td>
+                                        <td><input type="file" name="pdf"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
