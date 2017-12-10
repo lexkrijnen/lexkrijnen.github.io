@@ -114,9 +114,9 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <thead>
-                                            <th>C.nr</th>
-                                            <th>Naam</th>
-                                            <th>Document</th>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
                                             <th></th>
                                         </thead>
                                     </tr>
@@ -132,9 +132,9 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <thead>
-                                            <th>T.nr</th>
-                                            <th>Naam</th>
-                                            <th>Document</th>
+                                            <th><b>T.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
                                             <th></th>
                                         </thead>
                                     </tr>
