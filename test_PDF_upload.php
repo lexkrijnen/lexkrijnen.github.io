@@ -113,11 +113,13 @@
                             <div class="modal-body">
                                 <table class="table table-hover">
                                     <tr>
-                                        <th>C.nr</th>
-                                        <th>Naam</th>
-                                        <th>Document</th>
-                                        <th></th>
-                                        <th></th>
+                                        <thead>
+                                            <th>C.nr</th>
+                                            <th>Naam</th>
+                                            <th>Document</th>
+                                            <th></th>
+                                            <th></th>
+                                        </thead>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -130,11 +132,13 @@
                                 <br>
                                 <table class="table table-hover">
                                     <tr>
-                                        <th>T.nr</th>
-                                        <th>Naam</th>
-                                        <th>Document</th>
-                                        <th></th>
-                                        <th></th>
+                                        <thead>
+                                            <th>T.nr</th>
+                                            <th>Naam</th>
+                                            <th>Document</th>
+                                            <th></th>
+                                            <th></th>
+                                        </thead>
                                     </tr>
                                     <tr>
                                         <td></td>
