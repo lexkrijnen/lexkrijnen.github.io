@@ -112,18 +112,14 @@
       <div class="modal-body">
         <tabel>
                 <tr>
-                    <thead>
                         <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
                 </tr>
                 <tr>
-                    <tbody>
                         <td></td>
                         <td><input type="text" name="beschrijving" size="15"></td>
                         <td><input type="text" name="prijs"size="3"></td>
                         <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
                         <td></td>
-                    </tbody>
                 </tr>
         </tabel>
       </div>
