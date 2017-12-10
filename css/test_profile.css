@@ -40,6 +40,10 @@ td{
 tbody{
     background-color: #FFE1B9;
 }
+.btn-lg{
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
 
 .btn-primary{
     background-color: #FFA500;
