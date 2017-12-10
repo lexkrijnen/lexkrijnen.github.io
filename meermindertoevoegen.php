@@ -120,7 +120,7 @@
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                    <td></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
