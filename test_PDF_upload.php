@@ -111,7 +111,7 @@
                             <h4 class="modal-title" id="myModalLabel">Bestanden uploaden</h4>
                             </div>
                             <div class="modal-body">
-                                <table class="table table-hover">
+                                <table class="table table-hover" border="0">
                                     <tr>
                                         <thead>
                                             <th>C.nr</th>
@@ -130,7 +130,7 @@
                                     </tr>
                                 </table>
                                 <br>
-                                <table class="table table-hover">
+                                <table class="table table-hover" border="0">
                                     <tr>
                                         <thead>
                                             <th>T.nr</th>
