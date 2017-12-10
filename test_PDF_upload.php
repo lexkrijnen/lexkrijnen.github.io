@@ -84,6 +84,24 @@
                     }
                 ?>
             </table>
+        </form>
+    <br>
+        <!--Tekening-->
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($minderwerk AS $werk2) {
+                    print("<tr>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand uploaden</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
@@ -133,72 +151,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-        </form>
-    <br>
-        <!--Tekening-->
-        <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover">
-                <tr>
-                    <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
-                </tr>
-                <?php
-                foreach ($minderwerk AS $werk2) {
-                    print("<tr>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("</tr>");
-                    }
-                ?>
-            </table>
-                <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand uploaden</a>
-                <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Tekening uploaden</h4>
-                            </div>
-                                <table>
-                                    <tr>
-                                        <th>T.nr</th>
-                                        <th>Naam</th>
-                                        <th>Document</th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="beschrijving" size="15"></td>
-                                        <td><input type="file" name="pdf"></td>
-                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                            <br>
-                                <table>
-                                    <tr>
-                                        <th>C.nr</th>
-                                        <th>Naam</th>
-                                        <th>Document</th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="beschrijving" size="15"></td>
-                                        <td><input type="file" name="pdf"></td>
-                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
                 </div>
         </form>
     </div>
