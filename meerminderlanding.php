@@ -64,7 +64,7 @@
             print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
 
             foreach ( $queryresult as $value ) {
-                print ('<li><p>Project: </p></a><a href="#">' . $value['naam'] . '</a></li>');
+                print ('<li>Project: </a><a href="#">' . $value['naam'] . '</a></li>');
             }
             ?>
         </ul>
