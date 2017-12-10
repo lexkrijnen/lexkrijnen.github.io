@@ -61,10 +61,8 @@
         <p>Meer/Minder Werk inzien van mijn projecten:</p>
         <ul>
             <?php
-            print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
-
             foreach ( $queryresult as $value ) {
-                print ('<li>Project: </a><a href="#">' . $value['naam'] . '</a></li>');
+                print ('<li>Project: </a><a href="meerminderinzien.php?projectid=' . $value['contract_nummer'] . '>' . $value['naam'] . '</a></li>');
             }
             ?>
         </ul>
