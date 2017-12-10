@@ -143,7 +143,6 @@
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
-                    <th>Contract</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
                     <th></th>
@@ -164,7 +163,6 @@
                 ?>
                 <tr>
                     <td></td>
-                    <td><input type="text" name="id" value="<?php print($_GET['id']);?>" disabled></td>
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
