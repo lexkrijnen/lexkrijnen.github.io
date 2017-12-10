@@ -74,8 +74,7 @@
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
         <?php print("<h5>Projectnaam: " . $naamproject . "</h5>")
-        var_dump($naamproject);
-        ; ?>
+        var_dump($naamproject); ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
