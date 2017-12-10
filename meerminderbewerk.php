@@ -18,6 +18,8 @@
     <!-- Custom styles for this page -->
     <link href="css/index.css" rel="stylesheet">
     <?php
+    $message = "";
+
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -27,7 +29,8 @@
         $sql = "UPDATE Mutatie SET beschrijving=?, prijs=? WHERE mutatie_id=?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
-        print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
+        $message = "De wijzigingen zijn opgeslagen.";
+        //print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
         //print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
         print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');
     }
@@ -85,7 +88,11 @@
              </table>
         </form>
         <?php
+        if ($message != "") {
+            print('<div class="alert alert-success container page-box"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> '. $message . '</div>');
+        }
         print("<a href=\"meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        $message = ""; //CLEARS OUT MESSAGES
         ?>
     </div>
 </div>
