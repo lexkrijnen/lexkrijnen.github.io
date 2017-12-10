@@ -58,8 +58,9 @@ if (empty($klant_id)) {
     print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
     print_r($queryresult);
 
-    foreach ($queryresult AS $key => $value) {
-    print($value);
+
+    foreach ( $queryresult as $var ) {
+        print ("\n" . $var['naam']);
     }
 ?>
 
