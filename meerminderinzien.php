@@ -24,12 +24,12 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-    $stmt->execute();
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
+    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
+    $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
     ?>
 </head>
