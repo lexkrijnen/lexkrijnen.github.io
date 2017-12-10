@@ -56,7 +56,7 @@ if (empty($klant_id)) {
     $queryresult = $stmt->fetchAll();
 
     print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam . ". ");
-    var_dump($queryresult);
+    print_r($queryresult);
 ?>
 
 <div class="container page-box">
