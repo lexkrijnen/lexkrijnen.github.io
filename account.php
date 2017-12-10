@@ -58,9 +58,24 @@
 
     <div class="container page-box">
         <div class="col-xs-12 col-md-12">
-            <h1>Gefeliciteerd, Je bent ingelogd.</h1>
+            <?php
+            $hour = date('H', time());
+
+            if( $hour > 6 && $hour <= 11) {
+                print("<h1>Goedemorgen, " . $klant_voornaam . "</h1>");
+            }
+            else if($hour > 11 && $hour <= 16) {
+                print("<h1>Goedemiddag, " . $klant_voornaam . "</h1>");
+            }
+            else if($hour > 16 && $hour <= 23) {
+                print("<h1>Goedenavond, " . $klant_voornaam . "</h1>");
+            }
+            else {
+                print("<h1>Hallo, " . $klant_voornaam . "</h1>");
+            }
+            ?>
             <ul>
-                <li><a href="meerminderinzien.php">Meer/Minder Werk inzien</a></li>
+                <li><a href="meerminderlanding.php">Meer/Minder Werk inzien</a></li>
                 <li><a href="#">Contracten inzien</a></li>
             </ul>
         </div>
