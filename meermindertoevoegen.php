@@ -43,8 +43,8 @@
         }
     }
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-    $stmt->execute();
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
     $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
