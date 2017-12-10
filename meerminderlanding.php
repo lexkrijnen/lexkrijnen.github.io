@@ -50,15 +50,12 @@ if (empty($klant_id)) {
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-    $stmt->execute();
-    $meerwerk = $stmt->fetchAll();
-
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
-    $minderwerk = $stmt2->fetchAll();
+    $sql = "SELECT * FROM project WHERE klant_nummer = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($klant_id));
 
     print("HIER HET KLANT_ID: " . $klant_id . " EN VOORNAAM: " . $klant_voornaam);
+    var_dump($stmt);
 ?>
 
 <div class="container page-box">
