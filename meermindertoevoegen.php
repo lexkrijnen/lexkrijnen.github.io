@@ -18,7 +18,6 @@
     <!-- Custom styles for this page -->
     <link href="css/index.css" rel="stylesheet">
     <?php
-    $contract_nummer = $_GET['id'];
     $error = "";
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -30,7 +29,7 @@
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $contract_nummer, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
             $error = ("Vul A.U.B. een beschrijving in.");
         }
@@ -40,7 +39,7 @@
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $contract_nummer, 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
             $error = ("Vul A.U.B. een beschrijving in.");
         }
@@ -171,7 +170,7 @@
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-                    <td></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
