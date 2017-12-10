@@ -98,6 +98,7 @@
                 ?>
             </table>
         </form>
+        <a href="meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
     </div>
 
 
@@ -132,7 +133,6 @@
             </table>
         </form>
     </div>
-    <a href="meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
 </div>
 <?php $pdo = NULL; ?>
 </body>
