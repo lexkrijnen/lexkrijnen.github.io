@@ -127,7 +127,7 @@
         </form>
         <?php
         if ($error != "") {
-            print('<div class="alert alert-warning container page-box" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">' . $error . '</div>');
+            print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">' . $error . '</div>');
         } ?>
         <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
