@@ -32,6 +32,13 @@
 	</head>
   <body>
 
+  <script>
+		$(document).ready(function() {
+			$('.slider-demo').bscSlider({
+				effect: 1;
+			});
+		})
+	</script>
 
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -352,12 +359,5 @@
 
       });
   </script>-->
-  <script>
-		$(document).ready(function() {
-			$('.slider-demo').bscSlider({
-				effect: 1;
-			});
-		});
-	</script>
 	</body>
 </html>
