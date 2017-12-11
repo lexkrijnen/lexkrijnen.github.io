@@ -99,7 +99,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["naam"] . <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a> . "</td>");
+                    print("<td>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
