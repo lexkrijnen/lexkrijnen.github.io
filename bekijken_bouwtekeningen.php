@@ -115,8 +115,8 @@ $pdo = NULL;
             } elseif ($project_nummer != "") {
                 print("<div class=container>");
                 print("<ul clas=\"nav nav-tabs\">");
-                print("<li class=\"active\"><a href=\"#informatie\" data-toggle=\"tab\">informatie</a></li>");
-                print("<li><a href=\"#bouwtekeningen\" data-toggle=\"tab\">bouwtekeningen</a></li>");
+                print("<li role=\"presentation\" class=\"active\"><a href=\"#informatie\" data-toggle=\"tab\">informatie</a></li>");
+                print("<li role=\"presentation\" ><a href=\"#bouwtekeningen\" data-toggle=\"tab\">bouwtekeningen</a></li>");
                 print("</ul>");
 
                 print("<div class=\"tab-content\">");
