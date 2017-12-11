@@ -301,8 +301,11 @@
 
 
 
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
+
+		<!-- jQuery UI (waaaay to big, needs to be slimmed down after the project is finished) -->
+		<script src="js/jquery-ui.min.js"></script>
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
