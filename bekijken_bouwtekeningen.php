@@ -113,19 +113,22 @@ $pdo = NULL;
                       "</div>");
             //project gevonden
             } elseif ($project_nummer != "") {
-                print("<div class=container><table>");
-                print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
-                print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
-                print("<tr><td>Status:</td><td>$status</td></tr>");
-                print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
-                print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
-                print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
-                print("</table>");
-                print("<div class=well>");
-                print("<img src=\"images/IMG_7017.JPG\">");
-                print("<img src=\"images/IMG_7020.JPG\">");
-                print("<img src=\"images/IMG_7028.JPG\">");
-                print("</div>");
+                print("<div class=container>");
+                 print("<table>");
+                  print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
+                  print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
+                  print("<tr><td>Status:</td><td>$status</td></tr>");
+                  print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+                  print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
+                  print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
+                 print("</table>");
+                 print("<div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\">");
+                  print("<div class=well>");
+                   print("<img src=\"images/IMG_7017.JPG\">");
+                   print("<img src=\"images/IMG_7020.JPG\">");
+                   print("<img src=\"images/IMG_7028.JPG\">");
+                  print("</div>");
+                 print("</div>");
                 print("</div>");
             }
         }
