@@ -61,3 +61,32 @@ body {
 	border: none;
 	border-bottom: 4px solid #FE9C16;
 }
+
+.select-btn {
+	margin-bottom: 20px;
+	background-color: #FE9C16;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid #A5650E;
+}
+
+.select-btn:hover {
+	background-color: #FE9C16;
+	margin-top: 4px;
+	margin-bottom: 16px;
+	padding-top: 4px;
+	border-bottom: 4px solid #FE9C16;
+}
+
+.select-logo {
+	margin-top: 15px;
+	width: 250px;
+}
+
+.select-title {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: #fff;
+	font-size: 32px;
+	font-weight: bold;
+}
