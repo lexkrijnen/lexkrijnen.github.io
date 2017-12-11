@@ -102,6 +102,57 @@
                     }
                 ?>
             </table>
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand uploaden</a>
+                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden uploaden</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <thead>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table class="table table-hover">
+                                    <tr>
+                                        <thead>
+                                            <th><b>T.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary"><b>Save changes</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </form>
     </div>
         <?php $pdo = NULL; ?>

@@ -56,7 +56,7 @@
                     $stmt->execute(array($nummer));
                     if ($stmt->rowCount() == 1) {
                         print("De mutatie is verwijderd.<br>");
-                        print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
+                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">'); // WERKT NOG NIET? CONTROLEREN!!!
                     } else {
                         print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
                     }
@@ -76,7 +76,9 @@
         }
         ?>
         <br>
-        <a href="meermindertoevoegen.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
+        <?php
+        print("<a href=\"meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        ?>
     </div>
 </div>
 </body>

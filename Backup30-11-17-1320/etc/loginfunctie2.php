@@ -28,7 +28,7 @@ if(isset($_GET['e-mailadres']) && !empty($_GET['e-mailadres']) AND isset($_GET['
 }
 ?>
 <body>
-<form action="/loginfunctie2.php" method="get">
+<form action="/Backup30-11-17-1320/etc/loginfunctie2.php" method="get">
     E-mailadres<br>
     <input type="text" name="e-mailadres" value="e-mailadres">
     <br>

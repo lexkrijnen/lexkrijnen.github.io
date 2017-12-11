@@ -13,13 +13,13 @@
     <title>Welkom bij Wegro</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Global styles for this website -->
-    <link href="css/global.css" rel="stylesheet">
+    <link href="../../css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="css/login.css" rel="stylesheet">
+    <link href="../../css/login.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,13 +38,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="Logo"></a>
+            <a class="navbar-brand" href="../../index.php"><img class="brand-logo" src="../../images/wegrobanner.png" alt="Logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a href="index.php">Terug</a></li>
+                <li class="nav-item"><a href="../../index.php">Terug</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -59,7 +59,7 @@
 
 
 
-                <form method="POST" action="login.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="../../login.php" id="loginform" class="form-horizontal" role="form">
 
                     <div  class="input-group c">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -99,10 +99,10 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
 
 <!-- Bootstrap Framework -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 </body>
 </html>

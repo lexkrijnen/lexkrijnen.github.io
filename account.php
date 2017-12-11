@@ -43,7 +43,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -57,8 +57,27 @@
         ?>
 
     <div class="container page-box">
-        <div class="col-xs-4 col-md-5">
-            <h1>Gefeliciteerd, Je bent ingelogd.</h1>
+        <div class="col-xs-12 col-md-12">
+            <?php
+            $hour = date('H', time());
+
+            if( $hour > 6 && $hour <= 11) {
+                print("<h1>Goedemorgen, " . $klant_voornaam . "</h1>");
+            }
+            else if($hour > 11 && $hour <= 16) {
+                print("<h1>Goedemiddag, " . $klant_voornaam . "</h1>");
+            }
+            else if($hour > 16 && $hour <= 23) {
+                print("<h1>Goedenavond, " . $klant_voornaam . "</h1>");
+            }
+            else {
+                print("<h1>Hallo, " . $klant_voornaam . "</h1>");
+            }
+            ?>
+            <ul>
+                <li><a href="meerminderlanding.php">Meer/Minder Werk inzien</a></li>
+                <li><a href="#">Contracten inzien</a></li>
+            </ul>
         </div>
     </div>
 		<div class="row">

@@ -2,6 +2,7 @@
     background-image: url("../images/pexels-photo-209272.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    width:100%;
 }
 
 .logo{
@@ -120,6 +121,7 @@ address {
 }
 .footer-top-layout {
     color: #ffffff;
+    width: 100%;
 }
 
 .footer-top-layout h4 {
@@ -170,6 +172,7 @@ address {
 
 .footer-bottom-layout {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .hovereffect {
@@ -213,7 +216,7 @@ address {
     transform: translate3d(0,0,0);
 }
 
-.hovereffect h2 {
+.hovereffect h1 {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
@@ -222,9 +225,10 @@ address {
     overflow: hidden;
     padding: 0.5em 0;
     background-color: transparent;
+    color:white;
 }
 
-.hovereffect h2:after {
+.hovereffect h1:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -236,9 +240,10 @@ address {
     transition: transform 0.35s;
     -webkit-transform: translate3d(-100%,0,0);
     transform: translate3d(-100%,0,0);
+    color:white;
 }
 
-.hovereffect:hover h2:after {
+.hovereffect:hover h1:after {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
@@ -258,4 +263,11 @@ address {
     filter: alpha(opacity=100);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+}
+.oranje {
+    background-color: #FE9C16 !important;
+
+}
+.white {
+    color: white;
 }

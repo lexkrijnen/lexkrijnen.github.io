@@ -10,19 +10,26 @@
 	z-index: 1;
 }
 
-h3{
+table{
+    border-radius: 5px;
+}
+
+th > h3 > b{
     color: #FFFFFF;
     margin: 10px 10px 10px 10px; /* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
 }
-
+th > b{
+    color:#FFFFFF;
+}
 thead{
     background-color: #FFA500;
-    border: 2px solid black; /*border zoals gewenst in schermontwerp*/
+    border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
+    border-bottom: 2px solid #804000;
 }
 
 td{
-    border-left: 2px solid black; /*border zoals gewenst*/
-    border-right: 2px solid black; /*border zoals gewenst*/
+    border-left: 1px solid #FFA500; /*border zoals gewenst*/
+    border-right: 1px solid #FFA500; /*border zoals gewenst*/
     padding-left: 10px; /*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
 }
 
@@ -30,10 +37,18 @@ td{
     border-bottom: 2px solid black; /*bottom class die je meegeeft in de html code aan de TD die de onderste is, op deze manier geeft je alleen die maar een bottom border*/
 }
 
-tbody > tr > td > input {
+tbody{
     background-color: #FFE1B9;
 }
+.btn-lg{
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
 
+.btn-primary{
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {
@@ -46,3 +61,7 @@ tbody > tr > td > input {
 	margin-top: 30vh;
 	text-align: center;
 }
+
+/*footer*/
+.footer-bottom-layout {
+    text-align: center;

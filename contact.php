@@ -45,6 +45,7 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="index.php">Terug</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -60,14 +61,14 @@
 
             </div>
             <div class="panel-body a lowborder" >
-                <form method="POST" action="contact.php"  id="loginform" class="form-horizontal" role="form">
+                <form method="POST" action="verzendbericht.php"  id="loginform" class="form-horizontal" role="form">
 
                     <div  class="c">
                         <input id="naam" type="text" class="form-control" name="naam" placeholder="Vul hier uw naam in">
                     </div>
 
                     <div class="c">
-                        <input id="email" type="text" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
+                        <input id="email" type="email" class="form-control" name="email" placeholder="Vul hier uw e-mailadres in">
                     </div>
 
                      <div class="c">
@@ -93,7 +94,6 @@
                         </div>
                     </div>
                 </form>
-                <div> </div>
             </div>
         </div>
     </div>

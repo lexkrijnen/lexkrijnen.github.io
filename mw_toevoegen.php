@@ -8,17 +8,21 @@ $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
 $postcode = $_GET["postcode"];
+$functie = "";
+
+
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+
 if (isset($_GET["aanmaken"])) {
 
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
+	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]), $_GET["functie"]);
 
 }
 
@@ -51,7 +55,7 @@ $hash = sha1($salt . $wachtwoord);
 		<meta name="author" content="Nard Wemes">
 		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-		<title>Klant toevoegen</title>
+		<title>Medewerker toevoegen</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -93,21 +97,21 @@ $hash = sha1($salt . $wachtwoord);
 
 		<div class="container">
 			<table>
-				<form action="klant_toevoegen.php" method="GET">
+            <form action="mw_toevoegen.php" method="GET">
         	<tr>
-          	<td>Voornaam klant</td>
-            <td>
-            	<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
-            </td>
-					</tr>
-					<tr>
-				  	<td>Tussenvoegsel(s)</td>
-						<td>
-					  	<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
-						</td>
+          	 <td>Voornaam</td>
+                <td>
+                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+                </td>
+            </tr>
+            <tr>
+                <td>Tussenvoegsel(s)</td>
+                <td>
+                <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+                </td>
           </tr>
           <tr>
-          	<td>Achternaam klant</td>
+          	<td>Achternaam</td>
             <td>
             	<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
             </td>
@@ -162,6 +166,20 @@ $hash = sha1($salt . $wachtwoord);
             </td>
           </tr>
           <tr>
+            <td>Functie</td>
+            <td>
+                <input type="radio" name="functie" value="1" checked> Medewerker
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+            </td>
+          	<td>
+            	<input type="radio" name="functie" value="2"> Admin
+            </td>
+          </tr>
+          <tr>
           	<td>
             	<input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
             </td>
@@ -212,7 +230,7 @@ $hash = sha1($salt . $wachtwoord);
             } else {
                 ///succes
                 print("<div class=\"alert alert-success\" role=\"alert\">");
-                print("<br>" . $naam . " is successvol toegevoegd als klant.");
+                print("<br>" . $naam . " is successvol toegevoegd als medewerker.");
                 print("</div>");
             }
         }

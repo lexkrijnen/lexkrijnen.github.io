@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -27,16 +28,7 @@
     <![endif]-->
 	</head>
   <body>
-  <div id="fb-root"></div>
-  <script>
-      (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>
+
 
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -56,33 +48,69 @@
 					<ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
+                        <li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
                         <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
                         <li class="nav-item"><a href="#Projecten">Projecten</a></li>
                         <li class="nav-item"><a href="#Contact">Contact</a></li>
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-      <div class="row BBhomeBackground">
-           <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-         <a href="contact.php"> <a name="Ons_bedrijf" id="Ons_bedrijf"></a>
-                <div class="col-xs-2 col-xs-offset-5 btn contbutton">
-                    Contact
+    <div class="">
+
+
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <div class="zindex2">
+                <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+                <a href="contact.php">
+                    <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
+                        Contact
+                    </div>
+                </a>
+            </div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner zindex" role="listbox">
+                <div class="item active">
+                    <img src="images/IMG_3258copy.JPG">
                 </div>
+                <div class="item">
+                    <img src="images/IMG_3258copy.JPG">
+                </div>
+                <div class="item">
+                    <img src="images/IMG_3258copy.JPG">
+                </div>
+                <div class="item">
+                    <img src="images/IMG_3258copy.JPG">
+                </div>
+                <div class="item">
+                    <img src="images/IMG_3258copy.JPG">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
             </a>
-          </div>
+            <a class="right carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+
 
       <div class="row rowsidemargin">
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <div class="hovereffect"><img  src="images/IMG_9289.JPG" class="col-xs-5 col-xs-offset-1 imgright img-responvise">
-     <div class="overlay">
-         <p>
-Hier was Wegro verantwoordelijk voor een Dakopbouw.
-          </p>
-      </div>
-          </div>
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+
               <titel>Ons bedrijf</titel><br><br>
               Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
               <br><br>
@@ -95,6 +123,61 @@ Hier was Wegro verantwoordelijk voor een Dakopbouw.
         </p>
 
         </div>
+          <div class="row"><a name="Kwaliteiten" id="Kwaliteiten"></a>
+              <div class="col-xs-10 col-xs-offset-1  page-box">
+                  <p class="paragraphleft "> <titel>Kwaliteiten</titel></p> <br>
+
+
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_9121.JPG" alt="">
+                          <div class="overlay">
+                              <h1>NIEUWBOUW</h1>
+                              <p>
+                                  Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
+                                  Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
+                                  Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
+                                  waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+
+
+
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+                          <div class="overlay">
+                              <h1>VERBOUW</h1>
+                              <p>
+                                  Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
+                                  Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
+                                  En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
+                                  wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
+                                  Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="hovereffect">
+                          <img class="img-responsive" src="images/IMG_9325.JPG" alt="">
+                          <div class="overlay">
+                              <h1>RENOVATIE</h1>
+                              <p>
+
+                                  In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
+                                  Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
+                                  En met behoud van oorspronkelijkheid en karakter.
+                                  Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
           <a name="Vergunningen" id="Vergunningen"></a>
       <div class="row">
           <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
@@ -107,37 +190,53 @@ Hier was Wegro verantwoordelijk voor een Dakopbouw.
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
 
           </p>
-        </div><a name="Projecten" id="Projecten"></a>
-          <a name="Projecten" id="Projecten"></a>
-      <div class="row">
-          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 imgright">
+        </div>
 
-              <titel>Projecten</titel><br><br>
-              Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren. Dit betreft in hoofdzaak vrijstaande, traditioneel gebouwde woningen. <br>
-              Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.<br>
-              Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken, waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.<br><br>
 
-              De nauwe betrokkenheid van Bouwbedrijf Wegro bv bij een project maakt dat optimaal rekening kan worden gehouden met de wensen van de opdrachtgever. Juist door voor de opdrachtgever altijd een luisterend oor te hebben is Bouwbedrijf Wegro bv uitgegroeid tot de huidige solide organisatie.<br>
-            </p>
-    </div>
+      <div class="row"><a name="Projecten" id="Projecten"></a>
+          <div class="col-xs-10 col-xs-offset-1  page-box">
+             <p class="paragraphleft "> <titel>Projecten</titel></p> <br>
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+                      <div class="overlay">
+                          <h1>FUNDERING</h1>
+                          <p>
+                              Hier wordt de fundering van een nieuw huis gelegd.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+                      <div class="overlay">
+                          <h1>AFWERKING</h1>
+                          <p>
+                              Het dak en de muren zijn nu ook bijna af.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+                      <div class="overlay">
+                          <h1>OPLEVERING</h1>
+                          <p>
+                              Het huis is nu zo goed als af. Tijd om in te richten.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+
+
  </div>
-  <div class="row">
-  <div class="col-xs-10 col-xs-offset-1  page-box">
-      <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-           data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true"
-           data-hide-cover="true" data-show-facepile="false">
-          <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                      class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-      </div>
-      <div class="col-xs-10 col-md-5 col-md-offset-1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.8785819838254!2d5.6273177160211905!3d52.33634875757526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1512472128799"
-                  width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-
-  </div>
-  </div>
-
 
   <footer id="footer-Section">
       <div class="footer-top-layout">
@@ -146,14 +245,20 @@ Hier was Wegro verantwoordelijk voor een Dakopbouw.
                   <div class="OurBlog">
                       <h4>Bouwbedrijf Wegro</h4>
                   </div>
-                  <div class=" col-lg-8 col-lg-offset-2">
-                      <div class="col-sm-6">
+                  <div class=" col-lg-9 col-lg-offset-3">
+                      <div class="col-sm-3">
                           <div class="footer-col-item">
                               <h4>Contact</h4>
                               <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
                           </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-3">
+                      <div class="footer-col-item">
+                          <iframe src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBwptpWh_rncSVZXBNSC8kylkcIDhdtprI&center=52.336564981820615,5.63063184795455&zoom=19&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x3c3c3b&style=element:labels.icon%7Cvisibility:off&style=element:labels.text%7Ccolor:0xfe9c15&style=element:labels.text.fill%7Ccolor:0xfe9c15%7Cvisibility:off&style=element:labels.text.stroke%7Ccolor:0xfe9c15&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360"
+                                  width="200" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
+                      </div>
+                  </div>
+                      <div class="col-sm-3">
                           <div class="footer-col-item">
                               <h4>Locatie</h4>
                               <address>
@@ -203,5 +308,32 @@ Hier was Wegro verantwoordelijk voor een Dakopbouw.
                 }
             });
         </script>
+  <script>
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>
+      $(document).ready(function(){
+          $('.parallax').parallax();
+      });
+  </script>
+  <script>
+      $(".carousel").swipe({
+
+          swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+              if (direction == 'left') $(this).carousel('next');
+              if (direction == 'right') $(this).carousel('prev');
+
+          },
+          allowPageScroll:"vertical"
+
+      });
+  </script>
 	</body>
 </html>

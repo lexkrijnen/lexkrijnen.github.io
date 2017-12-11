@@ -18,6 +18,8 @@
     <!-- Custom styles for this page -->
     <link href="css/index.css" rel="stylesheet">
     <?php
+    $error = "";
+
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -27,9 +29,9 @@
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
-            print("Vul A.U.B. een beschrijving in.");
+            $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
 
@@ -37,19 +39,25 @@
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], 1, 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
-            print("Vul A.U.B. een beschrijving in.");
+            $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
-
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-    $stmt->execute();
+    //TABEL MEER WERK
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
+    //TABEL MINDER WERK
+    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
+    $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
+
+    //NAAM PROJECT
+    $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+    $stmt3->execute(array(':contract_nummer' => $_GET['id']));
+    $naamproject = $stmt3->fetchAll();
     ?>
 </head>
 <body>
@@ -80,7 +88,11 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -97,8 +109,8 @@
                     print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "\">Verwijder</a></td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $meerwerkcount++;
                 }
@@ -108,10 +120,15 @@
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                    <td></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
+        <?php
+        if ($error != "") {
+            print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+        } ?>
+        <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 
 
@@ -121,7 +138,11 @@
     <!--MINDER WERK-->
     <div class="col-xs-4">
         <h1>Minder Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -138,8 +159,8 @@
                     print("<td>" . $minderwerkcount . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
                     print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "\">Verwijder</a></td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $minderwerkcount++;
                 }
@@ -149,7 +170,7 @@
                     <td><input type="text" name="beschrijving" size="15"></td>
                     <td><input type="text" name="prijs"size="3"></td>
                     <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-                    <td></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>

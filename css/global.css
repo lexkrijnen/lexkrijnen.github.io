@@ -24,7 +24,7 @@ body {
 
 .nav-item {
 	margin-top: 10px;
-	font-size: 22px;
+	font-size: 18px !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -62,6 +62,7 @@ body {
 	border-bottom: 4px solid #FE9C16;
 }
 
+<<<<<<< HEAD
 .select-btn {
 	margin-bottom: 20px;
 	background-color: #FE9C16;
@@ -90,3 +91,6 @@ body {
 	font-size: 32px;
 	font-weight: bold;
 }
+=======
+
+>>>>>>> origin/master
