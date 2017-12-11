@@ -32,14 +32,6 @@
 	</head>
   <body>
 
-  <script>
-		$(document).ready(function() {
-			$('.slider-demo').bscSlider({
-				effect: 1
-			});
-		})
-	</script>
-
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -340,6 +332,14 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   </script>
+
+  <script>
+		$(document).ready(function() {
+			$('.slider-demo').bscSlider({
+				effect: 1
+			});
+		})
+	</script>
   <!--
   <script>
       $(document).ready(function(){
