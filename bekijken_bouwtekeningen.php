@@ -121,7 +121,7 @@ $pdo = NULL;
 
                 print("<div class=\"tab-content\">");
 
-                print("<div class=\"tab-pane\" id=\"informatie\">");
+                print("<div class=\"tab-pane fade in active\" id=\"informatie\">");
                 print("<table>");
                 print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
                 print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
@@ -132,7 +132,7 @@ $pdo = NULL;
                 print("</table>");
                 print("</div>");
 
-                print("<div class=\"tab-pane\" id=\"bouwtekeningen\">");
+                print("<div class=\"tab-pane fade\" id=\"bouwtekeningen\">");
                 print("<img src=\"images/IMG_7017.JPG\" class=\"img-responsive\">");
                 print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
                 print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
