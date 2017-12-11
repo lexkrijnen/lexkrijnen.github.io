@@ -284,9 +284,8 @@
                   </div>
               </div>
           </div>
-      </div>
       <div class="footer-bottom-layout">
-          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
+          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></div>
       </div>
       <a name="Contact" id="Contact"></a>
   </footer>
@@ -331,6 +330,7 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   </script>
+  <!--
   <script>
       $(document).ready(function(){
           $('.parallax').parallax();
@@ -348,7 +348,7 @@
           allowPageScroll:"vertical"
 
       });
-  </script>
+  </script>-->
   <script>
   	$('.slider-demo').bscSlider({
 			effect: 1;
