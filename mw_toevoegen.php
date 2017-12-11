@@ -8,7 +8,6 @@ $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
 $postcode = $_GET["postcode"];
-$functie = "";
 
 
 
@@ -181,7 +180,7 @@ $hash = sha1($salt . $wachtwoord);
           </tr>
           <tr>
           	<td>
-            	<input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
+            	<input type="submit" class="btn oranje white" name="aanmaken" value="Account aanmaken">
             </td>
           </tr>
         </form>
