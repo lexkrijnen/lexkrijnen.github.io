@@ -318,7 +318,7 @@
 		<script src="js/bootstrap.min.js"></script>
 
     <!-- JQuery Basic Slider -->
-    <script src="jquery.bscslider.js"></script>
+    <script src="js/jquery.bscslider.js"></script>
 
         <script>
             $('a[href^="#"]').on('click', function(event) {
