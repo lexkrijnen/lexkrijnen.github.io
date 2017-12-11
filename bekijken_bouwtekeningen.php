@@ -114,19 +114,27 @@ $pdo = NULL;
             //project gevonden
             } elseif ($project_nummer != "") {
                 print("<div class=container>");
-                 print("<table>");
-                  print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
-                  print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
-                  print("<tr><td>Status:</td><td>$status</td></tr>");
-                  print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
-                  print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
-                  print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
-                 print("</table>");
-                 print("<div class=well>");
-                  print("<img src=\"images/IMG_7017.JPG\" class=\"img-responsive\">");
-                  print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
-                  print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
-                 print("</div>");
+                print("<ul clas=\"nav nav-tabs\">");
+                print("<li class='active'><a href='#informatie data-toggle='tab'>informatie</a></li>");
+                print("<li><a href='#bouwtekeningen data-toggle='tab'>bouwtekeningen</a></li>");
+                print("</ul>");
+
+                print("<div class='tab-content'>");
+                print("<div class='tab-pane' id='informatie'>")
+                print("<table>");
+                print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
+                print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
+                print("<tr><td>Status:</td><td>$status</td></tr>");
+                print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+                print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
+                print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
+                print("</table>");
+                print("</div>");
+
+                print("<div class='tab-pane' id='bouwtekeningen'>")
+                print("<img src=\"images/IMG_7017.JPG\" class=\"img-responsive\">");
+                print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
+                print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
                 print("</div>");
             }
         }
