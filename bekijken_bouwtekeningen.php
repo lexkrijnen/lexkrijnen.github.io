@@ -121,7 +121,7 @@ $pdo = NULL;
                 print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
                 print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
                 print("</table>");
-                print("div class=well>");
+                print("<div class=well>");
                 print("<a href=\"images/IMG_7017.JPG\"></a>");
                 print("<a href=\"images/IMG_7020.JPG\"></a>");
                 print("<a href=\"images/IMG_7028.JPG\"></a>");
