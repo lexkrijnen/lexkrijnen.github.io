@@ -136,6 +136,8 @@ $pdo = NULL;
                 print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
                 print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
                 print("</div>");
+
+                print("</div>");
             }
         }
         ?>
