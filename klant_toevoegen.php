@@ -18,7 +18,7 @@ if (isset($_GET["aanmaken"])) {
 
 	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $hash, $salt, $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
+	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]));
 
 }
 
@@ -122,6 +122,12 @@ $hash = sha1($salt . $wachtwoord);
           	<td>Wachtwoord</td>
             <td>
             	<input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
+            </td>
+            <td>
+            	<input type="hidden" name="hash" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
+            </td>
+            <td>
+            	<input type="hidden" name="salt" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
             </td>
             <td>
             	<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
