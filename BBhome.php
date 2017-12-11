@@ -35,7 +35,7 @@
   <script>
 		$(document).ready(function() {
 			$('.slider-demo').bscSlider({
-				effect: 1;
+				effect: 1
 			});
 		})
 	</script>
