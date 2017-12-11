@@ -63,11 +63,11 @@
     <!--<div class="">-->
 
 <div class="slider slider-demo">
-  <img src="1.jpg">
-  <img src="2.jpg">
-  <img src="3.jpg">
-  <img src="4.jpg">
-  <img src="5.jpg">
+  <img src="images/IMG_2442.JPG">
+  <img src="images/IMG_2601.JPG">
+  <img src="images/IMG_2784.JPG">
+  <img src="images/IMG_3134.JPG">
+  <img src="images/IMG_6733.JPG">
 </div>
 
 
