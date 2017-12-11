@@ -353,8 +353,10 @@
       });
   </script>-->
   <script>
-  	$('.slider-demo').bscSlider({
-			effect: 1;
+		$(document).ready(function() {
+			$('.slider-demo').bscSlider({
+				effect: 1;
+			});
 		});
 	</script>
 	</body>
