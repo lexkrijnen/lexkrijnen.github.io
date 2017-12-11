@@ -60,7 +60,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="">
+    <!--<div class="">-->
 
 <div class="slider slider-demo">
   <img src="1.jpg">
@@ -103,7 +103,7 @@
                 </div>
             </div>
 -->
-            <!-- Controls -->
+            <!-- Controls
             <a class="left carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -114,7 +114,7 @@
             </a>
         </div>
 
-    </div>
+    </div>-->
 
 
       <div class="row rowsidemargin">
