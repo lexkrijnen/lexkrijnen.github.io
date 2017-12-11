@@ -273,5 +273,5 @@ address {
 }
 
 .slider-wrapper {
-	height: 500px;
+	height: 500px !important;
 }
