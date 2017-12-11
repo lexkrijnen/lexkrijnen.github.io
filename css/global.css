@@ -70,7 +70,19 @@ body {
 	border-bottom: 4px solid #A5650E;
 }
 
-.select-btn:hover {
+.select-btn:hover,
+.select-btn:focus,
+.select-btn:active
+.select-btn.active.focus,
+.select-btn.active:focus,
+.select-btn.active:hover,
+.select-btn:active.focus,
+.select-btn:active:focus,
+.select-btn:active:hover,
+.open>.dropdown-toggle.select-btn.focus,
+.open>.dropdown-toggle.select-btn:focus,
+.open>.dropdown-toggle.select-btn:hover
+{
 	background-color: #FE9C16;
 	margin-top: 4px;
 	margin-bottom: 16px;
