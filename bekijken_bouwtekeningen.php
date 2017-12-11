@@ -113,21 +113,20 @@ $pdo = NULL;
                       "</div>");
             //project gevonden
             } elseif ($project_nummer != "") {
-                print("<table><div class=container>");
+                print("<div class=container><table>");
                 print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
                 print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
                 print("<tr><td>Status:</td><td>$status</td></tr>");
                 print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                 print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
                 print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
-                print("</tr><tr>");
-                print("<iframe class=\"pdf-viewer\" src=\"pdf-viewer/web/viewer.html?file=/pdf/test.pdf\"></iframe>");
-                print("<div class=\"pdf-fail\">");
-                print("</tr><tr>");
-                print("<p>Problemen met het bekijken?</p>");
-                print("<a class=\"btn btn-primary\" onclick=\"window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
-                print("</div></div>");
-                print("</tr></table>");
+                print("</table>");
+                print("div class=well>");
+                print("<a href=\"images/IMG_7017.JPG\"></a>");
+                print("<a href=\"images/IMG_7020.JPG\"></a>");
+                print("<a href=\"images/IMG_7028.JPG\"></a>");
+                print("</div>");
+                print("</div>");
             }
         }
         ?>
