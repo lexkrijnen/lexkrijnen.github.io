@@ -123,11 +123,9 @@ $pdo = NULL;
                   print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
                  print("</table>");
                  print("<div class=well>");
-                  print("<div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\">");
-                   print("<img src=\"images/IMG_7017.JPG\">");
-                   print("<img src=\"images/IMG_7020.JPG\">");
-                   print("<img src=\"images/IMG_7028.JPG\">");
-                  print("</div>");
+                  print("<img src=\"images/IMG_7017.JPG\" class=\"col-lg-2 col-md-4 col-sm-6 col-xs-12\">>");
+                  print("<img src=\"images/IMG_7020.JPG\" class=\"col-lg-2 col-md-4 col-sm-6 col-xs-12\">>");
+                  print("<img src=\"images/IMG_7028.JPG\" class=\"col-lg-2 col-md-4 col-sm-6 col-xs-12\">>");
                  print("</div>");
                 print("</div>");
             }
