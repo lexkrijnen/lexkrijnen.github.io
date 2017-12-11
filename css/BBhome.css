@@ -271,3 +271,7 @@ address {
 .white {
 	color: white;
 }
+
+.slider-wrapper {
+	height: 80%;
+}
