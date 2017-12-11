@@ -81,7 +81,7 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $document["document"] . "</td>");
+                    print("<td>" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -99,7 +99,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["document"] . "</td>");
+                    print("<td>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
