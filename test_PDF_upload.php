@@ -26,19 +26,46 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-        $user = "wegro";
-        $pass = "SQLWegro@101";
-        $pdo = new PDO($db, $user, $pass);
+            $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+            $user = "wegro";
+            $pass = "SQLWegro@101";
+            $pdo = new PDO($db, $user, $pass);
 
-        $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
-        $stmt->execute();
-        $meerwerk = $stmt->fetchAll();
+            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+                if ($_GET["document"] != "") {
+                    $sql = "INSERT INTO Contract (contract_nummer,document, naam)VALUES(?,?,?)";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+                } else {
+                    $error = ("Plaats A.U.B. een bestand.");
+                }
+            }
 
-        $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-        $stmt2->execute();
-        $minderwerk = $stmt2->fetchAll();
+            if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
+                if ($_GET["document"] != "") {
+                    $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+                } else {
+                    $error = ("Plaats A.U.B. een bestand.");
+                    }
+                }
+                //Contract
+                $stmt = $pdo->prepare("SELECT * FROM Contract");
+                $stmt->execute();
+                $contract = $stmt->fetchAll();
+
+                //TABEL MINDER WERK
+                $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+                $stmt2->execute();
+                $tekening = $stmt2->fetchAll();
+
+                //NAAM PROJECT
+                $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+                $stmt3->execute(array(':contract_nummer' => $_GET['id']));
+                $naamproject = $stmt3->fetchAll();
         ?>
+
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -69,7 +96,7 @@
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
-            <form method="get" action="meermindertoevoegen.php">
+            <form method="get" action="test_PDF_upload.php">
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -77,9 +104,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($meerwerk AS $werk) {
+                foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>" . $document["document"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -87,7 +114,7 @@
         </form>
     <br>
         <!--Tekening-->
-        <form method="get" action="meermindertoevoegen.php">
+        <form method="get" action="test_PDF_upload.php">
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -95,9 +122,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($minderwerk AS $werk2) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>" . $document2["document"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -148,7 +175,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary"><b>Save changes</b></button>
+                                <button type="button" class="btn btn-primary"><b>upload</b></button>
                             </div>
                         </div>
                     </div>
