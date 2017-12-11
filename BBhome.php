@@ -16,7 +16,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- JQuery Basic Slider -->
-    <link rel="stylesheet" href="jquery.bscslider.css">
+    <link rel="stylesheet" href="css/jquery.bscslider.css">
 
     <!-- Global styles for this website -->
     <link href="css/global.css" rel="stylesheet">
