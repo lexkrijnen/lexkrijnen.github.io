@@ -81,7 +81,8 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $document["naam"] . "</td>");
+                    print("<td><object data="Uitbouw_v3C.pdf" type="application/pdf" width="300" height="200">
+                            <a href="Uitbouw_v3C.pdf">Uitbouw_v3C.pdf</a></object" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
