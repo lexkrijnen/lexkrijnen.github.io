@@ -31,13 +31,15 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+        //Contract
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
         $stmt->execute();
-        $meerwerk = $stmt->fetchAll();
+        $contract = $stmt->fetchAll();
 
-        $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
+        //Tekening
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
         $stmt2->execute();
-        $minderwerk = $stmt2->fetchAll();
+        $tekening = $stmt2->fetchAll();
         ?>
 	</head>
   <body>
@@ -69,7 +71,7 @@
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
-            <form method="get" action="meermindertoevoegen.php">
+            <form>
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -77,9 +79,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($meerwerk AS $werk) {
+                foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -87,7 +89,7 @@
         </form>
     <br>
         <!--Tekening-->
-        <form method="get" action="meermindertoevoegen.php">
+        <form>
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -95,9 +97,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($minderwerk AS $werk2) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>

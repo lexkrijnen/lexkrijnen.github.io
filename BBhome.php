@@ -15,6 +15,9 @@
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- JQuery Basic Slider -->
+    <link rel="stylesheet" href="css/jquery.bscslider.css">
+
     <!-- Global styles for this website -->
     <link href="css/global.css" rel="stylesheet">
 
@@ -28,7 +31,6 @@
     <![endif]-->
 	</head>
   <body>
-
 
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -57,13 +59,21 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="">
+    <!--<div class="">-->
+
+<div class="slider slider-demo">
+  <img src="images/IMG_2442.JPG">
+  <img src="images/IMG_2601.JPG">
+  <img src="images/IMG_2784.JPG">
+  <img src="images/IMG_3134.JPG">
+  <img src="images/IMG_6733.JPG">
+</div>
 
 
-
-
+<!-- Old slider -->
+<!--
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+            <!-- Indicators --><!--
             <div class="zindex2">
                 <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 <a href="contact.php">
@@ -73,7 +83,7 @@
                 </a>
             </div>
 
-            <!-- Wrapper for slides -->
+            <!-- Wrapper for slides --><!--
             <div class="carousel-inner zindex" role="listbox">
                 <div class="item active">
                     <img src="images/IMG_2442.JPG">
@@ -91,8 +101,8 @@
                     <img src="images/IMG_6733.JPG">
                 </div>
             </div>
-
-            <!-- Controls -->
+-->
+            <!-- Controls
             <a class="left carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -103,7 +113,7 @@
             </a>
         </div>
 
-    </div>
+    </div>-->
 
 
       <div class="row rowsidemargin">
@@ -273,9 +283,8 @@
                   </div>
               </div>
           </div>
-      </div>
       <div class="footer-bottom-layout">
-          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</div>
+          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></div>
       </div>
       <a name="Contact" id="Contact"></a>
   </footer>
@@ -291,11 +300,17 @@
 
 
 
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
+
+		<!-- jQuery UI (waaaay to big, needs to be slimmed down after the project is finished) -->
+		<script src="js/jquery-ui.min.js"></script>
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
+    <!-- JQuery Basic Slider -->
+    <script src="js/jquery.bscslider.js"></script>
 
         <script>
             $('a[href^="#"]').on('click', function(event) {
@@ -317,6 +332,15 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   </script>
+
+  <script>
+		$(document).ready(function() {
+			$('.slider-demo').bscSlider({
+				effect: 1
+			});
+		})
+	</script>
+  <!--
   <script>
       $(document).ready(function(){
           $('.parallax').parallax();
@@ -334,6 +358,6 @@
           allowPageScroll:"vertical"
 
       });
-  </script>
+  </script>-->
 	</body>
 </html>
