@@ -55,7 +55,7 @@
                 $stmt->execute();
                 $contract = $stmt->fetchAll();
 
-                //TABEL MINDER WERK
+                //Tekening
                 $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
                 $stmt2->execute();
                 $tekening = $stmt2->fetchAll();
