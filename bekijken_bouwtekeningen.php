@@ -115,8 +115,8 @@ $pdo = NULL;
             } elseif ($project_nummer != "") {
                 print("<div class=container>");
                 print("<ul clas=\"nav nav-tabs\">");
-                print("<li class='active'><a href='#informatie data-toggle='tab'>informatie</a></li>");
-                print("<li><a href='#bouwtekeningen data-toggle='tab'>bouwtekeningen</a></li>");
+                print("<li class='active'><a href='#informatie' data-toggle='tab'>informatie</a></li>");
+                print("<li><a href='#bouwtekeningen' data-toggle='tab'>bouwtekeningen</a></li>");
                 print("</ul>");
 
                 print("<div class='tab-content'>");
@@ -137,6 +137,7 @@ $pdo = NULL;
                 print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
                 print("</div>");
 
+                print("</div>");
                 print("</div>");
             }
         }
