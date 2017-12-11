@@ -46,13 +46,13 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
-                        <li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
-                        <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
-                        <li class="nav-item"><a href="#Projecten">Projecten</a></li>
-                        <li class="nav-item"><a href="#Contact">Contact</a></li>
-                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="index.php">Home</a></li>
+						<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
+						<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
+						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
+						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
+						<li class="nav-item"><a href="#Contact">Contact</a></li>
+						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -67,8 +67,8 @@
             <div class="zindex2">
                 <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
                 <a href="contact.php">
-                    <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
-                        Contact
+                    <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
+											Contact
                     </div>
                 </a>
             </div>
@@ -76,19 +76,19 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner zindex" role="listbox">
                 <div class="item active">
-                    <img src="images/IMG_3258copy.JPG">
+                    <img src="images/IMG_2442.JPG">
                 </div>
                 <div class="item">
-                    <img src="images/IMG_3258copy.JPG">
+                    <img src="images/IMG_9165.JPG">
                 </div>
                 <div class="item">
-                    <img src="images/IMG_3258copy.JPG">
+                    <img src="images/IMG_9184.JPG">
                 </div>
                 <div class="item">
-                    <img src="images/IMG_3258copy.JPG">
+                    <img src="images/IMG_9121.JPG">
                 </div>
                 <div class="item">
-                    <img src="images/IMG_3258copy.JPG">
+                    <img src="images/IMG_6733.JPG">
                 </div>
             </div>
 
