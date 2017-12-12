@@ -12,7 +12,7 @@ if (isset($_GET["vinden"])) {
 
     $project = $stmt->fetch();
 
-    $naam = $project["p.naam"];3
+    $naam = $project["p.naam"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
