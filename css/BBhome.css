@@ -268,11 +268,7 @@ address {
 }
 
 .slider-wrapper {
+	margin-top: -800px;
+	margin-left: -1300px;
 	height: 600px !important;
-}
-
-.slider-float {
-	z-index: 16;
-	float: left;
-	margin-left: auto;
 }
