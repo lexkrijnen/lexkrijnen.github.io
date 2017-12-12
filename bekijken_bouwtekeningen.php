@@ -139,10 +139,9 @@ $pdo = NULL;
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"bouwtekeningen\">");
-                foreach ($tekeingen as $tekening ) {
+                foreach ($tekeningen as $tekening ) {
                     print("<table><tr>");
                     print("<td><img src=$tekening></td>");
-                    print("<td>$tekeningen[\"tekening_nummer\"]<br>$tekeningen[\"naam\"]");
                     print("</tr></table>");
                 }
                 print("</div>");
