@@ -149,13 +149,11 @@ $pdo = NULL;
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"contract\">");
-                print("<div id=\"viewer-box\" class=\"col-xs-10 col-xs-offset-1 col-md-8 page-box\">");
                 print("<iframe class=\"pdf-viewer\" src=\"$contractnaam\" name=\"pdf_viewer\"></iframe>");
     			print("<div class=\"pdf-fail\">");
                 print("<p>Problemen met het bekijken?</p>");
                 print("<a class=\"btn btn-primary\" onclick=\"window.open('$contractnaam', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
     			print("</div>");
-                print("</div>");
                 print("</div>");
 
                 print("</div>");
