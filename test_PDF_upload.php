@@ -110,7 +110,7 @@
                     print("</tr>");
                     }
                 ?>
-                <td><a href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="_iframe">testing</a></td>
+                <td><a href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="_pdf-viewer">testing</a></td>
             </table>
         </form>
     <br>
