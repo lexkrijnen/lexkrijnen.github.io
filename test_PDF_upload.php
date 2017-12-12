@@ -110,7 +110,6 @@
                     print("</tr>");
                     }
                 ?>
-                <td><a href="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="pdf_viewer">testing</a></td>
             </table>
         </form>
     <br>
