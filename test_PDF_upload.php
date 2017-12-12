@@ -124,7 +124,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -184,7 +184,7 @@
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-        <iframe class="pdf-viewer" name="pdf_viewer"></iframe>
+        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
     			<div class="pdf-fail">
