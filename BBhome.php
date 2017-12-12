@@ -67,7 +67,7 @@
                 Contact
             </div>
         </a>
-
+    </div>
 <div class="slider slider-demo zindex">
   <img src="images/IMG_2442.JPG">
   <img src="images/IMG_2601.JPG">
@@ -75,7 +75,7 @@
   <img src="images/IMG_3134.JPG">
   <img src="images/IMG_6733.JPG">
 </div>
-    </div>
+
 
 <!-- Old slider -->
 <!--
