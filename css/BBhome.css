@@ -267,13 +267,9 @@ address {
 	color: white;
 }
 
-.slider-float {
-	z-index: 99;
-}
-
 .slider-wrapper {
 	margin-top: -800px;
 	margin-left: -1300px;
 	height: 600px !important;
-	z-index: -13px;
+	z-index: -13;
 }
