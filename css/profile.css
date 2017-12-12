@@ -10,10 +10,6 @@
 	z-index: 1;
 }
 
-table{
-    border-radius: 5px;
-}
-
 /*table head*/
 thead{
     background-color: #FFA500;
