@@ -109,3 +109,10 @@ body {
 .zindex2 {
 	z-index: 0;
 }
+
+.fb-wrap {
+	width:50%;
+	margin: 0 auto;
+}
+
+.fb-like-box, .fb-like-box span, .fb-like-box span iframe[style] { width: 100% !important; }
