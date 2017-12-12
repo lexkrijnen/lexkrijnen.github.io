@@ -13,6 +13,7 @@ if (isset($_GET["vinden"])) {
     $project = $stmt->fetch();
 
     $naam = $_GET["projectnaam"];
+    $contractnaam = $project["naam"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
@@ -123,6 +124,7 @@ $pdo = NULL;
                 print("<ul clas=\"nav nav-tabs\">");
                 print("<li role=\"presentation\" class=\"active\"><a href=\"#informatie\" data-toggle=\"tab\">informatie</a></li>");
                 print("<li role=\"presentation\" ><a href=\"#bouwtekeningen\" data-toggle=\"tab\">bouwtekeningen</a></li>");
+                print("<li role=\"presentation\" ><a href=\"#contract\" data-toggle=\"tab\">contract</a></li>");
                 print("</ul>");
 
                 print("<div class=\"tab-content\">");
@@ -144,6 +146,14 @@ $pdo = NULL;
                     print("<td><img src=$tekening></td>");
                     print("</tr></table>");
                 }
+                print("</div>");
+
+                print("<div class=\"tab-pane fade\" id=\"contract\">");
+                print("<iframe class=\"pdf-viewer\" src=\"$contractnaam\" name=\"pdf_viewer\"></iframe>");
+    			print("<div class=\"pdf-fail\">");
+                print("<p>Problemen met het bekijken?</p>");
+                print("<a class=\"btn btn-primary\" onclick=\"window.open('$contractnaam', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+    			print("</div>");
                 print("</div>");
 
                 print("</div>");
