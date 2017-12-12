@@ -115,12 +115,13 @@ $pdo = NULL;
             } elseif ($project_nummer != "") {
                 print("<div class=container>");
                 print("<ul clas=\"nav nav-tabs\">");
-                print("<li class='active'><a href='#informatie' data-toggle='tab'>informatie</a></li>");
-                print("<li><a href='#bouwtekeningen' data-toggle='tab'>bouwtekeningen</a></li>");
+                print("<li role=\"presentation\" class=\"active\"><a href=\"#informatie\" data-toggle=\"tab\">informatie</a></li>");
+                print("<li role=\"presentation\" ><a href=\"#bouwtekeningen\" data-toggle=\"tab\">bouwtekeningen</a></li>");
                 print("</ul>");
 
-                print("<div class='tab-content'>");
-                print("<div class='tab-pane' id='informatie'>");
+                print("<div class=\"tab-content\">");
+
+                print("<div class=\"tab-pane fade in active\" id=\"informatie\">");
                 print("<table>");
                 print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
                 print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
@@ -131,7 +132,7 @@ $pdo = NULL;
                 print("</table>");
                 print("</div>");
 
-                print("<div class='tab-pane' id='bouwtekeningen'>");
+                print("<div class=\"tab-pane fade\" id=\"bouwtekeningen\">");
                 print("<img src=\"images/IMG_7017.JPG\" class=\"img-responsive\">");
                 print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
                 print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
