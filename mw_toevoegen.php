@@ -91,148 +91,148 @@ $hash = sha1($salt . $wachtwoord);
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-
-		<div class="container">
-			<table>
-            <form action="mw_toevoegen.php" method="GET">
-        	<tr>
-          	 <td>Voornaam</td>
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+            <div class="container">
+                <table>
+                <form action="mw_toevoegen.php" method="GET">
+                <tr>
+                 <td>Voornaam</td>
+                    <td>
+                        <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tussenvoegsel(s)</td>
+                    <td>
+                    <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+                    </td>
+              </tr>
+              <tr>
+                <td>Achternaam</td>
                 <td>
-                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $voornaam"); } ?>>
+                    <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
                 </td>
-            </tr>
-            <tr>
-                <td>Tussenvoegsel(s)</td>
+              </tr>
+              <tr>
+                <td>E-mailadres</td>
                 <td>
-                <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
+                    <input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> >
                 </td>
-          </tr>
-          <tr>
-          	<td>Achternaam</td>
-            <td>
-            	<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $achternaam"); } ?>>
-            </td>
-          </tr>
-          <tr>
-          	<td>E-mailadres</td>
-            <td>
-           		<input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $emailadres"); } ?> >
-            </td>
-          </tr>
-          <tr>
-          	<td>Wachtwoord</td>
-            <td>
-            	<input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
-            </td>
-            <td>
-            	<input type="hidden" name="hash" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
-            </td>
-            <td>
-            	<input type="hidden" name="salt" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
-            </td>
-            <td>
-            	<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
-            </td>
-          </tr>
-          <tr>
-          	<td>Telefoonnummer</td>
-            <td>
-            	<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $telefoonnummer"); } ?>>
-            </td>
-          </tr>
-          <tr>
-          	<td>Adres</td>
-            <td>
-            	<input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>>
-            </td>
-          </tr>
-          <tr>
-          	<td>
+              </tr>
+              <tr>
+                <td>Wachtwoord</td>
+                <td>
+                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
+                </td>
+                <td>
+                    <input type="hidden" name="hash" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
+                </td>
+                <td>
+                    <input type="hidden" name="salt" <?php if (isset($_GET["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
+                </td>
+                <td>
+                    <input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
+                </td>
+              </tr>
+              <tr>
+                <td>Telefoonnummer</td>
+                <td>
+                    <input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $telefoonnummer"); } ?>>
+                </td>
+              </tr>
+              <tr>
+                <td>Adres</td>
+                <td>
+                    <input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $woonplaats"); } ?>>
+                </td>
+              </tr>
+              <tr>
+                <td>
 
-          	</td>
-            <td>
-            	<input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>>
-            </td>
-          </tr>
-          <tr>
-          	<td>
+                </td>
+                <td>
+                    <input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $straat"); } ?>>
+                </td>
+              </tr>
+              <tr>
+                <td>
 
-          	</td>
-            <td>
-            	<input type="text" class="form-control" name="postcode" placeholder="postcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $postcode"); } ?>>
-            </td>
-          </tr>
-          <tr>
-            <td>Functie</td>
-            <td>
-                <input type="radio" name="functie" value="2" checked> Medewerker
-            </td>
-          </tr>
-          <tr>
-            <td>
+                </td>
+                <td>
+                    <input type="text" class="form-control" name="postcode" placeholder="postcode" <?php if(isset($_GET["genereer_wachtwoord"]) || isset($_GET["aanmaken"])) { print("value = $postcode"); } ?>>
+                </td>
+              </tr>
+              <tr>
+                <td>Functie</td>
+                <td>
+                    <input type="radio" name="functie" value="2" checked> Medewerker
+                </td>
+              </tr>
+              <tr>
+                <td>
 
-            </td>
-          	<td>
-            	<input type="radio" name="functie" value="1"> Admin
-            </td>
-          </tr>
-          <tr>
-          	<td>
-            	<input type="submit" class="btn oranje white" name="aanmaken" value="Account aanmaken">
-            </td>
-          </tr>
-        </form>
-      </table>
-    </div>
+                </td>
+                <td>
+                    <input type="radio" name="functie" value="1"> Admin
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account aanmaken">
+                </td>
+              </tr>
+            </form>
+          </table>
+        </div>
 
-		<?php
-        if(isset($_GET["aanmaken"])) {
-            ///gegevens niet ingevuld
-            if($_GET["voornaam"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een voornaam in.");
-                print("</div>");
-            } elseif ($_GET["achternaam"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een achternaam in.");
-                print("</div>");
-            } elseif ($_GET["emailadres"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een e-mailadres in.");
-                print("</div>");
-            } elseif ($_GET["woonplaats"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een woonplaats in.");
-                print("</div>");
-            } elseif ($_GET["straat"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een straat + huisnummer in.");
-                print("</div>");
-            } elseif ($_GET["postcode"] == "") {
-                print("<div class=\"alert alert-warning\" role=\"alert\">");
-                print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
-                print("<span class=\"sr-only\">Error:</span>");
-                print(" Vul een postcode in.");
-                print("</div>");
-            } else {
-                ///succes
-                print("<div class=\"alert alert-success\" role=\"alert\">");
-                print("<br>" . $naam . " is successvol toegevoegd als medewerker.");
-                print("</div>");
+            <?php
+            if(isset($_GET["aanmaken"])) {
+                ///gegevens niet ingevuld
+                if($_GET["voornaam"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een voornaam in.");
+                    print("</div>");
+                } elseif ($_GET["achternaam"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een achternaam in.");
+                    print("</div>");
+                } elseif ($_GET["emailadres"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een e-mailadres in.");
+                    print("</div>");
+                } elseif ($_GET["woonplaats"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een woonplaats in.");
+                    print("</div>");
+                } elseif ($_GET["straat"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een straat + huisnummer in.");
+                    print("</div>");
+                } elseif ($_GET["postcode"] == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Vul een postcode in.");
+                    print("</div>");
+                } else {
+                    ///succes
+                    print("<div class=\"alert alert-success\" role=\"alert\">");
+                    print("<br>" . $naam . " is successvol toegevoegd als medewerker.");
+                    print("</div>");
+                }
             }
-        }
-
-        ?>
+            ?>
+        </div>
 
 		<div class="row">
 				<div class="col-xs-12 text-center footer-rights">

@@ -88,30 +88,30 @@ $pdo = NULL;
 
 
 
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+            <div class=container>
 
-        <div class=container>
+                <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
 
-            <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
+                <form action="klant_verwijderen.php" method="get">
+                    <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
+                    <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
+                </form>
 
-            <form action="klant_verwijderen.php" method="get">
-                <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
-                <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
-            </form>
-
-            <br>
-            <a href="klant_zoeken.php">terug</a>
-
-        </div>
-
+                <br>
+                <a href="klant_zoeken.php">terug</a>
+            </div>
 
 
-        <?php
-        if (isset($_GET["echtverwijderen"])) {
-            print("<div class=\"alert alert-success\" role=\"alert\">");
-            print("<br>" . $_SESSION["naam"] . " is successvol verwijderd.");
-            print("</div>");
-        }
-        ?>
+
+            <?php
+            if (isset($_GET["echtverwijderen"])) {
+                print("<div class=\"alert alert-success\" role=\"alert\">");
+                print("<br>" . $_SESSION["naam"] . " is successvol verwijderd.");
+                print("</div>");
+            }
+            ?>
+       </div>
 
 
 
