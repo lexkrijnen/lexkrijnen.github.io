@@ -61,9 +61,9 @@
 		</nav>
     <!--<div class="">-->
     <div class="row">
-        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo zindex2">
         <a href="contact.php">
-            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
+            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje zindex2">
                 Contact
             </div>
         </a>
