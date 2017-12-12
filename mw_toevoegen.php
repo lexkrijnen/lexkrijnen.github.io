@@ -22,6 +22,7 @@ if (isset($_GET["aanmaken"])) {
 	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]), $_GET["functie"]);
+    print($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]), $_GET["functie"]);
 
 }
 
@@ -167,7 +168,7 @@ $hash = sha1($salt . $wachtwoord);
           <tr>
             <td>Functie</td>
             <td>
-                <input type="radio" name="functie" value="1" checked> Medewerker
+                <input type="radio" name="functie" value="2" checked> Medewerker
             </td>
           </tr>
           <tr>
@@ -175,7 +176,7 @@ $hash = sha1($salt . $wachtwoord);
 
             </td>
           	<td>
-            	<input type="radio" name="functie" value="2"> Admin
+            	<input type="radio" name="functie" value="1"> Admin
             </td>
           </tr>
           <tr>
