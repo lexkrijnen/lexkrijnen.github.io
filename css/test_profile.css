@@ -10,8 +10,8 @@
 	z-index: 1;
 }
 
-table{
-    border-radius: 5px;
+.table-hover{
+    background-color: yellow;
 }
 
 th > h3 > b{
