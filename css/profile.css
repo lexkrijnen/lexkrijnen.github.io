@@ -26,10 +26,18 @@ tbody{
     background-color: #FFE1B9;
 }
 
+td > a{
+    color: #000000;
+}
+
 td{
     border-left: 1px solid #FFA500;
     border-right: 1px solid #FFA500;
     padding-left: 10px;
+}
+
+td:hover {
+    background-color:  #ffc966;
 }
 
 /* Small Devices, Tablets */

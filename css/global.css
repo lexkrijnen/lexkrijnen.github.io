@@ -102,3 +102,10 @@ body {
 	font-size: 32px;
 	font-weight: bold;
 }
+
+.zindex {
+	z-index: -1;
+}
+.zindex2 {
+	z-index: 0;
+}
