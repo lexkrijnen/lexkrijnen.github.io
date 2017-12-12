@@ -10,8 +10,8 @@
 	z-index: 1;
 }
 
-table{
-    border-radius: 5px;
+.table-hover{
+    background-color: yellow;
 }
 
 th > h3 > b{
@@ -25,6 +25,10 @@ thead{
     background-color: #FFA500;
     border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
     border-bottom: 2px solid #804000;
+}
+
+td > a{
+    color: #000000;
 }
 
 td{

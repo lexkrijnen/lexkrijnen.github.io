@@ -25,6 +25,22 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        //Contract
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
+
+        //Tekening
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt2->execute();
+        $tekening = $stmt2->fetchAll();
+        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -50,32 +66,63 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="container">
-
+   <div class="container">
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-    			Hier komt een menu
-    		</div>
-
-    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+            <!--Contract-->
+            <form>
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Contract</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($contract AS $document) {
+                    print("<tr>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+        </form>
+    <br>
+        <!--Tekening-->
+        <form>
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($tekening AS $document2) {
+                    print("<tr>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+        </form>
+    </div>
+        <?php $pdo = NULL; ?>
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
     			<div class="pdf-fail">
 						<p>Problemen met het bekijken?</p>
 						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
     			</div>
-    		</div>
-    	</div>
-
-    </div><!-- /.container -->
+            </div>
+    </div>
+        </div><!-- /.container -->
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 			</div>
 		</div>
-
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
