@@ -254,7 +254,7 @@
 
 
  </div>
-          <div class="page-box">
+          <div class="page-box col-xs-12">
           <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
                data-hide-cover="true" data-show-facepile="false">
