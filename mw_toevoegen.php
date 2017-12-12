@@ -8,11 +8,7 @@ $telefoonnummer = $_GET["telefoonnummer"];
 $woonplaats = $_GET["woonplaats"];
 $straat = $_GET["straat"];
 $postcode = $_GET["postcode"];
-/////
-$hash = $_get["hash"];
-$salt = $_GET["salt"];
-$functie = $_GET["functie"];
-/////
+
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -23,8 +19,7 @@ if (isset($_GET["aanmaken"])) {
 
 	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]), $_GET["functie"]);
-    print("$naam $emailadres $hash $salt $telefoonnummer $woonplaats $straat $postcode $functie");
+	$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["hash"], $_GET["salt"], $_GET["telefoonnummer"], $_GET["straat"], $_GET["postcode"], $_GET["woonplaats"]), $_GET["functie"]));
 
 }
 
@@ -236,9 +231,7 @@ $hash = sha1($salt . $wachtwoord);
                 print("</div>");
             }
         }
-        ////
-        print("$naam $emailadres $hash $salt $telefoonnummer $woonplaats $straat $postcode $functie");
-        ////
+
         ?>
 
 		<div class="row">
