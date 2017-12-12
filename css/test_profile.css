@@ -28,6 +28,7 @@ thead{
 }
 
 td{
+    color:#000000;
     border-left: 1px solid #FFA500; /*border zoals gewenst*/
     border-right: 1px solid #FFA500; /*border zoals gewenst*/
     padding-left: 10px; /*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
