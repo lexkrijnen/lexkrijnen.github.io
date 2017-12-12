@@ -36,6 +36,10 @@ td{
     padding-left: 10px;
 }
 
+td:hover {
+    background-color:  #ffc966;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {
