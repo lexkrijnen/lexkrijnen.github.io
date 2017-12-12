@@ -264,10 +264,21 @@
               }(document, 'script', 'facebook-jssdk'));</script>
 
 
-          <div class="fb-wrap">
-              <h1>Responsive Facebook Like Box</h1>
-              <div class="fb-like-box" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" data-width="992" data-show-faces="true" data-show-border="false" data-colorscheme="light" data-stream="false" data-header="false"></div>
+          <div class="container">
 
+              <div class="row">
+                  <div id="fb-root">
+                      <div class="col-xs-10 col-xs-offset-1 fb-wrap  page-box">
+                          <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                               data-tabs="timeline" data-width="1100" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                               data-hide-cover="true" data-show-facepile="false">
+                              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                          class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
           </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
