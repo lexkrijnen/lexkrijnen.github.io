@@ -68,7 +68,7 @@
             </div>
         </a>
     </div>
-<div class="slider slider-demo zindex">
+<div class="slider slider-demo ">
   <img src="images/IMG_2442.JPG">
   <img src="images/IMG_2601.JPG">
   <img src="images/IMG_2784.JPG">
@@ -254,7 +254,32 @@
 
 
  </div>
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) {return;}
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                  fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
 
+
+          <div class="container">
+
+              <div class="row">
+                  <div id="fb-root">
+                      <div class="col-xs-10 col-xs-offset-1 fb-wrap  page-box">
+                          <div class="fb-page col-xs-10 col-md-5 col-md-offset-1" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                               data-tabs="timeline" data-width="1100" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                               data-hide-cover="true" data-show-facepile="false">
+                              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                          class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
           <div class="container">
