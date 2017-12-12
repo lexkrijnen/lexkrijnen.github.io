@@ -236,6 +236,9 @@ $hash = sha1($salt . $wachtwoord);
                 print("</div>");
             }
         }
+        ////
+        print("$naam $emailadres $hash $salt $telefoonnummer $woonplaats $straat $postcode $functie");
+        ////
         ?>
 
 		<div class="row">
