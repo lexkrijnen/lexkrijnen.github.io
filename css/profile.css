@@ -10,6 +10,33 @@
 	z-index: 1;
 }
 
+table{
+    border-radius: 5px;
+}
+
+/*table head*/
+thead{
+    background-color: #FFA500;
+    border: 1px solid #FFA500;
+    border-bottom: 2px solid #804000;
+}
+
+th > h3 > b{
+    color: #FFFFFF;
+    margin: 10px 10px 10px 10px;
+}
+
+/*table body*/
+tbody{
+    background-color: #FFE1B9;
+}
+
+td{
+    border-left: 1px solid #FFA500;
+    border-right: 1px solid #FFA500;
+    padding-left: 10px;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {
