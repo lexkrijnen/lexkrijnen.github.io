@@ -100,61 +100,62 @@ $pdo = NULL;
 
 
 
+      <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+          <div class=pagebox>
+              <div class=container>
+               <table>
+                    <form action="klant_zoeken.php" method="get">
+                        <div class="row">
+                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+                          </div>
+                          <div class="">
+                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+                          </div>
+                          <div class="">
+                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+                          </div>
+                        <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+                    </form>
+                </table>
 
-      <div class=pagebox>
-          <div class=container>
-           <table>
-                <form action="klant_zoeken.php" method="get">
-                    <div class="row">
-                          <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
-                      </div>
-                      <div class="">
-                          <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
-                      </div>
-                      <div class="">
-                          <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
-                      </div>
-                    <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
-                </form>
-            </table>
 
 
-
-            <?php
-            //informatie van de gezochte klant tonen
-            if (isset($_GET["vinden"])) {
-                //Geen voornaam en achternaam ingevuld
-                if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
-                    print("<div class=\"alert alert-warning\" role=\"alert\">
-                            <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                            <span class=\"sr-only\">Error:</span>
-                            Vul een voornaam en een achternaam in.
-                          </div>");
-                } elseif ($voornaam != "") {
-                    print("<table>");
-                    print("<tr><td>Naam: $naam</td></tr>");
-                    print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
-                    print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
-                    print("<tr><td>Emailadres: $emailadres</td></tr>");
-                    print("<tr><td>Adres: $adres</td></tr>");
-                    print("<tr><td>Postcode: $postcode</td></tr>");
-                    print("<tr><td>Woonplaats: $woonplaats</td></tr>");
-                    print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
-                    print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
-                    print("</form>");
-                    print("</table>");
-                } else {
-                    //geen klant gevonden met die naam
-                    print("<div class=\"alert alert-warning\" role=\"alert\">
-                            <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
-                            <span class=\"sr-only\">Error:</span>
-                            Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
-                          </div>");
+                <?php
+                //informatie van de gezochte klant tonen
+                if (isset($_GET["vinden"])) {
+                    //Geen voornaam en achternaam ingevuld
+                    if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
+                        print("<div class=\"alert alert-warning\" role=\"alert\">
+                                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Error:</span>
+                                Vul een voornaam en een achternaam in.
+                              </div>");
+                    } elseif ($voornaam != "") {
+                        print("<table>");
+                        print("<tr><td>Naam: $naam</td></tr>");
+                        print("<tr><td>Klantnummer: $klant_nummer</td></tr>");
+                        print("<tr><td>Telefoonnummer: $telefoonnummer</td></tr>");
+                        print("<tr><td>Emailadres: $emailadres</td></tr>");
+                        print("<tr><td>Adres: $adres</td></tr>");
+                        print("<tr><td>Postcode: $postcode</td></tr>");
+                        print("<tr><td>Woonplaats: $woonplaats</td></tr>");
+                        print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
+                        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+                        print("</form>");
+                        print("</table>");
+                    } else {
+                        //geen klant gevonden met die naam
+                        print("<div class=\"alert alert-warning\" role=\"alert\">
+                                <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Error:</span>
+                                Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
+                              </div>");
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
+        </div>
 
 
 
