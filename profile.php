@@ -25,6 +25,22 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        //Contract
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
+
+        //Tekening
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt2->execute();
+        $tekening = $stmt2->fetchAll();
+        ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -50,32 +66,114 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="container">
-
+   <div class="container">
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
-    			Hier komt een menu
-    		</div>
+            <!--Contract-->
+            <form method="get" action="test_PDF_upload.php">
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Contract</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($contract AS $document) {
+                    print("<tr>");
+                    print("<td>" . $document["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+        </form>
+    <br>
+        <!--Tekening-->
+        <form method="get" action="test_PDF_upload.php">
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($tekening AS $document2) {
+                    print("<tr>");
+                    print("<td>" . $document2["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand toevoegen</a>
+                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <thead>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
 
-    		<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-    			<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+                                    </tr>
+                                </table>
+                                <br>
+                                <table class="table table-hover">
+                                    <tr>
+                                        <thead>
+                                            <th><b>T.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary"><b>upload</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+        <?php $pdo = NULL; ?>
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
     			<div class="pdf-fail">
 						<p>Problemen met het bekijken?</p>
 						<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
     			</div>
-    		</div>
-    	</div>
-
-    </div><!-- /.container -->
+            </div>
+    </div>
+        </div><!-- /.container -->
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 			</div>
 		</div>
-
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
