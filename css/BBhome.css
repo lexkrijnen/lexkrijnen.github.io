@@ -272,6 +272,7 @@ address {
 }
 
 .slider-float {
+	z-index: 2;
 	float: left;
 	margin-left: auto;
 }
