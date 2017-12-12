@@ -61,9 +61,9 @@
 		</nav>
     <!--<div class="">-->
     <div class="row">
-        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo zindex2">
+        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
         <a href="contact.php">
-            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje zindex2">
+            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
                 Contact
             </div>
         </a>
@@ -254,21 +254,7 @@
 
 
  </div>
-          <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) {return;}
-                  js = d.createElement(s); js.id = id;
-                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                  fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
 
-
-          <div class="fb-wrap">
-              <h1>Responsive Facebook Like Box</h1>
-              <div class="fb-like-box" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" data-width="992" data-show-faces="true" data-show-border="false" data-colorscheme="light" data-stream="false" data-header="false"></div>
-
-          </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
           <div class="container">
