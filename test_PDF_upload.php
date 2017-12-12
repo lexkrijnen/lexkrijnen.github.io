@@ -110,6 +110,7 @@
                     print("</tr>");
                     }
                 ?>
+                <td><a src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" target="_iframe">testing</a></td>
             </table>
         </form>
     <br>
@@ -184,7 +185,7 @@
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+        <iframe class="pdf-viewer"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
     			<div class="pdf-fail">
