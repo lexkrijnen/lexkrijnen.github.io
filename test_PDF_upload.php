@@ -97,7 +97,7 @@
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
             <form method="get" action="test_PDF_upload.php">
-            <table class="table table-hover">
+            <table class="table table-hover u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable">
                 <tr>
                     <thead>
                         <th><h3><b>Contract</b></h3></th>
@@ -106,7 +106,7 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=$document "document"  target= pdf_viewer >" . $document["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
