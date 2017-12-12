@@ -60,15 +60,22 @@
 			</div><!-- /.container-fluid -->
 		</nav>
     <!--<div class="">-->
+    <div class="row">
+        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+        <a href="contact.php">
+            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
+                Contact
+            </div>
+        </a>
 
-<div class="slider slider-demo">
+<div class="slider slider-demo zindex">
   <img src="images/IMG_2442.JPG">
   <img src="images/IMG_2601.JPG">
   <img src="images/IMG_2784.JPG">
   <img src="images/IMG_3134.JPG">
   <img src="images/IMG_6733.JPG">
 </div>
-
+    </div>
 
 <!-- Old slider -->
 <!--
