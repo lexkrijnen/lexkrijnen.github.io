@@ -270,3 +270,8 @@ address {
 .slider-wrapper {
 	height: 600px !important;
 }
+
+.slider-float {
+	float: left;
+	margin-left: auto;
+}
