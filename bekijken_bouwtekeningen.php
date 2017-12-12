@@ -12,13 +12,18 @@ if (isset($_GET["vinden"])) {
 
     $project = $stmt->fetch();
 
-    $naam = $project["p.naam"];
+    $naam = $_GET["projectnaam"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
     $contract_nummer = $project["contract_nummer"];
     $document = $project["document"];
     $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+
+    $sql2 = "SELECT * FROM Tekening WHERE project_nummer = ?";
+    $stmt2 = $pdo->prepare($sql);
+    $stmt2->execute(array($_GET["project_nummer"]));
+    $tekeningen = $stmt->fetch();
 }
 
 $pdo = NULL;
@@ -87,6 +92,7 @@ $pdo = NULL;
                     <form action="bekijken_bouwtekeningen.php" method="get">
                         <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+                        <td><input type="hidden" name="project_nummer" <?php if (isset($_GET["vinden"])) { print("value=$project_nummer"); } ?>></td>
                     </form>
                   </div>
               </tr>
@@ -126,16 +132,18 @@ $pdo = NULL;
                 print("<tr><td>Projectnaam:</td><td>$naam</td></tr>");
                 print("<tr><td>Projectnummer:</td><td>$project_nummer</td></tr>");
                 print("<tr><td>Status:</td><td>$status</td></tr>");
-                print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                 print("<tr><td>Naam klant:</td><td>$klantnaam</td></tr>");
+                print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                 print("<tr><td>Contractnummer:</td><td>$contract_nummer</td></tr>");
                 print("</table>");
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"bouwtekeningen\">");
-                print("<img src=\"images/IMG_7017.JPG\" class=\"img-responsive\">");
-                print("<img src=\"images/IMG_7020.JPG\" class=\"img-responsive\">");
-                print("<img src=\"images/IMG_7028.JPG\" class=\"img-responsive\">");
+                foreach ($tekeningen as $tekening ) {
+                    print("<table><tr>");
+                    print("<td><img src=$tekening></td>");
+                    print("</tr></table>");
+                }
                 print("</div>");
 
                 print("</div>");
