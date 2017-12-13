@@ -132,7 +132,7 @@ $pdo = NULL;
                                 Vul een voornaam en een achternaam in.
                               </div>");
                     } elseif ($voornaam != "") {
-                        print("<div class=container><table>");
+                        print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
