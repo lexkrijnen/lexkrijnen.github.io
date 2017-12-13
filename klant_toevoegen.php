@@ -163,7 +163,7 @@ $hash = sha1($salt . $wachtwoord);
               </tr>
               <tr>
                 <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
                 </td>
               </tr>
             </form>
