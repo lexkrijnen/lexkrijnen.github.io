@@ -125,7 +125,7 @@ $pdo = NULL;
                 //informatie van de gezochte klant tonen
                 if (isset($_GET["vinden"])) {
                     //Geen voornaam en achternaam ingevuld
-                    if ($_GET["voornaam"] == "" && $_GET["achternaam"] == "") {
+                    if ($_GET["voornaam1"] == "" || $_GET["achternaam1"] == "") {
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
