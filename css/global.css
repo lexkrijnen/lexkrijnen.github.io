@@ -103,16 +103,16 @@ body {
 	font-weight: bold;
 }
 
-.google-maps {
-	position: relative;
-	padding-bottom: 75%;
-    height: 0;
-	overflow: hidden;
+.google-maps{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
 }
-.google-maps iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100% !important;
-	height: 40% !important;
+.google-maps iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
 }
