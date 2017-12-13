@@ -31,9 +31,9 @@ if (isset($_GET["vinden"])) {
     $_SESSION["achternaam"] =  $achternaam;
     $_SESSION["naam"] = $naam;
 
-    $ingevuldevoornaam = $_GET["voornaam"];
-    $ingevuldetussenvoegsel = $_GET["tussenvoegsel"];
-    $ingevuldeachternaam = $_GET["achternaam"];
+    $ingevuldevoornaam = $_GET["voornaam1"];
+    $ingevuldetussenvoegsel = $_GET["tussenvoegsel1"];
+    $ingevuldeachternaam = $_GET["achternaam1"];
 
 }
 
@@ -106,13 +106,13 @@ $pdo = NULL;
                <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
-                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam1" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
                           </div>
                           <div class="">
-                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel1" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
                           </div>
                           <div class="">
-                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam1" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                           </div>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                     </form>
@@ -131,7 +131,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "") {
+                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"])) {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -140,10 +140,29 @@ $pdo = NULL;
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
-                        print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
-                        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+                        print("<form action='klant_verwijderen.php' method='get'>");
+                        print("<tr><td></td><td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+                        print("</form>");
+                        print("<form>");
+                        print("<form action='klant_zoeken.php' method='get'>");
+                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
+                    } elseif ($voornaam != "" && isset($_GET["aanpassen"])) {
+                        print("<table>");
+                        print("<form action='klant_zoeken.php' method='get'");
+                        print("<tr><td>Voornaam</td><td><input type=\"text\" class=\"form-control\" name=\"voornaam\" value=$voornaam></td></tr>");
+                        print("<tr><td>Tussenvoegsel</td><td><input type=\"text\" class=\"form-control\" name=\"tussenvoegsel\" value=$tussenvoegsel></td></tr>");
+                        print("<tr><td>Achternaam</td><td><input type=\"text\" class=\"form-control\" name=\"achternaam\" value=$achternaam></td></tr>");
+                        print("<tr><td>Telefoonnummer</td><td><input type=\"text\" class=\"form-control\" name=\"telefoonnummer\" value=$telefoonnummer></td></tr>");
+                        print("<tr><td>Emailadres</td><td><input type=\"text\" class=\"form-control\" name=\"emailadres\" value=$emailadres></td></tr>");
+                        print("<tr><td>Adres</td><td><input type=\"text\" class=\"form-control\" name=\"adres\" value=$adres></td></tr>");
+                        print("<tr><td>Postcode</td><td><input type=\"text\" class=\"form-control\" name=\"postcode\" value=$postcode></td></tr>");
+                        print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td></tr>");
+                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>")
+                        print("</form");
+                        print("</table>");
+                    }
                     } else {
                         //geen klant gevonden met die naam
                         print("<div class=\"alert alert-warning\" role=\"alert\">
@@ -155,7 +174,6 @@ $pdo = NULL;
                 }
                 ?>
             </div>
-        </div>
         </div>
 
 
