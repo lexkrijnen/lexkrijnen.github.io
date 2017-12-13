@@ -33,7 +33,7 @@
 
             if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
                 if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Contract (contract_nummer,document, naam)VALUES(?,?,?)";
+                    $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
                 } else {
@@ -166,7 +166,7 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><input type="text" name="contractnummer" size="15"></td>
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
