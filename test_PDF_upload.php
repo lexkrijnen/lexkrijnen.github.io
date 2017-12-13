@@ -148,7 +148,7 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><input type="text" name="contractnummer" size="15"></td>
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
@@ -166,7 +166,7 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contractnummer" size="15"></td>
+                                        <td></td>
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>

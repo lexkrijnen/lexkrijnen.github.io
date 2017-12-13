@@ -30,9 +30,8 @@
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
         $message = "De wijzigingen zijn opgeslagen.";
-        //print('<div class="container"><div class="col-xs-4"><p>De wijzigingen zijn opgeslagen.</p></div></div>');
-        //print('<meta http-equiv="refresh" content="2;url=/meermindertoevoegen.php" />');
-        echo '<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET["id"] . '>';
+        //print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');      DEFECT, ID WORD NIET MEEGENOMEN!
+        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php>');
     }
 
     $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
