@@ -243,7 +243,7 @@
                           </div>
                       </div>
                       <div class="col-sm-4">
-                          <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Facebook</a>
+                          <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
                           <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                               <div class="modal-dialog">
                                   <div class="modal-content">
@@ -256,7 +256,7 @@
                                                   <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                                           </div>
                                       </div>
-                                      <div class="modal-footer">
+                                      <div class="modal-footer center-block">
                                           <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
 
                                       </div>
