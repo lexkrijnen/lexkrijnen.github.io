@@ -148,7 +148,7 @@ $pdo = NULL;
                         print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
-                    } elseif ($voornaam != "" && isset($_GET["aanpassen"])) {
+                    } elseif (isset($_GET["aanpassen"])) {
                         print("<table>");
                         print("<form action='klant_zoeken.php' method='get'");
                         print("<tr><td>Voornaam</td><td><input type=\"text\" class=\"form-control\" name=\"voornaam\" value=$voornaam></td></tr>");
