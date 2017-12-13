@@ -31,11 +31,11 @@
             $pass = "SQLWegro@101";
             $pdo = new PDO($db, $user, $pass);
 
-            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-                if ($_GET["document"] != "") {
+            if (isset($_GET["toevoegencontract"]) {
+                if ($_GET["document"] != "" AND $_GET["naam"] != "") {
                     $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+                    $stmt->execute(array(10, $_GET["naam"], $_GET["document"]));
                 } else {
                     $error = ("Plaats A.U.B. een bestand.");
                 }
@@ -87,7 +87,6 @@
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
-            <form method="get" action="test_PDF_upload.php">
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -102,6 +101,7 @@
                     }
                 ?>
             </table>
+                <form method="get" action="test_PDF_upload.php">
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
@@ -129,8 +129,8 @@
                                 </table>
                                 </div>
                             <div class="modal-footer">
-                                 <button type="button" class="btn btn-primary"><b>Close</b></button>
-                            </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
                         </div>
                     </div>
                 </div>
