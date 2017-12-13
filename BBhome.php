@@ -238,12 +238,35 @@
                       <div class="col-sm-3">
                           <div class="footer-col-item">
                               <h4>Contact</h4>
-                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a> </div>
+                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a>
+                              </div>
                           </div>
                       </div>
                       <div class="col-sm-4">
-
-                  </div>
+                          <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Facebook</a>
+                          <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                              <div class="modal-dialog">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                          <h4 class="modal-title" id="myModalLabel">k</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+                                               data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
+                                               data-hide-cover="true" data-show-facepile="false">
+                                              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
+                                                  <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
+                                          </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                          <button type="button" class="btn btn-primary"><b>upload</b></button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                       <div class="col-sm-3">
                           <div class="footer-col-item">
                               <h4>Locatie</h4>
