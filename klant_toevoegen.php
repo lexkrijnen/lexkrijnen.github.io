@@ -2,10 +2,10 @@
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$naam = ucfirst($voornaam) . " " . $tussenvoegsel . " " . ucfirst($achternaam);
 $emailadres = $_POST["emailadres"];
 $telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
+$woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
 

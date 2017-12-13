@@ -20,7 +20,7 @@ if (isset($_GET["vinden"])) {
     $klant_nummer = $project["klant_nummer"];
     $contract_nummer = $project["contract_nummer"];
     $document = $project["document"];
-    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+    $klantnaam = ucfirst($project['voornaam']) ." ". $project['tussenvoegsel'] ." ". ucfirst($project['achternaam']);
 
     $sql2 = "SELECT * FROM Tekening WHERE project_nummer = ?";
     $stmt2 = $pdo->prepare($sql);

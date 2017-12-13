@@ -15,15 +15,15 @@ if (isset($_GET["vinden"])) {
     $klant = $stmt->fetch();
 
 
-    $voornaam = $klant["voornaam"];
+    $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
-    $achternaam = $klant["achternaam"];
+    $achternaam = ucfirst($klant["achternaam"]);
     $klant_nummer = $klant["klant_nummer"];
     $telefoonnummer = $klant["telefoon_nummer"];
     $emailadres =  $klant["emailadres"];
     $adres = $klant["adres"];
     $postcode = $klant["postcode"];
-    $woonplaats = $klant["woonplaats"];
+    $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
     $_SESSION["voornaam"] = $voornaam;
