@@ -49,14 +49,20 @@ tbody{
     border-color: #FFA500;
 }
 
-.btn-default:hover{
-    color: #FFA500;
+.btn-lg:hover{
+    color: #FFFFFF;
+    background-color: #FFA500;
 }
 
 .btn-default{
     background-color: #FFA500;
     border-color: #FFA500;
     color:#FFFFFF;
+}
+
+.btn-default:hover{
+    color: #FFFFFF;
+    background-color: #FFA500;
 }
 
 /* Small Devices, Tablets */
