@@ -129,8 +129,8 @@
                                 </table>
                                 </div>
                             <div class="modal-footer">
-                                 <button type="button" class="btn btn-primary"><b>Close</b></button>
-                            </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
                         </div>
                     </div>
                 </div>
