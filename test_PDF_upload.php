@@ -110,6 +110,10 @@
                     print("</tr>");
                     }
                 ?>
+                <td></td>
+                <td><input type="text" name="pdf naam" size="15"></td>
+                <td><input type="file" name="bestand"></td>
+                <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
             </table>
         </form>
     <br>
