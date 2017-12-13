@@ -30,14 +30,16 @@ if(isset($_POST['btn-login']))
     } else {
         print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
         print('<div class="alert alert-success container page-box"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Een moment geduld A.U.B.</div>');
-        print('<meta http-equiv="refresh" content="1;url=../meerminderadminlanding.php" />');
+        print('<meta http-equiv="refresh" content="1;url=../profile_medewerker.php" />');
         foreach ($queryresult as $a => $b){
             $medewerker_nummer = $b['medewerker_nummer'];
             $medewerker_voornaam = $b['voornaam'];
+            $medewerker_functie = $b['functie'];
         }
         $_SESSION['klant_id'] = "";
         $_SESSION['medewerker_nummer'] = $medewerker_nummer;
         $_SESSION['medewerker_voornaam'] = $medewerker_voornaam;
+        $_SESSION['medewerker_functie'] = $medewerker_functie;
     }
 }
 ?>

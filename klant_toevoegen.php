@@ -224,6 +224,7 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 }
             }
+            print($toevoegen);
             ?>
         </div>
 
