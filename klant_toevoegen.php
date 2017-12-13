@@ -8,14 +8,14 @@ $telefoonnummer = $_POST["telefoonnummer"];
 $woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
-$toevoegen = FALSE;
+$toevoegen = 0;
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if (isset($_POST["aanmaken"]) && $toevoegen = TRUE) {
+if (isset($_POST["aanmaken"]) && $toevoegen == 1) {
 
 	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	$stmt = $pdo->prepare($sql);
@@ -128,7 +128,7 @@ $hash = sha1($salt . $wachtwoord);
                     <input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
                 </td>
                 <td>
-                    <input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print('value=$salt'); } ?>>
+                    <input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
                 </td>
                 <td>
                     <input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
@@ -210,14 +210,21 @@ $hash = sha1($salt . $wachtwoord);
                     print("<span class=\"sr-only\">Error:</span>");
                     print(" Vul een postcode in.");
                     print("</div>");
+                } elseif ($wachtwoord == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Druk op de genereer knop om een wachtwoord te genereren.");
+                    print("</div>");
                 } else {
                     ///succes
-                    $toevoegen = TRUE;
+                    $toevoegen++;
                     print("<div class=\"alert alert-success\" role=\"alert\">");
                     print("<br>" . $naam . " is successvol toegevoegd als klant.");
                     print("</div>");
                 }
             }
+            print($toevoegen);
             ?>
         </div>
 
