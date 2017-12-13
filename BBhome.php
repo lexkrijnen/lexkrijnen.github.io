@@ -80,7 +80,7 @@
 			</div>
     </div>
 
-		<div class="row">
+		<div class="row"> <a name="Ons_bedrijf" id="Ons_bedrijf">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
 				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
