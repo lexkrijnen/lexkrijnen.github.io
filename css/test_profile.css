@@ -52,8 +52,8 @@ tbody{
 
 .btn-lg:hover{
     color: #FFFFFF;
-    border-color: #FFA500;
-    background-color: #FFA500;
+    border-color: #ffc966;
+    background-color: #ffc966;
 }
 
 .btn-default{
@@ -64,8 +64,8 @@ tbody{
 
 .btn-default:hover{
     color: #FFFFFF;
-    border-color: #FFA500;
-    background-color: #FFA500;
+    border-color: #ffc966;
+    background-color: #ffc966;
 }
 
 /* Small Devices, Tablets */
