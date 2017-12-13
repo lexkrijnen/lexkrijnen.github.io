@@ -79,8 +79,8 @@
 				<img src="images/IMG_6733.JPG">
 			</div>
     </div>
-
-		<div class="row"> <a name="Ons_bedrijf" id="Ons_bedrijf">
+    <a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
+		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
 				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
