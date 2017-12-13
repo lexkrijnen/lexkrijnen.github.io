@@ -15,15 +15,15 @@ if (isset($_GET["vinden"])) {
     $klant = $stmt->fetch();
 
 
-    $voornaam = $klant["voornaam"];
+    $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
-    $achternaam = $klant["achternaam"];
+    $achternaam = ucfirst($klant["achternaam"]);
     $klant_nummer = $klant["klant_nummer"];
     $telefoonnummer = $klant["telefoon_nummer"];
     $emailadres =  $klant["emailadres"];
     $adres = $klant["adres"];
     $postcode = $klant["postcode"];
-    $woonplaats = $klant["woonplaats"];
+    $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
     $_SESSION["voornaam"] = $voornaam;
@@ -117,6 +117,7 @@ $pdo = NULL;
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                     </form>
                 </table>
+              </div>
 
 
 
@@ -131,7 +132,7 @@ $pdo = NULL;
                                 Vul een voornaam en een achternaam in.
                               </div>");
                     } elseif ($voornaam != "") {
-                        print("<table>");
+                        print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
@@ -142,7 +143,7 @@ $pdo = NULL;
                         print("<tr><td><form action='klant_verwijderen.php' method='get'></td>");
                         print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
                         print("</form>");
-                        print("</table>");
+                        print("</table></div>");
                     } else {
                         //geen klant gevonden met die naam
                         print("<div class=\"alert alert-warning\" role=\"alert\">

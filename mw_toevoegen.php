@@ -2,10 +2,10 @@
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$naam = ucfirst($voornaam) . " " . $tussenvoegsel . " " . ucfirst($achternaam);
 $emailadres = $_POST["emailadres"];
 $telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
+$woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
 
@@ -178,7 +178,7 @@ $hash = sha1($salt . $wachtwoord);
               </tr>
               <tr>
                 <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account aanmaken">
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
                 </td>
               </tr>
             </form>
