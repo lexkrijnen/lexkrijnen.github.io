@@ -95,7 +95,7 @@ $hash = sha1($salt . $wachtwoord);
                 <table>
                     <form action="klant_toevoegen.php" method="POST">
                 <tr>
-                <td>Voornaam klant</td>
+                <td>Voornaam</td>
                 <td>
                     <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
                 </td>
@@ -107,7 +107,7 @@ $hash = sha1($salt . $wachtwoord);
                             </td>
               </tr>
               <tr>
-                <td>Achternaam klant</td>
+                <td>Achternaam</td>
                 <td>
                     <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
                 </td>
