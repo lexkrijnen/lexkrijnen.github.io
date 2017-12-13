@@ -121,7 +121,7 @@ $hash = sha1($salt . $wachtwoord);
               <tr>
                 <td>Wachtwoord</td>
                 <td>
-                    <input type="text" class="form-control" placeholder="wachtwoord" required <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>>
+                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>>
                 </td>
                 <td>
                     <input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
