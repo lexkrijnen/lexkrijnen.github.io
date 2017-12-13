@@ -102,24 +102,6 @@
                     }
                 ?>
             </table>
-        </form>
-    <br>
-        <!--Tekening-->
-        <form method="get" action="test_PDF_upload.php">
-            <table class="table table-hover">
-                <tr>
-                    <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
-                </tr>
-                <?php
-                foreach ($tekening AS $document2) {
-                    print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
-                    print("</tr>");
-                    }
-                ?>
-            </table>
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
@@ -153,6 +135,24 @@
                         </div>
                     </div>
                 </div>
+        </form>
+    <br>
+        <!--Tekening-->
+        <form method="get" action="test_PDF_upload.php">
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($tekening AS $document2) {
+                    print("<tr>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
         </form>
     </div>
         <?php $pdo = NULL; ?>
