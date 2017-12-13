@@ -150,12 +150,8 @@ $pdo = NULL;
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"contract\">");
-                print("<iframe class=\"pdf-viewer\" src=\"$contract\" name=\"pdf_viewer\"></iframe>");
-    			print("<div class=\"pdf-fail\">");
-                print("<p>Problemen met het bekijken?</p>");
-                print("<a class=\"btn btn-primary\" onclick=\"window.open('$contract', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+                print("<a href=$contract target=pdf_viewer>$contractnaam");
     			print("</div>");
-                print("</div>");
 
                 print("</div>");
                 print("</div>");
