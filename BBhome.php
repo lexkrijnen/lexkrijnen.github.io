@@ -214,16 +214,7 @@
 
 
  </div>
-          <div class="page-box ">
 
-          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-               data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
-               data-hide-cover="true" data-show-facepile="false">
-              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
-                  <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-          </div>
-
-          </div>
     <div class="google-maps">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
@@ -250,13 +241,13 @@
 
                                       <div class="modal-body">
                                           <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                               data-tabs="timeline" data-width="900" data-height="800" data-small-header="false" data-adapt-container-width="true"
+                                               data-tabs="timeline" data-width="600" data-height="800" data-small-header="false" data-adapt-container-width="true"
                                                data-hide-cover="true" data-show-facepile="false">
                                               <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
                                                   <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                                           </div>
                                       </div>
-                                      <div class="modal-footer center-block">
+                                      <div class="modal-footer">
                                           <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
 
                                       </div>
