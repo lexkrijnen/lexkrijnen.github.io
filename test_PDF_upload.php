@@ -145,24 +145,7 @@
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
-                                <br>
-                                <table class="table">
-                                    <tr>
-                                        <thead>
-                                            <th><b>T.nr</b></th>
-                                            <th><b>Naam</b></th>
-                                            <th><b>Document</b></th>
-                                            <th></th>
-                                        </thead>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
-                                        <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
-                                    </tr>
-                                </table>
-                            </div>
+                                </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary"><b>upload</b></button>
