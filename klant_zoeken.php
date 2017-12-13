@@ -11,7 +11,7 @@ $pdo = new PDO($db, $user, $pass);
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"]));
+    $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
 
 
@@ -31,9 +31,9 @@ if (isset($_GET["vinden"])) {
     $_SESSION["achternaam"] =  $achternaam;
     $_SESSION["naam"] = $naam;
 
-    $ingevuldevoornaam = $_GET["voornaam1"];
-    $ingevuldetussenvoegsel = $_GET["tussenvoegsel1"];
-    $ingevuldeachternaam = $_GET["achternaam1"];
+    $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
+    $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
+    $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 
 }
 
@@ -106,13 +106,13 @@ $pdo = NULL;
                <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
-                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="voornaam1" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
                           </div>
                           <div class="">
-                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="tussenvoegsel1" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
                           </div>
                           <div class="">
-                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="achternaam1" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
                           </div>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                     </form>
@@ -125,7 +125,7 @@ $pdo = NULL;
                 //informatie van de gezochte klant tonen
                 if (isset($_GET["vinden"])) {
                     //Geen voornaam en achternaam ingevuld
-                    if ($_GET["voornaam1"] == "" || $_GET["achternaam1"] == "") {
+                    if ($_GET["ingevuldevoornaam"] == "" || $_GET["ingevuldeachternaam"] == "") {
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
@@ -167,7 +167,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen klant gevonden met de naam " . $_GET["voornaam"] ." ". $_GET["tussenvoegsel"] ." ". $_GET["achternaam"] . ".
+                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
