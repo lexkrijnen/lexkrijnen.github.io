@@ -49,6 +49,10 @@ tbody{
     border-color: #FFA500;
 }
 
+.btn-default:hover{
+    color: #FFA500;
+}
+
 .btn-default{
     background-color: #FFA500;
     border-color: #FFA500;
