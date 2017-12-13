@@ -275,9 +275,9 @@ address {
 .slider-wrapper {
 	position: initial;
 	margin-top: -800px;
-	/*margin-left: -1300px;*/
-	height: 1200px !important;
+	height: 70%; !important;
 	z-index: -13;
+	widht: 100%;
 }
 
 .slider-float {
