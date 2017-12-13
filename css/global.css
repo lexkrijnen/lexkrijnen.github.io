@@ -105,8 +105,8 @@ body {
 
 .google-maps{
 	overflow:hidden;
-	padding-bottom:1%;
-	position:relative;
+	padding: 0px;
+	position:absolute;
 	height:0;
 }
 .google-maps iframe{
