@@ -1,8 +1,8 @@
 
 # HTID:1836955: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
-ErrorDocument 403 404
-ErrorDocument 404 404
+ErrorDocument 403 http://wegro.lexkrijnen.nl/404
+ErrorDocument 404 http://wegro.lexkrijnen.nl/404
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
