@@ -125,6 +125,7 @@
 
       <div class="row rowsidemargin">
       <div class="row">
+          <div class="row"><a name="Ons_bedrijf" id="Ons_bedrijf"></a>
           <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
@@ -262,7 +263,6 @@
               <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
                   <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
           </div>
-
           </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">
