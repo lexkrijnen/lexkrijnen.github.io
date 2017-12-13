@@ -45,12 +45,14 @@ tbody{
     background-color: #FFE1B9;
 }
 .btn-lg{
+    color: #FFFFFF;
     background-color: #FFA500;
     border-color: #FFA500;
 }
 
 .btn-lg:hover{
     color: #FFFFFF;
+    border-color: #FFA500;
     background-color: #FFA500;
 }
 
@@ -62,6 +64,7 @@ tbody{
 
 .btn-default:hover{
     color: #FFFFFF;
+    border-color: #FFA500;
     background-color: #FFA500;
 }
 
