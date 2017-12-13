@@ -53,6 +53,9 @@ tbody{
     background-color: #FFA500;
     border-color: #FFA500;
 }
+.btn-delault > b{
+    color:#FFFFFF;
+}
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {
