@@ -121,13 +121,13 @@ $hash = sha1($salt . $wachtwoord);
               <tr>
                 <td>Wachtwoord</td>
                 <td>
-                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
+                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>>
                 </td>
                 <td>
                     <input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
                 </td>
                 <td>
-                    <input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
+                    <input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print('value=$salt'); } ?>>
                 </td>
                 <td>
                     <input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
