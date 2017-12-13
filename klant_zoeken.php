@@ -159,7 +159,7 @@ $pdo = NULL;
                         print("<tr><td>Adres</td><td><input type=\"text\" class=\"form-control\" name=\"adres\" value=$adres></td></tr>");
                         print("<tr><td>Postcode</td><td><input type=\"text\" class=\"form-control\" name=\"postcode\" value=$postcode></td></tr>");
                         print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td></tr>");
-                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>")
+                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
                         print("</form");
                         print("</table>");
                     }
