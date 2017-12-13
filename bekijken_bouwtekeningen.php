@@ -14,6 +14,7 @@ if (isset($_GET["vinden"])) {
 
     $naam = $_GET["projectnaam"];
     $contractnaam = $project["naam"];
+    $contract = $project["document"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
@@ -149,10 +150,10 @@ $pdo = NULL;
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"contract\">");
-                print("<iframe class=\"pdf-viewer\" src=\"$contractnaam\" name=\"pdf_viewer\"></iframe>");
+                print("<iframe class=\"pdf-viewer\" src=\"$contract\" name=\"pdf_viewer\"></iframe>");
     			print("<div class=\"pdf-fail\">");
                 print("<p>Problemen met het bekijken?</p>");
-                print("<a class=\"btn btn-primary\" onclick=\"window.open('$contractnaam', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+                print("<a class=\"btn btn-primary\" onclick=\"window.open('$contract', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
     			print("</div>");
                 print("</div>");
 
