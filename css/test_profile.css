@@ -49,7 +49,7 @@ tbody{
     border-color: #FFA500;
 }
 
-.btn-primary{
+.btn > btn-default{
     background-color: #FFA500;
     border-color: #FFA500;
 }
