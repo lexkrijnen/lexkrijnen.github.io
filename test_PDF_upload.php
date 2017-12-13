@@ -138,7 +138,7 @@
                             <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
                             </div>
                             <div class="modal-body">
-                                <table class="table table-hover">
+                                <table class="table">
                                     <tr>
                                         <thead>
                                             <th><b>C.nr</b></th>
@@ -156,7 +156,7 @@
                                     </tr>
                                 </table>
                                 <br>
-                                <table class="table table-hover">
+                                <table class="table">
                                     <tr>
                                         <thead>
                                             <th><b>T.nr</b></th>
