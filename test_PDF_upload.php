@@ -138,7 +138,7 @@
                             <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
                             </div>
                             <div class="modal-body">
-                                <table2 class="table table-hover">
+                                <table class="table table-hover">
                                     <tr>
                                         <thead>
                                             <th><b>C.nr</b></th>
@@ -154,9 +154,9 @@
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
 
                                     </tr>
-                                </table2>
+                                </table>
                                 <br>
-                                <table2 class="table table-hover">
+                                <table class="table table-hover">
                                     <tr>
                                         <thead>
                                             <th><b>T.nr</b></th>
@@ -171,7 +171,7 @@
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
                                     </tr>
-                                </table2>
+                                </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
