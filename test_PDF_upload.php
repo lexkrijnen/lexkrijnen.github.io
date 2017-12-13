@@ -102,25 +102,7 @@
                     }
                 ?>
             </table>
-        </form>
-    <br>
-        <!--Tekening-->
-        <form method="get" action="test_PDF_upload.php">
-            <table class="table table-hover">
-                <tr>
-                    <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
-                </tr>
-                <?php
-                foreach ($tekening AS $document2) {
-                    print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
-                    print("</tr>");
-                    }
-                ?>
-            </table>
-                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand toevoegen</a>
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -145,31 +127,31 @@
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
-                                <br>
-                                <table class="table">
-                                    <tr>
-                                        <thead>
-                                            <th><b>T.nr</b></th>
-                                            <th><b>Naam</b></th>
-                                            <th><b>Document</b></th>
-                                            <th></th>
-                                        </thead>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
-                                        <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
-                                    </tr>
-                                </table>
-                            </div>
+                                </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary"><b>upload</b></button>
+                                 <button type="button" class="btn btn-primary"><b>Close</b></button>
                             </div>
                         </div>
                     </div>
                 </div>
+        </form>
+    <br>
+        <!--Tekening-->
+        <form method="get" action="test_PDF_upload.php">
+            <table class="table table-hover">
+                <tr>
+                    <thead>
+                        <th><h3><b>Tekeningen</b></h3></th>
+                    </thead>
+                </tr>
+                <?php
+                foreach ($tekening AS $document2) {
+                    print("<tr>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+            </table>
         </form>
     </div>
         <?php $pdo = NULL; ?>
