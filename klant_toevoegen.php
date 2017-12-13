@@ -2,10 +2,10 @@
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$naam = ucfirst($voornaam) . " " . $tussenvoegsel . " " . ucfirst($achternaam);
 $emailadres = $_POST["emailadres"];
 $telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
+$woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
 
@@ -95,7 +95,7 @@ $hash = sha1($salt . $wachtwoord);
                 <table>
                     <form action="klant_toevoegen.php" method="POST">
                 <tr>
-                <td>Voornaam klant</td>
+                <td>Voornaam</td>
                 <td>
                     <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
                 </td>
@@ -107,7 +107,7 @@ $hash = sha1($salt . $wachtwoord);
                             </td>
               </tr>
               <tr>
-                <td>Achternaam klant</td>
+                <td>Achternaam</td>
                 <td>
                     <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
                 </td>
@@ -163,7 +163,7 @@ $hash = sha1($salt . $wachtwoord);
               </tr>
               <tr>
                 <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
                 </td>
               </tr>
             </form>

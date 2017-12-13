@@ -41,15 +41,6 @@
                 }
             }
 
-            if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
-                if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-                } else {
-                    $error = ("Plaats A.U.B. een bestand.");
-                    }
-                }
                 //Contract
                 $stmt = $pdo->prepare("SELECT * FROM Contract");
                 $stmt->execute();
@@ -148,11 +139,10 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contractnummer" size="15"></td>
+                                        <td></td>
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
-
                                     </tr>
                                 </table>
                                 <br>

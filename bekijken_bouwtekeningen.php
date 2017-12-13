@@ -20,7 +20,7 @@ if (isset($_GET["vinden"])) {
     $klant_nummer = $project["klant_nummer"];
     $contract_nummer = $project["contract_nummer"];
     $document = $project["document"];
-    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+    $klantnaam = ucfirst($project['voornaam']) ." ". $project['tussenvoegsel'] ." ". ucfirst($project['achternaam']);
 
     $sql2 = "SELECT * FROM Tekening WHERE project_nummer = ?";
     $stmt2 = $pdo->prepare($sql);
@@ -92,7 +92,7 @@ $pdo = NULL;
                 <tr>
                   <div class=row>
                     <form action="bekijken_bouwtekeningen.php" method="get">
-                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam" <?php if(isset($_GET["vinden"])) {print("value=$naam");}?>></td>
+                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam" <?php if(isset($_GET["vinden"])) {print('value=$naam');}?>></td>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                         <td><input type="hidden" name="project_nummer" <?php if (isset($_GET["vinden"])) { print("value=$project_nummer"); } ?>></td>
                     </form>
