@@ -70,9 +70,10 @@ if (empty($medewerker_nummer)) {
             print("<h1>Hallo, " . $medewerker_voornaam . "</h1>");
         }
         ?>
+        <h6>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</h6>
         <ul>
-            <li><a href="meerminderlanding.php">Meer/Minder Werk inzien</a></li>
-            <li><a href="#">Contracten inzien</a></li>
+            <li><a href="#">Projecten</a></li>
+            <li><a href="#">Klanten</a></li>
         </ul>
     </div>
 </div>

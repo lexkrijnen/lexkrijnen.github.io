@@ -8,20 +8,13 @@ $telefoonnummer = $_POST["telefoonnummer"];
 $woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
-$toevoegen = 0;
+$toevoegen = FALSE;
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if (isset($_POST["aanmaken"]) && $toevoegen == 1) {
-
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
-
-}
 
 $pdo = NULL;
 
@@ -218,13 +211,22 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 } else {
                     ///succes
-                    $toevoegen++;
+                    $toevoegen = TRUE;
                     print("<div class=\"alert alert-success\" role=\"alert\">");
                     print("<br>" . $naam . " is successvol toegevoegd als klant.");
                     print("</div>");
                 }
             }
-            print($toevoegen);
+
+
+            if (isset($_POST["aanmaken"]) && $toevoegen == TRUE) {
+
+                $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
+
+            }
+
             ?>
         </div>
 
