@@ -35,7 +35,7 @@
                 if ($_GET["document"] != "" AND $_GET["naam"] != "") {
                     $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array(10, $_GET["naam"], $_GET["document"]));
+                    $stmt->execute(array($_GET["contract_nummer"], $_GET["naam"], $_GET["document"]));
                 } else {
                     $error = ("Plaats A.U.B. een bestand.");
                 }
