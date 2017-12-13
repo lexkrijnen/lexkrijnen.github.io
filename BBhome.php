@@ -247,10 +247,7 @@
                           <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                               <div class="modal-dialog">
                                   <div class="modal-content">
-                                      <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                          <h4 class="modal-title" id="myModalLabel">k</h4>
-                                      </div>
+
                                       <div class="modal-body">
                                           <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
                                                data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
@@ -260,8 +257,8 @@
                                           </div>
                                       </div>
                                       <div class="modal-footer">
-                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-primary"><b>upload</b></button>
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+
                                       </div>
                                   </div>
                               </div>
