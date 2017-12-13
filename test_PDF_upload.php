@@ -143,7 +143,6 @@
                                         <td><input type="text" name="pdf naam" size="15"></td>
                                         <td><input type="file" name="bestand"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
-                                        <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                                     </tr>
                                 </table>
                                 <br>
