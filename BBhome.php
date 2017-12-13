@@ -243,25 +243,22 @@
                           </div>
                       </div>
                       <div class="col-sm-4">
-                          <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Facebook</a>
+                          <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
                           <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                               <div class="modal-dialog">
                                   <div class="modal-content">
-                                      <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                          <h4 class="modal-title" id="myModalLabel">k</h4>
-                                      </div>
+
                                       <div class="modal-body">
                                           <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                               data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true"
+                                               data-tabs="timeline" data-width="900" data-height="800" data-small-header="false" data-adapt-container-width="true"
                                                data-hide-cover="true" data-show-facepile="false">
                                               <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
                                                   <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
                                           </div>
                                       </div>
-                                      <div class="modal-footer">
-                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-primary"><b>upload</b></button>
+                                      <div class="modal-footer center-block">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+
                                       </div>
                                   </div>
                               </div>
