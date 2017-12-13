@@ -33,11 +33,6 @@
 	margin-top: auto;
 }
 
-.rowsidemargin{
-	margin-left: 10px;
-	margin-right: 1px;
-}
-
 .bottomline {
 	padding-bottom: 100px;
 	border-bottom: 5px solid black;
@@ -273,5 +268,8 @@ address {
 }
 
 .slider-wrapper {
+	margin-top: -800px;
+	margin-left: -1300px;
 	height: 600px !important;
+	z-index: -13;
 }

@@ -59,198 +59,157 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
     <!--<div class="">-->
     <div class="row">
-        <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-        <a href="contact.php">
-            <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje">
-                Contact
-            </div>
-        </a>
+    	<div class="slider-float">
+				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+				<a href="contact.php">
+					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
+						Contact
+					</div>
+				</a>
+			</div>
+
+			<div class="slider slider-demo ">
+				<img src="images/IMG_2442.JPG">
+				<img src="images/IMG_2601.JPG">
+				<img src="images/IMG_2784.JPG">
+				<img src="images/IMG_3134.JPG">
+				<img src="images/IMG_6733.JPG">
+			</div>
     </div>
-<div class="slider slider-demo ">
-  <img src="images/IMG_2442.JPG">
-  <img src="images/IMG_2601.JPG">
-  <img src="images/IMG_2784.JPG">
-  <img src="images/IMG_3134.JPG">
-  <img src="images/IMG_6733.JPG">
-</div>
 
+		<div class="row">
+			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
+				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
-<!-- Old slider -->
-<!--
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators --><!--
-            <div class="zindex2">
-                <img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
-                <a href="contact.php">
-                    <div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
-											Contact
-                    </div>
-                </a>
-            </div>
+				<titel>Ons bedrijf</titel><br><br>
+				Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
+				<br><br>
+				Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
+				<br>
+				Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
+				Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
+				<br><br>
+				U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
+			</p>
+		</div>
 
-            <!-- Wrapper for slides --><!--
-            <div class="carousel-inner zindex" role="listbox">
-                <div class="item active">
-                    <img src="images/IMG_2442.JPG">
-                </div>
-                <div class="item">
-                    <img src="images/IMG_9165.JPG">
-                </div>
-                <div class="item">
-                    <img src="images/IMG_9184.JPG">
-                </div>
-                <div class="item">
-                    <img src="images/IMG_9121.JPG">
-                </div>
-                <div class="item">
-                    <img src="images/IMG_6733.JPG">
-                </div>
-            </div>
--->
-            <!-- Controls
-            <a class="left carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control zindex" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+		<div class="row">
+	  	<a name="Kwaliteiten" id="Kwaliteiten">
 
-    </div>-->
+	  	</a>
+			<div class="col-xs-10 col-xs-offset-1  page-box">
+				<p class="paragraphleft ">
+					<titel>Kwaliteiten</titel>
+				</p><br>
 
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/IMG_9121.JPG" alt="">
+							<div class="overlay">
+								<h1>NIEUWBOUW</h1>
+								<p>
+										Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
+										Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
+										Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
+										waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+								</p>
+							</div>
+						</div>
+					</div>
 
-      <div class="row rowsidemargin">
-      <div class="row">
-          <div class="row"><a name="Ons_bedrijf" id="Ons_bedrijf"></a>
-          <p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+								<div class="overlay">
+									<h1>VERBOUW</h1>
+									<p>
+											Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
+											Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
+											En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
+											wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
+											Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
+									</p>
+								</div>
+							</div>
+						</div>
 
-              <titel>Ons bedrijf</titel><br><br>
-              Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
-              <br><br>
-              Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
-              <br>
-              Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br>
-              Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
-              <br><br>
-              U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
-        </p>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_9325.JPG" alt="">
+								<div class="overlay">
+									<h1>RENOVATIE</h1>
+									<p>
 
-        </div>
-          <div class="row"><a name="Kwaliteiten" id="Kwaliteiten"></a>
-              <div class="col-xs-10 col-xs-offset-1  page-box">
-                  <p class="paragraphleft "> <titel>Kwaliteiten</titel></p> <br>
+											In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
+											Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
+											En met behoud van oorspronkelijkheid en karakter.
+											Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_9121.JPG" alt="">
-                          <div class="overlay">
-                              <h1>NIEUWBOUW</h1>
-                              <p>
-                                  Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
-                                  Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
-                                  Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
-                                  waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
-
-
-
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
-                          <div class="overlay">
-                              <h1>VERBOUW</h1>
-                              <p>
-                                  Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
-                                  Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
-                                  En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
-                                  wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
-                                  Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="hovereffect">
-                          <img class="img-responsive" src="images/IMG_9325.JPG" alt="">
-                          <div class="overlay">
-                              <h1>RENOVATIE</h1>
-                              <p>
-
-                                  In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
-                                  Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
-                                  En met behoud van oorspronkelijkheid en karakter.
-                                  Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-
-              </div>
-          </div>
-          <a name="Vergunningen" id="Vergunningen"></a>
-      <div class="row">
-          <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+				<a name="Vergunningen" id="Vergunningen"></a>
+      		<div class="row">
+          	<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 
               <titel>Vergunningen</titel><br><br>
-              Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
+              	Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
                 Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
                 Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+          	</p>
+        	</div>
 
-          </p>
-        </div>
 
-
-      <div class="row"><a name="Projecten" id="Projecten"></a>
+      		<div class="row"><a name="Projecten" id="Projecten"></a>
           <div class="col-xs-10 col-xs-offset-1  page-box">
-             <p class="paragraphleft "> <titel>Projecten</titel></p> <br>
+          	<p class="paragraphleft ">
+            	<titel>Projecten</titel>
+            </p><br>
 
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+								<div class="overlay">
+									<h1>FUNDERING</h1>
+									<p>
+										Hier wordt de fundering van een nieuw huis gelegd.
+									</p>
+								</div>
+							</div>
+						</div>
 
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <div class="hovereffect">
-                      <img class="img-responsive" src="images/IMG_7028.JPG" alt="">
-                      <div class="overlay">
-                          <h1>FUNDERING</h1>
-                          <p>
-                              Hier wordt de fundering van een nieuw huis gelegd.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <div class="hovereffect">
-                      <img class="img-responsive" src="images/IMG_8460.JPG" alt="">
-                      <div class="overlay">
-                          <h1>AFWERKING</h1>
-                          <p>
-                              Het dak en de muren zijn nu ook bijna af.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <div class="hovereffect">
-                      <img class="img-responsive" src="images/IMG_9091.JPG" alt="">
-                      <div class="overlay">
-                          <h1>OPLEVERING</h1>
-                          <p>
-                              Het huis is nu zo goed als af. Tijd om in te richten.
-                          </p>
-                      </div>
-                  </div>
-              </div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+								<div class="overlay">
+									<h1>AFWERKING</h1>
+									<p>
+										Het dak en de muren zijn nu ook bijna af.
+									</p>
+								</div>
+							</div>
+						</div>
 
-          </div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+								<div class="overlay">
+									<h1>OPLEVERING</h1>
+									<p>
+											Het huis is nu zo goed als af. Tijd om in te richten.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
 
 
@@ -263,6 +222,7 @@
               <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
                   <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
           </div>
+
           </div>
   <footer id="footer-Section">
       <div class="footer-top-layout">

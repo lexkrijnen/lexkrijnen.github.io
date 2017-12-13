@@ -13,6 +13,8 @@ if (isset($_GET["vinden"])) {
     $project = $stmt->fetch();
 
     $naam = $_GET["projectnaam"];
+    $contractnaam = $project["naam"];
+    $contract = $project["document"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
@@ -90,7 +92,7 @@ $pdo = NULL;
                 <tr>
                   <div class=row>
                     <form action="bekijken_bouwtekeningen.php" method="get">
-                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam"></td>
+                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam" <?php if(isset($_GET["vinden"])) {print("value.=$naam");}?>></td>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                         <td><input type="hidden" name="project_nummer" <?php if (isset($_GET["vinden"])) { print("value=$project_nummer"); } ?>></td>
                     </form>
@@ -123,6 +125,7 @@ $pdo = NULL;
                 print("<ul clas=\"nav nav-tabs\">");
                 print("<li role=\"presentation\" class=\"active\"><a href=\"#informatie\" data-toggle=\"tab\">informatie</a></li>");
                 print("<li role=\"presentation\" ><a href=\"#bouwtekeningen\" data-toggle=\"tab\">bouwtekeningen</a></li>");
+                print("<li role=\"presentation\" ><a href=\"#contract\" data-toggle=\"tab\">contract</a></li>");
                 print("</ul>");
 
                 print("<div class=\"tab-content\">");
@@ -145,6 +148,10 @@ $pdo = NULL;
                     print("</tr></table>");
                 }
                 print("</div>");
+
+                print("<div class=\"tab-pane fade\" id=\"contract\">");
+                print("<a href=$contract target=pdf_viewer>$contractnaam");
+    			print("</div>");
 
                 print("</div>");
                 print("</div>");
