@@ -31,11 +31,11 @@
             $pass = "SQLWegro@101";
             $pdo = new PDO($db, $user, $pass);
 
-            if (isset($_GET["toevoegencontract"]) {
-                if ($_GET["document"] != "" AND $_GET["naam"] != "") {
+            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+                if ($_GET["document"] != "") {
                     $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["contract_nummer"], $_GET["naam"], $_GET["document"]));
+                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
                 } else {
                     $error = ("Plaats A.U.B. een bestand.");
                 }
