@@ -162,7 +162,6 @@ $pdo = NULL;
                         print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
                         print("</form");
                         print("</table>");
-                    }
                     } else {
                         //geen klant gevonden met die naam
                         print("<div class=\"alert alert-warning\" role=\"alert\">
