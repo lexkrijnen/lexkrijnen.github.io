@@ -102,7 +102,7 @@ $hash = sha1($salt . $wachtwoord);
                     </td>
                 </tr>
                 <tr>
-                    <td>Tussenvoegsel(s)</td>
+                    <td>Tussenvoegsel(s) </td>
                     <td>
                     <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
                     </td>
