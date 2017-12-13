@@ -270,6 +270,7 @@ address {
 .slider-wrapper {
 	margin-top: -800px;
 	margin-left: -1300px;
-	height: 1200px !important;
+	height: 70% !important;
 	z-index: -13;
+	width: 100%;
 }
