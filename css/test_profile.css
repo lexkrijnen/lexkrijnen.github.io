@@ -49,10 +49,13 @@ tbody{
     border-color: #FFA500;
 }
 
-.btn-primary{
+.btn-default{
+    background: #FFA500;
     background-color: #FFA500;
     border-color: #FFA500;
+    color:#FFFFFF;
 }
+
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.pdf-viewer {

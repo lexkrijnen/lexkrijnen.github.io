@@ -2,25 +2,19 @@
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$naam = ucfirst($voornaam) . " " . $tussenvoegsel . " " . ucfirst($achternaam);
 $emailadres = $_POST["emailadres"];
 $telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
+$woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
+$toevoegen = FALSE;
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-if (isset($_POST["aanmaken"])) {
-
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
-
-}
 
 $pdo = NULL;
 
@@ -95,19 +89,19 @@ $hash = sha1($salt . $wachtwoord);
                 <table>
                     <form action="klant_toevoegen.php" method="POST">
                 <tr>
-                <td>Voornaam klant</td>
+                <td>Voornaam</td>
                 <td>
                     <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
                 </td>
                         </tr>
                         <tr>
-                        <td>Tussenvoegsel(s)</td>
+                        <td>Tussenvoegsel(s) </td>
                             <td>
                             <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
                             </td>
               </tr>
               <tr>
-                <td>Achternaam klant</td>
+                <td>Achternaam</td>
                 <td>
                     <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
                 </td>
@@ -163,7 +157,7 @@ $hash = sha1($salt . $wachtwoord);
               </tr>
               <tr>
                 <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
                 </td>
               </tr>
             </form>
@@ -209,13 +203,30 @@ $hash = sha1($salt . $wachtwoord);
                     print("<span class=\"sr-only\">Error:</span>");
                     print(" Vul een postcode in.");
                     print("</div>");
+                } elseif ($wachtwoord == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Druk op de genereer knop om een wachtwoord te genereren.");
+                    print("</div>");
                 } else {
                     ///succes
+                    $toevoegen = TRUE;
                     print("<div class=\"alert alert-success\" role=\"alert\">");
                     print("<br>" . $naam . " is successvol toegevoegd als klant.");
                     print("</div>");
                 }
             }
+
+
+            if (isset($_POST["aanmaken"]) && $toevoegen == TRUE) {
+
+                $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
+
+            }
+
             ?>
         </div>
 
