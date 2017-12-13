@@ -275,7 +275,6 @@ address {
 .slider-wrapper {
 	position: initial;
 	margin-top: -800px;
-	/*margin-left: -1300px;*/
 	height: 1200px !important;
 	z-index: -13;
 }
