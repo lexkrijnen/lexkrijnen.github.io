@@ -87,7 +87,6 @@
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
-            <form method="get" action="test_PDF_upload.php">
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -102,6 +101,7 @@
                     }
                 ?>
             </table>
+                <form method="get" action="test_PDF_upload.php">
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
