@@ -280,9 +280,12 @@ address {
 	color: #bdbdbd;
 }
 
+.footer-title {
+	color: #bdbdbd;
+}
+
 .footer-item {
-	text-decoration: none;
-	color:
+	list-style-type: none;
 }
 
 .footer-item > a {
