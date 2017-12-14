@@ -103,12 +103,12 @@ body {
 	font-weight: bold;
 }
 
-google-maps{
+/*.google-maps{
 	overflow:hidden;
 	padding-bottom:56.25%;
 	position:relative;
 	height:0;
-}
+}*/
 .google-maps  iframe{
 	left:0;
 	top:0;
