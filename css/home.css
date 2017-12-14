@@ -10,8 +10,8 @@
 	width: 25%;
 	display: block;
 	margin-bottom: 30px;
-	-webkit-filter: drop-shadow(0 0 3px #fff);
-	filter: drop-shadow(0 0 3px #fff);
+	-webkit-filter: drop-shadow(0 0 5px #bdbdbd);
+	filter: drop-shadow(0 0 5px #bdbdbd);
 }
 
 .contbutton,
@@ -280,6 +280,20 @@ address {
 
 .slider-navigation {
 	opacity: 0;
+}
+
+.slider-item {
+	-webkit-filter: blur(2px); /* Safari */
+  filter: blur(2px);
+	-webkit-filter: grayscale(25%); /* Safari */
+  filter: grayscale(25%);
+}
+
+.slider-item:hover {
+	-webkit-filter: blur(0px); /* Safari */
+  filter: blur(0px);
+	-webkit-filter: grayscale(0%); /* Safari */
+  filter: grayscale(0%);
 }
 
 .google-maps{
