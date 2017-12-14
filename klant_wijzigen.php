@@ -27,6 +27,19 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
+if(isset($_GET["opslaan"])) {
+    $voornaam = $_GET["voornaam"];
+    $tussenvoegsel = $_GET["tussenvoegsel"];
+    $achternaam = $_GET["achternaam"];
+    $naam = $_GET["naam"];
+    $klant_nummer = $_GET["klantnummer"];
+    $telefoonnummer = $_GET["telefoonnummer"];
+    $emailadres = $_GET["emailadres"];
+    $adres = $_GET["adres"];
+    $postcode = $_GET["postcode"];
+    $woonplaats = $_GET["woonplaats"];
+}
+
 $pdo = NULL;
 ?>
 
@@ -106,14 +119,14 @@ $pdo = NULL;
                       <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
                   </form>
               </table>
-
+			<br>
             <a href="klant_zoeken.php">terug</a>
 
 
             <?php
 
             if(isset($_GET["opslaan"])) {
-                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen. </div>");
+                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
             }
 
             ?>

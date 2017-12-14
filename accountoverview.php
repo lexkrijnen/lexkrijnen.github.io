@@ -62,7 +62,6 @@
 
     <div class="row page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
-        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
@@ -81,8 +80,6 @@
                 }
                 ?>
             </table>
-        </form>
-
     </div>
 
 
@@ -100,10 +97,16 @@
                     print("<tr>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
-                    print("<td>" . $werk["emailadres"] . "</td>");
                     print("</tr>");
+                    /*print("<tr>");
+                    print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
+                    print("</tr>");
+                    print("<tr>");*/
                     $meerwerkcount++;
                 }
+
+
+
                 ?>
             </table>
 
