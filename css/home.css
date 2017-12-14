@@ -276,15 +276,22 @@ address {
 }
 
 .footer {
+	padding: 20px;
 	background-color: #3c3c3b;
-	color: #fff;
+	color: #bdbdbd;
 }
 
-.footer a,
-.footer li,
-.footer h4 {
+.footer-title {
+	color: #bdbdbd;
+}
+
+.footer-item {
+	list-style-type: none;
+}
+
+.footer-item > a,
+.footer-title > a{
 	color: #fff;
-	text-decoration: none;
 }
 
 /*
