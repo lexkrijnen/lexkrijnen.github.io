@@ -55,7 +55,7 @@
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 
-}
+
 
 $pdo = NULL;
 ?>
