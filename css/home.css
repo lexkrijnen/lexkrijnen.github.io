@@ -275,6 +275,10 @@ address {
 	opacity: 0;
 }
 
+.footer {
+	background-color: #3c3c3b;
+}
+
 /*
 .google-maps {
 	overflow:hidden;
