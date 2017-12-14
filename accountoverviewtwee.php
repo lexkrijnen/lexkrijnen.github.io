@@ -58,8 +58,6 @@
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
-    echo "tst";
-    die();
 
 $pdo = NULL;
 ?>
