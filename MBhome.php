@@ -64,7 +64,7 @@
     <!--<div class="">-->
     <div class="row">
     	<div class="slider-float">
-				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+				<img src="images/Logo%20metselbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
 					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
 						Contact
@@ -176,9 +176,9 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+								<img class="img-responsive" src="images/IMG_3343.JPG" alt="">
 								<div class="overlay">
-									<h1>FUNDERING</h1>
+									<h1>METSELWERK</h1>
 									<p>
 										Hier wordt de fundering van een nieuw huis gelegd.
 									</p>
@@ -188,9 +188,9 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+								<img class="img-responsive" src="images/IMG_3134.JPG" alt="">
 								<div class="overlay">
-									<h1>AFWERKING</h1>
+									<h1>GERICHT OP</h1>
 									<p>
 										Het dak en de muren zijn nu ook bijna af.
 									</p>
@@ -200,9 +200,9 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+								<img class="img-responsive" src="images/IMG_3344.JPG" alt="">
 								<div class="overlay">
-									<h1>OPLEVERING</h1>
+									<h1>UW WENSEN</h1>
 									<p>
 											Het huis is nu zo goed als af. Tijd om in te richten.
 									</p>

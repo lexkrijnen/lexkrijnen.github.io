@@ -27,6 +27,19 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
+if(isset($_GET["opslaan"])) {
+    $voornaam = $_GET["voornaam"];
+    $tussenvoegsel = $_GET["tussenvoegsel"];
+    $achternaam = $_GET["achternaam"];
+    $naam = $_GET["naam"];
+    $klant_nummer = $_GET["klantnummer"];
+    $telefoonnummer = $_GET["telefoonnummer"];
+    $emailadres = $_GET["emailadres"];
+    $adres = $_GET["adres"];
+    $postcode = $_GET["postcode"];
+    $woonplaats = $_GET["woonplaats"];
+}
+
 $pdo = NULL;
 ?>
 
@@ -92,31 +105,35 @@ $pdo = NULL;
 
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
-                <table>
-                    <form action='klant_wijzigen.php' method='get'>
-                        <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" value="<?php $voornaam ?>" ></td></tr>
-                        <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" value="<?php $tussenvoegsel ?>"></td></tr>
-                        <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" value="<?php $achternaam ?>"></td></tr>
-                        <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" value="<?php $telefoonnummer ?>"></td></tr>
-                        <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" value="<?php $emailadres ?>"></td></tr>
-                        <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" value="<?php $adres ?>"></td></tr>
-                        <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" value="<?php $postcode ?>"></td></tr>
-                        <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" value="<?php $woonplaats ?>"></td>
-                        <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
-                        <tr><td></td><td><input type="hidden" name="klantnummer" value="<?php $klant_nummer ?>"></td></tr>
-                    </form>
-                </table>
-            </div>
-        </div>
-
-        <?php
-
-        if(isset($_GET["opslaan"])) {
-            print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen. </div>");
-        }
+              <table>
+                  <form action='klant_wijzigen.php' method='get'>
+                      <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
+                      <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
+                      <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
+                      <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
+                      <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
+                      <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
+                      <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
+                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
+                      <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
+                      <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
+                  </form>
+              </table>
+			<br>
+            <a href="klant_zoeken.php">terug</a>
 
 
-        ?>
+            <?php
+
+            if(isset($_GET["opslaan"])) {
+                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
+            }
+
+            ?>
+          </div>
+      </div>
+
+
 
 
 
