@@ -164,58 +164,40 @@
             	<titel>Projecten</titel>
             </p><br>
 
-              <body>
-              <div class="slider-holder">
-                  <span id="slider-image-1"></span>
-                  <span id="slider-image-2"></span>
-                  <span id="slider-image-3"></span>
-                  <div class="image-holder">
-                      <img src="images/keuken.png" class="slider-image" />
-                      <img src="images/muur.png" class="slider-image" />
-                      <img src="images/steiger.png" class="slider-image" />
-                  </div>
-                  <div class="button-holder">
-                      <a href="#slider-image-1" class="slider-change"></a>
-                      <a href="#slider-image-2" class="slider-change"></a>
-                      <a href="#slider-image-3" class="slider-change"></a>
-                  </div>
-              </div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_3343.JPG" alt="">
+								<div class="overlay">
+									<h1>METSELWERK</h1>
+									<p>
+										Hier wordt de fundering van een nieuw huis gelegd.
+									</p>
+								</div>
+							</div>
+						</div>
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <body>
-                            <div class="slider-holder">
-                                <span id="slider-image-1"></span>
-                                <span id="slider-image-2"></span>
-                                <span id="slider-image-3"></span>
-                                <div class="image-holder">
-                                    <img src="1.jpg" class="slider-image" />
-                                    <img src="2.jpg" class="slider-image" />
-                                    <img src="3.jpg" class="slider-image" />
-                                </div>
-                                <div class="button-holder">
-                                    <a href="#slider-image-1" class="slider-change"></a>
-                                    <a href="#slider-image-2" class="slider-change"></a>
-                                    <a href="#slider-image-3" class="slider-change"></a>
-                                </div>
-                            </div>
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_3134.JPG" alt="">
+								<div class="overlay">
+									<h1>GERICHT OP</h1>
+									<p>
+										Het dak en de muren zijn nu ook bijna af.
+									</p>
+								</div>
+							</div>
+						</div>
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <body>
-                            <div class="slider-holder">
-                                <span id="slider-image-1"></span>
-                                <span id="slider-image-2"></span>
-                                <span id="slider-image-3"></span>
-                                <div class="image-holder">
-                                    <img src="1.jpg" class="slider-image" />
-                                    <img src="2.jpg" class="slider-image" />
-                                    <img src="3.jpg" class="slider-image" />
-                                </div>
-                                <div class="button-holder">
-                                    <a href="#slider-image-1" class="slider-change"></a>
-                                    <a href="#slider-image-2" class="slider-change"></a>
-                                    <a href="#slider-image-3" class="slider-change"></a>
-                                </div>
-                            </div>
+							<div class="hovereffect">
+								<img class="img-responsive" src="images/IMG_3344.JPG" alt="">
+								<div class="overlay">
+									<h1>UW WENSEN</h1>
+									<p>
+											Het huis is nu zo goed als af. Tijd om in te richten.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
                  </div>
