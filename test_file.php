@@ -37,7 +37,7 @@
     //TABEL MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute();
-    $meerwerk = $stmt->fetchAll();
+    $contract = $stmt->fetchAll();
 
     ?>
 </head>
@@ -81,13 +81,11 @@
                     <th></th>
                 </tr>
                 <?php
-                foreach ($meerwerk AS $werk) {
+                foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
+                    print("<td>" . $document["contract_nummer"] . "</td>");
+                    print("<td>" . $document["document"] . "</td>");
+                    print("<td>" . $document["naam"] . "</td>");
                     print("</tr>");
                 }
                 ?>
