@@ -7,6 +7,8 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$controle=0;
+
 
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
@@ -131,7 +133,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"])) {
+                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"] && $controle==0)) {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -161,6 +163,7 @@ $pdo = NULL;
 
 
                 if (isset($_GET["aanpassen"])) {
+                    $controle=1;
                     print("<table>");
                     print("<form action='klant_zoeken.php' method='get'");
                     print("<tr><td>Voornaam</td><td><input type=\"text\" class=\"form-control\" name=\"voornaam\" value=$voornaam></td></tr>");
