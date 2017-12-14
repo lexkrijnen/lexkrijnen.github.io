@@ -7,8 +7,6 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$controle=0;
-
 
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
@@ -32,6 +30,12 @@ if (isset($_GET["vinden"])) {
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
     $_SESSION["achternaam"] =  $achternaam;
     $_SESSION["naam"] = $naam;
+    $_SESSION["klantnummer"] = $klant_nummer;
+    $_SESSION["telefoonnummer"] = $telefoonnummer;
+    $_SESSION["emailadres"] = $emailadres;
+    $_SESSION["adres"] = $adres;
+    $_SESSION["postcode"] = $postcode;
+    $_SESSION["woonplaats"] = $woonplaats;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
@@ -133,7 +137,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"]) && $controle==0) {
+                    } elseif ($klant_nummer != "") {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -146,7 +150,7 @@ $pdo = NULL;
                         print("<tr><td></td><td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
                         print("</form>");
                         print("<form>");
-                        print("<form action='klant_zoeken.php' method='get'>");
+                        print("<form action='klant_wijzigen.php' method='get'>");
                         print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
@@ -158,25 +162,6 @@ $pdo = NULL;
                                 Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
-                }
-
-
-
-                if (isset($_GET["aanpassen"])) {
-                    $controle=1;
-                    print("<table>");
-                    print("<form action='klant_zoeken.php' method='get'");
-                    print("<tr><td>Voornaam</td><td><input type=\"text\" class=\"form-control\" name=\"voornaam\" value=$voornaam></td></tr>");
-                    print("<tr><td>Tussenvoegsel</td><td><input type=\"text\" class=\"form-control\" name=\"tussenvoegsel\" value=$tussenvoegsel></td></tr>");
-                    print("<tr><td>Achternaam</td><td><input type=\"text\" class=\"form-control\" name=\"achternaam\" value=$achternaam></td></tr>");
-                    print("<tr><td>Telefoonnummer</td><td><input type=\"text\" class=\"form-control\" name=\"telefoonnummer\" value=$telefoonnummer></td></tr>");
-                    print("<tr><td>Emailadres</td><td><input type=\"text\" class=\"form-control\" name=\"emailadres\" value=$emailadres></td></tr>");
-                    print("<tr><td>Adres</td><td><input type=\"text\" class=\"form-control\" name=\"adres\" value=$adres></td></tr>");
-                    print("<tr><td>Postcode</td><td><input type=\"text\" class=\"form-control\" name=\"postcode\" value=$postcode></td></tr>");
-                    print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td>");
-                    print("<td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
-                    print("</form");
-                    print("</table>");
                 }
                 ?>
             </div>

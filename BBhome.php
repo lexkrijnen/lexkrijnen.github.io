@@ -65,13 +65,13 @@
     	<div class="slider-float">
 				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
-					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
+					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn select-btn contbutton">
 						Contact
 					</div>
 				</a>
 			</div>
 
-			<div class="slider slider-demo ">
+			<div class="slider slider-demo col-xs-12">
 				<img src="images/IMG_2442.JPG">
 				<img src="images/IMG_2601.JPG">
 				<img src="images/IMG_2784.JPG">
