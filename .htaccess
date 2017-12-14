@@ -1,6 +1,9 @@
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 Options Indexes
 ErrorDocument 400 404.php
 ErrorDocument 401 404.php
@@ -25,6 +28,3 @@ ErrorDocument 504 404.php
 ErrorDocument 505 404.php
 DirectoryIndex index.php       
 order deny,allow
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]

@@ -7,6 +7,8 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$controle=0;
+
 
 if (isset($_GET["vinden"])) {
     $sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
@@ -131,7 +133,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"])) {
+                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"]) && $controle==0) {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -145,7 +147,7 @@ $pdo = NULL;
                         print("</form>");
                         print("<form>");
                         print("<form action='klant_zoeken.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
+                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
                     } else {
@@ -161,6 +163,7 @@ $pdo = NULL;
 
 
                 if (isset($_GET["aanpassen"])) {
+                    $controle=1;
                     print("<table>");
                     print("<form action='klant_zoeken.php' method='get'");
                     print("<tr><td>Voornaam</td><td><input type=\"text\" class=\"form-control\" name=\"voornaam\" value=$voornaam></td></tr>");
@@ -170,8 +173,8 @@ $pdo = NULL;
                     print("<tr><td>Emailadres</td><td><input type=\"text\" class=\"form-control\" name=\"emailadres\" value=$emailadres></td></tr>");
                     print("<tr><td>Adres</td><td><input type=\"text\" class=\"form-control\" name=\"adres\" value=$adres></td></tr>");
                     print("<tr><td>Postcode</td><td><input type=\"text\" class=\"form-control\" name=\"postcode\" value=$postcode></td></tr>");
-                    print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td></tr>");
-                    print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
+                    print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td>");
+                    print("<td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
                     print("</form");
                     print("</table>");
                 }
