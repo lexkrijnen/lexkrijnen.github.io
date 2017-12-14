@@ -88,12 +88,17 @@ $pdo = NULL;
                 <?php
 
                 if ($klant_nummer != "") {
-                    print("<tr>");
-                    print("<td>" . "naam: " . "</td>" . "<td>" . $naam . "</td>");
-                    print("<td>" . $klant_nummer . "</td>");
-                    print("<td>" . $werk["prijs"] . "</td>");
-                    print("</tr>");
-                }
+                        print("<tr><td>Naam: </td><td>$naam</td></tr>");
+                        print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
+                        print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
+                        print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
+                        print("<tr><td>Adres: </td><td>$adres</td></tr>");
+                        print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
+                        print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
+                        print("</table></div>");
+                    }else {
+                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }
                 ?>
             </table>
     </div>
