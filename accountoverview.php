@@ -86,11 +86,6 @@
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Voornaam</th>
-                    <th>Achternaam</th>
-                    <th>Email</th>
-                </tr>
                 <?php
                 $meerwerkcount = 1;
                 foreach ($klantgegevens AS $werk) {
