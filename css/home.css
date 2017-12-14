@@ -277,14 +277,16 @@ address {
 
 .footer {
 	background-color: #3c3c3b;
-	color: #fff;
+	color: #bdbdbd;
 }
 
-.footer a,
-.footer li,
-.footer h4 {
-	color: #fff;
+.footer-item {
 	text-decoration: none;
+	color:
+}
+
+.footer-item > a {
+	color: #fff;
 }
 
 /*
