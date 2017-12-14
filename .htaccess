@@ -1,12 +1,9 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-# Redirects domain.com/file.html to domain.com/file
+# HTID:1836955: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+ErrorDocument 404 http://wegro.lexkrijnen.nl/404
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d          # is not directory
-RewriteCond %{REQUEST_FILENAME}\.html -f     # is an existing html file
-RewriteCond %{REQUEST_URI} ^(.+)\.html$      # request URI ends with .html
-RewriteRule (.*)\.html$ /$1 [R=301,L]        # redirect from index.html to index
-Options Indexes
-ErrorDocument 404 404.php   
-order deny,allow
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:1836955:
+Options -Indexes
