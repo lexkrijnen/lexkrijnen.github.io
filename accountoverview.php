@@ -2,10 +2,10 @@
 <html>
 <head>
     <?php
-    session_start();
+    /*session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-    ?>
+    */?>
     <meta charset="UTF-8">
     <title>Account</title>
     <link rel="stylesheet" href="css/accountoverview.css">
