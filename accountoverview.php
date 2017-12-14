@@ -90,9 +90,9 @@
                 $meerwerkcount = 1;
                 foreach ($klantgegevens AS $werk) {
                     print("<tr>");
-                    print("<td>" . "<th>Voornaam</th>" . "</td>");
+                    print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
-                    print("<td>" . "<th>Achternaam</th>" . "</td>");
+                    print("<td>" . "<b>Achternaam</b>" . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
                     print("</tr>");
                     /*print("<tr>");
