@@ -24,11 +24,43 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Klant");
+    $stmt = $pdo->prepare("SELECT * FROM Klant where voornaam='Piet'");
     $stmt->execute();
-    $klantgegevens = $stmt->fetchAll();
+    $klant = $stmt->fetch();
 
-    ?>
+    $voornaam = ucfirst($klant["voornaam"]);
+    $tussenvoegsel = $klant["tussenvoegsel"];
+    $achternaam = ucfirst($klant["achternaam"]);
+    $klant_nummer = $klant["klant_nummer"];
+    $telefoonnummer = $klant["telefoon_nummer"];
+    $emailadres =  $klant["emailadres"];
+    $adres = $klant["adres"];
+    $postcode = $klant["postcode"];
+    $woonplaats = ucfirst($klant["woonplaats"]);
+    $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+	$rol = $_GET["rol"];
+
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
+    $_SESSION["klantnummer"] = $klant_nummer;
+    $_SESSION["telefoonnummer"] = $telefoonnummer;
+    $_SESSION["emailadres"] = $emailadres;
+    $_SESSION["adres"] = $adres;
+    $_SESSION["postcode"] = $postcode;
+    $_SESSION["woonplaats"] = $woonplaats;
+
+    $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
+    $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
+    $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
+
+}
+
+$pdo = NULL;
+?>
+
+
 </head>
 <body>
 <!--NAVBAR-->
@@ -87,20 +119,28 @@
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
                 <?php
-                $meerwerkcount = 1;
-                foreach ($klantgegevens AS $werk) {
-                    print("<tr>");
+                if ($klant_nummer != "") {
+                    print("<br><div class=container><table>");
+                    print("<tr><td>Naam:</td><td>$naam</td></tr>");
+                    print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+                    print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
+                    print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
+                    print("<tr><td>Adres:</td><td>$adres</td></tr>");
+                    print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
+                    print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
+                    print("</table></div>");
+                    /*print("<tr>");
                     print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<b>Achternaam</b>" . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
                     print("</tr>");
-                    /*print("<tr>");
+                    print("<tr>");
                     print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
                     print("</tr>");
                     print("<tr>");*/
-                    $meerwerkcount++;
                 }
+
 
 
 
