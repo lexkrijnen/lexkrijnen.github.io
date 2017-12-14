@@ -93,7 +93,7 @@
                     <td><input type="text" name="contract_nummer" size="15"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="15"></td>
-                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                    <input type="submit" name="toevoegencontract" value="Toevoegen">
                 </tr>
             </table>
         </form>
