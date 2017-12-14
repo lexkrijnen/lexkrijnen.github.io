@@ -3,7 +3,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script>alert(1);</script>
     <title>Account</title>
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
@@ -13,7 +12,6 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script>alert(1);</script>
     <link href="css/global.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
@@ -22,7 +20,6 @@
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
     ?>
-<script>alert(1);</script>
 
     <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -33,6 +30,7 @@
     $stmt = $pdo->prepare("SELECT * FROM Klant where voornaam='Piet'");
     $stmt->execute();
     $klant = $stmt->fetch();
+
 
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -60,8 +58,8 @@
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
-
-
+    echo "tst";
+    die();
 
 $pdo = NULL;
 ?>
@@ -93,7 +91,7 @@ $pdo = NULL;
     if (empty($klant_id)) {
         print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    } else {
+    }
     ?>
 
 
