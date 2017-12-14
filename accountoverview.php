@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php
-    /*session_start();
-    @$klant_id = $_SESSION['klant_id'];
-    @$klant_voornaam = $_SESSION['voornaam'];
-    */?>
     <meta charset="UTF-8">
+    <script>alert(1);</script>
     <title>Account</title>
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
@@ -16,8 +12,17 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script>alert(1);</script>
     <link href="css/global.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    ?>
+<script>alert(1);</script>
+
     <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
