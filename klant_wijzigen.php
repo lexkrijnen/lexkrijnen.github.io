@@ -120,7 +120,7 @@ $pdo = NULL;
                   </form>
               </table>
 			<br>
-            <a href="klant_zoeken.php" class="btn btn-info" role="button">terug</a>
+            <a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a>
 
 
             <?php
