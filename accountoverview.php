@@ -86,17 +86,12 @@
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Voornaam</th>
-                    <th>Achternaam</th>
-                    <th>Email</th>
-                </tr>
                 <?php
                 $meerwerkcount = 1;
                 foreach ($klantgegevens AS $werk) {
                     print("<tr>");
-                    print("<td>" . "Voornaam" . "</td>");
-                    print("<td>" . $werk["<th>Voornaam</th>"] . "</td>");
+                    print("<td>" . "<th>Voornaam</th>" . "</td>");
+                    print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<th>Achternaam</th>" . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
                     print("</tr>");
