@@ -159,7 +159,7 @@ $pdo = NULL;
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
-														print("<tr><td>Medewerker:</td><td>$medewerker_nummer</td></tr>");
+														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
 														print("<tr><td>functie:</td><td>$functie</td></tr>");
 												} elseif ($rol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
