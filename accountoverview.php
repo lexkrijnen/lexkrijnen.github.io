@@ -86,7 +86,7 @@
     </div>
 
 
-    <div class="page-box col-xs-3">
+    <div class="page-box col-xs-3 col-xs-offset-1">
         <h1>Meer Werk</h1>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
