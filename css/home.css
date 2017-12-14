@@ -276,6 +276,7 @@ address {
 }
 
 .footer {
+	padding: 20px;
 	background-color: #3c3c3b;
 	color: #bdbdbd;
 }
@@ -291,6 +292,10 @@ address {
 .footer-item > a,
 .footer-title > a{
 	color: #fff;
+}
+
+* {
+	border: 1px dashed red;
 }
 
 /*

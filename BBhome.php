@@ -226,7 +226,7 @@
 
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
 
-				<div class="col-xs-12 col-md-5">
+				<div class="col-xs-12 col-md-4 col-md-offset-2">
 					<h4 class="footer-title">Contact</h4>
 					<ul>
 						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
@@ -235,7 +235,7 @@
 					</ul>
 				</div>
 
-				<div class="col-xs-12 col-md-5 col-md-offset-2">
+				<div class="col-xs-12 col-md-4">
 					<h4 class="footer-title">Social media</h4>
 					<ul>
 						<li class="footer-item"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Facebook</a></li>
