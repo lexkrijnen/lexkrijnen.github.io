@@ -126,7 +126,8 @@ $pdo = NULL;
             <?php
 
             if(isset($_GET["opslaan"])) {
-                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
+                //print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
+				print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
             ?>

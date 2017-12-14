@@ -18,7 +18,7 @@
         <link href="css/global.css" rel="stylesheet">
 
         <!-- Custom styles for this page -->
-        <link href="css/test_profile.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -86,8 +86,8 @@
             <table class="table table-hover">
                 <tr>
                     <th>C.nr</th>
-                    <th>Naam</th>
                     <th>Document</th>
+                    <th>Naam</th>
                     <th></th>
                 </tr>
                 <?php
@@ -100,9 +100,9 @@
                 }
                 ?>
                 <tr>
-                    <td></td>
-                    <td><input type="text" name="beschrijving" size="15"></td>
-                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="text" name="contract_nummer" size="15"></td>
+                    <td><input type="file" name="document"></td>
+                    <td><input type="text" name="naam"size="15"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
                 </tr>
             </table>
