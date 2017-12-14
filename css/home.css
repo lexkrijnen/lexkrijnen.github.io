@@ -10,8 +10,8 @@
 	width: 25%;
 	display: block;
 	margin-bottom: 30px;
-	-webkit-filter: drop-shadow(1px 1px 2px #3c3c3b) drop-shadow(-1px -1px 2px #3c3c3b);
-	filter: drop-shadow(1px 1px 2px #3c3c3b) drop-shadow(-1px -1px 2px #3c3c3b);
+	-webkit-filter: drop-shadow(0 0 5px #bdbdbd);
+	filter: drop-shadow(0 0 5px #bdbdbd);
 }
 
 .contbutton,
@@ -261,19 +261,6 @@ address {
 	transform: translate3d(0,0,0);
 }
 
-.slider-demo {
-	height: 625px;
-	margin-top: -605px;
-	z-index: -13;
-}
-
-.slider-wrapper {
-	position: initial;
-	margin-top: -800px;
-	height: 70%; !important;
-	z-index: -13;
-}
-
 .slider-float {
 	z-index: 25;
 }
@@ -282,13 +269,13 @@ address {
 	opacity: 0;
 }
 
-.google-maps{
+.google-maps {
 	overflow:hidden;
 	padding-bottom:56.25%;
 	position:relative;
 	height:0;
 }
-.google-maps  iframe{
+.google-maps iframe{
 	left:0;
 	top:0;
 	height:40%;

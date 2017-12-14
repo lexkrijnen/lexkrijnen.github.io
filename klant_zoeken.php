@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
 
-
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
     $achternaam = ucfirst($klant["achternaam"]);
@@ -149,7 +148,6 @@ $pdo = NULL;
                         print("<form action='klant_verwijderen.php' method='get'>");
                         print("<tr><td></td><td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\"></td></tr>");
                         print("</form>");
-                        print("<form>");
                         print("<form action='klant_wijzigen.php' method='get'>");
                         print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"aanpassen\"></td></tr>");
                         print("</form>");
