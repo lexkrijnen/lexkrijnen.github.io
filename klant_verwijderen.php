@@ -11,22 +11,18 @@ $pdo = new PDO($db, $user, $pass);
 //klant verwijderen
 
 if (isset($_GET["echtverwijderen"])) {
-    $sql = "DELETE FROM Klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
+		if ($_SESSION["rol"] == 'klant') {
+				$sql = "DELETE FROM Klant WHERE klant_nummer = ?";
+				$stmt = $pdo->prepare($sql);
+    		$stmt->execute(array($_SESSION["klantnummer"]));
+		} elseif ($_SESSION["rol"] == 'medewerker') {
+				$sql = "DELETE FROM Medewerker WHERE medewerker_nummer = ?";
+				$stmt = $pdo->prepare($sql);
+    		$stmt->execute(array($_SESSION["medewerker"]));
+		}
+
+
 }
-
-
-$sql = "SELECT * FROM Klant WHERE voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(array($_SESSION["voornaam"], $_SESSION["tussenvoegsel"], $_SESSION["achternaam"]));
-$klant = $stmt->fetch();
-
-$klant_nummer = $klant["klant_nummer"];
-$voornaam = $klant["voornaam"];
-$tussenvoegsel = $klant["tussenvoegsel"];
-$achternaam = $klant["achternaam"];
-$telefoonnummer = $klant["telefoon_nummer"];
 
 $pdo = NULL;
 ?>
@@ -94,7 +90,7 @@ $pdo = NULL;
                 <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
 
                 <form action="klant_verwijderen.php" method="get">
-                    <input class="btn btn-danger" type="submit" name="echtverwijderen" value="klant verwijderen">
+                    <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
                     <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
                 </form>
 
