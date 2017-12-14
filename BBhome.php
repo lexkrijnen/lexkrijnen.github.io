@@ -213,75 +213,69 @@
                  </div>
 
     <div class="google-maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" allowfullscreen></iframe>
     </div>
-    <footer id="footer-Section">
-      <div class="footer-top-layout">
-          <div class="container">
-              <div class="row">
-                  <div class="OurBlog">
-                      <h4>Bouwbedrijf Wegro</h4>
-                  </div>
-                  <div class=" col-lg-9 col-lg-offset-3">
-                      <div class="col-sm-3">
-                          <div class="footer-col-item">
-                              <h4>Contact</h4>
-                              <div class="item-contact">  <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm-4">
-                          <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
-                          <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                              <div class="modal-dialog">
-                                  <div class="modal-content">
 
-                                      <div class="modal-body">
-                                          <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-                                               data-tabs="timeline" data-width="600" data-height="800" data-small-header="false" data-adapt-container-width="true"
-                                               data-hide-cover="true" data-show-facepile="false">
-                                              <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
-                                                  <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-                                          </div>
-                                      </div>
-                                      <div class="modal-footer">
-                                          <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+    <div class="container">
+    	<div class="row">
+      	<div class="OurBlog">
+        	<h4>Bouwbedrijf Wegro</h4>
+        </div>
 
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm-3">
-                          <div class="footer-col-item">
-                              <h4>Locatie</h4>
-                              <address>
-
-                                  Gelreweg 38
-                                  <br>
-                                  3843AN Harderwijk, NL
-                              </address>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-              </div>
+        <div class="col-lg-9 col-lg-offset-3">
+        	<div class="col-sm-3">
+          	<div class="footer-col-item">
+            	<h4>Contact</h4>
+							<div class="item-contact">
+								<p>Telefoonnummer: <a class="link-id" href="tel:0341-412054">0341-412054</a></p>
+								<p>E-mailadres: <a class="link-id" href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></p>
+								<p>Adres: <a class="link-id" href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></p>
+							</div>
+            </div>
           </div>
-      <div class="footer-bottom-layout">
-          <div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></div>
-      </div>
-      <a name="Contact" id="Contact"></a>
-  </footer>
 
+          <div class="col-sm-4">
+          	<a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
+						<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+																				 data-tabs="timeline"
+																				 data-width="600"
+																				 data-height="800"
+																				 data-small-header="false"
+																				 data-adapt-container-width="true"
+																				 data-hide-cover="true"
+																				 data-show-facepile="false"
+										>
+											<blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
+												<a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a>
+											</blockquote>
+										</div>
+									</div>
 
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<div class="col-sm-3">
+						<div class="footer-col-item">
+							<h4>Locatie</h4>
+							<address>Gelreweg 38<br>3843AN Harderwijk, NL</address>
+						</div>
+					</div>
+				</div>
 
-
-
-
-
-
-
+      	<div class="footer-bottom-layout">
+          <p class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
+      	</div>
+    	</div>
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
