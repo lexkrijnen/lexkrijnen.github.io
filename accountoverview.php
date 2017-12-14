@@ -102,27 +102,32 @@ $pdo = NULL;
 
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
-            <?php
-                if ($klant_nummer != "") {
-                    print("<br><div class='container table-hover table-bordered'><table>");
-                    print("<tr><td>Naam: </td><td>$naam</td></tr>");
-                    print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
-                    print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
-                    print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
-                    print("<tr><td>Adres: </td><td>$adres</td></tr>");
-                    print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
-                    print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                    print("</table></div>");
-                }else {
-                    print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
-                }
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                </tr>
+                <?php
+                    if ($klant_nummer != "") {
+                        print("<tr><td>Naam: </td><td>$naam</td></tr>");
+                        print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
+                        print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
+                        print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
+                        print("<tr><td>Adres: </td><td>$adres</td></tr>");
+                        print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
+                        print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
+                        print("</table></div>");
+                    }else {
+                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }
 
 
 
 
                 ?>
 
-
+            </table>
 
 
 
