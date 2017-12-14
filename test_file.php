@@ -133,51 +133,6 @@
         } ?>
         <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
-
-
-    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
-
-
-    <!--MINDER WERK-->
-    <div class="col-xs-4">
-        <h1>Minder Werk</h1>
-        <?php
-        foreach ( $naamproject as $value ) {
-            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-        }
-        ?>
-        <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <?php
-                $minderwerkcount = 1;
-                foreach ($minderwerk AS $werk2) {
-                    print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
-                    print("</tr>");
-                    $minderwerkcount++;
-                }
-                ?>
-                <tr>
-                    <td></td>
-                    <td><input type="text" name="beschrijving" size="15"></td>
-                    <td><input type="text" name="prijs"size="3"></td>
-                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
-                </tr>
-            </table>
-        </form>
-    </div>
 </div>
 <?php $pdo = NULL; ?>
 </body>
