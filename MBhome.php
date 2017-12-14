@@ -65,13 +65,13 @@
     	<div class="slider-float">
 				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
-					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn select-btn contbutton">
+					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
 						Contact
 					</div>
 				</a>
 			</div>
 
-			<div class="slider slider-demo col-xs-12">
+			<div class="slider slider-demo ">
 				<img src="images/IMG_2442.JPG">
 				<img src="images/IMG_2601.JPG">
 				<img src="images/IMG_2784.JPG">
@@ -154,17 +154,16 @@
 					</div>
 				</div>
 
-				<a name="Vergunningen" id="Vergunningen"></a>
+				<a name="Metselwerk" id="Metselwerk"></a>
       		<div class="row">
-          	<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+          	<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
-              <titel>Vergunningen</titel><br><br>
-              	Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
-                Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
+              <titel>Metselwerk</titel><br><br>
+                Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit. Door onze ruime ervaring op het gebied van metselwerk enonze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.
 
-                Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
-          	</p>
+                Een belangrijk aspect is dat u door ons het gehele metselwerk laat uitvoeren,  er altijd een vast aanspreekpunt op de bouw aanwezig is in de vorm van een voorman. Hierdoor kan snel en adequaat worden gehandeld als er zich tijdens de bouw veranderingen doen voorkomen.
+            </p>
         	</div>
 
 
@@ -212,6 +211,17 @@
 					</div>
                  </div>
 
+    <div class="row">
+        <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+
+            <titel>Vergunningen</titel><br><br>
+            Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
+            Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
+
+            Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+        </p>
+    </div>
     <div class="google-maps">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>

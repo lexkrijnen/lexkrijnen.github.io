@@ -273,3 +273,17 @@ address {
 .slider-float {
 	z-index: 999;
 }
+
+.google-maps{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.google-maps  iframe{
+	left:0;
+	top:0;
+	height:40%;
+	width:100%;
+	position:absolute;
+}
