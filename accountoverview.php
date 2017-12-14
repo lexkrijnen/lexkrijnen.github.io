@@ -58,9 +58,9 @@
     } else {
     ?>
 
-<!--MEER WERK-->
-<div class="container page-box">
-    <div class="col-xs-4">
+
+<div class="container">
+    <div class="row page-box col-xs-4">
         <h1>Meer Werk</h1>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">

@@ -6,10 +6,12 @@
 }
 
 .logo{
-	margin: 50px auto;
+	margin: 45px auto;
 	width: 25%;
 	display: block;
 	margin-bottom: 30px;
+	-webkit-filter: drop-shadow(0 0 3px #fff);
+	filter: drop-shadow(0 0 3px #fff);
 }
 
 .contbutton,
@@ -260,7 +262,7 @@ address {
 }
 
 .slider-demo {
-	height: 500px;
+	height: 625px;
 	margin-top: -605px;
 	z-index: -13;
 }
