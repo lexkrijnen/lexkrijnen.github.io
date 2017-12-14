@@ -1,9 +1,7 @@
-<?php error_reporting(-1);?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <script>alert(1);</script>
     <title>Account</title>
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
@@ -13,7 +11,6 @@
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script>alert(1);</script>
     <link href="css/global.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
@@ -22,7 +19,6 @@
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
     ?>
-<script>alert(1);</script>
 
     <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -33,6 +29,7 @@
     $stmt = $pdo->prepare("SELECT * FROM Klant where voornaam='Piet'");
     $stmt->execute();
     $klant = $stmt->fetch();
+
 
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -60,8 +57,6 @@
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
-
-
 
 $pdo = NULL;
 ?>
@@ -93,7 +88,7 @@ $pdo = NULL;
     if (empty($klant_id)) {
         print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    } else {
+    }
     ?>
 
 
@@ -124,7 +119,7 @@ $pdo = NULL;
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
-                <?php/*
+                <?php
                 if ($klant_nummer != "") {
                     print("<br><div class=container><table>");
                     print("<tr><td>Naam:</td><td>$naam</td></tr>");
@@ -135,16 +130,6 @@ $pdo = NULL;
                     print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                     print("</table></div>");
-                      print("<tr>");
-                    print("<td>" . "<b>Voornaam</b>" . "</td>");
-                    print("<td>" . $werk["voornaam"] . "</td>");
-                    print("<td>" . "<b>Achternaam</b>" . "</td>");
-                    print("<td>" . $werk["achternaam"] . "</td>");
-                    print("</tr>");
-                    print("<tr>");
-                    print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
-                    print("</tr>");
-                    print("<tr>");*/
                 }
 
 
