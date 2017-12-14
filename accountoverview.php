@@ -90,8 +90,8 @@ $pdo = NULL;
 
                 if ($klant_nummer != "") {
                     print("<tr>");
-                    print("<td> naam: " . $naam . "</td>");
-                    print("<td> nummer: " . $klant_nummer . "</td>");
+                    print("<td>" . "naam: " . "</td>" . "<td>" . $naam . "</td>");
+                    print("<td>" . $klant_nummer . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
                     print("</tr>");
                 }
