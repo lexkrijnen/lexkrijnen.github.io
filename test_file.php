@@ -25,15 +25,16 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
-        if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+    if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+        if ($_GET["document"] != "") {
+            $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
-            $error = ("Vul A.U.B. een beschrijving in.");
+            $error = ("Plaats A.U.B. een bestand.");
         }
     }
+
     //TABEL CONTRACT
     $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute();
@@ -90,10 +91,10 @@
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="contract_nummer"></td>
+                    <td><input type="text" name="contract_nummer" size="15"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="15"></td>
-                    <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                 </tr>
             </table>
         </form>
