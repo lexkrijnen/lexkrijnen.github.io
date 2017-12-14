@@ -190,7 +190,7 @@
 							<div class="hovereffect">
 								<img class="img-responsive" src="images/IMG_3134.JPG" alt="">
 								<div class="overlay">
-									<h1>OP</h1>
+									<h1>GERICHT OP</h1>
 									<p>
 										Het dak en de muren zijn nu ook bijna af.
 									</p>
@@ -202,7 +202,7 @@
 							<div class="hovereffect">
 								<img class="img-responsive" src="images/IMG_3344.JPG" alt="">
 								<div class="overlay">
-									<h1>MAAT</h1>
+									<h1>UW WENSEN</h1>
 									<p>
 											Het huis is nu zo goed als af. Tijd om in te richten.
 									</p>
