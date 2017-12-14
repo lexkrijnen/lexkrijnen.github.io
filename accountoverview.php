@@ -58,7 +58,7 @@
     } else {
     ?>
 
-<!--MEER WERK-->
+
 <div class="container">
     <div class="row page-box col-xs-4">
         <h1>Meer Werk</h1>
