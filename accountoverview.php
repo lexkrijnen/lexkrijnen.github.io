@@ -62,7 +62,31 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                </tr>
+                <?php
+                $meerwerkcount = 1;
+                foreach ($meerwerk AS $werk) {
+                    print("<tr>");
+                    print("<td>" . $meerwerkcount . "</td>");
+                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>€ " . $werk["prijs"] . "</td>");
+                    print("</tr>");
+                    $meerwerkcount++;
+                }
+                ?>
+            </table>
+        </form>
 
     </div>
 
