@@ -51,8 +51,9 @@
 						<li class="nav-item"><a href="index.php">Home</a></li>
 						<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
 						<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
-						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
+						<li class="nav-item"><a href="#Metselwerk">Metselwerk</a></li>
 						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
+                        <li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
 						<li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php">Inloggen</a></li>
 					</ul>
@@ -82,7 +83,7 @@
     <a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+				<img src="images/IMG_9165.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
 				<titel>Ons bedrijf</titel><br><br>
 				Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
@@ -156,8 +157,8 @@
 
 				<a name="Metselwerk" id="Metselwerk"></a>
       		<div class="row">
-          	<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+          	<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 
               <titel>Metselwerk</titel><br><br>
                 Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit. Door onze ruime ervaring op het gebied van metselwerk enonze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.
@@ -212,8 +213,8 @@
                  </div>
 
     <div class="row">
-        <p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
-            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+        <p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
+            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
             <titel>Vergunningen</titel><br><br>
             Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
