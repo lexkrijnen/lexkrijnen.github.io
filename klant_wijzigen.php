@@ -94,16 +94,16 @@ $pdo = NULL;
           <div class=pagebox>
               <table>
                   <form action='klant_wijzigen.php' method='get'>
-                      <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" value="<?php $voornaam ?>" ></td></tr>
-                      <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" value="<?php $tussenvoegsel ?>"></td></tr>
-                      <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" value="<?php $achternaam ?>"></td></tr>
-                      <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" value="<?php $telefoonnummer ?>"></td></tr>
-                      <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" value="<?php $emailadres ?>"></td></tr>
-                      <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" value="<?php $adres ?>"></td></tr>
-                      <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" value="<?php $postcode ?>"></td></tr>
-                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" value="<?php $woonplaats ?>"></td>
+                      <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
+                      <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
+                      <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
+                      <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
+                      <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
+                      <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
+                      <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
+                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
                       <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
-                      <tr><td></td><td><input type="hidden" name="klantnummer" value="<?php $klant_nummer ?>"></td></tr>
+                      <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
                   </form>
               </table>
 
@@ -111,8 +111,6 @@ $pdo = NULL;
 
 
             <?php
-
-            print($_SESSION["voornaam"]);
 
             if(isset($_GET["opslaan"])) {
                 print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen. </div>");
