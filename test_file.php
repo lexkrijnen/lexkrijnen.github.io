@@ -73,7 +73,7 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Contract</h1>
-        <form method="get" action="meermindertoevoegen.php">
+        <form method="get" action="test_file.php">
             <table class="table-bordered">
                 <tr>
                     <th>C.nr</th>
