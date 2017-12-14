@@ -79,7 +79,6 @@
                     <th>C.nr</th>
                     <th>Document</th>
                     <th>Naam</th>
-                    <th></th>
                 </tr>
                 <?php
                 foreach ($contract AS $document) {
