@@ -35,7 +35,7 @@
         }
     }
     //TABEL MEER WERK
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
