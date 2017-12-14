@@ -133,7 +133,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"]) && $controle==)) {
+                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"]) && $controle==0) {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
