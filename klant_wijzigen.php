@@ -17,8 +17,6 @@ if (isset($_GET["opslaan"])) {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
-
-				$functie = $_SESSION["functie"];
 		}
 
 }
@@ -35,6 +33,9 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
+if ($_SESSION["rol"] == "medewerker") {
+		$functie = $_SESSION["functie"];
+}
 
 if(isset($_GET["opslaan"])) {
     $voornaam = $_GET["voornaam"];
