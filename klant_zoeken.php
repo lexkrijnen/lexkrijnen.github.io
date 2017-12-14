@@ -146,10 +146,10 @@ $pdo = NULL;
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
 						print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"<span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>wijzigen\"></td>");
+                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></td>");
                         print("</form>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"<span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>verwijderen\"></td></tr>");
+                        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
                     } else {
