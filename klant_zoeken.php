@@ -123,8 +123,8 @@ $pdo = NULL;
 
                               <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
 
-							<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
-							<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
+							<tr><td><input type="radio" name=rol value="klant"> klant</td></tr>
+							<tr><td><input type="radio" name=rol value="medewerker"> medewerker</td></tr>
 
                         	<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
 						</div>

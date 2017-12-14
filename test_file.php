@@ -34,16 +34,6 @@
             $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
-
-    if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
-        if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-        } else {
-            $error = ("Vul A.U.B. een beschrijving in.");
-        }
-    }
     //TABEL MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
     $stmt->execute(array(':contract_nummer' => $_GET['id']));
