@@ -90,23 +90,17 @@
 <!--MEER WERK-->
 <div class="container page-box">
     <div class="col-xs-4">
-        <h1>Meer Werk</h1>
-        <?php
-        foreach ( $naamproject as $value ) {
-            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-        }
-        ?>
+        <h1>Contract</h1>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
+                    <th>C.nr</th>
+                    <th>Document</th>
+                    <th>Naam</th>
                     <th></th>
                     <th></th>
                 </tr>
                 <?php
-                $meerwerkcount = 1;
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
                     print("<td>" . $meerwerkcount . "</td>");
@@ -115,7 +109,6 @@
                     print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
                     print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
-                    $meerwerkcount++;
                 }
                 ?>
                 <tr>
