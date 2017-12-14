@@ -281,7 +281,8 @@ address {
 }
 
 .footer a,
-.footer li {
+.footer li,
+.footer h4 {
 	color: #fff;
 	text-decoration: none;
 }
