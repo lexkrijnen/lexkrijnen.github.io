@@ -170,9 +170,9 @@
                   <span id="slider-image-2"></span>
                   <span id="slider-image-3"></span>
                   <div class="image-holder">
-                      <img src="1.jpg" class="slider-image" />
-                      <img src="2.jpg" class="slider-image" />
-                      <img src="3.jpg" class="slider-image" />
+                      <img src="images/keuken.png" class="slider-image" />
+                      <img src="images/muur.png" class="slider-image" />
+                      <img src="images/steiger.png" class="slider-image" />
                   </div>
                   <div class="button-holder">
                       <a href="#slider-image-1" class="slider-change"></a>
