@@ -133,7 +133,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"] && $controle==0)) {
+                    } elseif ($voornaam != "" && !isset($_GET["aanpassen"]) && $controle==)) {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -173,8 +173,8 @@ $pdo = NULL;
                     print("<tr><td>Emailadres</td><td><input type=\"text\" class=\"form-control\" name=\"emailadres\" value=$emailadres></td></tr>");
                     print("<tr><td>Adres</td><td><input type=\"text\" class=\"form-control\" name=\"adres\" value=$adres></td></tr>");
                     print("<tr><td>Postcode</td><td><input type=\"text\" class=\"form-control\" name=\"postcode\" value=$postcode></td></tr>");
-                    print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td></tr>");
-                    print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
+                    print("<tr><td>Woonplaats</td><td><input type=\"text\" class=\"form-control\" name=\"woonplaats\" value=$woonplaats></td>");
+                    print("<td><input class=\"btn oranje white\" type=\"submit\" name=\"opslaan\" value=\"opslaan\"></td></tr>");
                     print("</form");
                     print("</table>");
                 }
