@@ -121,7 +121,7 @@ $pdo = NULL;
             <table class="table table-hover table-bordered">
                 <?php
                 if ($klant_nummer != "") {
-                    /*print("<br><div class=container><table>");
+                    print("<br><div class=container><table>");
                     print("<tr><td>Naam:</td><td>$naam</td></tr>");
                     print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                     print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
@@ -130,7 +130,7 @@ $pdo = NULL;
                     print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                     print("</table></div>");
-                      print("<tr>");
+                    /*  print("<tr>");
                     print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<b>Achternaam</b>" . "</td>");
