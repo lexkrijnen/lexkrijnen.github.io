@@ -70,7 +70,7 @@
     ?>
 
 <!--MEER WERK-->
-<div class="container page-box">
+<div class="row page-box col-xs-6">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
         <?php
