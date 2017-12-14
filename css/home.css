@@ -262,47 +262,22 @@ address {
 }
 
 .slider-demo {
-	height: 625px;
-	margin-top: -605px;
-	z-index: -13;
-}
-
-.slider-wrapper {
-	position: initial;
-	margin-top: -800px;
-	height: 70%; !important;
-	z-index: -13;
-}
-
-.slider-float {
-	z-index: 25;
+	position: relative;
+	z-index: -1;
+	margin-top: -500px;
 }
 
 .slider-navigation {
 	opacity: 0;
 }
 
-.slider-item {
-	-webkit-filter: blur(2px); /* Safari */
-  filter: blur(2px);
-	-webkit-filter: grayscale(25%); /* Safari */
-  filter: grayscale(25%);
-}
-
-.slider-item:hover {
-	-webkit-filter: blur(0px); /* Safari */
-  filter: blur(0px);
-	-webkit-filter: grayscale(0%); /* Safari */
-  filter: grayscale(0%);
-}
-
-.google-maps{
+.google-maps {
 	overflow:hidden;
 	padding-bottom:56.25%;
 	position:relative;
 	height:0;
 }
-.google-maps  iframe{
+.google-maps iframe{
 	left:0;
 	top:0;
 	height:40%;
