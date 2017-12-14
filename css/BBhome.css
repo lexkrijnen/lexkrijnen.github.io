@@ -11,7 +11,8 @@
 	display: block;
 }
 
-.contbutton{
+.contbutton,
+.contbutton:hover {
 	color: #fff;
 	font-size: 45px;
 	font-weight: bold;
