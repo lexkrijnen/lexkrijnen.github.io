@@ -278,6 +278,11 @@ address {
 .footer {
 	background-color: #3c3c3b;
 	color: #fff;
+}
+
+.footer a,
+.footer li {
+	color: #fff;
 	text-decoration: none;
 }
 
