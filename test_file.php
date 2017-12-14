@@ -98,7 +98,6 @@
                     <th>Document</th>
                     <th>Naam</th>
                     <th></th>
-                    <th></th>
                 </tr>
                 <?php
                 foreach ($meerwerk AS $werk) {
@@ -113,10 +112,9 @@
                 ?>
                 <tr>
                     <td></td>
-                    <td><input type="text" name="beschrijving" size="15"></td>
-                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="file" name="document"></td>
+                    <td><input type="text" name="naam"size="15"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
