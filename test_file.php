@@ -79,6 +79,7 @@
                     <th>C.nr</th>
                     <th>Document</th>
                     <th>Naam</th>
+                    <th></th>
                 </tr>
                 <?php
                 foreach ($contract AS $document) {
@@ -93,7 +94,7 @@
                     <td><input type="text" name="contract_nummer" size="15"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="15"></td>
-                    <input type="submit" name="toevoegencontract" value="Toevoegen">
+                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                 </tr>
             </table>
         </form>
