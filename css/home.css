@@ -261,8 +261,10 @@ address {
 	transform: translate3d(0,0,0);
 }
 
-.slider-float {
-	z-index: 25;
+.slider-demo {
+	position: relative;
+	z-index: -1;
+	margin-top: -500px;
 }
 
 .slider-navigation {
