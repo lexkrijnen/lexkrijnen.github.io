@@ -99,11 +99,11 @@
                     print("<td>" . $werk["achternaam"] . "</td>");
                     print("<td>" . $werk["emailadres"] . "</td>");
                     print("</tr>");
-                    print("<tr>");
+                    /*print("<tr>");
                     print("<td>" . "Voornaam" . "</td>");
                     print("<td>" . $werk["voornaam"]) . "</td>");
                     print("</tr>");
-                    print("<tr>");
+                    print("<tr>");*/
                     $meerwerkcount++;
                 }
 
