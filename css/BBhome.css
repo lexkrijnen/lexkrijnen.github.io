@@ -178,6 +178,7 @@ address {
 	text-align: center;
 	cursor: default;
 	background: #f3a53b;
+	border-radius: 10px;
 }
 
 .hovereffect .overlay {
