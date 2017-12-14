@@ -116,7 +116,7 @@ $pdo = NULL;
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                     print("</table></div>");
                 }else {
-                    print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.")
+                    print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                 }
 
 
