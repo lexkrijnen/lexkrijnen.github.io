@@ -29,7 +29,7 @@
         if ($_GET["document"] != "") {
             $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+            $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam'])); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
             $error = ("Plaats A.U.B. een bestand.");
         }
