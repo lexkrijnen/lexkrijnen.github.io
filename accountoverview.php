@@ -7,8 +7,8 @@
     @$klant_voornaam = $_SESSION['voornaam'];
     ?>
     <meta charset="UTF-8">
-    <title>Meer & Minder Werk</title>
-    <link rel="stylesheet" href="css/meerminderwerk.css">
+    <title>Account</title>
+    <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,13 +24,10 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+    $stmt = $pdo->prepare("SELECT * FROM Klant");
     $stmt->execute();
     $meerwerk = $stmt->fetchAll();
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
-    $minderwerk = $stmt2->fetchAll();
     ?>
 </head>
 <body>
@@ -66,56 +63,13 @@
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
         <h5>Projectnaam: De Tuinbaksteen</h5>
-        <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
-                </tr>
-                <?php
-                $meerwerkcount = 1;
-                foreach ($meerwerk AS $werk) {
-                    print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("</tr>");
-                    $meerwerkcount++;
-                }
-                ?>
-            </table>
-        </form>
+
     </div>
 
 
     <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
-    <!--MINDER WERK-->
-    <div class="col-xs-4">
-        <h1>Minder Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
-        <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
-                </tr>
-                <?php
-                $minderwerkcount = 1;
-                foreach ($minderwerk AS $werk2) {
-                    print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("</tr>");
-                    $minderwerkcount++;
-                }
-                ?>
-            </table>
-        </form>
-    </div>
+
 </div>
 <?php $pdo = NULL; ?>
 </body>
