@@ -119,17 +119,16 @@ $pdo = NULL;
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
                 <?php
-                $meerwerkcount = 1;
-                foreach ($klantgegevens AS $klant) {
+                if ($klant_nummer != "") {
                     print("<br><div class=container><table>");
-                    print("<tr><td>Naam:</td><td>$klant["naam"]</td></tr>");
+                    print("<tr><td>Naam:</td><td>$naam</td></tr>");
                     print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                     print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
                     print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
                     print("<tr><td>Adres:</td><td>$adres</td></tr>");
                     print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
-					print("</table></div>");
+                    print("</table></div>");
                     /*print("<tr>");
                     print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
@@ -140,8 +139,8 @@ $pdo = NULL;
                     print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
                     print("</tr>");
                     print("<tr>");*/
-                    $meerwerkcount++;
                 }
+
 
 
 
