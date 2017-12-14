@@ -289,6 +289,13 @@ address {
   filter: grayscale(25%);
 }
 
+.slider-item:hover {
+	-webkit-filter: blur(0px); /* Safari */
+  filter: blur(0px);
+	-webkit-filter: grayscale(0%); /* Safari */
+  filter: grayscale(0%);
+}
+
 .google-maps{
 	overflow:hidden;
 	padding-bottom:56.25%;
