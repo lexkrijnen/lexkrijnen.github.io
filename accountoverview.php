@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php
-    session_start();
-    @$klant_id = $_SESSION['klant_id'];
-    @$klant_voornaam = $_SESSION['voornaam'];
-    ?>
     <meta charset="UTF-8">
     <title>Account</title>
     <link rel="stylesheet" href="css/accountoverview.css">
@@ -18,6 +13,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    ?>
+
+
     <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
