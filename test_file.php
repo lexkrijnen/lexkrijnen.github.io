@@ -111,7 +111,7 @@
                 }
                 ?>
                 <tr>
-                    <td></td>
+                    <td><input type="text" name="contract_nummer"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="15"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
