@@ -27,9 +27,9 @@
 
     if (isset($_GET["toevoegencontract"]) && isset($_GET["naam"])) {
         if ($_GET["naam"] != "") {
-            $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+            $sql = "INSERT INTO Contract (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1));
         } else {
             $error = ("Vul A.U.B. een beschrijving in.");
         }
@@ -38,7 +38,7 @@
     //TABEL Contract
     $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute(array();
-    $contract = $stmt->fetchAll();
+    $meerwerk = $stmt->fetchAll();
 
     ?>
 </head>
@@ -82,11 +82,11 @@
                     <th></th>
                 </tr>
                 <?php
-                foreach ($contract AS $document) {
+                foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<td>" . $document["contract_nummer"] . "</td>");
-                    print("<td>" . $document["document"] . "</td>");
-                    print("<td>" . $document["naam"] . "</td>");
+                    print("<td>" . $meerwerkcount . "</td>");
+                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>€ " . $werk["prijs"] . "</td>");
                     print("</tr>");
                 }
                 ?>
