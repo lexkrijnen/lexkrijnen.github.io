@@ -91,9 +91,9 @@
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Email</th>
                 </tr>
                 <?php
                 $meerwerkcount = 1;
