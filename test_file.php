@@ -36,7 +36,7 @@
     }
     //TABEL MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Contract");
-    $stmt->execute(array(':contract_nummer' => $_GET['id']));
+    $stmt->execute();
     $meerwerk = $stmt->fetchAll();
 
     ?>
