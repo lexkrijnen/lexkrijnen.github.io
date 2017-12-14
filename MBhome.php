@@ -160,9 +160,9 @@
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
               <titel>Metselwerk</titel><br><br>
-                Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit. Door onze ruime ervaring op het gebied van metselwerk en <br> onze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.<br>
+                Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit. Door onze ruime ervaring op het gebied van metselwerk enonze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.
 
-                Een belangrijk aspect is dat u door ons het gehele metselwerk laat uitvoeren, <br> er altijd een vast aanspreekpunt op de bouw aanwezig is in de vorm van een voorman.<br> Hierdoor kan snel en adequaat worden gehandeld als er zich tijdens de bouw veranderingen doen voorkomen.
+                Een belangrijk aspect is dat u door ons het gehele metselwerk laat uitvoeren,  er altijd een vast aanspreekpunt op de bouw aanwezig is in de vorm van een voorman. Hierdoor kan snel en adequaat worden gehandeld als er zich tijdens de bouw veranderingen doen voorkomen.
             </p>
         	</div>
 
