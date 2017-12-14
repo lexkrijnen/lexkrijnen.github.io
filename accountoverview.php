@@ -14,13 +14,12 @@
     <link href="css/global.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
-    <?php
+<?php
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-    ?>
 
-    <?php
+
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -43,20 +42,6 @@
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 	$rol = $_GET["rol"];
 
-    $_SESSION["voornaam"] = $voornaam;
-    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["achternaam"] =  $achternaam;
-    $_SESSION["naam"] = $naam;
-    $_SESSION["klantnummer"] = $klant_nummer;
-    $_SESSION["telefoonnummer"] = $telefoonnummer;
-    $_SESSION["emailadres"] = $emailadres;
-    $_SESSION["adres"] = $adres;
-    $_SESSION["postcode"] = $postcode;
-    $_SESSION["woonplaats"] = $woonplaats;
-
-    $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
-    $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
-    $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 
 $pdo = NULL;
 ?>
