@@ -267,9 +267,19 @@ address {
 	color: white;
 }
 
-.slider-wrapper {
-	margin-top: -800px;
-	margin-left: -1300px;
-	height: 600px !important;
+.slider-demo {
+	position: relative;
 	z-index: -13;
+}
+
+.slider-wrapper {
+	position: initial;
+	margin-top: -800px;
+	height: 70%; !important;
+	z-index: -13;
+	widht: 100%;
+}
+
+.slider-float {
+	z-index: 999;
 }

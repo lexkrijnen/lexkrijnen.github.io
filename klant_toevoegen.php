@@ -2,10 +2,10 @@
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
-$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+$naam = ucfirst($voornaam) . " " . $tussenvoegsel . " " . ucfirst($achternaam);
 $emailadres = $_POST["emailadres"];
 $telefoonnummer = $_POST["telefoonnummer"];
-$woonplaats = $_POST["woonplaats"];
+$woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
 
@@ -16,9 +16,9 @@ $pdo = new PDO($db, $user, $pass);
 
 if (isset($_POST["aanmaken"])) {
 
-	$sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
+    $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
 
 }
 
@@ -95,33 +95,33 @@ $hash = sha1($salt . $wachtwoord);
                 <table>
                     <form action="klant_toevoegen.php" method="POST">
                 <tr>
-                <td>Voornaam klant</td>
+                <td>Voornaam</td>
                 <td>
-                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
+                    <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
                 </td>
                         </tr>
                         <tr>
-                        <td>Tussenvoegsel(s)</td>
+                        <td>Tussenvoegsel(s) </td>
                             <td>
                             <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
                             </td>
               </tr>
               <tr>
-                <td>Achternaam klant</td>
+                <td>Achternaam</td>
                 <td>
-                    <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
+                    <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
                 </td>
               </tr>
               <tr>
                 <td>E-mailadres</td>
                 <td>
-                    <input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $emailadres"); } ?> >
+                    <input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $emailadres"); } ?> >
                 </td>
               </tr>
               <tr>
                 <td>Wachtwoord</td>
                 <td>
-                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value='$wachtwoord' disable"); } ?>>
+                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>>
                 </td>
                 <td>
                     <input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
@@ -163,7 +163,7 @@ $hash = sha1($salt . $wachtwoord);
               </tr>
               <tr>
                 <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Account Aanmaken">
+                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
                 </td>
               </tr>
             </form>
@@ -208,6 +208,12 @@ $hash = sha1($salt . $wachtwoord);
                     print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
                     print("<span class=\"sr-only\">Error:</span>");
                     print(" Vul een postcode in.");
+                    print("</div>");
+                } elseif ($wachtwoord == "") {
+                    print("<div class=\"alert alert-warning\" role=\"alert\">");
+                    print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+                    print("<span class=\"sr-only\">Error:</span>");
+                    print(" Druk op de genereer knop om een wachtwoord te genereren.");
                     print("</div>");
                 } else {
                     ///succes

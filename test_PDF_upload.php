@@ -33,7 +33,7 @@
 
             if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
                 if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Contract (contract_nummer,document, naam)VALUES(?,?,?)";
+                    $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
                 } else {
@@ -41,15 +41,6 @@
                 }
             }
 
-            if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
-                if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-                } else {
-                    $error = ("Plaats A.U.B. een bestand.");
-                    }
-                }
                 //Contract
                 $stmt = $pdo->prepare("SELECT * FROM Contract");
                 $stmt->execute();
@@ -96,7 +87,6 @@
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
-            <form method="get" action="test_PDF_upload.php">
             <table class="table table-hover">
                 <tr>
                     <thead>
@@ -111,6 +101,39 @@
                     }
                 ?>
             </table>
+                <form method="get" action="test_PDF_upload.php">
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
+                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tr>
+                                        <thead>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
+                        </div>
+                    </div>
+                </div>
         </form>
     <br>
         <!--Tekening-->
@@ -129,57 +152,6 @@
                     }
                 ?>
             </table>
-                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestand toevoegen</a>
-                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
-                            </div>
-                            <div class="modal-body">
-                                <table class="table table-hover">
-                                    <tr>
-                                        <thead>
-                                            <th><b>C.nr</b></th>
-                                            <th><b>Naam</b></th>
-                                            <th><b>Document</b></th>
-                                            <th></th>
-                                        </thead>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
-                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
-
-                                    </tr>
-                                </table>
-                                <br>
-                                <table class="table table-hover">
-                                    <tr>
-                                        <thead>
-                                            <th><b>T.nr</b></th>
-                                            <th><b>Naam</b></th>
-                                            <th><b>Document</b></th>
-                                            <th></th>
-                                        </thead>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
-                                        <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary"><b>upload</b></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
         </form>
     </div>
         <?php $pdo = NULL; ?>

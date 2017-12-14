@@ -14,12 +14,13 @@ if (isset($_GET["vinden"])) {
 
     $naam = $_GET["projectnaam"];
     $contractnaam = $project["naam"];
+    $contract = $project["document"];
     $project_nummer = $project["project_nummer"];
     $status = $project["status_titel"];
     $klant_nummer = $project["klant_nummer"];
     $contract_nummer = $project["contract_nummer"];
     $document = $project["document"];
-    $klantnaam = $project['voornaam'] ." ". $project['tussenvoegsel'] ." ". $project['achternaam'];
+    $klantnaam = ucfirst($project['voornaam']) ." ". $project['tussenvoegsel'] ." ". ucfirst($project['achternaam']);
 
     $sql2 = "SELECT * FROM Tekening WHERE project_nummer = ?";
     $stmt2 = $pdo->prepare($sql);
@@ -91,7 +92,7 @@ $pdo = NULL;
                 <tr>
                   <div class=row>
                     <form action="bekijken_bouwtekeningen.php" method="get">
-                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam" <?php if(isset($_GET["vinden"])) {print("value.=$naam");}?>></td>
+                        <td><input type="text" class="form-control" name="projectnaam" placeholder="projectnaam" <?php if(isset($_GET["vinden"])) {print("value=$naam");}?>></td>
                         <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
                         <td><input type="hidden" name="project_nummer" <?php if (isset($_GET["vinden"])) { print("value=$project_nummer"); } ?>></td>
                     </form>
@@ -149,12 +150,8 @@ $pdo = NULL;
                 print("</div>");
 
                 print("<div class=\"tab-pane fade\" id=\"contract\">");
-                print("<iframe class=\"pdf-viewer\" src=\"$contractnaam\" name=\"pdf_viewer\"></iframe>");
-    			print("<div class=\"pdf-fail\">");
-                print("<p>Problemen met het bekijken?</p>");
-                print("<a class=\"btn btn-primary\" onclick=\"window.open('$contractnaam', 'newwindow', 'width=600,height=1000'); return false;\">Openen in nieuw scherm.</a>");
+                print("<a href=$contract target=pdf_viewer>$contractnaam");
     			print("</div>");
-                print("</div>");
 
                 print("</div>");
                 print("</div>");
