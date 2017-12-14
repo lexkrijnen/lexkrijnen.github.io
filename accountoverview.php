@@ -25,7 +25,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Klant where voornaam='Piet'");
+    $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
 
