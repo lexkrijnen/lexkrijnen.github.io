@@ -8,7 +8,7 @@
     ?>
     <meta charset="UTF-8">
     <title>Meer & Minder Werk</title>
-    <link rel="stylesheet" href="css/meerminderwerk.css">
+    <link rel="stylesheet" href="css/accountoverview.css.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
