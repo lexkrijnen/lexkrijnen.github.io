@@ -130,7 +130,7 @@ $pdo = NULL;
                     print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                     print("</table></div>");
-                      print("<tr>");
+                    /*  print("<tr>");
                     print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<b>Achternaam</b>" . "</td>");
@@ -139,7 +139,7 @@ $pdo = NULL;
                     print("<tr>");
                     print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
                     print("</tr>");
-                    print("<tr>");
+                    print("<tr>");*/
                 }
 
 
