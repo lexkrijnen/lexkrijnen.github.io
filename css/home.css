@@ -6,7 +6,7 @@
 }
 
 .logo{
-	margin: 50px;
+	margin: 50px auto;
 	width: 25%;
 	display: block;
 	margin-bottom: 30px;
@@ -177,7 +177,7 @@ address {
 	text-align: center;
 	cursor: default;
 	background: #f3a53b;
-	border-radius: 10px;
+	border-radius: 7px;
 }
 
 .hovereffect .overlay {
@@ -260,7 +260,8 @@ address {
 }
 
 .slider-demo {
-	position: relative;
+	height: 500px;
+	margin-top: -605px;
 	z-index: -13;
 }
 
