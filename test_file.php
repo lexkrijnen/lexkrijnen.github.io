@@ -25,19 +25,18 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if (isset($_GET["toevoegencontract"]) && isset($_GET["naam"])) {
-        if ($_GET["naam"] != "") {
-            $sql = "INSERT INTO Contract (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
+        if ($_GET["beschrijving"] != "") {
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1));
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
         } else {
             $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
-
-    //TABEL Contract
-    $stmt = $pdo->prepare("SELECT * FROM Contract");
-    $stmt->execute(array();
+    //TABEL MEER WERK
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
     ?>
@@ -87,6 +86,8 @@
                     print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
                 }
                 ?>
