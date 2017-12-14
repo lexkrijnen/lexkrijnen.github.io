@@ -9,9 +9,9 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-	if ($_GET["fuctie"] == "klant") {
+	if ($_GET["rol"] == "klant") {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	} elseif ($_GET["fuctie"] == "medewerker") {
+	} elseif ($_GET["rol"] == "medewerker") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	}
 
@@ -164,7 +164,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Niemand gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
