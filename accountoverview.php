@@ -96,7 +96,7 @@
                 foreach ($klantgegevens AS $werk) {
                     print("<tr>");
                     print("<td>" . "Voornaam" . "</td>");
-                    print("<td>" . $werk["Voornaam"] . "</td>");
+                    print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<th>Achternaam</th>" . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
                     print("</tr>");
