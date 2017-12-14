@@ -43,7 +43,7 @@ $pdo = NULL;
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>klant zoeken</title>
+    <title>klant wijzigen</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -95,7 +95,7 @@ $pdo = NULL;
                 <table>
                     <form action='klant_wijzigen.php' method='get'>
                         <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" value="<?php $voornaam ?>" ></td></tr>
-                        <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" value="<?php$tussenvoegsel ?>"></td></tr>
+                        <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" value="<?php $tussenvoegsel ?>"></td></tr>
                         <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" value="<?php $achternaam ?>"></td></tr>
                         <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" value="<?php $telefoonnummer ?>"></td></tr>
                         <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" value="<?php $emailadres ?>"></td></tr>
