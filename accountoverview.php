@@ -42,21 +42,7 @@
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 	$rol = $_GET["rol"];
 
-    /*$_SESSION["voornaam"] = $voornaam;
-    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["achternaam"] =  $achternaam;
-    $_SESSION["naam"] = $naam;
-    $_SESSION["klantnummer"] = $klant_nummer;
-    $_SESSION["telefoonnummer"] = $telefoonnummer;
-    $_SESSION["emailadres"] = $emailadres;
-    $_SESSION["adres"] = $adres;
-    $_SESSION["postcode"] = $postcode;
-    $_SESSION["woonplaats"] = $woonplaats;
 
-    $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
-    $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
-    $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
-*/
 $pdo = NULL;
 ?>
 
