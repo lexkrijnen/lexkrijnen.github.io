@@ -10,7 +10,12 @@ if (isset($_POST['submit'])) {
   $headers = "From: ".$mailFrom;
   $txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
-
-  mail($mailTo, $subject, $txt, $headers);
-  header("Location: contact.php?mailsend");
+    $mail=mail($mailTo, $subject, $txt, $headers);
+    if($mail){
+        echo "Thank you for using our mail form";
+    }else{
+        echo "Mail sending failed.";
+    }
 }
+
+ini_set('display_errors',1);
