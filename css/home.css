@@ -11,11 +11,9 @@
 	display: block;
 }
 
-.contbutton{
-	background-color: #FE9C16 !important;
-	color: white;
-	margin-top: 20px;
-	margin-bottom: 20px;
+.contbutton,
+.contbutton:hover {
+	color: #fff;
 	font-size: 45px;
 	font-weight: bold;
 }
@@ -260,14 +258,6 @@ address {
 	transform: translate3d(0,0,0);
 }
 
-.oranje {
-	background-color: #FE9C16 !important;
-
-}
-.white {
-	color: white;
-}
-
 .slider-demo {
 	position: relative;
 	z-index: -13;
@@ -278,9 +268,22 @@ address {
 	margin-top: -800px;
 	height: 70%; !important;
 	z-index: -13;
-	widht: 100%;
 }
 
 .slider-float {
 	z-index: 999;
+}
+
+.google-maps{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.google-maps  iframe{
+	left:0;
+	top:0;
+	height:40%;
+	width:100%;
+	position:absolute;
 }
