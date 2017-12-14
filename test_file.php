@@ -45,11 +45,6 @@
                 $stmt = $pdo->prepare("SELECT * FROM Contract");
                 $stmt->execute();
                 $contract = $stmt->fetchAll();
-
-                //Tekening
-                $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-                $stmt2->execute();
-                $tekening = $stmt2->fetchAll();
             ?>
         </head>
         <body>
@@ -108,7 +103,6 @@
                 </tr>
             </table>
         </form>
-        <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 </div>
 <?php $pdo = NULL; ?>
