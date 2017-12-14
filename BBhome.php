@@ -227,7 +227,7 @@
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
 
 				<div class="col-xs-12 col-md-5">
-					<h4 class="text-center">Contact</h4>
+					<h4>Contact</h4>
 					<ul>
 						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
 						<li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
@@ -236,7 +236,7 @@
 				</div>
 
 				<div class="col-xs-12 col-md-5 col-md-offset-2">
-					<h4 class="text-center">Social media</h4>
+					<h4>Social media</h4>
 					<ul>
 						<li><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">[F] Facebook</a></li>
 					</ul>
