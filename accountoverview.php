@@ -26,7 +26,7 @@
 
     $stmt = $pdo->prepare("SELECT * FROM Klant");
     $stmt->execute();
-    $meerwerk = $stmt->fetchAll();
+    $klantgegevens = $stmt->fetchAll();
 
     ?>
 </head>
@@ -60,7 +60,7 @@
 
 
 
-    <div class="row page-box col-xs-4 col-xs-offset-1">
+    <div class="row page-box col-xs-3 col-xs-offset-1">
         <h1>Meer Werk</h1>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
@@ -86,7 +86,33 @@
     </div>
 
 
-    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+    <div class="page-box col-xs-3">
+        <h1>Meer Werk</h1>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                </tr>
+                <?php
+                $meerwerkcount = 1;
+                foreach ($klantgegevens AS $werk) {
+                    print("<tr>");
+                    print("<td>" . $werk["voornaam"] . "</td>");
+                    print("<td>" . $werk["achternaam"] . "</td>");
+                    print("<td>€ " . $werk["emailadres"] . "</td>");
+                    print("</tr>");
+                    $meerwerkcount++;
+                }
+                ?>
+            </table>
+        </form>
+
+
+
+    </div>
+
 
 
 
