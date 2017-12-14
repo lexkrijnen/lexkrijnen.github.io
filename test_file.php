@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Meer & Minder Werk</title>
+    <title>Contract toevoegen</title>
     <link rel="stylesheet" href="css/meerminderwerk.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,30 +34,11 @@
             $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
-
-    if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
-        if ($_GET["beschrijving"] != "") {
-            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-        } else {
-            $error = ("Vul A.U.B. een beschrijving in.");
-        }
-    }
     //TABEL MEER WERK
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
-    //TABEL MINDER WERK
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
-    $stmt2->execute(array(':contract_nummer' => $_GET['id']));
-    $minderwerk = $stmt2->fetchAll();
-
-    //NAAM PROJECT
-    $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
-    $stmt3->execute(array(':contract_nummer' => $_GET['id']));
-    $naamproject = $stmt3->fetchAll();
     ?>
 </head>
 <body>
@@ -111,7 +92,7 @@
                 }
                 ?>
                 <tr>
-                    <td></td>
+                    <td><input type="text" name="contract_nummer"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="15"></td>
                     <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>

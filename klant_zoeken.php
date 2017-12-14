@@ -9,9 +9,9 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-	if ($_GET["fuctie"] == "klant") {
+	if ($_GET["rol"] == "klant") {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	} elseif ($_GET["fuctie"] == "medewerker") {
+	} elseif ($_GET["rol"] == "medewerker") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	}
 
@@ -29,6 +29,7 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+	$rol = $_GET["rol"];
 
     $_SESSION["voornaam"] = $voornaam;
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
@@ -122,8 +123,8 @@ $pdo = NULL;
 
                               <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
 
-							<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
-							<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
+							<tr><td><input type="radio" name=rol value="klant"> klant</td></tr>
+							<tr><td><input type="radio" name=rol value="medewerker"> medewerker</td></tr>
 
                         	<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
 						</div>
@@ -164,10 +165,11 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen $rol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
+			  print($rol);
                 ?>
             </div>
         </div>
