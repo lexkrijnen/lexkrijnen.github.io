@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
 
-
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
     $achternaam = ucfirst($klant["achternaam"]);
