@@ -119,14 +119,14 @@ $pdo = NULL;
                       <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
                   </form>
               </table>
-
+			<br>
             <a href="klant_zoeken.php">terug</a>
 
 
             <?php
 
             if(isset($_GET["opslaan"])) {
-                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen. </div>");
+                print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
             }
 
             ?>
