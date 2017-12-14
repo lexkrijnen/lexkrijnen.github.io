@@ -9,7 +9,12 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-    $sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+	if ($_GET["rol"] == "klant") {
+		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+	} elseif ($_GET["rol"] == "medewerker") {
+		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+	}
+
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
@@ -112,14 +117,16 @@ $pdo = NULL;
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
                               <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
-                          </div>
-                          <div class="">
+
                               <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
-                          </div>
-                          <div class="">
+
                               <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
-                          </div>
-                        <td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+
+							<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
+							<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
+
+                        	<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+						</div>
                     </form>
                 </table>
               </div>
@@ -157,7 +164,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Niemand gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }

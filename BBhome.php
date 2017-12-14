@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -79,6 +78,7 @@
 				<img src="images/IMG_6733.JPG">
 			</div>
     </div>
+
     <a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
@@ -111,10 +111,10 @@
 							<div class="overlay">
 								<h1>NIEUWBOUW</h1>
 								<p>
-										Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
-										Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
-										Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
-										waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+									Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
+									Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
+									Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
+									waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
 								</p>
 							</div>
 						</div>
@@ -126,11 +126,11 @@
 								<div class="overlay">
 									<h1>VERBOUW</h1>
 									<p>
-											Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
-											Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
-											En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
-											wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
-											Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
+										Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
+										Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
+										En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
+										wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
+										Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
 									</p>
 								</div>
 							</div>
@@ -154,66 +154,69 @@
 					</div>
 				</div>
 
-				<a name="Vergunningen" id="Vergunningen"></a>
-      		<div class="row">
-          	<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+	<a name="Vergunningen" id="Vergunningen"></a>
+	<div class="row">
+		<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
+			<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 
-              <titel>Vergunningen</titel><br><br>
-              	Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
-                Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
+			<titel>Vergunningen</titel><br><br>
+			Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
+			Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
 
-                Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
-          	</p>
-        	</div>
+			Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
+		</p>
+	</div>
 
 
-      		<div class="row"><a name="Projecten" id="Projecten"></a>
-          <div class="col-xs-10 col-xs-offset-1  page-box">
-          	<p class="paragraphleft ">
-            	<titel>Projecten</titel>
-            </p><br>
+	<div class="row">
+		<a name="Projecten" id="Projecten"></a>
+			<div class="col-xs-10 col-xs-offset-1  page-box">
+				<p class="paragraphleft ">
+					<titel>Projecten</titel>
+				</p><br>
 
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_7028.JPG" alt="">
-								<div class="overlay">
-									<h1>FUNDERING</h1>
-									<p>
-										Hier wordt de fundering van een nieuw huis gelegd.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_8460.JPG" alt="">
-								<div class="overlay">
-									<h1>AFWERKING</h1>
-									<p>
-										Het dak en de muren zijn nu ook bijna af.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_9091.JPG" alt="">
-								<div class="overlay">
-									<h1>OPLEVERING</h1>
-									<p>
-											Het huis is nu zo goed als af. Tijd om in te richten.
-									</p>
-								</div>
-							</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/IMG_7028.JPG" alt="">
+						<div class="overlay">
+							<h1>FUNDERING</h1>
+							<p>
+								Hier wordt de fundering van een nieuw huis gelegd.
+							</p>
 						</div>
 					</div>
-                 </div>
+				</div>
 
-    <div class="google-maps">
-    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" allowfullscreen></iframe>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/IMG_8460.JPG" alt="">
+						<div class="overlay">
+							<h1>AFWERKING</h1>
+							<p>
+								Het dak en de muren zijn nu ook bijna af.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/IMG_9091.JPG" alt="">
+						<div class="overlay">
+							<h1>OPLEVERING</h1>
+							<p>
+								Het huis is nu zo goed als af. Tijd om in te richten.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+   	<div class="row">
+			<div class="google-maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" allowfullscreen></iframe>
+			</div>
     </div>
 
     <div class="container">
@@ -290,50 +293,41 @@
     <!-- JQuery Basic Slider -->
     <script src="js/jquery.bscslider.js"></script>
 
-        <script>
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if( target.length ) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                }
-            });
-        </script>
-  <script>
-		$(document).ready(function() {
-			$('.slider-demo').bscSlider({
-				effect: 1
-			});
-		})
-	</script>
-          <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
-                  fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
-  <!--
-  <script>
-      $(document).ready(function(){
-          $('.parallax').parallax();
+  	<!-- JQuery Basic Slider -->
+  	<script>
+			$(document).ready(function() {
+				$('.slider-demo').bscSlider({
+					effect: 1
+				});
+			})
+		</script>
+
+   <!-- Image text hover animation -->
+    <script>
+    	$('a[href^="#"]').on('click', function(event) {
+      	var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+        	event.preventDefault();
+          $('html, body').stop().animate({
+          	scrollTop: target.offset().top
+          }, 1000);
+        }
       });
-  </script>
-  <script>
-      $(".carousel").swipe({
+    </script>
 
-          swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    <!-- Facebook plugin -->
+    <div id="fb-root"></div>
+    <script>
+			(function(d, s, id) {
+      	var js, fjs = d.getElementsByTagName(s)[0];
 
-              if (direction == 'left') $(this).carousel('next');
-              if (direction == 'right') $(this).carousel('prev');
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
+				fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+		</script>
 
-          },
-          allowPageScroll:"vertical"
-
-      });
-  </script>-->
 	</body>
 </html>
