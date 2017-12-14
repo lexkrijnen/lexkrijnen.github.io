@@ -73,7 +73,7 @@
     <div class="col-xs-4">
         <h1>Contract</h1>
         <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
+            <table class="table-bordered">
                 <tr>
                     <th>C.nr</th>
                     <th>Document</th>
