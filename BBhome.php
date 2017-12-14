@@ -220,7 +220,7 @@
     </div>
 
     <div class="container-fluid footer">
-    	<div class="row">
+    	<div class="col-xs-12">
         <h4 class="text-center">Bouwbedrijf Wegro</h4>
       </div>
 
@@ -244,7 +244,7 @@
 
 			</div>
 
-    	<div class="row">
+    	<div class="col-xs-12">
         <p class="text-center">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
       </div>
 		</div>
