@@ -1,4 +1,3 @@
-<?php error_reporting(-1);?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,7 +119,7 @@ $pdo = NULL;
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
-                <?php/*
+                <?php
                 if ($klant_nummer != "") {
                     print("<br><div class=container><table>");
                     print("<tr><td>Naam:</td><td>$naam</td></tr>");
@@ -140,7 +139,7 @@ $pdo = NULL;
                     print("<tr>");
                     print("<td> Voornaam" . $werk["voornaam"]) . "</td>");
                     print("</tr>");
-                    print("<tr>");*/
+                    print("<tr>");
                 }
 
 
