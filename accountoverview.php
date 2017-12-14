@@ -118,7 +118,7 @@ $pdo = NULL;
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
             <table class="table table-hover table-bordered">
-                <?php
+                <?php/*
                 if ($klant_nummer != "") {
                     print("<br><div class=container><table>");
                     print("<tr><td>Naam:</td><td>$naam</td></tr>");
@@ -129,7 +129,7 @@ $pdo = NULL;
                     print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                     print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                     print("</table></div>");
-                    /*print("<tr>");
+                      print("<tr>");
                     print("<td>" . "<b>Voornaam</b>" . "</td>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . "<b>Achternaam</b>" . "</td>");
@@ -158,4 +158,4 @@ $pdo = NULL;
 <?php $pdo = NULL; ?>
 </body>
 </html>
-<?php } ?>
+<?php  ?>
