@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
 	} elseif ($_GET["rol"] == "medewerker") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	}
-
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
@@ -29,7 +28,7 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-	$rol = $_GET["rol"];
+		$rol = $_GET["rol"];
 
     $_SESSION["voornaam"] = $voornaam;
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
@@ -117,17 +116,20 @@ $pdo = NULL;
                <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
-                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+													<tr><td>Voornaam: </td>
+															<td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
 
-                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+													<tr><td>Tussenvoegsel: </td>
+															<td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
 
-                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+													<tr><td>Achternaam: </td>
+															<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
 
-							<tr><td><input type="radio" name=rol value="klant"> klant</td></tr>
-							<tr><td><input type="radio" name=rol value="medewerker"> medewerker</td></tr>
+													<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
+													<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
 
-                        	<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
-						</div>
+													<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+												</div>
                     </form>
                 </table>
               </div>
@@ -153,7 +155,7 @@ $pdo = NULL;
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
-						print("<form action='klant_wijzigen.php' method='get'>");
+												print("<form action='klant_wijzigen.php' method='get'>");
                         print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></td>");
                         print("</form>");
                         print("<form action='klant_verwijderen.php' method='get'>");
@@ -169,7 +171,7 @@ $pdo = NULL;
                               </div>");
                     }
                 }
-			  print($rol);
+			  				print($_GET["rol"]);
                 ?>
             </div>
         </div>
