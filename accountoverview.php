@@ -101,7 +101,7 @@
                     print("<tr>");
                     print("<td>" . $werk["voornaam"] . "</td>");
                     print("<td>" . $werk["achternaam"] . "</td>");
-                    print("<td>€ " . $werk["emailadres"] . "</td>");
+                    print("<td>" . $werk["emailadres"] . "</td>");
                     print("</tr>");
                     $meerwerkcount++;
                 }
