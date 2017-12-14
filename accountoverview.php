@@ -60,9 +60,8 @@
 
 
 
-    <div class="row page-box col-xs-3 col-xs-offset-1">
+    <div class="row page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
-        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
@@ -81,14 +80,11 @@
                 }
                 ?>
             </table>
-        </form>
-
     </div>
 
 
-    <div class="page-box col-xs-3 col-xs-offset-1">
+    <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Meer Werk</h1>
-        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Voornaam</th>
@@ -107,7 +103,7 @@
                 }
                 ?>
             </table>
-        </form>
+
 
 
 
