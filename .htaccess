@@ -1,9 +1,11 @@
-# HTID:1836955: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
-php_value display_errors 1
-ErrorDocument 404 http://wegro.lexkrijnen.nl/404.php
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
+Header set Cache-Control "max-age=0, private, no-cache, no-store, must-revalidate"
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php
-# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:1836955:
-Options -Indexes
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.html -f 
+RewriteRule ^(.*)$ $1.html
