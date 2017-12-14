@@ -262,9 +262,13 @@ address {
 }
 
 .slider-demo {
-	position: relative;
 	z-index: -1;
 	margin-top: -500px;
+}
+
+.slider-wrapper {
+	height: 100vh;
+  margin-top: -14vh;
 }
 
 .slider-navigation {
