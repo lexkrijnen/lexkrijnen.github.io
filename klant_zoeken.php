@@ -34,7 +34,7 @@ if (isset($_GET["vinden"])) {
 			$_SESSION["klantnummer"] = $klant_nummer;
 		} elseif ($_GET["rol"] == "medewerker") {
 			$medewerker_nummer = $klant["medewerker_nummer"];
-			$functie = $klant["fuctie"];
+			$functie = $klant["functie"];
 			$_SESSION["medewerkernummer"] = $medewerker_nummer;
 			$_SESSION["functie"] = $functie;
 		}
