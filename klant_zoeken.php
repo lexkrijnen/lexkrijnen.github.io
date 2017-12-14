@@ -145,7 +145,7 @@ $pdo = NULL;
                         print("</form>");
                         print("<form>");
                         print("<form action='klant_zoeken.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn oranje white\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
+                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
                     } else {
