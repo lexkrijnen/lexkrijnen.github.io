@@ -101,6 +101,14 @@
                     print("</tr>");
                     $meerwerkcount++;
                 }
+
+                print("<tr>");
+                print("<td>" . "Voornaam" . "</td>");
+                print("<td>" . $werk["voornaam"]) . "</td>");
+                print("</tr>");
+                print("<tr>");
+
+
                 ?>
             </table>
 
