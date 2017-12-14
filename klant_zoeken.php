@@ -164,10 +164,11 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Niemand gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen $_GET[\"rol\"] gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
+			  print($_GET["functie"]);
                 ?>
             </div>
         </div>
