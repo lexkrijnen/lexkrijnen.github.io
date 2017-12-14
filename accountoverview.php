@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    debug_to_console(1);
+    <? debug_to_console(1);?>
     <title>Account</title>
     debug_to_console(2);
     <link rel="stylesheet" href="css/accountoverview.css">
