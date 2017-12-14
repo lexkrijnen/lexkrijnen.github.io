@@ -7,8 +7,8 @@
     @$klant_voornaam = $_SESSION['voornaam'];
     ?>
     <meta charset="UTF-8">
-    <title>Meer & Minder Werk</title>
-    <link rel="stylesheet" href="css/meerminderwerk.css">
+    <title>Account</title>
+    <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,13 +24,10 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+    $stmt = $pdo->prepare("SELECT * FROM Klant");
     $stmt->execute();
     $meerwerk = $stmt->fetchAll();
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2");
-    $stmt2->execute();
-    $minderwerk = $stmt2->fetchAll();
     ?>
 </head>
 <body>
