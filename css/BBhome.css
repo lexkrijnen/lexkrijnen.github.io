@@ -12,10 +12,7 @@
 }
 
 .contbutton{
-	background-color: #FE9C16 !important;
-	color: white;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	color: #fff;
 	font-size: 45px;
 	font-weight: bold;
 }
@@ -258,14 +255,6 @@ address {
 	filter: alpha(opacity=100);
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-}
-
-.oranje {
-	background-color: #FE9C16 !important;
-
-}
-.white {
-	color: white;
 }
 
 .slider-demo {
