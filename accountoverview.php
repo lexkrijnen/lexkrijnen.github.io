@@ -62,17 +62,11 @@
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
-
-    </div>
-
-
-    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
-
-    <!--MINDER WERK-->
-    <div class="col-xs-4">
-        <h1>Minder Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -81,19 +75,25 @@
                     <th>Prijs</th>
                 </tr>
                 <?php
-                $minderwerkcount = 1;
-                foreach ($minderwerk AS $werk2) {
+                $meerwerkcount = 1;
+                foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td>" . $meerwerkcount . "</td>");
+                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>€ " . $werk["prijs"] . "</td>");
                     print("</tr>");
-                    $minderwerkcount++;
+                    $meerwerkcount++;
                 }
                 ?>
             </table>
         </form>
+
     </div>
+
+
+    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+
+
 </div>
 <?php $pdo = NULL; ?>
 </body>
