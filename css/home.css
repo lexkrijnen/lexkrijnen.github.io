@@ -6,16 +6,17 @@
 }
 
 .logo{
-	margin: 50px auto auto auto;
+	margin: 45px auto;
 	width: 25%;
 	display: block;
+	margin-bottom: 30px;
+	-webkit-filter: drop-shadow(0 0 5px #bdbdbd);
+	filter: drop-shadow(0 0 5px #bdbdbd);
 }
 
-.contbutton{
-	background-color: #FE9C16 !important;
-	color: white;
-	margin-top: 20px;
-	margin-bottom: 20px;
+.contbutton,
+.contbutton:hover {
+	color: #fff;
 	font-size: 45px;
 	font-weight: bold;
 }
@@ -178,7 +179,7 @@ address {
 	text-align: center;
 	cursor: default;
 	background: #f3a53b;
-	border-radius: 10px;
+	border-radius: 7px;
 }
 
 .hovereffect .overlay {
@@ -260,27 +261,30 @@ address {
 	transform: translate3d(0,0,0);
 }
 
-.oranje {
-	background-color: #FE9C16 !important;
-
-}
-.white {
-	color: white;
-}
-
 .slider-demo {
-	position: relative;
-	z-index: -13;
+	z-index: -1;
+	margin-top: -500px;
 }
 
 .slider-wrapper {
-	position: initial;
-	margin-top: -800px;
-	height: 70%; !important;
-	z-index: -13;
-	widht: 100%;
+	height: 100vh;
+  margin-top: -14vh;
 }
 
-.slider-float {
-	z-index: 999;
+.slider-navigation {
+	opacity: 0;
+}
+
+.google-maps {
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.google-maps iframe{
+	left:0;
+	top:0;
+	height:40%;
+	width:100%;
+	position:absolute;
 }

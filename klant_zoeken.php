@@ -14,7 +14,6 @@ if (isset($_GET["vinden"])) {
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
 
-
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
     $achternaam = ucfirst($klant["achternaam"]);
@@ -147,11 +146,10 @@ $pdo = NULL;
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"klant verwijderen\"></td></tr>");
+                        print("<tr><td></td><td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\"></td></tr>");
                         print("</form>");
-                        print("<form>");
                         print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"Aanpassen\"></td></tr>");
+                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"aanpassen\" value=\"aanpassen\"></td></tr>");
                         print("</form>");
                         print("</table></div>");
                     } else {

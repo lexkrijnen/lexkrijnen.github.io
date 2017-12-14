@@ -26,7 +26,7 @@
 
     $stmt = $pdo->prepare("SELECT * FROM Klant");
     $stmt->execute();
-    $meerwerk = $stmt->fetchAll();
+    $klantgegevens = $stmt->fetchAll();
 
     ?>
 </head>
@@ -58,15 +58,10 @@
     } else {
     ?>
 
-<!--MEER WERK-->
-<div class="container page-box">
-    <div class="col-xs-4">
+
+
+    <div class="row page-box col-xs-3 col-xs-offset-1">
         <h1>Meer Werk</h1>
-        <?php
-        foreach ( $naamproject as $value ) {
-            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-        }
-        ?>
         <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
@@ -91,10 +86,36 @@
     </div>
 
 
-    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+    <div class="page-box col-xs-3 col-xs-offset-1">
+        <h1>Meer Werk</h1>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Email</th>
+                </tr>
+                <?php
+                $meerwerkcount = 1;
+                foreach ($klantgegevens AS $werk) {
+                    print("<tr>");
+                    print("<td>" . $werk["voornaam"] . "</td>");
+                    print("<td>" . $werk["achternaam"] . "</td>");
+                    print("<td>" . $werk["emailadres"] . "</td>");
+                    print("</tr>");
+                    $meerwerkcount++;
+                }
+                ?>
+            </table>
+        </form>
 
 
-</div>
+
+    </div>
+
+
+
+
 <?php $pdo = NULL; ?>
 </body>
 </html>
