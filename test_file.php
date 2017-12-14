@@ -34,7 +34,7 @@
             $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
-    //TABEL MEER WERK
+    //TABEL CONTRACT
     $stmt = $pdo->prepare("SELECT * FROM Contract");
     $stmt->execute();
     $contract = $stmt->fetchAll();
