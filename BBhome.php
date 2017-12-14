@@ -221,7 +221,7 @@
 
     <div class="container-fluid footer">
     	<div class="col-xs-12">
-        <h4 class="text-center">Bouwbedrijf Wegro</h4>
+        <h4 class="text-center footer-title">Bouwbedrijf Wegro</h4>
       </div>
 
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -229,9 +229,9 @@
 				<div class="col-xs-12 col-md-5">
 					<h4 class="text-center">Contact</h4>
 					<ul>
-						<li>Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
-						<li>E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
-						<li>Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></li>
+						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
+						<li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
+						<li class="footer-item">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></li>
 					</ul>
 				</div>
 
@@ -245,7 +245,7 @@
 			</div>
 
     	<div class="col-xs-12">
-        <p class="text-center">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
+        <p class="text-center footer-title">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
       </div>
 		</div>
 
