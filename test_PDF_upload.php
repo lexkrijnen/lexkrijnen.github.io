@@ -96,7 +96,7 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=$sql= SELECT document FROM Contract WHERE contract_nummer = '1' >" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -147,7 +147,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file= target= pdf_viewer>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
