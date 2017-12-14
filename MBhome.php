@@ -64,7 +64,7 @@
     <!--<div class="">-->
     <div class="row">
     	<div class="slider-float">
-				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+				<img src="images/Logo%20metselbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
 					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
 						Contact
