@@ -87,14 +87,13 @@ $pdo = NULL;
                     <th>Prijs</th>
                 </tr>
                 <?php
-                $meerwerkcount = 1;
-                foreach ($meerwerk AS $werk) {
+
+                if ($klant_nummer != "") {
                     print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td> naam: " . $naam . "</td>");
+                    print("<td> nummer: " . $klant_nummer . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
                     print("</tr>");
-                    $meerwerkcount++;
                 }
                 ?>
             </table>
