@@ -108,6 +108,7 @@ $pdo = NULL;
                 if ($klant_nummer != "") {
                     print("<br><div class=container><table>");
                     print("<tr><td>Naam:</td><td>$naam</td></tr>");
+                    print("<tr><td>Klant_id session:</td><td>$klant_id</td></tr>");
                     print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                     print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
                     print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
