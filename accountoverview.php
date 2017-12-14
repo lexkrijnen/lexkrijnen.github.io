@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    debug_to_console(1);
     <title>Account</title>
+    debug_to_console(2);
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +12,10 @@
     <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+    debug_to_console(3);
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
+    debug_to_console(4);
     <link href="css/index.css" rel="stylesheet">
 
     <?php
@@ -20,6 +24,7 @@
     @$klant_voornaam = $_SESSION['voornaam'];
     ?>
 
+    debug_to_console(5);
 
     <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
