@@ -26,46 +26,34 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-            $error = "";
-
             $db = "mysql:host=localhost; dbname=Wegro; port=3306";
             $user = "wegro";
             $pass = "SQLWegro@101";
             $pdo = new PDO($db, $user, $pass);
 
-            if (isset($_GET["toevoegencontract"]) && isset($_GET["naam"])) {
-                if ($_GET["naam"] != "") {
-                    $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+                if ($_GET["document"] != "") {
+                    $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
                     $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
                 } else {
-                    $error = ("Voeg A.U.B. een document toe.");
+                    $error = ("Plaats A.U.B. een bestand.");
                 }
             }
 
-            if (isset($_GET["toevoegentekening"]) && isset($_GET["naam"])) {
-                if ($_GET["naam"] != "") {
-                    $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['project_nummer'], $_GET['tekening_nummer']));
-                } else {
-                    $error = ("Voeg A.U.B. een document toe.");
-                }
-            }
-            //TABEL CONTRACT
-            $stmt = $pdo->prepare("SELECT * FROM Contract");
-            $stmt->execute();
-            $contract = $stmt->fetchAll();
+                //Contract
+                $stmt = $pdo->prepare("SELECT * FROM Contract");
+                $stmt->execute();
+                $contract = $stmt->fetchAll();
 
-            //TABEL TEKENING
-            $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-            $stmt2->execute();
-            $tekening = $stmt2->fetchAll();
-        ?>
-
-	</head>
-  <body>
-  	<nav class="navbar navbar-default" role="navigation">
+                //Tekening
+                $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+                $stmt2->execute();
+                $tekening = $stmt2->fetchAll();
+            ?>
+        </head>
+        <body>
+            <nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -89,14 +77,15 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <!--MEER WERK-->
+
+            <!--MEER WERK-->
 <div class="container page-box">
     <div class="col-xs-4">
-        <h1>Contract</h1>
+        <h3><b>Contract</b></h3>
         <form method="get" action="test_file.php">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover">
                 <tr>
-                    <th>C.Nr</th>
+                    <th>C.nr</th>
                     <th>Naam</th>
                     <th>Document</th>
                     <th></th>
@@ -105,23 +94,19 @@
                 foreach ($contract AS $document) {
                     print("<tr>");
                     print("<td>" . $document["contract_nummer"] . "</td>");
-                    print("<td>" . $document["naam"] . "</td>");
                     print("<td>" . $document["document"] . "</td>");
+                    print("<td>" . $document["naam"] . "</td>");
                     print("</tr>");
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="c.nr" size="15"></td>
-                    <td><input type="text" name="naam" size="15"></td>
-                    <td><input type="file" name="document"></td>
-                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
-                 </tr>
+                    <td></td>
+                    <td><input type="text" name="beschrijving" size="15"></td>
+                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                </tr>
             </table>
         </form>
-        <?php
-        if ($error != "") {
-            print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-        } ?>
         <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 
@@ -131,32 +116,35 @@
 
     <!--MINDER WERK-->
     <div class="col-xs-4">
-        <h1>Tekening</h1>
-        <form method="get" action="test_file.php">
+        <h1>Minder Werk</h1>
+        <form method="get" action="meermindertoevoegen.php">
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>T.Nr</th>
-                    <th>Naam</th>
-                    <th>Document</th>
-                    <th>P.nr</th>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 <?php
-                foreach ($tekening AS $document2) {
+                $minderwerkcount = 1;
+                foreach ($minderwerk AS $werk2) {
                     print("<tr>");
-                    print("<td>" . $document2["tekening_nummer"] . "</td>");
-                    print("<td>" . $document2["naam"] . "</td>");
-                    print("<td>" . $document2["document"] . "</td>");
-                    print("<td>" . $document2["project_nummer"]"</td>");
+                    print("<td>" . $minderwerkcount . "</td>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
+                    $minderwerkcount++;
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="t.nr" size="15"></td>
-                    <td><input type="text" name="naam" size="15"></td>
-                    <td><input type="file" name="document"></td>
-                    <td><input typr="text" name="project"></td>
-                    <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
+                    <td></td>
+                    <td><input type="text" name="beschrijving" size="15"></td>
+                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
