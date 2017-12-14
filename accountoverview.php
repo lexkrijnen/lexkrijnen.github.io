@@ -84,7 +84,6 @@ $pdo = NULL;
                 <tr>
                     <th>Nr.</th>
                     <th>Beschrijving</th>
-                    <th>Prijs</th>
                 </tr>
                 <?php
 
@@ -92,7 +91,7 @@ $pdo = NULL;
                     print("<tr>");
                     print("<td>" . "naam: " . "</td>" . "<td>" . $naam . "</td>");
                     print("<td>" . $klant_nummer . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
+                    print("<td>" . $werk["prijs"] . "</td>");
                     print("</tr>");
                 }
                 ?>
@@ -106,7 +105,6 @@ $pdo = NULL;
                 <tr>
                     <th>Nr.</th>
                     <th>Beschrijving</th>
-                    <th>Prijs</th>
                 </tr>
                 <?php
                     if ($klant_nummer != "") {
