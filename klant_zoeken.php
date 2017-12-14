@@ -9,12 +9,11 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-	if ($_GET["fuctie"] == "klant") {
+	if ($_GET["rol"] == "klant") {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	} elseif ($_GET["fuctie"] == "medewerker") {
+	} elseif ($_GET["rol"] == "medewerker") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	}
-
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
@@ -22,24 +21,34 @@ if (isset($_GET["vinden"])) {
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
     $achternaam = ucfirst($klant["achternaam"]);
-    $klant_nummer = $klant["klant_nummer"];
     $telefoonnummer = $klant["telefoon_nummer"];
     $emailadres =  $klant["emailadres"];
     $adres = $klant["adres"];
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+		$rol = $_GET["rol"];
+
+		if ($_GET["rol"] == "klant") {
+			$klant_nummer = $klant["klant_nummer"];
+			$_SESSION["klantnummer"] = $klant_nummer;
+		} elseif ($_GET["rol"] == "medewerker") {
+			$medewerker_nummer = $klant["medewerker_nummer"];
+			$functie = $klant["fuctie"];
+			$_SESSION["medewerkernummer"] = $medewerker_nummer;
+			$_SESSION["functie"] = $functie;
+		}
 
     $_SESSION["voornaam"] = $voornaam;
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
     $_SESSION["achternaam"] =  $achternaam;
     $_SESSION["naam"] = $naam;
-    $_SESSION["klantnummer"] = $klant_nummer;
     $_SESSION["telefoonnummer"] = $telefoonnummer;
     $_SESSION["emailadres"] = $emailadres;
     $_SESSION["adres"] = $adres;
     $_SESSION["postcode"] = $postcode;
     $_SESSION["woonplaats"] = $woonplaats;
+		$_SESSION["rol"] = $rol;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
@@ -116,17 +125,20 @@ $pdo = NULL;
                <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
-                              <tr><td>Voornaam: </td><td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
+													<tr><td>Voornaam: </td>
+															<td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldevoornaam"); } else { print("placeholder='voornaam'"); }?> ></td></tr>
 
-                              <tr><td>Tussenvoegsel: </td><td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
+													<tr><td>Tussenvoegsel: </td>
+															<td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET["vinden"])) { print("value = $ingevuldetussenvoegsel"); } else { print("placeholder='tussenvoegsel'"); }?> ></td></tr>
 
-                              <tr><td>Achternaam: </td><td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+													<tr><td>Achternaam: </td>
+															<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
 
-							<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
-							<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
+													<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
+													<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
 
-                        	<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
-						</div>
+													<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+												</div>
                     </form>
                 </table>
               </div>
@@ -143,16 +155,21 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($klant_nummer != "") {
+                    } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
-                        print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+												if ($rol == "medewerker") {
+														print("<tr><td>Medewerker:</td><td>$medewerker_nummer</td></tr>");
+														print("<tr><td>functie:</td><td>$functie</td></tr>");
+												} elseif ($rol == "klant") {
+														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+												}
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
-						print("<form action='klant_wijzigen.php' method='get'>");
+												print("<form action='klant_wijzigen.php' method='get'>");
                         print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></td>");
                         print("</form>");
                         print("<form action='klant_verwijderen.php' method='get'>");
@@ -164,7 +181,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen $rol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
