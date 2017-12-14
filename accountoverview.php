@@ -69,31 +69,7 @@
 
     <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
-    <!--MINDER WERK-->
-    <div class="col-xs-4">
-        <h1>Minder Werk</h1>
-        <h5>Projectnaam: De Tuinbaksteen</h5>
-        <form method="get" action="meermindertoevoegen.php">
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                    <th>Prijs</th>
-                </tr>
-                <?php
-                $minderwerkcount = 1;
-                foreach ($minderwerk AS $werk2) {
-                    print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("</tr>");
-                    $minderwerkcount++;
-                }
-                ?>
-            </table>
-        </form>
-    </div>
+
 </div>
 <?php $pdo = NULL; ?>
 </body>
