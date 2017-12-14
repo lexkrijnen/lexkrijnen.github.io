@@ -45,7 +45,7 @@
 
             if (isset($_GET["toevoegentekening"]) && isset($_GET["naam"])) {
                 if ($_GET["naam"] != "") {
-                    $sql = "INSERT INTO Mutatie (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
+                    $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer)VALUES(?,?,?,?)";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['project_nummer'], $_GET['tekening_nummer']));
                 } else {
@@ -156,7 +156,7 @@
                     <td><input type="text" name="naam" size="15"></td>
                     <td><input type="file" name="document"></td>
                     <td><input typr="text" name="project"></td>
-                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                    <td><input type="submit" name="toevoegentekening" value="Toevoegen"></td>
                 </tr>
             </table>
         </form>
