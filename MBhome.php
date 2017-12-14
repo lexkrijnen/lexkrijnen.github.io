@@ -108,14 +108,11 @@
 
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="hovereffect">
-						<img class="img-responsive" src="images/IMG_9121.JPG" alt="">
+						<img class="img-responsive" src="images/IMG_3270.JPG" alt="">
 							<div class="overlay">
-								<h1>NIEUWBOUW</h1>
+								<h1>METSELWERK</h1>
 								<p>
-										Woningbouwprojecten worden voornamelijk uitgevoerd in opdracht van particulieren.
-										Voordeel is dat deze methode ons niet bindt aan één systeem en ruimte biedt om in te spelen op uw specifieke wensen.
-										Bouwbedrijf Wegro bv is er meestal in het ontwerpstadium van een nieuwbouw woning al bij betrokken,
-										waarbij in samenwerking met u, een architect, ontwikkelaar of makelaar een zo goed mogelijk product wordt ontwikkeld.
+
 								</p>
 							</div>
 						</div>
@@ -123,15 +120,11 @@
 
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="hovereffect">
-							<img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+							<img class="img-responsive" src="images/IMG-20171214-WA0014.jpg" alt="">
 								<div class="overlay">
-									<h1>VERBOUW</h1>
+									<h1>LIJM/KITWERK</h1>
 									<p>
-											Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
-											Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
-											En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
-											wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
-											Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
+
 									</p>
 								</div>
 							</div>
@@ -139,15 +132,12 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_9325.JPG" alt="">
+								<img class="img-responsive" src="images/IMG_3258copy.JPG" alt="">
 								<div class="overlay">
-									<h1>RENOVATIE</h1>
+									<h1>STEIGERWERK</h1>
 									<p>
 
-											In nauwe samenwerking met u en/of uw architect gaan wij planmatig en gedreven aan de slag.
-											Geheel volgens de hedendaagse eisen en natuurlijk volgens uw eigen wensen.
-											En met behoud van oorspronkelijkheid en karakter.
-											Ons vakbekwame, ervaren bouwteam renoveert en verbouwt voor de lange termijn.
+
 									</p>
 								</div>
 							</div>
