@@ -54,6 +54,12 @@ if (isset($_GET["vinden"])) {
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 
+		if ($functie == "1") {
+				$functienaam = "admin";
+			} elseif ($functie == "2") {
+				$functienaam = "medewerker";
+			}
+
 }
 
 $pdo = NULL;
@@ -160,7 +166,8 @@ $pdo = NULL;
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
-														print("<tr><td>functie:</td><td>$functie</td></tr>");
+														print("<tr><td>functienummer:</td><td>$functie</td></tr>");
+														print("<tr><td>functienaam:</td><td>$functienaam</td></tr>");
 												} elseif ($rol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
 												}
