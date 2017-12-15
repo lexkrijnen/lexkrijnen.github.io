@@ -126,12 +126,12 @@
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
                         print("<tr><td><form action='klant_wijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></form></td></tr>");
                         print("</table></div>");
+                        print("<form action='klant_wijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></form>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){
                         print("<br>Error! Waarschijnlijk een onbekend medewerkernummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }
-
 
 
                 ?>
