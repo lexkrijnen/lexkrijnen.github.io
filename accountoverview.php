@@ -18,8 +18,8 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+    //@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    //@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -27,7 +27,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if ($klant_id != "" AND $medewerker_nummer == "") {
+    if ($klant_id != ""/* AND $medewerker_nummer == ""*/) {
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
