@@ -128,7 +128,7 @@ $pdo = NULL;
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
               <div class=container>
-               <table>
+               <table class="table table-hover table-bordered">
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
 													<tr><td>Voornaam: </td>
