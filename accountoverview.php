@@ -29,13 +29,13 @@
     $pdo = new PDO($db, $user, $pass);
 
     if ($klant_id != ""/* AND $medewerker_nummer == ""*/) {
-    $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
+    $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
     }/*elseif ($klant_id == "" AND $medewerker_nummer != "") {
-    $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
-    $stmt2->execute());
-    $medewerker = $stmt2->fetchAll();
+    $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
+    $stmt->execute());
+    $medewerker = $stmt->fetchAll();
     }*/
 
 
@@ -49,7 +49,6 @@
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-	$rol = $_GET["rol"];
 
 
     $pdo = NULL;
