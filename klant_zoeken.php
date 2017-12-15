@@ -176,13 +176,14 @@ $pdo = NULL;
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
+												print("</table>");
 												print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
+                        print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
                         print("</form>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\"></td></tr>");
+                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\">");
                         print("</form>");
-                        print("</table></div>");
+                        print("</div>");
                     } else {
                         //geen klant gevonden met die naam
                         print("<div class=\"alert alert-warning\" role=\"alert\">
