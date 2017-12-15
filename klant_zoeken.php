@@ -162,7 +162,7 @@ $pdo = NULL;
                                 Vul een voornaam en een achternaam in.
                               </div>");
                     } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
-                        print("<br><div class=container><table class=\"table table-hover table-bordered\">");
+                        print("<br><div class=container><table class=\"resulttable table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
