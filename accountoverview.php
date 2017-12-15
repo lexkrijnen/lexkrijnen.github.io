@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Account</title>
+    <title>Accountoverview</title>
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,9 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+
 
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -25,9 +28,15 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt = $pdo->prepare("SELECT * FROM Klant where voornaam='Piet'");
+    if ($klant_id != ""/* AND $medewerker_nummer == ""*/) {
+    $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
+    }/*elseif ($klant_id == "" AND $medewerker_nummer != "") {
+    $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
+    $stmt2->execute());
+    $medewerker = $stmt2->fetchAll();
+    }*/
 
 
     $voornaam = ucfirst($klant["voornaam"]);
@@ -43,7 +52,7 @@
 	$rol = $_GET["rol"];
 
 
-$pdo = NULL;
+    $pdo = NULL;
 ?>
 
 
@@ -84,45 +93,54 @@ $pdo = NULL;
                 <tr>
                     <th>Nr.</th>
                     <th>Beschrijving</th>
-                    <th>Prijs</th>
                 </tr>
                 <?php
-                $meerwerkcount = 1;
-                foreach ($meerwerk AS $werk) {
-                    print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("</tr>");
-                    $meerwerkcount++;
-                }
+
+                if ($klant_nummer != "") {
+                        print("<tr><td>Naam: </td><td>$naam</td></tr>");
+                        print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
+                        print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
+                        print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
+                        print("<tr><td>Adres: </td><td>$adres</td></tr>");
+                        print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
+                        print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
+                        print("</table></div>");
+                    }else {
+                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }
                 ?>
             </table>
     </div>
 
 
     <div class="page-box col-xs-4 col-xs-offset-1">
-        <h1>Meer Werk</h1>
+        <h1>Uw gegevens</h1>
             <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                </tr>
                 <?php
-                if ($klant_nummer != "") {
-                    print("<br><div class=container><table>");
-                    print("<tr><td>Naam:</td><td>$naam</td></tr>");
-                    print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
-                    print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
-                    print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
-                    print("<tr><td>Adres:</td><td>$adres</td></tr>");
-                    print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
-                    print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
-                    print("</table></div>");
-                }
-
+                    if ($klant_nummer != "") {
+                        print("<tr><td>Naam: </td><td>$naam</td></tr>");
+                        print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
+                        print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
+                        print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
+                        print("<tr><td>Adres: </td><td>$adres</td></tr>");
+                        print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
+                        print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
+                        print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
+                        print("<tr><td>Rol: </td><td>$rol</td></tr>");
+                        print("</table></div>");
+                    }else {
+                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }
 
 
 
                 ?>
-            </table>
 
+            </table>
 
 
 
