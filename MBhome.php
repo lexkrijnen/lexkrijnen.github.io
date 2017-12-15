@@ -182,7 +182,7 @@
 								<div class="overlay">
 									<h1>GERICHT OP</h1>
 									<p>
-										Het dak en de muren zijn nu ook bijna af.
+
 									</p>
 								</div>
 							</div>
@@ -194,7 +194,7 @@
 								<div class="overlay">
 									<h1>UW WENSEN</h1>
 									<p>
-											Het huis is nu zo goed als af. Tijd om in te richten.
+
 									</p>
 								</div>
 							</div>
