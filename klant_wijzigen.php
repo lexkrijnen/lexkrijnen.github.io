@@ -26,15 +26,19 @@ $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
 $achternaam = $_SESSION["achternaam"];
 $naam = $_SESSION["naam"];
-$klant_nummer = $_SESSION["klantnummer"];
 $telefoonnummer = $_SESSION["telefoonnummer"];
 $emailadres = $_SESSION["emailadres"];
 $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
+if ($_SESSION["rol"] == "klant") {
+		$klant_nummer = $_SESSION["klantnummer"];
+}
+
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
+		$medewerker_nummer = $_SESSION["medewerkernummer"];
 }
 
 if(isset($_GET["opslaan"])) {
