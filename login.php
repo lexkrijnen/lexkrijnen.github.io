@@ -59,8 +59,10 @@ if (!empty($klant_id)) {
     print('<meta http-equiv="refresh" content="0.5;url=../account.php" />');
 } else if (!empty($medewerker_nummer)) {
     if ($medewerker_functie == "1") {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Een moment gedult A.U.B.</h5></div><br>');
         print('<meta http-equiv="refresh" content="0;url=../profile_admin.php" />');
     } elseif ($medewerker_functie == "2") {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Een moment gedult A.U.B.</h5></div><br>');
         print('<meta http-equiv="refresh" content="0;url=../profile_medewerker.php" />');
     }
 } else {
