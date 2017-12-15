@@ -98,6 +98,40 @@
                 </tr>
             </table>
         </form>
+        <form method="get" action="test_file.php">
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
+                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tr>
+                                        <thead>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="text" name="pdf naam" size="15"></td>
+                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
         <?php
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
