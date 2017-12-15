@@ -177,7 +177,7 @@ $pdo = NULL;
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
 												print("</table>");
-												print("<div class=\"row\">")
+												print("<div class=\"row\">");
 												print("<form action='klant_wijzigen.php' method='get'>");
                         print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
                         print("</form>");
