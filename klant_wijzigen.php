@@ -130,7 +130,7 @@ $pdo = NULL;
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
 											<?php
-												if($_SESSION["rol"] == "medewerker") {
+												if ($_SESSION["rol"] == "medewerker") {
 														print("<tr><td>Functie</td><td><input type=\"text\" class=\"form-control\" name=\"functie\" value=$functie></td>");
 												}
 											?>

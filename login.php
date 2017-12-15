@@ -1,5 +1,7 @@
 <?php
 session_start();
+@$klant_id = $_SESSION['klant_id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +52,13 @@ session_start();
     </div><!-- /.container-fluid -->
 </nav>
 
+<?php
+if (!empty($klant_id)) {
+    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Een moment gedult A.U.B.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../account.php" />');
+} else {
+?>
+
 <div class="container">
     <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
         <div class="panel " >
@@ -89,5 +98,6 @@ session_start();
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+<?php } ?>
 </html>
 
