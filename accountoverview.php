@@ -22,6 +22,7 @@
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 
+
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -36,6 +37,7 @@
     $stmt2->execute());
     $medewerker = $stmt2->fetchAll();
     }*/
+
 
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -128,6 +130,7 @@
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
                         print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
+                        print("<tr><td>Rol: </td><td>$rol</td></tr>");
                         print("</table></div>");
                     }else {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
