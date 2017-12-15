@@ -77,6 +77,7 @@
             <ul>
                 <li><a href="meerminderlanding.php">Meer/Minder Werk inzien</a></li>
                 <li><a href="#">Contracten inzien</a></li>
+                <li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
             </ul>
         </div>
     </div>
