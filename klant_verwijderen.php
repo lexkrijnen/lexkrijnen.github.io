@@ -18,7 +18,7 @@ if (isset($_GET["echtverwijderen"])) {
 		} elseif ($_SESSION["rol"] == 'medewerker') {
 				$sql = "DELETE FROM Medewerker WHERE medewerker_nummer = ?";
 				$stmt = $pdo->prepare($sql);
-    		$stmt->execute(array($_SESSION["medewerker"]));
+    		$stmt->execute(array($_SESSION["medewerkernummer"]));
 		}
 
 
