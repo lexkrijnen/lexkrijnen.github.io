@@ -31,7 +31,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
         } else {
-            $error = ("Plaats A.U.B. een bestand.");
+            $error = ("Plaats A.U.B. een bestand en voeg een naam toe");
         }
     }
 
