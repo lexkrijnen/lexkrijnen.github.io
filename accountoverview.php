@@ -34,7 +34,7 @@
     $klant = $stmt->fetch();
     }else*/if ($medewerker_nummer != "") {
     $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
-    $stmt->execute());
+    $stmt->execute();
     $medewerker = $stmt->fetch();
     }
 
