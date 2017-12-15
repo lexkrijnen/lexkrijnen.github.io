@@ -31,11 +31,11 @@
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
-    }elseif (klatn_id == "" AND $medewerker_nummer != "") {
+    }/*elseif (klatn_id == "" AND $medewerker_nummer != "") {
     $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
     $stmt2->execute());
     $medewerker = $stmt2->fetchAll();
-    }
+    }*/
 
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -50,7 +50,7 @@
 	$rol = $_GET["rol"];
 
 
-$pdo = NULL;
+    $pdo = NULL;
 ?>
 
 
