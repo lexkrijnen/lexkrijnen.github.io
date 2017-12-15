@@ -26,12 +26,12 @@
     $pdo = new PDO($db, $user, $pass);
 
     if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-        if ($_GET["document"] != "") {
+        if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
             $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
         } else {
-            $error = ("Plaats A.U.B. een bestand.");
+            $error = ("Plaats A.U.B. een bestand en voeg een naam toe");
         }
     }
 
@@ -102,7 +102,6 @@
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
         } ?>
-        <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 </div>
 <?php $pdo = NULL; ?>
