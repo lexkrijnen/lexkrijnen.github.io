@@ -35,7 +35,7 @@
     }else*/if ($medewerker_nummer != "") {
     $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
     $stmt->execute());
-    $medewerker = $stmt->fetchAll();
+    $medewerker = $stmt->fetch();
     }
 
 
