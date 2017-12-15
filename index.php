@@ -1,3 +1,13 @@
+<?php
+session_start();
+@$klant_id = $_SESSION['klant_id'];
+if (!empty($klant_id)) {
+    $ingelogd = "Mijn Account";
+} else {
+    $ingelogd = "Inloggen";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -43,7 +53,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="login.php"><?php print($ingelogd);?></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
