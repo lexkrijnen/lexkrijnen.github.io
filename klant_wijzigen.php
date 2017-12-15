@@ -33,12 +33,12 @@ $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
 if ($_SESSION["rol"] == "klant") {
-		$klant_nummer = $_SESSION["klantnummer"]
+		$klant_nummer = $_SESSION["klantnummer"];
 }
 
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
-		$medewerker_nummer = $_SESSION["medewerkernummer"]
+		$medewerker_nummer = $_SESSION["medewerkernummer"];
 }
 
 if(isset($_GET["opslaan"])) {
