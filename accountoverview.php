@@ -18,6 +18,8 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -25,10 +27,15 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
+    if ($klant_id != "" AND $medewerker_nummer == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
-
+    }elseif (klatn_id == "" AND $medewerker_nummer != "") {
+    $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
+    $stmt2->execute());
+    $medewerker = $stmt2->fetchAll();
+    }
 
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
@@ -105,7 +112,7 @@ $pdo = NULL;
 
 
     <div class="page-box col-xs-4 col-xs-offset-1">
-        <h1>Meer Werk</h1>
+        <h1>Uw gegevens</h1>
             <table class="table table-hover table-bordered">
                 <tr>
                     <th>Nr.</th>
