@@ -96,7 +96,7 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/Wegro/document/$sql = SELECT document FROM Contract  target= pdf_viewer>" . $document["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/Wegro/document/$document target= pdf_viewer>" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>

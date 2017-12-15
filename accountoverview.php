@@ -28,26 +28,30 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    /*if ($klant_id != "") {
+    if ($klant_id != "" AND $medewerker_id == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
     $stmt->execute();
-    $klant = $stmt->fetch();
-    }else*/if ($medewerker_nummer != "") {
+    $sqlresult = $stmt->fetch();
+    $klant_nummerdb = $sqlresult["klant_nummer"];
+    }elseif ($klant_id == "" AND $medewerker_nummer != "") {
     $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
     $stmt->execute();
-    $medewerker = $stmt->fetch();
+    $sqlresult = $stmt->fetch();
+    $medewerker_nummerdb = $sqlresult["medewerker_nummer"];
     }
 
 
-    $voornaam = ucfirst($klant["voornaam"]);
-    $tussenvoegsel = $klant["tussenvoegsel"];
-    $achternaam = ucfirst($klant["achternaam"]);
-    $klant_nummer = $klant["klant_nummer"];
-    $telefoonnummer = $klant["telefoon_nummer"];
-    $emailadres =  $klant["emailadres"];
-    $adres = $klant["adres"];
-    $postcode = $klant["postcode"];
-    $woonplaats = ucfirst($klant["woonplaats"]);
+
+
+    $voornaam = ucfirst($sqlresult["voornaam"]);
+    $tussenvoegsel = $sqlresult["tussenvoegsel"];
+    $achternaam = ucfirst($sqlresult["achternaam"]);
+    $klant_nummerdb = $sqlresult["klant_nummer"];
+    $telefoonnummer = $sqlresult["telefoon_nummer"];
+    $emailadres =  $sqlresult["emailadres"];
+    $adres = $sqlresult["adres"];
+    $postcode = $sqlresult["postcode"];
+    $woonplaats = ucfirst($sqlresult["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
 
@@ -95,7 +99,7 @@
                 </tr>
                 <?php
 
-                if ($klant_nummer != "") {
+                if ($klant_nummerdb != "") {
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
                         print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
@@ -120,7 +124,7 @@
                     <th>Beschrijving</th>
                 </tr>
                 <?php
-                    if ($klant_nummer != "") {
+                    if ($klant_nummerdb != "") {
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
                         print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
                         print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
@@ -129,7 +133,6 @@
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
                         print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
-                        print("<tr><td>Rol: </td><td>$rol</td></tr>");
                         print("</table></div>");
                     }else {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
