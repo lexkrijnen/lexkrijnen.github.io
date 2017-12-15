@@ -28,15 +28,18 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    /*if ($klant_id != "") {
+    if ($klant_id != "" AND $medewerker_id == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
-    }else*/if ($medewerker_nummer != "") {
+    }elseif ($klant_id == "" AND $medewerker_nummer != "") {
     $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
     $stmt->execute();
     $medewerker = $stmt->fetch();
     }
+
+
+
 
 
     $voornaam = ucfirst($klant["voornaam"]);
