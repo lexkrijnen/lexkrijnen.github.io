@@ -39,6 +39,11 @@ if ($_SESSION["rol"] == "klant") {
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
 		$medewerker_nummer = $_SESSION["medewerkernummer"];
+		if ($functie == "1") {
+			$functienaam = "admin";
+		} elseif ($functie == "2") {
+			$functienaam = "medewerker";
+		}
 }
 
 if(isset($_GET["opslaan"])) {
@@ -130,8 +135,9 @@ $pdo = NULL;
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
 											<?php
-												if($_SESSION["rol"] == "medewerker") {
+												if ($_SESSION["rol"] == "medewerker") {
 														print("<tr><td>Functie</td><td><input type=\"text\" class=\"form-control\" name=\"functie\" value=$functie></td>");
+														print("<tr><td>Functie</td><td><input type=\"text\" class=\"form-control\" name=\"functienaam\" value=$functienaam></td>");
 												}
 											?>
                       <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>

@@ -102,6 +102,7 @@
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
         } ?>
+        <a href="test_file.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
 </div>
 <?php $pdo = NULL; ?>
