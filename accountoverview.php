@@ -18,7 +18,7 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-    //@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     //@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 
@@ -27,11 +27,11 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if ($klant_id != ""/* AND $medewerker_nummer == ""*/) {
+    if ($klant_id != "" AND $medewerker_nummer == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
-    }/*elseif (klatn_id == "" AND $medewerker_nummer != "") {
+    }/*elseif (klant_id == "" AND $medewerker_nummer != "") {
     $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
     $stmt2->execute());
     $medewerker = $stmt2->fetchAll();
