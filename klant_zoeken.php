@@ -21,7 +21,6 @@ if (isset($_GET["vinden"])) {
     $voornaam = ucfirst($klant["voornaam"]);
     $tussenvoegsel = $klant["tussenvoegsel"];
     $achternaam = ucfirst($klant["achternaam"]);
-    $klant_nummer = $klant["klant_nummer"];
     $telefoonnummer = $klant["telefoon_nummer"];
     $emailadres =  $klant["emailadres"];
     $adres = $klant["adres"];
@@ -30,16 +29,26 @@ if (isset($_GET["vinden"])) {
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 		$rol = $_GET["rol"];
 
+		if ($_GET["rol"] == "klant") {
+			$klant_nummer = $klant["klant_nummer"];
+			$_SESSION["klantnummer"] = $klant_nummer;
+		} elseif ($_GET["rol"] == "medewerker") {
+			$medewerker_nummer = $klant["medewerker_nummer"];
+			$functie = $klant["functie"];
+			$_SESSION["medewerkernummer"] = $medewerker_nummer;
+			$_SESSION["functie"] = $functie;
+		}
+
     $_SESSION["voornaam"] = $voornaam;
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
     $_SESSION["achternaam"] =  $achternaam;
     $_SESSION["naam"] = $naam;
-    $_SESSION["klantnummer"] = $klant_nummer;
     $_SESSION["telefoonnummer"] = $telefoonnummer;
     $_SESSION["emailadres"] = $emailadres;
     $_SESSION["adres"] = $adres;
     $_SESSION["postcode"] = $postcode;
     $_SESSION["woonplaats"] = $woonplaats;
+		$_SESSION["rol"] = $rol;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
@@ -146,10 +155,15 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($klant_nummer != "") {
+                    } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
                         print("<br><div class=container><table>");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
-                        print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+												if ($rol == "medewerker") {
+														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
+														print("<tr><td>functie:</td><td>$functie</td></tr>");
+												} elseif ($rol == "klant") {
+														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
+												}
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
@@ -171,7 +185,6 @@ $pdo = NULL;
                               </div>");
                     }
                 }
-			  				print($_GET["rol"]);
                 ?>
             </div>
         </div>

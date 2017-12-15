@@ -9,10 +9,16 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["opslaan"])) {
-    $sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
-    $verandering = $stmt->fetch();
+		if ($_SESSION["rol"] == "klant") {
+				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
+				$stmt = $pdo->prepare($sql);
+				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
+		} elseif ($_SESSION["rol"] == "medewerker") {
+				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? functie=? where medewerker_nummer=?";
+				$stmt = $pdo->prepare($sql);
+				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
+		}
+
 }
 
 
@@ -26,6 +32,10 @@ $emailadres = $_SESSION["emailadres"];
 $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
+
+if ($_SESSION["rol"] == "medewerker") {
+		$functie = $_SESSION["functie"];
+}
 
 if(isset($_GET["opslaan"])) {
     $voornaam = $_GET["voornaam"];
@@ -115,19 +125,24 @@ $pdo = NULL;
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
+											<?php
+												if($_SESSION["rol"] == "medewerker") {
+														print("<tr><td>Functie</td><td><input type=\"text\" class=\"form-control\" name=\"functie\" value=$functie></td>");
+												}
+											?>
                       <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                       <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
+											<tr><td></td><td><input type="hidden" name="medewerkernummer" <?php print("value=\"$medewerker_nummer\""); ?>></td></tr>
                   </form>
               </table>
-			<br>
+						<br>
             <a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a>
 
 
             <?php
 
             if(isset($_GET["opslaan"])) {
-                //print("<div class=\"alert alert-succes\" role=\"alert\"> De wijzigingen zijn opgeslagen </div>");
-				print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
+								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
             ?>

@@ -8,7 +8,7 @@
     ?>
     <meta charset="UTF-8">
     <title>Meer & Minder Werk</title>
-    <link rel="stylesheet" href="css/accountoverview.css.css">
+    <link rel="stylesheet" href="css/meerminderwerk.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,22 +23,18 @@
     $user = "wegro";
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
-
     //MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
     $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
-
     //MINDER WERK
     $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
     $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
-
     //NAAM PROJECT
     $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
     $stmt3->execute(array(':contract_nummer' => $_GET['id']));
     $naamproject = $stmt3->fetchAll();
-
     ?>
 </head>
 <body>
@@ -62,15 +58,15 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-    <?php
-    if (empty($klant_id)) {
-        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    } else {
-    ?>
+<?php
+if (empty($klant_id)) {
+    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} else {
+?>
 
 <!--MEER WERK-->
-<div class="row page-box col-xs-6">
+<div class="container page-box">
     <div class="col-xs-4">
         <h1>Meer Werk</h1>
         <?php

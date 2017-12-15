@@ -219,67 +219,35 @@
 			</div>
     </div>
 
-    <div class="container">
-    	<div class="row">
-      	<div class="OurBlog">
-        	<h4>Bouwbedrijf Wegro</h4>
-        </div>
+    <div class="container-fluid footer">
+    	<div class="col-xs-12">
+        <h4 class="text-center footer-title">Bouwbedrijf Wegro</h4>
+      </div>
 
-        <div class="col-lg-9 col-lg-offset-3">
-        	<div class="col-sm-3">
-          	<div class="footer-col-item">
-            	<h4>Contact</h4>
-							<div class="item-contact">
-								<p>Telefoonnummer: <a class="link-id" href="tel:0341-412054">0341-412054</a></p>
-								<p>E-mailadres: <a class="link-id" href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></p>
-								<p>Adres: <a class="link-id" href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></p>
-							</div>
-            </div>
-          </div>
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
 
-          <div class="col-sm-4">
-          	<a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
-						<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-body">
-										<div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
-																				 data-tabs="timeline"
-																				 data-width="600"
-																				 data-height="800"
-																				 data-small-header="false"
-																				 data-adapt-container-width="true"
-																				 data-hide-cover="true"
-																				 data-show-facepile="false"
-										>
-											<blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
-												<a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a>
-											</blockquote>
-										</div>
-									</div>
-
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="footer-col-item">
-							<h4>Locatie</h4>
-							<address>Gelreweg 38<br>3843AN Harderwijk, NL</address>
-						</div>
-					</div>
+				<div class="col-xs-12 col-md-4 col-md-offset-2">
+					<h4 class="footer-title"><u>Contact:</u></h4>
+					<ul>
+						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
+						<li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
+						<li class="footer-item">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></li>
+					</ul>
 				</div>
 
-      	<div class="footer-bottom-layout">
-          <p class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
-      	</div>
-    	</div>
-    </div>
+				<div class="col-xs-12 col-md-4">
+					<h4 class="footer-title"><u>Social media:</u></h4>
+					<ul>
+						<li class="footer-item"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Facebook</a></li>
+					</ul>
+				</div>
 
+			</div>
+
+    	<div class="col-xs-12">
+        <p class="text-center footer-title">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></p>
+      </div>
+		</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
@@ -331,3 +299,39 @@
 
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+         		<!-- Facebook modal -->
+          	<!--<a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
+						<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs"
+																				 data-tabs="timeline"
+																				 data-width="600"
+																				 data-height="800"
+																				 data-small-header="false"
+																				 data-adapt-container-width="true"
+																				 data-hide-cover="true"
+																				 data-show-facepile="false"
+										>
+											<blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
+												<a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a>
+											</blockquote>
+										</div>
+									</div>
+
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+									</div>
+								</div>
+							</div>
+						</div>-->

@@ -275,6 +275,25 @@ address {
 	opacity: 0;
 }
 
+.footer {
+	padding: 20px;
+	background-color: #3c3c3b;
+	color: #bdbdbd;
+}
+
+.footer-title {
+	color: #bdbdbd;
+}
+
+.footer-item {
+	list-style-type: none;
+}
+
+.footer-item > a,
+.footer-title > a{
+	color: #fff;
+}
+
 /*
 .google-maps {
 	overflow:hidden;
