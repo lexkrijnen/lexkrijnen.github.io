@@ -128,7 +128,7 @@ $pdo = NULL;
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
               <div class=container>
-               <table class="table table-hover table-bordered">
+               <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
 													<tr><td>Voornaam: </td>
@@ -162,7 +162,7 @@ $pdo = NULL;
                                 Vul een voornaam en een achternaam in.
                               </div>");
                     } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
-                        print("<br><div class=container><table>");
+                        print("<br><div class=container><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
