@@ -32,7 +32,7 @@
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
-    /*}elseif ($klant_id == "" AND $medewerker_nummer != "") {
+    }/*elseif ($klant_id == "" AND $medewerker_nummer != "") {
     $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer = '$medewerker_nummer'");
     $stmt2->execute());
     $medewerker = $stmt2->fetchAll();
