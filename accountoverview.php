@@ -124,8 +124,7 @@
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("<tr><td><form action='klant_wijzigen.php' method='get'></td></tr>");
-                        print("<tr><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></form></td></tr>");
+                        print("<tr><td><form action='klant_wijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></form></td></tr>");
                         print("</table></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
