@@ -166,11 +166,11 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_3343.JPG" alt="">
+								<img class="img-responsive" src="images/metselmuur.png" alt="">
 								<div class="overlay">
 									<h1>METSELWERK</h1>
 									<p>
-										Hier wordt de fundering van een nieuw huis gelegd.
+
 									</p>
 								</div>
 							</div>
@@ -178,11 +178,11 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_3134.JPG" alt="">
+								<img class="img-responsive" src="images/huus.png" alt="">
 								<div class="overlay">
 									<h1>GERICHT OP</h1>
 									<p>
-										Het dak en de muren zijn nu ook bijna af.
+
 									</p>
 								</div>
 							</div>
@@ -190,11 +190,11 @@
 
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="hovereffect">
-								<img class="img-responsive" src="images/IMG_3344.JPG" alt="">
+								<img class="img-responsive" src="images/raam.png" alt="">
 								<div class="overlay">
 									<h1>UW WENSEN</h1>
 									<p>
-											Het huis is nu zo goed als af. Tijd om in te richten.
+
 									</p>
 								</div>
 							</div>
