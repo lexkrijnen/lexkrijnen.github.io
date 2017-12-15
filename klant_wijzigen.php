@@ -47,6 +47,8 @@ if(isset($_GET["opslaan"])) {
     $achternaam = $_GET["achternaam"];
     $naam = $_GET["naam"];
     $klant_nummer = $_GET["klantnummer"];
+		$functie = $_GET["functie"];
+		$medewerker_nummer = $_GET["medewerkernummer"];
     $telefoonnummer = $_GET["telefoonnummer"];
     $emailadres = $_GET["emailadres"];
     $adres = $_GET["adres"];
