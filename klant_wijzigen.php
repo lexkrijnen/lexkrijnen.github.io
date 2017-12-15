@@ -47,6 +47,8 @@ if(isset($_GET["opslaan"])) {
     $achternaam = $_GET["achternaam"];
     $naam = $_GET["naam"];
     $klant_nummer = $_GET["klantnummer"];
+		$functie = $_GET["functie"];
+		$medewerker_nummer = $_GET["medewerkernummer"];
     $telefoonnummer = $_GET["telefoonnummer"];
     $emailadres = $_GET["emailadres"];
     $adres = $_GET["adres"];
@@ -70,7 +72,7 @@ $pdo = NULL;
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>klant wijzigen</title>
+    <title>wijzigen</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">

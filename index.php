@@ -1,7 +1,8 @@
 <?php
 session_start();
 @$klant_id = $_SESSION['klant_id'];
-if (!empty($klant_id)) {
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
 } else {
     $ingelogd = "Inloggen";
