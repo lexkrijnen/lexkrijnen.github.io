@@ -125,7 +125,7 @@
                 <?php
                     if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
-                        if (klant_nummerdb != "") {
+                        if ($klant_nummerdb != "") {
                             print("<tr><td>Klantnummer: </td><td>$klant_nummerdb</td></tr>");
                         }elseif ($medewerker_nummerdb != "") {
                             print("<tr><td>Medewerkernummer: </td><td>$medewerker_nummerdb");
