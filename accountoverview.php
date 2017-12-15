@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Account</title>
+    <title>Accountoverview</title>
     <link rel="stylesheet" href="css/accountoverview.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-    //@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -127,11 +127,11 @@
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
+                        print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
                         print("</table></div>");
                     }else {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }
-
 
 
 
