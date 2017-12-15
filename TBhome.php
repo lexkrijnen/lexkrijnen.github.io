@@ -1,3 +1,12 @@
+<?php
+session_start();
+@$klant_id = $_SESSION['klant_id'];
+if (!empty($klant_id)) {
+    $ingelogd = "Mijn Account";
+} else {
+    $ingelogd = "Inloggen";
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +63,7 @@
 						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
 						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
 						<li class="nav-item"><a href="#Contact">Contact</a></li>
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="login.php"><?php print($ingelogd);?></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
