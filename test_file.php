@@ -26,7 +26,7 @@
     $pdo = new PDO($db, $user, $pass);
 
     if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-        if ($_GET["document"] != "") {
+        if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
             $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
