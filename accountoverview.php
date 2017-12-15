@@ -133,8 +133,10 @@
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
                         print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
                         print("</table></div>");
-                    }else {
-                        print("<br>Error! Waarschijnlijk een onbekend nummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }elseif ($klant_nummerdb == "") {
+                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
+                    }elseif ($medewerker_nummerdb == ""){
+                        print("<br>Error! Waarschijnlijk een onbekend medewerkernummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }
 
 
