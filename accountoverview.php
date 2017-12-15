@@ -27,7 +27,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if ($klant_id != "" AND $medewerker_nummer == "") {
+    if ($klant_id != ""/* AND $medewerker_nummer == ""*/) {
     $stmt = $pdo->prepare("SELECT * FROM Klant where klant_nummer='$klant_id'");
     $stmt->execute();
     $klant = $stmt->fetch();
