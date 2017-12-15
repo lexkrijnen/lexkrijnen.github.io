@@ -69,7 +69,7 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-<!--MEER WERK-->
+<!--CONTRACT-->
 <div class="container page-box">
     <div class="col-xs-4">
         <h1>Contract</h1>
