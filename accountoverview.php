@@ -125,13 +125,16 @@
                 <?php
                     if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
-                        print("<tr><td>Klantnummer: </td><td>$klant_nummer</td></tr>");
+                        if (klant_nummerdb != "") {
+                            print("<tr><td>Klantnummer: </td><td>$klant_nummerdb</td></tr>");
+                        }elseif ($medewerker_nummerdb != "") {
+                            print("<tr><td>Medewerkernummer: </td><td>$medewerker_nummerdb");
+                        }
                         print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("<tr><td>mw nummer evt: </td><td>$medewerker_nummer</td></tr>");
                         print("</table></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
