@@ -45,7 +45,7 @@
 
         if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Contract (document, naam, project_nummer, tekening_nummer) VALUES(?,?,?,?)";
+                $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer) VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET["project_nummer"], $_GET["tekening_nummer"]));
             } else {
