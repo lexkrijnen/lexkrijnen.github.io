@@ -139,21 +139,58 @@
         </form>
     <br>
         <!--Tekening-->
-        <form method="get" action="test_PDF_upload.php">
-            <table class="table table-hover">
-                <tr>
-                    <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
-                </tr>
-                <?php
-                foreach ($tekening AS $document2) {
-                    print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
-                    print("</tr>");
-                    }
-                ?>
-            </table>
+        <table class="table table-hover">
+            <tr>
+                <thead>
+                    <th><h3><b>Tekeningen</b></h3></th>
+                </thead>
+            </tr>
+            <?php
+            foreach ($tekening AS $document2) {
+                print("<tr>");
+                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
+                print("</tr>");
+                }
+            ?>
+        </table>
+             <form method="get" action="test_PDF_upload.php">
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
+                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tr>
+                                        <thead>
+                                            <th><b>C.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="contract_nummer" size="15"></td>
+                                        <td><input type="file" name="document"></td>
+                                        <td><input type="text" name="naam"size="15"></td>
+                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                                <?php
+                                if ($error != "") {
+                                    print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+                                    }
+                                ?>
+                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
+                        </div>
+                    </div>
+                </div>
         </form>
     </div>
         <?php $pdo = NULL; ?>
