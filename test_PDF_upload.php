@@ -108,7 +108,7 @@
                     }
                 ?>
             </table>
-                        <!--Uploaden-->
+            <!--Uploaden Contract-->
              <form method="get" action="test_PDF_upload.php">
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -158,6 +158,8 @@
                 }
             ?>
         </table>
+        <!--Uploaden Tekening-->
+        <form method="get" action="test_PDF_upload.php">
             <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tekening toevoegen</a>
                 <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
@@ -191,6 +193,7 @@
                      </div>
                   </div>
             </div>
+        </form>
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
