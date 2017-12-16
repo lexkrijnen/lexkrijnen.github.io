@@ -26,37 +26,29 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-            $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-            $user = "wegro";
-            $pass = "SQLWegro@101";
-            $pdo = new PDO($db, $user, $pass);
+        $error = "";
 
-            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-                if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-                } else {
-                    $error = ("Plaats A.U.B. een bestand.");
-                }
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
+                $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+            } else {
+                $error = ("Plaats A.U.B. een bestand en voeg een naam toe");
             }
+        }
 
-                //Contract
-                $stmt = $pdo->prepare("SELECT * FROM Contract");
-                $stmt->execute();
-                $contract = $stmt->fetchAll();
+        //TABEL CONTRACT
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
 
-                //Tekening
-                $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-                $stmt2->execute();
-                $tekening = $stmt2->fetchAll();
-
-                //NAAM PROJECT
-                $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
-                $stmt3->execute(array(':contract_nummer' => $_GET['id']));
-                $naamproject = $stmt3->fetchAll();
-        ?>
-
+    ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -121,9 +113,9 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="text" name="contract_nummer" size="15"></td>
+                                        <td><input type="file" name="document"></td>
+                                        <td><input type="text" name="naam"size="15"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
@@ -153,6 +145,11 @@
                 ?>
             </table>
         </form>
+        <?php
+        if ($error != "") {
+            print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+            }
+        ?>
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
