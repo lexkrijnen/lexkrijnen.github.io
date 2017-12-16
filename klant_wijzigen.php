@@ -134,8 +134,16 @@ $pdo = NULL;
 											<?php
 												if ($_SESSION["rol"] == "medewerker") {
 														print("<tr><td>Functie</td>");
-														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" "  if($functie=='2') { print("checked"); } " > Medewerker</td></tr>");
-														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" " if($functie=='1') { print("checked"); } "> Admin </td></tr>");
+														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
+														if($functie=='2'){
+																print("checked");
+														}
+														print(" > Medewerker</td></tr>");
+														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
+														if($functie=='1') {
+																print("checked");
+														}
+														print("> Admin </td></tr>");
 												}
 											?>
                       <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
