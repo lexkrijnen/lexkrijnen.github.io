@@ -127,7 +127,7 @@
             <!--Uploaden-->
              <form method="get" action="test_PDF_upload.php">
                  <a href="##" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestanden toevoegen</a>
-                    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
