@@ -48,6 +48,11 @@
         $stmt->execute();
         $contract = $stmt->fetchAll();
 
+        //TABEL TEKENING
+        $stmt = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt->execute();
+        $tekening = $stmt->fetchAll();
+
     ?>
 	</head>
   <body>
