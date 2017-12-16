@@ -37,6 +37,7 @@ if (isset($_GET["vinden"])) {
 			$functie = $klant["functie"];
 			$_SESSION["medewerkernummer"] = $medewerker_nummer;
 			$_SESSION["functie"] = $functie;
+			$_SESSION["functienaam"] = $functienaam;
 		}
 
     $_SESSION["voornaam"] = $voornaam;
@@ -166,8 +167,7 @@ $pdo = NULL;
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
-														print("<tr><td>functienummer:</td><td>$functie</td></tr>");
-														print("<tr><td>functienaam:</td><td>$functienaam</td></tr>");
+														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
 												} elseif ($rol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
 												}

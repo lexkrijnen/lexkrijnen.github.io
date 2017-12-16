@@ -130,19 +130,22 @@ $pdo = NULL;
                       <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
-                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td>
+                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
 											<?php
 												if ($_SESSION["rol"] == "medewerker") {
-														print("<tr><td>Functie</td><td><input type=\"text\" class=\"form-control\" name=\"functie\" value=$functie></td>");
+														print("<tr><td>Functie</td>");
+														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" "  if($functie=='2') { print("checked"); } " > Medewerker</td></tr>");
+														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" " if($functie=='1') { print("checked"); } "> Admin </td></tr>");
 												}
 											?>
-                      <td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
+                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
+											<td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                       <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
 											<tr><td></td><td><input type="hidden" name="medewerkernummer" <?php print("value=\"$medewerker_nummer\""); ?>></td></tr>
                   </form>
               </table>
 						<br>
-            <a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a>
+
 
 
             <?php
