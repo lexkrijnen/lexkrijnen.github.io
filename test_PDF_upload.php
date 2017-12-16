@@ -45,9 +45,9 @@
 
         if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Tekening (document, naam, project_nummer, tekening_nummer) VALUES(?,?,?,?)";
+                $sql = "INSERT INTO Tekening (tekening_nummer,document, naam, project_nummer) VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET["project_nummer"], $_GET["tekening_nummer"]));
+                $stmt->execute(array($_GET["project_nummer"], $_GET["naam"], $_GET["document"], $_GET["tekening_nummer"]));
             } else {
                 $error = ("Vul A.U.B alles in");
             }
@@ -115,7 +115,7 @@
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
                             </div>
                             <div class="modal-body">
                                  <table class="table">
@@ -165,7 +165,7 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                                <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
                             </div>
                             <div class="modal-body">
                                 <table class="table">
