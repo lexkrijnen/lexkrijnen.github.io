@@ -49,7 +49,7 @@
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET["project_nummer"], $_GET["tekening_nummer"]));
             } else {
-                $error = ("Vul A.U.B alles in")
+                $error = ("Vul A.U.B alles in");
             }
         }
 
