@@ -39,7 +39,17 @@
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
             } else {
-                $error = ("Plaats A.U.B. een bestand en voeg een naam toe");
+                $error = ("Vul A.U.B alles in");
+            }
+        }
+
+        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
+            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
+                $sql = "INSERT INTO Contract (document, naam, project_nummer, tekening_nummer) VALUES(?,?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET["project_nummer"], $_GET["tekening_nummer"]));
+            } else {
+                $error = ("Vul A.U.B alles in")
             }
         }
 
@@ -118,7 +128,7 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contract_nummer" size="15"></td>
+                                        <td><input type="text" name="contractnummer" size="15"></td>
                                         <td><input type="file" name="document"></td>
                                         <td><input type="text" name="naam"size="15"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
@@ -166,14 +176,16 @@
                                 <table class="table">
                                     <tr>
                                         <thead>
-                                            <th><b>C.nr</b></th>
+                                            <th><b>T.nr</b></th>
+                                            <th><b>P.nr</b></th>
                                             <th><b>Naam</b></th>
                                             <th><b>Document</b></th>
                                             <th></th>
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contract_nummer" size="15"></td>
+                                        <td><input type="text" name="tekeningnummer" size="15"></td>
+                                        <td><input type="text" name="projectnummer" size="15"></td>
                                         <td><input type="file" name="document"></td>
                                         <td><input type="text" name="naam"size="15"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
