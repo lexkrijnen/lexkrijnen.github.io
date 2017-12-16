@@ -46,14 +46,18 @@ if(isset($_GET["opslaan"])) {
     $tussenvoegsel = $_GET["tussenvoegsel"];
     $achternaam = $_GET["achternaam"];
     $naam = $_GET["naam"];
-    $klant_nummer = $_GET["klantnummer"];
-		$functie = $_GET["functie"];
-		$medewerker_nummer = $_GET["medewerkernummer"];
     $telefoonnummer = $_GET["telefoonnummer"];
     $emailadres = $_GET["emailadres"];
     $adres = $_GET["adres"];
     $postcode = $_GET["postcode"];
     $woonplaats = $_GET["woonplaats"];
+		if ($_SESSION["rol"] == "klant") {
+				$klant_nummer = $_GET["klantnummer"];
+		}
+		if ($_SESSION["rol"] == "medewerker") {
+				$functie = $_GET["functie"];
+				$medewerker_nummer = $_GET["medewerkernummer"];
+		}
 }
 
 $pdo = NULL;
@@ -134,22 +138,26 @@ $pdo = NULL;
 											<?php
 												if ($_SESSION["rol"] == "medewerker") {
 														print("<tr><td>Functie</td>");
+
 														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
 														if($functie=='2'){
 																print("checked");
 														}
 														print(" > Medewerker</td></tr>");
+
 														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
 														if($functie=='1') {
 																print("checked");
 														}
 														print("> Admin </td></tr>");
+
+														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+												} elseif ($_SESSION["rol"] == "klant") {
+														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
                       <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
 											<td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
-                      <tr><td></td><td><input type="hidden" name="klantnummer" <?php print("value=\"$klant_nummer\""); ?>></td></tr>
-											<tr><td></td><td><input type="hidden" name="medewerkernummer" <?php print("value=\"$medewerker_nummer\""); ?>></td></tr>
                   </form>
               </table>
 						<br>
