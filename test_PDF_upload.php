@@ -128,17 +128,12 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contractnummer" size="15"></td>
+                                        <td><input type="text" name="contractnummer" size="10"></td>
                                         <td><input type="file" name="document"></td>
-                                        <td><input type="text" name="naam"size="15"></td>
+                                        <td><input type="text" name="naam"size="10"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
-                                <?php
-                                if ($error != "") {
-                                    print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-                                    }
-                                ?>
                                 </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
