@@ -108,25 +108,9 @@
                     }
                 ?>
             </table>
-        <br>
-        <!--Tekening-->
-        <table class="table table-hover">
-            <tr>
-                <thead>
-                    <th><h3><b>Tekeningen</b></h3></th>
-                </thead>
-            </tr>
-            <?php
-            foreach ($tekening AS $document2) {
-                print("<tr>");
-                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
-                print("</tr>");
-                }
-            ?>
-        </table>
-            <!--Uploaden-->
+                        <!--Uploaden-->
              <form method="get" action="test_PDF_upload.php">
-                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestanden toevoegen</a>
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -150,7 +134,44 @@
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
-                                <br>
+                                <?php
+                                if ($error != "") {
+                                    print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+                                    }
+                                ?>
+                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <br>
+        <!--Tekening-->
+        <table class="table table-hover">
+            <tr>
+                <thead>
+                    <th><h3><b>Tekeningen</b></h3></th>
+                </thead>
+            </tr>
+            <?php
+            foreach ($tekening AS $document2) {
+                print("<tr>");
+                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
+                print("</tr>");
+                }
+            ?>
+        </table>
+            <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tekening toevoegen</a>
+                <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
                                 <table class="table">
                                     <tr>
                                         <thead>
@@ -169,33 +190,9 @@
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
-                                <?php
-                                if ($error != "") {
-                                    print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-                                    }
-                                ?>
-                                </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
-                               </div>
-                        </div>
-                    </div>
-                </div>
-        </form>
-                <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a>
-                <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
-                            </div>
-                            <div class="modal-body">
-                                <h3>Modal Body</h3>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                      </div>
                   </div>
