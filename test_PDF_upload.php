@@ -126,19 +126,18 @@
         </table>
             <!--Uploaden-->
              <form method="get" action="test_PDF_upload.php">
-                 <a href="##" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Tekening toevoegen</a>
+                 <a href="##" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestanden toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
                             </div>
                             <div class="modal-body">
                                  <table class="table">
                                     <tr>
                                         <thead>
-                                            <th><b>C.nr</b></th>
+                                            <th><b>Contract.nr</b></th>
                                             <th><b>Naam</b></th>
                                             <th><b>Document</b></th>
                                             <th></th>
@@ -155,8 +154,8 @@
                                 <table class="table">
                                     <tr>
                                         <thead>
-                                            <th><b>T.nr</b></th>
-                                            <th><b>P.nr</b></th>
+                                            <th><b>Tekening.nr</b></th>
+                                            <th><b>Project.nr</b></th>
                                             <th><b>Naam</b></th>
                                             <th><b>Document</b></th>
                                             <th></th>
