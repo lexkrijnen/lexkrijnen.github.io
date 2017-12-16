@@ -126,7 +126,7 @@
         </table>
             <!--Uploaden-->
              <form method="get" action="test_PDF_upload.php">
-                 <a href="##" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestanden toevoegen</a>
+                 <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Bestanden toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -182,6 +182,24 @@
                     </div>
                 </div>
         </form>
+                <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a>
+                <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Modal Body</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                     </div>
+                  </div>
+            </div>
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
