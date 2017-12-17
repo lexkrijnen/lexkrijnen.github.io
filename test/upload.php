@@ -12,9 +12,8 @@ if (isset($_POST['submit'])) {
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('jpg', 'png', 'pdf');
+    $allowed = array('jpg', 'jpeg', 'png', 'pdf');
 
-    if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
             if ($fileSize < 10000000) {
                 $fileNameNew = uniqid('',true). "." . $fileActualExt;
@@ -27,8 +26,5 @@ if (isset($_POST['submit'])) {
         } else {
             print("Er is iets mis gegaan met het uploaden.");
         }
-    } else {
-        print ("Dit bestandstype word niet ondersteunt.");
-    }
 }
-?>
+?>﻿
