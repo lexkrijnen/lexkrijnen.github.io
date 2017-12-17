@@ -171,7 +171,8 @@ $pdo = NULL;
             }
 
 						/////////////////
-						print($sql);
+						print("$sql<br>");
+						print($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]);
 						/////////////////
             ?>
           </div>
