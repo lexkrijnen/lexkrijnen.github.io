@@ -170,6 +170,9 @@ $pdo = NULL;
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
+						/////////////////
+						print($sql);
+						/////////////////
             ?>
           </div>
       </div>
