@@ -119,7 +119,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="hovereffect">
-						<img class="img-responsive" src="images/IMG_9121.JPG" alt="">
+						<img class="img-responsive" src="images/IMG_9087.JPG" alt="">
 							<div class="overlay">
 								<h1>NIEUWBOUW</h1>
 								<p>
@@ -169,7 +169,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 	<a name="Vergunningen" id="Vergunningen"></a>
 	<div class="row">
 		<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
-			<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+			<img src="images/IMG_7017.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 
 			<titel>Vergunningen</titel><br><br>
 			Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
