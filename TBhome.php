@@ -21,7 +21,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Bouwbedrijf Wegro</title>
+    <title>Tekenbureau Wegro</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +64,8 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
 						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
 						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
-						<li class="nav-item"><a href="#Contact">Contact</a></li>
+						<li class="nav-item"><a href="#Ontwerp">Ontwerp</a></li>
+                        <li class="nav-item"><a href="#Contact">Contact</a></li>
 						<li class="nav-item"><a href="login.php"><?php print($ingelogd);?></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -74,7 +75,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <!--<div class="">-->
     <div class="row">
     	<div class="slider-float">
-				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
+				<img src="images/Wegroleeg.png" class="logo">
 				<a href="contact.php">
 					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
 						Contact
@@ -137,12 +138,13 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 								<div class="overlay">
 									<h1>VERBOUW</h1>
 									<p>
-											Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen.
-											Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs.
-											En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat:
-											wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
-											Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
-									</p>
+                                        Heeft u plannen om te gaan bouwen of verbouwen? Dakkapel? Grotere woonkamer of opbouw op uw garage? Een goede bouwkundige tekening is daarbij noodzakelijk. Niet alleen is dit belangrijk voor je vergunningsaanvraag bij de gemeente, ook geeft een bouwkundige tekening duidelijkheid naar de aannemer. Het is de basis voor een goed lopend bouwproject!
+                                        Bouwkundig Tekenbureau Wegro verzorgt digitale bouwkundige tekeningen voor verbouw, nieuwbouw, aanbouw en opbouw. Inclusief technische omschrijvingen, werktekeningen en detaillering. Bovendien maken wij 3D impressies. Hiermee krijgt u een nog beter beeld van wat er gebouwd of verbouwd gaat worden.
+
+                                        Bouwkundig Tekenbureau Wegro werkt nauw samen met Bouwbedrijf Wegro. Dit heeft als voordeel dat wij grote materialenkennis hebben en op de hoogte blijven van alle innovaties op dit gebied.
+
+                                        Wilt u liever gebruik maken van een andere aannemer? Dat is geen probleem. U bent altijd vrij in de keuze van uw aannemer.
+                                    </p>
 								</div>
 							</div>
 						</div>
@@ -171,11 +173,13 @@ if (!empty($klant_id OR $medewerker_nummer)) {
               <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 
               <titel>Vergunningen</titel><br><br>
-              	Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>
-                Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken. Ook houden wij contact met de gemeente om ervoor te zorgen dat u de bouwvergunning z.s.m. binnen heeft.<br><br>
+                Hoe weet u of er een omgevingsvergunning nodig is? Bouwkundig Tekenbureau Wegro kunt u hierbij helpen.
 
-                Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.<br><br>
-          	</p>
+                Het aanvragen van een bouwvergunning kan een ingewikkelde procedure zijn. Bij kleine bouwwerken is er bijvoorbeeld geen omgevingsvergunning nodig als je voldoet aan bepaalde eisen. Het is belangrijk dat bij een omgevingsvergunning de bouwkundige tekeningen voldoen aan alle vastgestelde bouwregels. Zodoende kan de gemeente precies de informatie lezen die voor hen van toepassing is en bepalen of een bouwvergunning wordt afgegeven.
+
+                Bouwkundig Tekenbureau Wegro kan voor u de volledige aanvraag voor een omgevingsvergunning verzorgen!
+
+            </p>
         	</div>
 
 
@@ -223,6 +227,18 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					</div>
                  </div>
 
+    <a name="Ontwerp" id="Ontwerp"></a>
+    <div class="row">
+        <p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
+            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+
+            <titel>Ontwerp</titel><br><br>
+            Of het nu gaat om een dakkapel of een volledige nieuwbouwwoning, wij zorgen voor een bouwkundig ontwerp of schetsontwerp. Uw wensen staan hierbij centraal!
+            Een goed en gedetailleerd ontwerp is belangrijk voor de omgevingsvergunning, maar ook voor de uiteindelijke uitvoeringsfase.
+            Het kan veel verwarring en narigheid voorkomen. Voor het digitaliseren van tekeningen bij verbouwingen maken we gebruik van de bestaande tekeningen.
+            Mochten deze er niet meer zijn dan komen we inmeten.
+        </p>
+    </div>
     <div class="google-maps">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
