@@ -151,7 +151,7 @@
 
 <div class="page-box col-xs-4 col-xs-offset-1">
     <form action="accountoverview.php" method="get">
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" disabled>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
 
