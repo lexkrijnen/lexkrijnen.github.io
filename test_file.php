@@ -83,7 +83,7 @@
                     <th></th>
                 </tr>
                 <?php
-                foreach ($contract AS $document2) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
                     print("<td>" . $document2["tekening_nummer"] . "</td>");
                     print("<td>" . $document2["naam"] . "</td>");
