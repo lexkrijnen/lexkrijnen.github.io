@@ -1,11 +1,11 @@
-.BBhomeBackground{
+.BBhomeBackground {
 	background-image: url("../images/pexels-photo-209272.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	width:100%;
+	width: 100%;
 }
 
-.logo{
+.logo {
 	margin: 45px auto;
 	width: 25%;
 	display: block;
@@ -26,7 +26,7 @@
 	margin-left: 10px;
 }
 
-.imgleft{
+.imgleft {
 	float: left;
 	margin-right: auto;
 	margin-left: auto;
@@ -39,12 +39,12 @@
 	border-bottom: 5px solid black;
 }
 
-.topline{
+.topline {
 	padding-top: 10px;
 	border-top: 5px solid black;
 }
 
-.paragraphleft{
+.paragraphleft {
 	text-align: left;
 }
 
@@ -54,15 +54,15 @@
 	text-align: left;
 }
 
-.paragraphright{
+.paragraphright {
 	text-align: right;
 }
 
-.paragraphright2{
+.paragraphright2 {
 	text-align: right;
 }
 
-.paragraphright titel{
+.paragraphright titel {
 	font-size: 30px;
 	font-weight: bold;
 	text-align: right
@@ -123,9 +123,20 @@ address {
 	padding-top: 21px;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #333333;
-	font-family: "Roboto",sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 	margin-top: 0;
@@ -199,8 +210,8 @@ address {
 	width: calc(100% + 20px);
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-10px,0,0);
-	transform: translate3d(-10px,0,0);
+	-webkit-transform: translate3d(-10px, 0, 0);
+	transform: translate3d(-10px, 0, 0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -208,8 +219,8 @@ address {
 .hovereffect:hover img {
 	opacity: 0.4;
 	filter: alpha(opacity=40);
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
 .hovereffect h1 {
@@ -221,7 +232,7 @@ address {
 	overflow: hidden;
 	padding: 0.5em 0;
 	background-color: transparent;
-	color:white;
+	color: white;
 }
 
 .hovereffect h1:after {
@@ -234,31 +245,33 @@ address {
 	content: '';
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-	-webkit-transform: translate3d(-100%,0,0);
-	transform: translate3d(-100%,0,0);
-	color:white;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	color: white;
 }
 
 .hovereffect:hover h1:after {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
-.hovereffect a, .hovereffect p {
+.hovereffect a,
+.hovereffect p {
 	color: #FFF;
 	opacity: 0;
 	filter: alpha(opacity=0);
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(100%,0,0);
-	transform: translate3d(100%,0,0);
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
 }
 
-.hovereffect:hover a, .hovereffect:hover p {
+.hovereffect:hover a,
+.hovereffect:hover p {
 	opacity: 1;
 	filter: alpha(opacity=100);
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
 .slider-demo {
@@ -268,7 +281,7 @@ address {
 
 .slider-wrapper {
 	height: 100vh;
-  margin-top: -14vh;
+	margin-top: -14vh;
 }
 
 .slider-navigation {
@@ -290,7 +303,7 @@ address {
 }
 
 .footer-item > a,
-.footer-title > a{
+.footer-title > a {
 	color: #fff;
 }
 

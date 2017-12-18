@@ -28,36 +28,38 @@ $pdo = NULL;
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
+
 	<head>
 		<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-    <meta name="author" content="Nard Wemes">
-    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+		<meta name="author" content="Nard Wemes">
+		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>verwijderen</title>
+		<title>verwijderen</title>
 
-    <!-- Bootstrap core CSS -->
+		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Global styles for this website -->
-    <link href="css/global.css" rel="stylesheet">
+		<!-- Global styles for this website -->
+		<link href="css/global.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-    <link href="css/klant_pagina.css" rel="stylesheet">
+		<!-- Custom styles for this page -->
+		<link href="css/klant_pagina.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	</head>
-  <body>
-  	<nav class="navbar navbar-default" role="navigation">
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -75,8 +77,10 @@ $pdo = NULL;
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item"><a href="account.php">Mijn account</a></li>
 					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
 		</nav>
 
 
@@ -84,28 +88,26 @@ $pdo = NULL;
 
 
 
-        <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-            <div class=container>
-								<h1>Verwijderen</h1>
-								<br>
-                <?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
-								<br>
-                <form action="klant_verwijderen.php" method="get">
-                    <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
-                    <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
-                </form>
-            </div>
+		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+			<div class=container>
+				<h1>Verwijderen</h1>
+				<br>
+				<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
+				<br>
+				<form action="klant_verwijderen.php" method="get">
+					<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
+					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
+				</form>
+			</div>
 
 
 
-            <?php
+			<?php
             if (isset($_GET["echtverwijderen"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
             }
             ?>
-       </div>
-
-
+		</div>
 
 
 
@@ -129,4 +131,5 @@ $pdo = NULL;
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-</html>
+
+	</html>

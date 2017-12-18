@@ -2,15 +2,16 @@
 	background-color: #FE9C16 !important;
 
 }
+
 .white {
 	color: white;
 }
 
 
 .btn-success {
-	color:#fff;
-	background-color:#5cb85c;
-	border-color:#4cae4c
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #4cae4c
 }
 
 
@@ -20,14 +21,15 @@
 
 .pdf-viewer {
 	position: absolute;
-    width: 84%;
+	width: 84%;
 	height: 90%;
 	border: none;
 	z-index: 1;
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+
+@media only screen and (min-width: 768px) {
 	.pdf-viewer {
 		width: 94%;
 		height: 92%;
