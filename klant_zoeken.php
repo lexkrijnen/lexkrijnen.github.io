@@ -145,7 +145,7 @@ $pdo = NULL;
 													<tr><td><input type="radio" name=rol value="klant" checked>Klant</td></tr>
 													<tr><td><input type="radio" name=rol value="medewerker">Medewerker</td></tr>
 
-													<td><input class="btn oranje white" type="submit" name="Vinden" value="vinden"></td>
+													<td><input class="btn oranje white" type="submit" name="vinden" value="Vinden"></td>
 												</div>
                     </form>
                 </table>
