@@ -27,7 +27,7 @@
         <![endif]-->
 	</head>
   <body>
-  	<?php/*
+  	<?php
 			define("UPLOAD_DIR", "/pdf/");
 
 			if (!empty($_FILES["doc"])) {
@@ -39,15 +39,15 @@
 					}
 
 					// ensure a safe filename
-					$name = preg_replace("/[^A-Z0-9._-]/i", "_", $doc["name"]);
+					//$name = preg_replace("/[^A-Z0-9._-]/i", "_", $doc["name"]);
 
 					// don't overwrite an existing file
-					$i = 0;
-					$parts = pathinfo($name);
-					while (file_exists(UPLOAD_DIR . $name)) {
-							$i++;
-							$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
-					}
+					//$i = 0;
+					//$parts = pathinfo($name);
+					//while (file_exists(UPLOAD_DIR . $name)) {
+					//		$i++;
+					//		$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+					//}
 
 					// preserve file from temporary directory
 					$success = move_uploaded_file($doc["tmp_name"],
@@ -58,15 +58,15 @@
 					}
 
 					// set proper permissions on the new file
-					chmod(UPLOAD_DIR . $name, 0644);
+					//chmod(UPLOAD_DIR . $name, 0644);
 
 					// verify the file is a PDF
-					$mime = "application/pdf; charset=binary";
-					exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
-					if ($out[0] != $mime) {
-						echo "<p>Dit bestandsformaat is niet toegestaan.</p>";
-						exit;
-					}*/
+					//$mime = "application/pdf; charset=binary";
+					//exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
+					//if ($out[0] != $mime) {
+					//	echo "<p>Dit bestandsformaat is niet toegestaan.</p>";
+					//	exit;
+					//}
 		?>
 
   	<nav class="navbar navbar-default" role="navigation">
