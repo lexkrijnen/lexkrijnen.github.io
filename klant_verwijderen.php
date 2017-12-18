@@ -86,6 +86,7 @@ $pdo = NULL;
 
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <div class=container>
+								<h1>Verwijderen</h1>
 
                 <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
 

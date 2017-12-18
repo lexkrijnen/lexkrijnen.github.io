@@ -125,12 +125,12 @@ $pdo = NULL;
 
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
-							<h1>Wijzigen</h1>
               <table>
                   <form action='klant_wijzigen.php' method='get'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
+                      <tr><td>Medewerkernummer</td><td><input type="text" class="form-control" name="medewerkernummer" <?php print("value=\"$medewerkernummer\""); ?>></td></tr>
                       <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
                       <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
@@ -157,8 +157,8 @@ $pdo = NULL;
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
-                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
-											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
+                      <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">terug</a></td>
+											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                   </form>
               </table>
 						<br>
