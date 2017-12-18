@@ -1,91 +1,92 @@
-<html>
-<head>
-    <title>Contact Form Tutorial by Bootstrapious.com</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+    <meta name="author" content="Nard Wemes">
+    <link rel="icon" href="images/logo-default.png">
+
+    <title>Bouwbedrijf Wegro</title>
+
+    <!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Global styles for this website -->
+    <link href="css/global.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="...wegro/css/contact.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+  <body>
+  	<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                        <li class="nav-item"><a href="index.php">Terug</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+
 
 <div class="container">
+    <div id="loginbox"  class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
+        <div class="panel " >
+            <div class="panel-heading oranje">
+                <div class="panel-title white">Neem contact met ons op</div>
 
-    <div class="row">
-
-        <div class="col-lg-8 col-lg-offset-2">
-
-            <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
-
-            <p class="lead">This is a demo for our tutorial dedicated to crafting working Bootstrap contact form with PHP and AJAX background.</p>
-
-            <!-- We're going to place the form here in the next step -->
-            <form id="contact-form" method="post" action="verzendbericht.php" role="form">
-
-                <div class="messages"></div>
-
-                <div class="controls">
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_name">Firstname *</label>
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_lastname">Lastname *</label>
-                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_phone">Phone</label>
-                                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_message">Message *</label>
-                                <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="submit" class="btn btn-success btn-send" value="Send message">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p class="text-muted"><strong>*</strong> These fields are required. Contact form template by <a href="http://bootstrapious.com" target="_blank">Bootstrapious</a>.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </form>
+            </div>
+        <div class="panel-body a lowborder" >
+                <form class="contact-form" action="verzendbericht.php" method="post">
+                <input type="text" class="form-control c" name="naam" placeholder="Naam">
+                <input type="text" class="form-control c" name="mail" placeholder="e-mail">
+                <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp">
+                <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
+                <button type="submit" name="submit">Verstuur bericht</button>
+              </form>
+            </div>
         </div>
-
     </div>
-
 </div>
 
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="validator.js"></script>
-<script src="contact.js"></script>
-</body>
+
+
+
+
+
+
+
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Framework -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>

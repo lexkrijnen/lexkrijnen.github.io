@@ -9,9 +9,9 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-	if ($_GET["rol"] == "klant") {
+	if ($_GET["rol"] == "klant" || $_SESSION["functie"] == "2") {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	} elseif ($_GET["rol"] == "medewerker") {
+	} elseif ($_GET["rol"] == "medewerker" && $_SESSION["functie"] != "2") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	}
     $stmt = $pdo->prepare($sql);
@@ -27,7 +27,13 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-		$rol = $_GET["rol"];
+
+
+		if($_GET["rol"] == "") {
+			$rol = "klant";
+		} else {
+			$rol = $_GET["rol"];
+		}
 
 		if ($_GET["rol"] == "klant") {
 			$klant_nummer = $klant["klant_nummer"];
@@ -141,9 +147,14 @@ $pdo = NULL;
 
 													<tr><td>Achternaam: </td>
 															<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
+														<?php
+														if ($_SESSION["functie"] == "1") {
+															print("<tr><td><input type=\"radio\" name=rol value=\"klant\" checked>Klant</td></tr>");
+															print("<tr><td><input type=\"radio\" name=rol value=\"medewerker\">Medewerker</td></tr>");
+														}
+														?>
 
-													<tr><td><input type="radio" name=rol value="klant" checked>Klant</td></tr>
-													<tr><td><input type="radio" name=rol value="medewerker">Medewerker</td></tr>
+
 
 													<td><input class="btn oranje white" type="submit" name="vinden" value="Vinden"></td>
 												</div>

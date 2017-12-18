@@ -6,6 +6,16 @@ $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
 
+$sql1 = "SELECT max(project_nummer) FROM Project";
+$stmt1 = $pdo->prepare($sql1);
+$stmt1->execute();
+$sqlresult = $stmt1->fetch();
+
+foreach ($sqlresult as $a => $b) {
+    $lastprojectnr = $b['project_nummer'];
+}
+    $lastprojectnr = $lastprojectnr + 1;
+
 if (isset($_GET["opslaan"])) {
     if ($_SESSION["rol"] == "klant") {
         $sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
@@ -16,8 +26,7 @@ if (isset($_GET["opslaan"])) {
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
     } else {
-        print("Query is niet uitgevoerd! Fock you!");
-
+        print("Query is niet uitgevoerd!");
     }
 }
 $pdo = NULL;
