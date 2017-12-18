@@ -79,11 +79,10 @@ $pdo = NULL;
                 <tr><td>Klant Nummer</td><td></td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
                 <tr><td>Contract Nummer </td><td></td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
                 <tr><td>Status Nummer</td><td></td><td><input type="text" class="form-control" name="status_nummer"></td></tr>
-                <tr><td><td> </td></td></tr>
-                <tr><td><a href="account.php" class="btn btn-primary" role="button">Terug</a></td>
-                    <td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
+                <tr><br><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
         </table>
+        <a href="admin.php" class="btn btn-primary" role="button">Terug</a>
     </div>
 </div>
 
