@@ -26,37 +26,44 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php
-            $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-            $user = "wegro";
-            $pass = "SQLWegro@101";
-            $pdo = new PDO($db, $user, $pass);
+        $error = "";
 
-            if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-                if ($_GET["document"] != "") {
-                    $sql = "INSERT INTO Contract (contract_nummer, naam, document)VALUES(?,?,?)";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(array($_GET["document"], $_GET["naam"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
-                } else {
-                    $error = ("Plaats A.U.B. een bestand.");
-                }
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
+                $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+            } else {
+                $error = ("Vul A.U.B alles in");
             }
+        }
 
-                //Contract
-                $stmt = $pdo->prepare("SELECT * FROM Contract");
-                $stmt->execute();
-                $contract = $stmt->fetchAll();
+        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
+            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
+                $sql = "INSERT INTO Tekening (tekening_nummer,document, naam, project_nummer) VALUES(?,?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["project_nummer"], $_GET["naam"], $_GET["document"], $_GET["tekening_nummer"]));
+            } else {
+                $error = ("Vul A.U.B alles in");
+            }
+        }
 
-                //Tekening
-                $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-                $stmt2->execute();
-                $tekening = $stmt2->fetchAll();
+        //TABEL CONTRACT
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
 
-                //NAAM PROJECT
-                $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
-                $stmt3->execute(array(':contract_nummer' => $_GET['id']));
-                $naamproject = $stmt3->fetchAll();
-        ?>
+        //TABEL TEKENING
+        $stmt = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt->execute();
+        $tekening = $stmt->fetchAll();
 
+    ?>
 	</head>
   <body>
   	<nav class="navbar navbar-default" role="navigation">
@@ -101,29 +108,29 @@
                     }
                 ?>
             </table>
-                <form method="get" action="test_PDF_upload.php">
+            <!--Uploaden Contract-->
+             <form method="get" action="test_PDF_upload.php">
                  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
                     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Bestanden toevoegen</h4>
+                            <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
                             </div>
                             <div class="modal-body">
-                                <table class="table">
+                                 <table class="table">
                                     <tr>
                                         <thead>
-                                            <th><b>C.nr</b></th>
+                                            <th><b>Contract.nr</b></th>
                                             <th><b>Naam</b></th>
                                             <th><b>Document</b></th>
                                             <th></th>
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td><input type="text" name="pdf naam" size="15"></td>
-                                        <td><input type="file" name="bestand"></td>
+                                        <td><input type="text" name="contractnummer" size="10"></td>
+                                        <td><input type="file" name="document"></td>
+                                        <td><input type="text" name="naam"size="10"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                                     </tr>
                                 </table>
@@ -135,23 +142,57 @@
                     </div>
                 </div>
         </form>
-    <br>
+        <br>
         <!--Tekening-->
+        <table class="table table-hover">
+            <tr>
+                <thead>
+                    <th><h3><b>Tekeningen</b></h3></th>
+                </thead>
+            </tr>
+            <?php
+            foreach ($tekening AS $document2) {
+                print("<tr>");
+                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
+                print("</tr>");
+                }
+            ?>
+        </table>
+        <!--Uploaden Tekening-->
         <form method="get" action="test_PDF_upload.php">
-            <table class="table table-hover">
-                <tr>
-                    <thead>
-                        <th><h3><b>Tekeningen</b></h3></th>
-                    </thead>
-                </tr>
-                <?php
-                foreach ($tekening AS $document2) {
-                    print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
-                    print("</tr>");
-                    }
-                ?>
-            </table>
+            <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tekening toevoegen</a>
+                <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tr>
+                                        <thead>
+                                            <th><b>Tekening.nr</b></th>
+                                            <th><b>Project.nr</b></th>
+                                            <th><b>Naam</b></th>
+                                            <th><b>Document</b></th>
+                                            <th></th>
+                                        </thead>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="tekeningnummer" size="15"></td>
+                                        <td><input type="text" name="projectnummer" size="15"></td>
+                                        <td><input type="file" name="document"></td>
+                                        <td><input type="text" name="naam"size="15"></td>
+                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                     </div>
+                  </div>
+            </div>
         </form>
     </div>
         <?php $pdo = NULL; ?>

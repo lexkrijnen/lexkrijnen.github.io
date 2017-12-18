@@ -21,7 +21,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-    <title>Bouwbedrijf Wegro</title>
+    <title>Metselfbedrijf Wegro</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -179,7 +179,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 							<div class="hovereffect">
 								<img class="img-responsive" src="images/metselmuur.png" alt="">
 								<div class="overlay">
-									<h1>METSELWERK</h1>
+									<h1>KWALITEIT</h1>
 									<p>
 
 									</p>
@@ -191,7 +191,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 							<div class="hovereffect">
 								<img class="img-responsive" src="images/huus.png" alt="">
 								<div class="overlay">
-									<h1>GERICHT OP</h1>
+									<h1>VEILIGHEID</h1>
 									<p>
 
 									</p>
@@ -203,7 +203,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 							<div class="hovereffect">
 								<img class="img-responsive" src="images/raam.png" alt="">
 								<div class="overlay">
-									<h1>UW WENSEN</h1>
+									<h1>DUURZAAMHEID</h1>
 									<p>
 
 									</p>
@@ -215,7 +215,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
     <div class="row">
         <p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
-            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+            <img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
             <titel>Vergunningen</titel><br><br>
             Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen. <br><br>

@@ -23,6 +23,16 @@
 
 
 
+
+    if(isset($_GET["wijzigen"])) {
+        $enable=true;
+    }else{
+        $enable=false;
+    }
+
+
+
+
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -124,13 +134,12 @@
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table></div>");
+                        print("</table><form action='klant_wijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){
                         print("<br>Error! Waarschijnlijk een onbekend medewerkernummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }
-
 
 
                 ?>
@@ -140,6 +149,22 @@
 
 
     </div>
+
+
+<div class="page-box col-xs-4 col-xs-offset-1">
+    <form action="accountoverview.php" method="get">
+        <?print($enable);?>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}?>>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
+
+
+        <input class="btn btn-succes" type="submit" name="wijzigengegevens" value="Wijzigen">
+
+    </form>
+
+
+
 
 
 

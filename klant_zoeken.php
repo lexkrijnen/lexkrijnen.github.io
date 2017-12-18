@@ -37,6 +37,7 @@ if (isset($_GET["vinden"])) {
 			$functie = $klant["functie"];
 			$_SESSION["medewerkernummer"] = $medewerker_nummer;
 			$_SESSION["functie"] = $functie;
+			$_SESSION["functienaam"] = $functienaam;
 		}
 
     $_SESSION["voornaam"] = $voornaam;
@@ -162,12 +163,11 @@ $pdo = NULL;
                                 Vul een voornaam en een achternaam in.
                               </div>");
                     } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
-                        print("<br><div class=container><table>");
+                        print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($rol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
-														print("<tr><td>functienummer:</td><td>$functie</td></tr>");
-														print("<tr><td>functienaam:</td><td>$functienaam</td></tr>");
+														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
 												} elseif ($rol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
 												}
@@ -176,13 +176,19 @@ $pdo = NULL;
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
                         print("<tr><td>Postcode:</td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats:</td><td>$woonplaats</td></tr>");
+												print("</table>");
+												print("<table>");
+												print("<tr><td>");
 												print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<tr><td></td><td><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\"></td>");
+                        print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
                         print("</form>");
+												print("<\td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<td><input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\"></td></tr>");
+                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\">");
                         print("</form>");
-                        print("</table></div>");
+												print("<\td>");
+												print("</table>");
+                        print("</div>");
                     } else {
                         //geen klant gevonden met die naam
                         print("<div class=\"alert alert-warning\" role=\"alert\">
