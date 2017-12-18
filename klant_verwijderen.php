@@ -84,12 +84,12 @@ $pdo = NULL;
 
 
 
-        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <div class=container>
 								<h1>Verwijderen</h1>
-
+								<br>
                 <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
-
+								<br>
                 <form action="klant_verwijderen.php" method="get">
                     <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
                     <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
