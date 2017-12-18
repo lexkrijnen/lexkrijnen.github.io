@@ -41,7 +41,7 @@ if ($_SESSION["rol"] == "klant") {
 
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
-		$medewerker_nummer = $_SESSION["medewerkernummer"];
+		$medewerker_nummer = $_SESSION["medewerker_nummer"];
 }
 
 if(isset($_GET["opslaan"])) {
@@ -59,7 +59,7 @@ if(isset($_GET["opslaan"])) {
 		}
 		if ($_SESSION["rol"] == "medewerker") {
 				$functie = $_GET["functie"];
-				$medewerker_nummer = $_GET["medewerker_nummer"];
+				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
 }
 
