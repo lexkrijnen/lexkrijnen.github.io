@@ -115,18 +115,6 @@ if($klant_id == "" AND $medewerker_nummer != ""){
     ?>
 
 
-
-    <div class="row page-box col-xs-4 col-xs-offset-1">
-        <h1>Meer Werk</h1>
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                </tr>
-            </table>
-    </div>
-
-
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Uw gegevens</h1>
             <table class="table table-hover table-bordered">
