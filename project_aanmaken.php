@@ -26,6 +26,7 @@ if (isset($_GET["opslaan"])) {
         print("SQL QUERY word succesvol uitgevoerd!");
         $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
         $stmt = $pdo->prepare($sql);
+        print($stmt);
         $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
     }
 }
