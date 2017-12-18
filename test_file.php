@@ -26,11 +26,11 @@
     $pdo = new PDO($db, $user, $pass);
 
         //TABEL CONTRACT
-        if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+                $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET['naam'], $_GET["project_nummer"]));
             } else {
                 $error = ("Vul A.U.B alles in");
             }
@@ -76,17 +76,19 @@
         <form method="get" action="test_file.php">
             <table class="table-bordered">
                 <tr>
-                    <th><b>Contract.nr</b></th>
+                    <th><b>Tekening.nr</b></th>
                     <th><b>Document</b></th>
                     <th><b>Naam</b></th>
+                    <th><b>Project.nr</b></th>
                     <th></th>
                 </tr>
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["contract_nummer"] . "</td>");
+                    print("<td>" . $document2["tekening_nummer"] . "</td>");
                     print("<td>" . $document2["document"] . "</td>");
                     print("<td>" . $document2["naam"] . "</td>");
+                    print("<td>" . $document2["project_nummer"] . "</td>")
                     print("</tr>");
                 }
                 ?>
