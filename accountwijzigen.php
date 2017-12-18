@@ -54,7 +54,7 @@ $emailadres = $_SESSION["emailadres"];
 $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
-$rol = $_SESSION["rol"]
+$rol = $_SESSION["rol"];
 
 
 
