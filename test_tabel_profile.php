@@ -38,12 +38,12 @@
 
         //Contract
         $stmt = $pdo->prepare("SELECT * FROM Contract WHERE contract_nummer = :contract_nummer");
-        $stmt->execute(array(':contract_nummer' => $_GET['id']));
+        $stmt->execute();
         $contract = $stmt->fetchAll();
 
         //Tekening
         $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE contract_nummer = :contract_nummer");
-        $stmt2->execute(array(':contract_nummer' => $_GET['id']));
+        $stmt2->execute(array();
         $tekening = $stmt2->fetchAll();
 
         //Project
@@ -76,13 +76,6 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-
-      <?php
-      if (empty($klant_id)) {
-          print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-      } else {
-      ?>
 
    <div class="container">
     	<div class="row">
@@ -149,4 +142,3 @@
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
-<?php } ?>
