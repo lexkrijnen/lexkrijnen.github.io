@@ -27,4 +27,4 @@ if (isset($_POST['submit'])) {
             print("Er is iets mis gegaan met het uploaden.");
         }
 }
-?>﻿
+?>

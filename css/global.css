@@ -13,7 +13,7 @@ body {
 	background: #fff;
 	margin-bottom: 0;
 	border: none;
-	border-radius: 0;	
+	border-radius: 0;
 	box-shadow: 0 0 2px #7b7b7b;
 }
 
@@ -46,7 +46,8 @@ body {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+
+@media only screen and (min-width: 768px) {
 	.footer-rights {
 		margin-top: 75px;
 	}
@@ -72,17 +73,15 @@ body {
 
 .select-btn:hover,
 .select-btn:focus,
-.select-btn:active
-.select-btn.active.focus,
+.select-btn:active .select-btn.active.focus,
 .select-btn.active:focus,
 .select-btn.active:hover,
 .select-btn:active.focus,
 .select-btn:active:focus,
 .select-btn:active:hover,
-.open>.dropdown-toggle.select-btn.focus,
-.open>.dropdown-toggle.select-btn:focus,
-.open>.dropdown-toggle.select-btn:hover
-{
+.open > .dropdown-toggle.select-btn.focus,
+.open > .dropdown-toggle.select-btn:focus,
+.open > .dropdown-toggle.select-btn:hover {
 	background-color: #FE9C16;
 	margin-top: 4px;
 	margin-bottom: 16px;
@@ -102,4 +101,3 @@ body {
 	font-size: 32px;
 	font-weight: bold;
 }
-

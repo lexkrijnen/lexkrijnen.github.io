@@ -9,12 +9,12 @@
 }
 
 .a {
-	padding-top:25px;
+	padding-top: 25px;
 }
 
 
 .b {
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 .c {
@@ -22,39 +22,38 @@
 }
 
 .d {
-	margin-top:10px;
+	margin-top: 10px;
 }
 
-.rowsidemargin{
-    margin-left: 10px;
-    margin-right: 10px;
+.rowsidemargin {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.paragraphleft{
-    text-align: left;
+.paragraphleft {
+	text-align: left;
 }
 
 .paragraphleft titel {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: left;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
 }
 
 .oranje {
 	background-color: #FE9C16 !important;
 
 }
+
 .white {
 	color: white;
 }
 
-.formdinges{
-    height: 200px;
+.formdinges {
+	height: 200px;
 }
 
-.cb2{
-    height: 20px;
-    width: 20px;
+.cb2 {
+	height: 20px;
+	width: 20px;
 }
-
-

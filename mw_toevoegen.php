@@ -41,8 +41,9 @@ $salt = random_bytes(32);
 $hash = sha1($salt . $wachtwoord);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
+
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,9 +70,10 @@ $hash = sha1($salt . $wachtwoord);
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-  <body>
-  	<nav class="navbar navbar-default" role="navigation">
-    	<div class="container">
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -88,106 +90,108 @@ $hash = sha1($salt . $wachtwoord);
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item"><a href="account.php">Mijn account</a></li>
 					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
 		</nav>
 
-        <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-            <div class="container">
-								<h1>Medewerker toevoegen</h1>
-                <table>
-                <form action="mw_toevoegen.php" method="POST">
-                <tr>
-                 <td>Voornaam</td>
-                    <td>
-                        <input type="text" class="form-control" name="voornaam" placeholder="Voornaam" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $voornaam"); } ?>>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tussenvoegsel(s) </td>
-                    <td>
-                    <input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $tussenvoegsel"); } ?>>
-                    </td>
-              </tr>
-              <tr>
-                <td>Achternaam</td>
-                <td>
-                    <input type="text" class="form-control" name="achternaam" placeholder="Achternaam" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $achternaam"); } ?>>
-                </td>
-              </tr>
-              <tr>
-                <td>E-mailadres</td>
-                <td>
-                    <input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" required <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $emailadres"); } ?> >
-                </td>
-              </tr>
-              <tr>
-                <td>Wachtwoord</td>
-                <td>
-                    <input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$wachtwoord"); } ?>>
-                </td>
-                <td>
-                    <input type="hidden" name="hash" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$hash"); } ?>>
-                </td>
-                <td>
-                    <input type="hidden" name="salt" <?php if (isset($_POST["genereer_wachtwoord"])) { print("value=$salt"); } ?>>
-                </td>
-                <td>
-                    <input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
-                </td>
-              </tr>
-              <tr>
-                <td>Telefoonnummer</td>
-                <td>
-                    <input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $telefoonnummer"); } ?>>
-                </td>
-              </tr>
-              <tr>
-                <td>Adres</td>
-                <td>
-                    <input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $woonplaats"); } ?>>
-                </td>
-              </tr>
-              <tr>
-                <td>
+		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+			<div class="container">
+				<h1>Medewerker toevoegen</h1>
+				<table>
+					<form action="mw_toevoegen.php" method="POST">
+						<tr>
+							<td>Voornaam</td>
+							<td>
+								<input type="text" class="form-control" name="voornaam" placeholder="Voornaam" required <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $voornaam"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>Tussenvoegsel(s) </td>
+							<td>
+								<input type="text" class="form-control" name="tussenvoegsel" placeholder="Tussenvoegsel(s)" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $tussenvoegsel"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>Achternaam</td>
+							<td>
+								<input type="text" class="form-control" name="achternaam" placeholder="Achternaam" required <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $achternaam"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>E-mailadres</td>
+							<td>
+								<input type="email" class="form-control" name="emailadres" placeholder="E-mailadres" required <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $emailadres"); } ?> >
+							</td>
+						</tr>
+						<tr>
+							<td>Wachtwoord</td>
+							<td>
+								<input type="text" class="form-control" placeholder="wachtwoord" <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$wachtwoord"); } ?>>
+							</td>
+							<td>
+								<input type="hidden" name="hash" <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$hash"); } ?>>
+							</td>
+							<td>
+								<input type="hidden" name="salt" <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$salt"); } ?>>
+							</td>
+							<td>
+								<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
+							</td>
+						</tr>
+						<tr>
+							<td>Telefoonnummer</td>
+							<td>
+								<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $telefoonnummer"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>Adres</td>
+							<td>
+								<input type="text" class="form-control" name="woonplaats" placeholder="Woonplaats" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $woonplaats"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>
 
-                </td>
-                <td>
-                    <input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $straat"); } ?>>
-                </td>
-              </tr>
-              <tr>
-                <td>
+							</td>
+							<td>
+								<input type="text" class="form-control" name="straat" placeholder="Straat + huisnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $straat"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>
 
-                </td>
-                <td>
-                    <input type="text" class="form-control" name="postcode" placeholder="postcode" <?php if(isset($_POST["genereer_wachtwoord"]) || isset($_POST["aanmaken"])) { print("value = $postcode"); } ?>>
-                </td>
-              </tr>
-              <tr>
-                <td>Functie</td>
-                <td>
-                    <input type="radio" name="functie" value="2" checked> Medewerker
-                </td>
-              </tr>
-              <tr>
-                <td>
+							</td>
+							<td>
+								<input type="text" class="form-control" name="postcode" placeholder="postcode" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $postcode"); } ?>>
+							</td>
+						</tr>
+						<tr>
+							<td>Functie</td>
+							<td>
+								<input type="radio" name="functie" value="2" checked> Medewerker
+							</td>
+						</tr>
+						<tr>
+							<td>
 
-                </td>
-                <td>
-                    <input type="radio" name="functie" value="1"> Admin
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
-                </td>
-              </tr>
-            </form>
-          </table>
-        </div>
+							</td>
+							<td>
+								<input type="radio" name="functie" value="1"> Admin
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
+							</td>
+						</tr>
+					</form>
+				</table>
+			</div>
 
-            <?php
+			<?php
             if(isset($_POST["aanmaken"])) {
                 ///gegevens niet ingevuld
                 if($_POST["voornaam"] == "") {
@@ -238,12 +242,12 @@ $hash = sha1($salt . $wachtwoord);
                 }
             }
             ?>
-        </div>
+		</div>
 
 		<div class="row">
-				<div class="col-xs-12 text-center footer-rights">
-						<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-				</div>
+			<div class="col-xs-12 text-center footer-rights">
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+			</div>
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -252,4 +256,5 @@ $hash = sha1($salt . $wachtwoord);
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-</html>
+
+	</html>

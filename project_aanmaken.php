@@ -5,7 +5,9 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$error = "";
 
+//TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
 $sql1 = "SELECT max(project_nummer) FROM Project";
 $stmt1 = $pdo->prepare($sql1);
 $stmt1->execute();
@@ -14,19 +16,18 @@ $sqlresult = $stmt1->fetch();
 foreach ($sqlresult as $a => $b) {
     $lastprojectnr = $b['project_nummer'];
 }
-    $lastprojectnr = $lastprojectnr + 1;
+$projectnummer = $lastprojectnr + 1;
 
+//NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
-    if ($_SESSION["rol"] == "klant") {
-        $sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
-    } elseif ($_SESSION["rol"] == "medewerker") {
-        $sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
+    if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
+        $error = "Vul A.U.B. alle velden in. ";
     } else {
-        print("Query is niet uitgevoerd!");
+        print("SQL QUERY word succesvol uitgevoerd!");
+        $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
+        var_dump($stmt);
     }
 }
 $pdo = NULL;
@@ -74,16 +75,20 @@ $pdo = NULL;
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
-                <tr><td>Project Nr.</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$lastprojectnr\""); ?> ></td></tr>
+                <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
-                <tr><td>Klant Nr.</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
-                <tr><td>Contract Nr.  </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
-                <tr><td>Status Nr.</td><td><input type="text" class="form-control" name="status_nummer"></td></tr>
-                <tr><td></td></tr>
-                <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
-                    <td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
+                <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
+                <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
+                <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr>
+                <tr><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
         </table>
+        <br><a href="admin.php" class="btn btn-primary" role="button">Terug</a>
+        <?php
+        if ($error != "") {
+        print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+        }
+        ?>
     </div>
 </div>
 

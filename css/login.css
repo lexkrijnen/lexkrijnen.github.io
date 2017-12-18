@@ -1,12 +1,10 @@
-
-
 .a {
-	padding-top:30px;
+	padding-top: 30px;
 }
 
 
 .b {
-	margin-top:50px;
+	margin-top: 50px;
 }
 
 .c {
@@ -14,13 +12,14 @@
 }
 
 .d {
-	margin-top:10px;
+	margin-top: 10px;
 }
 
 .oranje {
 	background-color: #FE9C16 !important;
 
 }
+
 .white {
 	color: white;
 }
@@ -28,4 +27,6 @@
 .lowborder {
 	border-bottom: 4px solid #FE9C16;
 	border-radius: 5px;
-}                            c   bv
+}
+
+c bv
