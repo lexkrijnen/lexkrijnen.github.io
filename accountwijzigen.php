@@ -126,7 +126,7 @@ $pdo = NULL;
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
               <table>
-                  <form action='klant_wijzigen.php' method='get'>
+                  <form action='accountwijzigen.php' method='get'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
