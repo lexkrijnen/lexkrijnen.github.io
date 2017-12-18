@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+        <meta name="author" content="Nard Wemes">
+        <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+
+        <title>Mijn profiel</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Global styles for this website -->
+        <link href="css/global.css" rel="stylesheet">
+
+        <!-- Custom styles for this page -->
+        <link href="css/test_profile.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+  <body>
+  	<?php/*
+			define("UPLOAD_DIR", "/pdf/");
+
+			if (!empty($_FILES["doc"])) {
+					$doc = $_FILES["doc"];
+
+					if ($doc["error"] !== UPLOAD_ERR_OK) {
+							echo "<p>Er is een fout opgetreden.</p>";
+							exit;
+					}
+
+					// ensure a safe filename
+					$name = preg_replace("/[^A-Z0-9._-]/i", "_", $doc["name"]);
+
+					// don't overwrite an existing file
+					$i = 0;
+					$parts = pathinfo($name);
+					while (file_exists(UPLOAD_DIR . $name)) {
+							$i++;
+							$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+					}
+
+					// preserve file from temporary directory
+					$success = move_uploaded_file($doc["tmp_name"],
+							UPLOAD_DIR . $name);
+					if (!$success) {
+							echo "<p>Het is niet gelukt om het bestand op te slaan.</p>";
+							exit;
+					}
+
+					// set proper permissions on the new file
+					chmod(UPLOAD_DIR . $name, 0644);
+
+					// verify the file is a PDF
+					$mime = "application/pdf; charset=binary";
+					exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
+					if ($out[0] != $mime) {
+						echo "<p>Dit bestandsformaat is niet toegestaan.</p>";
+						exit;
+					}*/
+		?>
+
+  	<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+				  	<li class="nav-item"><a href="index.php">Home</a></li>
+            <li class="nav-item"><a href="contact.php">Contact</a></li>
+						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
+            <li class="nav-item"><a href="index.php">Uitloggen</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-12">
+
+    			<form action="uploadtest.php" method="post" enctype="multipart/form-data">
+						<input type="file" name="doc">
+						<br>
+						<input type="submit" value="Upload">
+					</form>
+
+    		</div>
+    	</div>
+    </div><!-- /.container -->
+
+		<div class="row">
+			<div class="col-xs-12 text-center footer-rights">
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Framework -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
