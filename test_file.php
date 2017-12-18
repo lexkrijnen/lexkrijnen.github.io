@@ -77,9 +77,9 @@
             <table class="table-bordered">
                 <tr>
                     <th><b>Tekening.nr</b></th>
-                    <th><b>Project.nr</b></th>
                     <th><b>Naam</b></th>
                     <th><b>Document</b></th>
+                    <th><b>Project.nr</b></th>
                     <th></th>
                 </tr>
                 <?php
