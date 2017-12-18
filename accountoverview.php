@@ -55,7 +55,7 @@
     $postcode = $sqlresult["postcode"];
     $woonplaats = ucfirst($sqlresult["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-
+    @$functie = $sqlresult["functie"];
 
 
     $_SESSION["voornaam"] = $voornaam;
