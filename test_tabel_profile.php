@@ -38,12 +38,12 @@
 
         //Contract
         $stmt = $pdo->prepare("SELECT * FROM Contract WHERE contract_nummer = :contract_nummer");
-        $stmt->execute(array(':contract_nummer' => $_GET['id']));
+        $stmt->execute();
         $contract = $stmt->fetchAll();
 
         //Tekening
         $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE contract_nummer = :contract_nummer");
-        $stmt2->execute(array(':contract_nummer' => $_GET['id']));
+        $stmt2->execute(array();
         $tekening = $stmt2->fetchAll();
 
         //Project
