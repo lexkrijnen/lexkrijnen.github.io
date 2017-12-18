@@ -171,7 +171,7 @@ $pdo = NULL;
 
 
             <?php
-             print($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]);
+             print($_GET["voornaam"] . '' . $_GET["tussenvoegsel"] . '' . $_GET["achternaam"] . '' . $_GET["emailadres"] . '' . $_GET["telefoonnummer"] . '' . $_GET["adres"] . '' . $_GET["postcode"] . '' . $_GET["woonplaats"] . '' . $_GET["functie"] . '' . $_GET["medewerkernummer"]);
             if(isset($_GET["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
