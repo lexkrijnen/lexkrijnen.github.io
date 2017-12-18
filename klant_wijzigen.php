@@ -130,7 +130,7 @@ $pdo = NULL;
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
-                      <tr><td>Telefoonnummer</td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
+                      <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
                       <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
@@ -157,7 +157,7 @@ $pdo = NULL;
 												}
 											?>
                       <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
-											<td><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
+											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                   </form>
               </table>
 						<br>
