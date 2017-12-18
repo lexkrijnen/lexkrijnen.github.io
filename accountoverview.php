@@ -20,6 +20,7 @@
     @$klant_voornaam = $_SESSION['voornaam'];
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+    @$medewerker_functie = $_SESSION['medewerker_functie'];
 
 
 
