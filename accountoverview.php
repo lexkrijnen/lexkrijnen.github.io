@@ -68,6 +68,8 @@
     $_SESSION["postcode"] = $postcode;
     $_SESSION["woonplaats"] = $woonplaats;
     $_SESSION["medewerker_nummer"] = $medewerker_nummerdb;
+    $_SESSION["functie"] = $medewerker_functie;
+
 
 if($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "medewerker";
