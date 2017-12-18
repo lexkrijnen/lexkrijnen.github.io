@@ -8,6 +8,29 @@ $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
 
+
+if(isset($_GET["opslaan"])) {
+    $voornaam = $_GET["voornaam"];
+    $tussenvoegsel = $_GET["tussenvoegsel"];
+    $achternaam = $_GET["achternaam"];
+    $naam = $_GET["naam"];
+    $telefoonnummer = $_GET["telefoonnummer"];
+    $emailadres = $_GET["emailadres"];
+    $adres = $_GET["adres"];
+    $postcode = $_GET["postcode"];
+    $woonplaats = $_GET["woonplaats"];
+		if ($_SESSION["rol"] == "klant") {
+				$klant_nummer = $_GET["klantnummer"];
+		}
+		if ($_SESSION["rol"] == "medewerker") {
+				$functie = $_GET["functie"];
+				$medewerker_nummer = $_GET["medewerkernummer"];
+		}
+}
+
+
+
+
 if (isset($_GET["opslaan"])) {
 		if ($rol == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
@@ -44,25 +67,6 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
 
 
 
-
-if(isset($_GET["opslaan"])) {
-    $voornaam = $_GET["voornaam"];
-    $tussenvoegsel = $_GET["tussenvoegsel"];
-    $achternaam = $_GET["achternaam"];
-    $naam = $_GET["naam"];
-    $telefoonnummer = $_GET["telefoonnummer"];
-    $emailadres = $_GET["emailadres"];
-    $adres = $_GET["adres"];
-    $postcode = $_GET["postcode"];
-    $woonplaats = $_GET["woonplaats"];
-		if ($rol == "klant") {
-				$klant_nummer = $_GET["klantnummer"];
-		}
-		if ($rol == "medewerker") {
-				$functie = $_GET["functie"];
-				$medewerker_nummer = $_GET["medewerkernummer"];
-		}
-}
 
 $pdo = NULL;
 ?>
