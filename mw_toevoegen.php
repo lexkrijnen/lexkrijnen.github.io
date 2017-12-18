@@ -91,8 +91,10 @@ $hash = sha1($salt . $wachtwoord);
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <div class="container">
+								<h1>Medewerker toevoegen</h1>
                 <table>
                 <form action="mw_toevoegen.php" method="POST">
                 <tr>

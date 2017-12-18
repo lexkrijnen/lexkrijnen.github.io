@@ -32,14 +32,14 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
-if ($_SESSION["rol"] == "klant") {
+/*if ($_SESSION["rol"] == "klant") {
 		$klant_nummer = $_SESSION["klantnummer"];
 }
 
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
 		$medewerker_nummer = $_SESSION["medewerkernummer"];
-}
+}*/
 
 if(isset($_GET["opslaan"])) {
     $voornaam = $_GET["voornaam"];
@@ -51,13 +51,13 @@ if(isset($_GET["opslaan"])) {
     $adres = $_GET["adres"];
     $postcode = $_GET["postcode"];
     $woonplaats = $_GET["woonplaats"];
-		if ($_SESSION["rol"] == "klant") {
+		/*if ($_SESSION["rol"] == "klant") {
 				$klant_nummer = $_GET["klantnummer"];
 		}
 		if ($_SESSION["rol"] == "medewerker") {
 				$functie = $_GET["functie"];
 				$medewerker_nummer = $_GET["medewerkernummer"];
-		}
+		}*/
 }
 
 $pdo = NULL;
@@ -114,7 +114,7 @@ $pdo = NULL;
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                    <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -125,12 +125,12 @@ $pdo = NULL;
 
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
-							<h1>Wijzigen</h1>
               <table>
                   <form action='klant_wijzigen.php' method='get'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
+                      <tr><td>Medewerkernummer</td><td><input type="text" class="form-control" name="medewerkernummer" <?php print("value=\"$medewerkernummer\""); ?>></td></tr>
                       <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
                       <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
@@ -157,8 +157,8 @@ $pdo = NULL;
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
-                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
-											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
+                      <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">terug</a></td>
+											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                   </form>
               </table>
 						<br>
