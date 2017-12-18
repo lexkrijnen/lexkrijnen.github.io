@@ -182,11 +182,11 @@ $pdo = NULL;
 												print("<form action='klant_wijzigen.php' method='get'>");
                         print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
                         print("</form>");
-												print("<\td><td>");
+												print("</td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
                         print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\">");
                         print("</form>");
-												print("<\td>");
+												print("</td>");
 												print("</table>");
                         print("</div>");
                     } else {

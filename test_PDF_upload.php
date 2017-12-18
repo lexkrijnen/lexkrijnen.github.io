@@ -128,7 +128,7 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="contractnummer" size="10"></td>
+                                        <td><input type="text" name="contract_nummer" size="10"></td>
                                         <td><input type="file" name="document"></td>
                                         <td><input type="text" name="naam"size="10"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
@@ -179,8 +179,8 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="tekeningnummer" size="15"></td>
-                                        <td><input type="text" name="projectnummer" size="15"></td>
+                                        <td><input type="text" name="tekening_nummer" size="15"></td>
+                                        <td><input type="text" name="project_nummer" size="15"></td>
                                         <td><input type="file" name="document"></td>
                                         <td><input type="text" name="naam"size="15"></td>
                                         <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
