@@ -38,7 +38,7 @@
 
         $stmt = $pdo->prepare("SELECT * FROM Tekening");
         $stmt->execute();
-        $contract = $stmt->fetchAll();
+        $tekening = $stmt->fetchAll();
 
     ?>
 </head>
@@ -82,7 +82,7 @@
                     <th></th>
                 </tr>
                 <?php
-                foreach ($contract AS $document2) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
                     print("<td>" . $document2["contract_nummer"] . "</td>");
                     print("<td>" . $document2["document"] . "</td>");
