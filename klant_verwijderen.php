@@ -94,9 +94,6 @@ $pdo = NULL;
                     <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
                     <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
                 </form>
-
-                <br>
-                <a href="klant_zoeken.php">terug</a>
             </div>
 
 
