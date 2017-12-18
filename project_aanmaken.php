@@ -19,7 +19,7 @@ if (isset($_GET["opslaan"])) {
         print("Query is niet uitgevoerd! Fock you!");
 
     }
-
+}
 $pdo = NULL;
 ?>
 
