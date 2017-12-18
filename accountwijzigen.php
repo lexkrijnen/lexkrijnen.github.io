@@ -24,7 +24,6 @@ if (isset($_POST["opslaan"])) {
 
 }
 
-
 $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
 $achternaam = $_SESSION["achternaam"];

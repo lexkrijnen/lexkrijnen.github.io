@@ -27,24 +27,6 @@
         <![endif]-->
 	</head>
   <body>
-  	<?php
-			$target_dir = "pdf/";
-			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-			$uploadOk = 1;
-			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			// Check if image file is a actual image or fake image
-			if(isset($_POST["submit"])) {
-					$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-					if($check !== false) {
-							echo "File is an image - " . $check["mime"] . ".";
-							$uploadOk = 1;
-					} else {
-							echo "File is not an image.";
-							$uploadOk = 0;
-					}
-			}
-		?>
-
   	<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -75,7 +57,7 @@
 
 
 					<form action="upload_file.php" method="post" enctype="multipart/form-data">
- 						<input type="file" name="file" size="50" />
+ 						<input type="file" name="document" />
  						<br />
  						<input type="submit" value="Upload" />
  					</form>

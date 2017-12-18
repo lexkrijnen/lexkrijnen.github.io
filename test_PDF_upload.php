@@ -180,12 +180,12 @@
                                         </thead>
                                     </tr>
                                     <tr>
-                                    	<form action="test_PDF_upload.php" method="post" enctype="multipart/form-data">
+                                    	<form action="upload_file.php" method="post" enctype="multipart/form-data">
                                         <td><input type="text" name="tekening_nummer" size="15"></td>
                                         <td><input type="text" name="project_nummer" size="15"></td>
                                         <td><input type="file" name="document"></td>
                                         <td><input type="text" name="naam"size="15"></td>
-                                        <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                                        <td><input type="submit" value="Upload"></td>
 																			</form>
                                     </tr>
                                 </table>
