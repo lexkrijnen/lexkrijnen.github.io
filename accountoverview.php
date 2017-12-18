@@ -120,8 +120,8 @@ if($klant_id == "" AND $medewerker_nummer != ""){
         <h1>Uw gegevens</h1>
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
+                    <th>Veld</th>
+                    <th>Gegevens</th>
                 </tr>
                 <?php
                     if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {
