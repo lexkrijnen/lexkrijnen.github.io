@@ -55,7 +55,7 @@
     $postcode = $sqlresult["postcode"];
     $woonplaats = ucfirst($sqlresult["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-
+    @$functie = $sqlresult["functie"];
 
 
     $_SESSION["voornaam"] = $voornaam;
@@ -67,7 +67,8 @@
     $_SESSION["adres"] = $adres;
     $_SESSION["postcode"] = $postcode;
     $_SESSION["woonplaats"] = $woonplaats;
-
+    $_SESSION["medewerker_nummer"] = $medewerker_nummerdb;
+    $_SESSION["functie"] = $medewerker_functie;
 
 
 if($klant_id == "" AND $medewerker_nummer != ""){
@@ -101,6 +102,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+                <li class="nav-item"><a href="account.php">Mijn Account</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -112,18 +114,6 @@ if($klant_id == "" AND $medewerker_nummer != ""){
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     }else {
     ?>
-
-
-
-    <div class="row page-box col-xs-4 col-xs-offset-1">
-        <h1>Meer Werk</h1>
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                </tr>
-            </table>
-    </div>
 
 
     <div class="page-box col-xs-4 col-xs-offset-1">
