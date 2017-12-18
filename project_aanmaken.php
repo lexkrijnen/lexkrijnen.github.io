@@ -21,10 +21,9 @@ $lastprojectnr = $lastprojectnr + 1;
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
     if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
-        $error .= "Vul A.U.B. alle velden in. ";
+        $error = "Vul A.U.B. alle velden in. ";
     } else {
-
-        $sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
+        $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
     }
