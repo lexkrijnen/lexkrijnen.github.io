@@ -76,11 +76,10 @@
     $_SESSION["woonplaats"] = $woonplaats;
 
 
-$klant_id = $_SESSION["klantnummer"];
-$medewerker_nummer = $_SESSION["medewerkernummer"];
-if($klant_nummer == "" AND $medewerker_nummer != ""){
+
+if($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "medewerker";
-}elseif($klant_nummer != "" AND $medewerker_nummer == ""){
+}elseif($klant_id != "" AND $medewerker_nummer == ""){
     $rol = "klant";
 }
 
@@ -172,20 +171,6 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
     </div>
 
 
-<!--- <div class="page-box col-xs-4 col-xs-offset-1">
-    <div>
-    <?//print($enable, "check");?>
-    </div>
-    <form action="accountoverview.php" method="get">
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php// if($enable==true){print("");}else{print("disabled");}?>>
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
-
-
-        <input class="btn btn-succes" type="submit" name="wijzigengegevens" value="Wijzigen">
-
-    </form>
---->
 
 
 
