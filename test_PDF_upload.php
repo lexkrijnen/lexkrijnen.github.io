@@ -104,7 +104,7 @@
                 <?php
                 foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document["naam"] . "</td>");
+                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/bf-cheatingguide.pdf target= pdf_viewer>" . $document["document"] . "</td>");
                     print("</tr>");
                     }
                 ?>
