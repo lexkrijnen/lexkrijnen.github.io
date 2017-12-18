@@ -94,7 +94,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+				<img src="images/IMG_8588.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
 				<titel>Ons bedrijf</titel><br><br>
 				Wij heten u van harte welkom op de site van Bouwbedrijf Wegro bv.
@@ -170,7 +170,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<a name="Vergunningen" id="Vergunningen"></a>
       		<div class="row">
           	<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
-              <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+              <img src="images/vergunning.jpg" class="col-xs-5 col-xs-offset-1 imgleft">
 
               <titel>Vergunningen</titel><br><br>
                 Hoe weet u of er een omgevingsvergunning nodig is? Bouwkundig Tekenbureau Wegro kunt u hierbij helpen.
@@ -230,7 +230,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <a name="Ontwerp" id="Ontwerp"></a>
     <div class="row">
         <p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
-            <img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+            <img src="images/IMG_8639.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 
             <titel>Ontwerp</titel><br><br>
             Of het nu gaat om een dakkapel of een volledige nieuwbouwwoning, wij zorgen voor een bouwkundig ontwerp of schetsontwerp. Uw wensen staan hierbij centraal!
