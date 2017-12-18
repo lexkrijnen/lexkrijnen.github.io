@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-        <meta name="author" content="Nard Wemes">
-        <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+    <meta name="author" content="Nard Wemes">
+    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-        <title>Mijn profiel</title>
+    <title>Mijn profiel</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Global styles for this website -->
-        <link href="css/global.css" rel="stylesheet">
+    <!-- Global styles for this website -->
+    <link href="css/global.css" rel="stylesheet">
 
-        <!-- Custom styles for this page -->
-        <link href="css/test_profile.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="css/profile.css" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
         <?php
         $db = "mysql:host=localhost; dbname=Wegro; port=3306";
         $user = "wegro";
@@ -62,12 +62,11 @@
 				        <li class="nav-item"><a href="index.php">Home</a></li>
                         <li class="nav-item"><a href="contact.php">Contact</a></li>
 						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
-                        <li class="nav-item"><a href="index.php">Uitloggen</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    <div class="container">
+   <div class="container">
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
             <!--Contract-->
@@ -79,9 +78,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($contract AS $document) {
+                	foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td>" . $document["naam"] . "</td>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -99,7 +98,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["naam"] . "</td>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document2["document"] . "' target='pdf_viewer'>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -108,7 +107,7 @@
     </div>
         <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf"></iframe>
+        <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
 
     			<!-- If embedded pdf does not work, display fallback option instead. -->
     			<div class="pdf-fail">
