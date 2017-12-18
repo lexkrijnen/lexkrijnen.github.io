@@ -84,7 +84,7 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
     $rol = "klant";
 }
 
-
+    $_SESSION["rol"] = $rol;
 
 
 
