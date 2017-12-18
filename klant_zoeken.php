@@ -31,25 +31,25 @@ if (isset($_GET["vinden"])) {
 
 		if ($_GET["rol"] == "klant") {
 			$klant_nummer = $klant["klant_nummer"];
-			$_SESSION["klantnummer"] = $klant_nummer;
+			$_SESSION["klantnummer2"] = $klant_nummer;
 		} elseif ($_GET["rol"] == "medewerker") {
 			$medewerker_nummer = $klant["medewerker_nummer"];
 			$functie = $klant["functie"];
-			$_SESSION["medewerkernummer"] = $medewerker_nummer;
-			$_SESSION["functie"] = $functie;
-			$_SESSION["functienaam"] = $functienaam;
+			$_SESSION["medewerkernummer2"] = $medewerker_nummer;
+			$_SESSION["functie2"] = $functie;
+			$_SESSION["functienaam2"] = $functienaam;
 		}
 
-    $_SESSION["voornaam"] = $voornaam;
-    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["achternaam"] =  $achternaam;
-    $_SESSION["naam"] = $naam;
-    $_SESSION["telefoonnummer"] = $telefoonnummer;
-    $_SESSION["emailadres"] = $emailadres;
-    $_SESSION["adres"] = $adres;
-    $_SESSION["postcode"] = $postcode;
-    $_SESSION["woonplaats"] = $woonplaats;
-		$_SESSION["rol"] = $rol;
+    $_SESSION["voornaam2"] = $voornaam;
+    $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
+    $_SESSION["achternaam2"] =  $achternaam;
+    $_SESSION["naam2"] = $naam;
+    $_SESSION["telefoonnummer2"] = $telefoonnummer;
+    $_SESSION["emailadres2"] = $emailadres;
+    $_SESSION["adres2"] = $adres;
+    $_SESSION["postcode2"] = $postcode;
+    $_SESSION["woonplaats2"] = $woonplaats;
+		$_SESSION["rol2"] = $rol;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];

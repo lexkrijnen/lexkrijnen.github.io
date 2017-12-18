@@ -28,45 +28,21 @@
 	</head>
   <body>
   	<?php
-			define("UPLOAD_DIR", "/pdf/");
-
-			if (!empty($_FILES["doc"])) {
-					$doc = $_FILES["doc"];
-
-					if ($doc["error"] !== UPLOAD_ERR_OK) {
-							echo "<p>Er is een fout opgetreden.</p>";
-							exit;
+			$target_dir = "/pdf/";
+			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+			$uploadOk = 1;
+			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+			// Check if image file is a actual image or fake image
+			if(isset($_POST["submit"])) {
+					$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+					if($check !== false) {
+							echo "File is an image - " . $check["mime"] . ".";
+							$uploadOk = 1;
+					} else {
+							echo "File is not an image.";
+							$uploadOk = 0;
 					}
-
-					// ensure a safe filename
-					//$name = preg_replace("/[^A-Z0-9._-]/i", "_", $doc["name"]);
-
-					// don't overwrite an existing file
-					//$i = 0;
-					//$parts = pathinfo($name);
-					//while (file_exists(UPLOAD_DIR . $name)) {
-					//		$i++;
-					//		$name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
-					//}
-
-					// preserve file from temporary directory
-					$success = move_uploaded_file($doc["tmp_name"],
-							UPLOAD_DIR . $name);
-					if (!$success) {
-							echo "<p>Het is niet gelukt om het bestand op te slaan.</p>";
-							exit;
-					}
-
-					// set proper permissions on the new file
-					//chmod(UPLOAD_DIR . $name, 0644);
-
-					// verify the file is a PDF
-					//$mime = "application/pdf; charset=binary";
-					//exec("file -bi " . $_FILES["myFile"]["tmp_name"], $out);
-					//if ($out[0] != $mime) {
-					//	echo "<p>Dit bestandsformaat is niet toegestaan.</p>";
-					//	exit;
-					//}
+			}
 		?>
 
   	<nav class="navbar navbar-default" role="navigation">
