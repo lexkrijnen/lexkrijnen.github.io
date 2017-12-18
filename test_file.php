@@ -25,6 +25,16 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
+    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
+        if ($_GET["beschrijving"] != "") {
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+        } else {
+            $error = ("Vul A.U.B. een beschrijving in.");
+        }
+    }
+
     if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
@@ -34,10 +44,14 @@
             $error = ("Vul A.U.B. een beschrijving in.");
         }
     }
+    //TABEL MEER WERK
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
+    $meerwerk = $stmt->fetchAll();
 
-    //TABEL TEKENING
-    $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-    $stmt2->execute(array();
+    //TABEL MINDER WERK
+    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
+    $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
 
     //NAAM PROJECT
@@ -116,8 +130,52 @@
         } ?>
         <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
     </div>
+
+
+    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+
+
+    <!--MINDER WERK-->
+    <div class="col-xs-4">
+        <h1>Minder Werk</h1>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <?php
+                $minderwerkcount = 1;
+                foreach ($minderwerk AS $werk2) {
+                    print("<tr>");
+                    print("<td>" . $minderwerkcount . "</td>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
+                    print("</tr>");
+                    $minderwerkcount++;
+                }
+                ?>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="beschrijving" size="15"></td>
+                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </div>
 <?php $pdo = NULL; ?>
 </body>
 </html>
-
