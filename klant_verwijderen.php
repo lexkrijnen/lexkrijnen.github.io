@@ -11,14 +11,14 @@ $pdo = new PDO($db, $user, $pass);
 //klant verwijderen
 
 if (isset($_GET["echtverwijderen"])) {
-		if ($_SESSION["rol"] == 'klant') {
+		if ($_SESSION["rol2"] == 'klant') {
 				$sql = "DELETE FROM Klant WHERE klant_nummer = ?";
 				$stmt = $pdo->prepare($sql);
-    		$stmt->execute(array($_SESSION["klantnummer"]));
-		} elseif ($_SESSION["rol"] == 'medewerker') {
+    		$stmt->execute(array($_SESSION["klantnummer2"]));
+		} elseif ($_SESSION["rol2"] == 'medewerker') {
 				$sql = "DELETE FROM Medewerker WHERE medewerker_nummer = ?";
 				$stmt = $pdo->prepare($sql);
-    		$stmt->execute(array($_SESSION["medewerkernummer"]));
+    		$stmt->execute(array($_SESSION["medewerkernummer2"]));
 		}
 
 
@@ -88,7 +88,7 @@ $pdo = NULL;
             <div class=container>
 								<h1>Verwijderen</h1>
 								<br>
-                <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
+                <?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
 								<br>
                 <form action="klant_verwijderen.php" method="get">
                     <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
@@ -100,7 +100,7 @@ $pdo = NULL;
 
             <?php
             if (isset($_GET["echtverwijderen"])) {
-								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam"] . ' is successvol verwijderd.</div>');
+								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
             }
             ?>
        </div>

@@ -9,11 +9,11 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["opslaan"])) {
-		if ($_SESSION["rol"] == "klant") {
+		if ($_SESSION["rol2"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
-		} elseif ($_SESSION["rol"] == "medewerker") {
+		} elseif ($_SESSION["rol2"] == "medewerker") {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
@@ -22,23 +22,23 @@ if (isset($_GET["opslaan"])) {
 }
 
 
-$voornaam = $_SESSION["voornaam"];
-$tussenvoegsel = $_SESSION["tussenvoegsel"];
-$achternaam = $_SESSION["achternaam"];
-$naam = $_SESSION["naam"];
-$telefoonnummer = $_SESSION["telefoonnummer"];
-$emailadres = $_SESSION["emailadres"];
-$adres = $_SESSION["adres"];
-$postcode = $_SESSION["postcode"];
-$woonplaats = $_SESSION["woonplaats"];
+$voornaam = $_SESSION["voornaam2"];
+$tussenvoegsel = $_SESSION["tussenvoegsel2"];
+$achternaam = $_SESSION["achternaam2"];
+$naam = $_SESSION["naam2"];
+$telefoonnummer = $_SESSION["telefoonnummer2"];
+$emailadres = $_SESSION["emailadres2"];
+$adres = $_SESSION["adres2"];
+$postcode = $_SESSION["postcode2"];
+$woonplaats = $_SESSION["woonplaats2"];
 
-if ($_SESSION["rol"] == "klant") {
-		$klant_nummer = $_SESSION["klantnummer"];
+if ($_SESSION["rol2"] == "klant") {
+		$klant_nummer = $_SESSION["klantnummer2"];
 }
 
-if ($_SESSION["rol"] == "medewerker") {
+if ($_SESSION["rol2"] == "medewerker") {
 		$functie = $_SESSION["functie"];
-		$medewerker_nummer = $_SESSION["medewerkernummer"];
+		$medewerker_nummer = $_SESSION["medewerkernummer2"];
 }
 
 if(isset($_GET["opslaan"])) {
@@ -51,10 +51,10 @@ if(isset($_GET["opslaan"])) {
     $adres = $_GET["adres"];
     $postcode = $_GET["postcode"];
     $woonplaats = $_GET["woonplaats"];
-		if ($_SESSION["rol"] == "klant") {
+		if ($_SESSION["rol2"] == "klant") {
 				$klant_nummer = $_GET["klantnummer"];
 		}
-		if ($_SESSION["rol"] == "medewerker") {
+		if ($_SESSION["rol2"] == "medewerker") {
 				$functie = $_GET["functie"];
 				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
@@ -137,7 +137,7 @@ $pdo = NULL;
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
 											<?php
-												if ($_SESSION["rol"] == "medewerker") {
+												if ($_SESSION["rol2"] == "medewerker") {
 														print("<tr><td>Functie</td>");
 
 														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
@@ -153,7 +153,7 @@ $pdo = NULL;
 														print("> Admin </td></tr>");
 
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-												} elseif ($_SESSION["rol"] == "klant") {
+												} elseif ($_SESSION["rol2"] == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
