@@ -60,6 +60,8 @@ if(isset($_GET["opslaan"])) {
 		}
 }
 
+$rol = $_SESSION["rol"];
+
 $pdo = NULL;
 ?>
 
