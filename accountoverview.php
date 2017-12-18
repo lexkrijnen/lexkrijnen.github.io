@@ -76,11 +76,10 @@
     $_SESSION["woonplaats"] = $woonplaats;
 
 
-$klant_id = $_SESSION["klantnummer"];
-$medewerker_nummer = $_SESSION["medewerkernummer"];
-if($klant_nummer == "" AND $medewerker_nummer != ""){
+
+if($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "medewerker";
-}elseif($klant_nummer != "" AND $medewerker_nummer == ""){
+}elseif($klant_id != "" AND $medewerker_nummer == ""){
     $rol = "klant";
 }
 
