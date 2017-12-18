@@ -65,14 +65,11 @@ $pdo = NULL;
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
-                <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" ></td></tr>
-                <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel"></td></tr>
-                <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam"></td></tr>
-                <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer"></td></tr>
-                <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres"></td></tr>
-                <tr><td>Adres</td><td><input type="text" class="form-control" name="adres"></td></tr>
-                <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode"></td></tr>
-                <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats"></td></tr>
+                <tr><td>Project Nr.</td><td><input type="text" class="form-control" name="project_nummer" ></td></tr>
+                <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
+                <tr><td>Klant Nr.</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
+                <tr><td>Contract Nr.  </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
+                <tr><td>Status Nr.</td><td><input type="text" class="form-control" name="status_nummer"></td></tr>
                 <tr><td></td></tr>
                 <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
                     <td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
