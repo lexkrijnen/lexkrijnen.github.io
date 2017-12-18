@@ -129,7 +129,7 @@ $pdo = NULL;
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
-                      <tr><td>Medewerkernummer</td><td><input type="text" class="form-control" name="medewerkernummer" <?php print("value=\"$medewerker_nummer\""); ?>></td></tr>
+                      <tr><td>Medewerkernummer</td><td><input type="text" class="form-control" name="medewerkernummer" <?php print("value=\"$medewerker_nummer\""); ?> disabled></td></tr>
                       <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
                       <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
                       <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
