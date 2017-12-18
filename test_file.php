@@ -28,7 +28,7 @@
         //TABEL TEKENING
         if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer) VALUES(?,?,?,?)";
+                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET["naam"], $_GET["project_nummer"]));
             } else {
