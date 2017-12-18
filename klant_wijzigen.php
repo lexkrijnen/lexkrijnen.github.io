@@ -125,6 +125,7 @@ $pdo = NULL;
 
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
+							<h1>Wijzigen</h1>
               <table>
                   <form action='klant_wijzigen.php' method='get'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
@@ -156,8 +157,8 @@ $pdo = NULL;
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
-                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
-											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
+                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
+											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
                   </form>
               </table>
 						<br>
