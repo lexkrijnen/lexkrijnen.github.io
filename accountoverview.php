@@ -143,6 +143,7 @@
                             print("<tr><td>Klantnummer: </td><td>$klant_nummerdb</td></tr>");
                         }elseif ($medewerker_nummerdb != "") {
                             print("<tr><td>Medewerkernummer: </td><td>$medewerker_nummerdb");
+                            print("<tr><td>Rol: </td><td>$rol");
                         }
                         print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
@@ -168,10 +169,10 @@
 
 <!--- <div class="page-box col-xs-4 col-xs-offset-1">
     <div>
-    <?print($enable, "check");?>
+    <?//print($enable, "check");?>
     </div>
     <form action="accountoverview.php" method="get">
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}?>>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php// if($enable==true){print("");}else{print("disabled");}?>>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
 
