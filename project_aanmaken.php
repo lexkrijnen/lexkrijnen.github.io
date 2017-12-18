@@ -60,8 +60,8 @@ $pdo = NULL;
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="col-xs-10 col-xs-offset-1 col-md-offset-2 col-md-8 page-box">
-    <div class=pagebox>
+<div class="container page-box">
+    <div class="col-xs-12 col-md-12">
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
