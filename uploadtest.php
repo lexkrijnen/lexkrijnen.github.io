@@ -27,7 +27,7 @@
         <![endif]-->
 	</head>
   <body>
-  	<?php
+  	<?php/*
 			define("UPLOAD_DIR", "/pdf/");
 
 			if (!empty($_FILES["doc"])) {
@@ -66,7 +66,7 @@
 					if ($out[0] != $mime) {
 						echo "<p>Dit bestandsformaat is niet toegestaan.</p>";
 						exit;
-					}
+					}*/
 		?>
 
   	<nav class="navbar navbar-default" role="navigation">
