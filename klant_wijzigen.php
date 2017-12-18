@@ -123,7 +123,7 @@ $pdo = NULL;
 
 
 
-      <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+      <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
 							<h1>Wijzigen</h1>
               <table>

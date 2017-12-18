@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Contract toevoegen</title>
+    <title>Tekenig toevoegen</title>
     <link rel="stylesheet" href="css/meerminderwerk.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,20 +25,20 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-        if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-            $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
-        } else {
-            $error = ("Plaats A.U.B. een bestand en voeg een naam toe");
+        //TABEL TEKENING
+        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
+            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
+                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer) VALUES(?,?,?,?)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET["naam"], $_GET["project_nummer"]));
+            } else {
+                $error = ("Vul A.U.B alles in");
+            }
         }
-    }
 
-    //TABEL CONTRACT
-    $stmt = $pdo->prepare("SELECT * FROM Contract");
-    $stmt->execute();
-    $contract = $stmt->fetchAll();
+        $stmt = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt->execute();
+        $tekening = $stmt->fetchAll();
 
     ?>
 </head>
@@ -72,28 +72,31 @@
 <!--CONTRACT-->
 <div class="container page-box">
     <div class="col-xs-4">
-        <h1>Contract</h1>
+        <h1>Tekening</h1>
         <form method="get" action="test_file.php">
             <table class="table-bordered">
                 <tr>
-                    <th>C.nr</th>
-                    <th>Document</th>
-                    <th>Naam</th>
+                    <th><b>Tekening.nr</b></th>
+                    <th><b>Naam</b></th>
+                    <th><b>Document</b></th>
+                    <th><b>Project.nr</b></th>
                     <th></th>
                 </tr>
                 <?php
-                foreach ($contract AS $document) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document["contract_nummer"] . "</td>");
-                    print("<td>" . $document["document"] . "</td>");
-                    print("<td>" . $document["naam"] . "</td>");
+                    print("<td>" . $document2["tekening_nummer"] . "</td>");
+                    print("<td>" . $document2["naam"] . "</td>");
+                    print("<td>" . $document2["document"] . "</td>");
+                    print("<td>" . $document2["project_nummer"] . "</td>");
                     print("</tr>");
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="contract_nummer" size="15"></td>
-                    <td><input type="file" name="document"></td>
+                    <td><input type="text" name="tekening_nummer" size="15"></td>
                     <td><input type="text" name="naam"size="15"></td>
+                    <td><input type="file" name="document"></td>
+                    <td><input type="text" name="project_nummer" size="15"></td>
                     <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                 </tr>
             </table>

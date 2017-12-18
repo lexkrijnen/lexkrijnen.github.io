@@ -126,7 +126,7 @@ $pdo = NULL;
 
 
 
-      <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+      <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
               <div class=container>
 								<h1>Zoeken</h1>
