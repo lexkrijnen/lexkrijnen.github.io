@@ -24,11 +24,11 @@
 
 
 
-    if(isset($_GET["wijzigen"])) {
+    /*if(isset($_GET["wijzigen"])) {
         $enable=true;
     }else{
         $enable=false;
-    }
+    }*/
 
 
 
@@ -62,6 +62,21 @@
     $postcode = $sqlresult["postcode"];
     $woonplaats = ucfirst($sqlresult["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+
+
+
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
+    $_SESSION["telefoonnummer"] = $telefoonnummer;
+    $_SESSION["emailadres"] = $emailadres;
+    $_SESSION["adres"] = $adres;
+    $_SESSION["postcode"] = $postcode;
+    $_SESSION["woonplaats"] = $woonplaats;
+    //$_SESSION["rol"] = $rol;
+
+
 
 
     $pdo = NULL;
@@ -128,13 +143,14 @@
                             print("<tr><td>Klantnummer: </td><td>$klant_nummerdb</td></tr>");
                         }elseif ($medewerker_nummerdb != "") {
                             print("<tr><td>Medewerkernummer: </td><td>$medewerker_nummerdb");
+                            print("<tr><td>Rol: </td><td>$rol");
                         }
                         print("<tr><td>Telefoonnummer: </td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres: </td><td>$emailadres</td></tr>");
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='klant_wijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
+                        print("</table><form action='accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){
@@ -151,12 +167,12 @@
     </div>
 
 
-<div class="page-box col-xs-4 col-xs-offset-1">
+<!--- <div class="page-box col-xs-4 col-xs-offset-1">
     <div>
-    <?print($enable, "check");?>
+    <?//print($enable, "check");?>
     </div>
     <form action="accountoverview.php" method="get">
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}?>>
+        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php// if($enable==true){print("");}else{print("disabled");}?>>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
 
@@ -164,7 +180,7 @@
         <input class="btn btn-succes" type="submit" name="wijzigengegevens" value="Wijzigen">
 
     </form>
-
+--->
 
 
 

@@ -129,6 +129,7 @@ $pdo = NULL;
       <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
           <div class=pagebox>
               <div class=container>
+								<h1>Zoeken</h1>
                <table>
                     <form action="klant_zoeken.php" method="get">
                         <div class="row">
@@ -141,10 +142,10 @@ $pdo = NULL;
 													<tr><td>Achternaam: </td>
 															<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET["vinden"])) { print("value = $ingevuldeachternaam"); } else { print("placeholder='achternaam'"); }?> ></td>
 
-													<tr><td><input type="radio" name=rol value="klant" checked>klant</td></tr>
-													<tr><td><input type="radio" name=rol value="medewerker">medewerker</td></tr>
+													<tr><td><input type="radio" name=rol value="klant" checked>Klant</td></tr>
+													<tr><td><input type="radio" name=rol value="medewerker">Medewerker</td></tr>
 
-													<td><input class="btn oranje white" type="submit" name="vinden" value="vinden"></td>
+													<td><input class="btn oranje white" type="submit" name="vinden" value="Vinden"></td>
 												</div>
                     </form>
                 </table>
@@ -180,11 +181,11 @@ $pdo = NULL;
 												print("<table>");
 												print("<tr><td>");
 												print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"wijzigen\">");
+                        print("<input class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
                         print("</form>");
 												print("</td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"verwijderen\">");
+                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
 												print("</table>");

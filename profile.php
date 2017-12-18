@@ -78,9 +78,9 @@
                     </thead>
                 </tr>
                 <?php
-                foreach ($contract AS $document) {
+                	foreach ($contract AS $document) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document["naam"] . "</td>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>
@@ -98,7 +98,7 @@
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer >" . $document2["naam"] . "</td>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document2["document"] . "' target='pdf_viewer'>" . $document2["naam"] . "</td>");
                     print("</tr>");
                     }
                 ?>

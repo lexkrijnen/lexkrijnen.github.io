@@ -91,8 +91,10 @@ $hash = sha1($salt . $wachtwoord);
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <div class="container">
+								<h1>Medewerker toevoegen</h1>
                 <table>
                 <form action="mw_toevoegen.php" method="POST">
                 <tr>
@@ -232,9 +234,7 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 } else {
                     ///succes
-                    print("<div class=\"alert alert-success\" role=\"alert\">");
-                    print("<br>" . $naam . " is successvol toegevoegd als medewerker.");
-                    print("</div>");
+                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als medewerker.</div>');
                 }
             }
             ?>

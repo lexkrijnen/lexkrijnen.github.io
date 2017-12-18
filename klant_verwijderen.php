@@ -86,6 +86,7 @@ $pdo = NULL;
 
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <div class=container>
+								<h1>Verwijderen</h1>
 
                 <?php print("Weet u zeker dat u " . $_SESSION["naam"] . " wilt verwijderen?"); ?>
 
@@ -93,18 +94,13 @@ $pdo = NULL;
                     <input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
                     <input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'"/>
                 </form>
-
-                <br>
-                <a href="klant_zoeken.php">terug</a>
             </div>
 
 
 
             <?php
             if (isset($_GET["echtverwijderen"])) {
-                print("<div class=\"alert alert-success\" role=\"alert\">");
-                print("<br>" . $_SESSION["naam"] . " is successvol verwijderd.");
-                print("</div>");
+								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam"] . ' is successvol verwijderd.</div>');
             }
             ?>
        </div>
