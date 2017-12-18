@@ -30,7 +30,7 @@
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
                 $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer) VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["project_nummer"], $_GET["naam"], $_GET["document"], $_GET["tekening_nummer"]));
+                $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET["naam"], $_GET["project_nummer"]));
             } else {
                 $error = ("Vul A.U.B alles in");
             }
