@@ -66,9 +66,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="index.php">Home</a></li>
-					<li class="nav-item"><a href="contact.php">Contact</a></li>
-					<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
+					<li class="nav-item"><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                    <li class="nav-item"><a href="profile.php">Contract/Tekening</a></li>
+                    <li class="nav-item"><a href="account.php">Mijn Account</a></li>
+                    <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
