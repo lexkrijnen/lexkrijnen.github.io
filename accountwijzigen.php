@@ -127,7 +127,7 @@ $pdo = NULL;
           <div class=pagebox>
 							<h1>Wijzigen</h1>
               <table>
-                  <form action='klant_wijzigen.php' method='get'>
+                  <form action='accountwijzigen.php' method='get'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
@@ -157,7 +157,7 @@ $pdo = NULL;
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
-                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
+                      <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
 											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
                   </form>
               </table>
