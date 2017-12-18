@@ -32,14 +32,14 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
-/*if ($_SESSION["rol"] == "klant") {
+if ($_SESSION["rol"] == "klant") {
 		$klant_nummer = $_SESSION["klantnummer"];
 }
 
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
 		$medewerker_nummer = $_SESSION["medewerkernummer"];
-}*/
+}
 
 if(isset($_GET["opslaan"])) {
     $voornaam = $_GET["voornaam"];
@@ -51,13 +51,13 @@ if(isset($_GET["opslaan"])) {
     $adres = $_GET["adres"];
     $postcode = $_GET["postcode"];
     $woonplaats = $_GET["woonplaats"];
-		/*if ($_SESSION["rol"] == "klant") {
+		if ($_SESSION["rol"] == "klant") {
 				$klant_nummer = $_GET["klantnummer"];
 		}
 		if ($_SESSION["rol"] == "medewerker") {
 				$functie = $_GET["functie"];
 				$medewerker_nummer = $_GET["medewerkernummer"];
-		}*/
+		}
 }
 
 $pdo = NULL;
