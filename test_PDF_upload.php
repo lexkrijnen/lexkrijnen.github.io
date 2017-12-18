@@ -51,7 +51,7 @@
         //TABEL TEKENING
         if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Tekening (tekening_nummer,document, naam, project_nummer) VALUES(?,?,?,?)";
+                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer) VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_GET["project_nummer"], $_GET["naam"], $_GET["document"], $_GET["tekening_nummer"]));
             } else {
@@ -63,6 +63,7 @@
         $stmt->execute();
         $tekening = $stmt->fetchAll();
 
+        $pdo = NULL;
     ?>
 	</head>
   <body>
@@ -195,7 +196,6 @@
             </div>
         </form>
     </div>
-        <?php $pdo = NULL; ?>
         <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
         <iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
 
