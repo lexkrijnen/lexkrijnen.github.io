@@ -36,7 +36,7 @@ $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
 if ($_SESSION["rol"] == "klant") {
-		$klant_nummer = $_SESSION["klantnummer"];
+		$klant_nummer = $_SESSION["klant_id"];
 }
 
 if ($_SESSION["rol"] == "medewerker") {
