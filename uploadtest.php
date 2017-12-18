@@ -73,7 +73,7 @@
     	<div class="row">
     		<div class="col-xs-12">
 
-    			<form method="post" enctype="multipart/form-data">
+    			<form action="uploadtest.php" method="post" enctype="multipart/form-data">
 						<input type="file" name="doc">
 						<br>
 						<input type="submit" value="Upload">
