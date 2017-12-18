@@ -51,7 +51,11 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+                    <li class="nav-item"><a href="accountoverview.php">Mijn gegevens</a></li>
+					<li class="nav-item"><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                    <li class="nav-item"><a href="profile.php">Contract/Tekening</a></li>
+                    <li class="nav-item"><a href="account.php">Mijn Account</a></li>
+                    <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
