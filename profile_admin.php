@@ -74,7 +74,7 @@ if (empty($medewerker_nummer)) {
         <ul>
             <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
             <li><a href="bekijken_bouwtekeningen.php">Projecten</a></li>
-            <li><a href="klant_zoeken.php">Klanten</a></li>
+            <li><a href="klant_zoeken.php">Personen wijzigen/verwijderen</a></li>
             <li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
             <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
 						<li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
