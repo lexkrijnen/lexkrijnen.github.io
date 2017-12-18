@@ -100,9 +100,7 @@ $pdo = NULL;
 
             <?php
             if (isset($_GET["echtverwijderen"])) {
-                print("<div class=\"alert alert-success\" role=\"alert\">");
-                print("<br>" . $_SESSION["naam"] . " is successvol verwijderd.");
-                print("</div>");
+								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam"] . ' is successvol verwijderd.</div>');
             }
             ?>
        </div>
