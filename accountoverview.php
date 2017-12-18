@@ -23,9 +23,11 @@
 
 
 
-    $enable = false;
+
     if(isset($_GET["wijzigen"])) {
         $enable=true;
+    }else{
+        $enable=false;
     }
 
 
@@ -151,6 +153,7 @@
 
 <div class="page-box col-xs-4 col-xs-offset-1">
     <form action="accountoverview.php" method="get">
+        <?print($enable);?>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}?>>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
