@@ -16,7 +16,7 @@ if (isset($_GET["opslaan"])) {
 		} elseif ($_SESSION["rol"] == "medewerker") {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
-				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerker_nummer"]));
+				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
 		} else {
                 print("Query is niet uitgevoerd! Fock you!");
 
@@ -59,7 +59,7 @@ if(isset($_GET["opslaan"])) {
 		}
 		if ($_SESSION["rol"] == "medewerker") {
 				$functie = $_GET["functie"];
-				$medewerker_nummer = $_GET["medewerker_nummer"];
+				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
 }
 
