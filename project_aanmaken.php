@@ -5,7 +5,9 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$error = "";
 
+//TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
 $sql1 = "SELECT max(project_nummer) FROM Project";
 $stmt1 = $pdo->prepare($sql1);
 $stmt1->execute();
@@ -16,17 +18,15 @@ foreach ($sqlresult as $a => $b) {
 }
 $lastprojectnr = $lastprojectnr + 1;
 
+//NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
-    if ($_SESSION["rol"] == "klant") {
+    if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
+        $error .= "Vul A.U.B. alle velden in. ";
+    } else {
+
         $sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
-    } elseif ($_SESSION["rol"] == "medewerker") {
-        $sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
-    } else {
-        print("Query is niet uitgevoerd!");
     }
 }
 $pdo = NULL;
@@ -83,6 +83,11 @@ $pdo = NULL;
             </form>
         </table>
         <br><a href="admin.php" class="btn btn-primary" role="button">Terug</a>
+        <?php
+        if ($error != "") {
+        print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+        }
+        ?>
     </div>
 </div>
 
