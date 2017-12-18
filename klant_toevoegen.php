@@ -219,9 +219,7 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 } else {
                     ///succes
-                    print("<div class=\"alert alert-success\" role=\"alert\">");
-                    print("<br>" . $naam . " is successvol toegevoegd als klant.");
-                    print("</div>");
+										print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als klant.</div>');
                 }
             }
             ?>
