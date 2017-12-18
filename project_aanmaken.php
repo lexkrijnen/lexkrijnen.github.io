@@ -60,7 +60,7 @@ $pdo = NULL;
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+<div class="col-xs-10 col-xs-offset-1 col-md-offset-2 col-md-8 page-box">
     <div class=pagebox>
         <h1>Project Toevoegen</h1>
         <table>
@@ -73,6 +73,7 @@ $pdo = NULL;
                 <tr><td>Adres</td><td><input type="text" class="form-control" name="adres"></td></tr>
                 <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode"></td></tr>
                 <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats"></td></tr>
+                <tr></tr>
                 <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
                     <td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
