@@ -74,7 +74,7 @@ $pdo = NULL;
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
-                <tr><td>Project Nr.</td><td><input type="text" class="form-control" name="project_nummer" ></td></tr>
+                <tr><td>Project Nr.</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$lastprojectnr\""); ?> ></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
                 <tr><td>Klant Nr.</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
                 <tr><td>Contract Nr.  </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
