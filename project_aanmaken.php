@@ -12,11 +12,11 @@ $stmt1->execute();
 $sqlresult = $stmt1->fetch();
 var_dump($sqlresult);
 
-foreach ($sqlresult as $a => $b){
-$lastprojectnr = $b['project_nummer'];
-//$lastprojectnr = $lastprojectnr + 1;
-print("TESTJEEEEEEE: " . $lastprojectnr);
-
+foreach ($sqlresult as $a => $b) {
+    $lastprojectnr = $b['project_nummer'];
+    $lastprojectnr = $lastprojectnr + 1;
+    print("TESTJEEEEEEE: " . $lastprojectnr);
+}
 
 if (isset($_GET["opslaan"])) {
     if ($_SESSION["rol"] == "klant") {
