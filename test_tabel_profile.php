@@ -42,13 +42,13 @@
         $contract = $stmt->fetchAll();
 
         //Tekening
-        $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE project_nummer = :project_nummer");
-        $stmt2->execute(array(':project_nummer' => $_GET['id']));
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE contract_nummer = :contract_nummer");
+        $stmt2->execute(array(':contract_nummer' => $_GET['id']));
         $tekening = $stmt2->fetchAll();
 
         //Project
-        $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer AND project_nummer = :project_nummer");
-        $stmt3->execute(array(':contract_nummer' => $_GET['id'] ':project_nummer' => $_GET['id']));
+        $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+        $stmt3->execute(array(':contract_nummer' => $_GET['id']));
         $naamproject = $stmt3->fetchAll();
         ?>
 	</head>
