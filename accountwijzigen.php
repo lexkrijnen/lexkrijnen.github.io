@@ -59,7 +59,7 @@ if(isset($_GET["opslaan"])) {
 		}
 		if ($_SESSION["rol"] == "medewerker") {
 				$functie = $_GET["functie"];
-				$medewerker_nummer = $_GET["medewerkernummer"];
+				$medewerker_nummer = $_GET["medewerker_nummer"];
 		}
 }
 
