@@ -156,7 +156,7 @@ $pdo = NULL;
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
-                      <tr><td><a href="klant_zoeken.php" class="btn btn-primary" role="button">terug</a></td>
+                      <tr><td><a href="accountoverview.php" class="btn btn-primary" role="button">terug</a></td>
 											<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="opslaan"></td></tr>
                   </form>
               </table>
