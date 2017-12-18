@@ -153,7 +153,7 @@
 
 <div class="page-box col-xs-4 col-xs-offset-1">
     <div>
-    <?print($enable);?>
+    <?print($enable, "check");?>
     </div>
     <form action="accountoverview.php" method="get">
         <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php if($enable==true){print("");}else{print("disabled");}?>>
