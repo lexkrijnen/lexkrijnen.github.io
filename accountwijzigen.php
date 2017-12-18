@@ -186,6 +186,7 @@ $pdo = NULL;
 
 				<?php
             if(isset($_POST["opslaan"])) {
+                print($_POST["medewerkernummer"]);
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
