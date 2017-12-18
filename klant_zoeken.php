@@ -27,7 +27,13 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-		$rol = $_GET["rol"];
+
+
+		if($_GET["rol"] == "") {
+			$rol = "klant";
+		} else {
+			$rol = $_GET["rol"];
+		}
 
 		if ($_GET["rol"] == "klant") {
 			$klant_nummer = $klant["klant_nummer"];
