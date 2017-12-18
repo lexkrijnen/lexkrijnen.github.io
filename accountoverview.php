@@ -76,15 +76,14 @@
     $_SESSION["woonplaats"] = $woonplaats;
 
 
-$klant_id = $_SESSION["klantnummer"];
-$medewerker_nummer = $_SESSION["medewerkernummer"];
-if($klant_nummer == "" AND $medewerker_nummer != ""){
+
+if($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "medewerker";
-}elseif($klant_nummer != "" AND $medewerker_nummer == ""){
+}elseif($klant_id != "" AND $medewerker_nummer == ""){
     $rol = "klant";
 }
 
-
+    $_SESSION["rol"] = $rol;
 
 
 
@@ -118,7 +117,7 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
     if (empty($klant_id) AND empty($medewerker_nummer)) {
         print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    }
+    }else {
     ?>
 
 
@@ -130,10 +129,6 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
                     <th>Nr.</th>
                     <th>Beschrijving</th>
                 </tr>
-                <?php
-
-
-                ?>
             </table>
     </div>
 
@@ -176,20 +171,6 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
     </div>
 
 
-<!--- <div class="page-box col-xs-4 col-xs-offset-1">
-    <div>
-    <?//print($enable, "check");?>
-    </div>
-    <form action="accountoverview.php" method="get">
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="voornaam" <?php// if($enable==true){print("");}else{print("disabled");}?>>
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="tussenvoegsel" disabled>
-        <input type="text" class="form-control" name="ingevuldevoornaam" placeholder="achternaam" disabled>
-
-
-        <input class="btn btn-succes" type="submit" name="wijzigengegevens" value="Wijzigen">
-
-    </form>
---->
 
 
 
@@ -199,4 +180,4 @@ if($klant_nummer == "" AND $medewerker_nummer != ""){
 <?php $pdo = NULL; ?>
 </body>
 </html>
-<?php  ?>
+<?php } ?>
