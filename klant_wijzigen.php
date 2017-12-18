@@ -37,7 +37,7 @@ if ($_SESSION["rol2"] == "klant") {
 }
 
 if ($_SESSION["rol2"] == "medewerker") {
-		$functie = $_SESSION["functie"];
+		$functie = $_SESSION["functie2"];
 		$medewerker_nummer = $_SESSION["medewerkernummer2"];
 }
 
