@@ -36,7 +36,7 @@
             }
         }
 
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt = $pdo->prepare("SELECT * FROM Tekening");
         $stmt->execute();
         $contract = $stmt->fetchAll();
 
