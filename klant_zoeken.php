@@ -181,7 +181,7 @@ $pdo = NULL;
 												print("<table>");
 												print("<tr><td>");
 												print("<form action='klant_wijzigen.php' method='get'>");
-                        print("<input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
+                        print("<input class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
                         print("</form>");
 												print("</td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
