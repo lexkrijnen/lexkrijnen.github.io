@@ -14,7 +14,7 @@ var_dump($sqlresult);
 
 foreach ($sqlresult as $a => $b){
 $lastprojectnr = $b['project_nummer'];
-$lastprojectnr = $lastprojectnr + 1;
+//$lastprojectnr = $lastprojectnr + 1;
 print("TESTJEEEEEEE: " . $lastprojectnr);
 
 
