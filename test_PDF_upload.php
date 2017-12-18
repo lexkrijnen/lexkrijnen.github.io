@@ -33,6 +33,7 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
+        //TABEL CONTRACT
         if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
                 $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
@@ -43,6 +44,11 @@
             }
         }
 
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
+
+        //TABEL TEKENING
         if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
                 $sql = "INSERT INTO Tekening (tekening_nummer,document, naam, project_nummer) VALUES(?,?,?,?)";
@@ -53,12 +59,6 @@
             }
         }
 
-        //TABEL CONTRACT
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
-        $stmt->execute();
-        $contract = $stmt->fetchAll();
-
-        //TABEL TEKENING
         $stmt = $pdo->prepare("SELECT * FROM Tekening");
         $stmt->execute();
         $tekening = $stmt->fetchAll();
