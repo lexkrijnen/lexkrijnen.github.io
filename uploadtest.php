@@ -27,7 +27,7 @@
         <![endif]-->
 	</head>
   <body>
-  	<?php/*
+  	<?php
 			$target_dir = "/pdf/";
 			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 			$uploadOk = 1;
@@ -42,7 +42,7 @@
 							echo "File is not an image.";
 							$uploadOk = 0;
 					}
-			}*/
+			}
 		?>
 
   	<nav class="navbar navbar-default" role="navigation">
@@ -73,35 +73,11 @@
     	<div class="row">
     		<div class="col-xs-12">
 
-
-
- <form action="<?php print $PHP_SELF?>" enctype="multipart/form-data" method="post">
-Last name:<br /> <input type="text" name="name" value="" /><br />
-class notes:<br /> <input type="file" name="classnotes" value="" /><br />
-  <input type="submit" name="submit" value="Submit Notes" />
-</form>
-
-				<?php
-				 define ("filesplace","./pdf");
-
-				 if (is_uploaded_file($_FILES['classnotes']['tmp_name'])) {
-
-				 if ($_FILES['classnotes']['type'] != "application/pdf") {
-				 echo "<p>Class notes must be uploaded in PDF format.</p>";
-				 } else {
-				 $name = $_POST['name'];
-				 $result = move_uploaded_file($_FILES['classnotes']['tmp_name'], filesplace."/$name.pdf");
-				 if ($result == 1) echo "<p>Upload done .</p>";
-				 else echo "<p>Sorry, Error happened while uploading . </p>";
-				} #endIF
-				 } #endIF
-				?>
-
-    			<!--<form action="uploadtest.php" method="post" enctype="multipart/form-data">
+    			<form action="uploadtest.php" method="post" enctype="multipart/form-data">
 						<input type="file" name="doc">
 						<br>
 						<input type="submit" value="Upload">
-					</form>-->
+					</form>
 
     		</div>
     	</div>
