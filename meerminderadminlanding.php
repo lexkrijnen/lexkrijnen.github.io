@@ -68,6 +68,7 @@
             }
             ?>
         </ul>
+        <br><a href="login.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
     </div>
 </div>
 
