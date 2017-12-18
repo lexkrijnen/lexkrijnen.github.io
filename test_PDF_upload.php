@@ -154,7 +154,7 @@
             <?php
             foreach ($tekening AS $document2) {
                 print("<tr>");
-                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/test.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
+                print("<td> <a href=pdf-viewer/web/viewer.html?file=/pdf/bf-cheatingguide.pdf target= pdf_viewer>" . $document2["naam"] . "</td>");
                 print("</tr>");
                 }
             ?>
