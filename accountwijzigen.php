@@ -143,6 +143,7 @@ $pdo = NULL;
 											<?php
 												if ($_SESSION["rol"] == "medewerker") {
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+														print("<input type=\"hidden\" name=\"functie\" value=$functie>");
 												} elseif ($_SESSION["rol"] == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
