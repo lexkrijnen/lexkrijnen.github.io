@@ -25,7 +25,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
+     if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
             $stmt = $pdo->prepare($sql);
@@ -46,13 +46,18 @@
     }
     //TABEL MEER WERK
     $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
-    $stmt->execute();
+    $stmt->execute(array(':contract_nummer' => $_GET['id']));
     $meerwerk = $stmt->fetchAll();
 
     //TABEL MINDER WERK
     $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
-    $stmt2->execute(array();
+    $stmt2->execute(array(':contract_nummer' => $_GET['id']));
     $minderwerk = $stmt2->fetchAll();
+
+    //NAAM PROJECT
+    $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+    $stmt3->execute(array(':contract_nummer' => $_GET['id']));
+    $naamproject = $stmt3->fetchAll();
 
     ?>
 </head>
