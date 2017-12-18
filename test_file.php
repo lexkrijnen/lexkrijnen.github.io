@@ -77,8 +77,8 @@
             <table class="table-bordered">
                 <tr>
                     <th><b>Contract.nr</b></th>
-                    <th><b>Naam</b></th>
                     <th><b>Document</b></th>
+                    <th><b>Naam</b></th>
                     <th></th>
                 </tr>
                 <?php
