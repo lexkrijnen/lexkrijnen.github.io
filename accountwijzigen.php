@@ -54,16 +54,7 @@ $emailadres = $_SESSION["emailadres"];
 $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
-
-
-
-$klant_nummer = $_SESSION["klantnummer"];
-$medewerker_nummer = $_SESSION["medewerkernummer"];
-if($klant_nummer == "" AND $medewerker_nummer != ""){
-    $rol = "medewerker";
-}elseif($klant_nummer != "" AND $medewerker_nummer == ""){
-    $rol = "klant";
-}
+$rol = $_SESSION["rol"];
 
 
 
