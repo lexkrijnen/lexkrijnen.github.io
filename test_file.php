@@ -25,78 +25,98 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-        //TABEL CONTRACT
-        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
-            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer)VALUES(?,?,?,?)";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET['naam'], $_GET["project_nummer"]));
-            } else {
-                $error = ("Vul A.U.B alles in");
-            }
+    if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
+        if ($_GET["beschrijving"] != "") {
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 1)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+        } else {
+            $error = ("Vul A.U.B. een beschrijving in.");
         }
+    }
 
-        $stmt = $pdo->prepare("SELECT * FROM Tekening");
-        $stmt->execute();
-        $tekening = $stmt->fetchAll();
+    if (isset($_GET["toevoegenminderwerk"]) && isset($_GET["beschrijving"])) {
+        if ($_GET["beschrijving"] != "") {
+            $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET['id'], 2)); ## 1,1 Vervangen door CONTRACT_NUMMER (te halen uit de URL) en SOORTNUMMER (Meer of MINDER werk) ##
+        } else {
+            $error = ("Vul A.U.B. een beschrijving in.");
+        }
+    }
+    //TABEL MEER WERK
+    $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
+    $stmt->execute();
+    $meerwerk = $stmt->fetchAll();
+
+    //TABEL MINDER WERK
+    $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
+    $stmt2->execute(array();
+    $minderwerk = $stmt2->fetchAll();
 
     ?>
 </head>
 <body>
 <!--NAVBAR-->
-  	<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
-				</div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+        </div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-				        <li class="nav-item"><a href="index.php">Home</a></li>
-                        <li class="nav-item"><a href="contact.php">Contact</a></li>
-						<li class="nav-item"><a href="profile.php">Mijn profiel</a></li>
-                        <li class="nav-item"><a href="index.php">Uitloggen</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a href="login.php">Uitloggen</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
-<!--CONTRACT-->
+<!--MEER WERK-->
 <div class="container page-box">
     <div class="col-xs-4">
-        <h1>Tekening</h1>
-        <form method="get" action="test_file.php">
-            <table class="table-bordered">
+        <h1>Meer Werk</h1>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
                 <tr>
-                    <th><b>Tekening.nr</b></th>
-                    <th><b>Document</b></th>
-                    <th><b>Naam</b></th>
-                    <th><b>Project.nr</b></th>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 <?php
-                foreach ($tekening AS $document2) {
+                $meerwerkcount = 1;
+                foreach ($meerwerk AS $werk) {
                     print("<tr>");
-                    print("<td>" . $document2["tekening_nummer"] . "</td>");
-                    print("<td>" . $document2["document"] . "</td>");
-                    print("<td>" . $document2["naam"] . "</td>");
-                    print("<td>" . $document2["project_nummer"] . "</td>")
+                    print("<td>" . $meerwerkcount . "</td>");
+                    print("<td>" . $werk["beschrijving"] . "</td>");
+                    print("<td>€ " . $werk["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
+                    $meerwerkcount++;
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="contract_nummer" size="10"></td>
-                    <td><input type="file" name="document"></td>
-                    <td><input type="text" name="naam"size="10"></td>
-                    <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
+                    <td></td>
+                    <td><input type="text" name="beschrijving" size="15"></td>
+                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
                 </tr>
             </table>
         </form>
@@ -104,7 +124,52 @@
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
         } ?>
-        <a href="test_file.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
+        <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
+    </div>
+
+
+    <div class="col-xs-3"></div> <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+
+
+    <!--MINDER WERK-->
+    <div class="col-xs-4">
+        <h1>Minder Werk</h1>
+        <?php
+        foreach ( $naamproject as $value ) {
+            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
+        }
+        ?>
+        <form method="get" action="meermindertoevoegen.php">
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Nr.</th>
+                    <th>Beschrijving</th>
+                    <th>Prijs</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <?php
+                $minderwerkcount = 1;
+                foreach ($minderwerk AS $werk2) {
+                    print("<tr>");
+                    print("<td>" . $minderwerkcount . "</td>");
+                    print("<td>" . $werk2["beschrijving"] . "</td>");
+                    print("<td>- € " . $werk2["prijs"] . "</td>");
+                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
+                    print("</tr>");
+                    $minderwerkcount++;
+                }
+                ?>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="beschrijving" size="15"></td>
+                    <td><input type="text" name="prijs"size="3"></td>
+                    <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
+                    <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
+                </tr>
+            </table>
+        </form>
     </div>
 </div>
 <?php $pdo = NULL; ?>
