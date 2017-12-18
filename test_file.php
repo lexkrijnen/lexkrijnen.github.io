@@ -36,9 +36,9 @@
             }
         }
 
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt = $pdo->prepare("SELECT * FROM Tekening");
         $stmt->execute();
-        $contract = $stmt->fetchAll();
+        $tekening = $stmt->fetchAll();
 
     ?>
 </head>
@@ -77,12 +77,12 @@
             <table class="table-bordered">
                 <tr>
                     <th><b>Contract.nr</b></th>
-                    <th><b>Naam</b></th>
                     <th><b>Document</b></th>
+                    <th><b>Naam</b></th>
                     <th></th>
                 </tr>
                 <?php
-                foreach ($contract AS $document2) {
+                foreach ($tekening AS $document2) {
                     print("<tr>");
                     print("<td>" . $document2["contract_nummer"] . "</td>");
                     print("<td>" . $document2["document"] . "</td>");
