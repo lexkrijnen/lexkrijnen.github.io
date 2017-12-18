@@ -9,11 +9,11 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["opslaan"])) {
-		if ($_SESSION["rol"] == "klant") {
+		if ($rol == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
-		} elseif ($_SESSION["rol"] == "medewerker") {
+		} elseif ($rol == "medewerker") {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
@@ -32,14 +32,18 @@ $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
-if ($_SESSION["rol"] == "klant") {
-		$klant_nummer = $_SESSION["klantnummer"];
+
+
+$klant_nummer = $_SESSION["klantnummer"];
+$medewerker_nummer = $_SESSION["medewerkernummer"];
+if($klant_nummer == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+}elseif($klant_nummer != "" AND $medewerker_nummer == ""){
+    $rol = "klant";
 }
 
-if ($_SESSION["rol"] == "medewerker") {
-		$functie = $_SESSION["functie"];
-		$medewerker_nummer = $_SESSION["medewerkernummer"];
-}
+
+
 
 if(isset($_GET["opslaan"])) {
     $voornaam = $_GET["voornaam"];
@@ -51,10 +55,10 @@ if(isset($_GET["opslaan"])) {
     $adres = $_GET["adres"];
     $postcode = $_GET["postcode"];
     $woonplaats = $_GET["woonplaats"];
-		if ($_SESSION["rol"] == "klant") {
+		if ($rol == "klant") {
 				$klant_nummer = $_GET["klantnummer"];
 		}
-		if ($_SESSION["rol"] == "medewerker") {
+		if ($rol == "medewerker") {
 				$functie = $_GET["functie"];
 				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
@@ -137,7 +141,7 @@ $pdo = NULL;
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
 											<?php
-												if ($_SESSION["rol"] == "medewerker") {
+												if ($rol == "medewerker") {
 														print("<tr><td>Functie</td>");
 
 														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
@@ -153,7 +157,7 @@ $pdo = NULL;
 														print("> Admin </td></tr>");
 
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-												} elseif ($_SESSION["rol"] == "klant") {
+												} elseif ($rol == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
 											?>
