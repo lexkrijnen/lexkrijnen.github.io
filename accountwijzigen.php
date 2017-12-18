@@ -1,4 +1,4 @@
-z<?php
+<?php
 session_start();
 
 
@@ -17,7 +17,10 @@ if (isset($_GET["opslaan"])) {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
-		}
+		} else {
+                print("Query is niet uitgevoerd! Fock you!");
+
+        }
 
 }
 
@@ -59,6 +62,8 @@ if(isset($_GET["opslaan"])) {
 				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
 }
+
+$rol = $_SESSION["rol"];
 
 $pdo = NULL;
 ?>
@@ -128,7 +133,6 @@ $pdo = NULL;
 							<h1>Wijzigen</h1>
               <table>
                   <form action='accountwijzigen.php' method='get'>
-                      <tr><td>Rol: <input type="text" class="form-control" name="rol" <?php print("value=\"$rol\"");?>></td></tr>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
