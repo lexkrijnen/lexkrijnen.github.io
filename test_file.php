@@ -26,11 +26,11 @@
     $pdo = new PDO($db, $user, $pass);
 
         //TABEL CONTRACT
-        if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
+        if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
             if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+                $sql = "INSERT INTO Tekening (tekening_nummer, document, naam, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
+                $stmt->execute(array($_GET["tekening_nummer"], $_GET["document"], $_GET['naam'], $_GET["project_nummer"]));
             } else {
                 $error = ("Vul A.U.B alles in");
             }
