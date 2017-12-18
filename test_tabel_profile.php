@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    ?>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -32,14 +37,19 @@
         $pdo = new PDO($db, $user, $pass);
 
         //Contract
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt = $pdo->prepare("SELECT * FROM Contract WHERE contract_nummer = :contract_nummer");
         $stmt->execute();
         $contract = $stmt->fetchAll();
 
         //Tekening
-        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
-        $stmt2->execute();
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE contract_nummer = :contract_nummer");
+        $stmt2->execute(array();
         $tekening = $stmt2->fetchAll();
+
+        //Project
+        $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+        $stmt3->execute(array(':contract_nummer' => $_GET['id']));
+        $naamproject = $stmt3->fetchAll();
         ?>
 	</head>
   <body>
@@ -66,6 +76,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+
    <div class="container">
     	<div class="row">
     		<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">

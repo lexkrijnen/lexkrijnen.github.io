@@ -101,6 +101,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a href="account.php">Mijn Account</a></li>
                 <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -115,24 +116,12 @@ if($klant_id == "" AND $medewerker_nummer != ""){
     ?>
 
 
-
-    <div class="row page-box col-xs-4 col-xs-offset-1">
-        <h1>Meer Werk</h1>
-            <table class="table table-hover table-bordered">
-                <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
-                </tr>
-            </table>
-    </div>
-
-
     <div class="page-box col-xs-4 col-xs-offset-1">
         <h1>Uw gegevens</h1>
             <table class="table table-hover table-bordered">
                 <tr>
-                    <th>Nr.</th>
-                    <th>Beschrijving</th>
+                    <th>Veld</th>
+                    <th>Gegevens</th>
                 </tr>
                 <?php
                     if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {

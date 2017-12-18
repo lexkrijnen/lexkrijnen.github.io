@@ -28,7 +28,7 @@
 	</head>
   <body>
   	<?php
-			$target_dir = "/pdf/";
+			$target_dir = "pdf/";
 			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -73,11 +73,12 @@
     	<div class="row">
     		<div class="col-xs-12">
 
-    			<form action="uploadtest.php" method="post" enctype="multipart/form-data">
-						<input type="file" name="doc">
-						<br>
-						<input type="submit" value="Upload">
-					</form>
+
+					<form action="upload_file.php" method="post" enctype="multipart/form-data">
+ 						<input type="file" name="file" size="50" />
+ 						<br />
+ 						<input type="submit" value="Upload" />
+ 					</form>
 
     		</div>
     	</div>

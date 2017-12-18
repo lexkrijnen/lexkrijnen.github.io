@@ -78,6 +78,7 @@
                 <li><a href="meerminderlanding.php">Meer/Minder Werk inzien</a></li>
                 <li><a href="#">Contracten inzien</a></li>
                 <li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
+                <li><a href="profile.php">Inzien contract en tekeningen </a></li>
             </ul>
         </div>
     </div>

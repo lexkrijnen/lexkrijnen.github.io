@@ -8,15 +8,15 @@ $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
 
-if (isset($_GET["opslaan"])) {
+if (isset($_POST["opslaan"])) {
 		if ($_SESSION["rol"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
 				$stmt = $pdo->prepare($sql);
-				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
+				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["klantnummer"]));
 		} elseif ($_SESSION["rol"] == "medewerker") {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
-				$stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["functie"], $_GET["medewerkernummer"]));
+				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"], $_POST["medewerkernummer"]));
 		} else {
                 print("Query is niet uitgevoerd! Fock you!");
 
@@ -35,30 +35,30 @@ $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
 
 if ($_SESSION["rol"] == "klant") {
-		$klant_nummer = $_SESSION["klantnummer"];
+		$klant_nummer = $_SESSION["klant_id"];
 }
 
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
-		$medewerker_nummer = $_SESSION["medewerkernummer"];
+		$medewerker_nummer = $_SESSION["medewerker_nummer"];
 }
 
-if(isset($_GET["opslaan"])) {
-    $voornaam = $_GET["voornaam"];
-    $tussenvoegsel = $_GET["tussenvoegsel"];
-    $achternaam = $_GET["achternaam"];
-    $naam = $_GET["naam"];
-    $telefoonnummer = $_GET["telefoonnummer"];
-    $emailadres = $_GET["emailadres"];
-    $adres = $_GET["adres"];
-    $postcode = $_GET["postcode"];
-    $woonplaats = $_GET["woonplaats"];
+if(isset($_POST["opslaan"])) {
+    $voornaam = $_POST["voornaam"];
+    $tussenvoegsel = $_POST["tussenvoegsel"];
+    $achternaam = $_POST["achternaam"];
+    $naam = $_POST["naam"];
+    $telefoonnummer = $_POST["telefoonnummer"];
+    $emailadres = $_POST["emailadres"];
+    $adres = $_POST["adres"];
+    $postcode = $_POST["postcode"];
+    $woonplaats = $_POST["woonplaats"];
 		if ($_SESSION["rol"] == "klant") {
-				$klant_nummer = $_GET["klantnummer"];
+				$klant_nummer = $_POST["klantnummer"];
 		}
 		if ($_SESSION["rol"] == "medewerker") {
-				$functie = $_GET["functie"];
-				$medewerker_nummer = $_GET["medewerker_nummer"];
+				$functie = $_POST["functie"];
+				$medewerker_nummer = $_POST["medewerkernummer"];
 		}
 }
 
@@ -131,7 +131,7 @@ $pdo = NULL;
           <div class=pagebox>
 							<h1>Wijzigen</h1>
               <table>
-                  <form action='accountwijzigen.php' method='get'>
+                  <form action='accountwijzigen.php' method='post'>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
@@ -170,8 +170,8 @@ $pdo = NULL;
 
 
             <?php
-             print($_GET["voornaam"] . ' ' . $_GET["tussenvoegsel"] . ' ' . $_GET["achternaam"] . ' ' . $_GET["emailadres"] . ' ' . $_GET["telefoonnummer"] . ' ' . $_GET["adres"] . ' ' . $_GET["postcode"] . ' ' . $_GET["woonplaats"] . ' ' . $_GET["functie"] . ' ' . $_GET["medewerkernummer"]);
-            if(isset($_GET["opslaan"])) {
+             print($_POST["voornaam"] . ' ' . $_POST["tussenvoegsel"] . ' ' . $_POST["achternaam"] . ' ' . $_POST["emailadres"] . ' ' . $_POST["telefoonnummer"] . ' ' . $_POST["adres"] . ' ' . $_POST["postcode"] . ' ' . $_POST["woonplaats"] . ' ' . $_POST["functie"] . ' ' . $_POST["medewerkernummer"]);
+            if(isset($_POST["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
