@@ -76,24 +76,27 @@
         <form method="get" action="test_file.php">
             <table class="table-bordered">
                 <tr>
-                    <th><b>Contract.nr</b></th>
+                    <th><b>Tekening.nr</b></th>
                     <th><b>Document</b></th>
                     <th><b>Naam</b></th>
+                    <th><b>Project.nr</b></th>
                     <th></th>
                 </tr>
                 <?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td>" . $document2["contract_nummer"] . "</td>");
+                    print("<td>" . $document2["tekening_nummer"] . "</td>");
                     print("<td>" . $document2["document"] . "</td>");
                     print("<td>" . $document2["naam"] . "</td>");
+                    print("<td>" . $document2["project_nummer"] . "</td>")
                     print("</tr>");
                 }
                 ?>
                 <tr>
-                    <td><input type="text" name="contract_nummer" size="10"></td>
+                    <td><input type="text" name="tekening_nummer" size="10"></td>
                     <td><input type="file" name="document"></td>
                     <td><input type="text" name="naam"size="10"></td>
+                    <td><input type="text" name="project_nummer"size="10"></td>
                     <td><input type="submit" name="toevoegencontract" value="Toevoegen"></td>
                 </tr>
             </table>
