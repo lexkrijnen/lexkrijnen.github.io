@@ -5,12 +5,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php
 
-RewriteEngine on 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteCond %{REQUEST_FILENAME}\.html -f 
-RewriteRule ^(.*)$ $1.html
-
 php_flag display_startup_errors on
 php_flag display_errors on
 php_flag html_errors on
-php_flag  log_errors on
+php_flag log_errors on
+
+php_value upload_max_filesize 10M
+php_value post_max_size 20M
+php_value memory_limit 32M

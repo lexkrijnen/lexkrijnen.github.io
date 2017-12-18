@@ -64,6 +64,21 @@
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 
 
+
+    $_SESSION["voornaam"] = $voornaam;
+    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
+    $_SESSION["achternaam"] =  $achternaam;
+    $_SESSION["naam"] = $naam;
+    $_SESSION["telefoonnummer"] = $telefoonnummer;
+    $_SESSION["emailadres"] = $emailadres;
+    $_SESSION["adres"] = $adres;
+    $_SESSION["postcode"] = $postcode;
+    $_SESSION["woonplaats"] = $woonplaats;
+    //$_SESSION["rol"] = $rol;
+
+
+
+
     $pdo = NULL;
 ?>
 
