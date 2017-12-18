@@ -37,16 +37,16 @@
         $pdo = new PDO($db, $user, $pass);
 
         //Contract
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt = $pdo->prepare("SELECT * FROM Contract WHERE contract_nummer = :contract_nummer");
         $stmt->execute(array(':contract_nummer' => $_GET['id']));
         $contract = $stmt->fetchAll();
 
         //Tekening
-        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening WHERE contract_nummer = :contract_nummer");
         $stmt2->execute(array(':contract_nummer' => $_GET['id']));
         $tekening = $stmt2->fetchAll();
 
-        //Projcet
+        //Project
         $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
         $stmt3->execute(array(':contract_nummer' => $_GET['id']));
         $naamproject = $stmt3->fetchAll();
