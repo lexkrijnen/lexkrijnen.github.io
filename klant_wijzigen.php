@@ -37,7 +37,7 @@ if ($_SESSION["rol2"] == "klant") {
 }
 
 if ($_SESSION["rol2"] == "medewerker") {
-		$functie = $_SESSION["functie"];
+		$functie = $_SESSION["functie2"];
 		$medewerker_nummer = $_SESSION["medewerkernummer2"];
 }
 
@@ -137,7 +137,7 @@ $pdo = NULL;
                       <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
 											<?php
-												if ($_SESSION["rol2"] == "medewerker") {
+												if ($_SESSION["rol2"] == "medewerker" && $_SESSION["functie"] == "1") {
 														print("<tr><td>Functie</td>");
 
 														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
@@ -151,8 +151,9 @@ $pdo = NULL;
 																print("checked");
 														}
 														print("> Admin </td></tr>");
-
+												} elseif ($_SESSION["rol2"] == "medewerker") {
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+												}
 												} elseif ($_SESSION["rol2"] == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}

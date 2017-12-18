@@ -142,20 +142,6 @@ $pdo = NULL;
                       <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
 											<?php
 												if ($_SESSION["rol"] == "medewerker") {
-														print("<tr><td>Functie</td>");
-
-														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
-														if($functie=='2'){
-																print("checked");
-														}
-														print(" > Medewerker</td></tr>");
-
-														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
-														if($functie=='1') {
-																print("checked");
-														}
-														print("> Admin </td></tr>");
-
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
 												} elseif ($_SESSION["rol"] == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
@@ -170,11 +156,9 @@ $pdo = NULL;
 
 
             <?php
-             print($_POST["voornaam"] . ' ' . $_POST["tussenvoegsel"] . ' ' . $_POST["achternaam"] . ' ' . $_POST["emailadres"] . ' ' . $_POST["telefoonnummer"] . ' ' . $_POST["adres"] . ' ' . $_POST["postcode"] . ' ' . $_POST["woonplaats"] . ' ' . $_POST["functie"] . ' ' . $_POST["medewerkernummer"]);
             if(isset($_POST["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
-
 
             ?>
           </div>
