@@ -16,16 +16,17 @@ $sqlresult = $stmt1->fetch();
 foreach ($sqlresult as $a => $b) {
     $lastprojectnr = $b['project_nummer'];
 }
-$lastprojectnr = $lastprojectnr + 1;
+$projectnummer = $lastprojectnr + 1;
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
     if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
         $error = "Vul A.U.B. alle velden in. ";
     } else {
+        print("SQL QUERY word succesvol uitgevoerd!");
         $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($_GET["voornaam"], $_GET["tussenvoegsel"], $_GET["achternaam"], $_GET["emailadres"], $_GET["telefoonnummer"], $_GET["adres"], $_GET["postcode"], $_GET["woonplaats"], $_GET["klantnummer"]));
+        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
     }
 }
 $pdo = NULL;
@@ -73,7 +74,7 @@ $pdo = NULL;
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
-                <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$lastprojectnr\""); ?> disabled></td></tr>
+                <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
                 <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
                 <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
