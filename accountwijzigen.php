@@ -1,4 +1,4 @@
-<?php
+z<?php
 session_start();
 
 
@@ -128,6 +128,7 @@ $pdo = NULL;
 							<h1>Wijzigen</h1>
               <table>
                   <form action='accountwijzigen.php' method='get'>
+                      <tr><td>Rol: <input type="text" class="form-control" name="rol" <?php print("value=\"$rol\"");?>></td></tr>
                       <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
                       <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
                       <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>

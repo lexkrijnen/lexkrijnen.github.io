@@ -24,14 +24,6 @@
 
 
 
-    /*if(isset($_GET["wijzigen"])) {
-        $enable=true;
-    }else{
-        $enable=false;
-    }*/
-
-
-
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
