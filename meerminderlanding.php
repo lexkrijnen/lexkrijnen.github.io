@@ -7,7 +7,6 @@
      @$klant_id = $_SESSION['klant_id'];
      @$klant_voornaam = $_SESSION['voornaam'];
      @$medewerker_nummer = $_SESSION['medewerker_nummer']
-
      ?>
          <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
