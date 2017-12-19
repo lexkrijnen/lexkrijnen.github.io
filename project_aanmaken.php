@@ -29,12 +29,11 @@ foreach ($queryresult3 as $a => $b) {
     $klant_nummer = $b['klant_nummer'];
     $klant_voornaam = $b['voornaam'];
 }
-var_dump($queryresult3);
-print("Queryresult ^ <br>");
-var_dump($klant_nummer);
-print("Klant_nummer ^ <br>");
-var_dump($klant_voornaam);
-print("Voornaam ^ <br>");
+
+foreach ($queryresult3 AS $klant) {
+    print($klant["klant_nummer"] . "<br>");
+    print($klant["voornaam"] . "<br>");
+
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
