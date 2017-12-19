@@ -94,13 +94,14 @@
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
                     <ul class="nav">
-                        <li class="active">
-                            <h4>Menu</h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <li><a href="#">Mijn gegevens</a></li>
-                        <li class="nav-divider"></li>
-                        <li>
+                            <dropdown>
+                                <input id="toggle1" type="checkbox" checked>
+                                <label for="toggle1" class="animate">Menu<i class="fa fa-list float-right"></i></label>
+                                <ul class="animate">
+                                    <li class="animate">Mijn gegevens<i class="fa fa-code float-right"></i></li>
+                                </ul>
+                            </dropdown>
+                            <li class="nav-divider"></li>
                             <dropdown>
                                 <input id="toggle1" type="checkbox" checked>
                                 <label for="toggle1" class="animate">Mijn projecten<i class="fa fa-list float-right"></i></label>
@@ -109,7 +110,6 @@
                                     <li class="animate">Contract/Tekening<i class="fa fa-arrows-alt float-right"></i></li>
                                 </ul>
                             </dropdown>
-                        </li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
