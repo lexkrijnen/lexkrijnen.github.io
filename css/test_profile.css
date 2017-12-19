@@ -30,8 +30,7 @@ dropdown label:hover, dropdown ul li:hover{
   cursor: pointer;
 }
 dropdown label{
-  color: #1ABC9C;
-  border-left: 2px solid #FFA500;
+  color: #FFFFFF;
   position: relative;
   z-index: 2;
 }
