@@ -5,7 +5,7 @@ $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
 //MEER WERK
-$stmt = $pdo->prepare("SELECT * FROM Klant");
-$stmt->execute();
-$meerwerk = $stmt->fetchAll();
+$stmt3 = $pdo->prepare("SELECT * FROM Klant");
+$stmt3->execute();
+$meerwerk = $stmt3->fetchAll();
 var_dump($meerwerk);
