@@ -6,14 +6,14 @@
 	height: 60%
 }
 .TBhomeBackground {
-	background-image: url("../images/staal.jpeg");
+	background-image: url("../images/Teken.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 70%
 }
 .MBhomeBackground {
-	background-image: url("../images/Teken.jpeg");
+	background-image: url("../images/staal.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
