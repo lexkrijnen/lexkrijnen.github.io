@@ -125,26 +125,14 @@
 									<h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
 								</div>
 								<div class="modal-body">
-									<table class="table">
-										<tr>
-											<thead>
-												<th><b>Contract.nr</b></th>
-												<th><b>Naam</b></th>
-												<th><b>Document</b></th>
-												<th></th>
-											</thead>
-										</tr>
-										<tr>
-											<form action="upload_file.php" method="post" enctype="multipart/form-data">
-												<input type="file" name="document" />
-												<br />
-												<input type="submit" value="Upload" />
-											</form>
-										</tr>
-									</table>
+									<form action="upload_file.php" method="post" enctype="multipart/form-data">
+										<input type="file" name="document" />
+										<br />
+										<input type="submit" value="Upload" />
+									</form>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal"><b>Close</b></button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal"><b>Close</b></button>
 								</div>
 							</div>
 						</div>
