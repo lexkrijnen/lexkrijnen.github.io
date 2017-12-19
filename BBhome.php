@@ -81,7 +81,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 		<!--<div class="">-->
 		<div class="row">
-			<div class="slider-float">
+			<div class="BBhomeBackground">
 				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
 					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn select-btn contbutton">
@@ -90,7 +90,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</a>
 			</div>
 
-			<div class="slider slider-demo col-xs-12">
+		<!--	<div class="slider slider-demo col-xs-12">
 				<img src="images/IMG_2442.JPG">
 				<img src="images/IMG_2601.JPG">
 				<img src="images/IMG_2784.JPG">
@@ -98,7 +98,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<img src="images/IMG_6733.JPG">
 			</div>
 		</div>
-
+-->
 		<a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
