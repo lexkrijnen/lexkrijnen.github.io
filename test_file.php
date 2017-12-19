@@ -98,16 +98,16 @@
                             <input id="toggle1" type="checkbox" checked>
                             <label for="toggle1" class="animate">Menu<i class="fa fa-list"></i></label>
                             <ul class="animate">
-                                <li class="animate">Mijn gegevens<i class="fa fa-code"></i></li>
+                                <li><a href="test_PDF_upload.php" >Mijn gegevens</a><i class="fa fa-arrows-alt"></i></li>
                             </ul>
                         </dropdown>
                         <li class="nav-divider"></li>
                         <dropdown>
                             <input id="toggle2" type="checkbox" checked>
                             <label for="toggle2" class="animate">Mijn projecten<i class="fa fa-list"></i></label>
-                            <ul class="animate">
-                                <li class="animate" href="test_file.php">Meer/minder werk<i class="fa fa-code"></i></li>
-                                <li class="animate"><a href="test_PDF_upload.php" >Contract/Tekening</a><i class="fa fa-arrows-alt"></i></li>
+                            <ul>
+                                <li><a href="test_PDF_upload.php" >Meer/Minder werk</a><i class="fa fa-arrows-alt"></i></li>
+                                <li><a href="test_PDF_upload.php" >Contract/Tekening</a><i class="fa fa-arrows-alt"></i></li>
                             </ul>
                         </dropdown>
                         <li class="nav-divider"></li>
