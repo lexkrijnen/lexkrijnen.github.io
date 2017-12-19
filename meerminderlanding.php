@@ -30,7 +30,8 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM Project WHERE klant_nummer = :klant_id";
+    $sql = "SELECT * FROM Project P JOIN Contract C ON C.project_nummer = P.project_nummer WHERE P.klant_nummer = :klant_id";
+    //$sql = "SELECT * FROM Project WHERE klant_nummer = :klant_id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
