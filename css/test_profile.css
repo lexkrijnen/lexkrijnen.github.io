@@ -6,7 +6,8 @@
     position:fixed;
     z-index:1;
 }
-/*sidebar dropdown*/
+
+/*sidebar text dropdown*/
 dropdown label, dropdown ul li{
   display: block;
   width: 200px;
