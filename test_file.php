@@ -106,8 +106,8 @@
                             <input id="toggle2" type="checkbox" checked>
                             <label for="toggle2" class="animate">Mijn projecten<i class="fa fa-list"></i></label>
                             <ul class="animate">
-                                <li class="animate">Meer/minder werk<i class="fa fa-code"></i></li>
-                                <li class="animate">Contract/Tekening<i class="fa fa-arrows-alt"></i></li>
+                                <li class="animate" href="test_file.php">Meer/minder werk<i class="fa fa-code"></i></li>
+                                <li class="animate" href="test_PDF_upload.php">Contract/Tekening<i class="fa fa-arrows-alt"></i></li>
                             </ul>
                         </dropdown>
                         <li class="nav-divider"></li>
