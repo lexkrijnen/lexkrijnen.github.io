@@ -100,7 +100,6 @@
                     <li class="nav-divider"></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
                     <li class="nav-divider"></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
@@ -109,7 +108,8 @@
             <!--/.well -->
         </div>
         <!--/span-->
-
+        </div>
+    </div>
 	<!--MEER WERK-->
 	<div class="container page-box">
 		<div class="col-xs-4">
