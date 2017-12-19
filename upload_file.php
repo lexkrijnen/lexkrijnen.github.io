@@ -20,7 +20,7 @@ if(isset($_FILES['file'])){
 
     if(empty($errors)==true){
         move_uploaded_file($file_tmp,"pdf/".$file_name);
-        header("Location: test_PDF_upload.php");
+        header("Location: /test_PDF_upload.php");
 				die();
     }else{
         print_r($errors);
