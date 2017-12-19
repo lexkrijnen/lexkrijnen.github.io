@@ -6,9 +6,7 @@
     position:fixed;
     z-index:1;
 }
-li > a:hover{
-    background-color: #ffc966;
-}
+
 /*view boxen*/
 #viewer-box {
 	height: 80vh;
