@@ -17,7 +17,7 @@
 }
 dropdown{
    display: inline-block;
-   margin: 20px 50px;
+
 }
 dropdown label, dropdown ul li{
   display: block;
@@ -31,8 +31,7 @@ dropdown label:hover, dropdown ul li:hover{
 }
 dropdown label{
   color: #1ABC9C;
-  border-left: 4px solid #1ABC9C;
-  border-radius: 0 5px 0 0;
+  border-left: 2px solid #FFA500;
   position: relative;
   z-index: 2;
 }
