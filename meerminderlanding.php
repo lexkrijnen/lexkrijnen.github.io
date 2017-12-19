@@ -35,6 +35,8 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
+
+    var_dump($queryresult);
     ?>
 </head>
 
@@ -94,7 +96,7 @@
             <ul>
                 <?php
             foreach ( $queryresult as $value ) {
-                print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value['P.naam'] . "</a></li>");
+                print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value['naam'] . "</a></li>");
             }
             ?>
             </ul>
