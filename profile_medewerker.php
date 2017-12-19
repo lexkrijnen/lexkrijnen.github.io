@@ -74,7 +74,7 @@ if (empty($medewerker_nummer)) {
             print("<h1>Hallo, " . $medewerker_voornaam . "</h1>");
         }
         ?>
-					<h6>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</h6>
+					<p>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</p>
 					<ul>
 						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
 						<li><a href="bekijken_bouwtekeningen.php">Projecten</a></li>
