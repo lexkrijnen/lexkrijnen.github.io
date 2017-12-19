@@ -30,10 +30,10 @@ foreach ($queryresult3 as $a => $b) {
     $klant_voornaam = $b['voornaam'];
 }
 
-foreach ($queryresult3 AS $klant) {
-    print($klant["klant_nummer"] . "<br>");
-    print($klant["voornaam"] . "<br>");
-}
+//foreach ($queryresult3 AS $klant) {
+//    print($klant["klant_nummer"] . "<br>");
+//    print($klant["voornaam"] . "<br>");
+//}
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
@@ -93,7 +93,15 @@ $pdo = NULL;
             <form action='project_aanmaken.php' method='get'>
                 <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
-                <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
+                <!-- <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr> -->
+                <label>Klant Nummer </label>
+                <select name="klant_nummer">
+                    <?php
+                    foreach ($queryresult3 AS $klant) {
+                        print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . '</option>');
+                    }
+                    ?>
+                </select>
                 <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
                 <!-- <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr> Statusnummer veranderen-->
                 <label>Status Nummer </label>
