@@ -93,9 +93,9 @@
     <div class="sidebar-item sidebar-block">
         <h3 class="sidebar-item">Menu</h3>
             <ul class="sidebar-item sidebar-up">
-                <li class="sidebar-item"><a href="#">Link 1</a></li>
-                <li class="sidebar-item"><a href="#">Link 2</a></li>
-                <li class="sidebar-item"><a href="#">Link 3</a></li>
+                <li class="sidebar-item button"><a href="#">Link 1</a></li>
+                <li class="sidebar-item button"><a href="#">Link 2</a></li>
+                <li class="sidebar-item button"><a href="#">Link 3</a></li>
             </ul>
         </div>
 
