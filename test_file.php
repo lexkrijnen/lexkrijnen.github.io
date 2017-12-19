@@ -93,34 +93,20 @@
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
-                    <ul class="dropdownMenu">
-                        <li>Item 1</li>
-                        <li data-dropdown-text="Item 2">
-                            <ul>
-                                <li data-dropdown-text="Item 2.1">
-                                    <ul>
-                                        <li>Item 2.1.1</li>
-                                        <li>Item 2.1.2</li>
-                                        <li>Item 2.1.3</li>
-                                    </ul>
-                                </li>
-                                <li data-dropdown-text="Item 2.2">
-                                    <ul>
-                                        <li>Item 2.2.1</li>
-                                        <li>Item 2.2.2</li>
-                                        <li>Item 2.2.3</li>
-                                    </ul>
-                                </li>
-                                <li data-dropdown-text="Item 2.3">
-                                    <ul>
-                                        <li>Item 2.3.1</li>
-                                        <li>Item 2.3.2</li>
-                                        <li>Item 2.3.3</li>
-                                    </ul>
-                                </li>
-                            </ul>
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
                         </li>
-                        <li>Item 3</li>
+                        <li class="nav-divider"></li>
+                        <li><a href="#">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="#">Meer/minder werk</a></li>
+                        <li><a href="#">Contract/Tekening</a></li>
+                        <li class="nav-divider"></li>
                     </ul>
                 </div>
                 <!--/.well -->
