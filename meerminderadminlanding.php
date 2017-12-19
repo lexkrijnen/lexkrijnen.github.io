@@ -25,7 +25,7 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $sql = "SELECT * FROM Project";
+    $sql = "SELECT * FROM Project P JOIN Contract C ON C.project_nummer = P.project_nummer";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $queryresult = $stmt->fetchAll();
@@ -68,7 +68,7 @@
 			<ul>
 				<?php
             foreach ( $queryresult as $value ) {
-                print ("<li>Project: <a href=\"meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                print ("<li>Project: <a href=\"meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . "</a></li>");
             }
             ?>
 			</ul>
