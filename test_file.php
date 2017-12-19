@@ -101,11 +101,15 @@
                         <li><a href="#">Mijn gegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
-                            <h4>Mijn projecten</h4>
+                            <dropdown>
+                                <input id="toggle1" type="checkbox" checked>
+                                <label for="toggle1" class="animate">Mijn projecten<i class="fa fa-list float-right"></i></label>
+                                <ul class="animate">
+                                    <li class="animate">Meer/minder werk<i class="fa fa-code float-right"></i></li>
+                                    <li class="animate">Contract/Tekening<i class="fa fa-arrows-alt float-right"></i></li>
+                                </ul>
+                            </dropdown>
                         </li>
-                        <li class="nav-divider"></li>
-                        <li><a href="#">Meer/minder werk</a></li>
-                        <li><a href="#">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
