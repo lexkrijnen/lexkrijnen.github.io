@@ -31,7 +31,7 @@ dropdown input ~ ul{
 }
 
 dropdown input:checked ~ ul{
-  visibility: invisible;
+  visibility: visible;
   opacity: 1;
   top: 0;
 }
