@@ -15,6 +15,9 @@ function GetLogin($username, $password) {
     }
     $hash = sha1($salt . $password);
 
+    var_dump($hash);
+    print("Hallo");
+
     $stmt2 = $pdo->prepare("SELECT * FROM Klant WHERE emailadres = '$username' AND wachtwoord = '$hash'");
     $stmt2->execute();
     $result = $stmt2->fetchAll();
