@@ -127,6 +127,7 @@
 								<div class="modal-body">
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 										<input type="file" name="document" />
+										<br />
 										<input type="submit" value="Upload" />
 									</form>
 								</div>

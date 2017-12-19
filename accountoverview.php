@@ -103,10 +103,6 @@ if($klant_id == "" AND $medewerker_nummer != ""){
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="accountoverview.php">Mijn gegevens</a></li>
-					<li class="nav-item"><a href="meerminderlanding.php">Meer/Minder werk</a></li>
-                    <li class="nav-item"><a href="profile.php">Contract/Tekening</a></li>
-                    <li class="nav-item"><a href=<?php if($rol=="klant"){print("account.php");}elseif($rol=="medewerker"){print("profile_medewerker.php");}?>>Mijn Account</a></li>
                     <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
@@ -114,6 +110,33 @@ if($klant_id == "" AND $medewerker_nummer != ""){
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant"){print("account.php");}elseif($rol=="medewerker"){print("profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="accountoverview.php">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="meerminderlanding.php">Meer/minder werk</a></li>
+                        <li><a href="profile.php">Contract/Tekening</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 	<?php
     if (empty($klant_id) AND empty($medewerker_nummer)) {
