@@ -23,7 +23,7 @@ $projectnummer = $lastprojectnr + 1;
 
 //BESTAANDE KLANTEN OPHALEN:
 $sql2 = "SELECT klant_nummer, voornaam FROM Klant";
-$stmt2 = $pdo->prepare($sql1);
+$stmt2 = $pdo->prepare($sql2);
 $stmt2->execute();
 $sqlresult2 = $stmt2->fetch();
 
