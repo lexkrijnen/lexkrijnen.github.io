@@ -21,13 +21,15 @@ $projectnummer = $lastprojectnr + 1;
 
 
 //BESTAANDE KLANTEN OPHALEN:
-$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam FROM Klant");
+$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam, tussenvoegsel, achternaam FROM Klant");
 $stmt3->execute();
 $queryresult3 = $stmt3->fetchAll();
 
 foreach ($queryresult3 as $a => $b) {
     $klant_nummer = $b['klant_nummer'];
     $klant_voornaam = $b['voornaam'];
+    $klant_tussenvoegsel = $b['tussenvoegsel'];
+    $klant_achternaam = $b['achternaam'];
 }
 
 //foreach ($queryresult3 AS $klant) {
@@ -98,7 +100,7 @@ $pdo = NULL;
                 <select name="klant_nummer">
                     <?php
                     foreach ($queryresult3 AS $klant) {
-                        print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . '</option>');
+                        print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . ' ' . $klant["tussenvoegsel"] . ' ' . $klant["achternaam"] . '</option>');
                     }
                     ?>
                 </select>
