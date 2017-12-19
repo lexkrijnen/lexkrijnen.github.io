@@ -55,6 +55,10 @@ dropdown input:checked ~ ul{
   top: 0;
 }
 
+li > a{
+    color: #000000;
+}
+
 /*view boxen*/
 #viewer-box {
 	height: 80vh;
