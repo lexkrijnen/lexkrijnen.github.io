@@ -1,18 +1,13 @@
 <?php
-session_start();
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$stmt3 = $pdo->prepare("SELECT salt FROM Klant WHERE emailadres = '$username'");
+$stmt3->execute();
+$salt = $stmt3->fetchAll();
 
-//TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
-$stmt = $pdo->query('SELECT max(project_nummer) FROM Project');
-$lastprojectnr = $stmt->fetchColumn(0);
-if ($lastprojectnr !== false) {
-    echo $lastprojectnr;
-}
+$hash = sha1($salt . $password);
 
-$projectnr = $lastprojectnr + 1;
-print ($projectnr);
+var_dump($salt);
