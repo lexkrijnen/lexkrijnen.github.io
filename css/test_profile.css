@@ -30,7 +30,7 @@ dropdown label:hover, dropdown ul li:hover{
 }
 
 dropdown label{
-  color: #FFFFFF;
+  color: #000000;
   position: relative;
   z-index: 2;
 }
@@ -47,7 +47,6 @@ dropdown input ~ ul{
 }
 
 dropdown input:checked + label{
-  background: #FFC966;
   color: #000000;
 }
 
