@@ -29,7 +29,7 @@ dropdown label, dropdown ul li{
 
 dropdown label:hover, dropdown ul li:hover{
   background: #FFC966;
-  color: white;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@ dropdown input ~ ul{
 
 dropdown input:checked + label{
   background: #FFC966;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 dropdown input:checked ~ ul{
