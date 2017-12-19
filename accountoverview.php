@@ -122,8 +122,8 @@ if($klant_id == "" AND $medewerker_nummer != ""){
     }else {
     ?>
 
-
-		<div class="page-box col-xs-4 col-xs-offset-1">
+    <div class="container page-box">
+        <div class="col-xs-12 col-md-12">
 			<h1>Uw gegevens</h1>
 			<table class="table table-hover table-bordered">
 				<tr>
@@ -159,6 +159,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
 
 
 		</div>
+    </div>
 
 
 
