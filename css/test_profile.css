@@ -1,6 +1,8 @@
 /*side bar*/
 .sidebar-item {
     background: #FFFFFF;
+    width:15%;
+    height: auto;
 }
 
 /*view boxen*/
