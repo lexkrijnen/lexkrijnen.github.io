@@ -9,15 +9,11 @@ $error = "";
 
 
 //TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
-$sql1 = "SELECT max(project_nummer) FROM Project";
-$stmt1 = $pdo->prepare($sql1);
-$stmt1->execute();
-$sqlresult = $stmt1->fetch();
-foreach ($sqlresult as $a => $b) {
-    $lastprojectnr = $b["project_nummer"];
+$stmt4 = $pdo->query('SELECT max(project_nummer) FROM Project');
+$lastprojectnr = $stmt4->fetchColumn(0);
+if ($lastprojectnr !== false) {
+    $projectnummer = $lastprojectnr + 1;
 }
-$projectnummer = $lastprojectnr + 1;
-print("projectnrKHUTTTT: ". $projectnummer);
 
 //BESTAANDE KLANTEN OPHALEN:
 $stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam, tussenvoegsel, achternaam FROM Klant");
