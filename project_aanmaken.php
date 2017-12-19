@@ -90,21 +90,21 @@ $pdo = NULL;
             <form action='project_aanmaken.php' method='get'>
                 <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
-                <label>Klant </label>
+                <tr><td>Klant</td><td>
                 <select name="klant_nummer">
                     <?php
                     foreach ($queryresult3 AS $klant) {
                         print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . ' ' . $klant["tussenvoegsel"] . ' ' . $klant["achternaam"] . '</option>');
                     }
                     ?>
-                </select><br>
-                <label>Status Nummer </label>
+                </select></td></tr>
+                <tr><td>Status Nummer</td><td>
                 <select name="status_nummer">
                     <option value="1">[1] Plannen</option>
                     <option value="2">[2] Bouwen</option>
                     <option value="3">[3] Afronden</option>
                     <option value="4">[4] Opleveren</option>
-                </select>
+                </select></td></tr>
                 <tr><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
         </table>
