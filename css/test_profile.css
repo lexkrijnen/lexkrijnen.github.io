@@ -1,3 +1,11 @@
+/*side bar*/
+.sidebar-item {
+    background: #FFFFFF;
+    width:15%;
+    height: 100%;
+}
+
+/*view boxen*/
 #viewer-box {
 	height: 80vh;
 }
@@ -11,65 +19,75 @@
 }
 
 td:hover {
-    background-color:  #ffc966;
+	background-color: #ffc966;
 }
 
-th > h3 > b{
-    color: #FFFFFF;
-    margin: 10px 10px 10px 10px; /* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
-}
-th > b{
-    color:#FFFFFF;
-}
-thead{
-    background-color: #FFA500;
-    border: 1px solid #FFA500; /*border zoals gewenst in schermontwerp*/
-    border-bottom: 2px solid #804000;
+th > h3 > b {
+	color: #FFFFFF;
+	margin: 10px 10px 10px 10px;
+	/* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
 }
 
-td > a{
-    color: #000000;
+th > b {
+	color: #FFFFFF;
 }
 
-td{
-    border-left: 1px solid #FFA500; /*border zoals gewenst*/
-    border-right: 1px solid #FFA500; /*border zoals gewenst*/
-    padding-left: 10px; /*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
+thead {
+	background-color: #FFA500;
+	border: 1px solid #FFA500;
+	/*border zoals gewenst in schermontwerp*/
+	border-bottom: 2px solid #804000;
 }
 
-.bottom{
-    border-bottom: 2px solid black; /*bottom class die je meegeeft in de html code aan de TD die de onderste is, op deze manier geeft je alleen die maar een bottom border*/
+td > a {
+	color: #000000;
 }
 
-tbody{
-    background-color: #FFE1B9;
-}
-.btn-lg{
-    color: #FFFFFF;
-    background-color: #FFA500;
-    border-color: #FFA500;
-}
-
-.btn-lg:hover{
-    color: #FFFFFF;
-    border-color: #ffc966;
-    background-color: #ffc966;
+td {
+	border-left: 1px solid #FFA500;
+	/*border zoals gewenst*/
+	border-right: 1px solid #FFA500;
+	/*border zoals gewenst*/
+	padding-left: 10px;
+	/*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
 }
 
-.btn-default{
-    background-color: #FFA500;
-    border-color: #FFA500;
-    color:#FFFFFF;
+.bottom {
+	border-bottom: 2px solid black;
+	/*bottom class die je meegeeft in de html code aan de TD die de onderste is, op deze manier geeft je alleen die maar een bottom border*/
 }
 
-.btn-default:hover{
-    color: #FFFFFF;
-    border-color: #ffc966;
-    background-color: #ffc966;
+tbody {
+	background-color: #FFE1B9;
+}
+
+.btn-lg {
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+
+.btn-lg:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
+}
+
+.btn-default {
+	background-color: #FFA500;
+	border-color: #FFA500;
+	color: #FFFFFF;
+}
+
+.btn-default:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+
+@media only screen and (min-width: 768px) {
 	.pdf-viewer {
 		width: 94%;
 		height: 92%;
@@ -82,5 +100,6 @@ tbody{
 }
 
 /*footer*/
+
 .footer-bottom-layout {
-    text-align: center;
+	text-align: center;
