@@ -19,9 +19,15 @@ foreach ($sqlresult as $a => $b) {
 }
 $projectnummer = $lastprojectnr + 1;
 
-
+var_dump($projectnummer);
 
 //BESTAANDE KLANTEN OPHALEN:
+$sql5 = "SELECT * FROM Klant";
+$stmt5 = $pdo->prepare($sql5);
+$stmt5->execute();
+$sqlresult5 = $stmt5->fetch();
+var_dump($sqlresult5);
+
 $sql2 = "SELECT klant_nummer, voornaam FROM Klant";
 $stmt2 = $pdo->prepare($sql2);
 $stmt2->execute();
