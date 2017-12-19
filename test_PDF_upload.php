@@ -116,7 +116,7 @@
                 ?>
 				</table>
 				<!--Uploaden Contract-->
-				<form method="get" action="test_PDF_upload.php">
+				<form method="post" enctype="multipart/form-data" action="test_PDF_upload.php">
 					<a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Contract toevoegen</a>
 					<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
 						<div class="modal-dialog">
