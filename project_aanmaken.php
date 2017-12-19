@@ -34,7 +34,7 @@ foreach ($queryresult3 as $a => $b) {
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
-    if ($_GET["naam"] == "" OR $_GET["klant_nummer"] == "" OR $_GET["contract_nummer"] == "" OR $_GET["status_nummer"] == "") {
+    if ($_GET["naam"] == "" OR $_GET["klant_nummer"] == "" OR $_GET["status_nummer"] == "") {
         $error = ("Vul A.U.B. alle velden in.");
     } else {
         $sql = "INSERT INTO Project (project_nummer, naam, klant_nummer, status_nummer) VALUES (?,?,?,?)";
