@@ -93,7 +93,7 @@ if (empty($medewerker_nummer)) {
         <h1>Project Toevoegen</h1>
         <table>
             <form action='project_aanmaken.php' method='get'>
-                <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
+                <tr><td>Project Nummer  </td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
                 <tr><td>Klant</td><td>
                 <select name="klant_nummer" class="form-control">
