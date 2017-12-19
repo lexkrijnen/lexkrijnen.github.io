@@ -30,7 +30,7 @@ dropdown input ~ ul{
   z-index: 1;
 }
 
-dropdown input:disabled ~ ul{
+dropdown input:checked ~ ul{
   visibility: visible;
   opacity: 1;
   top: 0;
