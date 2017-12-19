@@ -12,4 +12,9 @@ $salt = $stmt3->fetchAll();
 
 $hash = sha1($salt . $password);
 
-print ($salt['salt']);
+foreach ($salt as $a => $b) {
+    $salt = $b[['salt'];
+}
+
+print ($salt);
+var_dump($salt);
