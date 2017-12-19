@@ -94,7 +94,7 @@
         <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="sidebar-nav">
                 <ul class="nav">
-                    <li><h4>Menu</h4></li>
+                    <li class="active"><h4>Menu</h4></li>
                     <li class="nav-divider"></li>
                     <li><a href="#">Mijn gegevens</a></li>
                     <li class="nav-divider"></li>
