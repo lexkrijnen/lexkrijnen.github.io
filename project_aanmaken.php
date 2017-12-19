@@ -37,9 +37,9 @@ if (isset($_GET["opslaan"])) {
     if ($_GET["naam"] == "" OR $_GET["klant_nummer"] == "" OR $_GET["contract_nummer"] == "" OR $_GET["status_nummer"] == "") {
         $error = ("Vul A.U.B. alle velden in.");
     } else {
-        $sql = "INSERT INTO Project (project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO Project (project_nummer, naam, klant_nummer, status_nummer) VALUES (?,?,?,?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
+        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["status_nummer"]));
     }
 }
 
@@ -99,7 +99,6 @@ $pdo = NULL;
                     }
                     ?>
                 </select>
-                <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
                 <!-- <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr> Statusnummer veranderen-->
                 <label>Status Nummer </label>
                 <select name="status_nummer">
