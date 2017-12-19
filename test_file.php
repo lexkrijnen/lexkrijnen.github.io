@@ -95,14 +95,11 @@
             <div class="sidebar-nav">
                 <ul class="nav">
                     <li class="active"><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Meer/minder werk</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Contract/Tekening</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Mijn gegevens</a></li>
                 </ul>
             </div>
             <!--/.well -->
