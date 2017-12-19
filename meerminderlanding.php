@@ -35,6 +35,9 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
+
+    var_dump($queryresult);
+
     ?>
 </head>
 
