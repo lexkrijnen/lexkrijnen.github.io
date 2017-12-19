@@ -109,6 +109,19 @@ $pdo = NULL;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+<<<<<<< HEAD
+                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="account.php">Mijn account</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+=======
 					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
 				</div>
 
@@ -122,10 +135,28 @@ $pdo = NULL;
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
+>>>>>>> origin/master
 
 
 
 
+<<<<<<< HEAD
+      <div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+          <div class=pagebox>
+							<h1>Wijzigen</h1>
+              <table>
+                  <form action='klant_wijzigen.php' method='get'>
+                      <tr><td>Voornaam</td><td><input type="text" class="form-control" name="voornaam" <?php print("value=\"$voornaam\""); ?> ></td></tr>
+                      <tr><td>Tussenvoegsel</td><td><input type="text" class="form-control" name="tussenvoegsel" <?php print("value=\"$tussenvoegsel\""); ?>></td></tr>
+                      <tr><td>Achternaam</td><td><input type="text" class="form-control" name="achternaam" <?php print("value=\"$achternaam\""); ?>></td></tr>
+                      <tr><td>Telefoonnummer  </td><td><input type="text" class="form-control" name="telefoonnummer" <?php print("value=\"$telefoonnummer\""); ?>></td></tr>
+                      <tr><td>Emailadres</td><td><input type="text" class="form-control" name="emailadres" <?php print("value=\"$emailadres\""); ?>></td></tr>
+                      <tr><td>Adres</td><td><input type="text" class="form-control" name="adres" <?php print("value=\"$adres\""); ?>></td></tr>
+                      <tr><td>Postcode</td><td><input type="text" class="form-control" name="postcode" <?php print("value=\"$postcode\""); ?>></td></tr>
+                      <tr><td>Woonplaats</td><td><input type="text" class="form-control" name="woonplaats" <?php print("value=\"$woonplaats\""); ?>></td></tr>
+											<?php
+												if ($_SESSION["rol2"] == "medewerker" ) {
+=======
 		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
 			<div class=pagebox>
 				<h1>Wijzigen</h1>
@@ -165,6 +196,7 @@ $pdo = NULL;
 						</tr>
 						<?php
 												if ($_SESSION["rol2"] == "medewerker") {
+>>>>>>> origin/master
 														print("<tr><td>Functie</td>");
 
 														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
