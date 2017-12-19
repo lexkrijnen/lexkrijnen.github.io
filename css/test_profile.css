@@ -3,8 +3,8 @@
     height:100%;
     width: 15%;
     background-color:#FFFFFF;
-    position:fixed!important;
-    z-index:-5;
+    position:fixed;
+    z-index:1;
 }
 
 /*view boxen*/
