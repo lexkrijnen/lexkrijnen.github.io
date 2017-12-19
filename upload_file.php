@@ -11,11 +11,15 @@ if(isset($_FILES['file'])){
     $expensions= array("pdf", "PDF");
 
     if(in_array($file_ext,$expensions)=== false){
-        $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+        $errors[]="Dit bestandstype is niet toegestaan, gebruik aub alleen .pdf bestanden.";
+				sleep(5);
+        header("Location: /test_PDF_upload.php");
     }
 
     if($file_size > 2097152){
-        $errors[]='File size must be excately 2 MB';
+        $errors[]='Het bestand is te groot.';
+				sleep(5);
+        header("Location: /test_PDF_upload.php");
     }
 
     if(empty($errors)==true){
