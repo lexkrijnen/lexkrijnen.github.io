@@ -120,9 +120,6 @@ if (empty($klant_id)) {
 								<th>Prijs</th>
 							</tr>
 							<?php
-                            if ($meerwerk == "") {
-                                print('<tr><p>Er zijn geen mutaties gevonden.</p></tr>');
-                            } else {
                 $meerwerkcount = 1;
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
@@ -131,7 +128,6 @@ if (empty($klant_id)) {
                     print("<td>€ " . $werk["prijs"] . "</td>");
                     print("</tr>");
                     $meerwerkcount++;
-                    }
                 }
                 ?>
 						</table>
