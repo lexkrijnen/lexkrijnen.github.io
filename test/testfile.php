@@ -17,4 +17,3 @@ foreach ($salt as $a => $b) {
 }
 
 print ($salt);
-var_dump($salt);
