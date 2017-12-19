@@ -16,7 +16,7 @@ $sqlresult = $stmt1->fetch();
 var_dump($sqlresult);
 
 foreach ($sqlresult as $a => $b) {
-    $lastprojectnr = $b['project_nummer'];
+    $lastprojectnr = $b['max(project_nummer)'];
 }
 $projectnummer = $lastprojectnr + 1;
 
