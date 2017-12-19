@@ -56,7 +56,7 @@
     $minderwerk = $stmt2->fetchAll();
 
     //NAAM PROJECT
-    $stmt3 = $pdo->prepare("SELECT naam FROM Project WHERE contract_nummer = :contract_nummer");
+    $stmt3 = $pdo->prepare("SELECT p.naam FROM Project p JOIN Contract c ON  p.project_nummer = c.project_nummer WHERE contract_nummer = :contract_nummer");
     $stmt3->execute(array(':contract_nummer' => $_GET['id']));
     $naamproject = $stmt3->fetchAll();
     ?>
