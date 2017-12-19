@@ -35,6 +35,19 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
+<<<<<<< HEAD
+
+    var_dump($queryresult);
+
+    if($klant_id == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+        }elseif($klant_id != "" AND $medewerker_nummer == ""){
+            $rol = "klant";
+        }
+
+    $_SESSION["rol"] = $rol;
+=======
+>>>>>>> origin/master
     ?>
 </head>
 
