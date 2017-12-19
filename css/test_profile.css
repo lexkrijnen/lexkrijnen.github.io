@@ -16,7 +16,6 @@ dropdown label, dropdown ul li{
 }
 dropdown label:hover, dropdown ul li:hover{
   background: #FFC966;
-  color: white;
   cursor: pointer;
 }
 
