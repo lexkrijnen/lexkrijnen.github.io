@@ -14,18 +14,39 @@
         <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
         <meta name="author" content="Nard Wemes">
         <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
-        <title>Welkom bij Wegro</title>
+
+        <title>Contract/Tekening</title>
+
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+
         <!-- Global styles for this website -->
         <link href="css/global.css" rel="stylesheet">
+
         <!-- Custom styles for this page -->
-        <link href="css/index.css" rel="stylesheet">
+        <link href="css/profile.css" rel="stylesheet">
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+        <?php
+        $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+        //Contract
+        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt->execute();
+        $contract = $stmt->fetchAll();
+
+        //Tekening
+        $stmt2 = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt2->execute();
+        $tekening = $stmt2->fetchAll();
+        ?>
 </head>
 
 <body>
@@ -62,7 +83,7 @@
                             <h4>Menu</h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href=<?php if($rol=="klant"){print("account.php");}elseif($rol=="medewerker"){print("profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
                         <li><a href="accountoverview.php">Mijn gegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
@@ -81,38 +102,74 @@
     </div>
 
     <?php
-        if (empty($klant_id)) {
-            print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-            print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-        } else {
-        ?>
+      if (empty($klant_id)) {
+          print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+      } else {
+      ?>
 
-        <div class="container page-box">
-            <div class="col-xs-12 col-md-12">
-                <?php
-            $hour = date('H', time());
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+                    <!--Contract-->
+                    <form>
+                        <table class="table table-hover">
+                            <tr>
+                                <thead>
+                                    <th>
+                                        <h3><b>Contract</b></h3>
+                                    </th>
+                                </thead>
+                            </tr>
+                            <?php
+                	foreach ($contract AS $document) {
+                    print("<tr>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+                        </table>
+                    </form>
+                    <br>
+                    <!--Tekening-->
+                    <form>
+                        <table class="table table-hover">
+                            <tr>
+                                <thead>
+                                    <th>
+                                        <h3><b>Tekeningen</b></h3>
+                                    </th>
+                                </thead>
+                            </tr>
+                            <?php
+                foreach ($tekening AS $document2) {
+                    print("<tr>");
+				    print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document2["document"] . "' target='pdf_viewer'>" . $document2["naam"] . "</td>");
+                    print("</tr>");
+                    }
+                ?>
+                        </table>
+                    </form>
+                </div>
+                <?php $pdo = NULL; ?>
+                <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+                    <iframe class="pdf-viewer" name="pdf_viewer"></iframe>
 
-            if( $hour > 6 && $hour <= 11) {
-                print("<h1>Goedemorgen, " . $klant_voornaam . "</h1>");
-            }
-            else if($hour > 11 && $hour <= 16) {
-                print("<h1>Goedemiddag, " . $klant_voornaam . "</h1>");
-            }
-            else if($hour > 16 && $hour <= 23) {
-                print("<h1>Goedenavond, " . $klant_voornaam . "</h1>");
-            }
-            else {
-                print("<h1>Hallo, " . $klant_voornaam . "</h1>");
-            }
-            ?>
+                    <!-- If embedded pdf does not work, display fallback option instead. -->
+                    <div class="pdf-fail">
+                        <p>Problemen met het bekijken?</p>
+                        <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- /.container -->
+
         <div class="row">
             <div class="col-xs-12 text-center footer-rights">
                 <p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
             </div>
         </div>
-
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
