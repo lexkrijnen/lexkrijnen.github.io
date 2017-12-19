@@ -199,8 +199,8 @@ $pdo = NULL;
             if(isset($_GET["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
-
-
+						/////////////////////////////
+						print($_SESSION["functie"]);
             ?>
 			</div>
 		</div>
