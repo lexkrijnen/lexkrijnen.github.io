@@ -92,7 +92,7 @@ $pdo = NULL;
                 <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
                 <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
                 <!-- <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr> Statusnummer veranderen-->
-                <select name="status_nummer">
+                <select name="status_nummer">Status Nummer
                     <option value="1">[1] Plannen</option>
                     <option value="2">[2] Bouwen</option>
                     <option value="3">[3] Afronden</option>
