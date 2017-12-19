@@ -37,6 +37,14 @@
     $queryresult = $stmt->fetchAll();
 
     var_dump($queryresult);
+
+    if($klant_id == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+        }elseif($klant_id != "" AND $medewerker_nummer == ""){
+            $rol = "klant";
+        }
+
+    $_SESSION["rol"] = $rol;
     ?>
 </head>
 
