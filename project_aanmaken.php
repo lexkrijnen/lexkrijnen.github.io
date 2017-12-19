@@ -14,7 +14,7 @@ $stmt1 = $pdo->prepare($sql1);
 $stmt1->execute();
 $sqlresult = $stmt1->fetch();
 foreach ($sqlresult as $a => $b) {
-    $lastprojectnr = $b['project_nummer'];
+    $lastprojectnr = $b["project_nummer"];
 }
 $projectnummer = $lastprojectnr + 1;
 print("projectnrKHUTTTT: ". $projectnummer);
