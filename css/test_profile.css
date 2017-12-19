@@ -1,3 +1,8 @@
+/*side bar*/
+.sidebar {
+    background: #FFFFFF;
+}
+
 #viewer-box {
 	height: 80vh;
 }

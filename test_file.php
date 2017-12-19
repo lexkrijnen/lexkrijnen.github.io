@@ -90,7 +90,7 @@
 	</nav>
 
     <!-- Sidebar -->
-    <div class="sidebar-item wegro-whithe wegro-bar-block" style="width:25%">
+    <div class="sidebar-item sidebar-block" style="width:25%">
         <h3 class="sidebar-item">Menu</h3>
             <ul class="sidebar-item sidebar-up">
                 <li class="sidebar-item"><a href="#">Link 1</a></li>
