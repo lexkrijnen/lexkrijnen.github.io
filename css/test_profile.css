@@ -11,14 +11,17 @@
 .float-right{
   float: right;
 }
+
 .fa{
  font-size: .8em;
   line-height: 22px !important;
 }
+
 dropdown{
-   display: inline-block;
+   display: block;
 
 }
+
 dropdown label, dropdown ul li{
   display: block;
   background: #FFFFFF;
@@ -26,27 +29,30 @@ dropdown label, dropdown ul li{
 
 dropdown label:hover, dropdown ul li:hover{
   background: #FFC966;
-  color: white;
+  color: #000000;
   cursor: pointer;
 }
+
 dropdown label{
   color: #FFFFFF;
   position: relative;
   z-index: 2;
 }
+
 dropdown input{
   display: none;
 }
+
 dropdown input ~ ul{
   position: relative;
   visibility: hidden;
   opacity: 0;
-  top: -20px;
   z-index: 1;
 }
+
 dropdown input:checked + label{
   background: #FFC966;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 dropdown input:checked ~ ul{
