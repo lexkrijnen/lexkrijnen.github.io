@@ -80,7 +80,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		</nav>
 
 		<!--<div class="">-->
-		<div class="row">
+		<div class="">
 			<div class="BBhomeBackground">
 				<img src="images/Logo%20bouwbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
@@ -182,7 +182,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<div class="overlay">
 							<h1>FUNDERING</h1>
 							<p>
-								Hier wordt de fundering van een nieuw huis gelegd.
+
 							</p>
 						</div>
 					</div>
@@ -194,7 +194,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<div class="overlay">
 							<h1>AFWERKING</h1>
 							<p>
-								Het dak en de muren zijn nu ook bijna af.
+
 							</p>
 						</div>
 					</div>
@@ -206,7 +206,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<div class="overlay">
 							<h1>OPLEVERING</h1>
 							<p>
-								Het huis is nu zo goed als af. Tijd om in te richten.
+
 							</p>
 						</div>
 					</div>

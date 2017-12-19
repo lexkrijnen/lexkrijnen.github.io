@@ -285,7 +285,7 @@ h6 {
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
-
+/*
 .slider-demo {
 	z-index: -1;
 	margin-top: -500px;
@@ -299,7 +299,7 @@ h6 {
 .slider-navigation {
 	opacity: 0;
 }
-
+*/
 .footer {
 	padding: 20px;
 	background-color: #3c3c3b;
