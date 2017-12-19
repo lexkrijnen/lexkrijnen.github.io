@@ -7,6 +7,7 @@ $pdo = new PDO($db, $user, $pass);
 
 $error = "";
 
+
 //TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
 $sql1 = "SELECT max(project_nummer) FROM Project";
 $stmt1 = $pdo->prepare($sql1);
@@ -18,17 +19,18 @@ foreach ($sqlresult as $a => $b) {
 }
 $projectnummer = $lastprojectnr + 1;
 
-//NIEUW PROJECT TOEVOEGEN:
-//if (isset($_GET["opslaan"])) {
-//    if (isset($_GET["naam"])) {
-//        $sql = "INSERT INTO Project (project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
-//        $stmt = $pdo->prepare($sql);
-//        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
-//    } elseif ($_GET["naam"] == "") {
-//        $error = ("Vul A.U.B. alle velden in.");
-//   }
-//}
 
+
+//BESTAANDE KLANTEN OPHALEN:
+$sql2 = "SELECT klant_nummer, voornaam FROM Klant";
+$stmt2 = $pdo->prepare($sql1);
+$stmt2->execute();
+$sqlresult2 = $stmt2->fetch();
+
+var_dump($sqlresult2l);
+
+
+//NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
     if ($_GET["naam"] == "" OR $_GET["klant_nummer"] == "" OR $_GET["contract_nummer"] == "" OR $_GET["status_nummer"] == "") {
         $error = ("Vul A.U.B. alle velden in.");
@@ -38,8 +40,6 @@ if (isset($_GET["opslaan"])) {
         $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
     }
 }
-
-
 
 $pdo = NULL;
 ?>
