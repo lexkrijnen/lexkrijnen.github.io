@@ -33,7 +33,7 @@ foreach ($queryresult3 as $a => $b) {
 foreach ($queryresult3 AS $klant) {
     print($klant["klant_nummer"] . "<br>");
     print($klant["voornaam"] . "<br>");
-
+}
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
