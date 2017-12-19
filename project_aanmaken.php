@@ -112,9 +112,15 @@ $pdo = NULL;
         </table>
         <br><a href="admin.php" class="btn btn-primary" role="button">Terug</a>
         <?php
-        if ($error != "") {
-        print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-        }
+				if (isset($_GET["opslaan"])) {
+					if ($error != "") {
+        			print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
+        	} else {
+							print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_GET["naam"] . '  is successvol toegevoegd als project.</div>');
+					}
+				}
+
+
         ?>
     </div>
 </div>
