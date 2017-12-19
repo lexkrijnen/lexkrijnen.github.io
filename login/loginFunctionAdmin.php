@@ -6,7 +6,16 @@ function GetLogin($username, $password) {
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE emailadres = '$username' AND wachtwoord = '$password'");
+    $stmt3 = $pdo->prepare("SELECT salt FROM Medewerker WHERE emailadres = '$username'");
+    $stmt3->execute();
+    $salt = $stmt3->fetchAll();
+
+    foreach ($salt as $a => $b) {
+        $salt = $b['salt'];
+    }
+    $hash = sha1($salt . $password);
+
+    $stmt2 = $pdo->prepare("SELECT * FROM Medewerker WHERE emailadres = '$username' AND wachtwoord = '$hash'");
     $stmt2->execute();
     $result = $stmt2->fetchAll();
 
