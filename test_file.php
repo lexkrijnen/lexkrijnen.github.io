@@ -93,20 +93,34 @@
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
-                    <ul class="nav">
-                        <li data-dropdown-text="Menu">
+                    <ul class="dropdownMenu">
+                        <li>Item 1</li>
+                        <li data-dropdown-text="Item 2">
                             <ul>
-                                <li><a href="#">Mijn gegevens</a></li>
+                                <li data-dropdown-text="Item 2.1">
+                                    <ul>
+                                        <li>Item 2.1.1</li>
+                                        <li>Item 2.1.2</li>
+                                        <li>Item 2.1.3</li>
+                                    </ul>
+                                </li>
+                                <li data-dropdown-text="Item 2.2">
+                                    <ul>
+                                        <li>Item 2.2.1</li>
+                                        <li>Item 2.2.2</li>
+                                        <li>Item 2.2.3</li>
+                                    </ul>
+                                </li>
+                                <li data-dropdown-text="Item 2.3">
+                                    <ul>
+                                        <li>Item 2.3.1</li>
+                                        <li>Item 2.3.2</li>
+                                        <li>Item 2.3.3</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-divider"></li>
-                        <li data-dropdown-text="Mijn projecten">
-                            <ul>
-                                <li><a href="#">Meer/minder werk</a></li>
-                                <li><a href="#">Contract/Tekening</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-divider"></li>
+                        <li>Item 3</li>
                     </ul>
                 </div>
                 <!--/.well -->
