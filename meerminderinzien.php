@@ -6,6 +6,7 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer']
     ?>
 		<meta charset="UTF-8">
 		<title>Meer & Minder Werk</title>
@@ -36,6 +37,13 @@
     $stmt3 = $pdo->prepare("SELECT p.naam FROM Project p JOIN Contract c ON  p.project_nummer = c.project_nummer WHERE contract_nummer = :contract_nummer");
     $stmt3->execute(array(':contract_nummer' => $_GET['id']));
     $naamproject = $stmt3->fetchAll();
+
+        if ($klant_id == "" AND $medewerker_nummer != ""){
+            $rol = "medewerker";
+        } elseif($klant_id != "" AND $medewerker_nummer == ""){
+            $rol = "klant";
+        }
+        ?>
     ?>
 </head>
 
@@ -68,6 +76,33 @@ if (empty($klant_id)) {
     print('<meta http-equiv="refresh" content="2;url=../login.php" />');
 } else {
 ?>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="accountoverview.php">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 		<!--MEER WERK-->
 		<div class="container page-box">
