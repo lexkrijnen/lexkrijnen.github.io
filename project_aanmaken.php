@@ -113,7 +113,7 @@ if (empty($medewerker_nummer)) {
                 <tr>
 									<td><a href="admin.php" class="btn btn-primary" role="button">Terug</a></td>
 									<div align="right">
-										<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan" align="right"></td>
+										<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 									</div>
 								</tr>
             </form>
