@@ -89,6 +89,14 @@
 		<!-- /.container-fluid -->
 	</nav>
 
+    <!-- Sidebar -->
+<div class="sidebar light-grey bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="bar-item button">Link 1</a>
+  <a href="#" class="bar-item button">Link 2</a>
+  <a href="#" class="bar-item button">Link 3</a>
+</div>
+
 	<!--MEER WERK-->
 	<div class="container page-box">
 		<div class="col-xs-4">
