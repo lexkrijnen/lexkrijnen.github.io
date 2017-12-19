@@ -82,6 +82,7 @@ if (empty($medewerker_nummer)) {
 						<li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
 						<li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
 						<li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
 					</ul>
 			</div>
 		</div>
