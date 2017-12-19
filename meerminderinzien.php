@@ -92,7 +92,7 @@ if (empty($klant_id)) {
                             <h4>Mijn projecten</h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                        <li><a href="meerminderlanding.php"><b>Meer/Minder werk</b></a></li>
                         <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
