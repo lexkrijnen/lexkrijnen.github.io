@@ -90,7 +90,7 @@
 	</nav>
 
     <!-- Sidebar -->
-    <div class="sidebar-item sidebar-block">
+    <div class="sidebar-item sidebar-block border">
         <h3 class="sidebar-item">Menu</h3>
             <ul class="sidebar-item sidebar-up">
                 <li class="sidebar-item"><a href="#">Link 1</a></li>
