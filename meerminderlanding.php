@@ -101,7 +101,7 @@
              <ul>
                  <?php
              foreach ( $queryresult as $value ) {
-                 print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value[0] . "</a></li>");
+                 print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . "</a></li>");
              }
              ?>
              </ul>
