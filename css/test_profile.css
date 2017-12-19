@@ -6,9 +6,9 @@
     position:fixed;
     z-index:-5;
 }
-.nav-divider{
-    color: #FFC966;
-}
+
+li > a:hover {
+    background-color: #FFC966;
 }
 /*view boxen*/
 #viewer-box {
