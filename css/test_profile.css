@@ -4,16 +4,10 @@
     width: 15%;
     background-color:#FFFFFF;
     position:fixed;
-    z-index:1;
+    z-index:0;
 }
 
 /*sidebar text dropdown*/
-*{
-  padding: 0;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-  box-sizing: border-box;
-}
 .float-right{
   float: right;
 }
@@ -23,22 +17,21 @@
 }
 dropdown{
    display: inline-block;
-   margin: 20px 50px;
+
 }
 dropdown label, dropdown ul li{
   display: block;
-  background: #ECF0F1;
-  padding: 15px 20px;
+  background: #FFFFFF;
 }
+
 dropdown label:hover, dropdown ul li:hover{
-  background: #1ABC9C;
+  background: #FFC966;
   color: white;
   cursor: pointer;
 }
 dropdown label{
   color: #1ABC9C;
-  border-left: 4px solid #1ABC9C;
-  border-radius: 0 5px 0 0;
+  border-left: 2px solid #FFA500;
   position: relative;
   z-index: 2;
 }
@@ -61,23 +54,6 @@ dropdown input:checked ~ ul{
   visibility: visible;
   opacity: 1;
   top: 0;
-}
-$colors: #E74C3C, #0072B5, #2C3E50;
-
-@for $i from 1 through length($colors) {
-  dropdown ul li:nth-child(#{$i}) {
-    border-left: 4px solid nth($colors, $i);
-    .fa{
-      color: nth($colors, $i);
-    }
-    &:hover {
-        background: nth($colors, $i);
-        color: white;
-      .fa{
-        color: white;
-      }
-    }
-  }
 }
 
 .animate{
