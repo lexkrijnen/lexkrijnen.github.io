@@ -98,7 +98,7 @@ $pdo = NULL;
                     }
                     ?>
                 </select></td></tr>
-                <tr><td>Status Nummer</td><td>
+                <tr><td>Status</td><td>
                 <select name="status_nummer">
                     <option value="1">[1] Plannen</option>
                     <option value="2">[2] Bouwen</option>
