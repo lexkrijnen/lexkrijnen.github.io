@@ -170,6 +170,7 @@ $pdo = NULL;
 						<?php
 												if ($_SESSION["rol"] == "medewerker") {
 														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+														print("<input type=\"hidden\" name=\"functie\" value=$functie>");
 												} elseif ($_SESSION["rol"] == "klant") {
 														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 												}
@@ -186,8 +187,6 @@ $pdo = NULL;
 
 				<?php
             if(isset($_POST["opslaan"])) {
-                print($sql . "<br>");
-                print($_POST["voornaam"] . $_POST["tussenvoegsel"] . $_POST["achternaam"] . $_POST["emailadres"] . $_POST["telefoonnummer"] . $_POST["adres"] . $_POST["postcode"] . $_POST["woonplaats"] . $_POST["functie"] . $_POST["medewerkernummer"]);
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
