@@ -112,7 +112,10 @@ if (empty($medewerker_nummer)) {
                 </select></td></tr>
                 <tr>
 									<td><a href="admin.php" class="btn btn-primary" role="button">Terug</a></td>
-									<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan" align="right"></td></tr>
+									<div align="right">
+										<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
+									</div>
+								</tr>
             </form>
         </table>
 
