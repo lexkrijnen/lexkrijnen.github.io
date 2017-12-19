@@ -1,5 +1,17 @@
 .BBhomeBackground {
-	background-image: url("../images/pexels-photo-209272.jpeg");
+	background-image: url("../images/Kraan.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+.TBhomeBackground {
+	background-image: url("../images/Staal.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+.MBhomeBackground {
+	background-image: url("../images/Teken.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
