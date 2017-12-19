@@ -4,29 +4,14 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-//MEER WERK
-$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam FROM Klant");
-$stmt3->execute();
-$queryresult3 = $stmt3->fetchAll();
-var_dump($queryresult3);
+$sql1 = "SELECT max(project_nummer) FROM Project";
+$stmt1 = $pdo->prepare($sql1);
+$stmt1->execute();
+$sqlresult = $stmt1->fetch();
 
-
-
-foreach ($queryresult3 AS $klant) {
-print($klant["klant_nummer"] . "<br>");
-print($klant["voornaam"] . "<br>");
+foreach ($sqlresult as $a => $b) {
+    $lastprojectnr = $b['project_nummer'];
 }
-
-?>
-
-
-<form>
-<label>Klant Nummer </label>
-<select name="klant_nummer">
-    <?php
-    foreach ($queryresult3 AS $klant) {
-        print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . '</option>');
-    }
-    ?>
-</select>
-</form>
+var_dump($lastprojectnr);
+$projectnummer = $lastprojectnr + 1;
+print("projectnrKHUTTTT: ". $projectnummer);
