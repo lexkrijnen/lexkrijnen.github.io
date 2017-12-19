@@ -82,7 +82,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		<!--<div class="">-->
 		<div class="row">
 			<div class="BBhomeBackground">
-				<img src="images/LBouwbedrijf%20Wegro.png" class="logo">
+				<img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
 				<a href="contact.php">
 					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn select-btn contbutton">
 						Contact
