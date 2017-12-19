@@ -10,6 +10,9 @@ $pdo = new PDO($db, $user, $pass);
 //TELLEN HOEVEEL PROJECTEN ER AL BESTAAN:
 $stmt = $pdo->query('SELECT max(project_nummer) FROM Project');
 $id = $stmt->fetchColumn(0);
-if ($id !== false) {
-    echo $id;
+if ($lastprojectnr !== false) {
+    echo $lastprojectnr;
 }
+
+$projectnr = $lastprojectnr + 1;
+print ($projectnr);
