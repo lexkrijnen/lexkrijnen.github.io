@@ -1,5 +1,7 @@
 <?php
 session_start();
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -27,10 +29,6 @@ foreach ($queryresult3 as $a => $b) {
     $klant_achternaam = $b['achternaam'];
 }
 
-//foreach ($queryresult3 AS $klant) {
-//    print($klant["klant_nummer"] . "<br>");
-//    print($klant["voornaam"] . "<br>");
-//}
 
 //NIEUW PROJECT TOEVOEGEN:
 if (isset($_GET["opslaan"])) {
@@ -83,6 +81,13 @@ $pdo = NULL;
     </div><!-- /.container-fluid -->
 </nav>
 
+<?php //LOGINCHECK Medewerker
+if (empty($medewerker_nummer)) {
+    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../index.php" />');
+} else {
+?>
+
 <div class="container page-box">
     <div class="col-xs-12 col-md-12">
         <h1>Project Toevoegen</h1>
@@ -90,23 +95,21 @@ $pdo = NULL;
             <form action='project_aanmaken.php' method='get'>
                 <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
-                <!-- <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr> -->
-                <label>Klant </label>
-                <select name="klant_nummer">
+                <tr><td>Klant</td><td>
+                <select name="klant_nummer" class="form-control">
                     <?php
                     foreach ($queryresult3 AS $klant) {
                         print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . ' ' . $klant["tussenvoegsel"] . ' ' . $klant["achternaam"] . '</option>');
                     }
                     ?>
-                </select>
-                <!-- <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr> Statusnummer veranderen-->
-                <label>Status Nummer </label>
-                <select name="status_nummer">
+                </select></td></tr>
+                <tr><td>Status</td><td>
+                <select name="status_nummer" class="form-control">
                     <option value="1">[1] Plannen</option>
                     <option value="2">[2] Bouwen</option>
                     <option value="3">[3] Afronden</option>
                     <option value="4">[4] Opleveren</option>
-                </select>
+                </select></td></tr>
                 <tr><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
         </table>
@@ -115,12 +118,10 @@ $pdo = NULL;
 				if (isset($_GET["opslaan"])) {
 					if ($error != "") {
         			print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-        	} else {
-							print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_GET["naam"] . '  is successvol toegevoegd als project.</div>');
+                } else {
+					print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_GET["naam"] . '  is successvol toegevoegd als project.</div>');
 					}
 				}
-
-
         ?>
     </div>
 </div>
@@ -134,3 +135,4 @@ $pdo = NULL;
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php } ?>
