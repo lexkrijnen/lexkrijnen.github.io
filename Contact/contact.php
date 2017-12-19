@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
     <meta name="author" content="Nard Wemes">
-    <link rel="icon" href="images/logo-default.png">
+    <link rel="icon" href="../images/logo-default.png">
 
     <title>Bouwbedrijf Wegro</title>
 
@@ -39,15 +39,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+                <a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="index.php">Home</a></li>
-                    <li class="nav-item"><a href="login.php">Inloggen</a></li>
-                    <li class="nav-item"><a href="index.php">Terug</a></li>
+                    <li class="nav-item"><a href="../index.php">Home</a></li>
+                    <li class="nav-item"><a href="../login.php">Inloggen</a></li>
+                    <li class="nav-item"><a href="../index.php">Terug</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -87,10 +87,10 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
 
     <!-- Bootstrap Framework -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
