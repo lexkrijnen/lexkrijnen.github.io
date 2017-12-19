@@ -107,7 +107,7 @@
                             <label for="toggle2" class="animate">Mijn projecten<i class="fa fa-list"></i></label>
                             <ul class="animate">
                                 <li class="animate" href="test_file.php">Meer/minder werk<i class="fa fa-code"></i></li>
-                                <li class="animate" href="test_PDF_upload.php">Contract/Tekening<i class="fa fa-arrows-alt"></i></li>
+                                <li class="animate"><a href="test_PDF_upload.php" >Contract/Tekening</a><i class="fa fa-arrows-alt"></i></li>
                             </ul>
                         </dropdown>
                         <li class="nav-divider"></li>
