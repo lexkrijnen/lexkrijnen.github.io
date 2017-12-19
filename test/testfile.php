@@ -13,7 +13,7 @@ $salt = $stmt3->fetchAll();
 $hash = sha1($salt . $password);
 
 foreach ($salt as $a => $b) {
-    $salt = $b[['salt'];
+    $salt = $b['salt'];
 }
 
 print ($salt);
