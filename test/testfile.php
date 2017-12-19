@@ -1,12 +1,11 @@
 <?php
-session_start();
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-//BESTAANDE KLANTEN OPHALEN:
-$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam FROM Klant");
-$stmt3->execute();
-$sqlresult3 = $stmt3->fetchAll();
-var_dump($sqlresult5);
+//MEER WERK
+$stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1");
+$stmt->execute();
+$meerwerk = $stmt->fetchAll();
+var_dump($meerwerk);
