@@ -27,15 +27,7 @@ $stmt2 = $pdo->prepare($sql1);
 $stmt2->execute();
 $sqlresult2 = $stmt2->fetch();
 
-foreach ($sqlresult2 as $a => $b) {
-    $klant_nummer = $b['klant_nummer'];
-    $voornaamklant = $b['voornaam'];
-
-}
-var_dump($klant_nummer);
-print("<br><br>");
-var_dump($voornaamklant);
-
+var_dump($sqlresult2l);
 
 
 //NIEUW PROJECT TOEVOEGEN:
