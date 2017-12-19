@@ -6,10 +6,7 @@
     position:fixed;
     z-index:1;
 }
-.nav-divider{
-    color: #FFC966;
-}
-}
+
 /*view boxen*/
 #viewer-box {
 	height: 80vh;

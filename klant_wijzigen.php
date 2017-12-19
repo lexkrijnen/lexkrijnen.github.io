@@ -165,7 +165,7 @@ $pdo = NULL;
 						<?php
 							if ($_SESSION["rol2"] == "medewerker") {
 									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-									if ($_SESSION["functie"] == "1") {
+									if ($_SESSION["medewerker_functie"] == "1") {
 											print("<tr><td>Functie</td>");
 											print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
 											if($functie=='2'){
@@ -178,9 +178,6 @@ $pdo = NULL;
 											}
 											print("> Admin </td></tr>");
 									}
-							} elseif ($_SESSION["rol2"] == "medewerker") {
-									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-							}
 							} elseif ($_SESSION["rol2"] == "klant") {
 									print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 							}
@@ -197,11 +194,11 @@ $pdo = NULL;
 
 				<?php
 
-            if(isset($_GET["opslaan"])) {
-								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
-            }
+				if(isset($_GET["opslaan"])) {
+						print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
+				}
 
-            ?>
+				?>
 			</div>
 		</div>
 
