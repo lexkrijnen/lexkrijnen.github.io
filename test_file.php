@@ -2,23 +2,23 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>Tekenig toevoegen</title>
-	<link rel="stylesheet" href="css/meerminderwerk.css">
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-	<meta name="author" content="Nard Wemes">
-	<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- Global styles for this website -->
-	<link href="css/global.css" rel="stylesheet">
-	<!-- Custom styles for this page -->
-	<link href="css/test_profile.css" rel="stylesheet">
-	<?php
+    <meta charset="UTF-8">
+    <title>Tekenig toevoegen</title>
+    <link rel="stylesheet" href="css/meerminderwerk.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+    <meta name="author" content="Nard Wemes">
+    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Global styles for this website -->
+    <link href="css/global.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="css/test_profile.css" rel="stylesheet">
+    <?php
     $error = "";
 
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -64,71 +64,75 @@
 </head>
 
 <body>
-	<!--NAVBAR-->
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <!--NAVBAR-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-				<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
-			</div>
+                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+            </div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="login.php">Uitloggen</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-
-    <div class="container-fluid">
-    <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-            <div class="sidebar-nav">
-                <ul class="nav">
-                    <li class="active"><h4>Menu</h4></li>
-                    <li class="nav-divider"></li>
-                    <li><a href="#">Mijn gegevens</a></li>
-                    <li class="nav-divider"></li>
-                    <li><h4>Mijn projecten</h4></li>
-                    <li class="nav-divider"></li>
-                    <li><a href="#">Meer/minder werk</a></li>
-                    <li><a href="#">Contract/Tekening</a></li>
-                    <li class="nav-divider"></li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="login.php">Uitloggen</a></li>
                 </ul>
             </div>
-            <!--/.well -->
+            <!-- /.navbar-collapse -->
         </div>
-        <!--/span-->
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="#">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="#">Meer/minder werk</a></li>
+                        <li><a href="#">Contract/Tekening</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
         </div>
     </div>
-	<!--MEER WERK-->
-	<div class="container page-box">
-		<div class="col-xs-4">
-			<h1>Meer Werk</h1>
-			<?php
+    <!--MEER WERK-->
+    <div class="container page-box">
+        <div class="col-xs-4">
+            <h1>Meer Werk</h1>
+            <?php
         foreach ( $naamproject as $value ) {
             print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
         }
         ?>
-				<form method="get" action="meermindertoevoegen.php">
-					<table class="table table-hover table-bordered">
-						<tr>
-							<th>Nr.</th>
-							<th>Beschrijving</th>
-							<th>Prijs</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<?php
+                <form method="get" action="meermindertoevoegen.php">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Beschrijving</th>
+                            <th>Prijs</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <?php
                 $meerwerkcount = 1;
                 foreach ($meerwerk AS $werk) {
                     print("<tr>");
@@ -141,45 +145,45 @@
                     $meerwerkcount++;
                 }
                 ?>
-							<tr>
-								<td></td>
-								<td><input type="text" name="beschrijving" size="15"></td>
-								<td><input type="text" name="prijs" size="3"></td>
-								<td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-								<td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
-							</tr>
-					</table>
-				</form>
-				<?php
+                            <tr>
+                                <td></td>
+                                <td><input type="text" name="beschrijving" size="15"></td>
+                                <td><input type="text" name="prijs" size="3"></td>
+                                <td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
+                                <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
+                            </tr>
+                    </table>
+                </form>
+                <?php
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
         } ?>
-					<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
-		</div>
+                    <a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
+        </div>
 
 
-		<div class="col-xs-3"></div>
-		<!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+        <div class="col-xs-3"></div>
+        <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
 
-		<!--MINDER WERK-->
-		<div class="col-xs-4">
-			<h1>Minder Werk</h1>
-			<?php
+        <!--MINDER WERK-->
+        <div class="col-xs-4">
+            <h1>Minder Werk</h1>
+            <?php
         foreach ( $naamproject as $value ) {
             print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
         }
         ?>
-				<form method="get" action="meermindertoevoegen.php">
-					<table class="table table-hover table-bordered">
-						<tr>
-							<th>Nr.</th>
-							<th>Beschrijving</th>
-							<th>Prijs</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<?php
+                <form method="get" action="meermindertoevoegen.php">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Beschrijving</th>
+                            <th>Prijs</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <?php
                 $minderwerkcount = 1;
                 foreach ($minderwerk AS $werk2) {
                     print("<tr>");
@@ -192,17 +196,18 @@
                     $minderwerkcount++;
                 }
                 ?>
-							<tr>
-								<td></td>
-								<td><input type="text" name="beschrijving" size="15"></td>
-								<td><input type="text" name="prijs" size="3"></td>
-								<td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-								<td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
-							</tr>
-					</table>
-				</form>
-		</div>
-	</div>
-	<?php $pdo = NULL; ?>
+                            <tr>
+                                <td></td>
+                                <td><input type="text" name="beschrijving" size="15"></td>
+                                <td><input type="text" name="prijs" size="3"></td>
+                                <td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
+                                <td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
+                            </tr>
+                    </table>
+                </form>
+        </div>
+    </div>
+    <?php $pdo = NULL; ?>
 </body>
+
 </html>
