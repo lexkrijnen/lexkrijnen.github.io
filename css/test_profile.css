@@ -16,6 +16,7 @@ dropdown label, dropdown ul li{
 }
 dropdown label:hover, dropdown ul li:hover{
   background: #FFC966;
+  cursor: pointer;
 }
 
 dropdown input{
