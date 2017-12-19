@@ -125,7 +125,6 @@ $pdo = NULL;
 
 
 
-
 		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
 			<div class=pagebox>
 				<h1>Wijzigen</h1>
@@ -164,26 +163,25 @@ $pdo = NULL;
 							<td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\""); ?>></td>
 						</tr>
 						<?php
-												if ($_SESSION["rol2"] == "medewerker") {
-														print("<tr><td>Functie</td>");
-
-														print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
-														if($functie=='2'){
-																print("checked");
-														}
-														print(" > Medewerker</td></tr>");
-
-														print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
-														if($functie=='1') {
-																print("checked");
-														}
-														print("> Admin </td></tr>");
-
-														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-												} elseif ($_SESSION["rol2"] == "klant") {
-														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
-												}
-											?>
+							if ($_SESSION["rol2"] == "medewerker") {
+									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+									if ($_SESSION["medewerker_functie"] == "1") {
+											print("<tr><td>Functie</td>");
+											print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
+											if($functie=='2'){
+													print("checked");
+											}
+											print(" > Medewerker</td></tr>");
+											print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
+											if($functie=='1') {
+													print("checked");
+											}
+											print("> Admin </td></tr>");
+									}
+							} elseif ($_SESSION["rol2"] == "klant") {
+									print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
+							}
+							?>
 							<tr>
 								<td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
 								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
@@ -196,12 +194,11 @@ $pdo = NULL;
 
 				<?php
 
-            if(isset($_GET["opslaan"])) {
-								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
-            }
+				if(isset($_GET["opslaan"])) {
+						print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
+				}
 
-
-            ?>
+				?>
 			</div>
 		</div>
 
