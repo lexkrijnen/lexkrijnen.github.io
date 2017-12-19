@@ -12,4 +12,4 @@ $salt = $stmt3->fetchAll();
 
 $hash = sha1($salt . $password);
 
-var_dump($salt);
+print ($salt['salt']);
