@@ -19,17 +19,29 @@ foreach ($sqlresult as $a => $b) {
 $projectnummer = $lastprojectnr + 1;
 
 //NIEUW PROJECT TOEVOEGEN:
+//if (isset($_GET["opslaan"])) {
+//    if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
+//        $error = "Vul A.U.B. alle velden in. ";
+//    } else {
+//        print("SQL QUERY word succesvol uitgevoerd!");
+//        $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
+//        $stmt = $pdo->prepare($sql);
+//        $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
+//        var_dump($stmt);
+//    }
+//}
+
 if (isset($_GET["opslaan"])) {
-    if ($_GET['project_nummer'] = "" OR $_GET['naam'] = "" OR $_GET['klant_nummer'] = "" OR $_GET['contract_nummer'] = "" OR $_GET['status_nummer'] = "") {
-        $error = "Vul A.U.B. alle velden in. ";
-    } else {
-        print("SQL QUERY word succesvol uitgevoerd!");
-        $sql = "INSERT INTO Project(project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
+    if (isset($_GET["naam"])) {
+        $sql = "INSERT INTO Project (project_nummer, naam, klant_nummer, contract_nummer, status_nummer) VALUES (?,?,?,?,?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array($projectnummer, $_GET["naam"], $_GET["klant_nummer"], $_GET["contract_nummer"], $_GET["status_nummer"]));
-        var_dump($stmt);
+    } elseif ($_GET["naam"] == "") {
+        $error = ("Vul A.U.B. alle velden in.");
     }
 }
+
+
 $pdo = NULL;
 ?>
 
@@ -80,6 +92,12 @@ $pdo = NULL;
                 <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr>
                 <tr><td>Contract Nummer </td><td><input type="text" class="form-control" name="contract_nummer"></td></tr>
                 <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr>
+                <select name="status_nummer2">
+                    <option value="1">[1] Plannen</option>
+                    <option value="2">[2] Bouwen</option>
+                    <option value="3">[3] Afronden</option>
+                    <option value="4">[4] Opleveren</option>
+                </select>
                 <tr><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
             </form>
         </table>

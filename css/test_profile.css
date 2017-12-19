@@ -1,11 +1,13 @@
 /*side bar*/
-.w3-sidebar-item{
+.sidebar{
     height:100%;
-    width:200px;
+    width:15%;
     background-color:#FFFFFF;
     position:fixed!important;
     z-index:1;
-    overflow:auto
+    border-top:2px;
+    border-color: #FFA500;
+    border-bottom: 2px;
 }
 
 /*view boxen*/
