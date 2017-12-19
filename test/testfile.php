@@ -12,5 +12,6 @@ $sqlresult = $stmt1->fetch();
 foreach ($sqlresult as $a => $b) {
     $lastprojectnr = $b['project_nummer'];
 }
+print("$projectnummer");
 $projectnummer = $lastprojectnr + 1;
 print("projectnrKHUTTTT: ". $projectnummer);
