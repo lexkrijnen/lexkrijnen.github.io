@@ -164,22 +164,23 @@ $pdo = NULL;
 						</tr>
 						<?php
 							if ($_SESSION["rol2"] == "medewerker") {
-
-									print("<tr><td>Functie</td>");
-
-									print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
-									if($functie=='2'){
-											print("checked");
-									}
-									print(" > Medewerker</td></tr>");
-
-									print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
-									if($functie=='1') {
-											print("checked");
-									}
-									print("> Admin </td></tr>");
-
 									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+									if ($_SESSION["functie"] == "1") {
+											print("<tr><td>Functie</td>");
+											print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
+											if($functie=='2'){
+													print("checked");
+											}
+											print(" > Medewerker</td></tr>");
+											print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
+											if($functie=='1') {
+													print("checked");
+											}
+											print("> Admin </td></tr>");
+									}
+							} elseif ($_SESSION["rol2"] == "medewerker") {
+									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+							}
 							} elseif ($_SESSION["rol2"] == "klant") {
 									print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 							}
@@ -199,8 +200,7 @@ $pdo = NULL;
             if(isset($_GET["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
-						/////////////////////////////
-						print($_SESSION["functie"]);
+
             ?>
 			</div>
 		</div>
