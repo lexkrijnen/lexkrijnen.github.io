@@ -79,7 +79,7 @@
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="meerminderlanding.php">Meer/minder werk</a></li>
-                        <li><a href="profile.php">Contract/Tekening</a></li>
+                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
