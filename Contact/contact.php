@@ -13,13 +13,13 @@
     <title>Bouwbedrijf Wegro</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Global styles for this website -->
-    <link href="css/global.css" rel="stylesheet">
+    <link href="../css/global.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="...wegro/css/contact.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
