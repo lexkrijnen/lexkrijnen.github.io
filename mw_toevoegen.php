@@ -14,7 +14,6 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-
 if (isset($_POST["aanmaken"])) {
 
 	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -37,7 +36,7 @@ function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
 }
 
 $wachtwoord = random();
-$salt = random_bytes(32);
+$salt = rand();
 $hash = sha1($salt . $wachtwoord);
 ?>
 
