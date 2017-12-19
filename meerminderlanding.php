@@ -6,6 +6,7 @@
      session_start();
      @$klant_id = $_SESSION['klant_id'];
      @$klant_voornaam = $_SESSION['voornaam'];
+     @$medewerker_nummer = $_SESSION['medewerker_nummer']
      ?>
          <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +37,11 @@
      $stmt->execute(array(':klant_id' => $klant_id));
      $queryresult = $stmt->fetchAll();
 
+         if ($klant_id == "" AND $medewerker_nummer != ""){
+             $rol = "medewerker";
+         } elseif($klant_id != "" AND $medewerker_nummer == ""){
+             $rol = "klant";
+         }
      ?>
  </head>
 
@@ -77,7 +83,7 @@
                              <h4>Mijn projecten</h4>
                          </li>
                          <li class="nav-divider"></li>
-                         <li><a href="meerminderlanding.php">Meer/minder werk</a></li>
+                         <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
                          <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                          <li class="nav-divider"></li>
                      </ul>
@@ -95,7 +101,7 @@
              <ul>
                  <?php
              foreach ( $queryresult as $value ) {
-                 print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                 print ("<li>Project: <a href=\"meerminderinzien.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . "</a></li>");
              }
              ?>
              </ul>
