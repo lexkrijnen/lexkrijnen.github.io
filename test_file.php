@@ -94,18 +94,18 @@
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
                     <ul class="nav">
-                        <li class="active">
-                            <h4>Menu</h4>
+                        <li data-dropdown-text="Menu">
+                            <ul>
+                                <li><a href="#">Mijn gegevens</a></li>
+                            </ul>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="#">Mijn gegevens</a></li>
-                        <li class="nav-divider"></li>
-                        <li>
-                            <h4>Mijn projecten</h4>
+                        <li data-dropdown-text="Mijn projecten">
+                            <ul>
+                                <li><a href="#">Meer/minder werk</a></li>
+                                <li><a href="#">Contract/Tekening</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-divider"></li>
-                        <li><a href="#">Meer/minder werk</a></li>
-                        <li><a href="#">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
