@@ -17,7 +17,7 @@
 	<!-- Global styles for this website -->
 	<link href="css/global.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
-	<link href="css/index.css" rel="stylesheet">
+	<link href="css/test_profile.css" rel="stylesheet">
 	<?php
     $error = "";
 
