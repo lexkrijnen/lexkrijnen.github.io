@@ -94,15 +94,17 @@
         <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="sidebar-nav">
                 <ul class="nav">
-                    <li class="active"><h4>Menu</h4></li>
+
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="#">Mijn gegevens</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="nav-divider"></li>
-                    <li><h4>Mijn projecten</h4></li>
-                    <li class="nav-divider"></li>
-                    <li><a href="#">Meer/minder werk</a></li>
-                    <li><a href="#">Contract/Tekening</a></li>
-                    <li class="nav-divider"></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div>
             <!--/.well -->
