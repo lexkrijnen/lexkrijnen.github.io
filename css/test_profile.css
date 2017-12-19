@@ -46,8 +46,8 @@ dropdown input ~ ul{
   z-index: 1;
 }
 dropdown input:checked + label{
-  background: #1ABC9C;
-  color: white;
+  background: #FFC966;
+  color: #FFFFFF;
 }
 
 dropdown input:checked ~ ul{
