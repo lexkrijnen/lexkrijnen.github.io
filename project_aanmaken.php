@@ -18,7 +18,7 @@ foreach ($sqlresult as $a => $b) {
     $lastprojectnr = $b['project_nummer'];
 }
 $projectnummer = $lastprojectnr + 1;
-
+print("projectnrKHUTTTT: ". $projectnummer);
 
 //BESTAANDE KLANTEN OPHALEN:
 $stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam, tussenvoegsel, achternaam FROM Klant");
