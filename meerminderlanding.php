@@ -35,6 +35,7 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':klant_id' => $klant_id));
     $queryresult = $stmt->fetchAll();
+<<<<<<< HEAD
 
     var_dump($queryresult);
 
@@ -45,6 +46,8 @@
         }
 
     $_SESSION["rol"] = $rol;
+=======
+>>>>>>> origin/master
     ?>
 </head>
 
