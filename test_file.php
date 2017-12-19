@@ -89,117 +89,75 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-    <div class="container-fluid">
+   <div class="container-fluid">
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="sidebar-nav">
                 <ul class="nav">
+
                     <li class="active"><a href="#">Link</a></li>
-                    <li><a href="#">Meer/minder werk</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="#">Contract/Tekening</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="#">Mijn gegevens</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div>
             <!--/.well -->
         </div>
         <!--/span-->
+
+        <div class="col-xs-12 col-sm-9">
+            <br>
+            <div class="jumbotron">
+                <a href="#" class="visible-xs" data-toggle="offcanvas"><i class="fa fa-lg fa-reorder"></i></a>
+                <h1>Hello, world!</h1>
+                <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                        friendly HTML, CSS and Javascript.</p>
+                    <p><a class="btn btn-default" href="#">View details »</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript to
+                        facilitate responsive Web design. </p>
+                    <p><a class="btn btn-default" href="#">View details »</a></p>
+                </div>
+                <!--/span-->
+
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                        friendly HTML, CSS and Javascript.</p>
+                    <p><a class="btn btn-default" href="#">View details »</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Heading</h2>
+                    <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                        friendly HTML, CSS and Javascript.</p>
+                    <p><a class="btn btn-default" href="#">View details »</a></p>
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
         </div>
+        <!--/span-->
+
+
     </div>
-	<!--MEER WERK-->
-	<div class="container page-box">
-		<div class="col-xs-4">
-			<h1>Meer Werk</h1>
-			<?php
-        foreach ( $naamproject as $value ) {
-            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-        }
-        ?>
-				<form method="get" action="meermindertoevoegen.php">
-					<table class="table table-hover table-bordered">
-						<tr>
-							<th>Nr.</th>
-							<th>Beschrijving</th>
-							<th>Prijs</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<?php
-                $meerwerkcount = 1;
-                foreach ($meerwerk AS $werk) {
-                    print("<tr>");
-                    print("<td>" . $meerwerkcount . "</td>");
-                    print("<td>" . $werk["beschrijving"] . "</td>");
-                    print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
-                    print("</tr>");
-                    $meerwerkcount++;
-                }
-                ?>
-							<tr>
-								<td></td>
-								<td><input type="text" name="beschrijving" size="15"></td>
-								<td><input type="text" name="prijs" size="3"></td>
-								<td><input type="submit" name="toevoegenmeerwerk" value="Toevoegen"></td>
-								<td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
-							</tr>
-					</table>
-				</form>
-				<?php
-        if ($error != "") {
-            print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-        } ?>
-					<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
-		</div>
+    <!--/row-->
 
-
-		<div class="col-xs-3"></div>
-		<!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
-
-
-		<!--MINDER WERK-->
-		<div class="col-xs-4">
-			<h1>Minder Werk</h1>
-			<?php
-        foreach ( $naamproject as $value ) {
-            print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-        }
-        ?>
-				<form method="get" action="meermindertoevoegen.php">
-					<table class="table table-hover table-bordered">
-						<tr>
-							<th>Nr.</th>
-							<th>Beschrijving</th>
-							<th>Prijs</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<?php
-                $minderwerkcount = 1;
-                foreach ($minderwerk AS $werk2) {
-                    print("<tr>");
-                    print("<td>" . $minderwerkcount . "</td>");
-                    print("<td>" . $werk2["beschrijving"] . "</td>");
-                    print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
-                    print("</tr>");
-                    $minderwerkcount++;
-                }
-                ?>
-							<tr>
-								<td></td>
-								<td><input type="text" name="beschrijving" size="15"></td>
-								<td><input type="text" name="prijs" size="3"></td>
-								<td><input type="submit" name="toevoegenminderwerk" value="Toevoegen"></td>
-								<td><input type="hidden" name="id" value="<?php print($_GET['id']);?>"></td>
-							</tr>
-					</table>
-				</form>
-		</div>
-	</div>
-	<?php $pdo = NULL; ?>
+</div>
+<!--/.container-->
 </body>
 </html>
