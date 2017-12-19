@@ -21,11 +21,11 @@ dropdown{
 }
 dropdown label, dropdown ul li{
   display: block;
-  background: #ECF0F1;
-  padding: 15px 20px;
+  background: #FFFFFF;
 }
+
 dropdown label:hover, dropdown ul li:hover{
-  background: #1ABC9C;
+  background: #FFC966;
   color: white;
   cursor: pointer;
 }
