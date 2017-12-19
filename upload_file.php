@@ -1,6 +1,6 @@
 <?php
 
- $targetfolder = "testupload/";
+ $targetfolder = "pdf/";
 
  $targetfolder = $targetfolder . basename( $_FILES['file']['name']) ;
 
