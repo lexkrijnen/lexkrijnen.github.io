@@ -178,9 +178,6 @@ $pdo = NULL;
 											}
 											print("> Admin </td></tr>");
 									}
-							} elseif ($_SESSION["rol2"] == "medewerker") {
-									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-							}
 							} elseif ($_SESSION["rol2"] == "klant") {
 									print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
 							}
