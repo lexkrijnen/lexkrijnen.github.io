@@ -20,7 +20,6 @@ dropdown{
 
 dropdown label, dropdown ul li{
   display: block;
-  background: #FFFFFF;
 }
 
 dropdown label:hover, dropdown ul li:hover{
