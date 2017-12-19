@@ -34,7 +34,7 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        //TABEL CONTRACT
+        //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
         if (isset($_GET["submitcontract"])) {
                 $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
