@@ -96,7 +96,7 @@ $pdo = NULL;
                 <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
                 <!-- <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr> -->
-                <label>Klant Nummer </label>
+                <label>Klant </label>
                 <select name="klant_nummer">
                     <?php
                     foreach ($queryresult3 AS $klant) {
