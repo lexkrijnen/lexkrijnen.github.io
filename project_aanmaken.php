@@ -90,7 +90,6 @@ $pdo = NULL;
             <form action='project_aanmaken.php' method='get'>
                 <tr><td>Project Nummer</td><td><input type="text" class="form-control" name="project_nummer" <?php print("value=\"$projectnummer\""); ?> disabled></td></tr>
                 <tr><td>Project Naam</td><td><input type="text" class="form-control" name="naam"></td></tr>
-                <!-- <tr><td>Klant Nummer</td><td><input type="text" class="form-control" name="klant_nummer"></td></tr> -->
                 <label>Klant </label>
                 <select name="klant_nummer">
                     <?php
@@ -98,8 +97,7 @@ $pdo = NULL;
                         print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . ' ' . $klant["tussenvoegsel"] . ' ' . $klant["achternaam"] . '</option>');
                     }
                     ?>
-                </select>
-                <!-- <tr><td>Status Nummer</td><td><input type="text" class="form-control" name="status_nummer"></td></tr> Statusnummer veranderen-->
+                </select><br>
                 <label>Status Nummer </label>
                 <select name="status_nummer">
                     <option value="1">[1] Plannen</option>
@@ -115,12 +113,10 @@ $pdo = NULL;
 				if (isset($_GET["opslaan"])) {
 					if ($error != "") {
         			print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
-        	} else {
-							print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_GET["naam"] . '  is successvol toegevoegd als project.</div>');
+                } else {
+					print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_GET["naam"] . '  is successvol toegevoegd als project.</div>');
 					}
 				}
-
-
         ?>
     </div>
 </div>
