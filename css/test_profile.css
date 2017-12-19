@@ -1,11 +1,14 @@
 /*side bar*/
 .container-fluid{
     height:100%;
+    width: 15%;
     background-color:#FFFFFF;
     position:fixed;
     z-index:1;
 }
-
+container-fluid:hover {
+    background-color: #FFC966;
+}
 /*view boxen*/
 #viewer-box {
 	height: 80vh;
