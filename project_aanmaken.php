@@ -2,6 +2,12 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
+if (!empty($klant_id OR $medewerker_nummer)) {
+    $ingelogd = "Mijn Account";
+} else {
+    $ingelogd = "Inloggen";
+}
+
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -75,7 +81,7 @@ $pdo = NULL;
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a href="login.php">Inloggen</a></li>
+                <li class="nav-item"><a href="login.php"><?php print($ingelogd);?></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
