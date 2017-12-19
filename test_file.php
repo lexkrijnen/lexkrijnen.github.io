@@ -90,11 +90,13 @@
 	</nav>
 
     <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-        <h3 class="w3-bar-item">Menu</h3>
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <div class="sidebar">
+        <h3 class="bar-item">Menu</h3>
+            <ul class="sidebar-up">
+                <li class="button"><a href="#">link 1</a></li>
+                <li class="button"><a href="#">link 2</a></li>
+                <li class="button"><a href="#">link 3</a></li>
+        </ul>
         </div>
 
 	<!--MEER WERK-->
