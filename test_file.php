@@ -89,16 +89,25 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h3 class="bar-item">Menu</h3>
-            <ul class="sidebar-up">
-                <li class="button"><a href="#">link 1</a></li>
-                <li class="button"><a href="#">link 2</a></li>
-                <li class="button"><a href="#">link 3</a></li>
-        </ul>
+    <div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+                <ul class="nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Meer/minder werk</a></li>
+                    <li class="nav-divider"></li>
+                    <li><a href="#">Contract/Tekening</a></li>
+                    <li class="nav-divider"></li>
+                    <li><a href="#">Mijn gegevens</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <!--/.well -->
         </div>
-
+        <!--/span-->
+        </div>
+    </div>
 	<!--MEER WERK-->
 	<div class="container page-box">
 		<div class="col-xs-4">
@@ -194,5 +203,4 @@
 	</div>
 	<?php $pdo = NULL; ?>
 </body>
-
 </html>
