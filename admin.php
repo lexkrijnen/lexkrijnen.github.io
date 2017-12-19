@@ -59,7 +59,7 @@ session_start();
 
 						<div class="input-group c">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input id="login-username" type="text" class="form-control" name="emailadres" placeholder="Vul hier uw e-mailadres in">
+							<input id="login-username" type="email" class="form-control" name="emailadres" placeholder="Vul hier uw e-mailadres in">
 						</div>
 
 						<div class="input-group c">
