@@ -21,11 +21,10 @@ $projectnummer = $lastprojectnr + 1;
 
 
 //BESTAANDE KLANTEN OPHALEN:
-$sql5 = "SELECT klant_nummer, voornaam FROM Klant";
-$stmt5 = $pdo->prepare($sql5);
-$stmt5->execute();
-$sqlresult5 = $stmt5->fetch();
-var_dump($sqlresult5);
+$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam FROM Klant");
+$stmt3->execute();
+$queryresult3 = $stmt3->fetchAll();
+var_dump($queryresult3);
 
 
 //NIEUW PROJECT TOEVOEGEN:
