@@ -6,6 +6,8 @@
      session_start();
      @$klant_id = $_SESSION['klant_id'];
      @$klant_voornaam = $_SESSION['voornaam'];
+     @$medewerker_nummer = $_SESSION['medewerker_nummer']
+
      ?>
          <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +38,11 @@
      $stmt->execute(array(':klant_id' => $klant_id));
      $queryresult = $stmt->fetchAll();
 
+         if ($klant_id == "" AND $medewerker_nummer != ""){
+             $rol = "medewerker";
+         } elseif($klant_id != "" AND $medewerker_nummer == ""){
+             $rol = "klant";
+         }
      ?>
  </head>
 
@@ -70,7 +77,14 @@
                              <h4>Menu</h4>
                          </li>
                          <li class="nav-divider"></li>
-                         <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                         <li><a href=<?php
+                             if($rol=="klant" ){
+                                 print('"account.php"');
+                             } elseif ($rol=="medewerker" ) {
+                                 print('"profile_medewerker.php"');
+                             }
+                             ?>
+                             >Mijn Account</a></li>
                          <li><a href="accountoverview.php">Mijn gegevens</a></li>
                          <li class="nav-divider"></li>
                          <li>
