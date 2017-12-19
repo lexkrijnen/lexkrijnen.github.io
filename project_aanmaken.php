@@ -110,10 +110,12 @@ if (empty($medewerker_nummer)) {
                     <option value="3">[3] Afronden</option>
                     <option value="4">[4] Opleveren</option>
                 </select></td></tr>
-                <tr><td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td></tr>
+                <tr>
+									<td><a href="admin.php" class="btn btn-primary" role="button">Terug</a></td>
+									<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan" align="right"></td></tr>
             </form>
         </table>
-        <br><a href="admin.php" class="btn btn-primary" role="button">Terug</a>
+
         <?php
 				if (isset($_GET["opslaan"])) {
 					if ($error != "") {
