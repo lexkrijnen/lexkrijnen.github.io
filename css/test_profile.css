@@ -6,7 +6,7 @@
     position:fixed;
     z-index:1;
 }
-li > a:hover{
+.container-fluid:hover{
     background-color: #ffc966;
 }
 /*view boxen*/
