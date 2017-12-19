@@ -109,7 +109,8 @@
             <!--/.well -->
         </div>
         <!--/span-->
-
+        </div>
+    </div>
 	<!--MEER WERK-->
 	<div class="container page-box">
 		<div class="col-xs-4">
