@@ -1,3 +1,15 @@
+/*side bar*/
+.container-fluid{
+    height:100%;
+    width:15%;
+    background-color:#FFFFFF;
+    position:fixed;
+    z-index:1;
+    border-top:2px;
+    border-color: #FFA500;
+    border-bottom: 2px;
+}
+
 /*view boxen*/
 #viewer-box {
 	height: 80vh;
