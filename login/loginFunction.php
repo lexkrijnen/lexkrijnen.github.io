@@ -10,6 +10,9 @@ function GetLogin($username, $password) {
     $stmt3->execute();
     $salt = $stmt3->fetchAll();
 
+    foreach ($salt as $a => $b) {
+        $salt = $b['salt'];
+    }
     $hash = sha1($salt . $password);
 
     $stmt2 = $pdo->prepare("SELECT * FROM Klant WHERE emailadres = '$username' AND wachtwoord = '$hash'");
