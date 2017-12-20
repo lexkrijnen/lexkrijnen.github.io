@@ -97,8 +97,8 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<img src="images/IMG_3134.JPG">
 				<img src="images/IMG_6733.JPG">
 			</div>
-			-->
-		</div>
+
+		</div>-->
 		<a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
