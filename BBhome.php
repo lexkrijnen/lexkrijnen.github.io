@@ -245,17 +245,19 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 				<div class="col-xs-12">
 					<p class="text-center footer-title">© Bouwbedrijf Wegro -
-						<a href="#" class="footer-item" data-toggle="modal" data-target="#voor-modal">Algemene Voorwaarden</a>
-						 <a href="#" class="footer-item" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>.
+						<a href="#" class="footer-item" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
+						 - <a href="#" class="footer-item" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>.
 					</p>
 				</div>
 
 				<div class="modal fade" id="voor-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
-							<div class="modal-body" style="color:black;">
-								<h3 class="text-center">ALGEMENE VOORWAARDEN</h3>
-								<br />
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Algemene voorwaarden</h4>
+							</div>
+							<div class="modal-body">
 								<p>Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.</p>
 							</div>
 							<div class="modal-footer">
@@ -268,9 +270,11 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<div class="modal fade" id="disc-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
-							<div class="modal-body" style="color:black;">
-								<h3 class="text-center">DISCLAIMER</h3>
-								<br />
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Disclaimer</h4>
+							</div>
+							<div class="modal-body">
 								<p>Wegro bv stelt het op prijs dat u interesse in onze diensten toont door middel van een bezoek aan onze site. Ondanks de zorg die Wegro bv besteedt aan de correcte weergave van de gegevens van de aangeboden diensten kan Wegro bv niet verantwoordelijk of aansprakelijk worden gehouden voor eventuele onjuistheden, onvolledigheden of actualiteit van de op de site www.bouwbedrijfwegro.nl aangeboden informatie. Wegro bv onderschrijft, keurt goed, erkent of controleert geen externe bronnen (internetsites van derden die door of via verwijzingen op onze website bezocht kunnen worden). Wegro bv is niet aansprakelijk jegens enige partij voor directe of indirecte of gevolgschade (inclusief, maar niet beperkt tot, gederfde winst voor bedrijven of anderszins) die het gevolg is van het gebruik van deze website of van informatie hierop, of die het gevolg is van het gebruik van de website derden en de informatie daarop, die door of via verwijzingen op onze website verkregen, opgevraagd of gedownload zijn.</p>
 							</div>
 							<div class="modal-footer">
