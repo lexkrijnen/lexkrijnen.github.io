@@ -103,6 +103,13 @@
     <!-- /.container-fluid -->
 </nav>
 
+<?php
+if (empty($klant_id AND $medewerker_nummer)) {
+    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} else {
+?>
+
 <div class="container-fluid">
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -186,7 +193,7 @@
             <!-- If embedded pdf does not work, display fallback option instead. -->
             <div class="pdf-fail">
                 <p>Problemen met het bekijken?</p>
-                <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/test.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+                <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/voorbeeld.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
             </div>
         </div>
 
@@ -233,10 +240,6 @@
             $rol = "klant";
         }
 
-        if (empty($klant_id)) {
-            print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-            print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-        } else {
             ?>
 
             <!--MEER WERK-->
