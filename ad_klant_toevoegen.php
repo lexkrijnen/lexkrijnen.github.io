@@ -144,7 +144,7 @@ $hash = sha1($salt . $wachtwoord);
 			<div class="col-xs-12 col-md-12">
 				<h1>Klant toevoegen</h1>
 				<table>
-					<form action="klant_toevoegen.php" method="POST">
+					<form action="ad_klant_toevoegen.php" method="POST">
 						<tr>
 							<td>Voornaam</td>
 							<td>
