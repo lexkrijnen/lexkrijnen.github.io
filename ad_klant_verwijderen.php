@@ -8,6 +8,10 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$stmt = $pdo->prepare("SELECT * FROM Project");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
+
 if ($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "medewerker";
 } elseif($klant_id != "" AND $medewerker_nummer == ""){
@@ -29,10 +33,6 @@ if (isset($_GET["echtverwijderen"])) {
 
 
 }
-
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
 
 $pdo = NULL;
 ?>

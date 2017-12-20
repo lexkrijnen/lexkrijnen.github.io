@@ -32,6 +32,10 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
     if ($klant_id != "" AND $medewerker_id == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
     $stmt->execute();
@@ -83,10 +87,6 @@ if($klant_id == "" AND $medewerker_nummer != ""){
 
 
     $pdo = NULL;
-
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
 ?>
 
 
