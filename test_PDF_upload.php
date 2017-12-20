@@ -242,8 +242,8 @@
             ?>
 
             <!--MEER WERK-->
-            <div class="container page-box">
-                <div class="col-xs-4">
+            <div>
+                <div class="col-xs-4 page-box">
                     <h1>Meer Werk</h1>
                     <?php
                     foreach ( $naamproject as $value ) {
@@ -278,7 +278,7 @@
                 <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
 
                 <!--MINDER WERK-->
-                <div class="col-xs-4">
+                <div class="col-xs-4 page-box">
                     <h1>Minder Werk</h1>
                     <?php
                     foreach ( $naamproject as $value ) {
