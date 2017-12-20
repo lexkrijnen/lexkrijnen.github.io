@@ -34,13 +34,13 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        /*//TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
-        if (isset($_POST["submitcontract"])) {
-                $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
+        //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
+
+                $sql = "INSERT INTO Contract (naam)VALUES(?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_POST["contract_nummer"], $_POST["naam"], $_POST['filenaam'], $_POST['project_nummer']));
+                $stmt->execute(array($_GET["bestandnaam"]));
                 $msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
-                }*/
+
 
         $stmt = $pdo->prepare("SELECT * FROM Contract");
         $stmt->execute();
