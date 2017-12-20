@@ -80,7 +80,7 @@
                         <li class="nav-divider"></li>
                         <?php
                         foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
                         }
                         ?>
                         <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
