@@ -39,7 +39,7 @@
                 $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_POST["contract_nummer"], $_POST["naam"], $_POST['filenaam'], $_POST['project_nummer']));
-                print("bestand is geupload. "); //TEST, STRAKS VERVANGEN DOOR MELDING.
+                $msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
                 }
 
         $stmt = $pdo->prepare("SELECT * FROM Contract");
@@ -208,6 +208,7 @@
 	<!-- /.container -->
 
 	<div class="row">
+        <?php var_dump($msg); ?>
 		<div class="col-xs-12 text-center footer-rights">
 			<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 		</div>
