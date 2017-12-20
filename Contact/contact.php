@@ -87,7 +87,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             </div>
             <?php
             if ($verzonden == TRUE) {
-                print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is succesvol verzonden!</div>');
+                print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
             }
             ?>
         </div>
