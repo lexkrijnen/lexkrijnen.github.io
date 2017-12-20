@@ -34,9 +34,9 @@ if (isset($_GET["vinden"])) {
 			$klant_nummer = $klant["klant_nummer"];
 			$_SESSION["klantnummer2"] = $klant_nummer;
 		} elseif ($_GET["rol"] == "medewerker") {
-			$medewerker_nummer = $klant["medewerker_nummer"];
+			$medewerker_nummer2 = $klant["medewerker_nummer"];
 			$functie = $klant["functie"];
-			$_SESSION["medewerkernummer2"] = $medewerker_nummer;
+			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
 			$_SESSION["functie2"] = $functie;
 			$_SESSION["functienaam2"] = $functienaam;
 		}
@@ -235,11 +235,11 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
+                    } elseif ($klant_nummer != "" || $medewerker_nummer2 != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($zoekrol == "medewerker") {
-														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
+														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer2</td></tr>");
 														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
 												} elseif ($zoekrol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
