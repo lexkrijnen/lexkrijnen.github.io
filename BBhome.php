@@ -110,10 +110,9 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</p>
 			</div>
 
+            <a name="Kwaliteiten" id="Kwaliteiten">	</a>
 			<div class="row">
-				<a name="Kwaliteiten" id="Kwaliteiten">
 
-	  	</a>
 				<div class="col-xs-10 col-xs-offset-1  page-box">
 					<p class="paragraphleft ">
 						<titel>Kwaliteiten</titel>
