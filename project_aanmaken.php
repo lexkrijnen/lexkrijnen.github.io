@@ -111,10 +111,16 @@ if (empty($medewerker_nummer)) {
                     <option value="4">[4] Opleveren</option>
                 </select></td></tr>
                 <tr>
-									<td><a href="login.php" class="btn btn-primary" role="button">Terug</a></td>
-									<div align="right">
-										<td><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
-									</div>
+									<td>
+										<br>
+										<a href="login.php" class="btn btn-primary" role="button">Terug</a>
+									</td>
+									<td>
+										<div align="right">
+											<br>
+											<input class="btn oranje white" type="submit" name="opslaan" value="Opslaan">
+										</div>
+									</td>
 								</tr>
             </form>
         </table>
