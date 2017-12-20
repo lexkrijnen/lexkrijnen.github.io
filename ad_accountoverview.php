@@ -121,7 +121,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4><b>Gegevens</b></h4>
+                            <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="profile_admin.php">Mijn Account</a></li>
