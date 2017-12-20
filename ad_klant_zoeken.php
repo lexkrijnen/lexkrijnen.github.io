@@ -149,7 +149,7 @@ $pdo = NULL;
                         <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
                         <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="ad_project_aanmaken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
@@ -171,7 +171,7 @@ $pdo = NULL;
 				<div class=container>
 					<h1>Zoeken</h1>
 					<table>
-						<form action="klant_zoeken.php" method="get">
+						<form action="ad_klant_zoeken.php" method="get">
 							<div class="row">
 								<tr>
 									<td>
@@ -254,11 +254,11 @@ $pdo = NULL;
 												print("</table>");
 												print("<table>");
 												print("<tr><td>");
-												print("<form action='klant_wijzigen.php' method='get'>");
+												print("<form action='ad_klant_wijzigen.php' method='get'>");
                         print("<input class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
                         print("</form>");
 												print("</td><td>");
-                        print("<form action='klant_verwijderen.php' method='get'>");
+                        print("<form action='ad_klant_verwijderen.php' method='get'>");
                         print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
