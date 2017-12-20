@@ -122,7 +122,7 @@
 					<?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
-                    print("<td> <a href='test_PDF_upload.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
+                    print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
                     print("</tr>");
                     }
                     ?>
