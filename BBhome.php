@@ -223,7 +223,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					<h4 class="footer-title">Bouwbedrijf Wegro</h4>
 				</div>
 
-				<div class="col-xs-12">
+				<div class="col-xs-12 col-md-6">
 					<ul class="text-fix">
 						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054" target="_blank">0341-412054</a></li>
 						<li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl" target="_blank">info@bouwbedrijfwegro.nl</a></li>
@@ -232,7 +232,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					</ul>
 				</div>
 
-				<div class="col-xs-12 footer-title footer-item">
+				<div class="col-xs-12 col-md-6 footer-title footer-item text-md-right">
 					<a href="#" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
 					 - <a href="#" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>
 					<p class="footer-title">© Bouwbedrijf Wegro</p>
