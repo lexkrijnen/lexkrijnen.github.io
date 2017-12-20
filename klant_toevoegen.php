@@ -142,7 +142,7 @@ $hash = sha1($salt . $wachtwoord);
 						<tr>
 							<td>Telefoonnummer</td>
 							<td>
-								<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $telefoonnummer"); } ?>>
+								<input type="tel" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $telefoonnummer"); } ?>>
 							</td>
 						</tr>
 						<tr>
