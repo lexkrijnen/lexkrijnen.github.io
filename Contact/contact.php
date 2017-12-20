@@ -64,12 +64,12 @@
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht2.php" method="post">
+                    <form class="contact-form" action="verzendbericht.php" method="post">
                         <input type="text" class="form-control c" name="naam" placeholder="Naam">
                         <input type="text" class="form-control c" name="mail" placeholder="e-mail">
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp">
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
-                        <button type="submit" class="btn oranje white" name="submit">Verstuur bericht</button>
+                        <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
             </div>
