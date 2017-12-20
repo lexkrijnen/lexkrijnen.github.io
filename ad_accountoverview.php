@@ -131,7 +131,6 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -170,7 +169,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
+                        print("</table><form action='ad_accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){
