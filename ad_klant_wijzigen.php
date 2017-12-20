@@ -8,11 +8,6 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$stmt5 = $pdo->prepare("SELECT * FROM Project");
-$stmt5->execute();
-$projecten = $stmt5->fetchAll();
-
-
 if (isset($_GET["opslaan"])) {
 		if ($_SESSION["rol2"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
