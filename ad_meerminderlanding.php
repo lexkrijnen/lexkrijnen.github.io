@@ -6,16 +6,6 @@
     session_start();
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
-    @$medewerker_functie = $_SESSION['medewerker_functie'];
-
-    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-    $user = "wegro";
-    $pass = "SQLWegro@101";
-    $pdo = new PDO($db, $user, $pass);
-
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
     ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +19,23 @@
 		<link href="css/index.css" rel="stylesheet">
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<?php
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
+    $pdo = new PDO($db, $user, $pass);
+
+    $sql = "SELECT * FROM Project P JOIN Contract C ON C.project_nummer = P.project_nummer";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $queryresult = $stmt->fetchAll();
+
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
+    ?>
 </head>
 
 <body>
@@ -43,8 +50,6 @@
             </button>
 				<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
 			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
@@ -90,44 +95,35 @@
         </div>
     </div>
 
-	<?php
-if (empty($medewerker_nummer)) {
-    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-    print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} elseif ($medewerker_functie == "2") {
-    print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
-    print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
-} else {
-?>
+	<?php //LOGINCHECK Medewerker
+    if (empty($medewerker_nummer)) {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../index.php" />');
+    } else {
+    ?>
 
-		<div class="container page-box">
-			<div class="col-xs-12 col-md-12">
+	<div class="container page-box">
+		<div class="col-xs-12 col-md-12">
+			<h1>Meer/Minder Werk</h1>
+			<p>Meer/Minder Werk inzien van alle projecten:</p>
+			<ul>
 				<?php
-        $hour = date('H', time());
-
-        if( $hour > 6 && $hour <= 11) {
-            print("<h1>Goedemorgen, " . $medewerker_voornaam . "</h1>");
-        }
-        else if($hour > 11 && $hour <= 16) {
-            print("<h1>Goedemiddag, " . $medewerker_voornaam . "</h1>");
-        }
-        else if($hour > 16 && $hour <= 23) {
-            print("<h1>Goedenavond, " . $medewerker_voornaam . "</h1>");
-        }
-        else {
-            print("<h1>Hallo, " . $medewerker_voornaam . "</h1>");
-        }
-        ?>
-
-			</div>
+            foreach ( $queryresult as $value ) {
+                print ("<li>Project: <a href=\"ad_meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . " - Contractnaam: " . $value['document'] . "</a></li>");
+            }
+            ?>
+			</ul>
+			<br><a href="login.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
 		</div>
-		<div class="row">
-			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
-			</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 text-center footer-rights">
+			<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 		</div>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
