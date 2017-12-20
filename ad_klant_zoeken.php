@@ -156,7 +156,6 @@ $pdo = NULL;
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -171,7 +170,7 @@ $pdo = NULL;
 				<div class=container>
 					<h1>Zoeken</h1>
 					<table>
-						<form action="klant_zoeken.php" method="get">
+						<form action="ad_klant_zoeken.php" method="get">
 							<div class="row">
 								<tr>
 									<td>
@@ -254,11 +253,11 @@ $pdo = NULL;
 												print("</table>");
 												print("<table>");
 												print("<tr><td>");
-												print("<form action='klant_wijzigen.php' method='get'>");
+												print("<form action='ad_klant_wijzigen.php' method='get'>");
                         print("<input class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
                         print("</form>");
 												print("</td><td>");
-                        print("<form action='klant_verwijderen.php' method='get'>");
+                        print("<form action='ad_klant_verwijderen.php' method='get'>");
                         print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
@@ -269,7 +268,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen $rol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen $zoekrol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
