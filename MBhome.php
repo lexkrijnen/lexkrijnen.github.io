@@ -213,7 +213,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</div>
 			</div>
 		</div>
-
+        <div class="row"><a name="Vergunningen" id="Vergunningen"></a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
 				<img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
