@@ -80,16 +80,14 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		</nav>
 
 		<!--<div class="">-->
-		<div class="row">
-			<div class="BBhomeBackground">
-				<img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
-				<a href="contact.php">
-					<div href="Contact/contact.php" class="col-xs-2 col-xs-offset-5 btn select-btn contbutton">
-						Contact
-					</div>
-				</a>
-			</div>
+        <div class="row BBhomeBackground">
+            <img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
 
+        <a href="../contact/contact.php">
+            <div class="col-xs-2 col-xs-offset-5 btn contbutton">
+                Contact
+            </div>
+        </a>
 		<!--	<div class="slider slider-demo col-xs-12">
 				<img src="images/IMG_2442.JPG">
 				<img src="images/IMG_2601.JPG">
