@@ -64,6 +64,10 @@ if(isset($_POST["opslaan"])) {
 
 $rol = $_SESSION["rol"];
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
 $pdo = NULL;
 ?>
 
@@ -141,12 +145,17 @@ $pdo = NULL;
                         <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
                         <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
