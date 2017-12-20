@@ -343,6 +343,11 @@ h6 {
 	}
 }
 
+.google-maps > iframe {
+	width: 100%;
+  border: none;
+}
+
 /*
 .google-maps {
 	overflow:hidden;
