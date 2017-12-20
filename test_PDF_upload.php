@@ -109,7 +109,8 @@
 					<?php
                 	foreach ($contract AS $document) {
                     print("<tr>");
-										print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    //print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    print("<td> <a href='test_PDF_upload.php?id=" . $projectid . "&pdf=" . $document["document"] . "'>" . $document["document"] . "</td>");
                     print("</tr>");
                   }
                 ?>
@@ -193,7 +194,13 @@
 				</form>
 			</div>
 			<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-				<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
+
+
+
+                <?php
+                    $pdf = $_GET['pdf'];
+                    print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
+                ?>
 
 				<!-- If embedded pdf does not work, display fallback option instead. -->
 				<div class="pdf-fail">
