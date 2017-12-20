@@ -224,7 +224,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</div>
 
 				<div class="col-xs-12">
-					<ul>
+					<ul class="text-fix">
 						<li class="footer-item">Telefoonnummer: <a href="tel:0341-412054" target="_blank">0341-412054</a></li>
 						<li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl" target="_blank">info@bouwbedrijfwegro.nl</a></li>
 						<li class="footer-item">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431" target="_blank">Gelreweg 38, 3843 AN Harderwijk</a></li>
@@ -235,7 +235,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<div class="col-xs-12 footer-title footer-item">
 					<a href="#" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
 					 - <a href="#" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>
-					<p class="text-center footer-title">© Bouwbedrijf Wegro</p>
+					<p class="footer-title">© Bouwbedrijf Wegro</p>
 				</div>
 
 				<div class="modal fade" id="voor-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
