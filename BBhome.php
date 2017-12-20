@@ -258,6 +258,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 							</div>
 							<div class="modal-body">
 								<p>Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.</p>
+								<p><a href="pdf-viewer/web/viewer.html?file=/BBSW Algemene Voorwaarden voor Aannemingen in het bouwbedrijf (AVA) 1992.pdf">Klik hier</a> om deze voorwaarden te bekijken.</p>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
