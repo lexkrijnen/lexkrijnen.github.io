@@ -336,6 +336,16 @@ h6 {
 	margin-left: -40px;
 }
 
+.text-md-right {
+	bottom: 0;
+}
+
+@media only screen and (min-width : 992px) {
+	.text-md-right {
+		text-align: right;
+	}
+}
+
 /*
 .google-maps {
 	overflow:hidden;
