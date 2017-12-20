@@ -232,7 +232,6 @@
                 foreach ($contractnummerarray as $a => $b) {
                     $contractnummer = $b['contract_nummer'];
                 }
-                var_dump($contractnummer);
 
                 //MEER WERK
                 $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = '$contractnummer'");
