@@ -21,6 +21,7 @@ $message = "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"
   </html>";
 if (!mail($to_email, $subject, $message, $headers)) {
     print_r(error_get_last());
+    print("Gekut, weer een erro");
 } else {
     print('<h3>Thank You For Contacting us!!</h3>');
 }
