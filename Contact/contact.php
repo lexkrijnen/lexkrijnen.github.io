@@ -3,6 +3,7 @@ session_start();
 @$klant_id = $_SESSION['klant_id'];
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
+@$verzonden = $_SESSION['verzonden'];
 if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
 } else {
@@ -85,7 +86,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 </div>
             </div>
             <?php
-            if ($_POST['verzonden'] != "") {
+            if ($verzonden == TRUE) {
                 print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is succesvol verzonden!</div>');
             }
             ?>
