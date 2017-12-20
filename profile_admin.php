@@ -7,6 +7,15 @@
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
     @$medewerker_functie = $_SESSION['medewerker_functie'];
+
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
+    $pdo = new PDO($db, $user, $pass);
+
+    $stmt = $pdo->prepare("SELECT * FROM Project WHERE medewerker_nummer = '1019'");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
     ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,6 +75,11 @@
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -103,16 +117,7 @@ if (empty($medewerker_nummer)) {
             print("<h1>Hallo, " . $medewerker_voornaam . "</h1>");
         }
         ?>
-					<p>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</p>
-					<ul>
-						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
-						<li><a href="bekijken_bouwtekeningen.php">Projecten</a></li>
-						<li><a href="klant_zoeken.php">Personen wijzigen/verwijderen</a></li>
-						<li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
-						<li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
-						<li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-					</ul>
+
 			</div>
 		</div>
 		<div class="row">
