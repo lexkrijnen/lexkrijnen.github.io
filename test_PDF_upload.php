@@ -59,7 +59,7 @@
             }
         }
 
-        $stmt = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt = $pdo->prepare("SELECT * FROM Tekening WHERE project_nummer = '$projectid'");
         $stmt->execute();
         $tekening = $stmt->fetchAll();
 
