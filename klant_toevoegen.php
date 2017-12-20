@@ -138,13 +138,6 @@ $hash = sha1($salt . $wachtwoord);
 							<td>
 								<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
 							</td>
-							<?php
-							if (isset($_POST["genereer_wachtwoord"])) {
-								print("<tr>");
-								alert("Let op! zorg ervoor dat u dit wachtwoord nu kopieert en ergens opslaat, het kan later niet meer gewijzigd worden.");
-								print("</tr>");
-							}
-							?>
 						</tr>
 						<tr>
 							<td>Telefoonnummer</td>
@@ -233,6 +226,10 @@ $hash = sha1($salt . $wachtwoord);
 										print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als klant.</div>');
                 }
             }
+
+						if (isset($_POST["genereer_wachtwoord"])) {
+								alert("Let op! zorg ervoor dat u dit wachtwoord nu kopieert en ergens opslaat, het kan later niet meer gewijzigd worden.");
+						}
             ?>
 		</div>
 
@@ -247,6 +244,7 @@ $hash = sha1($salt . $wachtwoord);
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
 	</body>
 
 	</html>

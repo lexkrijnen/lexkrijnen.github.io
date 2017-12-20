@@ -336,9 +336,11 @@ h6 {
 	margin-left: -40px;
 }
 
-modal-body,
-modal-body > p {
-	color: #000 !important;
+@media only screen and (min-width : 992px) {
+	.text-md-right {
+		text-align: right;
+		margin-top: 55px;
+	}
 }
 
 /*
