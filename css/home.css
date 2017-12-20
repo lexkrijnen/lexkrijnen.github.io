@@ -314,7 +314,7 @@ h6 {
 }
 */
 .footer {
-	padding: 20px;
+	padding: 20px 5px 5px 5px;
 	background-color: #3c3c3b;
 	color: #bdbdbd;
 }
@@ -339,7 +339,6 @@ h6 {
 @media only screen and (min-width : 992px) {
 	.text-md-right {
 		text-align: right;
-		margin-top: 55px;
 	}
 }
 
