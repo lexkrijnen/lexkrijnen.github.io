@@ -14,6 +14,10 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$stmt = $pdo->prepare("SELECT * FROM Project");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
+
 if (isset($_POST["aanmaken"])) {
 
     $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
