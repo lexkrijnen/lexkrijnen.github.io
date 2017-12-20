@@ -344,7 +344,9 @@ h6 {
 }
 
 .google-maps > iframe {
-	width: 100%;
+	width: 97%;
+  height: 50vh;
+  margin-left: 1%;
   border: none;
 }
 
