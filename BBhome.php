@@ -269,10 +269,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <div class="modal-content">
 
                             <div class="modal-body">
-                                <div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" data-tabs="timeline" data-width="600" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-                                    <blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
-                                        <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-                                </div>
+                                Disclaimer
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
