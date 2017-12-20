@@ -106,7 +106,8 @@ body {
 	overflow-x: hidden;
 }
 
-modal-body {
+modal-body,
+modal-body > p {
 	color: #000;
 }
 
