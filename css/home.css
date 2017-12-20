@@ -10,14 +10,16 @@
 	background-image: url("../images/Teken.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
+	height: 88%;
+	position: absolute;
 
 }
 .MBhomeBackground {
 	background-image: url("../images/cement.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
+	height: 88%;
+	position: absolute;
 
 }
 
