@@ -136,34 +136,40 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
-        <div class="container-fluid">
-            <div class="row row-offcanvas row-offcanvas-left">
-                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-                    <div class="sidebar-nav">
-                        <ul class="nav">
-                            <li class="active">
-                                <h4><b>Functies</b></h4>
-                            </li>
-                            <li class="nav-divider"></li>
-                            <li><a href="profile_admin.php">Mijn Account</a></li>
-                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
-                            <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
-                            <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
-                            <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
-                            <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-                            <li class="nav-divider"></li>
-                            <li>
-                                <h4><b>Projecten</b></h4>
-                            </li>
-                            <li class="nav-divider"></li>
-                            <li class="nav-divider"></li>
-                        </ul>
-                    </div>
-                    <!--/.well -->
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4><b>Functies</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4><b>Projecten</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
+                        <li class="nav-divider"></li>
+                    </ul>
                 </div>
-             <!--/span-->
+                <!--/.well -->
             </div>
+            <!--/span-->
         </div>
+    </div>
 
 		<div class="container page-box">
 		  <div class="col-xs-12 col-md-12">
