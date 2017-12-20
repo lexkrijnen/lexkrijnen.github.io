@@ -10,7 +10,7 @@ if (isset($_POST['submitmail'])) {
     $mailheader = "From: $email \r\n";
 
     mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-    $_POST['verzonden'] = TRUE;
+    $_SESSION['verzonden'] = TRUE;
     header('Location: ../Contact/contact.php');
 }
 ?>
