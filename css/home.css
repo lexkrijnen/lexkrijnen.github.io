@@ -30,12 +30,6 @@
 	margin-bottom: 15px;
 }
 
-.contbutton:hover {
-	color: #fff;
-	font-size: 45px;
-	font-weight: bold;
-}
-
 .logo {
 	margin: 45px auto;
 	width: 25%;
@@ -43,6 +37,12 @@
 	margin-bottom: 30px;
 	-webkit-filter: drop-shadow(0 0 5px #bdbdbd);
 	filter: drop-shadow(0 0 5px #bdbdbd);
+}
+
+.contbutton:hover {
+	color: #fff;
+	font-size: 45px;
+	font-weight: bold;
 }
 
 .imgright {
