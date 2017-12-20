@@ -70,6 +70,7 @@
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
                         <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
