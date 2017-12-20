@@ -109,3 +109,9 @@ body {
 modal-body {
 	color: #000;
 }
+
+quote {
+font-size:150px;
+line-height:0.6em;
+opacity:0.2;
+}
