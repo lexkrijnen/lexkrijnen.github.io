@@ -127,11 +127,38 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
+        <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="accountoverview.php">Accountgegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li><a href="bekijken_bouwtekeningen.php">Zoeken bouwtekeningen</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 
-
-		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-			<div class=pagebox>
+		<div class="container page-box">
+		  <div class="col-xs-12 col-md-12">
 				<div class=container>
 					<h1>Zoeken</h1>
 					<table>
