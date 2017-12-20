@@ -60,6 +60,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="index.php">Home</a></li>
+                    <li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
                     <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
                 </ul>
             </div>

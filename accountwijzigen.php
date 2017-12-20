@@ -24,6 +24,10 @@ if (isset($_POST["opslaan"])) {
 
 }
 
+$stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
+
 $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
 $achternaam = $_SESSION["achternaam"];
@@ -119,7 +123,9 @@ $pdo = NULL;
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+                        <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -143,8 +149,11 @@ $pdo = NULL;
                             <h4>Mijn projecten</h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
-                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
