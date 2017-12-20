@@ -208,7 +208,6 @@
 	<!-- /.container -->
 
 	<div class="row">
-        <?php var_dump($msg); ?>
 		<div class="col-xs-12 text-center footer-rights">
 			<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
 		</div>
