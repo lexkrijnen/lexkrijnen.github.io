@@ -102,9 +102,8 @@ if (empty($medewerker_nummer)) {
             print("<h1>Hallo, " . $medewerker_voornaam . "</h1>");
         }
         ?>
-					<p>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</p>
-			</div>
-		</div>
+        </div>
+    </div>
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
