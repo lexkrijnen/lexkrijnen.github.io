@@ -141,7 +141,7 @@ $hash = sha1($salt . $wachtwoord);
 							<?php
 							if (isset($_POST["genereer_wachtwoord"])) {
 								print("<tr>");
-								print("alert("Let op! zorg ervoor dat u dit wachtwoord nu kopieert en ergens opslaat, het kan later niet meer gewijzigd worden.")");
+								print("alert(\"Let op! zorg ervoor dat u dit wachtwoord nu kopieert en ergens opslaat, het kan later niet meer gewijzigd worden.\")");
 								print("</tr>");
 							}
 							?>
