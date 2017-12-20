@@ -245,8 +245,8 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 				<div class="col-xs-12">
 					<p class="text-center footer-title">© Bouwbedrijf Wegro -
-						<a href="#" class="btn " data-toggle="modal" data-target="#voor-modal">Algemene Voorwaarden</a>
-						 <a href="#" class="btn " data-toggle="modal" data-target="#disc-modal">Disclaimer</a>.
+						<a href="#" class="footer-item" data-toggle="modal" data-target="#voor-modal">Algemene Voorwaarden</a>
+						 <a href="#" class="footer-item" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>.
 					</p>
 				</div>
 
