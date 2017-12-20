@@ -85,7 +85,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 			<div class="TBhomeBackground">
 				<img src="images/Wegroleeg.png" class="logo">
 				<a href="contact.php">
-					<div href="contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
+					<div href="Contact/contact.php" class="col-xs-2 col-xs-offset-5 btn contbutton oranje select-btn">
 						Contact
 					</div>
 				</a>
