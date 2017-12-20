@@ -54,6 +54,7 @@ if (isset($_GET["vinden"])) {
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
+		$ingevulderol =	$_GET["rol"];
 
 		if ($functie == "1") {
 				$functienaam = "admin";
@@ -151,10 +152,10 @@ $pdo = NULL;
 									<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> ></td>
 
 									<tr>
-										<td><input type="radio" name=rol value="klant" checked>Klant</td>
+										<td><input type="radio" name=rol value="klant" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "klant") { print( "checked"); } else { print( "checked"); } ?>>Klant</td>
 									</tr>
 									<tr>
-										<td><input type="radio" name=rol value="medewerker">Medewerker</td>
+										<td><input type="radio" name=rol value="medewerker" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "medewerker") { print( "checked"); } ?>>Medewerker</td>
 									</tr>
 
 									<td><input class="btn oranje white" type="submit" name="vinden" value="Vinden"></td>
