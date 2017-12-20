@@ -29,6 +29,12 @@
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $queryresult = $stmt->fetchAll();
+
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
     ?>
 </head>
 
