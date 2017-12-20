@@ -227,9 +227,11 @@
                 //OPHALEN CONTRACTNUMMERS
                                 $stmt5 = $pdo->prepare("SELECT contract_nummer FROM Contract WHERE project_nummer = '$getid' AND document = '$getpdf'");
                 $stmt5->execute(array(':contract_nummer' => $_GET['id']));
-                $contractnummer = $stmt5->fetchAll();
+                $contractnummerarray = $stmt5->fetchAll();
 
-                print("CONTRACTNUMMER:");
+                foreach ($contractnummerarray as $a => $b) {
+                    $contractnummer = $b['contract_nummer'];
+                }
                 var_dump($contractnummer);
 
                 //MEER WERK
