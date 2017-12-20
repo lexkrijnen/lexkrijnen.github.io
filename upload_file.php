@@ -13,13 +13,13 @@ if(isset($_FILES['file'])){
     if(in_array($file_ext,$expensions)=== false){
         $errors[]="Dit bestandstype is niet toegestaan, gebruik aub alleen .pdf bestanden.";
 				sleep(5);
-        header("Location: /test_PDF_upload.php?id=$id");
+        header("Location: /project.php?id=$id");
     }
 
     if($file_size > 2097152){
         $errors[]='Het bestand is te groot.';
 				sleep(5);
-        header("Location: /test_PDF_upload.php?id=$id");
+        header("Location: /project.php?id=$id");
     }
 
     if(empty($errors)==true){
@@ -37,7 +37,7 @@ if(isset($_FILES['file'])){
 					$stmt->execute();
 				}
 
-        header("Location: /test_PDF_upload.php?id=$id&pdf=$file_name");
+        header("Location: /project.php?id=$id&pdf=$file_name");
 				die();
     }else{
         print_r($errors);
