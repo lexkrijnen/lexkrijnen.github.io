@@ -138,27 +138,52 @@ $pdo = NULL;
 						<form action="klant_zoeken.php" method="get">
 							<div class="row">
 								<tr>
-									<td>Voornaam: </td>
-									<td><input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldevoornaam"); } else { print( "placeholder='voornaam'"); }?> ></td>
+									<td>
+										Voornaam:
+									</td>
+									<td>
+										<input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldevoornaam"); } else { print( "placeholder='voornaam'"); }?> >
+									</td>
 								</tr>
 
 								<tr>
-									<td>Tussenvoegsel: </td>
-									<td><input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldetussenvoegsel"); } else { print( "placeholder='tussenvoegsel'"); }?> ></td>
+									<td>
+										Tussenvoegsel:
+									</td>
+									<td>
+										<input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldetussenvoegsel"); } else { print( "placeholder='tussenvoegsel'"); }?> >
+									</td>
 								</tr>
 
 								<tr>
-									<td>Achternaam: </td>
-									<td><input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> ></td>
+									<td>
+										Achternaam:
+									</td>
+									<td>
+										<input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> >
+									</td>
+								</tr>
 
 									<tr>
-										<td><input type="radio" name=rol value="klant" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "klant") { print( "checked"); } else { print( "checked"); } ?>>Klant</td>
+										<td>
+											<input type="radio" name=rol value="klant" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "klant") { print( "checked"); } else { print( "checked"); } ?>>Klant
+										</td>
 									</tr>
 									<tr>
-										<td><input type="radio" name=rol value="medewerker" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "medewerker") { print( "checked"); } ?>>Medewerker</td>
+										<td>
+											<input type="radio" name=rol value="medewerker" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "medewerker") { print( "checked"); } ?>>Medewerker
+										</td>
 									</tr>
 
-									<td><input class="btn oranje white" type="submit" name="vinden" value="Vinden"></td>
+									<tr>
+										<td>
+										</td>
+										<td>
+											<div align="right">
+												<input class="btn oranje white" type="submit" name="vinden" value="Vinden">
+											</div>
+										</td>
+									</tr>
 							</div>
 						</form>
 					</table>
