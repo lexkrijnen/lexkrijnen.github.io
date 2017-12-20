@@ -31,7 +31,9 @@ if(isset($_FILES['file'])){
         $pdo = new PDO($db, $user, $pass);
 
 				if (isset($_FILES['file'])) {
-					$sql = "SET FOREIGN_KEY_CHECKS = 0; INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28); SET FOREIGN_KEY_CHECKS = 1;";
+					$sql = "SET FOREIGN_KEY_CHECKS = 0;
+									INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28);
+									SET FOREIGN_KEY_CHECKS = 1;";
 					$stmt = $pdo->prepare($sql);
 					$stmt->execute();
 				}
