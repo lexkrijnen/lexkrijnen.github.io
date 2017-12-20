@@ -81,7 +81,7 @@ $pdo = NULL;
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="account.php">Mijn account</a></li>
+						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -95,11 +95,15 @@ $pdo = NULL;
                     <div class="sidebar-nav">
                         <ul class="nav">
                             <li class="active">
-                                <h4><b>Menu</b></h4>
+                                <h4><b>Functies</b></h4>
                             </li>
                             <li class="nav-divider"></li>
-                            <li><a href="profile_admin.php">>Mijn Account</a></li>
+                            <li><a href="profile_admin.php">Mijn Account</a></li>
                             <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                            <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                            <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                            <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                            <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
                             <li class="nav-divider"></li>
                             <li>
                                 <h4><b>Projecten</b></h4>
