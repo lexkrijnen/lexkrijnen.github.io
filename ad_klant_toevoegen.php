@@ -49,6 +49,7 @@ $hash = sha1($salt . $wachtwoord);
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
     @$medewerker_functie = $_SESSION['medewerker_functie'];
+
     ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -115,12 +116,17 @@ $hash = sha1($salt . $wachtwoord);
                         <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
                         <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
