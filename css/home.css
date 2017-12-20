@@ -39,6 +39,12 @@
 	filter: drop-shadow(0 0 5px #bdbdbd);
 }
 
+.contbutton:hover {
+	color: #fff;
+	font-size: 45px;
+	font-weight: bold;
+}
+
 .imgright {
 	float: right;
 	margin-left: 10px;
