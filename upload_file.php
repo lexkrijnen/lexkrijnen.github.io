@@ -31,7 +31,7 @@ if(isset($_FILES['file'])){
         $pdo = new PDO($db, $user, $pass);
 
 				if (isset($_FILES['file'])) {
-					$sql = "INSERT INTO Contract(document, project_nummer) VALUES ($file_name, 28)";
+					$sql = "INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28)";
 					$stmt = $pdo->prepare($sql);
 					$stmt->execute();
 				}
