@@ -114,3 +114,4 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 </body>
 
 </html>
+<?php $_SESSION['verzonden'] = FALSE; ?> // RESET zodat je eventueel nog een bericht kan sturen.
