@@ -16,14 +16,15 @@ $message = "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"
   </head>\r\n
   <body>\r\n
     <p></p>\r\n
-    <p style=\"color: #00CC66; font-weight:600; font-style: italic; font-size:14px; float:left; margin-left:7px;\">You have received an inquiry from your website.  Please review the contact information below.</p>\r\n
+    <p>You have received an inquiry from your website.  Please review the contact information below.</p>\r\n
   </body>\r\n
   </html>";
 if (!mail($to_email, $subject, $message, $headers)) {
     print_r(error_get_last());
+    print("Gekut, weer een erro");
+} else {
+    print('<h3>Thank You For Contacting us!!</h3>');
 }
-else { ?>
-    <h3 style="color:#d96922; font-weight:bold; height:0px; margin-top:1px;">Thank You For Contacting us!!</h3>
-    <?php
-}
+
+print("Hannessen");
 ?>
