@@ -170,7 +170,7 @@ $pdo = NULL;
             <div class="col-xs-12 col-md-12">
 				<h1>Wijzigen</h1>
 				<table>
-					<form action='accountwijzigen.php' method='post'>
+					<form action='mw_accountwijzigen.php' method='post'>
 						<tr>
 							<td>Voornaam</td>
 							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
