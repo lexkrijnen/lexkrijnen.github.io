@@ -332,6 +332,10 @@ h6 {
 	color: #fff;
 }
 
+.text-fix {
+	margin-left: -40px;
+}
+
 /*
 .google-maps {
 	overflow:hidden;
