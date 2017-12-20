@@ -8,6 +8,7 @@ if (isset($submitmail)) {
     $subject = "Contact Form";
     $mailheader = "From: $email \r\n";
     mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+    header('Location: testfile.php?mailsend');
     echo "Thank You!";
 }
 ?>
