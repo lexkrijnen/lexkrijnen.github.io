@@ -119,7 +119,7 @@ $pdo = NULL;
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="login.php">Inloggen</a></li>
+						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -127,11 +127,36 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
+            <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="accountoverview.php">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 
-
-		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-			<div class=pagebox>
+        <div class="container page-box">
+            <div class="col-xs-12 col-md-12">
 				<h1>Wijzigen</h1>
 				<table>
 					<form action='accountwijzigen.php' method='post'>

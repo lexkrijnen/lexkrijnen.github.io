@@ -55,17 +55,10 @@ dropdown input:checked ~ ul{
   top: 0;
 }
 
-.animate{
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden; /* Chrome and Safari */
-  -moz-backface-visibility:hidden; /* Firefox */
-  -ms-backface-visibility:hidden; /* Internet Explorer */
+li > a{
+    color: #000000;
 }
+
 /*view boxen*/
 #viewer-box {
 	height: 80vh;

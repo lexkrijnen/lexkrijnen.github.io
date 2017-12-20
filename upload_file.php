@@ -24,7 +24,18 @@ if(isset($_FILES['file'])){
 
     if(empty($errors)==true){
         move_uploaded_file($file_tmp,"pdf/".$file_name);
-        header("Location: /test_PDF_upload.php");
+
+				$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+        $user = "wegro";
+        $pass = "SQLWegro@101";
+        $pdo = new PDO($db, $user, $pass);
+
+				$sql = "INSERT INTO Contract (naam) VALUES(?)";
+				$stmt = $pdo->prepare($sql);
+				$stmt->execute(array($file_name));
+        print('test123test.');
+
+        //header("Location: /test_PDF_upload.php");
 				die();
     }else{
         print_r($errors);
