@@ -108,11 +108,8 @@ body {
 
 modal-body,
 modal-body > p {
-	color: #000;
+	color: #000 !important;
 }
-
-
-
 
 blockquote {
 	font-family: Georgia, serif;
