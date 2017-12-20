@@ -124,7 +124,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
                         <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="ad_project_aanmaken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
