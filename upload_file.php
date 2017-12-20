@@ -30,7 +30,7 @@ if(isset($_FILES['file'])){
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-				$sql = "INSERT INTO Contract (naam) VALUES(" . $file_name . ")";
+				$sql = "INSERT INTO Contract (document) VALUES (" . $file_name . ")";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute();
 
