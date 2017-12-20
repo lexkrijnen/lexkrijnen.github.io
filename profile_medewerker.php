@@ -103,13 +103,6 @@ if (empty($medewerker_nummer)) {
         }
         ?>
 					<p>Welkom op uw profielpagina, hier kunt u de volgende onderdelen inzien en aanpassen:</p>
-					<ul>
-						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
-						<li><a href="bekijken_bouwtekeningen.php">Bekijken bouwtekeningen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-						<li><a href="klant_zoeken.php">Personen wijzigen/verwijderen</a></li>
-						<li><a href="accountoverview.php">Accountgegevens bekijken</a></li>
-					</ul>
 			</div>
 		</div>
 		<div class="row">
