@@ -247,7 +247,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 			<div class="col-xs-12">
 				<p class="text-center footer-title">© Bouwbedrijf Wegro -
-                    <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Algemene Voorwaarden</a> -
+                    <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Algemene Voorwaarden</a>-
                 <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -268,7 +268,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                     <div class="modal-dialog">
                         <div class="modal-content">
 
-                            <div class="modal-body">
+                            <div class="modal-body" style="color: black;">
 
                                 Wegro bv stelt het op prijs dat u interesse in onze diensten toont door middel van een bezoek aan onze site.
 
@@ -283,7 +283,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         </div>
                     </div>
                 </div></p>
-      </div>
+            </div>
 		</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
