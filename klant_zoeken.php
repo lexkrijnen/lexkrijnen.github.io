@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -97,6 +98,14 @@ $pdo = NULL;
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <?php
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
+    ?>
 	</head>
 
 
