@@ -3,6 +3,21 @@ session_start();
 @$klant_id = $_SESSION['klant_id'];
 @$klant_voornaam = $_SESSION['voornaam'];
 @$medewerker_nummer = $_SESSION['medewerker_nummer']
+
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
+    $pdo = new PDO($db, $user, $pass);
+
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
+
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,14 +39,6 @@ session_start();
 	<link href="css/global.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
 	<link href="css/index.css" rel="stylesheet">
-
-    <?php
-    if ($klant_id == "" AND $medewerker_nummer != ""){
-        $rol = "medewerker";
-    } elseif($klant_id != "" AND $medewerker_nummer == ""){
-        $rol = "klant";
-    }
-    ?>
 </head>
 
 <body>
