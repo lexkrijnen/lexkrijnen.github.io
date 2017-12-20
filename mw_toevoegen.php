@@ -105,7 +105,7 @@ $hash = sha1($salt . $wachtwoord);
                             </li>
                             <li class="nav-divider"></li>
                             <li><a href="profile_admin.php">Mijn Account</a></li>
-                            <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
                             <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                             <li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
                             <li><a href="klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
