@@ -65,7 +65,7 @@
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="project_aanmaken">Project Aanmaken</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
 						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                     </ul>
