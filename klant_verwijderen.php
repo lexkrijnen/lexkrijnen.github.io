@@ -1,5 +1,7 @@
 <?php
 session_start();
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
