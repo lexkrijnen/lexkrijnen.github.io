@@ -202,7 +202,7 @@ $pdo = NULL;
 												}
 											?>
 							<tr>
-								<td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
+								<td><a href="medewerker_accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
 								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 							</tr>
 					</form>
