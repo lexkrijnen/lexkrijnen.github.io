@@ -151,6 +151,11 @@ $pdo = NULL;
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
