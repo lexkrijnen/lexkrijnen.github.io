@@ -44,6 +44,12 @@ $hash = sha1($salt . $wachtwoord);
 	<html lang="en">
 
 	<head>
+    <?php
+    session_start();
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+    @$medewerker_functie = $_SESSION['medewerker_functie'];
+    ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,8 +101,37 @@ $hash = sha1($salt . $wachtwoord);
 			<!-- /.container-fluid -->
 		</nav>
 
-		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-			<div class="container">
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav">
+                            <li class="active">
+                                <h4><b>Menu</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                            <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                            <li class="nav-divider"></li>
+                            <li>
+                                <h4><b>Projecten</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                            <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                            <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                            <li><a href="#">Contract/Tekening Toevoegen</a></li>
+                            <li class="nav-divider"></li>
+                        </ul>
+                    </div>
+                    <!--/.well -->
+                </div>
+                <!--/span-->
+            </div>
+        </div>
+
+        <div class="container page-box">
+			<div class="col-xs-12 col-md-12">
 				<h1>Klant toevoegen</h1>
 				<table>
 					<form action="klant_toevoegen.php" method="POST">
