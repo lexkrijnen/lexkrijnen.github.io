@@ -23,13 +23,13 @@
 
 }
 
+
 .contbutton{
 	background-color: #FE9C16 !important;
 	color: white;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-
 .logo {
 	margin: 45px auto;
 	width: 25%;
@@ -37,6 +37,13 @@
 	margin-bottom: 30px;
 	-webkit-filter: drop-shadow(0 0 5px #bdbdbd);
 	filter: drop-shadow(0 0 5px #bdbdbd);
+}
+
+.contbutton,
+.contbutton:hover {
+	color: #fff;
+	font-size: 45px;
+	font-weight: bold;
 }
 
 .imgright {

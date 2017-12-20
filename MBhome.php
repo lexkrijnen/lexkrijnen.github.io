@@ -81,7 +81,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		</nav>
 
 		<!--<div class="">-->
-        <div class="row MBhomeBackground">
+        <div class="row BBhomeBackground">
             <img src="images/Logo%20metselbedrijf%20Wegro.png" class="logo">
 
             <a href="/Contact/contact.php">

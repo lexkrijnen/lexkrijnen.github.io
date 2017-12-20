@@ -133,18 +133,19 @@ $pdo = NULL;
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4>Menu</h4>
+                            <h4><b>Menu</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
                         <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
-                            <h4>Mijn projecten</h4>
+                            <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
-                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
+                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -201,7 +202,7 @@ $pdo = NULL;
 												}
 											?>
 							<tr>
-								<td><a href="accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
+								<td><a href="medewerker_accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
 								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 							</tr>
 					</form>
