@@ -27,6 +27,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+
     $id = $_GET['id'];
     $error = "";
 
@@ -40,6 +45,10 @@
     $stmt = $pdo->prepare("SELECT * FROM Contract WHERE project_nummer = '$projectid'");
     $stmt->execute();
     $contract = $stmt->fetchAll();
+
+    $stmt8 = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+    $stmt8->execute();
+    $projecten = $stmt8->fetchAll();
 
     //TABEL TEKENING
     if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
@@ -57,6 +66,12 @@
     $tekening = $stmt->fetchAll();
 
     $pdo = NULL;
+
+    if($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    }elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
     ?>
 </head>
 
@@ -87,6 +102,39 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+                <ul class="nav">
+                    <li class="active">
+                        <h4>Menu</h4>
+                    </li>
+                    <li class="nav-divider"></li>
+                    <li><a href=<?php if($rol=="klant"){print("account.php");}elseif($rol=="medewerker"){print("profile_medewerker.php");}?>>Mijn Account</a></li>
+                    <li><a href="accountoverview.php">Mijn gegevens</a></li>
+                    <li class="nav-divider"></li>
+                    <li>
+                        <h4>Mijn projecten</h4>
+                    </li>
+                    <li class="nav-divider"></li>
+                    <?php
+                    foreach ( $projecten as $value ) {
+                        print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                    }
+                    ?>
+                    <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
+                    <li><a href="contract_tekening.php">Contract/Tekening</a></li>
+                    <li class="nav-divider"></li>
+                </ul>
+            </div>
+            <!--/.well -->
+        </div>
+        <!--/span-->
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">

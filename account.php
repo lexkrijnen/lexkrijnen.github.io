@@ -15,6 +15,12 @@
     $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
     $stmt->execute();
     $projecten = $stmt->fetchAll();
+
+    if($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    }elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
     ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
