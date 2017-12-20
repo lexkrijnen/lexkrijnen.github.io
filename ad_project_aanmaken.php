@@ -1,6 +1,8 @@
 <?php
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+@$medewerker_functie = $_SESSION['medewerker_functie'];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -96,8 +98,8 @@ $pdo = NULL;
                                 <h4><b>Gegevens</b></h4>
                             </li>
                             <li class="nav-divider"></li>
-                            <li><a href="profile_admin.php">Mijn Account</a></li>
-                            <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                            <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
                             <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                             <li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
                             <li><a href="klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
