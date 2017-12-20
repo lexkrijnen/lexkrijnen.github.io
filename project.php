@@ -27,6 +27,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer']
+
     $id = $_GET['id'];
     $error = "";
 
