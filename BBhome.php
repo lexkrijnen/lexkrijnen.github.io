@@ -226,18 +226,18 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
 
 					<div class="col-xs-12 col-md-4 col-md-offset-2">
-						<h4 class="footer-title align-right"><u>Contact:</u></h4>
+						<h4 class="footer-title text-right"><u>Contact:</u></h4>
 						<ul>
-							<li class="footer-item align-right">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
-							<li class="footer-item align-right">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
-							<li class="footer-item align-right">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></li>
+							<li class="footer-item text-right">Telefoonnummer: <a href="tel:0341-412054">0341-412054</a></li>
+							<li class="footer-item text-right">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl">info@bouwbedrijfwegro.nl</a></li>
+							<li class="footer-item text-right">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431">Gelreweg 38, 3843 AN Harderwijk</a></li>
 						</ul>
 					</div>
 
 					<div class="col-xs-12 col-md-4">
-						<h4 class="footer-title align-left"><u>Social media:</u></h4>
+						<h4 class="footer-title text-left"><u>Social media:</u></h4>
 						<ul>
-							<li class="footer-item align-left"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Facebook</a></li>
+							<li class="footer-item text-left"><a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Facebook</a></li>
 						</ul>
 					</div>
 
