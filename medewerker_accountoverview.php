@@ -128,6 +128,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+												<li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
                         <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
                         <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
