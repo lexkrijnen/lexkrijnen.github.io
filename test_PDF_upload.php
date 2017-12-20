@@ -59,7 +59,7 @@
             }
         }
 
-        $stmt = $pdo->prepare("SELECT * FROM Tekening");
+        $stmt = $pdo->prepare("SELECT * FROM Tekening WHERE project_nummer = '$projectid'");
         $stmt->execute();
         $tekening = $stmt->fetchAll();
 
@@ -109,7 +109,8 @@
 					<?php
                 	foreach ($contract AS $document) {
                     print("<tr>");
-										print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    //print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    print("<td> <a href='test_PDF_upload.php?id=" . $projectid . "&pdf=" . $document["document"] . "'>" . $document["document"] . "</td>");
                     print("</tr>");
                   }
                 ?>
@@ -156,44 +157,37 @@
             ?>
 				</table>
 				<!--Uploaden Tekening-->
-				<form method="get" action="test_PDF_upload.php">
 					<a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tekening toevoegen</a>
 					<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
-								</div>
-								<div class="modal-body">
-									<table class="table">
-										<tr>
-											<thead>
-												<th><b>Tekening.nr</b></th>
-												<th><b>Project.nr</b></th>
-												<th><b>Naam</b></th>
-												<th><b>Document</b></th>
-												<th></th>
-											</thead>
-										</tr>
-										<tr>
-											<form action="upload_file.php" method="post" enctype="multipart/form-data">
-												<input type="file" name="document" />
-												<br />
-												<input type="submit" value="Upload" />
-											</form>
-										</tr>
-									</table>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="upload_tekening.php" method="post" enctype="multipart/form-data">
+
+                                        <input type="file" name="file" size="50" />
+                                        <input type="hidden" name="id" value="<?php print($id); ?>"><br>
+                                        <input type="submit" name="submitcontract" value="Upload" />
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><b>Close</b></button>
+                                </div>
 							</div>
 						</div>
 					</div>
-				</form>
 			</div>
 			<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-				<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
+
+
+
+                <?php
+                    $pdf = $_GET['pdf'];
+                    print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
+                ?>
 
 				<!-- If embedded pdf does not work, display fallback option instead. -->
 				<div class="pdf-fail">
@@ -213,13 +207,26 @@
                 $user = "wegro";
                 $pass = "SQLWegro@101";
                 $pdo = new PDO($db, $user, $pass);
+
+                $getid = $_GET['id'];
+                $getpdf = $_GET['pdf'];
+
+                //OPHALEN CONTRACTNUMMERS
+                $stmt5 = $pdo->prepare("SELECT contract_nummer FROM Contract WHERE project_nummer = '$getid' AND document = '$getpdf'");
+                $stmt5->execute(array(':contract_nummer' => $_GET['id']));
+                $contractnummerarray = $stmt5->fetchAll();
+
+                foreach ($contractnummerarray as $a => $b) {
+                    $contractnummer = $b['contract_nummer'];
+                }
+
                 //MEER WERK
-                $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
-                $stmt->execute(array(':contract_nummer' => $_GET['id']));
+                $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = '$contractnummer'");
+                $stmt->execute();
                 $meerwerk = $stmt->fetchAll();
                 //MINDER WERK
-                $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
-                $stmt2->execute(array(':contract_nummer' => $_GET['id']));
+                $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = '$contractnummer'");
+                $stmt2->execute();
                 $minderwerk = $stmt2->fetchAll();
                 //NAAM PROJECT
                 $stmt3 = $pdo->prepare("SELECT p.naam FROM Project p JOIN Contract c ON  p.project_nummer = c.project_nummer WHERE contract_nummer = :contract_nummer");
@@ -267,7 +274,6 @@
                             ?>
                         </table>
                     </form>
-                    <a href="meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
                 </div>
 
 
