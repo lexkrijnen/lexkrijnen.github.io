@@ -106,12 +106,10 @@ body {
 	overflow-x: hidden;
 }
 
-modal-body {
-	color: #000;
+modal-body,
+modal-body > p {
+	color: #000 !important;
 }
-
-
-
 
 blockquote {
 	font-family: Georgia, serif;
@@ -146,4 +144,10 @@ blockquote footer {
 }
 blockquote cite:before {
 	content: "\2013";
+}
+
+quote {
+	font-size:150px;
+	line-height:0.6em;
+	opacity:0.2
 }

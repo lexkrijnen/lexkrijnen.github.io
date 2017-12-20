@@ -41,6 +41,12 @@ if (isset($_GET["opslaan"])) {
     }
 }
 
+if ($klant_id == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+} elseif($klant_id != "" AND $medewerker_nummer == ""){
+    $rol = "klant";
+}
+
 $pdo = NULL;
 ?>
 
