@@ -252,7 +252,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                     <div class="modal-dialog">
                         <div class="modal-content">
 
-                            <div class="modal-body">
+                            <div class="modal-body" style="color:black;">
                                 Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.
                             </div>
                             <div class="modal-footer">
