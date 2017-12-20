@@ -247,6 +247,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 			<div class="col-xs-12">
 				<p class="text-center footer-title">© Bouwbedrijf Wegro -
+                    <div>
                     <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Algemene Voorwaarden</a>-
                 <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
@@ -262,7 +263,8 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         </div>
                     </div>
                 </div>
-
+                </div>
+               <div>
                 <a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Disclaimer</a>
                 <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
@@ -278,7 +280,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
-
+                              </div>
                             </div>
                         </div>
                     </div>
