@@ -20,6 +20,12 @@
 	height: 55%
 }
 
+.contbutton{
+	background-color: #FE9C16 !important;
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 .logo {
 	margin: 45px auto;
 	width: 25%;

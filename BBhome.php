@@ -83,7 +83,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
         <div class="row BBhomeBackground">
             <img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
 
-        <a href="../contact/contact.php">
+        <a href="/contact/contact.php">
             <div class="col-xs-2 col-xs-offset-5 btn contbutton">
                 Contact
             </div>
@@ -251,10 +251,10 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <div class="modal-content">
 
                             <div class="modal-body" style="color:black;">
-                                ALGEMENE VOORWAARDEN<br>
-                                Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.<br>
+                                ALGEMENE VOORWAARDEN<br><br>
+                                Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.<br><br>
 
-                                DISCLAIMER <br>
+                                DISCLAIMER <br><br>
                                 Wegro bv stelt het op prijs dat u interesse in onze diensten toont door middel van een bezoek aan onze site.
                                 Ondanks de zorg die Wegro bv besteedt aan de correcte weergave van de gegevens van de aangeboden diensten kan Wegro bv niet verantwoordelijk of
                                 aansprakelijk worden gehouden voor eventuele onjuistheden, onvolledigheden of actualiteit van de op de site
