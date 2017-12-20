@@ -84,6 +84,11 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                     </form>
                 </div>
             </div>
+            <?php
+            if ($_POST['verzonden'] != "") {
+                print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is succesvol verzonden!</div>');
+            }
+            ?>
         </div>
     </div>
 

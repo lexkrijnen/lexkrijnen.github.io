@@ -81,7 +81,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		</nav>
 
 		<!--<div class="">-->
-        <div class="row BBhomeBackground">
+        <div class="row TBhomeBackground">
             <img src="images/Wegroleeg.png" class="logo">
 
             <a href="/Contact/contact.php">
