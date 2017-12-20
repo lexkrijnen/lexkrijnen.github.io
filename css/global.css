@@ -106,9 +106,8 @@ body {
 	overflow-x: hidden;
 }
 
-modal-body,
-modal-body > p {
-	color: #000 !important;
+.modal-text {
+	color: #000;
 }
 
 blockquote {
@@ -146,7 +145,7 @@ blockquote cite:before {
 	content: "\2013";
 }
 
-quote {
+.quote {
 	font-size:150px;
 	line-height:0.6em;
 	opacity:0.2
