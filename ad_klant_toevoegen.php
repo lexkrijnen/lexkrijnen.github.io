@@ -50,9 +50,6 @@ $hash = sha1($salt . $wachtwoord);
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
     @$medewerker_functie = $_SESSION['medewerker_functie'];
 
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
     ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
