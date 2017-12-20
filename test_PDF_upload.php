@@ -109,7 +109,8 @@
 					<?php
                 	foreach ($contract AS $document) {
                     print("<tr>");
-										print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    //print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
+                    print("<td> <a href='test_PDF_upload.php?id=" . $projectid . "&pdf=" . $document["document"] . "'>" . $document["document"] . "</td>");
                     print("</tr>");
                   }
                 ?>
@@ -193,7 +194,13 @@
 				</form>
 			</div>
 			<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-				<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/test.pdf" name="pdf_viewer"></iframe>
+
+
+
+                <?php
+                    $pdf = $_GET['pdf'];
+                    print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
+                ?>
 
 				<!-- If embedded pdf does not work, display fallback option instead. -->
 				<div class="pdf-fail">
@@ -213,13 +220,25 @@
                 $user = "wegro";
                 $pass = "SQLWegro@101";
                 $pdo = new PDO($db, $user, $pass);
+
+                $getid = $_GET['id'];
+                $getpdf = $_GET['pdf'];
+
+                //OPHALEN CONTRACTNUMMERS
+                                $stmt5 = $pdo->prepare("SELECT contract_nummer FROM Contract WHERE project_nummer = '$getid' AND document = '$getpdf'");
+                $stmt5->execute(array(':contract_nummer' => $_GET['id']));
+                $contractnummer = $stmt5->fetchAll();
+
+                print("CONTRACTNUMMER:");
+                var_dump($contractnummer);
+
                 //MEER WERK
-                $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = :contract_nummer");
-                $stmt->execute(array(':contract_nummer' => $_GET['id']));
+                $stmt = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 1 AND contract_nummer = '$contractnummer'");
+                $stmt->execute();
                 $meerwerk = $stmt->fetchAll();
                 //MINDER WERK
-                $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = :contract_nummer");
-                $stmt2->execute(array(':contract_nummer' => $_GET['id']));
+                $stmt2 = $pdo->prepare("SELECT * FROM Mutatie WHERE soort_nummer = 2 AND contract_nummer = '$contractnummer'");
+                $stmt2->execute();
                 $minderwerk = $stmt2->fetchAll();
                 //NAAM PROJECT
                 $stmt3 = $pdo->prepare("SELECT p.naam FROM Project p JOIN Contract c ON  p.project_nummer = c.project_nummer WHERE contract_nummer = :contract_nummer");
