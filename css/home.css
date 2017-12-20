@@ -3,22 +3,23 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 60%
+
 }
 .TBhomeBackground {
 	background-image: url("../images/Teken.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 70%
+
 }
 .MBhomeBackground {
 	background-image: url("../images/cement.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 55%
+
 }
+
 
 .contbutton{
 	background-color: #FE9C16 !important;
