@@ -51,6 +51,10 @@ session_start();
         $rol = "klant";
     }
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
     $pdo = NULL;
     ?>
 </head>
