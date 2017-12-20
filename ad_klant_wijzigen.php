@@ -8,6 +8,10 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+$stmt = $pdo->prepare("SELECT * FROM Project");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
+
 
 if (isset($_GET["opslaan"])) {
 		if ($_SESSION["rol2"] == "klant") {
@@ -60,10 +64,6 @@ if(isset($_GET["opslaan"])) {
 				$medewerker_nummer = $_GET["medewerkernummer"];
 		}
 }
-
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
 
 $pdo = NULL;
 ?>
