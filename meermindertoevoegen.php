@@ -1,6 +1,11 @@
+<?php
+session_start();
+@$klant_id = $_SESSION['klant_id'];
+@$klant_voornaam = $_SESSION['voornaam'];
+@$medewerker_nummer = $_SESSION['medewerker_nummer']
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>Meer & Minder Werk</title>

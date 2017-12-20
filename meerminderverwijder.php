@@ -1,3 +1,9 @@
+<?php
+session_start();
+@$klant_id = $_SESSION['klant_id'];
+@$klant_voornaam = $_SESSION['voornaam'];
+@$medewerker_nummer = $_SESSION['medewerker_nummer']
+?>
 <!DOCTYPE html>
 <html>
 
@@ -96,7 +102,7 @@
                     $stmt->execute(array($nummer));
                     if ($stmt->rowCount() == 1) {
                         print("De mutatie is verwijderd.<br>");
-                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">'); // WERKT NOG NIET? CONTROLEREN!!!
+                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php">');
                     } else {
                         print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
                     }
@@ -117,7 +123,7 @@
         ?>
 				<br>
 				<?php
-        print("<a href=\"meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        print('<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>');
         ?>
 		</div>
 	</div>
