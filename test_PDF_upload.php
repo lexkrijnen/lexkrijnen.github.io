@@ -35,7 +35,7 @@
         $pdo = new PDO($db, $user, $pass);
 
         //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
-        if (isset($_GET["submitcontract"])) {
+        if (isset($_POST["submitcontract"])) {
                 $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_POST["contract_nummer"], $_POST["naam"], $_POST['filenaam'], $_POST['project_nummer']));
