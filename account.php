@@ -89,8 +89,6 @@
                             print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
                         }
                         ?>
-                        <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
-                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
