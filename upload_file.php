@@ -31,12 +31,12 @@ if(isset($_FILES['file'])){
         $pdo = new PDO($db, $user, $pass);
 
 				if (isset($_FILES['file'])) {
-					$sql = "INSERT INTO Contract(document, project_nummer) VALUES ($file_name, 28)";
+					$sql = "SET FOREIGN_KEY_CHECKS = 0; INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28); SET FOREIGN_KEY_CHECKS = 1;";
 					$stmt = $pdo->prepare($sql);
 					$stmt->execute();
 				}
 
-        //header("Location: /test_PDF_upload.php");
+        header("Location: /test_PDF_upload.php");
 				die();
     }else{
         print_r($errors);
