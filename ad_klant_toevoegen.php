@@ -121,7 +121,6 @@ $hash = sha1($salt . $wachtwoord);
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
