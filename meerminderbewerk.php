@@ -1,6 +1,11 @@
+<?php
+session_start();
+@$klant_id = $_SESSION['klant_id'];
+@$klant_voornaam = $_SESSION['voornaam'];
+@$medewerker_nummer = $_SESSION['medewerker_nummer']
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>Meer werk: Bewerken</title>
@@ -32,7 +37,7 @@
         $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
         $message = "De wijzigingen zijn opgeslagen.";
         //print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');      DEFECT, ID WORD NIET MEEGENOMEN!
-        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php>');
+        //print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php>');
     }
 
     $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
