@@ -1,19 +1,20 @@
 <?php
-$db = "mysql:host=localhost; dbname=Wegro; port=3306";
-$user = "wegro";
-$pass = "SQLWegro@101";
-$pdo = new PDO($db, $user, $pass);
-
-$username = "djurn@mail.nl";
-
-$stmt3 = $pdo->prepare("SELECT salt FROM Klant WHERE emailadres = '$username'");
-$stmt3->execute();
-$salt = $stmt3->fetchAll();
-
-$hash = sha1($salt . $password);
-
-foreach ($salt as $a => $b) {
-    $salt = $b['salt'];
+if (isset($submitmail)) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $formcontent="From: $name \n Message: $message";
+    $recipient = "lexkrijnen@live.nl";
+    $subject = "Contact Form";
+    $mailheader = "From: $email \r\n";
+    mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+    echo "Thank You!";
 }
+?>
 
-print ($salt);
+<form action="testfile.php" method="POST">
+<p>Name</p> <input type="text" name="name">
+<p>Email</p> <input type="text" name="email">
+<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send" name="submitmail"><input type="reset" value="Clear">
+</form>
