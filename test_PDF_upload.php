@@ -225,7 +225,7 @@
                 $getpdf = $_GET['pdf'];
 
                 //OPHALEN CONTRACTNUMMERS
-                                $stmt5 = $pdo->prepare("SELECT contract_nummer FROM Contract WHERE project_nummer = '$getid' AND document = '$getpdf'");
+                $stmt5 = $pdo->prepare("SELECT contract_nummer FROM Contract WHERE project_nummer = '$getid' AND document = '$getpdf'");
                 $stmt5->execute(array(':contract_nummer' => $_GET['id']));
                 $contractnummerarray = $stmt5->fetchAll();
 
