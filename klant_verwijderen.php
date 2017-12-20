@@ -6,7 +6,11 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-
+if ($klant_id == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+} elseif($klant_id != "" AND $medewerker_nummer == ""){
+    $rol = "klant";
+}
 
 //klant verwijderen
 
@@ -83,13 +87,36 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav">
+                            <li class="active">
+                                <h4><b>Menu</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                            <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                            <li class="nav-divider"></li>
+                            <li>
+                                <h4><b>Projecten</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                            <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                            <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                            <li class="nav-divider"></li>
+                        </ul>
+                    </div>
+                    <!--/.well -->
+                </div>
+             <!--/span-->
+            </div>
+        </div>
 
-
-
-
-
-		<div class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-			<div class=container>
+		<div class="container page-box">
+		  <div class="col-xs-12 col-md-12">
 				<h1>Verwijderen</h1>
 				<br>
 				<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
