@@ -24,9 +24,7 @@ if (isset($_POST["opslaan"])) {
 
 }
 
-$stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
-$stmt->execute();
-$projecten = $stmt->fetchAll();
+
 
 $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
@@ -67,6 +65,10 @@ if(isset($_POST["opslaan"])) {
 }
 
 $rol = $_SESSION["rol"];
+
+$stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_nummer'");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
 
 $pdo = NULL;
 ?>
