@@ -30,7 +30,7 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
-    @$medewerker_nummer = $_SESSION['medewerker_nummer']
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
     $id = $_GET['id'];
     $error = "";
@@ -45,6 +45,10 @@
     $stmt = $pdo->prepare("SELECT * FROM Contract WHERE project_nummer = '$projectid'");
     $stmt->execute();
     $contract = $stmt->fetchAll();
+
+    $stmt8 = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+    $stmt8->execute();
+    $projecten = $stmt8->fetchAll();
 
     //TABEL TEKENING
     if (isset($_GET["toevoegentekening"]) && isset($_GET["document"])) {
