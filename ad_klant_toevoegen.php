@@ -16,9 +16,9 @@ $pdo = new PDO($db, $user, $pass);
 
 if (isset($_POST["aanmaken"])) {
 
-	$sql = "INSERT INTO Medewerker (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats, functie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	$stmt = $pdo->prepare($sql);
-	$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"]));
+    $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["hash"], $_POST["salt"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["woonplaats"]));
 
 }
 
@@ -44,6 +44,12 @@ $hash = sha1($salt . $wachtwoord);
 	<html lang="en">
 
 	<head>
+    <?php
+    session_start();
+    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
+    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+    @$medewerker_functie = $_SESSION['medewerker_functie'];
+    ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +58,7 @@ $hash = sha1($salt . $wachtwoord);
 		<meta name="author" content="Nard Wemes">
 		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-		<title>Medewerker toevoegen</title>
+		<title>Klant toevoegen</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -125,11 +131,11 @@ $hash = sha1($salt . $wachtwoord);
         </div>
     </div>
 
-		<div class="container page-box">
+        <div class="container page-box">
 			<div class="col-xs-12 col-md-12">
-				<h1>Medewerker toevoegen</h1>
+				<h1>Klant toevoegen</h1>
 				<table>
-					<form action="mw_toevoegen.php" method="POST">
+					<form action="klant_toevoegen.php" method="POST">
 						<tr>
 							<td>Voornaam</td>
 							<td>
@@ -157,7 +163,7 @@ $hash = sha1($salt . $wachtwoord);
 						<tr>
 							<td>Wachtwoord</td>
 							<td>
-								<input type="tel" class="form-control" placeholder="wachtwoord" disabled <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$wachtwoord"); } ?>>
+								<input type="text" class="form-control" placeholder="wachtwoord" disabled <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$wachtwoord"); } ?>>
 							</td>
 							<td>
 								<input type="hidden" name="hash" <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$hash"); } ?>>
@@ -172,7 +178,7 @@ $hash = sha1($salt . $wachtwoord);
 						<tr>
 							<td>Telefoonnummer</td>
 							<td>
-								<input type="text" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $telefoonnummer"); } ?>>
+								<input type="tel" class="form-control" name="telefoonnummer" placeholder="Telefoonnummer" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $telefoonnummer"); } ?>>
 							</td>
 						</tr>
 						<tr>
@@ -195,20 +201,6 @@ $hash = sha1($salt . $wachtwoord);
 							</td>
 							<td>
 								<input type="text" class="form-control" name="postcode" placeholder="postcode" <?php if(isset($_POST[ "genereer_wachtwoord"]) || isset($_POST[ "aanmaken"])) { print( "value = $postcode"); } ?>>
-							</td>
-						</tr>
-						<tr>
-							<td>Functie</td>
-							<td>
-								<input type="radio" name="functie" value="2" checked> Medewerker
-							</td>
-						</tr>
-						<tr>
-							<td>
-
-							</td>
-							<td>
-								<input type="radio" name="functie" value="1"> Admin
 							</td>
 						</tr>
 						<tr>
@@ -267,7 +259,7 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 } else {
                     ///succes
-                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als medewerker.</div>');
+										print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als klant.</div>');
                 }
             }
 
@@ -292,6 +284,7 @@ $hash = sha1($salt . $wachtwoord);
 
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
+
 	</body>
 
 	</html>
