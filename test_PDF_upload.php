@@ -26,7 +26,7 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-	<?php
+	<?php/*
         $error = "";
 
         $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -62,7 +62,7 @@
         $tekening = $stmt->fetchAll();
 
         $pdo = NULL;
-    ?>
+    */?>
 </head>
 
 <body>
@@ -124,11 +124,11 @@
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 
 									<input type="file" name="file" size="50" />
-                                    <input type="text" name="contract_nummer" placeholder="Contract Nummer">
+                  <!--                  <input type="text" name="contract_nummer" placeholder="Contract Nummer">
                                     <input type="text" name="naam" placeholder="Naam Document">
                                     <input type="text" name="filenaam" placeholder="Filenaam">
                                     <input type="text" name="project_nummer" placeholder="Project Nummer">
-									<br><br>
+									<br>--><br>
 									<input type="submit" name="submitcontract" value="Upload" />
 
 									</form>
