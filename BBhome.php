@@ -136,7 +136,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<div class="overlay">
 							<h1>VERBOUW</h1>
 							<p>
-								Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen. Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs. En we maken duidelijk afspraken over de uitvoering van uw verbouwing. En of het nu om een grote of kleine verbouwing gaat: wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden. Dat scheelt u veel tijd, geld en ergernis. Sterker nog: u profiteert van onze ervaring, vakkennis en service!
+								Bouwbedrijf wegro bv focust zich op uw wensen, maar ook op uw budget en planning. Samen met u bepalen we de beste optie om uw huis te verbouwen. Daarnaast adviseren wij u over ontwerp, uitwerking, materialen, planning en prijs. We maken duidelijk afspraken over de uitvoering van uw verbouwing, en of het nu om een grote of kleine verbouwing gaat: wij nemen u graag alle werk uit handen. Van het aanvragen van de bouwvergunning tot en met het opruimen na de werkzaamheden.
 							</p>
 						</div>
 					</div>
