@@ -22,6 +22,10 @@ if (isset($_POST["aanmaken"])) {
 
 }
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
 $pdo = NULL;
 
 //random string voor wachtwoord
