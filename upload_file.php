@@ -36,7 +36,7 @@ if(isset($_FILES['file'])){
 					$stmt->execute();
 				}
 
-        //header("Location: /test_PDF_upload.php");
+        header("Location: /test_PDF_upload.php");
 				die();
     }else{
         print_r($errors);
