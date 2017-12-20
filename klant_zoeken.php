@@ -28,7 +28,7 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-		$rol = $_GET["rol"];
+		$zoekrol = $_GET["rol"];
 
 		if ($_GET["rol"] == "klant") {
 			$klant_nummer = $klant["klant_nummer"];
@@ -238,10 +238,10 @@ $pdo = NULL;
                     } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
-												if ($rol == "medewerker") {
+												if ($zoekrol == "medewerker") {
 														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
 														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
-												} elseif ($rol == "klant") {
+												} elseif ($zoekrol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
 												}
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
