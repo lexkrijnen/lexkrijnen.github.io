@@ -1,12 +1,13 @@
 <?php
 
-$name = $_SESSION["mailnaam"];
+$name = "jeroen";
 $email = "jeroen.e99@gmail.com";
-$message = $_SESSION["bericht"];
+$message = "testtest";
 $formcontent="From: $name \n Message: $message";
-$recipient = $_SESSION["mailadres"];
+$recipient = "jeroenelferink13@gmail.com";
 $subject = "Testmail";
 $mailheader = "From: $email \r\n";
+print($name . $email . $message . $formcontent . $recipient . $subject . $mailheader);
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 print("Thank You!");
 
