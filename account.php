@@ -15,6 +15,12 @@
     $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
     $stmt->execute();
     $projecten = $stmt->fetchAll();
+
+    if($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    }elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
     ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,7 +86,7 @@
                         <li class="nav-divider"></li>
                         <?php
                         foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
                         }
                         ?>
                         <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
