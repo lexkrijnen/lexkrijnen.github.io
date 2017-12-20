@@ -64,7 +64,7 @@
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht.php" method="post">
+                    <form class="contact-form" action="verzendbericht2.php" method="post">
                         <input type="text" class="form-control c" name="naam" placeholder="Naam">
                         <input type="text" class="form-control c" name="mail" placeholder="e-mail">
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp">
