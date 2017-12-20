@@ -275,7 +275,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</div>
 			</div>
 			<div class="footer-bottom-layout">
-				<div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></div>
+				<div class="copyright-tag">© Bouwbedrijf Wegro - Klik hier voor <a href="#">Algemene Voorwaarden</a> en <a href="#">Disclaimer<a/></div>
       </div>
       <a name="Contact" id="Contact"></a>
 		</footer>
