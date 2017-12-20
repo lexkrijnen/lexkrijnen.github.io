@@ -30,11 +30,13 @@ if(isset($_FILES['file'])){
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-				$sql = "INSERT INTO Contract(document, project_nummer) VALUES ($file_name, 28)";
-				$stmt = $pdo->prepare($sql);
-				$stmt->execute();
+				if (isset($_FILES['file'])) {
+					$sql = "INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28)";
+					$stmt = $pdo->prepare($sql);
+					$stmt->execute();
+				}
 
-        header("Location: /test_PDF_upload.php");
+        //header("Location: /test_PDF_upload.php");
 				die();
     }else{
         print_r($errors);
