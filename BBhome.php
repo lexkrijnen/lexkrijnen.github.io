@@ -262,7 +262,6 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         </div>
                     </div>
                 </div>
-
                 <a href="#" class="btn " data-toggle="modal" data-target="#basicDis">Disclaimer</a>
                 <div class="modal fade" id="basicDis" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
