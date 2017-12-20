@@ -156,10 +156,9 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					</div>
 				</div>
 			</div>
-            <div>
-			<a name="Vergunningen" id="Vergunningen"></a>
-            </div>
+
             <div class="row">
+                <a name="Vergunningen" id="Vergunningen"></a>
 				<p class="col-xs-10 col-xs-offset-1  paragraphright page-box">
 					<img src="images/IMG_7017.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 

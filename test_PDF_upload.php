@@ -27,6 +27,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	<?php
+        $id = $_GET['id'];
         $error = "";
 
         $db = "mysql:host=localhost; dbname=Wegro; port=3306";
@@ -125,11 +126,7 @@
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 
 									<input type="file" name="file" size="50" />
-                  <!--                  <input type="text" name="contract_nummer" placeholder="Contract Nummer">
-                                    <input type="text" name="naam" placeholder="Naam Document">
-                                    <input type="text" name="filenaam" placeholder="Filenaam">
-                                    <input type="text" name="project_nummer" placeholder="Project Nummer">
-									<br>--><br>
+                                    <input type="hidden" name="id" value="<?php print($id); ?>"><br>
 									<input type="submit" name="submitcontract" value="Upload" />
 
 									</form>
