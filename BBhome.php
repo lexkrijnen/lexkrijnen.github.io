@@ -80,6 +80,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		</nav>
 
 		<!--<div class="">-->
+		<div class="container-fluid">
 		<div class="row BBhomeBackground">
 			<img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
 
@@ -273,6 +274,8 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					</div>
 				</div>
 			</div>
+
+			</div><!-- .container -->
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<script src="js/jquery.min.js"></script>
