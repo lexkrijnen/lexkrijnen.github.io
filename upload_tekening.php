@@ -32,7 +32,7 @@ if(isset($_FILES['file'])){
 
         $id = $_POST['id'];
 				if (isset($_FILES['file'])) {
-					$sql = "INSERT INTO Tekening (document, project_nummer) VALUES ('" . $file_name . "', $id)";
+					$sql = "INSERT INTO Tekening(document, project_nummer) VALUES ('" . $file_name . "', $id)";
 					$stmt = $pdo->prepare($sql);
 					$stmt->execute();
 				}
