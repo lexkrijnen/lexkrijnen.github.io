@@ -44,7 +44,9 @@
     $medewerker_nummerdb = $sqlresult["medewerker_nummer"];
     }
 
-
+    $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
 
 
     $voornaam = ucfirst($sqlresult["voornaam"]);
@@ -127,8 +129,12 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                             <h4>Mijn projecten</h4>
                         </li>
                         <li class="nav-divider"></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
-                        <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
