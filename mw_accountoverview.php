@@ -178,7 +178,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='medewerker_accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
+                        print("</table><form action='mw_accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){
