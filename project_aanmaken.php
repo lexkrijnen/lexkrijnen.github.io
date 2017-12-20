@@ -18,7 +18,7 @@ if ($lastprojectnr !== false) {
 }
 
 //BESTAANDE KLANTEN OPHALEN:
-$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam, tussenvoegsel, achternaam FROM Klant ORDER BY achternaam");
+$stmt3 = $pdo->prepare("SELECT klant_nummer, voornaam, tussenvoegsel, achternaam FROM Klant ORDER BY voornaam");
 $stmt3->execute();
 $queryresult3 = $stmt3->fetchAll();
 
