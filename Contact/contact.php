@@ -79,7 +79,7 @@
 
 <?php
     $_SESSION["mailnaam"] = $_POST["naam"];
-    $_SESSION["mailadres"] = $_POST[mail];
+    $_SESSION["mailadres"] = $_POST["mail"];
     $_SESSION["onderwerp"] = $_POST["onderwerp"];
     $_SESSION["bericht"] = $_POST["bericht"];
 ?>
