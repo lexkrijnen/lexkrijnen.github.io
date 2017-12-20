@@ -34,9 +34,9 @@ if (isset($_GET["vinden"])) {
 			$klant_nummer = $klant["klant_nummer"];
 			$_SESSION["klantnummer2"] = $klant_nummer;
 		} elseif ($_GET["rol"] == "medewerker") {
-			$medewerker_nummer = $klant["medewerker_nummer"];
+			$medewerker_nummer2 = $klant["medewerker_nummer"];
 			$functie = $klant["functie"];
-			$_SESSION["medewerkernummer2"] = $medewerker_nummer;
+			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
 			$_SESSION["functie2"] = $functie;
 			$_SESSION["functienaam2"] = $functienaam;
 		}
@@ -50,7 +50,7 @@ if (isset($_GET["vinden"])) {
     $_SESSION["adres2"] = $adres;
     $_SESSION["postcode2"] = $postcode;
     $_SESSION["woonplaats2"] = $woonplaats;
-		$_SESSION["rol2"] = $rol;
+		$_SESSION["rol2"] = $zoekrol;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
@@ -136,39 +136,30 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
-    <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-                <div class="sidebar-nav">
-                    <ul class="nav">
-                        <li class="active">
-                            <h4><b>Gegevens</b></h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <li><a href="profile_admin.php">Mijn Account</a></li>
-                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
-                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
-                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-                        <li class="nav-divider"></li>
-                        <li>
-                            <h4><b>Projecten</b></h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <?php
-                        foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
-                        }
-                        ?>
-                        <li class="nav-divider"></li>
-                    </ul>
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav">
+                            <li class="active">
+                                <h4><b>Menu</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href=profile_admin.php>Mijn Account</a></li>
+                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                            <li class="nav-divider"></li>
+                            <li>
+                                <h4><b>Projecten</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li class="nav-divider"></li>
+                        </ul>
+                    </div>
+                    <!--/.well -->
                 </div>
-                <!--/.well -->
+             <!--/span-->
             </div>
-            <!--/span-->
         </div>
-    </div>
 
 		<div class="container page-box">
 		  <div class="col-xs-12 col-md-12">
@@ -241,11 +232,11 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($klant_nummer != "" || $medewerker_nummer != "") {
+                    } elseif ($klant_nummer != "" || $medewerker_nummer2 != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												if ($zoekrol == "medewerker") {
-														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer</td></tr>");
+														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer2</td></tr>");
 														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
 												} elseif ($zoekrol == "klant") {
 														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
@@ -273,7 +264,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen $zoekrol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen $rol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
@@ -298,3 +289,4 @@ $pdo = NULL;
 	</body>
 
 	</html>
+

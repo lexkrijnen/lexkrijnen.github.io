@@ -14,10 +14,6 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$stmt = $pdo->prepare("SELECT * FROM Project");
-$stmt->execute();
-$projecten = $stmt->fetchAll();
-
 if (isset($_POST["aanmaken"])) {
 
     $sql = "INSERT INTO Klant (voornaam, tussenvoegsel, achternaam, emailadres, wachtwoord, salt, telefoon_nummer, adres, postcode, woonplaats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -53,7 +49,6 @@ $hash = sha1($salt . $wachtwoord);
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
     @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
     @$medewerker_functie = $_SESSION['medewerker_functie'];
-
     ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,7 +93,7 @@ $hash = sha1($salt . $wachtwoord);
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+						<li class="nav-item"><a href="account.php">Mijn account</a></li>
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
@@ -106,39 +101,30 @@ $hash = sha1($salt . $wachtwoord);
 			<!-- /.container-fluid -->
 		</nav>
 
-    <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-                <div class="sidebar-nav">
-                    <ul class="nav">
-                        <li class="active">
-                            <h4><b>Gegevens</b></h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <li><a href="profile_admin.php">Mijn Account</a></li>
-                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
-                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
-                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-                        <li class="nav-divider"></li>
-                        <li>
-                            <h4><b>Projecten</b></h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <?php
-                        foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
-                        }
-                        ?>
-                        <li class="nav-divider"></li>
-                    </ul>
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav">
+                            <li class="active">
+                                <h4><b>Menu</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li><a href="profile_admin.php">Mijn Account</a></li>
+                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                            <li class="nav-divider"></li>
+                            <li>
+                                <h4><b>Projecten</b></h4>
+                            </li>
+                            <li class="nav-divider"></li>
+                            <li class="nav-divider"></li>
+                        </ul>
+                    </div>
+                    <!--/.well -->
                 </div>
-                <!--/.well -->
+                <!--/span-->
             </div>
-            <!--/span-->
         </div>
-    </div>
 
         <div class="container page-box">
 			<div class="col-xs-12 col-md-12">
