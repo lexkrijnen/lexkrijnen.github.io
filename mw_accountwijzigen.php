@@ -64,6 +64,10 @@ if(isset($_POST["opslaan"])) {
 
 $rol = $_SESSION["rol"];
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
 $pdo = NULL;
 ?>
 
@@ -127,25 +131,31 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
-            <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4><b>Menu</b></h4>
+                            <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
-                        <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
+                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
+                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -202,7 +212,7 @@ $pdo = NULL;
 												}
 											?>
 							<tr>
-								<td><a href="medewerker_accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
+								<td><a href="mw_accountoverview.php" class="btn btn-primary" role="button">Terug</a></td>
 								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 							</tr>
 					</form>
