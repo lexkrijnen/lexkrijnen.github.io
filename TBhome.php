@@ -227,61 +227,64 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		<div class="google-maps">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-		<footer id="footer-Section">
-			<div class="footer-top-layout">
-				<div class="container">
-					<div class="row">
-						<div class="OurBlog">
-							<h4>Bouwbedrijf Wegro</h4>
-						</div>
-						<div class=" col-lg-9 col-lg-offset-3">
-							<div class="col-sm-3">
-								<div class="footer-col-item">
-									<h4>Contact</h4>
-									<div class="item-contact"> <a href="tel:0341-412054"><span class="link-id">TEL:</span>:<span>0341-412054</span></a> <br><a href="mailto:info@bouwbedrijfwegro.nl"><span class="link-id">MAIL</span>:<span>info@bouwbedrijfwegro.nl</span></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<a href="#" class="btn " data-toggle="modal" data-target="#basicModal">Facebook</a>
-								<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
+            <div class="container-fluid footer">
+                <div class="col-xs-12">
+                    <h4 class="footer-title">Bouwbedrijf Wegro</h4>
+                </div>
 
-											<div class="modal-body">
-												<div class="fb-page" data-href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" data-tabs="timeline" data-width="600" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-													<blockquote cite="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" class="fb-xfbml-parse-ignore">
-														<a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs">Bouwbedrijf Wegro</a></blockquote>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">sluiten</button>
+                <div class="col-xs-12 col-md-6">
+                    <ul class="text-fix">
+                        <li class="footer-item">Telefoonnummer: <a href="tel:0341-412054" target="_blank">0341-412054</a></li>
+                        <li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl" target="_blank">info@bouwbedrijfwegro.nl</a></li>
+                        <li class="footer-item">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431" target="_blank">Gelreweg 38, 3843 AN Harderwijk</a></li>
+                        <li class="footer-item">Social media: <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" target="_blank">Facebook</a>,
+													<a href="https://www.linkedin.com/in/nard-wemes-43084841/?ppe=1" target="_blank">Linkedin</a></li>
+                    </ul>
+                </div>
 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="footer-col-item">
-									<h4>Locatie</h4>
-									<address>
+                <div class="col-xs-12 col-md-6 footer-title footer-item text-md-right">
+                    <a href="#" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
+                    - <a href="#" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>
+                    <p class="footer-title">© Bouwbedrijf Wegro</p>
+                </div>
 
-                                  Gelreweg 38
-                                  <br>
-                                  3843AN Harderwijk, NL
-                              </address>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom-layout">
-				<div class="copyright-tag">© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons<a/></div>
-      </div>
-      <a name="Contact" id="Contact"></a>
-		</footer>
+                <div class="modal fade" id="voor-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Algemene voorwaarden</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">Van toepassing zijn de algemene voorwaarden voor aannemingen in het bouwbedrijf AVA 1992.</p>
+                                <p class="modal-text"><a href="pdf-viewer/web/viewer.html?file=/BBSW Algemene Voorwaarden voor Aannemingen in het bouwbedrijf (AVA) 1992.pdf">Klik hier</a> om deze voorwaarden te bekijken.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="disc-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Disclaimer</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">Wegro bv stelt het op prijs dat u interesse in onze diensten toont door middel van een bezoek aan onze site. Ondanks de zorg die Wegro bv besteedt aan de correcte weergave van de gegevens van de aangeboden diensten kan Wegro bv niet verantwoordelijk of aansprakelijk worden gehouden voor eventuele onjuistheden, onvolledigheden of actualiteit van de op de site www.bouwbedrijfwegro.nl aangeboden informatie. Wegro bv onderschrijft, keurt goed, erkent of controleert geen externe bronnen (internetsites van derden die door of via verwijzingen op onze website bezocht kunnen worden). Wegro bv is niet aansprakelijk jegens enige partij voor directe of indirecte of gevolgschade (inclusief, maar niet beperkt tot, gederfde winst voor bedrijven of anderszins) die het gevolg is van het gebruik van deze website of van informatie hierop, of die het gevolg is van het gebruik van de website derden en de informatie daarop, die door of via verwijzingen op onze website verkregen, opgevraagd of gedownload zijn.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- .container -->
 
 
 

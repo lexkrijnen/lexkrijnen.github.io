@@ -30,15 +30,14 @@ if(isset($_FILES['file'])){
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
+        $id = $_POST['id'];
 				if (isset($_FILES['file'])) {
-					$sql = "SET FOREIGN_KEY_CHECKS = 0;
-									INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', 28);
-									SET FOREIGN_KEY_CHECKS = 1;";
+					$sql = "INSERT INTO Contract(document, project_nummer) VALUES ('" . $file_name . "', $id)";
 					$stmt = $pdo->prepare($sql);
 					$stmt->execute();
 				}
 
-        header("Location: /test_PDF_upload.php");
+        header("Location: /test_PDF_upload.php?id=$id");
 				die();
     }else{
         print_r($errors);

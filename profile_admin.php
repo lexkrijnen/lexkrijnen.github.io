@@ -46,6 +46,36 @@
 		<!-- /.container-fluid -->
 	</nav>
 
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4><b>Gegevens</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4><b>Projecten</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
+
 	<?php
 if (empty($medewerker_nummer)) {
     print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
