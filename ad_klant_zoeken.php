@@ -149,7 +149,7 @@ $pdo = NULL;
                         <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
                         <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
                         <li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
-                        <li><a href="klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_accountoverview.php">Klanten Wijzigen/Verwijderen</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>

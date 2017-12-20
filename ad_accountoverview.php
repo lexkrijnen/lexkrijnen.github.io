@@ -111,35 +111,35 @@ if($klant_id == "" AND $medewerker_nummer != ""){
         <!-- /.container-fluid -->
     </nav>
 
-        <div class="container-fluid">
-            <div class="row row-offcanvas row-offcanvas-left">
-                <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-                    <div class="sidebar-nav">
-                        <ul class="nav">
-                            <li class="active">
-                                <h4><b>Gegevens</b></h4>
-                            </li>
-                            <li class="nav-divider"></li>
-                            <li><a href="profile_admin.php">Mijn Account</a></li>
-                            <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
-                            <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
-                            <li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
-                            <li><a href="klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
-                            <li class="nav-divider"></li>
-                            <li>
-                                <h4><b>Projecten</b></h4>
-                            </li>
-                            <li class="nav-divider"></li>
-                            <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
-                            <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
-                            <li class="nav-divider"></li>
-                        </ul>
-                    </div>
-                    <!--/.well -->
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4><b>Gegevens</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_accountoverview.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4><b>Projecten</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="ad_accountoverview.php">Project Aanmaken</a></li>
+						<li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
                 </div>
-                <!--/span-->
+                <!--/.well -->
             </div>
+            <!--/span-->
         </div>
+    </div>
 
     <?php
     if (empty($klant_id) AND empty($medewerker_nummer)) {
