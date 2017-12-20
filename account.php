@@ -6,6 +6,15 @@
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
+
+    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
+    $user = "wegro";
+    $pass = "SQLWegro@101";
+    $pdo = new PDO($db, $user, $pass);
+
+    $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
     ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,6 +78,11 @@
                             <h4>Mijn projecten</h4>
                         </li>
                         <li class="nav-divider"></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li><a href="meerminderlanding.php">Meer/Minder werk</a></li>
                         <li><a href="contract_tekening.php">Contract/Tekening</a></li>
                         <li class="nav-divider"></li>
