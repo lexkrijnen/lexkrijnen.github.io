@@ -145,3 +145,9 @@ blockquote footer {
 blockquote cite:before {
 	content: "\2013";
 }
+
+quote {
+	font-size:150px;
+	line-height:0.6em;
+	opacity:0.2
+}
