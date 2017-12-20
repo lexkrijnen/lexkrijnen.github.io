@@ -8,9 +8,9 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
-$stmt = $pdo->prepare("SELECT * FROM Project");
-$stmt->execute();
-$projecten = $stmt->fetchAll();
+$stmt5 = $pdo->prepare("SELECT * FROM Project");
+$stmt5->execute();
+$projecten = $stmt5->fetchAll();
 
 
 if (isset($_GET["opslaan"])) {
