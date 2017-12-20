@@ -65,7 +65,6 @@
                         <li><a href="klant_zoeken.php">Klantbeheer</a></li>
                         <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
                         <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
-                        <li><a href="bekijken_bouwtekeningen.php">Zoeken bouwtekeningen</a></li>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
