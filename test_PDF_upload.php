@@ -157,41 +157,28 @@
             ?>
 				</table>
 				<!--Uploaden Tekening-->
-				<form method="get" action="test_PDF_upload.php">
 					<a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tekening toevoegen</a>
 					<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
-								</div>
-								<div class="modal-body">
-									<table class="table">
-										<tr>
-											<thead>
-												<th><b>Tekening.nr</b></th>
-												<th><b>Project.nr</b></th>
-												<th><b>Naam</b></th>
-												<th><b>Document</b></th>
-												<th></th>
-											</thead>
-										</tr>
-										<tr>
-											<form action="upload_file.php" method="post" enctype="multipart/form-data">
-												<input type="file" name="document" />
-												<br />
-												<input type="submit" value="Upload" />
-											</form>
-										</tr>
-									</table>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Bestand toevoegen</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="upload_tekening.php" method="post" enctype="multipart/form-data">
+
+                                        <input type="file" name="file" size="50" />
+                                        <input type="hidden" name="id" value="<?php print($id); ?>"><br>
+                                        <input type="submit" name="submitcontract" value="Upload" />
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><b>Close</b></button>
+                                </div>
 							</div>
 						</div>
 					</div>
-				</form>
 			</div>
 			<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
 
