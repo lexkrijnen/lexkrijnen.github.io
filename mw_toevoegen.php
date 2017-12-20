@@ -240,6 +240,14 @@ $hash = sha1($salt . $wachtwoord);
                     print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als medewerker.</div>');
                 }
             }
+
+						if (isset($_POST["genereer_wachtwoord"])) {
+								print("<div class=\"alert alert-warning\" role=\"alert\">");
+								print("<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>");
+								print("<span class=\"sr-only\">Error:</span>");
+								print(" Let op! zorg ervoor dat u dit wachtwoord nu kopieert en ergens opslaat, het kan later niet meer gewijzigd worden.");
+								print("</div>");
+						}
             ?>
 		</div>
 
