@@ -107,7 +107,7 @@ $hash = sha1($salt . $wachtwoord);
                     <div class="sidebar-nav">
                         <ul class="nav">
                             <li class="active">
-                                <h4><b>Menu</b></h4>
+                                <h4><b>Functies</b></h4>
                             </li>
                             <li class="nav-divider"></li>
                             <li><a href="profile_admin.php">Mijn Account</a></li>
