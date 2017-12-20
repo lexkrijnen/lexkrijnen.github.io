@@ -41,8 +41,9 @@
 				//	$stmt->execute(array($_POST[""]));
 				//	$msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
 				//}
+        $projectid = $_GET['id'];
 
-        $stmt = $pdo->prepare("SELECT * FROM Contract");
+        $stmt = $pdo->prepare("SELECT * FROM Contract WHERE project_nummer = '$projectid'");
         $stmt->execute();
         $contract = $stmt->fetchAll();
 
