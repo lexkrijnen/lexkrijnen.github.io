@@ -59,6 +59,12 @@
     $stmt3 = $pdo->prepare("SELECT p.naam FROM Project p JOIN Contract c ON  p.project_nummer = c.project_nummer WHERE contract_nummer = :contract_nummer");
     $stmt3->execute(array(':contract_nummer' => $_GET['id']));
     $naamproject = $stmt3->fetchAll();
+
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
     ?>
 </head>
 
@@ -94,14 +100,14 @@
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4>Menu</h4>
+                            <h4><b>Menu</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
                         <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
-                            <h4>Projecten</h4>
+                            <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="klant_zoeken.php">Klantbeheer</a></li>
