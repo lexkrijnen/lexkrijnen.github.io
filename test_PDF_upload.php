@@ -125,11 +125,7 @@
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 
 									<input type="file" name="file" size="50" />
-                  <!--                  <input type="text" name="contract_nummer" placeholder="Contract Nummer">
-                                    <input type="text" name="naam" placeholder="Naam Document">
-                                    <input type="text" name="filenaam" placeholder="Filenaam">
-                                    <input type="text" name="project_nummer" placeholder="Project Nummer">
-									<br>--><br>
+                                    <input type="hidden" name="id" value="<? print($_GET['id']); ?>"><br>
 									<input type="submit" name="submitcontract" value="Upload" />
 
 									</form>
