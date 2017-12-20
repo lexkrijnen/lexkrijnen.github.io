@@ -237,7 +237,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <li class="footer-item">Telefoonnummer: <a href="tel:0341-412054" target="_blank">0341-412054</a></li>
                         <li class="footer-item">E-mailadres: <a href="mailto:info@bouwbedrijfwegro.nl" target="_blank">info@bouwbedrijfwegro.nl</a></li>
                         <li class="footer-item">Adres: <a href="https://maps.google.com/maps?ll=52.336346,5.629506&z=16&t=m&hl=en-US&gl=NL&mapclient=embed&cid=14399055428232743431" target="_blank">Gelreweg 38, 3843 AN Harderwijk</a></li>
-                        <li class="footer-item">Social media: <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" target="_blank">Facebook</a></li>
+                        <li class="footer-item">Social media: <a href="https://www.facebook.com/Bouwbedrijf-Wegro-1708331486161176/?ref=br_rs" target="_blank">Facebook </a><a href="https://www.linkedin.com/in/nard-wemes-43084841/?ppe=1" target="_blank">Linkedin</a></li>
                     </ul>
                 </div>
 
