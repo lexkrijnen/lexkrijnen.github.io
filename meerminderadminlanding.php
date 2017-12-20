@@ -102,7 +102,7 @@
 			<ul>
 				<?php
             foreach ( $queryresult as $value ) {
-                print ("<li>Project: <a href=\"meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . "</a></li>");
+                print ("<li>Project: <a href=\"meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . " - Contract " . $value['document'] . "</a></li>");
             }
             ?>
 			</ul>
