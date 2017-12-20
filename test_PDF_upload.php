@@ -34,16 +34,13 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        //TABEL CONTRACT
-        if (isset($_GET["toevoegencontract"]) && isset($_GET["document"])) {
-            if ($_GET["document"] != "" AND $_GET["naam"] != "" ) {
-                $sql = "INSERT INTO Contract (contract_nummer, document, naam)VALUES(?,?,?)";
+        //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
+        if (isset($_GET["submitcontract"])) {
+                $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["contract_nummer"], $_GET["document"], $_GET['naam']));
-            } else {
-                $error = ("Vul A.U.B alles in");
-            }
-        }
+                $stmt->execute(array($_POST["contract_nummer"], $_POST["naam"], $_POST['filenaam'], $_POST['project_nummer']));
+                print("bestand is geupload. "); //TEST, STRAKS VERVANGEN DOOR MELDING.
+                }
 
         $stmt = $pdo->prepare("SELECT * FROM Contract");
         $stmt->execute();
@@ -127,10 +124,12 @@
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 
 									<input type="file" name="file" size="50" />
-
-									<br />
-
-									<input type="submit" value="Upload" />
+                                    <input type="text" name="contract_nummer" placeholder="Contract Nummer">
+                                    <input type="text" name="naam" placeholder="Naam Document">
+                                    <input type="text" name="filenaam" placeholder="Filenaam">
+                                    <input type="text" name="project_nummer" placeholder="Project Nummer">
+									<br><br>
+									<input type="submit" name="submitcontract" value="Upload" />
 
 									</form>
 								</div>

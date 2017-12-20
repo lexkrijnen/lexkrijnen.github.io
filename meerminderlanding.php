@@ -96,7 +96,7 @@
      <div class="container page-box">
          <div class="col-xs-12 col-md-12">
              <h1>Meer/Minder Werk</h1>
-             <p>Meer/Minder Werk inzien van mijn projecten:</p>
+             <p>In Meer/Minder Werk vind u alle mutaties terug per project, hieronder kunt u het Meer/Minder Werk inzien van de volgende projecten:</p>
              <ul>
                  <?php
              foreach ( $queryresult as $value ) {
