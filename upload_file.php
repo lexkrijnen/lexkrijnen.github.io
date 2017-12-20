@@ -33,9 +33,9 @@ if(isset($_FILES['file'])){
 				$sql = "INSERT INTO Contract (naam) VALUES(?)";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($file_name));
-        print('test123test.');
+        print($file_name);
 
-        //header("Location: /test_PDF_upload.php");
+        header("Location: /test_PDF_upload.php?bestandnaam=" . $file_name . ");
 				die();
     }else{
         print_r($errors);
