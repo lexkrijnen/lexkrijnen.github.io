@@ -35,6 +35,10 @@
     } elseif($klant_id != "" AND $medewerker_nummer == ""){
         $rol = "klant";
     }
+
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
     ?>
 </head>
 
