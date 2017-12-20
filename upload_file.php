@@ -35,7 +35,7 @@ if(isset($_FILES['file'])){
 				$stmt->execute(array($file_name));
         print($file_name);
 
-        header("Location: /test_PDF_upload.php?bestandnaam=" . $file_name . ");
+        header("Location: /test_PDF_upload.php?bestandnaam='" . $file_name . "'");
 				die();
     }else{
         print_r($errors);

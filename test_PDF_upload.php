@@ -35,12 +35,12 @@
         $pdo = new PDO($db, $user, $pass);
 
         //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
-
-                $sql = "INSERT INTO Contract (naam)VALUES(?)";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute(array($_GET["bestandnaam"]));
-                $msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
-
+				//if (isset($_POST[""]) {
+				//	$sql = "INSERT INTO Contract (naam)VALUES(?)";
+				//	$stmt = $pdo->prepare($sql);
+				//	$stmt->execute(array($_POST[""]));
+				//	$msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
+				//}
 
         $stmt = $pdo->prepare("SELECT * FROM Contract");
         $stmt->execute();
