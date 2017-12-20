@@ -8,6 +8,7 @@ $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
 
+
 if (isset($_GET["opslaan"])) {
 		if ($_SESSION["rol2"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
@@ -168,7 +169,7 @@ $pdo = NULL;
 		  <div class="col-xs-12 col-md-12">
 				<h1>Wijzigen</h1>
 				<table>
-					<form action='ad_klant_wijzigen.php' method='get'>
+					<form action='klant_wijzigen.php' method='get'>
 						<tr>
 							<td>Voornaam</td>
 							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
@@ -222,7 +223,7 @@ $pdo = NULL;
 							}
 							?>
 							<tr>
-								<td><a href="ad_klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
+								<td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
 								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 							</tr>
 					</form>
