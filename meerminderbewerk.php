@@ -40,6 +40,12 @@
     $stmt->execute(array($_GET["nummer"]));
     $werk = $stmt->fetch();
 
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
+
     $pdo = NULL;
     ?>
 </head>

@@ -18,6 +18,14 @@
 	<link href="css/global.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
 	<link href="css/index.css" rel="stylesheet">
+
+    <?php
+    if ($klant_id == "" AND $medewerker_nummer != ""){
+        $rol = "medewerker";
+    } elseif($klant_id != "" AND $medewerker_nummer == ""){
+        $rol = "klant";
+    }
+    ?>
 </head>
 
 <body>
