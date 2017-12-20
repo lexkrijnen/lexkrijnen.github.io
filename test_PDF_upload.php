@@ -34,13 +34,13 @@
         $pass = "SQLWegro@101";
         $pdo = new PDO($db, $user, $pass);
 
-        //TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
+        /*//TABEL CONTRACT (PROBEERSEL, WERKT NOG NIET!!!!!!!
         if (isset($_POST["submitcontract"])) {
                 $sql = "INSERT INTO Contract (contract_nummer, naam, document, project_nummer)VALUES(?,?,?,?)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(array($_POST["contract_nummer"], $_POST["naam"], $_POST['filenaam'], $_POST['project_nummer']));
                 $msg = "De SQL Query is uitgevoerd."; //TEST, STRAKS VERVANGEN DOOR MELDING.
-                }
+                }*/
 
         $stmt = $pdo->prepare("SELECT * FROM Contract");
         $stmt->execute();
@@ -124,11 +124,11 @@
 									<form action="upload_file.php" method="post" enctype="multipart/form-data">
 
 									<input type="file" name="file" size="50" />
-                                    <input type="text" name="contract_nummer" placeholder="Contract Nummer">
+                  <!--                  <input type="text" name="contract_nummer" placeholder="Contract Nummer">
                                     <input type="text" name="naam" placeholder="Naam Document">
                                     <input type="text" name="filenaam" placeholder="Filenaam">
                                     <input type="text" name="project_nummer" placeholder="Project Nummer">
-									<br><br>
+									<br>--><br>
 									<input type="submit" name="submitcontract" value="Upload" />
 
 									</form>
