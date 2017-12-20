@@ -81,20 +81,20 @@ $pdo = NULL;
     </div><!-- /.container-fluid -->
 </nav>
 
-         <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4>Menu</h4>
+                            <h4><b>Menu</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
                         <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
-                            <h4>Projecten</h4>
+                            <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="klant_zoeken.php">Klantbeheer</a></li>
