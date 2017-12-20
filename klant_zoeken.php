@@ -64,6 +64,12 @@ if (isset($_GET["vinden"])) {
 
 }
 
+if ($klant_id == "" AND $medewerker_nummer != ""){
+    $rol = "medewerker";
+} elseif($klant_id != "" AND $medewerker_nummer == ""){
+    $rol = "klant";
+}
+
 $pdo = NULL;
 ?>
 
