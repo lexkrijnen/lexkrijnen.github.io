@@ -243,7 +243,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 				</div>
 
-				<div class="col-xs-12">
+				<div class="col-xs-12 text-center footer-title footer-item">
 					<a href="#" class="text-center footer-title footer-item" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
 					 - <a href="#" class="text-center footer-title footer-item" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>
 					<p class="text-center footer-title">© Bouwbedrijf Wegro</p>
