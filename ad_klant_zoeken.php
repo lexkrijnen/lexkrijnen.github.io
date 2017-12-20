@@ -65,6 +65,10 @@ if (isset($_GET["vinden"])) {
 
 }
 
+$stmt3 = $pdo->prepare("SELECT * FROM Project");
+$stmt3->execute();
+$projecten = $stmt3->fetchAll();
+
 $pdo = NULL;
 ?>
 
