@@ -106,9 +106,8 @@ body {
 	overflow-x: hidden;
 }
 
-modal-body,
-modal-body > p {
-	color: #000 !important;
+.modal-text {
+	color: #000;
 }
 
 blockquote {
