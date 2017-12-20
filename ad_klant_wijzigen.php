@@ -61,6 +61,10 @@ if(isset($_GET["opslaan"])) {
 		}
 }
 
+$stmt3 = $pdo->prepare("SELECT * FROM Project");
+$stmt3->execute();
+$projecten = $stmt3->fetchAll();
+
 $pdo = NULL;
 ?>
 
