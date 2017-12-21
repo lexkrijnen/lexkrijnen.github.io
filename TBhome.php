@@ -103,7 +103,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
 				<img src="images/IMG_8588.JPG" class="col-xs-5 col-xs-offset-1 imgright">
-                <titel>Ons Bedrijf</titel>
+                <titel>Ons Bedrijf</titel><br><br>
                 Heeft u plannen om te gaan bouwen of verbouwen? Dakkapel? Grotere woonkamer of opbouw op uw garage? Een goede bouwkundige tekening is daarbij noodzakelijk. Niet alleen is dit belangrijk voor je vergunningsaanvraag bij de gemeente, ook geeft een bouwkundige tekening duidelijkheid naar de aannemer. Het is de basis voor een goed lopend bouwproject!
                 Bouwkundig Tekenbureau Wegro verzorgt digitale bouwkundige tekeningen voor verbouw, nieuwbouw, aanbouw en opbouw. Inclusief technische omschrijvingen, werktekeningen en detaillering. Bovendien maken wij 3D impressies. Hiermee krijgt u een nog beter beeld van wat er gebouwd of verbouwd gaat worden.
 
