@@ -115,7 +115,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             </p>
 		</div>
             <div class="row">
-                <a name="3D Ontwerp" id="3D"
+                <a name="3D Ontwerp" id="3D">
                 </a>
                 <div class="col-xs-10 col-xs-offset-1  page-box">
                     <p class="paragraphleft ">
