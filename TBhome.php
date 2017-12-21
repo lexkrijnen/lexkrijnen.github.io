@@ -149,7 +149,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <div class="hovereffect">
                             <img class="img-responsive" src="images/Impressie-woonkeuken.png" alt="">
                             <div class="overlay">
-                                <h1>RENOVATIE</h1>
+                                <h1>RUIMTELIJKE ORIENTATIE</h1>
                                 <p>
 
                                 </p>
@@ -183,7 +183,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                             <img class="img-responsive" src="images/DSC02232.jpg" alt="">
                             <div class="overlay">
                                 <h1>TEKENING</h1>
-                                <p>
+                                <p> Bouwkundig Tekenbureau Wegro maakt een ontwerp waar uw wensen centraal staan.
                                 </p>
                             </div>
                         </div>
@@ -191,11 +191,11 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="hovereffect">
-                            <img class="img-responsive" src="" alt="">
+                            <img class="img-responsive" src="images/2017-11-21-PHOTO-00000620.jpg" alt="">
                             <div class="overlay">
-                                <h1></h1>
+                                <h1>BOUW</h1>
                                 <p>
-
+  Door samenwerking tussen Tekenbureau Wegro en Bouwbedrijf Wegro bv is het mogelijk uw project Bij Bouwbedrijf Wegro bv te laten realiseren.
                                 </p>
                             </div>
                         </div>
@@ -207,6 +207,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                             <div class="overlay">
                                 <h1>REALISATIE</h1>
                                 <p>
+De Nauwe samenwerking tussen Tekenbureau Wegro en Bouwbedrijf-/Metselbedrijf Wegro zorgt ervoor dat Projecten zeer efficient zullen verlopen.
 
                                 </p>
                             </div>
