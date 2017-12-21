@@ -63,11 +63,11 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item"><a href="index.php">Home</a></li>
 						<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
-						<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
+                        <li class="nav-item"><a href="#3D">2D en 3D</a></li>
 						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
-						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
+						<li class="nav-item"><a href="#Kwaliteiten">Projecten</a></li>
 						<li class="nav-item"><a href="#Ontwerp">Ontwerp</a></li>
-						<li class="nav-item"><a href="#Contact">Contact</a></li>
+						<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
 						<li class="nav-item">
 							<a href="login.php">
 								<?php print($ingelogd);?>
@@ -114,52 +114,50 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
             </p>
 		</div>
+            <div class="row">
+                <a name="3D Ontwerp" id="3D"
+                </a>
+                <div class="col-xs-10 col-xs-offset-1  page-box">
+                    <p class="paragraphleft ">
+                        <titel>2D en 3D Ontwerp</titel>
+                    </p><br>
 
-		<div class="row">
-			<a name="Kwaliteiten" id="Kwaliteiten">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/Impressie-living.png" alt="">
+                            <div class="overlay">
+                                <h1>BETERE IMPRESSIE</h1>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-	  	</a>
-			<div class="col-xs-10 col-xs-offset-1  page-box">
-				<p class="paragraphleft ">
-					<titel>Kwaliteiten</titel>
-				</p><br>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/DSC02245.jpg" alt="">
+                            <div class="overlay">
+                                <h1>HOGE KWALITEIT</h1>
+                                <p>
 
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/Impressie-living.png" alt="">
-						<div class="overlay">
-							<h1>NIEUWBOUW</h1>
-							<p>
-								</p>
-						</div>
-					</div>
-				</div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/Impressie-voorgevel.png" alt="">
-						<div class="overlay">
-							<h1>VERBOUW</h1>
-							<p>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/Impressie-woonkeuken.png" alt="">
+                            <div class="overlay">
+                                <h1>RENOVATIE</h1>
+                                <p>
 
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/Impressie-woonkeuken.png" alt="">
-						<div class="overlay">
-							<h1>RENOVATIE</h1>
-							<p>
-
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 		<a name="Vergunningen" id="Vergunningen"></a>
 		<div class="row">
@@ -171,6 +169,51 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 			</p>
 		</div>
 
+            <div class="row">
+                <a name="Kwaliteiten" id="Kwaliteiten">
+
+                </a>
+                <div class="col-xs-10 col-xs-offset-1  page-box">
+                    <p class="paragraphleft ">
+                        <titel>Projecten</titel>
+                    </p><br>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/DSC02232.jpg" alt="">
+                            <div class="overlay">
+                                <h1>TEKENING</h1>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="" alt="">
+                            <div class="overlay">
+                                <h1></h1>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/IMG_9289.JPG" alt="">
+                            <div class="overlay">
+                                <h1>REALISATIE</h1>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		<a name="Ontwerp" id="Ontwerp"></a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">

@@ -67,7 +67,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 						<li class="nav-item"><a href="#Metselwerk">Metselwerk</a></li>
 						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
 						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
-						<li class="nav-item"><a href="#Contact">Contact</a></li>
+						<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
 						<li class="nav-item">
 							<a href="login.php">
 								<?php print($ingelogd);?>
