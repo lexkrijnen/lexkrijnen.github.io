@@ -171,51 +171,6 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 			</p>
 		</div>
 
-
-		<div class="row"><a name="Projecten" id="Projecten"></a>
-			<div class="col-xs-10 col-xs-offset-1  page-box">
-				<p class="paragraphleft ">
-					<titel>Projecten</titel>
-				</p><br>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/IMG_7028.JPG" alt="">
-						<div class="overlay">
-							<h1>FUNDERING</h1>
-							<p>
-								Hier wordt de fundering van een nieuw huis gelegd.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/IMG_8460.JPG" alt="">
-						<div class="overlay">
-							<h1>AFWERKING</h1>
-							<p>
-								Het dak en de muren zijn nu ook bijna af.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/IMG_9091.JPG" alt="">
-						<div class="overlay">
-							<h1>OPLEVERING</h1>
-							<p>
-								Het huis is nu zo goed als af. Tijd om in te richten.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<a name="Ontwerp" id="Ontwerp"></a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">

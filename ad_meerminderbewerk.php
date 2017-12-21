@@ -6,10 +6,9 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
-	<title>Meer Werk: Verwijderen</title>
+	<title>Meer werk: Bewerken</title>
 	<link rel="stylesheet" href="css/meerminderwerk.css">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,12 +23,27 @@ session_start();
 	<link href="css/global.css" rel="stylesheet">
 	<!-- Custom styles for this page -->
 	<link href="css/index.css" rel="stylesheet">
+	<?php
+    $message = "";
 
-    <?php
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
+
+    if (isset($_GET["opslaan"])) {
+        $sql = "UPDATE Mutatie SET beschrijving=?, prijs=? WHERE mutatie_id=?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array($_GET["beschrijving"], $_GET["prijs"], $_GET["nummer"]));
+        $message = "De wijzigingen zijn opgeslagen.";
+        //print('<META HTTP-EQUIV="Refresh" Content="2;URL=meermindertoevoegen.php?id=' . $_GET['id'] . '">');      DEFECT, ID WORD NIET MEEGENOMEN!
+        //print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php>');
+    }
+
+    $sql = "SELECT * FROM Mutatie WHERE mutatie_id=?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array($_GET["nummer"]));
+    $werk = $stmt->fetch();
 
     if ($klant_id == "" AND $medewerker_nummer != ""){
         $rol = "medewerker";
@@ -40,6 +54,8 @@ session_start();
     $stmt = $pdo->prepare("SELECT * FROM Project");
     $stmt->execute();
     $projecten = $stmt->fetchAll();
+
+    $pdo = NULL;
     ?>
 </head>
 
@@ -78,12 +94,13 @@ session_start();
                             <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
-                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
@@ -105,40 +122,30 @@ session_start();
 
 	<div class="container page-box">
 		<div class="col-xs-4">
-			<h2>Meer/Minder Werk Verwijderen</h2>
+			<h2>Meer/Minder Werk Bewerken</h2>
+			<form method="get" action="ad_meerminderbewerk.php">
+				<table class="table table-hover table-bordered">
+					<tr>
+						<th>ID</th>
+						<th>Beschrijving</th>
+						<th>Prijs</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td><input type="text" name="nummer" value="<?php print($_GET["nummer"]);?>" disabled="yes" size="3px"></td>
+						<td><input type="text" name="beschrijving" value="<?php print($werk["beschrijving"]); ?>"></td>
+						<td><input type="text" name="prijs" size="8px" value="<?php print($werk["prijs"]); ?>"></td>
+						<td><input class="btn btn-default" type="submit" name="opslaan" value="Opslaan"></td>
+					</tr>
+					<input type="hidden" name="nummer" value="<?php print($_GET["nummer"]);?>">
+				</table>
+			</form>
 			<?php
-        if (isset($_GET["nummer"]) && $_GET["nummer"] != "") {
-            $nummer = $_GET["nummer"];
-
-            if (isset($_GET['bevestiging'])) {
-                try {
-                    $pdo = new PDO("mysql:host=localhost;dbname=Wegro;port=3306", "wegro", "SQLWegro@101");
-                    $stmt = $pdo->prepare("DELETE FROM Mutatie WHERE mutatie_id=?");
-                    $stmt->execute(array($nummer));
-                    if ($stmt->rowCount() == 1) {
-                        print("De mutatie is verwijderd.<br>");
-                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php">');
-                    } else {
-                        print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
-                    }
-                } catch (PDOException $e) {
-                    $melding = "Er is iets misgegaan, probeer het A.U.B. opnieuw.";
-                }
-                $pdo = NULL;
-            } else {
-                print("Weet u zeker dat u deze mutatie wilt verwijderen?<br><br>");
-                print("<form method=\"get\" action=\"meerminderverwijder.php\" >");
-                print("<input class=\"btn btn-danger btn-return\" type=\"submit\" name=\"bevestiging\" value=\"Verwijderen\">");
-                print("<input type=\"hidden\" name=\"nummer\" value=\"" . $nummer . "\">");
-                print("</form>");
-            }
-        } else {
-            print("Het nummer ontbreekt. Probeer het A.U.B. opnieuw.");
+        if ($message != "") {
+            print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> '. $message . '</div>');
         }
-        ?>
-				<br>
-				<?php
-        print('<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>');
+        print("<a href=\"ad_meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        $message = ""; //CLEARS OUT MESSAGES
         ?>
 		</div>
 	</div>

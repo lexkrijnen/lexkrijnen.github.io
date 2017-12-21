@@ -112,12 +112,13 @@ session_start();
                             <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
-                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
@@ -146,7 +147,7 @@ session_start();
             print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
         }
         ?>
-				<form method="get" action="meermindertoevoegen.php">
+				<form method="get" action="ad_meermindertoevoegen.php">
 					<table class="table table-hover table-bordered">
 						<tr>
 							<th>Nr.</th>
@@ -162,8 +163,8 @@ session_start();
                     print("<td>" . $meerwerkcount . "</td>");
                     print("<td>" . $werk["beschrijving"] . "</td>");
                     print("<td>€ " . $werk["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
+                    print("<td> <a href=\"ad_meerminderbewerk.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"ad_meerminderverwijder.php?nummer=" . $werk["mutatie_id"] . "&id=" . $werk["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $meerwerkcount++;
                 }
@@ -181,7 +182,7 @@ session_start();
         if ($error != "") {
             print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');
         } ?>
-					<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
+					<a href="ad_meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug naar overzicht</button></a>
 		</div>
 
 
@@ -197,7 +198,7 @@ session_start();
             print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
         }
         ?>
-				<form method="get" action="meermindertoevoegen.php">
+				<form method="get" action="ad_meermindertoevoegen.php">
 					<table class="table table-hover table-bordered">
 						<tr>
 							<th>Nr.</th>
@@ -213,8 +214,8 @@ session_start();
                     print("<td>" . $minderwerkcount . "</td>");
                     print("<td>" . $werk2["beschrijving"] . "</td>");
                     print("<td>- € " . $werk2["prijs"] . "</td>");
-                    print("<td> <a href=\"meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
-                    print("<td> <a href=\"meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
+                    print("<td> <a href=\"ad_meerminderbewerk.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Bewerk</a> </td>");
+                    print("<td> <a href=\"ad_meerminderverwijder.php?nummer=" . $werk2["mutatie_id"] . "&id=" . $werk2["contract_nummer"] . "\">Verwijder</a></td>");
                     print("</tr>");
                     $minderwerkcount++;
                 }

@@ -137,7 +137,7 @@ $pdo = NULL;
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4><b>Gegevens</b></h4>
+                            <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
                         <li><a href="profile_admin.php">Mijn Account</a></li>
@@ -146,6 +146,7 @@ $pdo = NULL;
                         <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
                         <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
                         <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>

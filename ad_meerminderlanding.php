@@ -64,7 +64,7 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-<div class="container-fluid">
+    <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="sidebar-nav">
@@ -73,12 +73,13 @@
                             <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
-                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
@@ -112,7 +113,7 @@
 			<ul>
 				<?php
             foreach ( $queryresult as $value ) {
-                print ("<li>Project: <a href=\"meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . " - Contractnaam: " . $value['document'] . "</a></li>");
+                print ("<li>Project: <a href=\"ad_meermindertoevoegen.php?id=" . $value['contract_nummer'] . "\">" . $value[1] . " - Contractnaam: " . $value['document'] . "</a></li>");
             }
             ?>
 			</ul>

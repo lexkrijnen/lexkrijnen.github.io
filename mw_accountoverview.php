@@ -32,6 +32,10 @@
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
+    $stmt = $pdo->prepare("SELECT * FROM Project");
+    $stmt->execute();
+    $projecten = $stmt->fetchAll();
+
     if ($klant_id != "" AND $medewerker_id == "") {
     $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
     $stmt->execute();
@@ -117,20 +121,25 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                 <div class="sidebar-nav">
                     <ul class="nav">
                         <li class="active">
-                            <h4><b>Menu</b></h4>
+                            <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
-                        <li><a href="medewerker_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
+                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
+                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
+                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-												<li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
                         <li class="nav-divider"></li>
                     </ul>
                 </div>
@@ -169,7 +178,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='medewerker_accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
+                        print("</table><form action='mw_accountwijzigen.php' method='get'><input class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
                     }elseif ($klant_nummerdb == "") {
                         print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
                     }elseif ($medewerker_nummerdb == ""){

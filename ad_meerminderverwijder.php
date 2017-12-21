@@ -3,6 +3,7 @@ session_start();
 @$klant_id = $_SESSION['klant_id'];
 @$klant_voornaam = $_SESSION['voornaam'];
 @$medewerker_nummer = $_SESSION['medewerker_nummer']
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,12 +79,13 @@ session_start();
                             <h4><b>Functies</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="profile_medewerker.php">Mijn Account</a></li>
-                        <li><a href="mw_accountoverview.php">Accountgegevens</a></li>
-                        <li><a href="klant_zoeken.php">Klantbeheer</a></li>
-                        <li><a href="klant_toevoegen.php">Klant toevoegen</a></li>
-                        <li><a href="project_aanmaken.php">Project Aanmaken</a></li>
-                        <li><a href="meerminderadminlanding.php">Meer/Minder Werk</a></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
                         <li class="nav-divider"></li>
                         <li>
                             <h4><b>Projecten</b></h4>
@@ -117,7 +119,7 @@ session_start();
                     $stmt->execute(array($nummer));
                     if ($stmt->rowCount() == 1) {
                         print("De mutatie is verwijderd.<br>");
-                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=meerminderadminlanding.php">');
+                        print('<META HTTP-EQUIV="Refresh" Content="2;URL=ad_meerminderlanding.php">');
                     } else {
                         print("Er is iets misgegaan, probeer het A.U.B. opnieuw.");
                     }
@@ -127,7 +129,7 @@ session_start();
                 $pdo = NULL;
             } else {
                 print("Weet u zeker dat u deze mutatie wilt verwijderen?<br><br>");
-                print("<form method=\"get\" action=\"meerminderverwijder.php\" >");
+                print("<form method=\"get\" action=\"ad_meerminderverwijder.php\" >");
                 print("<input class=\"btn btn-danger btn-return\" type=\"submit\" name=\"bevestiging\" value=\"Verwijderen\">");
                 print("<input type=\"hidden\" name=\"nummer\" value=\"" . $nummer . "\">");
                 print("</form>");
@@ -138,7 +140,7 @@ session_start();
         ?>
 				<br>
 				<?php
-        print('<a href="meerminderadminlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>');
+        print('<a href="ad_meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>');
         ?>
 		</div>
 	</div>

@@ -52,6 +52,31 @@ td:hover {
 	background-color: #ffc966;
 }
 
+/* Buttons */
+.btn-lg {
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+
+.btn-lg:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
+}
+
+.btn-default {
+	background-color: #FFA500;
+	border-color: #FFA500;
+	color: #FFFFFF;
+}
+
+.btn-default:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
+}
+
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {

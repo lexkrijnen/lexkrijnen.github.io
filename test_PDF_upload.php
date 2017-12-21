@@ -19,7 +19,7 @@
 	<link href="css/global.css" rel="stylesheet">
 
 	<!-- Custom styles for this page -->
-	<link href="css/test_profile.css" rel="stylesheet">
+	<link href="css/profile.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -68,6 +68,10 @@
         $stmt->execute();
         $tekening = $stmt->fetchAll();
 
+        $stmt3 = $pdo->prepare("SELECT * FROM Project");
+        $stmt3->execute();
+        $projecten = $stmt3->fetchAll();
+
         $pdo = NULL;
     ?>
 </head>
@@ -89,9 +93,6 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="index.php">Home</a></li>
-					<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-					<li class="nav-item"><a href="account.php">Mijn profiel</a></li>
 					<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 				</ul>
 			</div>
@@ -106,6 +107,41 @@
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     } else {
     ?>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4><b>Functies</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href="profile_admin.php">Mijn Account</a></li>
+                        <li><a href="ad_accountoverview.php">Accountgegevens</a></li>
+                        <li><a href="mw_toevoegen.php">Medewerkers toevoegen</a></li>
+                        <li><a href="ad_klant_toevoegen.php">Klanten toevoegen</a></li>
+                        <li><a href="ad_klant_zoeken.php">Klanten Wijzigen/Verwijderen</a></li>
+                        <li><a href="ad_project_aanmaken.php">Project Aanmaken</a></li>
+                        <li><a href="ad_meerminderlanding.php">Meer/Minder Werk</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4><b>Projecten</b></h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"test_PDF_upload.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                        }
+                        ?>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 	<div class="container">
 		<div class="row">
