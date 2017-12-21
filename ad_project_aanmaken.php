@@ -146,7 +146,7 @@ if (empty($medewerker_nummer)) {
                 <select name="klant_nummer" class="form-control">
                     <?php
                     foreach ($queryresult3 AS $klant) {
-                        print ('<option value="' . $klant["klant_nummer"] . '">' . $klant["voornaam"] . ' ' . $klant["tussenvoegsel"] . ' ' . $klant["achternaam"] . '</option>');
+                        print ('<option value="' . $klant["klant_nummer"] . '">' . ucfirst($klant["voornaam"]) . ' ' . $klant["tussenvoegsel"] . ' ' . ucfirst($klant["achternaam"]) . '</option>');
                     }
                     ?>
                 </select></td></tr>
