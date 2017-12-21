@@ -22,7 +22,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 		<meta name="author" content="Nard Wemes">
 		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-		<title>Metselfbedrijf Wegro</title>
+		<title>Metselbedrijf Wegro</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -212,7 +212,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				</div>
 			</div>
 		</div>
-        <div class="row"><a name="Vergunningen" id="Vergunningen"></a>
+        <a name="Vergunningen" id="Vergunningen"></a>
 		<div class="row">
 			<p class="col-xs-10 col-xs-offset-1  paragraphleft page-box">
 				<img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
