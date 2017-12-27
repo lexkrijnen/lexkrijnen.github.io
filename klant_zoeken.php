@@ -184,18 +184,6 @@ $pdo = NULL;
 										<input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> >
 									</td>
 								</tr>
-
-									<tr>
-										<td>
-											<input type="radio" name=rol value="klant" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "klant") { print( "checked"); } else { print( "checked"); } ?>>Klant
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="radio" name=rol value="medewerker" <?php if (isset($_GET[ "vinden"]) && $ingevulderol == "medewerker") { print( "checked"); } ?>>Medewerker
-										</td>
-									</tr>
-
 									<tr>
 										<td>
 										</td>
