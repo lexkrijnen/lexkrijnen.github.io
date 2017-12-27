@@ -28,12 +28,10 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+		$klant_nummer = $klant["klant_nummer"];
 
-		if ($_GET["rol"] == "klant") {
-			$klant_nummer = $klant["klant_nummer"];
-			$_SESSION["klantnummer2"] = $klant_nummer;
-		}
 
+		$_SESSION["klantnummer2"] = $klant_nummer;
     $_SESSION["voornaam2"] = $voornaam;
     $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
     $_SESSION["achternaam2"] =  $achternaam;
@@ -210,7 +208,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
-                    } elseif ($klant_nummer != "" || $medewerker_nummer2 != "") {
+                    } elseif ($klant_nummer != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
 												print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
