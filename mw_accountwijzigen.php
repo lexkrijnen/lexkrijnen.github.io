@@ -17,11 +17,6 @@ if (isset($_POST["opslaan"])) {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"], $_POST["medewerkernummer"]));
-		} else {
-                print("Query is niet uitgevoerd! Fock you!");
-
-        }
-
 }
 
 $voornaam = $_SESSION["voornaam"];
@@ -165,6 +160,12 @@ $pdo = NULL;
         </div>
     </div>
 
+		<?php
+    if (empty($medewerker_nummer)) {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+    } else {
+    ?>
 
         <div class="container page-box">
             <div class="col-xs-12 col-md-12">
@@ -249,3 +250,4 @@ $pdo = NULL;
 	</body>
 
 	</html>
+<?php } ?>
