@@ -14,11 +14,7 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["vinden"])) {
-	if ($_GET["rol"] == "klant") {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	} elseif ($_GET["rol"] == "medewerker") {
-		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
-	}
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
     $klant = $stmt->fetch();
@@ -32,17 +28,10 @@ if (isset($_GET["vinden"])) {
     $postcode = $klant["postcode"];
     $woonplaats = ucfirst($klant["woonplaats"]);
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-		$zoekrol = $_GET["rol"];
 
 		if ($_GET["rol"] == "klant") {
 			$klant_nummer = $klant["klant_nummer"];
 			$_SESSION["klantnummer2"] = $klant_nummer;
-		} elseif ($_GET["rol"] == "medewerker") {
-			$medewerker_nummer2 = $klant["medewerker_nummer"];
-			$functie = $klant["functie"];
-			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
-			$_SESSION["functie2"] = $functie;
-			$_SESSION["functienaam2"] = $functienaam;
 		}
 
     $_SESSION["voornaam2"] = $voornaam;
@@ -59,14 +48,6 @@ if (isset($_GET["vinden"])) {
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
-		$ingevulderol =	$_GET["rol"];
-
-		if ($functie == "1") {
-				$functienaam = "admin";
-			} elseif ($functie == "2") {
-				$functienaam = "medewerker";
-			}
-
 }
 
     $stmt = $pdo->prepare("SELECT * FROM Project");
@@ -244,12 +225,7 @@ $pdo = NULL;
                     } elseif ($klant_nummer != "" || $medewerker_nummer2 != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
-												if ($zoekrol == "medewerker") {
-														print("<tr><td>Medewerkernummer:</td><td>$medewerker_nummer2</td></tr>");
-														print("<tr><td>functie:</td><td>$functienaam</td></tr>");
-												} elseif ($zoekrol == "klant") {
-														print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
-												}
+												print("<tr><td>Klantnummer:</td><td>$klant_nummer</td></tr>");
                         print("<tr><td>Telefoonnummer:</td><td>$telefoonnummer</td></tr>");
                         print("<tr><td>Emailadres:</td><td>$emailadres</td></tr>");
                         print("<tr><td>Adres:</td><td>$adres</td></tr>");
@@ -273,7 +249,7 @@ $pdo = NULL;
                         print("<div class=\"alert alert-warning\" role=\"alert\">
                                 <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>
                                 <span class=\"sr-only\">Error:</span>
-                                Geen $zoekrol gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
+                                Geen klant gevonden met de naam " . $_GET["ingevuldevoornaam"] ." ". $_GET["ingevuldetussenvoegsel"] ." ". $_GET["ingevuldeachternaam"] . ".
                               </div>");
                     }
                 }
