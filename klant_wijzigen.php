@@ -1,7 +1,11 @@
 <?php
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+
+if (empty($medewerker_nummer)) {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} else {
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -98,13 +102,6 @@ $pdo = NULL;
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <?php
-    if ($klant_id == "" AND $medewerker_nummer != ""){
-        $rol = "medewerker";
-    } elseif($klant_id != "" AND $medewerker_nummer == ""){
-        $rol = "klant";
-    }
-    ?>
 	</head>
 
 
@@ -246,7 +243,9 @@ $pdo = NULL;
 			</div>
 		</div>
 
-
+		<?php
+		}
+		?>
 
 
 

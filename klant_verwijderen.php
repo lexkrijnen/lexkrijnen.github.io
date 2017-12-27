@@ -1,18 +1,16 @@
 <?php
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+
+if (empty($klant_id) AND empty($medewerker_nummer)) {
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} else {
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
-
-if ($klant_id == "" AND $medewerker_nummer != ""){
-    $rol = "medewerker";
-} elseif($klant_id != "" AND $medewerker_nummer == ""){
-    $rol = "klant";
-}
 
 //klant verwijderen
 
@@ -26,8 +24,6 @@ if (isset($_GET["echtverwijderen"])) {
 				$stmt = $pdo->prepare($sql);
     		$stmt->execute(array($_SESSION["medewerkernummer2"]));
 		}
-
-
 }
 
     $stmt = $pdo->prepare("SELECT * FROM Project");
@@ -148,14 +144,9 @@ $pdo = NULL;
             ?>
 		</div>
 
-
-
-
-
-
-
-
-
+		<?php
+		}
+		?>
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
@@ -170,5 +161,4 @@ $pdo = NULL;
 		<!-- Bootstrap Framework -->
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-
 	</html>
