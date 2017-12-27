@@ -41,7 +41,7 @@ if (isset($_GET["vinden"])) {
     $_SESSION["adres2"] = $adres;
     $_SESSION["postcode2"] = $postcode;
     $_SESSION["woonplaats2"] = $woonplaats;
-		$_SESSION["rol2"] = $zoekrol;
+		$_SESSION["rol2"] = klant;
 
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
