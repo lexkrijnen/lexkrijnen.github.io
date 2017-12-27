@@ -1,4 +1,16 @@
 <?php
+session_start();
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+@$medewerker_functie = $_SESSION['medewerker_functie'];
+
+if (empty($medewerker_nummer)) {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} elseif ($medewerker_functie == "2") {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
+}
+
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
@@ -48,12 +60,6 @@ $hash = sha1($salt . $wachtwoord);
 	<html lang="en">
 
 	<head>
-    <?php
-    session_start();
-    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
-    @$medewerker_functie = $_SESSION['medewerker_functie'];
-    ?>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
