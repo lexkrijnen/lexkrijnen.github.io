@@ -9,7 +9,7 @@ if (empty($medewerker_nummer)) {
 } elseif ($medewerker_functie == "2") {
 		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
     print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
-}
+} else {
 
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
@@ -287,6 +287,10 @@ $hash = sha1($salt . $wachtwoord);
 						}
             ?>
 		</div>
+
+		<?php
+		}
+		?>
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">

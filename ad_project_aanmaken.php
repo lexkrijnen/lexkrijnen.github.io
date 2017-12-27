@@ -132,6 +132,9 @@ $pdo = NULL;
 if (empty($medewerker_nummer)) {
     print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
     print('<meta http-equiv="refresh" content="2;url=../index.php" />');
+} elseif ($medewerker_functie == "2") {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
+		print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
 } else {
 ?>
 

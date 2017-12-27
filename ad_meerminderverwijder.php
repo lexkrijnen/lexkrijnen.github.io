@@ -1,9 +1,15 @@
 <?php
 session_start();
-@$klant_id = $_SESSION['klant_id'];
-@$klant_voornaam = $_SESSION['voornaam'];
 @$medewerker_nummer = $_SESSION['medewerker_nummer']
+@$medewerker_functie = $_SESSION['medewerker_functie'];
 
+if (empty($medewerker_nummer)) {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+} elseif ($medewerker_functie == "2") {
+		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
+    print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
+} else {
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,12 +37,6 @@ session_start();
     $user = "wegro";
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
-
-    if ($klant_id == "" AND $medewerker_nummer != ""){
-        $rol = "medewerker";
-    } elseif($klant_id != "" AND $medewerker_nummer == ""){
-        $rol = "klant";
-    }
 
     $stmt = $pdo->prepare("SELECT * FROM Project");
     $stmt->execute();
@@ -144,6 +144,9 @@ session_start();
         ?>
 		</div>
 	</div>
+	<?php
+	}
+	?>
 </body>
 
 </html>
