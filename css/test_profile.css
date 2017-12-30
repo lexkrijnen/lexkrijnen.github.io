@@ -25,9 +25,6 @@
 	height: 80vh;
 }
 
-table > tbody {
-	height: 8vh;
-}
 td:hover {
 	background-color: #FFC966;
 }
