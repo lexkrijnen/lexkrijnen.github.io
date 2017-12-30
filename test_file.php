@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+    <?php
+    session_start();
+    @$klant_id = $_SESSION['klant_id'];
+    @$klant_voornaam = $_SESSION['voornaam'];
+    @$medewerker_nummer = $_SESSION['medewerker_nummer']
+    ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,7 +90,7 @@
                             <h4><b>Menu</b></h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href="account.php">Mijn Account</a></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
                         <li><a href="accountoverview.php">Mijn gegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
@@ -101,6 +107,13 @@
             <!--/span-->
         </div>
     </div>
+
+    <?php
+      if (empty($klant_id)) {
+          print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+      } else {
+      ?>
 
         <div class="container">
             <div class="row">
