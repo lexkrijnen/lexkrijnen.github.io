@@ -276,10 +276,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
         <?php } ?>
 
         </div>
-    </div>
-</div>
-<!-- /.container -->
-<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
             <?php
             $pdf = $_GET['pdf'];
             print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
@@ -291,6 +288,9 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                 <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/voorbeeld.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
             </div>
         </div>
+    </div>
+</div>
+<!-- /.container -->
 
 <div class="row">
     <div class="col-xs-12 text-center footer-rights">
