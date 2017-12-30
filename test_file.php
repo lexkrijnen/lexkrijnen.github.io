@@ -179,21 +179,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                 }
                 ?>
             </table>
-        </div>
-
-        <div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
-            <?php
-            $pdf = $_GET['pdf'];
-            print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
-            ?>
-
-            <!-- If embedded pdf does not work, display fallback option instead. -->
-            <div class="pdf-fail">
-                <p>Problemen met het bekijken?</p>
-                <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/voorbeeld.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
-            </div>
-        </div>
-
 
         <?php
         session_start();
@@ -240,77 +225,72 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             ?>
 
             <!--MEER WERK-->
-            <div>
-                <div class="col-xs-4 page-box">
-                    <h1>Meer Werk</h1>
-                    <?php
-                    foreach ( $naamproject as $value ) {
-                        print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-                    }
-                    ?>
-                    <form method="get" action="meermindertoevoegen.php">
-                        <table class="table table-hover table-bordered">
-                            <tr>
-                                <th>Nr.</th>
-                                <th>Beschrijving</th>
-                                <th>Prijs</th>
-                            </tr>
-                            <?php
-                            $meerwerkcount = 1;
-                            foreach ($meerwerk AS $werk) {
-                                print("<tr>");
-                                print("<td>" . $meerwerkcount . "</td>");
-                                print("<td>" . $werk["beschrijving"] . "</td>");
-                                print("<td>€ " . $werk["prijs"] . "</td>");
-                                print("</tr>");
-                                $meerwerkcount++;
+            <table class="table table-hover">
+                <form method="get" action="meermindertoevoegen.php">
+                    <tr>
+                        <thead>
+                        <th>
+                            <h3><b>Meer Werk</b></h3>
+                        </th>
+                        </thead>
+                    </tr>
+                        <?php
+                        $meerwerkcount = 1;
+                        foreach ($meerwerk AS $werk) {
+                            print("<tr>");
+                            print("<td>" . $meerwerkcount . "</td>");
+                            print("<td>" . $werk["beschrijving"] . "</td>");
+                            print("<td>€ " . $werk["prijs"] . "</td>");
+                            print("</tr>");
+                            $meerwerkcount++;
                             }
-                            ?>
-                        </table>
-                    </form>
-                </div>
-
-
-                <div class="col-xs-3"></div>
-                <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+                        ?>
+                </form>
+            </table>
 
                 <!--MINDER WERK-->
-                <div class="col-xs-4 page-box">
-                    <h1>Minder Werk</h1>
-                    <?php
-                    foreach ( $naamproject as $value ) {
-                        print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
-                    }
-                    ?>
+                <table class="table table-hover">
                     <form method="get" action="meermindertoevoegen.php">
-                        <table class="table table-hover table-bordered">
-                            <tr>
-                                <th>Nr.</th>
-                                <th>Beschrijving</th>
-                                <th>Prijs</th>
-                            </tr>
-                            <?php
-                            $minderwerkcount = 1;
-                            foreach ($minderwerk AS $werk2) {
-                                print("<tr>");
-                                print("<td>" . $minderwerkcount . "</td>");
-                                print("<td>" . $werk2["beschrijving"] . "</td>");
-                                print("<td>- € " . $werk2["prijs"] . "</td>");
-                                print("</tr>");
-                                $minderwerkcount++;
-                            }
-                            ?>
-                        </table>
+                    <tr>
+                        <thead>
+                        <th>
+                            <h3><b>Minder Werk</b></h3>
+                        </th>
+                        </thead>
+                    </tr>
+                    <?php
+                    $minderwerkcount = 1;
+                    foreach ($minderwerk AS $werk2) {
+                        print("<tr>");
+                        print("<td>" . $minderwerkcount . "</td>");
+                        print("<td>" . $werk2["beschrijving"] . "</td>");
+                        print("<td>- € " . $werk2["prijs"] . "</td>");
+                        print("</tr>");
+                        $minderwerkcount++;
+                        }
+                    ?>
                     </form>
-                </div>
-            </div>
+                </table>
+
             <?php $pdo = NULL; ?>
         <?php } ?>
 
-
+        </div>
     </div>
 </div>
 <!-- /.container -->
+<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+            <?php
+            $pdf = $_GET['pdf'];
+            print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
+            ?>
+
+            <!-- If embedded pdf does not work, display fallback option instead. -->
+            <div class="pdf-fail">
+                <p>Problemen met het bekijken?</p>
+                <a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/voorbeeld.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+            </div>
+        </div>
 
 <div class="row">
     <div class="col-xs-12 text-center footer-rights">
