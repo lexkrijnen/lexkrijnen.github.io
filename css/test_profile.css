@@ -20,6 +20,11 @@
 	z-index: 1;
 }
 
+/*view can*/
+#viewer-can {
+	height: 80vh;
+}
+
 td:hover {
 	background-color: #FFC966;
 }
