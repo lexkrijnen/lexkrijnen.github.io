@@ -13,6 +13,7 @@
 }
 
 .pdf-viewer {
+	position: absolute;
 	width: 84%;
 	height: 90%;
 	border: none;
