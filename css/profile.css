@@ -9,7 +9,7 @@
 
 /*view boxen*/
 #viewer-box {
-	height: 80vh;
+	height: 85vh;
 }
 
 .pdf-viewer {
@@ -18,6 +18,11 @@
 	height: 90%;
 	border: none;
 	z-index: 1;
+}
+
+/*view can*/
+#viewer-can {
+	height: 85vh;
 }
 
 /*table head*/
