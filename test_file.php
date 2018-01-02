@@ -214,7 +214,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         <th>
                             <h3><b>Meer Werk</b></h3>
                         </th>
-                        <th></th>
                         </thead>
                     </tr>
                     <tbody>
@@ -238,7 +237,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         <th>
                             <h3><b>Minder Werk</b></h3>
                         </th>
-                        <th></th>
                         </thead>
                     </tr>
                     <?php
