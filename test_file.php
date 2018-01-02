@@ -164,26 +164,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     </tbody>
             </table>
 
-            <!--Tekening-->
-            <table class="table table-fixed">
-                <tr>
-                    <thead>
-                    <th>
-                        <h3><b>Tekeningen</b></h3>
-                    </th>
-                    </thead>
-                </tr>
-                    <tbody>
-                        <?php
-                        foreach ($tekening AS $document2) {
-                            print("<tr>");
-                            print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
-                            print("</tr>");
-                            }
-                        ?>
-                    </tbody>
-            </table>
-
         <?php
         session_start();
         @$klant_id = $_SESSION['klant_id'];
@@ -271,6 +251,26 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     ?>
                     </form>
                 </table>
+
+             <!--Tekening-->
+            <table class="table table-fixed">
+                <tr>
+                    <thead>
+                    <th>
+                        <h3><b>Tekeningen</b></h3>
+                    </th>
+                    </thead>
+                </tr>
+                    <tbody>
+                        <?php
+                        foreach ($tekening AS $document2) {
+                            print("<tr>");
+                            print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
+                            print("</tr>");
+                            }
+                        ?>
+                    </tbody>
+            </table>
 
             <?php $pdo = NULL; ?>
         <?php } ?>
