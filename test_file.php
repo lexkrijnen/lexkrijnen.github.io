@@ -218,8 +218,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         <?php
                         foreach ($meerwerk AS $werk) {
                             print("<tr>");
-                            print("<td>" . $werk["beschrijving"] . "</td>");
-                            print("<td>€ " . $werk["prijs"] . "</td>");
+                            print("<td>" . $werk["beschrijving"] ." ". "€ " . $werk["prijs"] . "</td>");
                             print("</tr>");
                             }
                         ?>
@@ -239,8 +238,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     <?php
                     foreach ($minderwerk AS $werk2) {
                         print("<tr>");
-                        print("<td>" . $werk2["beschrijving"] . "</td>");
-                        print("<td>- € " . $werk2["prijs"] . "</td>");
+                        print("<td>" . $werk2["beschrijving"] . "- € " . $werk2["prijs"] . "</td>");
                         print("</tr>");
                         }
                     ?>
