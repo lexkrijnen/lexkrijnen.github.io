@@ -173,13 +173,15 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     </th>
                     </thead>
                 </tr>
-                <?php
-                foreach ($tekening AS $document2) {
-                    print("<tr>");
-                    print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
-                    print("</tr>");
-                }
-                ?>
+                    <tbody>
+                        <?php
+                        foreach ($tekening AS $document2) {
+                            print("<tr>");
+                            print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
+                            print("</tr>");
+                            }
+                        ?>
+                    </tbody>
             </table>
 
         <?php
@@ -236,6 +238,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         </th>
                         </thead>
                     </tr>
+                    <tbody>
                         <?php
                         foreach ($meerwerk AS $werk) {
                             print("<tr>");
@@ -244,6 +247,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                             print("</tr>");
                             }
                         ?>
+                    </tbody>
                 </form>
             </table>
 
