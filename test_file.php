@@ -155,7 +155,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     <?php
                         foreach ($contract AS $document) {
                             print("<tr>");
-                            //print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
                             print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document["document"] . "'>" . $document["document"] . "</td>");
                             print("</tr>");
                             }
@@ -216,7 +215,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         </th>
                         </thead>
                     </tr>
-                    <tbody>
                         <?php
                         foreach ($meerwerk AS $werk) {
                             print("<tr>");
@@ -225,7 +223,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                             print("</tr>");
                             }
                         ?>
-                    </tbody>
                 </form>
             </table>
 
@@ -259,15 +256,13 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     </th>
                     </thead>
                 </tr>
-                    <tbody>
-                        <?php
+                    <?php
                         foreach ($tekening AS $document2) {
                             print("<tr>");
                             print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
                             print("</tr>");
                             }
                         ?>
-                    </tbody>
             </table>
 
             <?php $pdo = NULL; ?>
