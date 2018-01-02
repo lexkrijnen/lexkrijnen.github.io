@@ -5,6 +5,7 @@
     background-color:#FFFFFF;
     position:fixed;
     z-index:1;
+    overflow-y:scroll;
 }
 
 .oranje {
