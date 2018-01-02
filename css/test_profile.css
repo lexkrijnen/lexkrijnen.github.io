@@ -5,6 +5,7 @@
     background-color:#FFFFFF;
     position:fixed;
     z-index:0;
+    overflow-y:scroll;
 }
 
 /*view boxen*/
