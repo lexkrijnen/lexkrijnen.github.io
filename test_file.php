@@ -235,14 +235,11 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         </thead>
                     </tr>
                         <?php
-                        $meerwerkcount = 1;
                         foreach ($meerwerk AS $werk) {
                             print("<tr>");
-                            print("<td>" . $meerwerkcount . "</td>");
                             print("<td>" . $werk["beschrijving"] . "</td>");
                             print("<td>€ " . $werk["prijs"] . "</td>");
                             print("</tr>");
-                            $meerwerkcount++;
                             }
                         ?>
                 </form>
@@ -259,14 +256,11 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         </thead>
                     </tr>
                     <?php
-                    $minderwerkcount = 1;
                     foreach ($minderwerk AS $werk2) {
                         print("<tr>");
-                        print("<td>" . $minderwerkcount . "</td>");
                         print("<td>" . $werk2["beschrijving"] . "</td>");
                         print("<td>- € " . $werk2["prijs"] . "</td>");
                         print("</tr>");
-                        $minderwerkcount++;
                         }
                     ?>
                     </form>
