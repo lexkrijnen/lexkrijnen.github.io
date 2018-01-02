@@ -144,7 +144,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
         <div id="viewer-can" class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
 
             <!--Contract-->
-            <table class="table table-hover">
+            <table class="table table-fixed">
                 <tr>
                     <thead>
                     <th>
@@ -163,7 +163,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             </table>
 
             <!--Tekening-->
-            <table class="table table-hover">
+            <table class="table table-fixed">
                 <tr>
                     <thead>
                     <th>
@@ -225,7 +225,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             ?>
 
             <!--MEER WERK-->
-            <table class="table table-hover">
+            <table class="table table-fixed">
                 <form method="get" action="meermindertoevoegen.php">
                     <tr>
                         <thead>
@@ -246,7 +246,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             </table>
 
                 <!--MINDER WERK-->
-                <table class="table table-hover">
+                <table class="table table-fixed">
                     <form method="get" action="meermindertoevoegen.php">
                     <tr>
                         <thead>

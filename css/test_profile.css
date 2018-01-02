@@ -25,49 +25,40 @@
 	height: 80vh;
 }
 
-td:hover {
-	background-color: #FFC966;
+
+/*table*/
+body{
+  background-color: #bdc3c7;
+}
+.table-fixed{
+  width: 100%;
+  background-color: #f3f3f3;
+  tbody{
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+    }
+  thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+       background-color: #f39c12;
+       border-color:#e67e22;
+      }
+    }
+  }
 }
 
-th > h3 > b {
-	color: #FFFFFF;
-	margin: 10px 10px 10px 10px;
-	/* margin zodat de tekst niet tegen de randjes van de tabel staat (top right bottom left)*/
-}
 
-th > b {
-	color: #FFFFFF;
-}
-
-thead {
-	background-color: #FFA500;
-	border: 1px solid #FFA500;
-	/*border zoals gewenst in schermontwerp*/
-	border-bottom: 2px solid #804000;
-}
-
-td > a {
-	color: #000000;
-}
-
-td {
-	border-left: 1px solid #FFA500;
-	/*border zoals gewenst*/
-	border-right: 1px solid #FFA500;
-	/*border zoals gewenst*/
-	padding-left: 10px;
-	/*inspringen zodat de tekst mooi onder de titel staat, margin gebruiken werkte hier niet, ik weet niet waarom*/
-}
-
-.bottom {
-	border-bottom: 2px solid black;
-	/*bottom class die je meegeeft in de html code aan de TD die de onderste is, op deze manier geeft je alleen die maar een bottom border*/
-}
-
-tbody {
-	background-color: #FFE1B9;
-}
-
+/*buttons*/
 .btn-lg {
 	color: #FFFFFF;
 	background-color: #FFA500;
