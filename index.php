@@ -98,7 +98,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>. <a href="admin.php">Admin</a></p>
 			</div>
 		</div>
 
