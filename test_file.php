@@ -214,8 +214,10 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         <th>
                             <h3><b>Meer Werk</b></h3>
                         </th>
+                        <th></th>
                         </thead>
                     </tr>
+                    <tbody>
                         <?php
                         foreach ($meerwerk AS $werk) {
                             print("<tr>");
@@ -224,6 +226,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                             print("</tr>");
                             }
                         ?>
+                    </tbody>
                 </form>
             </table>
 
@@ -235,6 +238,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                         <th>
                             <h3><b>Minder Werk</b></h3>
                         </th>
+                        <th></th>
                         </thead>
                     </tr>
                     <?php
@@ -257,6 +261,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     </th>
                     </thead>
                 </tr>
+                    <tbody>
                         <?php
                         foreach ($tekening AS $document2) {
                             print("<tr>");
@@ -264,6 +269,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                             print("</tr>");
                             }
                         ?>
+                    </tbody>
             </table>
 
             <?php $pdo = NULL; ?>
