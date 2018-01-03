@@ -33,6 +33,9 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <!-- Custom styles for this page -->
     <link href="../css/contact.css" rel="stylesheet">
 
+    <!--- reCAPTCHA script loader --->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -78,9 +81,10 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 <div class="panel-body a lowborder">
                     <form class="contact-form" action="verzendbericht.php" method="post">
                         <input type="text" class="form-control c" name="naam" placeholder="Naam">
-                        <input type="text" class="form-control c" name="mail" placeholder="e-mail">
+                        <input type="email" class="form-control c" name="mail" placeholder="e-mail">
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp">
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
+                        <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div>
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
