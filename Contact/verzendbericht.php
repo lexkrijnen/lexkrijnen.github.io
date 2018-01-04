@@ -41,3 +41,5 @@ if (isset($_POST['submitmail'])){
         $_SESSION['captchagevuld'] = FALSE;
     }
 }
+
+?>
