@@ -2,7 +2,7 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
-if (empty($klant_id) AND empty($medewerker_nummer)) {
+if (empty($medewerker_nummer)) {
         print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
 } else {
@@ -134,19 +134,14 @@ $pdo = NULL;
 					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
 				</form>
 			</div>
-
-
-
+			</div>
 			<?php
-            if (isset($_GET["echtverwijderen"])) {
-								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
-            }
-            ?>
-		</div>
-
-		<?php
-		}
-		?>
+				if (isset($_GET["echtverwijderen"])) {
+						print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
+						print("<a href=\"klant_zoeken.php\">terug</a>");
+				}
+			}
+			?>
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">

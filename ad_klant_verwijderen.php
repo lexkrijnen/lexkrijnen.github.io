@@ -143,19 +143,16 @@ $pdo = NULL;
 					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='ad_klant_zoeken.php'" />
 				</form>
 			</div>
-
+			</div>
 
 
 			<?php
-            if (isset($_GET["echtverwijderen"])) {
-								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
-            }
-            ?>
-		</div>
-
-		<?php
-		}
-		?>
+			if (isset($_GET["echtverwijderen"])) {
+					print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
+					print("<a href=\"ad_klant_zoeken.php\">terug</a>");
+			}
+			}
+			?>
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
