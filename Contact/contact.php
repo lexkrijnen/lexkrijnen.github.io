@@ -83,7 +83,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 </div>
                 <div class="panel-body a lowborder">
                     <form class="contact-form" action="verzendbericht.php" method="post">
-                        <input type="text" class="form-control c" name="naam" <?php if(!empty($_POST["naam"])){print('placeholder=$_POST["naam"]');} else{print('placeholder="Naam"');}?> required>
+                        <input type="text" class="form-control c" name="naam" <?php if(!empty($_POST["naam"]) && $captchagevuld == FALSE){print('placeholder=$_POST["naam"]');} else{print('placeholder="Naam"');}?> required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
