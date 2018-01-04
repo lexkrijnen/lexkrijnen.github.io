@@ -44,6 +44,8 @@ if (isset($_POST['submitmail'])){
         $_SESSION['captchagevuld'] = FALSE;
         header('Location: ../Contact/contact.php'); //redirect user terug naar form
     }
+}else{
+    $_SESSION['formsubmit'] = FALSE;
 }
 
 ?>
