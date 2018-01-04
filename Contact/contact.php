@@ -98,7 +98,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             }elseif ($captchagevuld == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
                 print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is niet verzonden. Onze spambeveiliging vermoedt dat u een robot bent, bent u dit niet? Probeer het formulier dan nogmaals in te vullen. Lukt dit niet? Ga dan naar de contactpagina en neem op een ander manier contact met ons op.</div>');
             }
-            print($captchawaarde)
+            print($captchawaarde);
             ?>
         </div>
     </div>
