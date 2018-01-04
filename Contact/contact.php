@@ -12,6 +12,10 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 } else {
     $ingelogd = "Inloggen";
 }
+
+//reCAPTCHA functies loader
+require('captchafuncties.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,13 +86,13 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht.php" method="post">
+                    <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled" method="post">
                         <input type="text" class="form-control c" name="naam" <?php if(!empty($_POST["naam"]) && $captchagevuld == FALSE){print('placeholder=$_POST["naam"]');} else{print('placeholder="Naam"');}?> required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
-                        <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
-                        <button type="submit" class="btn oranje white" name="submitmail" <?php $response = $_POST["g-recaptcha-response"]; if(empty($response)){print("disabled");}?>>Verstuur bericht</button>
+                        <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
+                        <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
             </div>
