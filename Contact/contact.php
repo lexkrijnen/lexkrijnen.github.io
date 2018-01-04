@@ -73,7 +73,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 
     <div class="container">
-        <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
+        <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
             <div class="panel ">
                 <div class="panel-heading oranje">
                     <div class="panel-title white">Neem contact met ons op</div>
