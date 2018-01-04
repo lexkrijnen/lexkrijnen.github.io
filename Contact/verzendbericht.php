@@ -3,7 +3,7 @@ session_start();
 
 
 if (isset($_POST['submitmail'])){
-	$response = $_POST["g-recaptcha-response"];
+    $response = $_POST["g-recaptcha-response"];
 	$url = 'https://www.google.com/recaptcha/api/siteverify';
 	$data = array(
 		'secret' => '6LeINj8UAAAAAAPJ4THvzlrX8bSNIUncQoyH9qes',
@@ -16,13 +16,13 @@ if (isset($_POST['submitmail'])){
 		)
 	);
 	$context  = stream_context_create($options);
-	$verify = file_get_contents($url, false, $context);
+	$verify = file_get_contents($url, FALSE, $context);
 	$captcha_success=json_decode($verify);
-	if ($captcha_success->success==false) {
-		print("<p>You are a bot! Go away!</p>");
+	if ($captcha_success->success==FALSE) {
+		$_SESSION['captcharesultaat'] = FALSE;
 	} else if ($captcha_success->success==true) {
-		print("<p>You are not not a bot!</p>");
-        $name = $_POST['naam'];
+        $_SESSION['captcharesultaat'] = TRUE;
+		$name = $_POST['naam'];
         $email = $_POST['mail'];
         $message = $_POST['bericht'];
         $formcontent="Verzonden door:\n $name \n $email \n\n Bericht: \n $message";

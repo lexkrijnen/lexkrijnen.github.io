@@ -4,6 +4,7 @@ session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 @$verzonden = $_SESSION['verzonden'];
+@$captcharesultaat = $_SESSION['captcharesultaat'];
 if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
 } else {
@@ -80,17 +81,17 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 </div>
                 <div class="panel-body a lowborder">
                     <form class="contact-form" action="verzendbericht.php" method="post">
-                        <input type="text" class="form-control c" name="naam" placeholder="Naam">
-                        <input type="email" class="form-control c" name="mail" placeholder="e-mail">
-                        <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp">
-                        <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in"></textarea>
+                        <input type="text" class="form-control c" name="naam" placeholder="Naam" required>
+                        <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
+                        <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
+                        <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
                         <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
             </div>
             <?php
-            if ($verzonden == TRUE) {
+            if ($verzonden == TRUE && $captcharesultaat == TRUE) {
                 print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
             }
             ?>
