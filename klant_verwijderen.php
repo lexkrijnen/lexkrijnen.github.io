@@ -134,7 +134,7 @@ $pdo = NULL;
 					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
 				</form>
 			</div>
-			</div>
+
 			<?php
 				if (isset($_GET["echtverwijderen"])) {
 						print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $_SESSION["naam2"] . ' is successvol verwijderd.</div>');
@@ -142,6 +142,7 @@ $pdo = NULL;
 				}
 			}
 			?>
+			</div>
 
 		<div class="row">
 			<div class="col-xs-12 text-center footer-rights">
