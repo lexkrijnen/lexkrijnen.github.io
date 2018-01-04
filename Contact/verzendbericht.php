@@ -42,4 +42,6 @@ if (isset($_POST['submitmail'])){
     }
 }
 
+$_SESSION['captchawaarde'] = $_POST["g-recaptcha-response"];
+
 ?>
