@@ -91,9 +91,9 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 </div>
             </div>
             <?php
-            if ($verzonden == TRUE && $captcharesultaat == TRUE) {
+            if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding
                 print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
-            }
+            }elseif
             ?>
         </div>
     </div>
