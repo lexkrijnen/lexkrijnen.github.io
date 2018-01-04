@@ -39,6 +39,7 @@ if (isset($_POST['submitmail'])){
         }
     }elseif(empty($response)){
         $_SESSION['captchagevuld'] = FALSE;
+        header('Location: ../Contact/contact.php');
     }
 }
 
