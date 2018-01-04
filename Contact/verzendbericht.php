@@ -3,9 +3,9 @@ session_start();
 
 
 if (isset($_POST['submitmail'])){
-    if(/*/grecaptcha && */!empty(grecaptcha.getResponse())){*/
+    $response = $_POST["g-recaptcha-response"];
+    if(!empty($response)){
         $_SESSION['captchagevuld'] = TRUE;
-        $response = $_POST["g-recaptcha-response"];
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = array(
             'secret' => '6LeINj8UAAAAAAPJ4THvzlrX8bSNIUncQoyH9qes',
@@ -37,7 +37,7 @@ if (isset($_POST['submitmail'])){
             $_SESSION['verzonden'] = TRUE;
             header('Location: ../Contact/contact.php');
         }
-    }elseif(/*grecaptcha && */empty(grecaptcha.getResponse())){
+    }elseif(empty($response)){
         $_SESSION['captchagevuld'] = FALSE;
     }
 }
