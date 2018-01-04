@@ -88,7 +88,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
                         <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
-                        <button type="submit" class="btn oranje white" name="submitmail" <?php $response = $_POST["g-recaptcha-response"]; if(empty($response)){print("disabled")}?>>Verstuur bericht</button>
+                        <button type="submit" class="btn oranje white" name="submitmail" <?php $response = $_POST["g-recaptcha-response"]; if(empty($response)){print("disabled");}?>>Verstuur bericht</button>
                     </form>
                 </div>
             </div>
