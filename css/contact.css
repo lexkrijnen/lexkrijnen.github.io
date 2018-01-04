@@ -7,12 +7,9 @@
 	border: none;
 	border-bottom: 4px solid black;
 }
-
 .a {
 	padding-top: 25px;
 }
-
-
 .b {
 	margin-top: 50px;
 }
@@ -24,16 +21,13 @@
 .d {
 	margin-top: 10px;
 }
-
 .rowsidemargin {
 	margin-left: 10px;
 	margin-right: 10px;
 }
-
 .paragraphleft {
 	text-align: left;
 }
-
 .paragraphleft titel {
 	font-size: 30px;
 	font-weight: bold;
@@ -52,7 +46,6 @@
 .formdinges {
 	height: 200px;
 }
-
 .cb2 {
 	height: 20px;
 	width: 20px;
