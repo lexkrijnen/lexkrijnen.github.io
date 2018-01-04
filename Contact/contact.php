@@ -5,6 +5,7 @@ session_start();
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 @$verzonden = $_SESSION['verzonden'];
 @$captcharesultaat = $_SESSION['captcharesultaat'];
+@$captchagevuld = $_SESSION['captchagevuld'];
 if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
 } else {
