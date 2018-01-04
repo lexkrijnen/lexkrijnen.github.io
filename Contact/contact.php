@@ -6,7 +6,6 @@ session_start();
 @$verzonden = $_SESSION['verzonden'];
 @$captcharesultaat = $_SESSION['captcharesultaat'];
 @$captchagevuld = $_SESSION['captchagevuld'];
-@$captchawaarde = $_SESSION['captchawaarde'];
 if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
 } else {
@@ -93,10 +92,13 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 </div>
             </div>
             <?php
-            if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding als het bericht verzonden is
-                print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>' . $captchawaarde);
-            }elseif ($captchagevuld == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
-                print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is niet verzonden. Onze spambeveiliging vermoedt dat u een robot bent, bent u dit niet? Probeer het formulier dan nogmaals in te vullen. Lukt dit niet? Ga dan naar de contactpagina en neem op een ander manier contact met ons op.</div>' . $captchawaarde);
+            if (isset($_POST['submitmail']){
+                if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding als het bericht verzonden is
+                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>';
+                }elseif ($captchagevuld == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
+                    print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is nog niet verzonden, vul alstublieft de Captcha in.</div>');
+                }elseif ($captcharesultaat == FALSE){ //check of de reCAPTCHA correct is ingevuld en geef een melding als dit niet zo is
+                    print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is niet verzonden. Onze spambeveiliging vermoedt dat u een robot bent, bent u dit niet? Probeer het formulier dan nogmaals in te vullen. Lukt dit niet? Ga dan naar de contactpagina en neem op een ander manier contact met ons op.</div>');
             }
             ?>
         </div>

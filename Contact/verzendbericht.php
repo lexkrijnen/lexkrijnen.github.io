@@ -26,7 +26,7 @@ if (isset($_POST['submitmail'])){
             $_SESSION['verzonden'] = FALSE;
         } else if ($captcha_success->success==true) { //check of de captcha succesvol is ingevuld, nu volgt successcenario
             $_SESSION['captcharesultaat'] = TRUE;
-            //variabelen klaarmaken om mail te versturen
+            //parameters klaarmaken om mail te versturen
             $name = $_POST['naam'];
             $email = $_POST['mail'];
             $message = $_POST['bericht'];
