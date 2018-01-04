@@ -93,7 +93,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             <?php
             if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding als het bericht verzonden is
                 print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
-            }elseif ($verzonden == FALSE){ //check of het bericht is verzonden en geef een melding als dit niet zo is
+            }elseif (isset($_POST['submitmail'] && $verzonden == FALSE){ //check of het bericht is verzonden en geef een melding als dit niet zo is
                 print('<div class="alert alert-warning"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Uw bericht is niet verzonden. Onze spambeveiliging vermoedt dat u een robot bent, bent u dit niet, probeer het formulier dan nogmaals in te vullen. Lukt dit niet? Ga dan naar de contactpagina en neem op een ander manier contact met ons op.</div>');
             }
             ?>
