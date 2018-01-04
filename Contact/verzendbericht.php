@@ -3,6 +3,7 @@ session_start();
 
 
 if (isset($_POST['submitmail'])){
+    $_SESSION['formsubmit'] = TRUE;
     $response = $_POST["g-recaptcha-response"]; //ingevulde captcha waarde
     if(!empty($response)){ //check of captcha is ingevuld
         $_SESSION['captchagevuld'] = TRUE;
