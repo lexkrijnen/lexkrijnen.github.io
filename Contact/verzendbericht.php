@@ -20,7 +20,7 @@ if (isset($_POST['submitmail'])){
 	$captcha_success=json_decode($verify);
 	if ($captcha_success->success==FALSE) {
 		$_SESSION['captcharesultaat'] = FALSE;
-        $_SESSION['verzonden'] = FALSE;
+        //$_SESSION['verzonden'] = FALSE;
 	} else if ($captcha_success->success==true) {
         $_SESSION['captcharesultaat'] = TRUE;
 		$name = $_POST['naam'];
