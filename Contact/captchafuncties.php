@@ -17,3 +17,4 @@ function check_if_captcha_is_filled (e) {
     e.preventDefault();
     alert('Fill in the captcha!');
 }
+?>
