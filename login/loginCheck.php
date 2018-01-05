@@ -25,6 +25,7 @@ if(isset($_POST['btn-login']))
 
     $response = $_POST["g-recaptcha-response"]; //ingevulde captcha waarde
         if(!empty($response)){ //check of captcha is ingevuld
+            $captchagevuld = TRUE;
             //verstuur captchawaarde naar Google en laat Google checken of er geen robot is die de captcha heeft ingevuld
             $url = 'https://www.google.com/recaptcha/api/siteverify';
             $data = array(
@@ -64,7 +65,7 @@ if(isset($_POST['btn-login']))
         print('<meta http-equiv="refresh" content="5;url=../login.php" />');
     }elseif ($captchagevuld == FALSE){
         print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
-        print('<div class="alert alert-warning container page-box" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>Vul alstublieft de reCAPCTCHA in, je word automatisch teruggestuurd naar de inlogpagina.</div>');
+        print('<div class="alert alert-warning container page-box" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span><span class="sr-only">Error:</span>Vul alstublieft de reCAPTCHA in, je word automatisch teruggestuurd naar de inlogpagina.</div>');
         print('<meta http-equiv="refresh" content="5;url=../login.php" />');
     }elseif ($captcharesultaat == FALSE){
         print('<nav class="navbar navbar-default" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="../index.php"><img class="brand-logo" src="../images/wegrobanner.png" alt="logo"></a></div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div></div></nav>');
