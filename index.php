@@ -38,11 +38,3 @@
 		<!-- /.container -->
 
 			<?php foot() ?>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
-
-		<!-- Bootstrap Framework -->
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-</html>
