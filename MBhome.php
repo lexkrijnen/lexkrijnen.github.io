@@ -58,7 +58,7 @@
 				<p>
 					<titel>Ons bedrijf</titel>
 					<br><br>
-					<img class="col-xs-5 col-xs-offset-1 imgright" src="images/IMG_9165.JPG">
+					<img class="col-xs-12 col-md-5 col-md-offset-1 imgright" src="images/IMG_9165.JPG">
 					Wij heten u van harte welkom op de site van Metselbedrijf Wegro bv.
 					<br><br>
 					Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
@@ -125,7 +125,7 @@
 				<p>
 					<titel>Metselwerk</titel>
 					<br><br>
-					<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
+					<img src="images/IMG_7453.JPG" class="col-xs-12 col-md-5 col-md-offset-1 imgleft">
 					Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit.
 					Door onze ruime ervaring op het gebied van metselwerk enonze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.
 					Een belangrijk aspect is dat u door ons het gehele metselwerk laat uitvoeren, er altijd een vast aanspreekpunt op de bouw aanwezig is in de vorm van een voorman.
@@ -186,7 +186,7 @@
 					<p>
 						<titel>Vergunningen</titel>
 						<br><br>
-						<img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
+						<img src="images/IMG_2450.JPG" class="col-xs-12 col-md-5 col-md-offset-1 imgright">
 						Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen.
 						<br><br>
 						Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken.
