@@ -13,8 +13,6 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Inloggen";
 }
 
-//reCAPTCHA functies loader
-require_once('captchafuncties.php');
 
 ?>
 <!DOCTYPE html>
@@ -40,19 +38,8 @@ require_once('captchafuncties.php');
     <!-- Custom styles for this page -->
     <link href="../css/contact.css" rel="stylesheet">
 
-    <!--- reCAPTCHA script loader --->
-    <script type="text/javascript">
-        var onloadCallback = function() {
-            grecaptcha.render('html_element', {
-                'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
-                'callback' : correctCaptcha
-            });
-          };
+    <!--- reCAPTCHA loader --->
 
-        var correctCaptcha = function(response) {
-            alert(response);
-        };
-    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -142,7 +129,7 @@ require_once('captchafuncties.php');
     <script src="../js/bootstrap.min.js"></script>
 
     <!--- reCAPTCHA loader --->
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
 </body>
 
 </html>
