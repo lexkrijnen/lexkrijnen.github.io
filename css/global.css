@@ -190,7 +190,10 @@ blockquote cite:before {
 	border-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:active {
 	background: #fff;
 	padding: 15px;
 	margin-top: -2px;
