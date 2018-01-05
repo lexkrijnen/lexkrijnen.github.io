@@ -318,16 +318,16 @@ h6 {
 
 .article-title-left,
 .article-title-right {
-	text-align: center;
+	text-align: center !important;
 }
 
 @media only screen and (min-width : 992px) {
 	.article-title-left {
-		text-align: left;
+		text-align: left !important;
 	}
 
 	.article-title-right {
-		text-align: right;
+		text-align: right !important;
 	}
 }
 
