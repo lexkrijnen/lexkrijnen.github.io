@@ -198,3 +198,6 @@ blockquote cite:before {
 	padding: 15px;
 	margin-top: -2px;
 }
+ul.navbar-nav {
+	margin-top: 15px;
+}
