@@ -7,14 +7,14 @@
 	border: none;
 	border-bottom: 4px solid black;
 }
-.a {
+.paddingtop {
 	padding-top: 25px;
 }
-.b {
-	margin-top: 50px;
+.margintop {
+	margin-top: 20px;
 }
 
-.c {
+.marginbottom {
 	margin-bottom: 20px;
 }
 /*
