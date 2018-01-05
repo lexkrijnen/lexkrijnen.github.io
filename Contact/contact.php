@@ -77,18 +77,18 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 
     <div class="container">
-        <div class="row mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b">
+        <div class="row mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margintop">
             <div class="panel ">
                 <div class="panel-heading oranje">
                     <div class="panel-title white">Neem contact met ons op</div>
 
                 </div>
-                <div class="panel-body a lowborder">
+                <div class="panel-body paddingtop lowborder">
                     <form class="contact-form" action="verzendbericht.php" method="post">
-                        <input type="text" class="form-control c" name="naam" placeholder="Naam" required>
-                        <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
-                        <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
-                        <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
+                        <input type="text" class="form-control marginbottom" name="naam" placeholder="Naam" required>
+                        <input type="email" class="form-control marginbottom" name="mail" placeholder="e-mail" required>
+                        <input type="text" class="form-control marginbottom" name="onderwerp" placeholder="Onderwerp" required>
+                        <textarea name="bericht" class="form-control marginbottom" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
                         <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
