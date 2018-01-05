@@ -39,7 +39,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <link href="../css/contact.css" rel="stylesheet">
 
     <!--- reCAPTCHA loader --->
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
