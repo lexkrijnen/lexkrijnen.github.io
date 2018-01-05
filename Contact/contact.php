@@ -41,7 +41,15 @@ require_once('captchafuncties.php');
     <link href="../css/contact.css" rel="stylesheet">
 
     <!--- reCAPTCHA script loader --->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+            'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
+            'callback': captcha_filled,
+            'expired-callback': captcha_expired,
+        });
+      };
+    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -87,11 +95,12 @@ require_once('captchafuncties.php');
                 </div>
                 <div class="panel-body a lowborder">
                     <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled()" method="post">
-                        <input type="text" class="form-control c" name="naam" <?php if(!empty($_POST["naam"]) && $captchagevuld == FALSE){print('placeholder=$_POST["naam"]');} else{print('placeholder="Naam"');}?> required>
+                        <input type="text" class="form-control c" name="naam" placeholder="Naam" required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
-                        <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
+                        <div id="html_element"></div>
+                        <!---<div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div>---><br>
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
@@ -128,6 +137,9 @@ require_once('captchafuncties.php');
 
     <!-- Bootstrap Framework -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <!--- reCAPTCHA loader --->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 
 </html>
