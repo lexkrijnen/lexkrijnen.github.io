@@ -19,6 +19,7 @@
         <input type="text" placeholder="type anything">
         <!--Invisible reCaptcha configuration-->
         <button class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o" data-callback='onSubmit'>Submit</button>
+        <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
         <br/>
     </form>
 </div>
