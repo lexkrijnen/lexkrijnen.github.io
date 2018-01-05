@@ -9,7 +9,17 @@
 	}
 ?>
 <?php include 'includes.php';?>
-<?php head() ?>
+<?php headTop() ?>
+
+		<title>Welkom bij Wegro</title>
+
+		<?php headMiddle() ?>
+
+		<!-- Custom styles for this page -->
+		<link href="css/index.css" rel="stylesheet">
+
+		<?php headBottom() ?>
+
 		<?php navTop() ?>
 			<li class="nav-item">
 				<a href="login.php">
@@ -47,4 +57,5 @@
 		</div>
 		<!-- /.container -->
 
-		<?php foot() ?>
+		<?php footTop() ?>
+		<?php footBottom() ?>
