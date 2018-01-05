@@ -42,13 +42,16 @@ require_once('captchafuncties.php');
 
     <!--- reCAPTCHA script loader --->
     <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-            'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
-            'callback': captcha_filled,
-            'expired-callback': captcha_expired,
-        });
-      };
+        var onloadCallback = function() {
+            grecaptcha.render('html_element', {
+                'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
+                'callback' : correctCaptcha
+            });
+          };
+
+        var correctCaptcha = function(response) {
+            alert(response);
+        };
     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -94,7 +97,7 @@ require_once('captchafuncties.php');
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled()" method="post">
+                    <form class="contact-form" action="verzendbericht.php" method="post">
                         <input type="text" class="form-control c" name="naam" placeholder="Naam" required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
