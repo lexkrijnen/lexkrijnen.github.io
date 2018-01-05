@@ -14,7 +14,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 }
 
 //reCAPTCHA functies loader
-require('captchafuncties.php');
+require_once('captchafuncties.php');
 
 ?>
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ require('captchafuncties.php');
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled" method="post">
+                    <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled()" method="post">
                         <input type="text" class="form-control c" name="naam" <?php if(!empty($_POST["naam"]) && $captchagevuld == FALSE){print('placeholder=$_POST["naam"]');} else{print('placeholder="Naam"');}?> required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
@@ -112,10 +112,10 @@ require('captchafuncties.php');
 
 
 <?php
-    $_SESSION["mailnaam"] = $_POST["naam"];
+    /*$_SESSION["mailnaam"] = $_POST["naam"];
     $_SESSION["mailadres"] = $_POST["mail"];
     $_SESSION["onderwerp"] = $_POST["onderwerp"];
-    $_SESSION["bericht"] = $_POST["bericht"];
+    $_SESSION["bericht"] = $_POST["bericht"];*/
 ?>
 
 
