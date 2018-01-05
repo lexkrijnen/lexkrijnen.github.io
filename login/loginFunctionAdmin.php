@@ -1,5 +1,6 @@
 <?php
 session_start();
+//LOGIN functie controleert of er een medewerker/administrator aanwezig is in de database met ingevulde gegevens.
 function GetLogin($username, $password) {
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
