@@ -273,6 +273,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 					</div>
 				</div>
 			</div>
+			</div>
 
 			</div><!-- .container -->
 
@@ -327,9 +328,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 				}(document, 'script', 'facebook-jssdk'));
 
 			</script>
-
-	</body>
-
+		</body>
 	</html>
 
 

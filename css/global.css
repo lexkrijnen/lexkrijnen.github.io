@@ -144,3 +144,33 @@ blockquote footer {
 blockquote cite:before {
 	content: "\2013";
 }
+
+.footer {
+	padding: 15px 15px 5px 15px;;
+	background-color: #3c3c3b;
+	color: #bdbdbd;
+}
+
+.footer-title {
+	color: #bdbdbd;
+}
+
+.footer-item {
+	list-style-type: none;
+}
+
+.footer-item > a,
+.footer-title > a {
+	color: #fff;
+}
+
+.text-fix {
+	margin-left: -40px;
+}
+
+@media only screen and (min-width : 992px) {
+	.text-md-right {
+		text-align: right;
+		margin-top: 37px;
+	}
+}
