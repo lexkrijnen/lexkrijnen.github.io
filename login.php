@@ -23,6 +23,8 @@ session_start();
 		<link href="css/global.css" rel="stylesheet">
 		<!-- Custom styles for this page -->
 		<link href="css/login.css" rel="stylesheet">
+        <!--- reCAPTCHA loader --->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -91,6 +93,10 @@ if (!empty($klant_id)) {
 									<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 									<input id="login-password" type="password" class="form-control" name="wachtwoord" placeholder="Vul hier uw wachtwoord in">
 								</div>
+
+                                <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o">
+                                </div>
+
 								<div class="form-group d">
 
 									<div class="col-sm-12 controls">
