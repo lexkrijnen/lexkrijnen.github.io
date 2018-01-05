@@ -151,8 +151,8 @@ blockquote cite:before {
 	width: 100% !important;
 	color: #bdbdbd;
 	position: absolute;
-	bottom: 0;
-	margin-bottom: -50px;
+  right: 0;
+  left: 0;
 }
 
 .footer-title {
@@ -181,4 +181,18 @@ blockquote cite:before {
 		text-align: right;
 		margin-top: 37px;
 	}
+
+	.footer {
+		margin-bottom: -50px;
+	}
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	background: #fff;
+	padding: 15px;
+	margin-top: -2px;
 }

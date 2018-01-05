@@ -127,7 +127,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <!-- Bootstrap Framework -->
     <script src="../js/bootstrap.min.js"></script>
 
-    <!--- reCAPTCHA loader --->
+
 
 </body>
 
