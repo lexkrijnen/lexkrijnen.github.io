@@ -166,69 +166,71 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="container page-box">
-		  <div class="col-xs-12 col-md-12">
-				<h1>Wijzigen</h1>
-				<table>
-					<form action='klant_wijzigen.php' method='get'>
-						<tr>
-							<td>Voornaam</td>
-							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
-						</tr>
-						<tr>
-							<td>Tussenvoegsel</td>
-							<td><input type="text" class="form-control" name="tussenvoegsel" <?php print( "value=\"$tussenvoegsel\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Achternaam</td>
-							<td><input type="text" class="form-control" name="achternaam" <?php print( "value=\"$achternaam\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Telefoonnummer  </td>
-							<td><input type="text" class="form-control" name="telefoonnummer" <?php print( "value=\"$telefoonnummer\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Emailadres</td>
-							<td><input type="text" class="form-control" name="emailadres" <?php print( "value=\"$emailadres\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Adres</td>
-							<td><input type="text" class="form-control" name="adres" <?php print( "value=\"$adres\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Postcode</td>
-							<td><input type="text" class="form-control" name="postcode" <?php print( "value=\"$postcode\""); ?>></td>
-						</tr>
-						<tr>
-							<td>Woonplaats</td>
-							<td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\""); ?>></td>
-						</tr>
-						<?php
-							if ($_SESSION["rol2"] == "medewerker") {
-									print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-									if ($_SESSION["medewerker_functie"] == "1") {
-											print("<tr><td>Functie</td>");
-											print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
-											if($functie=='2'){
-													print("checked");
-											}
-											print(" > Medewerker</td></tr>");
-											print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
-											if($functie=='1') {
-													print("checked");
-											}
-											print("> Admin </td></tr>");
-									}
-							} elseif ($_SESSION["rol2"] == "klant") {
-									print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
-							}
-							?>
+		<div class="page-box">
+			<div class="container">
+				<div class="col-xs-12 col-md-12">
+					<h1>Wijzigen</h1>
+					<table>
+						<form action='klant_wijzigen.php' method='get'>
 							<tr>
-								<td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
-								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
+								<td>Voornaam</td>
+								<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
 							</tr>
-					</form>
-				</table>
+							<tr>
+								<td>Tussenvoegsel</td>
+								<td><input type="text" class="form-control" name="tussenvoegsel" <?php print( "value=\"$tussenvoegsel\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Achternaam</td>
+								<td><input type="text" class="form-control" name="achternaam" <?php print( "value=\"$achternaam\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Telefoonnummer  </td>
+								<td><input type="text" class="form-control" name="telefoonnummer" <?php print( "value=\"$telefoonnummer\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Emailadres</td>
+								<td><input type="text" class="form-control" name="emailadres" <?php print( "value=\"$emailadres\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Adres</td>
+								<td><input type="text" class="form-control" name="adres" <?php print( "value=\"$adres\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Postcode</td>
+								<td><input type="text" class="form-control" name="postcode" <?php print( "value=\"$postcode\""); ?>></td>
+							</tr>
+							<tr>
+								<td>Woonplaats</td>
+								<td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\""); ?>></td>
+							</tr>
+							<?php
+								if ($_SESSION["rol2"] == "medewerker") {
+										print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+										if ($_SESSION["medewerker_functie"] == "1") {
+												print("<tr><td>Functie</td>");
+												print("<td><input type=\"radio\" name=\"functie\" value=\"2\" ");
+												if($functie=='2'){
+														print("checked");
+												}
+												print(" > Medewerker</td></tr>");
+												print("<tr><td></td><td><input type=\"radio\" name=\"functie\" value=\"1\" ");
+												if($functie=='1') {
+														print("checked");
+												}
+												print("> Admin </td></tr>");
+										}
+								} elseif ($_SESSION["rol2"] == "klant") {
+										print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
+								}
+								?>
+								<tr>
+									<td><a href="klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
+									<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
+								</tr>
+						</form>
+					</table>
+				</div>
 				<br>
 
 
