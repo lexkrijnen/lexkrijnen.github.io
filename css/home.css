@@ -29,7 +29,7 @@
 	margin-top: -96%;
 }
 
-.MBhomeContent > .select-btn {
+.MBhomeContent > a > .select-btn {
 	color: #fff;
 	font-size: 45px;
 	font-weight: bold;
