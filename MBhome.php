@@ -75,43 +75,43 @@
 					<titel>Kwaliteiten</titel>
 				</p>
 				<br>
-			</div>
 
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				<div class="hovereffect">
-					<img class="img-responsive" src="images/muur.png" alt="">
-					<div class="overlay">
-						<h1>METSELWERK</h1>
-						<p>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/muur.png" alt="">
+						<div class="overlay">
+							<h1>METSELWERK</h1>
+							<p>
 
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				<div class="hovereffect">
-					<img class="img-responsive" src="images/keuken.png" alt="">
-					<div class="overlay">
-						<h1>LIJM / KITWERK</h1>
-						<p>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/keuken.png" alt="">
+						<div class="overlay">
+							<h1>LIJM / KITWERK</h1>
+							<p>
 
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				<div class="hovereffect">
-					<img class="img-responsive" src="images/steiger.png" alt="">
-					<div class="overlay">
-						<h1>STEIGERWERK</h1>
-						<p>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<img class="img-responsive" src="images/steiger.png" alt="">
+						<div class="overlay">
+							<h1>STEIGERWERK</h1>
+							<p>
 
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- .col page-box -->
 		</div><!-- .row -->
 
 		<div class="row">
@@ -135,43 +135,43 @@
 						<titel>Projecten</titel>
 					</p>
 					<br>
-				</div>
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/metselmuur.png" alt="">
-						<div class="overlay">
-							<h1>KWALITEIT</h1>
-							<p>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/metselmuur.png" alt="">
+							<div class="overlay">
+								<h1>KWALITEIT</h1>
+								<p>
 
-							</p>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/huus.png" alt="">
-						<div class="overlay">
-							<h1>VEILIGHEID</h1>
-							<p>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/huus.png" alt="">
+							<div class="overlay">
+								<h1>VEILIGHEID</h1>
+								<p>
 
-							</p>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div><
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="hovereffect">
-						<img class="img-responsive" src="images/raam.png" alt="">
-						<div class="overlay">
-							<h1>DUURZAAMHEID</h1>
-							<p>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="hovereffect">
+							<img class="img-responsive" src="images/raam.png" alt="">
+							<div class="overlay">
+								<h1>DUURZAAMHEID</h1>
+								<p>
 
-							</p>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- .col page-box -->
 			</div><!-- .row -->
 
 			<div class="row">
