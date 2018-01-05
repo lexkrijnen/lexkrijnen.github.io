@@ -183,7 +183,7 @@ blockquote cite:before {
 	}
 
 	.navbar-default .navbar-nav>li>a {
-		box-shadow: 0 0 0 transparant;
+		box-shadow: 0 0 0 #fff0 !important;
 	}
 }
 
