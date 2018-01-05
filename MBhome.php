@@ -127,6 +127,7 @@
 					Hierdoor kan snel en adequaat worden gehandeld als er zich tijdens de bouw veranderingen doen voorkomen.
 				</p>
 			</div>
+		</div>
 
 			<div class="row">
 				<div class="col-xs-12 page-box">
@@ -200,44 +201,45 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container-fluid -->
-			<?php footTop() ?>
 
-			<!-- JQuery Basic Slider -->
-			<script src="js/jquery.bscslider.js"></script>
+		<?php footTop() ?>
 
-			<script>
-				$('a[href^="#"]').on('click', function(event) {
-					var target = $(this.getAttribute('href'));
-					if (target.length) {
-						event.preventDefault();
-						$('html, body').stop().animate({
-							scrollTop: target.offset().top
-						}, 1000);
-					}
+		<!-- JQuery Basic Slider -->
+		<script src="js/jquery.bscslider.js"></script>
+
+		<script>
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+				if (target.length) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
+			});
+
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$('.slider-demo').bscSlider({
+					effect: 1
 				});
+			})
 
-			</script>
+		</script>
 
-			<script>
-				$(document).ready(function() {
-					$('.slider-demo').bscSlider({
-						effect: 1
-					});
-				})
+		<div id="fb-root"></div>
 
-			</script>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 
-			<div id="fb-root"></div>
-
-			<script>
-				(function(d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s);
-					js.id = id;
-					js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.11';
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			</script>
-
-			<?php footBottom() ?>
+		<?php footBottom() ?>
