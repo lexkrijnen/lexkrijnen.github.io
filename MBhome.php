@@ -43,7 +43,7 @@
 				<div class="col-xs-12 MBhomeContent">
 					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Logo%20metselbedrijf%20Wegro.png">
 					<a href="/Contact/contact.php">
-						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 contbutton">
+						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 select-btn">
 							Contact
 						</div>
 					</a>
