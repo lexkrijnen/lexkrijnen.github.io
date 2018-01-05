@@ -17,10 +17,11 @@
 
 .MBhome-img {
 	width: 100%;
+	height: 350px;
 }
 
 .MBhomeContent {
-	margin-top: -56.66%;
+	margin-top: -100%;
 }
 
 @media only screen and (min-width : 992px) {
