@@ -341,11 +341,12 @@ h6 {
 	}
 }
 
+.maps-container > row {
+	margin: -30px;
+}
+
 .google-maps > iframe {
-	width: 97%;
-  height: 50vh;
-  margin-left: 1%;
-  border: none;
+	width: 100%;
 }
 
 /*
