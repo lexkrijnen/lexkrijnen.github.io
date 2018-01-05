@@ -97,7 +97,7 @@ require_once('captchafuncties.php');
 
                 </div>
                 <div class="panel-body a lowborder">
-                    <form class="contact-form" action="verzendbericht.php" onsubmit="check_if_captcha_is_filled()" method="post">
+                    <form class="contact-form" action="verzendbericht.php" method="post">
                         <input type="text" class="form-control c" name="naam" placeholder="Naam" required>
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
