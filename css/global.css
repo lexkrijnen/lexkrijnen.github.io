@@ -150,6 +150,9 @@ blockquote cite:before {
 	background-color: #3c3c3b !important;
 	width: 100% !important;
 	color: #bdbdbd;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: -50px;
 }
 
 .footer-title {

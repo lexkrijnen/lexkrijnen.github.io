@@ -37,4 +37,4 @@
 		</div>
 		<!-- /.container -->
 
-			<?php foot() ?>
+		<?php foot() ?>
