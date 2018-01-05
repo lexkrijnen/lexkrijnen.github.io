@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include 'includes.php';?>
 <?php head() ?>
 		<?php navTop() ?>
