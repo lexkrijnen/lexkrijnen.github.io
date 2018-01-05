@@ -89,8 +89,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                         <input type="email" class="form-control c" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control c" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control c" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
-                        <div id="html_element"></div>
-                        <!---<div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div>---><br>
+                        <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
