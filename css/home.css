@@ -15,13 +15,9 @@
 
 }
 
-.MBhomeBackground {
-	background-image: url("../images/cement.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 88%;
-	position: absolute;
-
+.MBhome-img {
+	width: 100%;
+	height: 100%;
 }
 
 .contbutton {

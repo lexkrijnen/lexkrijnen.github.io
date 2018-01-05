@@ -38,6 +38,9 @@
     <div class="container-fluid">
     	<div class="row">
     		<div class="col-xs-12 MBhomeBackground">
+    			<img class="MBhome-img" src="images/cement.jpg">
+				</div>
+				<div class="col-xs-12 MBhomeContent">
 					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Logo%20metselbedrijf%20Wegro.png">
 					<a href="/Contact/contact.php">
 						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 contbutton">
@@ -45,8 +48,8 @@
 						</div>
 					</a>
 				</div>
-			</div>
-		</div>
+			</div><!-- .row -->
+		</div><!-- .container-fluid -->
 
     <div class="container">
 		<div class="row">
