@@ -42,7 +42,7 @@
 
 @media only screen and (min-width : 992px) {
 	.contbutton {
-		margin: 5% 35%;
+		margin: 0 35% 5% 35%;
 		width: 30%;
 	}
 
