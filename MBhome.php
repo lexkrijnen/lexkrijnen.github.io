@@ -36,7 +36,7 @@
 		<?php navBottom() ?>
 
     <div class="container-fluid">
-    	<div class="row">
+    	<div class="row MBhomeRow">
     		<div class="col-xs-12 MBhomeBackground">
     			<img class="MBhome-img" src="images/cement.jpg">
 				</div>
