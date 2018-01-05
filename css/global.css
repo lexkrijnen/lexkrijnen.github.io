@@ -168,6 +168,10 @@ blockquote cite:before {
 	color: #fff;
 }
 
+.footer-admin {
+	color: #797979;
+}
+
 .text-fix {
 	margin-left: -40px;
 }
