@@ -15,7 +15,7 @@
 			<div class="col-xs-12 col-md-6 footer-title footer-item text-md-right">
 				<a href="#" data-toggle="modal" data-target="#voor-modal">Algemene voorwaarden</a>
 				 - <a href="#" data-toggle="modal" data-target="#disc-modal">Disclaimer</a>
-				 - <a class="footer-admin" href="admin.php">Admin</a>
+				<span class="footer-admin"> - <a href="admin.php">Admin</a></span>
 				<p class="footer-title">© Bouwbedrijf Wegro</p>
 			</div>
 
