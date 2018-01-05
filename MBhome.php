@@ -53,6 +53,7 @@
 				<p>
 					<titel>Ons bedrijf</titel>
 					<br><br>
+					<img class="col-xs-5 col-xs-offset-1 imgright" src="images/IMG_9165.JPG">
 					Wij heten u van harte welkom op de site van Metselbedrijf Wegro bv.
 					<br><br>
 					Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
@@ -64,7 +65,6 @@
 					U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!
 					<br><br>
 				</p>
-				<img class="col-xs-5 col-xs-offset-1 imgright" src="images/IMG_9165.JPG">
 			</div>
 		</div>
 
@@ -120,12 +120,12 @@
 				<p>
 					<titel>Metselwerk</titel>
 					<br><br>
+					<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 					Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit.
 					Door onze ruime ervaring op het gebied van metselwerk enonze vakbekwame metselaars zijn wij al geruime tijd werkzaam voor diverse grote en kleine bouwondernemers, die door ons het complete metselwerk laten uitvoeren.
 					Een belangrijk aspect is dat u door ons het gehele metselwerk laat uitvoeren, er altijd een vast aanspreekpunt op de bouw aanwezig is in de vorm van een voorman.
 					Hierdoor kan snel en adequaat worden gehandeld als er zich tijdens de bouw veranderingen doen voorkomen.
 				</p>
-				<img src="images/IMG_7453.JPG" class="col-xs-5 col-xs-offset-1 imgleft">
 			</div>
 
 			<div class="row">
@@ -180,6 +180,7 @@
 					<p>
 						<titel>Vergunningen</titel>
 						<br><br>
+						<img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 						Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen.
 						<br><br>
 						Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken.
@@ -188,16 +189,17 @@
 						Met het vervaardigen van de bouwvergunning proberen wij uw eisen in combinatie met onze bouwkennis om te zetten in een prachtig ontwerp, wat als solide basis staat voor de ver/nieuwbouw.
 						<br><br>
 					</p>
-					<img src="images/IMG_2450.JPG" class="col-xs-5 col-xs-offset-1 imgright">
 				</div><!-- .col -->
 			</div><!-- .row -->
+		</div><!-- .container -->
 
+		<div class="container-fluid">
 			<div class="row">
 				<div class="google-maps col-xs-12">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.878581983825!2d5.627317716021184!3d52.336348757575266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c633c22a95401d%3A0xc7d3b89f5cf90a07!2sBouwbedrijf+Wegro+B.V.!5e0!3m2!1snl!2snl!4v1513166724420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-			</div>
-
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container-fluid -->
 			<?php footTop() ?>
 
 			<!-- JQuery Basic Slider -->
