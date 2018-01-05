@@ -153,6 +153,7 @@ blockquote cite:before {
 	position: absolute;
   right: 0;
   left: 0;
+  bottom: 0;
 }
 
 .footer-title {
