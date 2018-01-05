@@ -42,12 +42,12 @@
 
 @media only screen and (min-width : 992px) {
 	.contbutton {
-		margin-top: 15px;
-		margin-bottom: 15px;
+		margin: 5% 35%;
+		width: 30%;
 	}
 
 	.logo {
-		margin: 45px auto;
+		margin: 5% auto;
 		width: 25%;
 	}
 }
