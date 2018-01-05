@@ -18,6 +18,8 @@ session_start();
 	<link href="css/login.css" rel="stylesheet">
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--- reCAPTCHA loader --->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -66,6 +68,10 @@ session_start();
 							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 							<input id="login-password" type="password" class="form-control" name="wachtwoord" placeholder="Vul hier uw wachtwoord in">
 						</div>
+
+                        <div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o">
+                        </div>
+
 						<div class="form-group d">
 
 							<div class="col-sm-12 controls">
