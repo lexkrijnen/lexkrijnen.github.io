@@ -20,6 +20,10 @@
 	height: 100%;
 }
 
+.MBhome-content {
+	margin-top: -66.66%;
+}
+
 .imgright,
 .imgleft {
 	margin-bottom: 10% !important;
