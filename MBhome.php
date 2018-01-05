@@ -56,7 +56,7 @@
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
 				<a name="Ons_bedrijf" id="Ons_bedrijf"></a>
 				<p>
-					<titel class="article-title-left">Ons bedrijf</titel>
+					<titel>Ons bedrijf</titel>
 					<br><br>
 					<img class="col-xs-12 col-md-5 col-md-offset-1 imgright" src="images/IMG_9165.JPG">
 					Wij heten u van harte welkom op de site van Metselbedrijf Wegro bv.
@@ -77,7 +77,7 @@
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 				<a name="Kwaliteiten" id="Kwaliteiten"></a>
 				<p class="paragraphleft ">
-					<titel class="article-title-left">Kwaliteiten</titel>
+					<titel>Kwaliteiten</titel>
 				</p>
 				<br>
 
@@ -123,7 +123,7 @@
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphright page-box">
 				<a name="Metselwerk" id="Metselwerk"></a>
 				<p>
-					<titel class="article-title-right">Metselwerk</titel>
+					<titel>Metselwerk</titel>
 					<br><br>
 					<img src="images/IMG_7453.JPG" class="col-xs-12 col-md-5 col-md-offset-1 imgleft">
 					Bouwbedrijf Wegro bv voert ook metsel-, lijm-, voeg-, en steigerwerk uit.
@@ -138,7 +138,7 @@
 				<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 					<a name="Projecten" id="Projecten"></a>
 					<p class="paragraphleft ">
-						<titel class="article-title-left">Projecten</titel>
+						<titel>Projecten</titel>
 					</p>
 					<br>
 
@@ -184,7 +184,7 @@
      		<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
       		<a name="Vergunningen" id="Vergunningen"></a>
 					<p>
-						<titel class="article-title-left">Vergunningen</titel>
+						<titel>Vergunningen</titel>
 						<br><br>
 						<img src="images/IMG_2450.JPG" class="col-xs-12 col-md-5 col-md-offset-1 imgright">
 						Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen.
