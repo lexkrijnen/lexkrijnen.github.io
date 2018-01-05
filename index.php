@@ -8,7 +8,7 @@
 			</li>
 		<?php navBottom() ?>
 
-		<div class="container">
+		<div class="container page">
 
 			<div class="row">
 				<div class="col-xs-offset-1">
