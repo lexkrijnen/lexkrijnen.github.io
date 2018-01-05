@@ -42,13 +42,16 @@ require_once('captchafuncties.php');
 
     <!--- reCAPTCHA script loader --->
     <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-            'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
-            'callback': captcha_filled,
-            'expired-callback': captcha_expired,
-        });
-      };
+        var onloadCallback = function() {
+            grecaptcha.render('html_element', {
+                'sitekey' : '6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o',
+                'callback' : correctCaptcha
+            });
+          };
+
+        var correctCaptcha = function(response) {
+            alert(response);
+        };
     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
