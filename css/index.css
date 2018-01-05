@@ -17,12 +17,6 @@
 	margin-bottom: 50px;
 }
 
-/* Landingspage */
-
-/* Vraag gelijk met knoppen */
-.page-question {
-}
-
 /* Oranje knoppen in het midden, moet een class worden aangemaakt */
 body > div.container > div:nth-child(2) {
 	padding-left: 7%;
