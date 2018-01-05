@@ -14,6 +14,7 @@ $pdo = new PDO($db, $user, $pass);
 
 
 if (isset($_GET["opslaan"])) {
+		// controleren of er een klant of een medewerker word gewijzigd
 		if ($_SESSION["rol2"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
 				$stmt = $pdo->prepare($sql);
