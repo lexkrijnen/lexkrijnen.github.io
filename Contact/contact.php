@@ -77,10 +77,11 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 
     <div class="container">
-        <?php
+        <div class="row mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margintop">
+            <?php
             if ($formsubmit == TRUE){
                 if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding als het bericht verzonden is
-                    print('<div class="row alert alert-success col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margintop"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
+                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
                 }elseif ($captchagevuldklant == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
                     print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is nog niet verzonden, vul alstublieft de Captcha in.</div>');
                 }elseif ($captcharesultaatklant == FALSE){ //check of de reCAPTCHA correct is ingevuld en geef een melding als dit niet zo is
@@ -88,7 +89,6 @@ if (!empty($klant_id OR $medewerker_nummer)) {
                 }
             }
             ?>
-        <div class="row mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margintop">
             <div class="panel ">
                 <div class="panel-heading oranje">
                     <div class="panel-title white">Neem contact met ons op</div>
