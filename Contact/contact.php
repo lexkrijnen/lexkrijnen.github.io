@@ -132,4 +132,5 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 </body>
 
 </html>
-<?php $_SESSION['verzonden'] = FALSE; // RESET zodat je eventueel nog een 2e bericht kan versturen ?>
+<?php $_SESSION['verzonden'] = FALSE; // RESET zodat je eventueel nog een 2e bericht kan versturen
+$_SESSION['formsubmit'] = FALSE //RESET zodat er gen errormessage bovenin blijft staan als je later weer terugkomt op de pagina ?>
