@@ -37,7 +37,7 @@ if (isset($_POST["aanmaken"])) {
 $pdo = NULL;
 
 //random string voor wachtwoord
-function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!/\:;<>@#$%^&*')
+function random($keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ?!/\:;@#$%^&*')
 {
     $str = "";
     $max = mb_strlen($keyspace, '8bit') - 1;
