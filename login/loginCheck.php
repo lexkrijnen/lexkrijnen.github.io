@@ -25,6 +25,7 @@ if(isset($_POST['btn-login']))
 
     $response = $_POST["g-recaptcha-response"]; //ingevulde captcha waarde
         if(!empty($response)){ //check of captcha is ingevuld
+            $captchagevuld = TRUE;
             //verstuur captchawaarde naar Google en laat Google checken of er geen robot is die de captcha heeft ingevuld
             $url = 'https://www.google.com/recaptcha/api/siteverify';
             $data = array(
