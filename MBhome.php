@@ -35,7 +35,7 @@
 			</li>
 		<?php navBottom() ?>
 
-    <div class="container">
+    <div class="container-fluid">
     	<div class="row">
     		<div class="col-xs-12 MBhomeBackground">
 					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Logo%20metselbedrijf%20Wegro.png">
@@ -44,9 +44,11 @@
 							Contact
 						</div>
 					</a>
+				</div>
 			</div>
 		</div>
 
+    <div class="container">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 paragraphleft page-box">
 				<a name="Ons_bedrijf" id="Ons_bedrijf"></a>
@@ -76,7 +78,7 @@
 				</p>
 				<br>
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="col-sm-4 col-xs-12 hover-img">
 					<div class="hovereffect">
 						<img class="img-responsive" src="images/muur.png" alt="">
 						<div class="overlay">
@@ -88,7 +90,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="col-sm-4 col-xs-12 hover-img">
 					<div class="hovereffect">
 						<img class="img-responsive" src="images/keuken.png" alt="">
 						<div class="overlay">
@@ -100,7 +102,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="col-sm-4 col-xs-12 hover-img">
 					<div class="hovereffect">
 						<img class="img-responsive" src="images/steiger.png" alt="">
 						<div class="overlay">
@@ -137,7 +139,7 @@
 					</p>
 					<br>
 
-					<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="col-sm-4 col-xs-12 hover-img">
 						<div class="hovereffect">
 							<img class="img-responsive" src="images/metselmuur.png" alt="">
 							<div class="overlay">
@@ -149,7 +151,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="col-sm-4 col-xs-12 hover-img">
 						<div class="hovereffect">
 							<img class="img-responsive" src="images/huus.png" alt="">
 							<div class="overlay">
@@ -161,7 +163,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="col-sm-4 col-xs-12 hover-img">
 						<div class="hovereffect">
 							<img class="img-responsive" src="images/raam.png" alt="">
 							<div class="overlay">
