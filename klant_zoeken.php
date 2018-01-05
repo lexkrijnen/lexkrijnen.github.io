@@ -149,51 +149,53 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="container page-box">
-		  <div class="col-xs-12 col-md-12">
-				<div class=container>
-					<h1>Zoeken</h1>
-					<table>
-						<form action="klant_zoeken.php" method="get">
-							<div class="row">
-								<tr>
-									<td>
-										Voornaam:
-									</td>
-									<td>
-										<input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldevoornaam"); } else { print( "placeholder='voornaam'"); }?> >
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										Tussenvoegsel:
-									</td>
-									<td>
-										<input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldetussenvoegsel"); } else { print( "placeholder='tussenvoegsel'"); }?> >
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										Achternaam:
-									</td>
-									<td>
-										<input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> >
-									</td>
-								</tr>
+		<div class="page-box">
+			<div class="container">
+				<div class="col-xs-12 col-md-12">
+					<div class=container>
+						<h1>Zoeken</h1>
+						<table>
+							<form action="klant_zoeken.php" method="get">
+								<div class="row">
 									<tr>
 										<td>
+											Voornaam:
 										</td>
 										<td>
-											<div align="right">
-												<input class="btn oranje white" type="submit" name="vinden" value="Vinden">
-											</div>
+											<input type="text" class="form-control" name="ingevuldevoornaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldevoornaam"); } else { print( "placeholder='voornaam'"); }?> >
 										</td>
 									</tr>
-							</div>
-						</form>
-					</table>
+
+									<tr>
+										<td>
+											Tussenvoegsel:
+										</td>
+										<td>
+											<input type="text" class="form-control" name="ingevuldetussenvoegsel" <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldetussenvoegsel"); } else { print( "placeholder='tussenvoegsel'"); }?> >
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											Achternaam:
+										</td>
+										<td>
+											<input type="text" class="form-control" name="ingevuldeachternaam" required <?php if (isset($_GET[ "vinden"])) { print( "value = $ingevuldeachternaam"); } else { print( "placeholder='achternaam'"); }?> >
+										</td>
+									</tr>
+										<tr>
+											<td>
+											</td>
+											<td>
+												<div align="right">
+													<input class="btn oranje white" type="submit" name="vinden" value="Vinden">
+												</div>
+											</td>
+										</tr>
+								</div>
+							</form>
+						</table>
+					</div>
 				</div>
 
 

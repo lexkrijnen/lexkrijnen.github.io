@@ -123,16 +123,18 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="container page-box">
-		  <div class="col-xs-12 col-md-12">
-				<h1>Verwijderen</h1>
-				<br>
-				<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
-				<br>
-				<form action="klant_verwijderen.php" method="get">
-					<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
-					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
-				</form>
+		<div class="page-box">
+			<div class="container">
+				<div class="col-xs-12 col-md-12">
+					<h1>Verwijderen</h1>
+					<br>
+					<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
+					<br>
+					<form action="klant_verwijderen.php" method="get">
+						<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
+						<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
+					</form>
+				</div>
 			</div>
 
 			<?php
