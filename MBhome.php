@@ -3,9 +3,9 @@
 	@$klant_id = $_SESSION['klant_id'];
 	@$medewerker_nummer = $_SESSION['medewerker_nummer'];
 	if (!empty($klant_id OR $medewerker_nummer)) {
-			$ingelogd = "Mijn Account";
+		$ingelogd = "Mijn Account";
 	} else {
-			$ingelogd = "Inloggen";
+		$ingelogd = "Inloggen";
 	}
 ?>
 <?php include 'includes.php';?>
@@ -35,41 +35,41 @@
 			</li>
 		<?php navBottom() ?>
 
-		<!--<div class="">-->
-        <div class="row MBhomeBackground">
-            <img src="images/Logo%20metselbedrijf%20Wegro.png" class="logo">
-
-            <a href="/Contact/contact.php">
-                <div class="col-xs-2 col-xs-offset-5 btn contbutton">
-                    Contact
-                </div>
-            </a>
-<!--
-			<div class="slider slider-demo ">
-				<img src="images/IMG_2442.JPG">
-				<img src="images/IMG_2601.JPG">
-				<img src="images/IMG_2784.JPG">
-				<img src="images/IMG_3134.JPG">
-				<img src="images/IMG_6733.JPG">
+    <div class="container">
+    	<div class="row">
+    		<div class="col-xs-12 MBhomeBackground">
+					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Logo%20metselbedrijf%20Wegro.png">
+					<a href="/Contact/contact.php">
+						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 contbutton">
+							Contact
+						</div>
+					</a>
 			</div>
-
-		</div>-->
-		<a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
-		<div class="row">
-			<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
-				<img src="images/IMG_9165.JPG" class="col-xs-5 col-xs-offset-1 imgright">
-
-                <titel>Ons bedrijf</titel><br><br> Wij heten u van harte welkom op de site van Metselbedrijf Wegro bv.
-				<br><br> Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
-				<br> Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.<br><br> Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
-                    <br><br> U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!<br><br>
-			</p>
 		</div>
 
 		<div class="row">
-			<a name="Kwaliteiten" id="Kwaliteiten">
+			<div class="col-xs-10 col-xs-offset-1">
+				<a name="Ons_bedrijf" id="Ons_bedrijf"></a>
+				<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
+					<titel>Ons bedrijf</titel>
+					<br><br>
+					Wij heten u van harte welkom op de site van Metselbedrijf Wegro bv.
+					<br><br>
+					Bouwbedrijf Wegro bv beschikt over eigen timmerlieden, metselaars, tegelzetter en voegers. Bouwbedrijf Wegro bv heeft een schat van ervaring in de bouw. Als bouwbedrijf zijn wij breed georiënteerd, wij richten ons op nieuwbouw, verbouw, renovatie en onderhoud van woningen en bedrijfsgebouwen. Mede door onze vakbekwame vaklieden die al vele jaren in de bouw actief zijn, zijn wij breed inzetbaar op elk gebied.
+					<br>
+					Ook op gebied van metselwerk zijn wij zeer actief, zo verzorgen wij het complete metsel-, voeg-, en steigerwerk op aanneemwerk en in regie. De klant is bij ons koning, wij kunnen aan alle wensen van de klant voldoen, zo helpen wij ook met het begeleiden van bouwvergunningen. Het tekenwerk wordt door ons zelf vervaardigd, zodat eventuele aanpassingen op een korte en snelle manier gerealiseerd kunnen worden.
+					<br><br>
+					Onze kleinschaligheid en open werkwijze zorgen voor een direct contact en veel overleg met de opdrachtgever, waardoor u verzekert kunt zijn van het gewenste resultaat. Wanneer u geïnteresseerd bent om ons bouwbedrijf uit te nodigen, dan zijn wij zeker bereid om u van het begin tot het eind zorgvuldig te helpen en begeleiden zodat het eindresultaat geheel aan u verwachtingen zal voldoen.
+					<br><br>
+					U kunt op onderstaande ‘link’ klikken voor het aanvragen van een vrijblijvende prijsopgave. Wanneer u al uw gegevens heeft ingevuld en een korte omschrijving van de betreffende bouwplannen heeft gemaakt dan zullen wij zo spoedig mogelijk contact met u opnemen!
+					<br><br>
+				</p>
+				<img class="col-xs-5 col-xs-offset-1 imgright" src="images/IMG_9165.JPG">
+			</div>
+		</div>
 
-	  	</a>
+		<div class="row">
+			<a name="Kwaliteiten" id="Kwaliteiten"></a>
 			<div class="col-xs-10 col-xs-offset-1  page-box">
 				<p class="paragraphleft ">
 					<titel>Kwaliteiten</titel>
