@@ -42,6 +42,11 @@
 .white {
 	color: white;
 }
+
+.lowborder {
+	border-bottom: 4px solid #FE9C16;
+	border-radius: 5px;
+}
 /*
 .formdinges {
 	height: 200px;
