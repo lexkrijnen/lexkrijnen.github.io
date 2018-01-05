@@ -39,13 +39,6 @@
 
 			<?php foot() ?>
 
-		<div class="row">
-			<div class="col-xs-12 text-center footer-rights">
-				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>. <a href="admin.php">Admin</a></p>
-			</div>
-		</div>
-
-
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 
