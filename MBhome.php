@@ -53,7 +53,7 @@
 
     <div class="container">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-md-12 paragraphleft page-box">
+			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
 				<a name="Ons_bedrijf" id="Ons_bedrijf"></a>
 				<p>
 					<titel>Ons bedrijf</titel>
@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-md-12 page-box">
+			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 				<a name="Kwaliteiten" id="Kwaliteiten"></a>
 				<p class="paragraphleft ">
 					<titel>Kwaliteiten</titel>
@@ -120,7 +120,7 @@
 		</div><!-- .row -->
 
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-md-12 paragraphright page-box">
+			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphright page-box">
 				<a name="Metselwerk" id="Metselwerk"></a>
 				<p>
 					<titel>Metselwerk</titel>
@@ -135,7 +135,7 @@
 		</div>
 
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1 col-md-12 page-box">
+				<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 					<a name="Projecten" id="Projecten"></a>
 					<p class="paragraphleft ">
 						<titel>Projecten</titel>
@@ -181,7 +181,7 @@
 			</div><!-- .row -->
 
 			<div class="row">
-     		<div class="col-xs-10 col-xs-offset-1 col-md-12 paragraphleft page-box">
+     		<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
       		<a name="Vergunningen" id="Vergunningen"></a>
 					<p>
 						<titel>Vergunningen</titel>
