@@ -17,6 +17,11 @@
 	margin-bottom: 50px;
 }
 
+.select-logo {
+	margin: 5px;
+	width: 100%;
+}
+
 /* Oranje knoppen in het midden, moet een class worden aangemaakt */
 body > div.container > div:nth-child(2) {
 	padding-left: 7%;
