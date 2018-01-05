@@ -169,7 +169,7 @@ blockquote cite:before {
 }
 
 .footer-admin {
-	color: #797979;
+	color: #797979 !important;
 }
 
 .text-fix {
