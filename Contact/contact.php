@@ -4,8 +4,8 @@ session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 @$verzonden = $_SESSION['verzonden'];
-@$captcharesultaat = $_SESSION['captcharesultaat'];
-@$captchagevuld = $_SESSION['captchagevuld'];
+@$captcharesultaatklant = $_SESSION['captcharesultaatklant'];
+@$captchagevuldklant = $_SESSION['captchagevuldklant'];
 @$formsubmit = $_SESSION['formsubmit'];
 if (!empty($klant_id OR $medewerker_nummer)) {
     $ingelogd = "Mijn Account";
@@ -98,9 +98,9 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             if ($formsubmit == TRUE){
                 if ($verzonden == TRUE) { //check of het bericht is verzonden en geef hiervan een melding als het bericht verzonden is
                     print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Het bericht is verzonden, wij nemen zo spoedig mogelijk contact met u op!</div>');
-                }elseif ($captchagevuld == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
+                }elseif ($captchagevuldklant == FALSE){ //check of de reCAPTCHA is ingevuld en geef een melding als dit niet zo is
                     print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is nog niet verzonden, vul alstublieft de Captcha in.</div>');
-                }elseif ($captcharesultaat == FALSE){ //check of de reCAPTCHA correct is ingevuld en geef een melding als dit niet zo is
+                }elseif ($captcharesultaatklant == FALSE){ //check of de reCAPTCHA correct is ingevuld en geef een melding als dit niet zo is
                     print('<div class="alert alert-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Uw bericht is niet verzonden. Onze spambeveiliging vermoedt dat u een robot bent, bent u dit niet? Probeer het formulier dan nogmaals in te vullen. Lukt dit niet? Ga dan naar de contactpagina en neem op een ander manier contact met ons op.</div>');
                 }
             }
