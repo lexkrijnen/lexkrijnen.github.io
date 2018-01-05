@@ -6,7 +6,7 @@ if (isset($_POST['submitmail'])){
     $_SESSION['formsubmit'] = TRUE;
     $response = $_POST["g-recaptcha-response"]; //ingevulde captcha waarde
     if(!empty($response)){ //check of captcha is ingevuld
-        $_SESSION['captchagevuld'] = TRUE;
+        $_SESSION['captchagevuldklant'] = TRUE;
         //verstuur captchawaarde naar Google en laat Google checken of er geen robot is die de captcha heeft ingevuld
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = array(
@@ -23,10 +23,10 @@ if (isset($_POST['submitmail'])){
         $verify = file_get_contents($url, FALSE, $context);
         $captcha_success=json_decode($verify);
         if ($captcha_success->success==FALSE) { //check of de captcha succesvol is ingevuld
-            $_SESSION['captcharesultaat'] = FALSE;
+            $_SESSION['captcharesultaatklant'] = FALSE;
             $_SESSION['verzonden'] = FALSE;
         } else if ($captcha_success->success==true) { //check of de captcha succesvol is ingevuld, nu volgt successcenario
-            $_SESSION['captcharesultaat'] = TRUE;
+            $_SESSION['captcharesultaatklant'] = TRUE;
             //parameters klaarmaken om mail te versturen
             $name = $_POST['naam'];
             $email = $_POST['mail'];
@@ -41,7 +41,7 @@ if (isset($_POST['submitmail'])){
             header('Location: ../Contact/contact.php'); //redirect user terug naar form
         }
     }elseif(empty($response)){ //check of captcha is ingevuld
-        $_SESSION['captchagevuld'] = FALSE;
+        $_SESSION['captchagevuldklant'] = FALSE;
         header('Location: ../Contact/contact.php'); //redirect user terug naar form
     }
 }else{
