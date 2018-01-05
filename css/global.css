@@ -148,7 +148,7 @@ blockquote cite:before {
 .footer {
 	padding: 15px 15px 5px 15px;;
 	background-color: #3c3c3b !important;
-	width: 100%;
+	width: 100% !important;
 	color: #bdbdbd;
 }
 
