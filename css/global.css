@@ -182,3 +182,13 @@ blockquote cite:before {
 		margin-top: 37px;
 	}
 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+	background: #fff;
+	padding: 15px;
+	box-shadow: 0 0 2px #7b7b7b;
+}
