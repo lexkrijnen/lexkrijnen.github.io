@@ -146,10 +146,13 @@ blockquote cite:before {
 }
 
 .footer {
-	padding: 15px 15px 5px 15px;;
+	padding: 15px 15px 15px 15px;
 	background-color: #3c3c3b !important;
 	width: 100% !important;
 	color: #bdbdbd;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: -50px;
 }
 
 .footer-title {
@@ -163,6 +166,10 @@ blockquote cite:before {
 .footer-item > a,
 .footer-title > a {
 	color: #fff;
+}
+
+.footer-admin {
+	color: #797979;
 }
 
 .text-fix {

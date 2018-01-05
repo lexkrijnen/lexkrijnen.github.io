@@ -8,7 +8,7 @@
 			</li>
 		<?php navBottom() ?>
 
-		<div class="container">
+		<div class="container page">
 
 			<div class="row">
 				<div class="col-xs-offset-1">
@@ -37,12 +37,4 @@
 		</div>
 		<!-- /.container -->
 
-			<?php foot() ?>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
-
-		<!-- Bootstrap Framework -->
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-</html>
+		<?php foot() ?>
