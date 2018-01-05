@@ -14,7 +14,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 }
 
 //reCAPTCHA functies loader
-require('captchafuncties.php');
+require_once('captchafuncties.php');
 
 ?>
 <!DOCTYPE html>
@@ -112,10 +112,10 @@ require('captchafuncties.php');
 
 
 <?php
-    $_SESSION["mailnaam"] = $_POST["naam"];
+    /*$_SESSION["mailnaam"] = $_POST["naam"];
     $_SESSION["mailadres"] = $_POST["mail"];
     $_SESSION["onderwerp"] = $_POST["onderwerp"];
-    $_SESSION["bericht"] = $_POST["bericht"];
+    $_SESSION["bericht"] = $_POST["bericht"];*/
 ?>
 
 
