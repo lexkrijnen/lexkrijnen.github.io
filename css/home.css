@@ -316,6 +316,21 @@ h6 {
 	margin-bottom: 10%;
 }
 
+.article-title-left,
+.article-title-right {
+	text-align: center;
+}
+
+@media only screen and (min-width : 992px) {
+	.article-title-left {
+		text-align: left;
+	}
+
+	.article-title-right {
+		text-align: right;
+	}
+}
+
 /*
 .slider-demo {
 	z-index: -1;
