@@ -143,8 +143,8 @@ $pdo = NULL;
 				<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
 				<br>
 				<form action="ad_klant_verwijderen.php" method="get">
-					<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
-					<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='ad_klant_zoeken.php'" />
+					<input id="button2" class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
+					<input id="button1" class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='ad_klant_zoeken.php'" />
 				</form>
 			</div>
 
