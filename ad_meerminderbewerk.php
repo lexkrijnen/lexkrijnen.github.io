@@ -152,7 +152,7 @@ if (empty($medewerker_nummer)) {
         if ($message != "") {
             print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> '. $message . '</div>');
         }
-        print("<a href=\"ad_meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" class=\"btn btn-primary btn-return\">Terug</button></a>");
+        print("<a href=\"ad_meermindertoevoegen.php?id=" . $_GET["id"] . "\"><button type=\"button\" id=\"button1\" class=\"btn btn-primary btn-return\">Terug</button></a>");
         $message = ""; //CLEARS OUT MESSAGES
         ?>
 		</div>
