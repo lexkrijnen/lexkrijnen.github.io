@@ -188,7 +188,7 @@ $pdo = NULL;
 											</td>
 											<td>
 												<div align="right">
-													<input class="btn oranje white" type="submit" name="vinden" value="Vinden">
+													<input id="button1" class="btn oranje white" type="submit" name="vinden" value="Vinden">
 												</div>
 											</td>
 										</tr>
@@ -227,7 +227,7 @@ $pdo = NULL;
                         print("</form>");
 												print("</td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<input id=\"button1\" class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
+                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
 												print("</table>");
