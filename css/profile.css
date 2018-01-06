@@ -58,6 +58,11 @@ td:hover {
 	background-color: #ffc966;
 }
 
+tbody >tr> th {
+	background-color: #FFA500;
+	color: #FFFFFF;
+}
+
 /* Buttons */
 .btn-lg {
 	color: #FFFFFF;
