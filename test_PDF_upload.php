@@ -145,7 +145,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+			<div id="viewer-can" class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
 				<!--Contract-->
 				<table class="table table-hover">
 					<tr>
