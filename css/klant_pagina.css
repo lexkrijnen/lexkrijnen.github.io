@@ -8,15 +8,29 @@
     overflow-y:scroll;
 }
 
-.oranje {
-	background-color: #FE9C16 !important;
-
+/*Buttons*/
+#button1{
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+#button1:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
 }
 
-.white {
-	color: white;
+#button2{
+    color: #FFA500;
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
 }
 
+#button2:hover{
+    color: #D3D3D3;
+	background-color: #FFA500;
+	border-color: #D3D3D3;
+}
 
 .btn-success {
 	color: #fff;
@@ -24,7 +38,7 @@
 	border-color: #4cae4c
 }
 
-
+/*view boxen*/
 #viewer-box {
 	height: 80vh;
 }
