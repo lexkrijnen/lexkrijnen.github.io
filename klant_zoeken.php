@@ -149,7 +149,7 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="page-box">
+		<div class="container page-box">
 			<div class="container">
 				<div class="col-xs-12 col-md-12">
 					<div class=container>
@@ -227,7 +227,7 @@ $pdo = NULL;
                         print("</form>");
 												print("</td><td>");
                         print("<form action='klant_verwijderen.php' method='get'>");
-                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
+                        print("<input id=\"button1\" class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
 												print("</table>");

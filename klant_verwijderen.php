@@ -123,7 +123,7 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="page-box">
+		<div class="container page-box">
 			<div class="container">
 				<div class="col-xs-12 col-md-12">
 					<h1>Verwijderen</h1>
@@ -131,8 +131,8 @@ $pdo = NULL;
 					<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
 					<br>
 					<form action="klant_verwijderen.php" method="get">
-						<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
-						<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
+						<input id="button2" class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
+						<input id="button1" class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
 					</form>
 				</div>
 			</div>
