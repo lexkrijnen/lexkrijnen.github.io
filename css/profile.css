@@ -26,6 +26,11 @@
 	height: 80vh;
 }
 
+/*viewer-meer/minder*/
+#viewer-meer\/minder{
+	height: 50vh;
+}
+
 /*table head*/
 
 thead {
