@@ -175,7 +175,7 @@ if (empty($medewerker_nummer)) {
             </form>
         </table>
 
-        <?php
+        <?php //ERROR HANDELING, SUCCESMELDING
 				if (isset($_GET["opslaan"])) {
 					if ($error != "") {
         			print('<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"> ' . $error . '</span></div>');

@@ -1,8 +1,9 @@
 <?php
 session_start();
-@$medewerker_nummer = $_SESSION['medewerker_nummer']
+@$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 
+//LOGIN en rechten check
 if (empty($medewerker_nummer)) {
 		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
 		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
@@ -33,6 +34,7 @@ if (empty($medewerker_nummer)) {
 	<link href="css/index.css" rel="stylesheet">
 
     <?php
+    //OPHALEN ALLE PROJECTEN
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
@@ -109,6 +111,7 @@ if (empty($medewerker_nummer)) {
 		<div class="col-xs-4">
 			<h2>Meer/Minder Werk Verwijderen</h2>
 			<?php
+            //MEER minder WERK VERWIJDEREN
         if (isset($_GET["nummer"]) && $_GET["nummer"] != "") {
             $nummer = $_GET["nummer"];
 

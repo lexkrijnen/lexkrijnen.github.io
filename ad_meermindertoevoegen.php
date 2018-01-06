@@ -3,6 +3,7 @@ session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 
+//LOGIN en rechten check
 if (empty($medewerker_nummer)) {
 		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
 		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
@@ -38,6 +39,7 @@ if (empty($medewerker_nummer)) {
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
+    //TOEVOEGEN MEER/MINDER WERK
     if (isset($_GET["toevoegenmeerwerk"]) && isset($_GET["beschrijving"])) {
         if ($_GET["beschrijving"] != "") {
             $sql = "INSERT INTO Mutatie (beschrijving, prijs, contract_nummer, soort_nummer)VALUES(?,?,?,?)";
