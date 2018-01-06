@@ -128,7 +128,7 @@ session_start();
             } else {
                 print("Weet u zeker dat u deze mutatie wilt verwijderen?<br><br>");
                 print("<form method=\"get\" action=\"meerminderverwijder.php\" >");
-                print("<input class=\"btn btn-danger btn-return\" type=\"submit\" name=\"bevestiging\" value=\"Verwijderen\">");
+                print("<input id=\"button2\" class=\"btn btn-danger btn-return\" type=\"submit\" name=\"bevestiging\" value=\"Verwijderen\">");
                 print("<input type=\"hidden\" name=\"nummer\" value=\"" . $nummer . "\">");
                 print("</form>");
             }

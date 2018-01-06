@@ -38,3 +38,15 @@ body > div.container > div:nth-child(2) {
 	border-color: #ffc966;
 	background-color: #ffc966;
 }
+
+#button2{
+  color: #FFFFFF;
+	background-color: #000000;
+	border-color: #FFFFFF;
+}
+
+#button2:hover{
+  color: #FFFFFF;
+	background-color: #696969;
+	border-color: #696969;
+}
