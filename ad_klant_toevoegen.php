@@ -146,7 +146,7 @@ $hash = sha1($salt . $wachtwoord);
         </div>
     </div>
 
-		<div class="page-box">
+		<div class="container page-box">
 			<div class="container">
 				<div class="col-xs-12 col-md-12">
 					<h1>Klant toevoegen</h1>
