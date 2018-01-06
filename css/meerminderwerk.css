@@ -12,3 +12,15 @@ th {
 td>a:hover {
 	color: #FFA500;
 }
+
+/*Button*/
+#button{
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+#button:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
+}
