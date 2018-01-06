@@ -221,7 +221,7 @@ $hash = sha1($salt . $wachtwoord);
 							</tr>
 							<tr>
 								<td>
-									<input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
+									<input type="submit" id="button1" class="btn oranje white" name="aanmaken" value="Aanmaken">
 								</td>
 							</tr>
 						</form>

@@ -236,8 +236,8 @@ $pdo = NULL;
 							}
 							?>
 							<tr>
-								<td><a href="ad_klant_zoeken.php" class="btn btn-primary" role="button">Terug</a></td>
-								<td align='right'><input class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
+								<td><a href="ad_klant_zoeken.php" id="button2" class="btn btn-primary" role="button">Terug</a></td>
+								<td align='right'><input id="button1" class="btn oranje white" type="submit" name="opslaan" value="Opslaan"></td>
 							</tr>
 					</form>
 				</table>
