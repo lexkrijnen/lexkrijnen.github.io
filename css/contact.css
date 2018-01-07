@@ -17,23 +17,7 @@
 .marginbottom {
 	margin-bottom: 20px;
 }
-/*
-.d {
-	margin-top: 10px;
-}
-.rowsidemargin {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-.paragraphleft {
-	text-align: left;
-}
-.paragraphleft titel {
-	font-size: 30px;
-	font-weight: bold;
-	text-align: left;
-}
-*/
+
 .oranje {
 	background-color: #FE9C16 !important;
 
@@ -47,12 +31,4 @@
 	border-bottom: 4px solid #FE9C16;
 	border-radius: 5px;
 }
-/*
-.formdinges {
-	height: 200px;
-}
-.cb2 {
-	height: 20px;
-	width: 20px;
-}
-*/
+

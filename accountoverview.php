@@ -11,12 +11,15 @@
     <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+    <!---bootstrap --->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--- global.css ophalen --->
     <link href="css/global.css" rel="stylesheet">
+    <!--- custom stylesheet ophalen --->
     <link href="css/index.css" rel="stylesheet">
 
     <?php
-    session_start();
+    session_start(); //sessie starten en sessievariabelen ophalen
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
     @$medewerker_nummer = $_SESSION['medewerker_nummer'];
@@ -25,23 +28,24 @@
 
 
 
-
-
+    //connectie met database maken
     $db = "mysql:host=localhost; dbname=Wegro; port=3306";
     $user = "wegro";
     $pass = "SQLWegro@101";
     $pdo = new PDO($db, $user, $pass);
 
-    if ($klant_id != "" AND $medewerker_id == "") {
-    $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
-    $stmt->execute();
-    $sqlresult = $stmt->fetch();
-    $klant_nummerdb = $sqlresult["klant_nummer"];
-    }elseif ($klant_id == "" AND $medewerker_nummer != "") {
-    $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
-    $stmt->execute();
-    $sqlresult = $stmt->fetch();
-    $medewerker_nummerdb = $sqlresult["medewerker_nummer"];
+    if ($klant_id != "" AND $medewerker_id == "") {//check of er een klant is ingelogd, haal vervolgens de gegevens van deze klant uit de databse op, geef tevens rol 'klant'
+        $rol = "klant";
+        $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
+        $stmt->execute();
+        $sqlresult = $stmt->fetch();
+        $klant_nummerdb = $sqlresult["klant_nummer"];
+    }elseif ($klant_id == "" AND $medewerker_nummer != "") {//check of er een medewerker is ingelogd, haal vervolgens de gegevens van deze medewerker uit de database, geef tevens rol 'medewerker'
+        $rol = "medewerker";
+        $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
+        $stmt->execute();
+        $sqlresult = $stmt->fetch();
+        $medewerker_nummerdb = $sqlresult["medewerker_nummer"];
     }
 
     $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
@@ -60,7 +64,7 @@
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
     @$functie = $sqlresult["functie"];
 
-
+    //sessievariabelen updaten
     $_SESSION["voornaam"] = $voornaam;
     $_SESSION["tussenvoegsel"] = $tussenvoegsel;
     $_SESSION["achternaam"] =  $achternaam;
@@ -73,20 +77,8 @@
     $_SESSION["medewerker_nummer"] = $medewerker_nummerdb;
     $_SESSION["functie"] = $medewerker_functie;
 
-
-if($klant_id == "" AND $medewerker_nummer != ""){
-    $rol = "medewerker";
-}elseif($klant_id != "" AND $medewerker_nummer == ""){
-    $rol = "klant";
-}
-
-    $_SESSION["rol"] = $rol;
-
-
-
     $pdo = NULL;
 ?>
-
 
 </head>
 
@@ -124,7 +116,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                             <h4>Menu</h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>>Mijn Account</a></li>
                         <li><a href="accountoverview.php">Mijn gegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
@@ -133,7 +125,7 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         <li class="nav-divider"></li>
                         <?php
                         foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>"); //print projecften van een klant
                         }
                         ?>
                         <li class="nav-divider"></li>
@@ -147,11 +139,12 @@ if($klant_id == "" AND $medewerker_nummer != ""){
 
     <?php
     if (empty($klant_id) AND empty($medewerker_nummer)) {
-        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>'); //check of er wel is ingelogd
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     }else {
     ?>
 
+        <!--- tabel met klant- of medewerkergegevens --->
         <div class="container page-box">
             <div class="col-xs-12 col-md-12">
                 <h1>Uw gegevens</h1>
@@ -161,11 +154,11 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         <th>Gegevens</th>
                     </tr>
                     <?php
-                    if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {
+                    if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {//checkt of klantnummer of medewerkernummer niet leeg is
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
-                        if ($klant_nummerdb != "") {
+                        if ($klant_nummerdb != "") {//checkt of er een klant is ingelogd zodat het klantnummer wordt weergegeven
                             print("<tr><td>Klantnummer: </td><td>$klant_nummerdb</td></tr>");
-                        }elseif ($medewerker_nummerdb != "") {
+                        }elseif ($medewerker_nummerdb != "") {//checkt of er een medewerker is ingelogd zodat het medewerkernummer wordt weergegeven
                             print("<tr><td>Medewerkernummer: </td><td>$medewerker_nummerdb");
                             print("<tr><td>Rol: </td><td>$rol");
                         }
@@ -174,31 +167,11 @@ if($klant_id == "" AND $medewerker_nummer != ""){
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");
-                    }elseif ($klant_nummerdb == "") {
-                        print("<br>Error! Waarschijnlijk een onbekend klantnummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
-                    }elseif ($medewerker_nummerdb == ""){
-                        print("<br>Error! Waarschijnlijk een onbekend medewerkernummer, neem a.u.b. contact op met iemand die hier verstand van heeft.");
-                    }
-
-
+                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>"); //button om accountgegevens te wijzigen
                 ?>
-
                 </table>
-
-
-
             </div>
         </div>
-
-
-
-
-
-
-
-
-        <?php $pdo = NULL; ?>
 </body>
 
 </html>
