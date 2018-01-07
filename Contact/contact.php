@@ -1,4 +1,5 @@
 <?php
+//start sessie en haal sessievariabelen op
 session_start();
 @$klant_id = $_SESSION['klant_id'];
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
@@ -7,13 +8,11 @@ session_start();
 @$captcharesultaatklant = $_SESSION['captcharesultaatklant'];
 @$captchagevuldklant = $_SESSION['captchagevuldklant'];
 @$formsubmit = $_SESSION['formsubmit'];
-if (!empty($klant_id OR $medewerker_nummer)) {
+if (!empty($klant_id OR $medewerker_nummer)) { //check of er is ingelogd
     $ingelogd = "Mijn Account";
 } else {
     $ingelogd = "Inloggen";
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,21 +25,15 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
     <meta name="author" content="Nard Wemes">
     <link rel="icon" href="../images/Logo%20bouwbedrijf%20Wegro.png">
-
     <title>Contact</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Global styles for this website -->
     <link href="../css/global.css" rel="stylesheet">
-
     <!-- Custom styles for this page -->
     <link href="../css/contact.css" rel="stylesheet">
-
     <!--- reCAPTCHA loader --->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -71,7 +64,7 @@ if (!empty($klant_id OR $medewerker_nummer)) {
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container -->
     </nav>
 
 
@@ -95,12 +88,12 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
                 </div>
                 <div class="panel-body paddingtop lowborder">
-                    <form class="contact-form" action="verzendbericht.php" method="post">
+                    <form class="contact-form" action="verzendbericht.php" method="post"> <!--- in te vullen contactfomulier --->
                         <input type="text" class="form-control marginbottom" name="naam" placeholder="Naam" required>
                         <input type="email" class="form-control marginbottom" name="mail" placeholder="e-mail" required>
                         <input type="text" class="form-control marginbottom" name="onderwerp" placeholder="Onderwerp" required>
                         <textarea name="bericht" class="form-control marginbottom" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
-                        <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
+                        <div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br> <!--- reCAPTCHA --->
                         <button type="submit" class="btn oranje white" name="submitmail">Verstuur bericht</button>
                     </form>
                 </div>
@@ -109,21 +102,16 @@ if (!empty($klant_id OR $medewerker_nummer)) {
     </div>
 
 
-<?php
+<?php/*
     $_SESSION["mailnaam"] = $_POST["naam"];
     $_SESSION["mailadres"] = $_POST["mail"];
     $_SESSION["onderwerp"] = $_POST["onderwerp"];
     $_SESSION["bericht"] = $_POST["bericht"];
-?>
-
-
-
-
+*/?>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../js/jquery.min.js"></script>
-
     <!-- Bootstrap Framework -->
     <script src="../js/bootstrap.min.js"></script>
 
@@ -133,4 +121,4 @@ if (!empty($klant_id OR $medewerker_nummer)) {
 
 </html>
 <?php $_SESSION['verzonden'] = FALSE; // RESET zodat je eventueel nog een 2e bericht kan versturen
-$_SESSION['formsubmit'] = FALSE //RESET zodat er gen errormessage bovenin blijft staan als je later weer terugkomt op de pagina ?>
+$_SESSION['formsubmit'] = FALSE //RESET zodat er geen errormessage van de reCAPTCH bovenin blijft staan als je later weer terugkomt op de pagina ?>
