@@ -2,11 +2,6 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
-if (empty($medewerker_nummer)) {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} else {
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -30,7 +25,8 @@ if (isset($_GET["vinden"])) {
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 		$klant_nummer = $klant["klant_nummer"];
 
-
+		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
+		//er staat een 2 achter de session zodat ze niet door elkaar gehaald worden met de session met de gegevens van de gebruiker
 		$_SESSION["klantnummer2"] = $klant_nummer;
     $_SESSION["voornaam2"] = $voornaam;
     $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
@@ -43,6 +39,7 @@ if (isset($_GET["vinden"])) {
     $_SESSION["woonplaats2"] = $woonplaats;
 		$_SESSION["rol2"] = klant;
 
+		//ingevulde gegevens opslaan voor de error message
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
@@ -114,6 +111,14 @@ $pdo = NULL;
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
+
+		<?php
+		//controle of er een medewerker is ingelogd
+		if (empty($medewerker_nummer)) {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../admin.php" />');
+		} else {
+		?>
 
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
@@ -210,6 +215,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
+										//succes
                     } elseif ($klant_nummer != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
