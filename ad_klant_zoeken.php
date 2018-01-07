@@ -37,7 +37,15 @@ if (isset($_GET["vinden"])) {
 			$functie = $klant["functie"];
 			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
 			$_SESSION["functie2"] = $functie;
+
+			//functiemummer omtoveren naar functienaam
+			if ($functie == "1") {
+  				$functienaam = "admin";
+  			} elseif ($functie == "2") {
+  				$functienaam = "medewerker";
+  			}
 			$_SESSION["functienaam2"] = $functienaam;
+
 		}
 
 		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
