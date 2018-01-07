@@ -122,7 +122,7 @@
 				<p>
 					<titel>Vergunningen</titel>
 					<br><br>
-					<img src="images/IMG_7017.JPG" class="col-xs-12 col-md-5 col-md-offset-1 imgLEFT">
+					<img src="images/IMG_7017.JPG" class="col-xs-12 col-md-5 imgleft">
 					Om u als klant zo veel mogelijk werk uit handen te nemen vervaardigen wij in eigen beheer de bouwvergunningen.
 					<br><br>
 					Dit houd in dat wij zowel het tekenwerk als de benodigde berekeningen maken.
