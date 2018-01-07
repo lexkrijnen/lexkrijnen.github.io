@@ -3,6 +3,7 @@ session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_functie = $_SESSION['medewerker_functie'];
 
+//gegevens opslaan in een variabele zodat het in de value kan blijven staan na het opslaan of genereren van wachtwoord
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
