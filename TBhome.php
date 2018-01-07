@@ -41,7 +41,7 @@
     			<img class="MBhome-img" src="images/DSC02245.jpg">
 				</div>
 				<div class="col-xs-12 MBhomeContent">
-					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Wegroleeg">
+					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Wegrotekenbureaulogo.jpg">
 					<a href="/Contact/contact.php">
 						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 select-btn">
 							Contact
