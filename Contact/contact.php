@@ -102,14 +102,6 @@ if (!empty($klant_id OR $medewerker_nummer)) { //check of er is ingelogd
     </div>
 
 
-<?php/*
-    $_SESSION["mailnaam"] = $_POST["naam"];
-    $_SESSION["mailadres"] = $_POST["mail"];
-    $_SESSION["onderwerp"] = $_POST["onderwerp"];
-    $_SESSION["bericht"] = $_POST["bericht"];
-*/?>
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../js/jquery.min.js"></script>
     <!-- Bootstrap Framework -->

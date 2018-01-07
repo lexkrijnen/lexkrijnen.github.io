@@ -1,12 +1,11 @@
 <?php
 session_start();
 
-
-if (isset($_POST['submitmail'])){
-    $_SESSION['formsubmit'] = TRUE;
+if (isset($_POST['submitmail'])){ //check of form gesubmit is
+    $_SESSION['formsubmit'] = TRUE; //formsubmit variabele
     $response = $_POST["g-recaptcha-response"]; //ingevulde captcha waarde
     if(!empty($response)){ //check of captcha is ingevuld
-        $_SESSION['captchagevuldklant'] = TRUE;
+        $_SESSION['captchagevuldklant'] = TRUE; //captcha is gevuld
         //verstuur captchawaarde naar Google en laat Google checken of er geen robot is die de captcha heeft ingevuld
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = array(
@@ -23,10 +22,10 @@ if (isset($_POST['submitmail'])){
         $verify = file_get_contents($url, FALSE, $context);
         $captcha_success=json_decode($verify);
         if ($captcha_success->success==FALSE) { //check of de captcha succesvol is ingevuld
-            $_SESSION['captcharesultaatklant'] = FALSE;
-            $_SESSION['verzonden'] = FALSE;
+            $_SESSION['captcharesultaatklant'] = FALSE; //captcha niet succesvol ingevuld
+            $_SESSION['verzonden'] = FALSE; //bericht dus niet verzonden
         } else if ($captcha_success->success==true) { //check of de captcha succesvol is ingevuld, nu volgt successcenario
-            $_SESSION['captcharesultaatklant'] = TRUE;
+            $_SESSION['captcharesultaatklant'] = TRUE; //captcha succesvol ingevuld
             //parameters klaarmaken om mail te versturen
             $name = $_POST['naam'];
             $email = $_POST['mail'];
@@ -38,14 +37,14 @@ if (isset($_POST['submitmail'])){
 
             mail($recipient, $subject, $formcontent, $mailheader) or die("Error!"); // verstuur mail
             $_SESSION['verzonden'] = TRUE; //laat weten dat mail verzonden is d.m.v. een variabele
-            header('Location: ../Contact/contact.php'); //redirect user terug naar form
+            header('Location: ../Contact/contact.php'); //redirect user terug naar contactpagina
         }
     }elseif(empty($response)){ //check of captcha is ingevuld
-        $_SESSION['captchagevuldklant'] = FALSE;
-        header('Location: ../Contact/contact.php'); //redirect user terug naar form
+        $_SESSION['captchagevuldklant'] = FALSE; //captcha niet ingevuld
+        header('Location: ../Contact/contact.php'); //redirect user terug naar contactpagina
     }
 }else{
-    $_SESSION['formsubmit'] = FALSE;
+    $_SESSION['formsubmit'] = FALSE; //form niet gesubmit
 }
 
 ?>
