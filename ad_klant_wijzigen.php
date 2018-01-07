@@ -3,14 +3,6 @@ session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
 
-if (empty($medewerker_nummer)) {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} elseif ($medewerker_functie == "2") {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
-    print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
-} else {
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -142,6 +134,17 @@ $pdo = NULL;
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
+
+		<?php
+		//controle of er een admin is ingelogd
+		if (empty($medewerker_nummer)) {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../admin.php" />');
+		} elseif ($medewerker_functie == "2") {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
+		} else {
+		?>
 
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
