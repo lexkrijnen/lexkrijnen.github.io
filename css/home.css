@@ -265,6 +265,7 @@ h6 {
 	transform: translate3d(-10px, 0, 0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	min-height: 272px;
 }
 
 .hovereffect:hover img {
