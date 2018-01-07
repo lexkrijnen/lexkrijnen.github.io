@@ -75,7 +75,7 @@
 
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
-				<a name="Kwaliteiten" id="Kwaliteiten"></a>
+				<a name="3D" id="3D"></a>
 				<p class="paragraphleft ">
 					<titel>2D en 3D ontwerp</titel>
 				</p>
@@ -139,7 +139,7 @@
 
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
-				<a name="Kwaliteiten" id="Kwaliteiten"></a>
+				<a name="Projecten" id="Projecten"></a>
 				<p class="paragraphleft ">
 					<titel>Projecten</titel>
 				</p>
