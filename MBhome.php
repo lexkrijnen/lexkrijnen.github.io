@@ -15,9 +15,9 @@
 
 		<?php headMiddle() ?>
 
-		<!-- Custom styles for this page -->
+		<!-- Css linken -->
 		<link href="css/home.css" rel="stylesheet">
-
+<!-- Navbar inroepen-->
 		<?php headBottom() ?>
 
 		<?php navTop() ?>
@@ -34,7 +34,7 @@
 				</a>
 			</li>
 		<?php navBottom() ?>
-
+<!-- achtergrond afbeelding en contact knop -->
     <div class="container-fluid">
     	<div class="row MBhomeRow">
     		<div class="col-xs-12 MBhomeBackground">
@@ -50,7 +50,7 @@
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container-fluid -->
-
+<!-- pagebox  met informatie -->
     <div class="container">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
@@ -72,7 +72,7 @@
 				</p>
 			</div>
 		</div>
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 				<a name="Kwaliteiten" id="Kwaliteiten"></a>
@@ -118,7 +118,7 @@
 				</div>
 			</div><!-- .col page-box -->
 		</div><!-- .row -->
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphright page-box">
 				<a name="Metselwerk" id="Metselwerk"></a>
@@ -133,7 +133,7 @@
 				</p>
 			</div>
 		</div>
-
+        <!-- pagebox  met informatie -->
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 					<a name="Projecten" id="Projecten"></a>
@@ -179,7 +179,7 @@
 					</div>
 				</div><!-- .col page-box -->
 			</div><!-- .row -->
-
+        <!-- pagebox  met informatie -->
 			<div class="row">
      		<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
       		<a name="Vergunningen" id="Vergunningen"></a>
@@ -198,7 +198,7 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
-
+<!-- footer -->
 		<div class="container-fluid">
 			<div class="row">
 				<div class="google-maps">
@@ -211,7 +211,7 @@
 
 		<!-- JQuery Basic Slider -->
 		<script src="js/jquery.bscslider.js"></script>
-
+<!-- scrolt naar gedeelte van pagina -->
 		<script>
 			$('a[href^="#"]').on('click', function(event) {
 				var target = $(this.getAttribute('href'));
@@ -224,7 +224,7 @@
 			});
 
 		</script>
-
+<!-- slideshow -->
 		<script>
 			$(document).ready(function() {
 				$('.slider-demo').bscSlider({
@@ -233,7 +233,7 @@
 			})
 
 		</script>
-
+<!-- code om facebook toe te voegen -->
 		<div id="fb-root"></div>
 
 		<script>

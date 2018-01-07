@@ -15,9 +15,9 @@
 
 		<?php headMiddle() ?>
 
-		<!-- Custom styles for this page -->
+		<!-- Css -->
 		<link href="css/home.css" rel="stylesheet">
-
+<!-- navbar inroepen -->
 		<?php headBottom() ?>
 
 		<?php navTop() ?>
@@ -34,7 +34,7 @@
 				</a>
 			</li>
 		<?php navBottom() ?>
-
+<!-- pagebox  met informatie -->
     <div class="container-fluid">
     	<div class="row MBhomeRow">
     		<div class="col-xs-12 MBhomeBackground">
@@ -72,7 +72,7 @@
 				</p>
 			</div>
 		</div>
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 				<a name="3D" id="3D"></a>
@@ -118,7 +118,7 @@
 				</div>
 			</div><!-- .col page-box -->
 		</div><!-- .row -->
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
 				<a name="Vergunningen" id="Vergunningen"></a>
@@ -136,7 +136,7 @@
 				</p>
 			</div><!-- .col -->
 		</div><!-- .row -->
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 page-box">
 				<a name="Projecten" id="Projecten"></a>
@@ -182,7 +182,7 @@
 				</div>
 			</div><!-- .col page-box -->
 		</div><!-- .row -->
-
+        <!-- pagebox  met informatie -->
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 paragraphleft page-box">
 				<a name="Ontwerp" id="Ontwerp"></a>
@@ -200,7 +200,7 @@
 			</div><!-- .col -->
 		</div><!-- .row -->
 	</div><!-- .container -->
-
+<!-- google maps -->
 		<div class="container-fluid">
 			<div class="row">
 				<div class="google-maps">
@@ -208,7 +208,7 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container-fluid -->
-
+<!-- footer -->
 		<?php footTop() ?>
 
 		<!-- JQuery Basic Slider -->
@@ -226,7 +226,7 @@
 			});
 
 		</script>
-
+<!-- slideshow -->
 		<script>
 			$(document).ready(function() {
 				$('.slider-demo').bscSlider({
@@ -235,7 +235,7 @@
 			})
 
 		</script>
-
+<!-- facebook -->
 		<div id="fb-root"></div>
 
 		<script>

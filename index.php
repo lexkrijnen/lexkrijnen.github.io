@@ -8,7 +8,9 @@
 			$ingelogd = "Inloggen";
 	}
 ?>
+<!-- de include pagina wordt toegevoegd -->
 <?php include 'includes.php';?>
+<!-- navbar-->
 <?php headTop() ?>
 
 		<title>Welkom bij Wegro</title>
@@ -27,7 +29,7 @@
 				</a>
 			</li>
 		<?php navBottom() ?>
-
+<!-- welkomsttekst met klikbare tegels -->
 		<div class="container page">
 
 			<div class="row">
@@ -56,6 +58,6 @@
 
 		</div>
 		<!-- /.container -->
-
+<!-- footer -->
 		<?php footTop() ?>
 		<?php footBottom() ?>
