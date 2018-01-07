@@ -17,7 +17,7 @@ if (isset($_GET["vinden"])) {
 		//ophalen van de functie van de medwerker
 		$sql2 = "SELECT * FROM Functie where functie_nummer = ?";
 		$stmt2 = $pdo->prepare($sql2);
-		$stmt->execute(array($functie));
+		$stmt2->execute(array($functie));
 		$functie = $stmt->fetch();
 	}
     $stmt = $pdo->prepare($sql);
