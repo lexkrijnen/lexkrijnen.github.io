@@ -1,103 +1,46 @@
-<?php
-session_start();
-@$klant_id = $_SESSION['klant_id'];
-@$medewerker_nummer = $_SESSION['medewerker_nummer'];
-@$medewerker_functie = $_SESSION['medewerker_functie'];
-if (!empty($klant_id OR $medewerker_nummer)) {
-    $ingelogd = "Mijn Account";
-} else {
-    $ingelogd = "Inloggen";
-}
-?>
-
-	<!DOCTYPE html>
-	<html lang="en">
-
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-		<meta name="author" content="Nard Wemes">
-		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+<?php include 'includes.php';?>
+<?php headTop() ?>
 
 		<title>Bouwbedrijf Wegro</title>
 
-		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-
-		<!-- JQuery Basic Slider -->
-		<link rel="stylesheet" href="css/jquery.bscslider.css">
-
-		<!-- Global styles for this website -->
-		<link href="css/global.css" rel="stylesheet">
+		<?php headMiddle() ?>
 
 		<!-- Custom styles for this page -->
 		<link href="css/home.css" rel="stylesheet">
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	</head>
+		<?php headBottom() ?>
 
-	<body>
+		<?php navTop() ?>
+			<li class="nav-item"><a href="index.php">Home</a></li>
+			<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
+			<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
+			<li class="nav-item"><a href="#Metselwerk">Metselwerk</a></li>
+			<li class="nav-item"><a href="#Projecten">Projecten</a></li>
+			<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
+			<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
+			<li class="nav-item">
+				<a href="login.php">
+					<?php print($ingelogd);?>
+				</a>
+			</li>
+		<?php navBottom() ?>
 
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+    <div class="container-fluid">
+    	<div class="row MBhomeRow">
+    		<div class="col-xs-12 MBhomeBackground">
+    			<img class="MBhome-img" src="images/Kraan.jpeg">
 				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item"><a href="index.php">Home</a></li>
-						<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
-						<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
-						<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
-						<li class="nav-item"><a href="#Projecten">Projecten</a></li>
-						<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-						<li class="nav-item">
-							<a href="login.php">
-								<?php print($ingelogd);?>
-							</a>
-						</li>
-					</ul>
+				<div class="col-xs-12 MBhomeContent">
+					<img class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 logo" src="images/Logo%20metselbedrijf%20Wegro.png">
+					<a href="/Contact/contact.php">
+						<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 select-btn">
+							Contact
+						</div>
+					</a>
 				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
-		</nav>
+			</div><!-- .row -->
+		</div><!-- .container-fluid -->
 
-		<!--<div class="">-->
-		<div class="container-fluid">
-		<div class="row BBhomeBackground">
-			<img src="images/Lbouwbedrijf%20Wegro.png" class="logo">
-
-			<a href="/Contact/contact.php">
-				<div class="col-xs-2 col-xs-offset-5 btn contbutton">
-					Contact
-				</div>
-			</a>
-			<!--	<div class="slider slider-demo col-xs-12">
-				<img src="images/IMG_2442.JPG">
-				<img src="images/IMG_2601.JPG">
-				<img src="images/IMG_2784.JPG">
-				<img src="images/IMG_3134.JPG">
-				<img src="images/IMG_6733.JPG">
-			</div>
-		</div>
--->
 			<a name="Ons_bedrijf" id="Ons_bedrijf"> </a>
 			<div class="row">
 				<p class="col-xs-10 col-xs-offset-1 paragraphleft page-box">
