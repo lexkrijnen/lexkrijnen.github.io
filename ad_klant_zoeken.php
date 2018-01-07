@@ -13,6 +13,12 @@ if (isset($_GET["vinden"])) {
 		$sql = "SELECT * FROM Klant where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
 	} elseif ($_GET["rol"] == "medewerker") {
 		$sql = "SELECT * FROM Medewerker where voornaam = ? AND tussenvoegsel = ? AND achternaam = ?";
+
+		//ophalen van de functie van de medwerker
+		$sql2 = "SELECT * FROM Functie where functie_nummer = ?";
+		$stmt2 = $pdo->prepare($sql2);
+		$stmt->execute(array($functie));
+		$functie = $stmt->fetch();
 	}
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array($_GET["ingevuldevoornaam"], $_GET["ingevuldetussenvoegsel"], $_GET["ingevuldeachternaam"]));
@@ -35,17 +41,10 @@ if (isset($_GET["vinden"])) {
 		} elseif ($_GET["rol"] == "medewerker") {
 			$medewerker_nummer2 = $klant["medewerker_nummer"];
 			$functie = $klant["functie"];
+			$functienaam = functie["functie_naam"];
 			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
 			$_SESSION["functie2"] = $functie;
-
-			//functiemummer omtoveren naar functienaam
-			if ($functie == "1") {
-  				$functienaam = "admin";
-  			} elseif ($functie == "2") {
-  				$functienaam = "medewerker";
-  			}
 			$_SESSION["functienaam2"] = $functienaam;
-
 		}
 
 		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
@@ -61,7 +60,7 @@ if (isset($_GET["vinden"])) {
     $_SESSION["woonplaats2"] = $woonplaats;
 		$_SESSION["rol2"] = $zoekrol;
 
-		//ingevulde gegevens opslaan voor de error message
+		//de ingevulde gegevens opslaan voor de error message
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
