@@ -34,12 +34,15 @@ if (isset($_GET["vinden"])) {
 			$_SESSION["klantnummer2"] = $klant_nummer;
 		} elseif ($_GET["rol"] == "medewerker") {
 			$medewerker_nummer2 = $klant["medewerker_nummer"];
-			$functie = $klant["functie"];
+			$functie = $klant["functie_nummer"];
+			$functienaam = $klant["functie_naam"];
 			$_SESSION["medewerkernummer2"] = $medewerker_nummer2;
 			$_SESSION["functie2"] = $functie;
 			$_SESSION["functienaam2"] = $functienaam;
 		}
 
+		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
+		//er staat een 2 achter de session zodat ze niet door elkaar gehaald worden met de session met de gegevens van de gebruiker
     $_SESSION["voornaam2"] = $voornaam;
     $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
     $_SESSION["achternaam2"] =  $achternaam;
@@ -51,17 +54,11 @@ if (isset($_GET["vinden"])) {
     $_SESSION["woonplaats2"] = $woonplaats;
 		$_SESSION["rol2"] = $zoekrol;
 
+		//ingevulde gegevens opslaan voor de error message
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 		$ingevulderol =	$_GET["rol"];
-
-		if ($functie == "1") {
-				$functienaam = "admin";
-			} elseif ($functie == "2") {
-				$functienaam = "medewerker";
-			}
-
 }
 
 $stmt3 = $pdo->prepare("SELECT * FROM Project");

@@ -25,7 +25,8 @@ if (isset($_GET["vinden"])) {
     $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
 		$klant_nummer = $klant["klant_nummer"];
 
-
+		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
+		//er staat een 2 achter de session zodat ze niet door elkaar gehaald worden met de session met de gegevens van de gebruiker
 		$_SESSION["klantnummer2"] = $klant_nummer;
     $_SESSION["voornaam2"] = $voornaam;
     $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
@@ -38,6 +39,7 @@ if (isset($_GET["vinden"])) {
     $_SESSION["woonplaats2"] = $woonplaats;
 		$_SESSION["rol2"] = klant;
 
+		//ingevulde gegevens opslaan voor de error message
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
@@ -213,6 +215,7 @@ $pdo = NULL;
                                 <span class=\"sr-only\">Error:</span>
                                 Vul een voornaam en een achternaam in.
                               </div>");
+										//succes
                     } elseif ($klant_nummer != "") {
                         print("<br><div class=\"container col-xs-9 col-md-7\"><table class=\"table table-hover table-bordered\">");
                         print("<tr><td>Naam:</td><td>$naam</td></tr>");
