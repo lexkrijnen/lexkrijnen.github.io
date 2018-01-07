@@ -12,6 +12,7 @@ $telefoonnummer = $_POST["telefoonnummer"];
 $woonplaats = ucfirst($_POST["woonplaats"]);
 $straat = $_POST["straat"];
 $postcode = $_POST["postcode"];
+$functie = $_POST["functie"];
 
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
@@ -294,7 +295,7 @@ $hash = sha1($salt . $wachtwoord);
                     print("</div>");
                 } else {
                     ///succes
-                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als medewerker.</div>');
+                    print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ' . $naam . '  is successvol toegevoegd als ' . $functie . '</div>');
                 }
             }
 
