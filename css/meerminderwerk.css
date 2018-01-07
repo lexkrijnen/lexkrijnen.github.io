@@ -2,7 +2,25 @@ body {
 	background-color: black;
 }
 
+/*tabel*/
 th {
 	text-align: left;
-	background-color: lightgray;
+	background-color: #FFA500;
+	color: #FFFFFF;
+}
+
+td>a:hover {
+	color: #FFA500;
+}
+
+/*Buttons*/
+#button1{
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+#button1:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
 }

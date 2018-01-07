@@ -2,11 +2,6 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
-if (empty($medewerker_nummer)) {
-        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} else {
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -89,6 +84,14 @@ $pdo = NULL;
 			<!-- /.container-fluid -->
 		</nav>
 
+		<?php
+		//controle of er een medewerker is ingelogd
+		if (empty($medewerker_nummer)) {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../admin.php" />');
+		} else {
+		?>
+
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -123,7 +126,7 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="page-box">
+		<div class="container page-box">
 			<div class="container">
 				<div class="col-xs-12 col-md-12">
 					<h1>Verwijderen</h1>
@@ -131,8 +134,8 @@ $pdo = NULL;
 					<?php print("Weet u zeker dat u " . $_SESSION["naam2"] . " wilt verwijderen?"); ?>
 					<br>
 					<form action="klant_verwijderen.php" method="get">
-						<input class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
-						<input class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
+						<input id="button2" class="btn btn-danger" type="submit" name="echtverwijderen" value="verwijderen">
+						<input id="button1" class="btn btn-primary" type="button" value="annuleren" onclick="window.location.href='klant_zoeken.php'" />
 					</form>
 				</div>
 			</div>

@@ -145,7 +145,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+			<div id="viewer-can" class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
 				<!--Contract-->
 				<table class="table table-hover">
 					<tr>
@@ -293,7 +293,7 @@
 
             <!--MEER WERK-->
             <div>
-                <div class="col-xs-4 page-box">
+                <div class="col-xs-5 page-box">
                     <h1>Meer Werk</h1>
                     <?php
                     foreach ( $naamproject as $value ) {
@@ -322,12 +322,12 @@
                     </form>
                 </div>
 
-
-                <div class="col-xs-3"></div>
                 <!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
+                <div class="col-xs-2"></div>
+
 
                 <!--MINDER WERK-->
-                <div class="col-xs-4 page-box">
+                <div class="col-xs-5 page-box">
                     <h1>Minder Werk</h1>
                     <?php
                     foreach ( $naamproject as $value ) {

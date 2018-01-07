@@ -132,7 +132,7 @@ if (empty($klant_id)) {
                 ?>
 						</table>
 					</form>
-					<a href="meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>
+					<a href="meerminderlanding.php"><button type="button" id="button1" class="btn btn-primary btn-return">Terug</button></a>
 			</div>
 
 

@@ -163,12 +163,12 @@ if (empty($medewerker_nummer)) {
                 <tr>
 									<td>
 										<br>
-										<a href="login.php" class="btn btn-primary" role="button">Terug</a>
+										<a href="login.php" id= "button2" class="btn btn-primary" role="button">Terug</a>
 									</td>
 									<td>
 										<div align="right">
 											<br>
-											<input class="btn oranje white" type="submit" name="opslaan" value="Opslaan">
+											<input id="button1" class="btn oranje white" type="submit" name="opslaan" value="Opslaan">
 										</div>
 									</td>
 								</tr>

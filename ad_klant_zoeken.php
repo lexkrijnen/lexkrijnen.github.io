@@ -2,15 +2,6 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
-
-if (empty($medewerker_nummer)) {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-} elseif ($medewerker_functie == "2") {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
-    print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
-} else {
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
@@ -49,6 +40,8 @@ if (isset($_GET["vinden"])) {
 			$_SESSION["functienaam2"] = $functienaam;
 		}
 
+		//informatie van de klant oplslaan in een session voor het verwijderen/wijzigen
+		//er staat een 2 achter de session zodat ze niet door elkaar gehaald worden met de session met de gegevens van de gebruiker
     $_SESSION["voornaam2"] = $voornaam;
     $_SESSION["tussenvoegsel2"] = $tussenvoegsel;
     $_SESSION["achternaam2"] =  $achternaam;
@@ -60,17 +53,11 @@ if (isset($_GET["vinden"])) {
     $_SESSION["woonplaats2"] = $woonplaats;
 		$_SESSION["rol2"] = $zoekrol;
 
+		//ingevulde gegevens opslaan voor de error message
     $ingevuldevoornaam = $_GET["ingevuldevoornaam"];
     $ingevuldetussenvoegsel = $_GET["ingevuldetussenvoegsel"];
     $ingevuldeachternaam = $_GET["ingevuldeachternaam"];
 		$ingevulderol =	$_GET["rol"];
-
-		if ($functie == "1") {
-				$functienaam = "admin";
-			} elseif ($functie == "2") {
-				$functienaam = "medewerker";
-			}
-
 }
 
 $stmt3 = $pdo->prepare("SELECT * FROM Project");
@@ -147,6 +134,17 @@ $pdo = NULL;
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
+
+		<?php
+		//controle of er een admin is ingelogd
+		if (empty($medewerker_nummer)) {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../admin.php" />');
+		} elseif ($medewerker_functie == "2") {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>U heeft geen rechten op deze pagina.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../profile_medewerker.php" />');
+		} else {
+		?>
 
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
@@ -233,7 +231,7 @@ $pdo = NULL;
 										</td>
 										<td>
 											<div align="right">
-												<input class="btn oranje white" type="submit" name="vinden" value="Vinden">
+												<input id="button1" class="btn oranje white" type="submit" name="vinden" value="Vinden">
 											</div>
 										</td>
 									</tr>
@@ -272,11 +270,11 @@ $pdo = NULL;
 												print("<table>");
 												print("<tr><td>");
 												print("<form action='ad_klant_wijzigen.php' method='get'>");
-                        print("<input class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
+                        print("<input id=\"button2\" class=\"btn btn-primary\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\">");
                         print("</form>");
 												print("</td><td>");
                         print("<form action='ad_klant_verwijderen.php' method='get'>");
-                        print("<input class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
+                        print("<input id=\"button1\" class=\"btn btn-danger\" type=\"submit\" name=\"verwijderen\" value=\"Verwijderen\">");
                         print("</form>");
 												print("</td>");
 												print("</table>");

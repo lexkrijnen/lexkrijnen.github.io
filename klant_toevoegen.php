@@ -2,11 +2,6 @@
 session_start();
 @$medewerker_nummer = $_SESSION['medewerker_nummer'];
 
-if (empty($medewerker_nummer)) {
-		print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
-		print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-}else {
-
 $voornaam = $_POST["voornaam"];
 $tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
@@ -107,6 +102,14 @@ $hash = sha1($salt . $wachtwoord);
 			<!-- /.container-fluid -->
 		</nav>
 
+		<?php
+		//controle of er een medewerker is ingelogd
+		if (empty($medewerker_nummer)) {
+				print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+				print('<meta http-equiv="refresh" content="2;url=../admin.php" />');
+		} else {
+		?>
+
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -183,7 +186,7 @@ $hash = sha1($salt . $wachtwoord);
 									<input type="hidden" name="salt" <?php if (isset($_POST[ "genereer_wachtwoord"])) { print( "value=$salt"); } ?>>
 								</td>
 								<td>
-									<input type="submit" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
+									<input type="submit" id="button1" class="btn oranje white" name="genereer_wachtwoord" value="Genereer">
 								</td>
 							</tr>
 							<tr>
@@ -216,7 +219,7 @@ $hash = sha1($salt . $wachtwoord);
 							</tr>
 							<tr>
 								<td>
-									<input type="submit" class="btn oranje white" name="aanmaken" value="Aanmaken">
+									<input type="submit" id="button1" class="btn oranje white" name="aanmaken" value="Aanmaken">
 								</td>
 							</tr>
 						</form>

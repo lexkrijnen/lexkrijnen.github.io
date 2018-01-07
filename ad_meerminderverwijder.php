@@ -143,7 +143,7 @@ if (empty($medewerker_nummer)) {
         ?>
 				<br>
 				<?php
-        print('<a href="ad_meerminderlanding.php"><button type="button" class="btn btn-primary btn-return">Terug</button></a>');
+        print('<a href="ad_meerminderlanding.php"><button type="button" id="button1" class="btn btn-primary btn-return">Terug</button></a>');
         ?>
 		</div>
 	</div>
