@@ -31,7 +31,7 @@ if (isset($_POST['submitmail'])){ //check of form gesubmit is
             $email = $_POST['mail'];
             $message = $_POST['bericht'];
             $formcontent="Verzonden door:\n $name \n $email \n\n Bericht: \n $message";
-            $recipient = "jeroenelferink13@gmail.com";//"markxjansen@gmail.com";
+            $recipient = "markxjansen@gmail.com";
             $subject = $_POST['onderwerp'];
             $mailheader = "From: $email \r\n";
 
