@@ -170,7 +170,7 @@ $pdo = NULL;
         </div>
     </div>
 
-		<div class="container page-box">
+		<div class="page-box">
 			<div class="container">
 				<div class="col-xs-12 col-md-12">
 					<h1>Wijzigen</h1>
@@ -236,7 +236,7 @@ $pdo = NULL;
 					</table>
 				</div>
 				<br>
-
+				</div>
 
 
 				<?php
@@ -246,7 +246,7 @@ $pdo = NULL;
 				}
 
 				?>
-			</div>
+
 		</div>
 
 		<?php

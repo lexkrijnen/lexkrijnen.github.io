@@ -14,9 +14,9 @@ if ($klant_id == "" AND $medewerker_nummer != ""){
     $rol = "klant";
 }
 
-//klant verwijderen
 
 if (isset($_GET["echtverwijderen"])) {
+		//kijken of er een klant of een medewerker verwijderd moet worden
 		if ($_SESSION["rol2"] == 'klant') {
 				$sql = "DELETE FROM Klant WHERE klant_nummer = ?";
 				$stmt = $pdo->prepare($sql);
