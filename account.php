@@ -78,7 +78,6 @@
 				</div>
 				<!--/span-->
 			</div>
-		</div>
 
 		<?php
         if (empty($klant_id)) {
@@ -87,7 +86,6 @@
         } else {
         ?>
 
-			<div class="container page-box">
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<?php
@@ -108,7 +106,7 @@
             ?>
 					</div>
 				</div>
-			</div>
+		</div>
 
 			<?php footAlt() ?>
 			<?php } ?>
