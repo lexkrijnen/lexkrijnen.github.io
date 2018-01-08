@@ -39,6 +39,12 @@
 	border-color: #696969;
 }
 
+/*Tabel*/
+th{
+	background-color: #FFA500;
+    color: #FFFFFF;
+}
+
 .lowborder {
 	border-bottom: 4px solid #FE9C16;
 	border-radius: 5px;
