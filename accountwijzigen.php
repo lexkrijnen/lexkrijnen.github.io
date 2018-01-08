@@ -162,10 +162,12 @@ $pdo = NULL;
                         <td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\""); ?>></td>
 				    </tr>
 					<?php
-												if ($_SESSION["rol "] == "medewerker ") {
-														print("<input type=\ "hidden\" name=\ "medewerkernummer\" value=$medewerker_nummer>"); print("
-								<input type=\ "hidden\" name=\ "functie\" value=$functie>"); } elseif ($_SESSION["rol"] == "klant") { print("
-								<input type=\ "hidden\" name=\ "klantnummer\" value=$klant_nummer>"); } ?>
+												if ($_SESSION["rol"] == "medewerker") {
+														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
+														print("<input type=\"hidden\" name=\"functie\" value=$functie>");
+												} elseif ($_SESSION["rol"] == "klant") {
+														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
+												}
 								<tr>
 									<td><a href="accountoverview.php" id="button2" class="btn btn-default select-btn btn-responsive white" role="button">Terug</a></td>
 									<td align='right'><input id="button1" class="btn btn-default select-btn btn-responsive white" type="submit" name="opslaan" value="Opslaan"></td>
