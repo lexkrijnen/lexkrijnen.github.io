@@ -8,12 +8,9 @@
 
 /*side bar*/
 .container-fluid {
-    height:92vh;
     width: 15%;
     background-color:#FFFFFF;
-    position:fixed;
-    z-index:0;
-    overflow-y:scroll;
+    z-index:1;
 }
 
 .page {
@@ -52,11 +49,6 @@ body > div.container > div:nth-child(2) {
   color: #FFFFFF;
 	background-color: #696969;
 	border-color: #696969;
-}
-/*tabel*/
-tr > th{
-	color: #FFFFFF;
-	background-color: #FFA500;
 }
 
 @media only screen and (min-width : 992px) {
