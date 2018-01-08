@@ -1,159 +1,131 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Accountoverview</title>
-    <link rel="stylesheet" href="css/accountoverview.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
-    <meta name="author" content="Nard Wemes">
-    <link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
-    <!---bootstrap --->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!--- global.css ophalen --->
-    <link href="css/global.css" rel="stylesheet">
-    <!--- custom stylesheet ophalen --->
-    <link href="css/index.css" rel="stylesheet">
-
-    <?php
-    session_start(); //sessie starten en sessievariabelen ophalen
-    @$klant_id = $_SESSION['klant_id'];
-    @$klant_voornaam = $_SESSION['voornaam'];
-    @$medewerker_nummer = $_SESSION['medewerker_nummer'];
-    @$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
-    @$medewerker_functie = $_SESSION['medewerker_functie'];
+<?php
+	session_start(); //sessie starten en sessievariabelen ophalen
+	@$klant_id = $_SESSION['klant_id'];
+	@$klant_voornaam = $_SESSION['voornaam'];
+	@$medewerker_nummer = $_SESSION['medewerker_nummer'];
+	@$medewerker_voornaam = $_SESSION['medewerker_voornaam'];
+	@$medewerker_functie = $_SESSION['medewerker_functie'];
 
 
 
-    //connectie met database maken
-    $db = "mysql:host=localhost; dbname=Wegro; port=3306";
-    $user = "wegro";
-    $pass = "SQLWegro@101";
-    $pdo = new PDO($db, $user, $pass);
+	//connectie met database maken
+	$db = "mysql:host=localhost; dbname=Wegro; port=3306";
+	$user = "wegro";
+	$pass = "SQLWegro@101";
+	$pdo = new PDO($db, $user, $pass);
 
-    if ($klant_id != "" AND $medewerker_id == "") {//check of er een klant is ingelogd, haal vervolgens de gegevens van deze klant uit de databse op, geef tevens rol 'klant'
-        $rol = "klant";
-        $stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
-        $stmt->execute();
-        $sqlresult = $stmt->fetch();
-        $klant_nummerdb = $sqlresult["klant_nummer"];
-    }elseif ($klant_id == "" AND $medewerker_nummer != "") {//check of er een medewerker is ingelogd, haal vervolgens de gegevens van deze medewerker uit de database, geef tevens rol 'medewerker'
-        $rol = "medewerker";
-        $stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
-        $stmt->execute();
-        $sqlresult = $stmt->fetch();
-        $medewerker_nummerdb = $sqlresult["medewerker_nummer"];
-    }
+	if ($klant_id != "" AND $medewerker_id == "") {//check of er een klant is ingelogd, haal vervolgens de gegevens van deze klant uit de databse op, geef tevens rol 'klant'
+			$rol = "klant";
+			$stmt = $pdo->prepare("SELECT * FROM Klant WHERE klant_nummer='$klant_id'");
+			$stmt->execute();
+			$sqlresult = $stmt->fetch();
+			$klant_nummerdb = $sqlresult["klant_nummer"];
+	}elseif ($klant_id == "" AND $medewerker_nummer != "") {//check of er een medewerker is ingelogd, haal vervolgens de gegevens van deze medewerker uit de database, geef tevens rol 'medewerker'
+			$rol = "medewerker";
+			$stmt = $pdo->prepare("SELECT * FROM Medewerker WHERE medewerker_nummer='$medewerker_nummer'");
+			$stmt->execute();
+			$sqlresult = $stmt->fetch();
+			$medewerker_nummerdb = $sqlresult["medewerker_nummer"];
+	}
 
-    $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
+	$stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_id'");
+	$stmt->execute();
+	$projecten = $stmt->fetchAll();
 
 
-    $voornaam = ucfirst($sqlresult["voornaam"]);
-    $tussenvoegsel = $sqlresult["tussenvoegsel"];
-    $achternaam = ucfirst($sqlresult["achternaam"]);
-    $telefoonnummer = $sqlresult["telefoon_nummer"];
-    $emailadres =  $sqlresult["emailadres"];
-    $adres = $sqlresult["adres"];
-    $postcode = $sqlresult["postcode"];
-    $woonplaats = ucfirst($sqlresult["woonplaats"]);
-    $naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
-    @$functie = $sqlresult["functie"];
+	$voornaam = ucfirst($sqlresult["voornaam"]);
+	$tussenvoegsel = $sqlresult["tussenvoegsel"];
+	$achternaam = ucfirst($sqlresult["achternaam"]);
+	$telefoonnummer = $sqlresult["telefoon_nummer"];
+	$emailadres =  $sqlresult["emailadres"];
+	$adres = $sqlresult["adres"];
+	$postcode = $sqlresult["postcode"];
+	$woonplaats = ucfirst($sqlresult["woonplaats"]);
+	$naam = $voornaam . " " . $tussenvoegsel . " " . $achternaam;
+	@$functie = $sqlresult["functie"];
 
-    //sessievariabelen updaten
-    $_SESSION["voornaam"] = $voornaam;
-    $_SESSION["tussenvoegsel"] = $tussenvoegsel;
-    $_SESSION["achternaam"] =  $achternaam;
-    $_SESSION["naam"] = $naam;
-    $_SESSION["telefoonnummer"] = $telefoonnummer;
-    $_SESSION["emailadres"] = $emailadres;
-    $_SESSION["adres"] = $adres;
-    $_SESSION["postcode"] = $postcode;
-    $_SESSION["woonplaats"] = $woonplaats;
-    $_SESSION["medewerker_nummer"] = $medewerker_nummerdb;
-    $_SESSION["functie"] = $medewerker_functie;
+	//sessievariabelen updaten
+	$_SESSION["voornaam"] = $voornaam;
+	$_SESSION["tussenvoegsel"] = $tussenvoegsel;
+	$_SESSION["achternaam"] =  $achternaam;
+	$_SESSION["naam"] = $naam;
+	$_SESSION["telefoonnummer"] = $telefoonnummer;
+	$_SESSION["emailadres"] = $emailadres;
+	$_SESSION["adres"] = $adres;
+	$_SESSION["postcode"] = $postcode;
+	$_SESSION["woonplaats"] = $woonplaats;
+	$_SESSION["medewerker_nummer"] = $medewerker_nummerdb;
+	$_SESSION["functie"] = $medewerker_functie;
 
-    $pdo = NULL;
+	$pdo = NULL;
 ?>
 
-</head>
+		<?php include 'includes.php';?>
+		<?php headTop() ?>
 
-<body>
-    <!--NAVBAR-->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="index.php">Home</a></li>
-                    <li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-                    <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+		<title>Accountoverview</title>
 
-    <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-                <div class="sidebar-nav">
-                    <ul class="nav">
-                        <li class="active">
-                            <h4>Menu</h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>'>Mijn Account</a></li>
-                        <li><a href="accountoverview.php">Mijn gegevens</a></li>
-                        <li class="nav-divider"></li>
-                        <li>
-                            <h4>Mijn projecten</h4>
-                        </li>
-                        <li class="nav-divider"></li>
-                        <?php
+		<?php headMiddle() ?>
+
+		<!--- custom stylesheet ophalen --->
+		<link href="css/index.css" rel="stylesheet">
+
+		<?php headBottom() ?>
+
+		<!-- Navbar inroepen-->
+		<?php navTop() ?>
+					<li class="nav-item"><a href="index.php">Home</a></li>
+					<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
+					<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+		<?php navBottom() ?>
+
+	<div class="container-fluid">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+				<div class="sidebar-nav">
+					<ul class="nav">
+						<li class="active">
+							<h4>Menu</h4>
+						</li>
+						<li class="nav-divider"></li>
+						<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>'>Mijn Account</a></li>
+						<li><a href="accountoverview.php">Mijn gegevens</a></li>
+						<li class="nav-divider"></li>
+						<li>
+							<h4>Mijn projecten</h4>
+						</li>
+						<li class="nav-divider"></li>
+						<?php
                         foreach ( $projecten as $value ) {
                             print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>"); //print projecften van een klant
                         }
                         ?>
-                        <li class="nav-divider"></li>
-                    </ul>
-                </div>
-                <!--/.well -->
-            </div>
-            <!--/span-->
-        </div>
-    </div>
+							<li class="nav-divider"></li>
+					</ul>
+				</div>
+				<!--/.well -->
+			</div>
+			<!--/span-->
+		</div>
+	</div>
 
-    <?php
+	<?php
     if (empty($klant_id) AND empty($medewerker_nummer)) {
         print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>'); //check of er wel is ingelogd
         print('<meta http-equiv="refresh" content="2;url=../login.php" />');
     }else {
     ?>
 
-        <!--- tabel met klant- of medewerkergegevens --->
-        <div class="container page-box">
-            <div class="col-xs-12 col-md-12">
-                <h1>Uw gegevens</h1>
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th>Veld</th>
-                        <th>Gegevens</th>
-                    </tr>
-                    <?php
+		<!--- tabel met klant- of medewerkergegevens --->
+		<div class="container page-box">
+			<div class="col-xs-12 col-md-12">
+				<h1>Uw gegevens</h1>
+				<table class="table table-hover table-bordered">
+					<tr>
+						<th>Veld</th>
+						<th>Gegevens</th>
+					</tr>
+					<?php
                     if ($klant_nummerdb != "" OR $medewerker_nummerdb != "") {//checkt of klantnummer of medewerkernummer niet leeg is
                         print("<tr><td>Naam: </td><td>$naam</td></tr>");
                         if ($klant_nummerdb != "") {//checkt of er een klant is ingelogd zodat het klantnummer wordt weergegeven
@@ -169,9 +141,9 @@
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
                         print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>"); //button om accountgegevens te wijzigen
                 ?>
-                </table>
-            </div>
-        </div>
+				</table>
+			</div>
+		</div>
 </body>
 
 </html>

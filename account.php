@@ -1,17 +1,4 @@
 <?php
-	session_start();
-	@$klant_id = $_SESSION['klant_id'];
-	@$medewerker_nummer = $_SESSION['medewerker_nummer'];
-	if (!empty($klant_id OR $medewerker_nummer)) {
-		$ingelogd = "Mijn Account";
-	} else {
-		$ingelogd = "Inloggen";
-	}
-?>
-
-	<?php include 'includes.php';?>
-
-	<?php
     session_start();
     @$klant_id = $_SESSION['klant_id'];
     @$klant_voornaam = $_SESSION['voornaam'];
@@ -30,8 +17,9 @@
     }elseif($klant_id != "" AND $medewerker_nummer == ""){
         $rol = "klant";
     }
-   ?>
+?>
 
+		<?php include 'includes.php';?>
 		<?php headTop() ?>
 
 		<title>Welkom bij Wegro</title>
