@@ -1,13 +1,9 @@
 <?php
 session_start();
-
-
 $db = "mysql:host=localhost; dbname=Wegro; port=3306";
 $user = "wegro";
 $pass = "SQLWegro@101";
 $pdo = new PDO($db, $user, $pass);
-
-
 if (isset($_POST["opslaan"])) {
 		if ($_SESSION["rol"] == "klant") {
 				$sql = "UPDATE Klant SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=? where klant_nummer=?";
@@ -18,14 +14,9 @@ if (isset($_POST["opslaan"])) {
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"], $_POST["medewerkernummer"]));
 		} else {
-                print("Error! Query is niet uitgevoerd!");
-
+                print("Query is niet uitgevoerd! Fock you!");
         }
-
 }
-
-
-
 $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
 $achternaam = $_SESSION["achternaam"];
@@ -35,16 +26,13 @@ $emailadres = $_SESSION["emailadres"];
 $adres = $_SESSION["adres"];
 $postcode = $_SESSION["postcode"];
 $woonplaats = $_SESSION["woonplaats"];
-
 if ($_SESSION["rol"] == "klant") {
 		$klant_nummer = $_SESSION["klant_id"];
 }
-
 if ($_SESSION["rol"] == "medewerker") {
 		$functie = $_SESSION["functie"];
 		$medewerker_nummer = $_SESSION["medewerker_nummer"];
 }
-
 if(isset($_POST["opslaan"])) {
     $voornaam = $_POST["voornaam"];
     $tussenvoegsel = $_POST["tussenvoegsel"];
@@ -63,64 +51,104 @@ if(isset($_POST["opslaan"])) {
 				$medewerker_nummer = $_POST["medewerkernummer"];
 		}
 }
-
 $rol = $_SESSION["rol"];
-
 $stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_nummer'");
 $stmt->execute();
 $projecten = $stmt->fetchAll();
-
 $pdo = NULL;
 ?>
 
-	<?php include 'includes.php';?>
-	<?php headTop() ?>
 
-	<title>Gegevens wijzigen</title>
 
-	<?php headMiddle() ?>
+	<!DOCTYPE html>
+	<html lang="en">
 
-	<!--- custom stylesheet ophalen --->
-	<link href="css/klant_pagina.css" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+		<meta name="author" content="Nard Wemes">
+		<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
 
-	<?php headBottom() ?>
+		<title>wijzigen</title>
 
-	<!-- Navbar inroepen-->
-	<?php navTop() ?>
-	<li class="nav-item"><a href="index.php">Home</a></li>
-	<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-	<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
-	<?php navBottom() ?>
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12" id="sidebar" role="navigation">
-				<div class="sidebar-nav">
-					<ul class="nav">
-						<li class="nav-divider"></li>
-						<li class="active">
-							<h4>Menu</h4>
-						</li>
-						<li class="nav-divider"></li>
-						<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
-						<li><a href="accountoverview.php">Mijn gegevens</a></li>
-						<li class="nav-divider"></li>
-						<li>
-							<h4>Mijn projecten</h4>
-						</li>
-						<li class="nav-divider"></li>
-						<?php
+		<!-- Global styles for this website -->
+		<link href="css/global.css" rel="stylesheet">
+
+		<!-- Custom styles for this page -->
+		<link href="css/klant_pagina.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+
+
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="index.php"><img class="brand-logo" src="images/wegrobanner.png" alt="logo"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item"><a href="index.php">Home</a></li>
+                        <li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+            <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="active">
+                            <h4>Menu</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>>Mijn Account</a></li>
+                        <li><a href="accountoverview.php">Mijn gegevens</a></li>
+                        <li class="nav-divider"></li>
+                        <li>
+                            <h4>Mijn projecten</h4>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <?php
                         foreach ( $projecten as $value ) {
                             print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
                         }
                         ?>
-					</ul>
-				</div>
-				<!--/.well -->
-			</div>
-			<!--/span-->
-		</div>
-	</div>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+        </div>
+    </div>
 
 
         <div class="container page-box">
@@ -141,7 +169,7 @@ $pdo = NULL;
 							<td><input type="text" class="form-control" name="achternaam" <?php print( "value=\"$achternaam\""); ?>></td>
 						</tr>
 						<tr>
-							<td>Telefoonnummer  </td>
+							<td>Telefoonnummer  </td>
 							<td><input type="text" class="form-control" name="telefoonnummer" <?php print( "value=\"$telefoonnummer\""); ?>></td>
 						</tr>
 						<tr>
@@ -182,9 +210,26 @@ $pdo = NULL;
             if(isset($_POST["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
-
             ?>
 			</div>
 		</div>
 
-		<?php footAlt() ?>
+
+
+
+
+		<div class="row">
+			<div class="col-xs-12 text-center footer-rights">
+				<p>© Bouwbedrijf Wegro - Powered by <a href="#">Bootstrap</a> and <a href="#">Glyphicons</a>.</p>
+			</div>
+		</div>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Framework -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>
