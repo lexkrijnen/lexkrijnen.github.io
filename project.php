@@ -129,7 +129,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 						<!-- If embedded pdf does not work, display fallback option instead. -->
 						<div class="pdf-fail">
 							<p>Problemen met het bekijken?</p>
-							<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/voorbeeld.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
+							<a class="btn btn-primary" onclick="window.open('pdf-viewer/web/viewer.html?file=/pdf/<?php print($pdf); ?>.pdf', 'newwindow', 'width=600,height=1000'); return false;">Openen in nieuw scherm.</a>
 						</div>
 				</div>
 
@@ -208,7 +208,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 				<div class="row">
 						<!--MEER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 page-box more-box">
+						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 page-box">
 							<h1>Meer Werk</h1>
 							<?php
                     foreach ( $naamproject as $value ) {
@@ -239,7 +239,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 
 						<!--MINDER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2 page-box less-box">
+						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2 page-box">
 							<h1>Minder Werk</h1>
 							<?php
                     foreach ( $naamproject as $value ) {
