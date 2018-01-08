@@ -44,4 +44,8 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 	.g-recaptcha {
 		margin: 0 20%;
 	}
+
+	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
+		 width: 300px !important;
+	}
 }
