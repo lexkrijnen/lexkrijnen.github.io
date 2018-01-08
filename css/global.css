@@ -205,3 +205,7 @@ blockquote cite:before {
 ul.navbar-nav {
 	margin-top: 15px;
 }
+
+body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
+   width: 82% !important;
+}
