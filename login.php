@@ -82,3 +82,5 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
+
+	<?php footAlt() ?>
