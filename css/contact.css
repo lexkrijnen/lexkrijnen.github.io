@@ -18,13 +18,20 @@
 	margin-bottom: 20px;
 }
 
-.oranje {
-	background-color: #FE9C16 !important;
-
+#button1{
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+#button1:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
 }
 
-.white {
-	color: white;
+#panel{
+    color: #FFFFFF;
+	background-color: #FFA500;
 }
 
 .lowborder {

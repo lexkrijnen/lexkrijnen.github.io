@@ -73,7 +73,7 @@
             }
             ?>
 									<div class="panel ">
-										<div class="panel-heading oranje">
+										<div id="panel" class="panel-heading oranje">
 											<div class="panel-title white">Neem contact met ons op</div>
 
 										</div>
