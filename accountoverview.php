@@ -139,11 +139,12 @@
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>");} //button om accountgegevens te wijzigen
+                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>"); //button om accountgegevens te wijzigen
                 ?>
 				</table>
 			</div>
 		</div>
 
 		<?php footAlt() ?>
+		<?php } ?>
 		<?php } ?>
