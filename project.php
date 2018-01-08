@@ -134,33 +134,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 				</div>
 
 
-				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0" id="sidebar" role="navigation">
-						<div class="sidebar-nav">
-							<ul class="nav">
-								<li class="nav-divider"></li>
-								<li class="active">
-									<h4>Menu</h4>
-								</li>
-								<li class="nav-divider"></li>
-								<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
-								<li><a href="accountoverview.php">Mijn gegevens</a></li>
-								<li class="nav-divider"></li>
-								<li>
-									<h4>Mijn projecten</h4>
-								</li>
-								<li class="nav-divider"></li>
-								<?php
-                    foreach ( $projecten as $value ) {
-                        print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
-                    }
-                    ?>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
 
 			<?php
         session_start();
@@ -268,6 +241,33 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 								</form>
 						</div>
 					</div>
+
+
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0" id="sidebar" role="navigation">
+						<div class="sidebar-nav">
+							<ul class="nav">
+								<li class="nav-divider"></li>
+								<li class="active">
+									<h4>Menu</h4>
+								</li>
+								<li class="nav-divider"></li>
+								<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
+								<li><a href="accountoverview.php">Mijn gegevens</a></li>
+								<li class="nav-divider"></li>
+								<li>
+									<h4>Mijn projecten</h4>
+								</li>
+								<li class="nav-divider"></li>
+								<?php
+                    foreach ( $projecten as $value ) {
+                        print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                    }
+                    ?>
+							</ul>
+						</div>
+					</div>
+				</div>
 					<?php $pdo = NULL; ?>
 					<?php } ?>
 
