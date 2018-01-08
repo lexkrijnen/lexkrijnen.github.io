@@ -147,7 +147,7 @@ $pdo = NULL;
 					</tr>
 					<tr>
 						<td>Emailadres</td>
-						<td><input type="text " class="form-control " name="emailadres " <?php print( "value=\ "$emailadres\ " "); ?>></td>
+						<td><input type="text " class="form-control " name="emailadres " <?php print( "value=\"$emailadres\""); ?>></td>
 					</tr>
                     <tr>
 				        <td>Adres</td>
