@@ -10,9 +10,14 @@
 ?>
 
 	<?php include 'includes.php';?>
-	<?php headTop() ?>
-
-	<title>Inloggen</title>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Welkom bij Bouwbedrijf Wegro.">
+	<meta name="author" content="Nard Wemes">
+	<link rel="icon" href="images/Logo%20bouwbedrijf%20Wegro.png">
+	<title>Administrator Login</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/login.css" rel="stylesheet">
@@ -20,13 +25,7 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <!--- reCAPTCHA loader --->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-	<?php headMiddle() ?>
-
-	<!-- Custom styles for this page -->
-	<link href="css/login.css" rel="stylesheet">
-
-	<?php headBottom() ?>
+</head>
 
 	<!-- Navbar inroepen-->
 	<?php navTop() ?>
