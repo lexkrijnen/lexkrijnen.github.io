@@ -60,24 +60,24 @@
 	$pdo = NULL;
 ?>
 
-		<?php include 'includes.php';?>
-		<?php headTop() ?>
+	<?php include 'includes.php';?>
+	<?php headTop() ?>
 
-		<title>Accountoverview</title>
+	<title>Accountoverview</title>
 
-		<?php headMiddle() ?>
+	<?php headMiddle() ?>
 
-		<!--- custom stylesheet ophalen --->
-		<link href="css/index.css" rel="stylesheet">
+	<!--- custom stylesheet ophalen --->
+	<link href="css/index.css" rel="stylesheet">
 
-		<?php headBottom() ?>
+	<?php headBottom() ?>
 
-		<!-- Navbar inroepen-->
-		<?php navTop() ?>
-					<li class="nav-item"><a href="index.php">Home</a></li>
-					<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-					<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
-		<?php navBottom() ?>
+	<!-- Navbar inroepen-->
+	<?php navTop() ?>
+	<li class="nav-item"><a href="index.php">Home</a></li>
+	<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
+	<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
+	<?php navBottom() ?>
 
 	<div class="container-fluid">
 		<div class="row row-offcanvas row-offcanvas-left">
@@ -144,7 +144,6 @@
 				</table>
 			</div>
 		</div>
-</body>
 
-</html>
-<?php } ?>
+		<?php footAlt() ?>
+		<?php } ?>
