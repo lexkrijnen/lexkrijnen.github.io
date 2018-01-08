@@ -8,9 +8,12 @@
 
 /*side bar*/
 .container-fluid {
+    height:92vh;
     width: 15%;
     background-color:#FFFFFF;
-    z-index:1;
+    position:fixed;
+    z-index:0;
+    overflow-y:scroll;
 }
 
 .page {
