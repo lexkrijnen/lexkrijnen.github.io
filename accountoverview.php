@@ -116,7 +116,7 @@
                             <h4>Menu</h4>
                         </li>
                         <li class="nav-divider"></li>
-                        <li><a href=<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>>Mijn Account</a></li>
+                        <li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>'>Mijn Account</a></li>
                         <li><a href="accountoverview.php">Mijn gegevens</a></li>
                         <li class="nav-divider"></li>
                         <li>
