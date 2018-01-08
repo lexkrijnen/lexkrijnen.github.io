@@ -53,6 +53,11 @@ body > div.container > div:nth-child(2) {
 	background-color: #696969;
 	border-color: #696969;
 }
+/*tabel*/
+tr > th{
+	color: #FFFFFF;
+	background-color: #FFA500;
+}
 
 @media only screen and (min-width : 992px) {
 	.footer {
