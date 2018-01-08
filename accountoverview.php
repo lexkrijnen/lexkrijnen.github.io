@@ -79,46 +79,11 @@
 	<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 	<?php navBottom() ?>
 
-	<div class="container-fluid">
-		<div class="row row-offcanvas row-offcanvas-left">
-			<div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
-				<div class="sidebar-nav">
-					<ul class="nav">
-						<li class="active">
-							<h4>Menu</h4>
-						</li>
-						<li class="nav-divider"></li>
-						<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>'>Mijn Account</a></li>
-						<li><a href="accountoverview.php">Mijn gegevens</a></li>
-						<li class="nav-divider"></li>
-						<li>
-							<h4>Mijn projecten</h4>
-						</li>
-						<li class="nav-divider"></li>
-						<?php
-                        foreach ( $projecten as $value ) {
-                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>"); //print projecften van een klant
-                        }
-                        ?>
-							<li class="nav-divider"></li>
-					</ul>
-				</div>
-				<!--/.well -->
-			</div>
-			<!--/span-->
-		</div>
-	</div>
-
-	<?php
-    if (empty($klant_id) AND empty($medewerker_nummer)) {
-        print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>'); //check of er wel is ingelogd
-        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
-    }else {
-    ?>
+	<div class="container">
 
 		<!--- tabel met klant- of medewerkergegevens --->
-		<div class="container page-box">
-			<div class="col-xs-12 col-md-12">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box">
 				<h1>Uw gegevens</h1>
 				<table class="table table-hover table-bordered">
 					<tr>
@@ -144,6 +109,43 @@
 				</table>
 			</div>
 		</div>
+
+
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0" id="sidebar" role="navigation">
+				<div class="sidebar-nav">
+					<ul class="nav">
+						<li class="nav-divider"></li>
+						<li class="active">
+							<h4>Menu</h4>
+						</li>
+						<li class="nav-divider"></li>
+						<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}//check of er een medewerker of klant is ingelogd ?>'>Mijn Account</a></li>
+						<li><a href="accountoverview.php">Mijn gegevens</a></li>
+						<li class="nav-divider"></li>
+						<li>
+							<h4>Mijn projecten</h4>
+						</li>
+						<li class="nav-divider"></li>
+						<?php
+                        foreach ( $projecten as $value ) {
+                            print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>"); //print projecften van een klant
+                        }
+                        ?>
+					</ul>
+				</div>
+				<!--/.well -->
+			</div>
+			<!--/span-->
+		</div>
+	</div>
+
+	<?php
+    if (empty($klant_id) AND empty($medewerker_nummer)) {
+        print('<div class="container"><div class="row"><div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box"><h5>Sorry, u bent niet ingelogd.</h5></div></div></div><br>'); //check of er wel is ingelogd
+        print('<meta http-equiv="refresh" content="2;url=../login.php" />');
+    }else {
+    ?>
 
 		<?php footAlt() ?>
 		<?php } ?>
