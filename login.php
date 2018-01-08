@@ -23,18 +23,7 @@
 
 	<!-- Navbar inroepen-->
 	<?php navTop() ?>
-	<li class="nav-item"><a href="index.php">Home</a></li>
-	<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
-	<li class="nav-item"><a href="#Kwaliteiten">Kwaliteiten</a></li>
-	<li class="nav-item"><a href="#Metselwerk">Metselwerk</a></li>
-	<li class="nav-item"><a href="#Projecten">Projecten</a></li>
-	<li class="nav-item"><a href="#Vergunningen">Vergunningen</a></li>
-	<li class="nav-item"><a href="Contact/contact.php">Contact</a></li>
-	<li class="nav-item">
-		<a href="login.php">
-			<?php print($ingelogd);?>
-		</a>
-	</li>
+	<li class="nav-item"><a href="index.php">Terug</a></li>
 	<?php navBottom() ?>
 
 	<?php
