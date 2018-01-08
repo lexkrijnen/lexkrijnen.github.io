@@ -29,13 +29,13 @@
 }
 
 .g-recaptcha {
-	margin: 0 20%;
+	margin: 0;
 }
 
 
 
 @media only screen and (min-width : 992px) {
 	.g-recaptcha {
-		margin: 0;
+		margin: 0 20%;
 	}
 }
