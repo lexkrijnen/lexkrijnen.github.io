@@ -128,15 +128,6 @@ tbody >tr> th {
 	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 		 width: 300px !important;
 	}
-
-	.more-box {
-		margin-left: -15px;
-	}
-
-	.less-box {
-		margin-right: -15px;
-	}
-
 }
 
 @media only screen and (max-width : 768px) {
