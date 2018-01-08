@@ -131,36 +131,36 @@ $pdo = NULL;
 					<form action='accountwijzigen.php' method='post'>
 						<tr>
 							<td>Voornaam</td>
-                            <td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
+							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
 					</tr>
 					<tr>
 						<td>Tussenvoegsel</td>
-						<td><input type="text " class="form-control " name="tussenvoegsel " <?php print( "value=\ "$tussenvoegsel\ " "); ?>></td>
+						<td><input type="text " class="form-control " name="tussenvoegsel " <?php print( "value=\"$tussenvoegsel\""); ?>></td>
 					</tr>
 					<tr>
 						<td>Achternaam</td>
-						<td><input type="text " class="form-control " name="achternaam " <?php print( "value=\ "$achternaam\ " "); ?>></td>
+						<td><input type="text " class="form-control " name="achternaam " <?php print( "value=\"$achternaam\""); ?>></td>
 					</tr>
 					<tr>
 						<td>Telefoonnummer  </td>
-						<td><input type="text " class="form-control " name="telefoonnummer " <?php print( "value=\ "$telefoonnummer\ " "); ?>></td>
+						<td><input type="text " class="form-control " name="telefoonnummer " <?php print( "value=\"$telefoonnummer\""); ?>></td>
 					</tr>
 					<tr>
 						<td>Emailadres</td>
 						<td><input type="text " class="form-control " name="emailadres " <?php print( "value=\ "$emailadres\ " "); ?>></td>
 					</tr>
-					<tr>
-						<td>Adres</td>
-						<td><input type="text " class="form-control " name="adres " <?php print( "value=\ "$adres\ " "); ?>></td>
-					</tr>
+                    <tr>
+				        <td>Adres</td>
+						<td><input type="text" class="form-control" name="adres" <?php print( "value=\"$adres\""); ?>></td>
+				    </tr>
 					<tr>
 						<td>Postcode</td>
-						<td><input type="text " class="form-control " name="postcode " <?php print( "value=\ "$postcode\ " "); ?>></td>
-					</tr>
+                        <td><input type="text" class="form-control" name="postcode" <?php print( "value=\"$postcode\""); ?>></td>
+				    </tr>
 					<tr>
-						<td>Woonplaats</td>
-						<td><input type="text " class="form-control " name="woonplaats " <?php print( "value=\ "$woonplaats\ " "); ?>></td>
-					</tr>
+                        <td>Woonplaats</td>
+                        <td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\""); ?>></td>
+				    </tr>
 					<?php
 												if ($_SESSION["rol "] == "medewerker ") {
 														print("<input type=\ "hidden\" name=\ "medewerkernummer\" value=$medewerker_nummer>"); print("
