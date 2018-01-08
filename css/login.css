@@ -38,7 +38,6 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 
 #sidebar {
   border-radius: 0 20px 20px 0;
-	margin-bottom: 5% !important;
 }
 
 @media only screen and (min-width : 992px) {
@@ -62,7 +61,7 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 @media only screen and (max-width : 768px) {
 	#sidebar {
 		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 45px;
 		padding: 25px;
 		background-color: #fff;
 		border-radius: 5px;
