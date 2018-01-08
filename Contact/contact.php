@@ -15,7 +15,7 @@
 	}
 ?>
 
-	<?php include 'includes.php';?>
+	<?php include '../includes.php';?>
 	<?php headTop() ?>
 
 		<link rel="icon" href="../images/Logo%20bouwbedrijf%20Wegro.png">
