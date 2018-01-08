@@ -50,9 +50,9 @@
 		<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 		<?php navBottom() ?>
 
-		<div class="container-fluid">
-			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="col-xs-2 sidebar-offcanvas sidebar-menu" id="sidebar" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 sidebar-menu" id="sidebar" role="navigation">
 					<div class="sidebar-nav">
 						<ul class="nav">
 							<li class="active">
@@ -71,7 +71,6 @@
                 	print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
                 }
               ?>
-							<li class="nav-divider"></li>
 						</ul>
 					</div>
 					<!--/.well -->
@@ -87,7 +86,7 @@
         ?>
 
 				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2 page-box">
+					<div class="col-xs-12 col-md-6 col-md-offset-4 page-box">
 						<?php
             $hour = date('H', time());
 
