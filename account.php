@@ -54,7 +54,7 @@
 
 			<?php
         if (empty($klant_id)) {
-            print('<div class="row"><div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0 page-box"><h5>Sorry, u bent niet ingelogd.</h5></div></div><br>');
+            print('<div class="row"><div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box"><h5>Sorry, u bent niet ingelogd.</h5></div></div><br>');
             print('<meta http-equiv="refresh" content="2;url=../login.php" />');
         } else {
         ?>
