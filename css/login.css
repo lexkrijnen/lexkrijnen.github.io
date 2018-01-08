@@ -41,17 +41,27 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 		margin: 0 20%;
 	}
 
-	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
-		 width: 300px !important;
-	}
-}
-
 #sidebar {
 	position: absolute;
 	left: 0;
 	top: 15%;
 	background-color: #fff;
   border-radius: 0 20px 20px 0;
+}
+
+	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
+		 width: 300px !important;
+	}
+}
+
+#sidebar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 25px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid #FE9C16;
 }
 
 

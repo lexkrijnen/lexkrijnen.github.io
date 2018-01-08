@@ -50,9 +50,10 @@
 		<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 		<?php navBottom() ?>
 
-		<div class="col-xs-2 sidebar-menu" id="sidebar" role="navigation">
+		<div class="col-xs-12 col-md-2" id="sidebar" role="navigation">
 			<div class="sidebar-nav">
 				<ul class="nav">
+					<li class="nav-divider"></li>
 					<li class="active">
 						<h4>Menu</h4>
 					</li>
