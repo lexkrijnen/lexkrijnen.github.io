@@ -43,7 +43,7 @@
 
 		<div class="container">
 			<div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 b ">
-				<div class="panel ">
+				<div class="panel">
 					<div class="panel-heading oranje">
 						<div class="panel-title white">Log hier in met uw Wegro account</div>
 
@@ -71,9 +71,9 @@
 								</div>
 							</div>
 						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div><!-- .panel-body -->
+				</div><!-- .panel -->
+			</div><!-- #loginbox -->
+		</div><!-- .container -->
 
 		<?php footAlt() ?>
