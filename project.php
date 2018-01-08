@@ -80,15 +80,15 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 					<!--Contract-->
 					<div class="table-responsive">
-					<table class="table table-hover">
-						<tr>
-							<thead>
-								<th>
-									<h3><b>Contract</b></h3>
-								</th>
-							</thead>
-						</tr>
-						<?php
+						<table class="table table-hover">
+							<tr>
+								<thead>
+									<th>
+										<h3><b>Contract</b></h3>
+									</th>
+								</thead>
+							</tr>
+							<?php
                 foreach ($contract AS $document) {
                     print("<tr>");
                     //print("<td> <a href='pdf-viewer/web/viewer.html?file=/pdf/" . $document["document"] . "' target='pdf_viewer'>" . $document["document"] . "</td>");
@@ -96,31 +96,31 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                     print("</tr>");
                 }
                 ?>
-					</table>
+						</table>
 					</div>
 
 					<!--Tekening-->
 					<div class="table-responsive">
-					<table class="table table-hover">
-						<tr>
-							<thead>
-								<th>
-									<h3><b>Tekeningen</b></h3>
-								</th>
-							</thead>
-						</tr>
-						<?php
+						<table class="table table-hover">
+							<tr>
+								<thead>
+									<th>
+										<h3><b>Tekeningen</b></h3>
+									</th>
+								</thead>
+							</tr>
+							<?php
                 foreach ($tekening AS $document2) {
                     print("<tr>");
                     print("<td> <a href='project.php?id=" . $projectid . "&pdf=" . $document2["document"] . "'>" . $document2["document"] . "</td>");
                     print("</tr>");
                 }
                 ?>
-					</table>
+						</table>
 					</div>
 				</div>
 
-				<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-8 page-box">
+				<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-4 page-box">
 					<?php
             $pdf = $_GET['pdf'];
             print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
@@ -134,7 +134,35 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 				</div>
 
 
-				<?php
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0" id="sidebar" role="navigation">
+						<div class="sidebar-nav">
+							<ul class="nav">
+								<li class="nav-divider"></li>
+								<li class="active">
+									<h4>Menu</h4>
+								</li>
+								<li class="nav-divider"></li>
+								<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
+								<li><a href="accountoverview.php">Mijn gegevens</a></li>
+								<li class="nav-divider"></li>
+								<li>
+									<h4>Mijn projecten</h4>
+								</li>
+								<li class="nav-divider"></li>
+								<?php
+                    foreach ( $projecten as $value ) {
+                        print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
+                    }
+                    ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<?php
         session_start();
         @$klant_id = $_SESSION['klant_id'];
         @$klant_voornaam = $_SESSION['voornaam'];
@@ -178,23 +206,23 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
             ?>
 
-					<div class="row">
-						<!--MEER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-5 page-box">
-							<h1>Meer Werk</h1>
-							<?php
+				<div class="row">
+					<!--MEER WERK-->
+					<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2 page-box">
+						<h1>Meer Werk</h1>
+						<?php
                     foreach ( $naamproject as $value ) {
                         print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
                     }
                     ?>
-								<form method="get" action="meermindertoevoegen.php">
-									<table class="table table-hover table-bordered">
-										<tr>
-											<th>Nr.</th>
-											<th>Beschrijving</th>
-											<th>Prijs</th>
-										</tr>
-										<?php
+							<form method="get" action="meermindertoevoegen.php">
+								<table class="table table-hover table-bordered">
+									<tr>
+										<th>Nr.</th>
+										<th>Beschrijving</th>
+										<th>Prijs</th>
+									</tr>
+									<?php
                             $meerwerkcount = 1;
                             foreach ($meerwerk AS $werk) {
                                 print("<tr>");
@@ -205,29 +233,27 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                                 $meerwerkcount++;
                             }
                             ?>
-									</table>
-								</form>
-						</div>
+								</table>
+							</form>
+					</div>
 
-						<!-- LEGE RUIMTE TUSSEN KOLOMMEN-->
-						<div class="col-xs-2"></div>
 
-						<!--MINDER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-5 page-box">
-							<h1>Minder Werk</h1>
-							<?php
+					<!--MINDER WERK-->
+					<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2 page-box">
+						<h1>Minder Werk</h1>
+						<?php
                     foreach ( $naamproject as $value ) {
                         print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
                     }
                     ?>
-								<form method="get" action="meermindertoevoegen.php">
-									<table class="table table-hover table-bordered">
-										<tr>
-											<th>Nr.</th>
-											<th>Beschrijving</th>
-											<th>Prijs</th>
-										</tr>
-										<?php
+							<form method="get" action="meermindertoevoegen.php">
+								<table class="table table-hover table-bordered">
+									<tr>
+										<th>Nr.</th>
+										<th>Beschrijving</th>
+										<th>Prijs</th>
+									</tr>
+									<?php
                             $minderwerkcount = 1;
                             foreach ($minderwerk AS $werk2) {
                                 print("<tr>");
@@ -238,42 +264,14 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                                 $minderwerkcount++;
                             }
                             ?>
-									</table>
-								</form>
-						</div>
-					</div>
-					<?php $pdo = NULL; ?>
-					<?php } ?>
-
-
-			</div>
-
-
-			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-0" id="sidebar" role="navigation">
-					<div class="sidebar-nav">
-						<ul class="nav">
-							<li class="nav-divider"></li>
-							<li class="active">
-								<h4>Menu</h4>
-							</li>
-							<li class="nav-divider"></li>
-							<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
-							<li><a href="accountoverview.php">Mijn gegevens</a></li>
-							<li class="nav-divider"></li>
-							<li>
-								<h4>Mijn projecten</h4>
-							</li>
-							<li class="nav-divider"></li>
-							<?php
-                    foreach ( $projecten as $value ) {
-                        print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "\">" . $value['naam'] . "</a></li>");
-                    }
-                    ?>
-						</ul>
+								</table>
+							</form>
 					</div>
 				</div>
-			</div>
+				<?php $pdo = NULL; ?>
+				<?php } ?>
+
+
 		</div>
 		<!-- /.container -->
 
