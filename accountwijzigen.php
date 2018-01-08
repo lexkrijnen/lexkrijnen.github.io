@@ -124,68 +124,65 @@ $pdo = NULL;
 
 
 	<div class="container">
-	<div class="row">
-		<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box">
-			<h1>Wijzigen</h1>
-			<table>
-				<form action='accountwijzigen.php' method='post'>
-					<tr>
-						<td>Voornaam</td>
-						<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\ ""); ?> ></td>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box">
+				<h1>Wijzigen</h1>
+				<table>
+					<form action='accountwijzigen.php' method='post'>
+						<tr>
+							<td>Voornaam</td>
+							<td><input type="text" class="form-control" name="voornaam" <?php print( value=\ "$voornaam\ " "); ?> ></td>
 					</tr>
 					<tr>
 						<td>Tussenvoegsel</td>
-						<td><input type="text" class="form-control" name="tussenvoegsel" <?php print( "value=\"$tussenvoegsel\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="tussenvoegsel " <?php print( "value=\ "$tussenvoegsel\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Achternaam</td>
-						<td><input type="text" class="form-control" name="achternaam" <?php print( "value=\"$achternaam\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="achternaam " <?php print( "value=\ "$achternaam\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Telefoonnummer  </td>
-						<td><input type="text" class="form-control" name="telefoonnummer" <?php print( "value=\"$telefoonnummer\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="telefoonnummer " <?php print( "value=\ "$telefoonnummer\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Emailadres</td>
-						<td><input type="text" class="form-control" name="emailadres" <?php print( "value=\"$emailadres\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="emailadres " <?php print( "value=\ "$emailadres\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Adres</td>
-						<td><input type="text" class="form-control" name="adres" <?php print( "value=\"$adres\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="adres " <?php print( "value=\ "$adres\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Postcode</td>
-						<td><input type="text" class="form-control" name="postcode" <?php print( "value=\"$postcode\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="postcode " <?php print( "value=\ "$postcode\ " "); ?>></td>
 					</tr>
 					<tr>
 						<td>Woonplaats</td>
-						<td><input type="text" class="form-control" name="woonplaats" <?php print( "value=\"$woonplaats\ ""); ?>></td>
+						<td><input type="text " class="form-control " name="woonplaats " <?php print( "value=\ "$woonplaats\ " "); ?>></td>
 					</tr>
 					<?php
-												if ($_SESSION["rol"] == "medewerker") {
-														print("<input type=\"hidden\" name=\"medewerkernummer\" value=$medewerker_nummer>");
-														print("<input type=\"hidden\" name=\"functie\" value=$functie>");
-												} elseif ($_SESSION["rol"] == "klant") {
-														print("<input type=\"hidden\" name=\"klantnummer\" value=$klant_nummer>");
-												}
-											?>
-						<tr>
-							<td><a href="accountoverview.php" id="button2" class="btn btn-default select-btn btn-responsive white" role="button">Terug</a></td>
-							<td align='right'><input id="button1" class="btn btn-default select-btn btn-responsive white" type="submit" name="opslaan" value="Opslaan"></td>
-						</tr>
-				</form>
-			</table>
-			<br>
+												if ($_SESSION["rol "] == "medewerker ") {
+														print("<input type=\ "hidden\" name=\ "medewerkernummer\" value=$medewerker_nummer>"); print("
+								<input type=\ "hidden\" name=\ "functie\" value=$functie>"); } elseif ($_SESSION["rol"] == "klant") { print("
+								<input type=\ "hidden\" name=\ "klantnummer\" value=$klant_nummer>"); } ?>
+								<tr>
+									<td><a href="accountoverview.php" id="button2" class="btn btn-default select-btn btn-responsive white" role="button">Terug</a></td>
+									<td align='right'><input id="button1" class="btn btn-default select-btn btn-responsive white" type="submit" name="opslaan" value="Opslaan"></td>
+								</tr>
+					</form>
+				</table>
+				<br>
 
 
 
-			<?php
+				<?php
             if(isset($_POST["opslaan"])) {
 								print('<div class="alert alert-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> De wijzigingen zijn opgeslagen</div>');
             }
 
             ?>
+			</div>
 		</div>
-	</div>
 
 		<?php footAlt() ?>
