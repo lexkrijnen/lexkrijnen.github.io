@@ -189,4 +189,3 @@ $pdo = NULL;
 	</div>
 
 		<?php footAlt() ?>
-		<?php } ?>
