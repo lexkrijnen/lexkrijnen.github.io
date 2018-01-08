@@ -76,7 +76,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 		<div class="container">
 			<div class="row">
-				<div id="viewer-can" class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 page-box">
+				<div id="viewer-can" class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-1 page-box">
 
 					<!--Contract-->
 					<div class="table-responsive">
@@ -120,7 +120,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 					</div>
 				</div>
 
-				<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-4 page-box">
+				<div id="viewer-box" class="col-xs-10 col-xs-offset-1 col-md-6 page-box">
 					<?php
             $pdf = $_GET['pdf'];
             print('<iframe class="pdf-viewer" src="pdf-viewer/web/viewer.html?file=/pdf/' . $pdf . '" name="pdf_viewer"></iframe>');
@@ -207,23 +207,23 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             ?>
 
 				<div class="row">
-					<div class=" col-xs-10 col-xs-offset-1 mutation-box">
-					<!--MEER WERK-->
-					<div id="viewer-meer/minder" class="col-xs-12 col-md-5 page-box">
-						<h1>Meer Werk</h1>
-						<?php
+					<div class="col-xs-10 col-xs-offset-1 mutation-box">
+						<!--MEER WERK-->
+						<div id="viewer-meer/minder" class="col-xs-12 col-md-5 page-box">
+							<h1>Meer Werk</h1>
+							<?php
                     foreach ( $naamproject as $value ) {
                         print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
                     }
                     ?>
-							<form method="get" action="meermindertoevoegen.php">
-								<table class="table table-hover table-bordered">
-									<tr>
-										<th>Nr.</th>
-										<th>Beschrijving</th>
-										<th>Prijs</th>
-									</tr>
-									<?php
+								<form method="get" action="meermindertoevoegen.php">
+									<table class="table table-hover table-bordered">
+										<tr>
+											<th>Nr.</th>
+											<th>Beschrijving</th>
+											<th>Prijs</th>
+										</tr>
+										<?php
                             $meerwerkcount = 1;
                             foreach ($meerwerk AS $werk) {
                                 print("<tr>");
@@ -234,27 +234,27 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                                 $meerwerkcount++;
                             }
                             ?>
-								</table>
-							</form>
-					</div>
+									</table>
+								</form>
+						</div>
 
 
-					<!--MINDER WERK-->
-					<div id="viewer-meer/minder" class="col-xs-12 col-md-5 col-md-offset-2 page-box">
-						<h1>Minder Werk</h1>
-						<?php
+						<!--MINDER WERK-->
+						<div id="viewer-meer/minder" class="col-xs-12 col-md-5 col-md-offset-2 page-box">
+							<h1>Minder Werk</h1>
+							<?php
                     foreach ( $naamproject as $value ) {
                         print ("<h5>Projectnaam: " . $value['naam'] . "</h5>");
                     }
                     ?>
-							<form method="get" action="meermindertoevoegen.php">
-								<table class="table table-hover table-bordered">
-									<tr>
-										<th>Nr.</th>
-										<th>Beschrijving</th>
-										<th>Prijs</th>
-									</tr>
-									<?php
+								<form method="get" action="meermindertoevoegen.php">
+									<table class="table table-hover table-bordered">
+										<tr>
+											<th>Nr.</th>
+											<th>Beschrijving</th>
+											<th>Prijs</th>
+										</tr>
+										<?php
                             $minderwerkcount = 1;
                             foreach ($minderwerk AS $werk2) {
                                 print("<tr>");
@@ -265,15 +265,15 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
                                 $minderwerkcount++;
                             }
                             ?>
-								</table>
-							</form>
+									</table>
+								</form>
+						</div>
 					</div>
+					<?php $pdo = NULL; ?>
+					<?php } ?>
+
+
 				</div>
-				<?php $pdo = NULL; ?>
-				<?php } ?>
-
-
-		</div>
 		</div>
 		<!-- /.container -->
 

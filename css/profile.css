@@ -149,3 +149,7 @@ tbody >tr> th {
 .select-responsive {
 	margin-top: 15px 0 25px 20px;
 }
+
+.mutation-box {
+	margin: 0 -15px;
+}
