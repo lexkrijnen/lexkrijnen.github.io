@@ -60,3 +60,9 @@ body > div.container > div:nth-child(2) {
 body > div.modal-backdrop.fade.in {
 	display: none;
 }
+
+.sidebar-fluid {
+	left: 0;
+	position: absolute;
+	top: 13%;
+}
