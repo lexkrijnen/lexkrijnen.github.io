@@ -72,7 +72,7 @@
 
 								<div class="form-group">
 									<div class="col-sm-12 controls">
-										<input class="btn btn-default select-btn white d" type="submit" name="btn-login" value="Login">
+										<input id="button1" class="btn btn-default select-btn white d" type="submit" name="btn-login" value="Login">
 									</div>
 								</div>
 							</form>
