@@ -106,3 +106,46 @@ tbody >tr> th {
 	margin-top: 30vh;
 	text-align: center;
 }
+
+#sidebar {
+  border-radius: 0 20px 20px 0;
+}
+
+@media only screen and (min-width : 992px) {
+	.g-recaptcha {
+		margin: 0 20%;
+	}
+
+	#sidebar {
+		position: absolute;
+		left: 0;
+		top: 14%;
+		background-color: #fff;
+		border-radius: 0 20px 20px 0;
+		border-bottom: 4px solid #FE9C16;
+	}
+
+	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
+		 width: 300px !important;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	#sidebar {
+		margin-top: 20px;
+		margin-bottom: 45px;
+		padding: 25px;
+		background-color: #fff;
+		border-radius: 5px;
+		border: none;
+		border-bottom: 4px solid #FE9C16;
+	}
+}
+
+.nav .nav-divider {
+  background-color: #fe9c16;
+}
+
+.select-responsive {
+	margin-top: 15px 0 25px 20px;
+}
