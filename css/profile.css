@@ -150,6 +150,10 @@ tbody >tr> th {
 	margin-top: 15px 0 25px 20px;
 }
 
-.mutation-box {
-	margin: 0 -15px;
+.more-box {
+	margin-left: -15px;
+}
+
+.less-box {
+	margin-right: -15px;
 }
