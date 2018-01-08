@@ -34,8 +34,8 @@
 	<div class="container">
 		<div class="row">
 			<div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-xs-12 b">
-				<div id="panel" class="panel ">
-					<div class="panel-heading oranje">
+				<div class="panel ">
+					<div id="panel" class="panel-heading oranje">
 						<div class="panel-title white">Administrator Login Wegro</div>
 
 					</div>
