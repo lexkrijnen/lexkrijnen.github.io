@@ -32,3 +32,16 @@
 	border-radius: 5px;
 }
 
+.g-recaptcha {
+	margin: 0;
+}
+
+body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
+   width: 82% !important;
+}
+
+@media only screen and (min-width : 992px) {
+	.g-recaptcha {
+		margin: 0 20%;
+	}
+}
