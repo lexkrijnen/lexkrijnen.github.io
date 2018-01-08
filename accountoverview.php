@@ -68,7 +68,7 @@
 	<?php headMiddle() ?>
 
 	<!--- custom stylesheet ophalen --->
-	<link href="css/index.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 
 	<?php headBottom() ?>
 
