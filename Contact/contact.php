@@ -86,7 +86,7 @@
 												<textarea name="bericht" class="form-control marginbottom" rows="10" cols="30" placeholder="Vul hier uw bericht in" required></textarea>
 												<div class="g-recaptcha" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o"></div><br>
 												<!--- reCAPTCHA --->
-												<button type="submit" class="btn btn-default select-btn white" name="submitmail">Verstuur bericht</button>
+												<button type="submit" id="button1" class="btn btn-default select-btn white" name="submitmail">Verstuur bericht</button>
 											</form>
 										</div>
 									</div>
