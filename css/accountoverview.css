@@ -1,11 +1,38 @@
-.btn-success {
-	color: black;
-	background-color: orange;
-	border-color: black;
-	font-weight: bold;
+#sidebar{
+	height:92vh;
+    width: 15%;
+    background-color:#FFFFFF;
+    position:fixed;
+    z-index:0;
+    overflow-y:scroll;
 }
 
-.btn-succes:hover {
-	color: black;
-	font-weight: bold;
+/*Buttons*/
+#button1{
+	color: #FFFFFF;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+#button1:hover {
+	color: #FFFFFF;
+	border-color: #ffc966;
+	background-color: #ffc966;
+}
+
+#button2{
+  color: #FFFFFF;
+	background-color: #000000;
+	border-color: #FFFFFF;
+}
+
+#button2:hover{
+  color: #FFFFFF;
+	background-color: #696969;
+	border-color: #696969;
+}
+
+/*tabel*/
+tr > th{
+	color:#FFFFFF;
+	background-color: #FFA500;
 }
