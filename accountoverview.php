@@ -85,7 +85,7 @@
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 page-box">
 				<h1>Uw gegevens</h1>
-				<table class="table table-hover table-bordered">
+				<table class="table table-hover table-bordered table-responsive">
 					<tr>
 						<th>Veld</th>
 						<th>Gegevens</th>
@@ -104,7 +104,7 @@
                         print("<tr><td>Adres: </td><td>$adres</td></tr>");
                         print("<tr><td>Postcode: </td><td>$postcode</td></tr>");
                         print("<tr><td>Woonplaats: </td><td>$woonplaats</td></tr>");
-                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-succes\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>"); //button om accountgegevens te wijzigen
+                        print("</table><form action='accountwijzigen.php' method='get'><input id=\"button1\" class=\"btn btn-default select-btn white\" type=\"submit\" name=\"wijzigen\" value=\"Wijzigen\"></form></div>"); //button om accountgegevens te wijzigen
                 ?>
 				</table>
 			</div>
