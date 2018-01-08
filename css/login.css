@@ -29,4 +29,6 @@
 	border-radius: 5px;
 }
 
-c bv
+#loginform > div.g-recaptcha {
+	margin: 0 20%;
+}
