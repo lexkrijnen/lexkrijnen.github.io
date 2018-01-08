@@ -159,7 +159,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 						</div>
 					</div>
 				</div>
-			</div>
+
 
 
 			<?php
@@ -272,6 +272,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 					<?php } ?>
 
 
+				</div>
 				</div>
 		<!-- /.container -->
 
