@@ -41,7 +41,11 @@
 		margin: 0 20%;
 	}
 
-.rc-anchor-normal {
-   width: 300px !important;
+	.rc-anchor-normal {
+		 width: 300px !important;
+	}
 }
+
+.login-btn {
+	color: #fff;
 }

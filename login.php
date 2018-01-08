@@ -70,10 +70,9 @@
 								<div class="g-recaptcha" data-callback="captcha_filled" data-expired-callback="captcha_expired" data-sitekey="6LeINj8UAAAAAL23qoLUp4GzzpLWgtMY5_qfG69o">
 								</div>
 
-								<div class="form-group d">
-
+								<div class="form-group">
 									<div class="col-sm-12 controls">
-										<input class="btn oranje white" type="submit" name="btn-login" value="Login">
+										<input class="btn btn-default select-btn login-btn" type="submit" name="btn-login" value="Login">
 									</div>
 								</div>
 							</form>
