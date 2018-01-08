@@ -17,8 +17,14 @@ if (isset($_POST["opslaan"])) {
 				$sql = "UPDATE Medewerker SET voornaam=?, tussenvoegsel=?, achternaam=?, emailadres=?, telefoon_nummer=?, adres=?, postcode=?, woonplaats=?, functie=? where medewerker_nummer=?";
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"], $_POST["medewerkernummer"]));
-		}
+		} else {
+                print("Error! Query is niet uitgevoerd!");
+
+        }
+
 }
+
+
 
 $voornaam = $_SESSION["voornaam"];
 $tussenvoegsel = $_SESSION["tussenvoegsel"];
@@ -60,9 +66,9 @@ if(isset($_POST["opslaan"])) {
 
 $rol = $_SESSION["rol"];
 
-    $stmt = $pdo->prepare("SELECT * FROM Project");
-    $stmt->execute();
-    $projecten = $stmt->fetchAll();
+$stmt = $pdo->prepare("SELECT * FROM Project WHERE klant_nummer = '$klant_nummer'");
+$stmt->execute();
+$projecten = $stmt->fetchAll();
 
 $pdo = NULL;
 ?>
@@ -115,6 +121,7 @@ $pdo = NULL;
 			<!--/span-->
 		</div>
 	</div>
+
 
         <div class="container page-box">
             <div class="col-xs-12 col-md-12">
@@ -180,4 +187,4 @@ $pdo = NULL;
 			</div>
 		</div>
 
-        <?php footAlt() ?>
+		<?php footAlt() ?>
