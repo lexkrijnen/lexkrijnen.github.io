@@ -50,35 +50,32 @@
 		<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 		<?php navBottom() ?>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2 sidebar-menu" id="sidebar" role="navigation">
-					<div class="sidebar-nav">
-						<ul class="nav">
-							<li class="active">
-								<h4>Menu</h4>
-							</li>
-							<li class="nav-divider"></li>
-							<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
-							<li><a href="accountoverview.php">Mijn gegevens</a></li>
-							<li class="nav-divider"></li>
-							<li>
-								<h4>Mijn projecten</h4>
-							</li>
-							<li class="nav-divider"></li>
-							<?php
+		<div class="col-xs-2 sidebar-menu" id="sidebar" role="navigation">
+			<div class="sidebar-nav">
+				<ul class="nav">
+					<li class="active">
+						<h4>Menu</h4>
+					</li>
+					<li class="nav-divider"></li>
+					<li><a href='<?php if($rol=="klant" ){print( "account.php");}elseif($rol=="medewerker" ){print( "profile_medewerker.php");}?>'>Mijn Account</a></li>
+					<li><a href="accountoverview.php">Mijn gegevens</a></li>
+					<li class="nav-divider"></li>
+					<li>
+						<h4>Mijn projecten</h4>
+					</li>
+					<li class="nav-divider"></li>
+					<?php
               	foreach ( $projecten as $value ) {
                 	print ("<li><a href=\"project.php?id=" . $value['project_nummer'] . "&pdf=voorbeeld.pdf\">" . $value['naam'] . "</a></li>");
                 }
               ?>
-						</ul>
-					</div>
-					<!--/.well -->
-				</div>
-				<!--/span-->
+				</ul>
 			</div>
+		</div>
 
-		<?php
+		<div class="container">
+
+			<?php
         if (empty($klant_id)) {
             print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
             print('<meta http-equiv="refresh" content="2;url=../login.php" />');
@@ -107,5 +104,5 @@
 				</div>
 		</div>
 
-			<?php footAlt() ?>
-			<?php } ?>
+		<?php footAlt() ?>
+		<?php } ?>
