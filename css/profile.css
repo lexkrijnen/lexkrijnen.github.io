@@ -8,10 +8,10 @@
     overflow-y:scroll;
 }
 
-/*view boxen*/
+/*view boxen
 #viewer-box {
 	height: 85vh;
-}
+}*/
 
 .pdf-viewer {
 	position: absolute;
@@ -21,10 +21,10 @@
 	z-index: 1;
 }
 
-/*view can*/
+/*view can
 #viewer-can {
 	height: 85vh;
-}
+}*/
 
 /*viewer-meer/minder*/
 #viewer-meer\/minder{
