@@ -14,7 +14,7 @@ if (isset($_POST["opslaan"])) {
 				$stmt = $pdo->prepare($sql);
 				$stmt->execute(array($_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["emailadres"], $_POST["telefoonnummer"], $_POST["adres"], $_POST["postcode"], $_POST["woonplaats"], $_POST["functie"], $_POST["medewerkernummer"]));
 		} else {
-                print("Query is niet uitgevoerd! Fock you!");
+                print("Error! Query is niet uitgevoerd!");
         }
 }
 $voornaam = $_SESSION["voornaam"];
