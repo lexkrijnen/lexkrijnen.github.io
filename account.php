@@ -50,9 +50,9 @@
 		<li class="nav-item"><a href="logout.php">Uitloggen</a></li>
 		<?php navBottom() ?>
 
-		<div class="container-fluid sidebar-fluid">
+		<div class="container-fluid">
 			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="col-xs-12 sidebar-offcanvas" id="sidebar" role="navigation">
+				<div class="col-xs-2 sidebar-offcanvas sidebar-menu" id="sidebar" role="navigation">
 					<div class="sidebar-nav">
 						<ul class="nav">
 							<li class="active">
@@ -87,7 +87,7 @@
         ?>
 
 				<div class="row">
-					<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 page-box">
 						<?php
             $hour = date('H', time());
 
