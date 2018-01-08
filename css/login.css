@@ -51,6 +51,7 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 		top: 14%;
 		background-color: #fff;
 		border-radius: 0 20px 20px 0;
+		border-bottom: 4px solid #FE9C16;
 	}
 
 	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
@@ -70,4 +71,6 @@ body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 	}
 }
 
-
+.nav-divider {
+  background-color: #fe9c16;
+}
