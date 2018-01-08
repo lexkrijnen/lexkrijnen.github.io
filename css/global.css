@@ -109,6 +109,10 @@ body {
 	color: #000;
 }
 
+.proper-footer {
+	margin-top: 3%;
+}
+
 blockquote {
 	font-family: Georgia, serif;
 	position: relative;

@@ -1,4 +1,4 @@
-		<div class="row">
+		<div class="row proper-footer">
 			<div class="col-xs-12 text-center footer-rights">
 				<p>Bouwbedrijf Wegro © 2009 - <script>document.write((new Date()).getFullYear());</script>.</p>
 			</div>
