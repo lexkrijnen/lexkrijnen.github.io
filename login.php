@@ -8,6 +8,7 @@
 		$ingelogd = "Inloggen";
 	}
 ?>
+
 <?php include 'includes.php';?>
 <?php headTop() ?>
 
@@ -17,9 +18,10 @@
 
 		<!-- Custom styles for this page -->
 		<link href="css/login.css" rel="stylesheet">
-<!-- Navbar inroepen-->
+
 		<?php headBottom() ?>
 
+		<!-- Navbar inroepen-->
 		<?php navTop() ?>
 			<li class="nav-item"><a href="index.php">Home</a></li>
 			<li class="nav-item"><a href="#Ons_bedrijf">Ons Bedrijf</a></li>
