@@ -32,7 +32,7 @@
 	margin: 0;
 }
 
-.rc-anchor-normal {
+body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
    width: 82% !important;
 }
 
@@ -41,7 +41,7 @@
 		margin: 0 20%;
 	}
 
-	.rc-anchor-normal {
+	body > div.rc-anchor.rc-anchor-normal.rc-anchor-light {
 		 width: 300px !important;
 	}
 }
