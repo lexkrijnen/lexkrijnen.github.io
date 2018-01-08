@@ -208,7 +208,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 				<div class="row">
 						<!--MEER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-12 col-md-5 page-box more-box">
+						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 page-box more-box">
 							<h1>Meer Werk</h1>
 							<?php
                     foreach ( $naamproject as $value ) {
@@ -239,7 +239,7 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 
 						<!--MINDER WERK-->
-						<div id="viewer-meer/minder" class="col-xs-12 col-md-5 col-md-offset-2 page-box less-box">
+						<div id="viewer-meer/minder" class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-2 page-box less-box">
 							<h1>Minder Werk</h1>
 							<?php
                     foreach ( $naamproject as $value ) {
