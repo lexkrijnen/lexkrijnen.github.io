@@ -131,7 +131,7 @@ $pdo = NULL;
 					<form action='accountwijzigen.php' method='post'>
 						<tr>
 							<td>Voornaam</td>
-							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\"$voornaam\""); ?> ></td>
+							<td><input type="text" class="form-control" name="voornaam" <?php print( "value=\" $voornaam\""); ?> ></td>
 					</tr>
 					<tr>
 						<td>Tussenvoegsel</td>
