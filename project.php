@@ -207,7 +207,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
             ?>
 
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
 						<!--MEER WERK-->
 						<div id="viewer-meer/minder" class="col-xs-12 col-md-5 page-box more-box">
 							<h1>Meer Werk</h1>
@@ -274,7 +273,6 @@ if (empty($klant_id) AND empty($medewerker_nummer)) {
 
 
 				</div>
-		</div>
 		<!-- /.container -->
 
 		<?php footAlt() ?>
