@@ -77,13 +77,13 @@
 
 			<?php
         if (empty($klant_id)) {
-            print('<div class="container page-box"><div class="col-xs-4 col-md-5"><h5>Sorry, u bent niet ingelogd.</h5></div><br>');
+            print('<div class="row"><div class="col-xs-12 col-md-6 col-md-offset-3 page-box"><h5>Sorry, u bent niet ingelogd.</h5></div></div><br>');
             print('<meta http-equiv="refresh" content="2;url=../login.php" />');
         } else {
         ?>
 
 				<div class="row">
-					<div class="col-xs-12 col-md-6 col-md-offset-4 page-box">
+					<div class="col-xs-12 col-md-6 col-md-offset-3 page-box">
 						<?php
             $hour = date('H', time());
 
