@@ -8,10 +8,10 @@
     overflow-y:scroll;
 }
 
-/*view boxen
+/*view boxen*/
 #viewer-box {
-	height: 85vh;
-}*/
+	height: 100vh;
+}
 
 .pdf-viewer {
 	position: absolute;
